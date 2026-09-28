@@ -24,4 +24,5 @@ class AppColors {
   static const Color privacyTag = Color(0xFF8B5CF6); // Purple
   static const Color consumerTag = Color(0xFFF59E0B); // Amber
   static const Color safetyTag = Color(0xFFEF4444); // Red
+  static const Color ethicsTag = Color(0xFFEC4899); // Pink / Fuchsia
 }

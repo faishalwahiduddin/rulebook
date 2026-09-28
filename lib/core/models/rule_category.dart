@@ -7,7 +7,8 @@ enum RuleCategory {
   labor('Ketenagakerjaan', 'Jam kerja, lembur, hak cuti, & pesangon', Icons.work_outline, AppColors.laborTag),
   privacy('Privasi & ITE', 'UU PDP, perlindungan data, & transaksi digital', Icons.security, AppColors.privacyTag),
   consumer('Konsumen', 'Hak pembeli, garansi, & komplain barang cacat', Icons.shopping_bag_outlined, AppColors.consumerTag),
-  safety('Keselamatan (K3)', 'SOP darurat, APD, & keselamatan tempat kerja', Icons.health_and_safety_outlined, AppColors.safetyTag);
+  safety('Keselamatan (K3)', 'SOP darurat, APD, & keselamatan tempat kerja', Icons.health_and_safety_outlined, AppColors.safetyTag),
+  ethics('Etika & Ketertiban', 'Ketertiban umum, kebisingan, & norma publik', Icons.gavel_outlined, AppColors.ethicsTag);
 
   final String label;
   final String description;
