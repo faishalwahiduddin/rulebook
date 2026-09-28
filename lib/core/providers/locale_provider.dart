@@ -1,7 +1,6 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../storage/local_storage_service.dart';
 import 'app_providers.dart';
 
 const supportedLocales = [
