@@ -34,19 +34,24 @@ class NavigationShell extends StatelessWidget {
               label: 'Katalog',
             ),
             NavigationDestination(
-              icon: Icon(Icons.bookmark_outline),
-              selectedIcon: Icon(Icons.bookmark, color: AppColors.primaryLight),
-              label: 'Tersimpan',
-            ),
-            NavigationDestination(
               icon: Icon(Icons.calculate_outlined),
               selectedIcon: Icon(Icons.calculate, color: AppColors.primaryLight),
               label: 'Simulasi',
             ),
             NavigationDestination(
-              icon: Icon(Icons.settings_outlined),
-              selectedIcon: Icon(Icons.settings, color: AppColors.primaryLight),
-              label: 'Pengaturan',
+              icon: Icon(Icons.shield_outlined),
+              selectedIcon: Icon(Icons.shield, color: AppColors.accent),
+              label: 'SOP Darurat',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.fact_check_outlined),
+              selectedIcon: Icon(Icons.fact_check, color: AppColors.success),
+              label: 'Kepatuhan',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.bookmark_outline),
+              selectedIcon: Icon(Icons.bookmark, color: AppColors.primaryLight),
+              label: 'Tersimpan',
             ),
           ],
         ),

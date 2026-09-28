@@ -38,7 +38,7 @@ class SettingsScreen extends ConsumerWidget {
                 ),
                 SizedBox(height: 8),
                 Text(
-                  'Seluruh aturan hukum, SOP, dan catatan pribadi tersimpan aman di perangkat lokal Anda tanpa pengiriman data ke server luar.',
+                  'Seluruh aturan hukum, SOP darurat, checklist audit, dan catatan pribadi tersimpan aman di perangkat lokal Anda tanpa pengiriman data ke server luar.',
                   style: TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.4),
                 ),
               ],
@@ -79,8 +79,8 @@ class SettingsScreen extends ConsumerWidget {
 
                 if (confirm == true) {
                   await ref.read(localStorageServiceProvider).clearAllData();
-                  // Trigger reload by re-evaluating bookmarks
                   ref.invalidate(bookmarksProvider);
+                  ref.invalidate(ruleNotesProvider);
                   if (context.mounted) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('Semua data bookmark dan catatan telah dibersihkan.')),
@@ -88,6 +88,38 @@ class SettingsScreen extends ConsumerWidget {
                   }
                 }
               },
+            ),
+          ),
+          const SizedBox(height: 24),
+
+          const Text(
+            'Disclaimer Hukum & Batasan',
+            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF94A3B8)),
+          ),
+          const SizedBox(height: 10),
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Row(
+                    children: [
+                      Icon(Icons.gavel, color: AppColors.accent, size: 18),
+                      SizedBox(width: 8),
+                      Text(
+                        'Pernyataan Penyangkalan (Disclaimer)',
+                        style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    'RuleBook adalah aplikasi buku saku digital independen yang ditujukan semata-mata untuk literasi hukum dan edukasi masyarakat. Konten aplikasi bukan merupakan nasihat hukum formal (legal counsel). Untuk kasus perdata atau pidana resmi, disarankan berkonsultasi langsung dengan advokat berizin atau lembaga bantuan hukum terakreditasi.',
+                    style: TextStyle(fontSize: 12, color: Color(0xFF94A3B8), height: 1.45),
+                  ),
+                ],
+              ),
             ),
           ),
           const SizedBox(height: 24),
@@ -106,9 +138,11 @@ class SettingsScreen extends ConsumerWidget {
                   const Divider(color: AppColors.border, height: 24),
                   _buildAboutRow('Versi', '${AppConstants.appVersion}+1'),
                   const Divider(color: AppColors.border, height: 24),
-                  _buildAboutRow('Domain', 'rulebook.faishal.id'),
+                  _buildAboutRow('Ekosistem', 'Utility & Knowledge Fleet'),
                   const Divider(color: AppColors.border, height: 24),
-                  _buildAboutRow('Penyedia', 'Armada faishal.id'),
+                  _buildAboutRow('Subdomain', 'rulebook.faishal.id'),
+                  const Divider(color: AppColors.border, height: 24),
+                  _buildAboutRow('Application ID', 'id.faishal.rulebook'),
                 ],
               ),
             ),

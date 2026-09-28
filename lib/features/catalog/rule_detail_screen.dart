@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/models/rule_item.dart';
@@ -33,10 +34,21 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
     super.dispose();
   }
 
+  void _copyToClipboard(String text, String message) {
+    Clipboard.setData(ClipboardData(text: text));
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        backgroundColor: AppColors.success,
+        duration: const Duration(seconds: 2),
+      ),
+    );
+  }
+
   Future<void> _saveNote() async {
     final text = _noteController.text.trim();
     if (text.isEmpty) {
-      await ref.read(localStorageServiceProvider).deleteNote(widget.rule.id);
+      await ref.read(ruleNotesProvider.notifier).deleteNote(widget.rule.id);
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Catatan dihapus.')),
@@ -53,7 +65,7 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
 
     setState(() => _isSavingNote = true);
     try {
-      await ref.read(localStorageServiceProvider).saveNote(widget.rule.id, text);
+      await ref.read(ruleNotesProvider.notifier).saveNote(widget.rule.id, text);
       if (mounted) {
         setState(() => _noteError = null);
         ScaffoldMessenger.of(context).showSnackBar(
@@ -68,11 +80,28 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
   @override
   Widget build(BuildContext context) {
     final isBookmarked = ref.watch(bookmarksProvider).contains(widget.rule.id);
+    final allRules = ref.watch(allRulesProvider);
+    final relatedRules = allRules
+        .where((r) => r.category == widget.rule.category && r.id != widget.rule.id)
+        .take(3)
+        .toList();
 
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.rule.title),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.share_outlined),
+            tooltip: 'Salin Ringkasan',
+            onPressed: () {
+              final text = '📖 ${widget.rule.title}\n'
+                  'Dasar Hukum: ${widget.rule.legalBasis}\n'
+                  'Intisari: ${widget.rule.summary}\n'
+                  'Sanksi/Hak: ${widget.rule.penaltyOrRight}\n\n'
+                  'Aplikasi RuleBook (https://rulebook.faishal.id)';
+              _copyToClipboard(text, 'Ringkasan aturan berhasil disalin!');
+            },
+          ),
           IconButton(
             icon: Icon(
               isBookmarked ? Icons.bookmark : Icons.bookmark_border,
@@ -313,6 +342,34 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
                   ),
                 ),
                 const SizedBox(height: 24),
+
+                // Related Rules in same category
+                if (relatedRules.isNotEmpty) ...[
+                  Text(
+                    'Aturan Terkait dalam ${widget.rule.category.label}',
+                    style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
+                  ),
+                  const SizedBox(height: 12),
+                  ...relatedRules.map((rel) {
+                    return Card(
+                      margin: const EdgeInsets.only(bottom: 8),
+                      child: ListTile(
+                        leading: Icon(rel.category.icon, color: rel.category.tagColor, size: 20),
+                        title: Text(rel.title, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white)),
+                        subtitle: Text(rel.legalBasis, style: const TextStyle(fontSize: 11, color: AppColors.accent)),
+                        trailing: const Icon(Icons.arrow_forward_ios, size: 12, color: Color(0xFF64748B)),
+                        onTap: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => RuleDetailScreen(rule: rel),
+                            ),
+                          );
+                        },
+                      ),
+                    );
+                  }),
+                ],
               ],
             ),
           ),

@@ -1,43 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background: Midnight Royal Indigo Sanctuary -->
+    <!-- Background: Dignified Imperial Royal Indigo -->
     <linearGradient id="rbBg" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0F172A"/>
-      <stop offset="50%" stop-color="#090D1E"/>
-      <stop offset="100%" stop-color="#04060E"/>
+      <stop offset="0%" stop-color="#4338CA"/>
+      <stop offset="50%" stop-color="#3730A3"/>
+      <stop offset="100%" stop-color="#312E81"/>
     </linearGradient>
 
-    <!-- Celestial Indigo Radial Glow -->
-    <radialGradient id="rbGlow" cx="512" cy="480" r="620" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.44"/>
-      <stop offset="35%" stop-color="#3730A3" stop-opacity="0.20"/>
-      <stop offset="70%" stop-color="#1E1B4B" stop-opacity="0.04"/>
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0"/>
+    <!-- Radiant Violet-Indigo Aura -->
+    <radialGradient id="rbGlow" cx="512" cy="420" r="640" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.45"/>
+      <stop offset="45%" stop-color="#6366F1" stop-opacity="0.18"/>
+      <stop offset="85%" stop-color="#3730A3" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Edge Vignette -->
+    <!-- Soft Edge Vignette -->
     <radialGradient id="rbVignette" cx="512" cy="512" r="720" gradientUnits="userSpaceOnUse">
-      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="65%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1E1B4B" stop-opacity="0.25"/>
     </radialGradient>
 
-    <!-- Stately Leather Indigo Tome Gradient -->
-    <linearGradient id="rbCover" x1="200" y1="200" x2="800" y2="800" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#6366F1"/>
-      <stop offset="25%" stop-color="#4F46E5"/>
-      <stop offset="65%" stop-color="#3730A3"/>
-      <stop offset="100%" stop-color="#1E1B4B"/>
+    <!-- Deep Leather Tome Cover -->
+    <linearGradient id="rbCover" x1="220" y1="220" x2="804" y2="804" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#312E81"/>
+      <stop offset="60%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
     </linearGradient>
 
-    <!-- Spine Leather Gradient -->
-    <linearGradient id="rbSpine" x1="230" y1="240" x2="310" y2="780" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#3730A3"/>
-      <stop offset="50%" stop-color="#312E81"/>
-      <stop offset="100%" stop-color="#1E1B4B"/>
-    </linearGradient>
-
-    <!-- 24K Juridical Gold Gradient -->
+    <!-- 24K Royal Gold -->
     <linearGradient id="rbGold" x1="300" y1="200" x2="724" y2="800" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#FFFBEB"/>
       <stop offset="20%" stop-color="#FEF08A"/>
@@ -46,130 +37,104 @@
       <stop offset="100%" stop-color="#92400E"/>
     </linearGradient>
 
-    <!-- Gilded Book Pages Gradient -->
-    <linearGradient id="rbPages" x1="200" y1="740" x2="800" y2="780" gradientUnits="userSpaceOnUse">
+    <!-- Gilded Book Pages Stack -->
+    <linearGradient id="rbPages" x1="280" y1="740" x2="800" y2="780" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#FEF3C7"/>
-      <stop offset="40%" stop-color="#FDE68A"/>
-      <stop offset="70%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#FDE68A"/>
       <stop offset="100%" stop-color="#D97706"/>
     </linearGradient>
 
-    <!-- Royal Crimson Bookmark Ribbon -->
-    <linearGradient id="rbRibbon" x1="710" y1="180" x2="760" y2="840" gradientUnits="userSpaceOnUse">
+    <!-- Royal Crimson Silk Bookmark Ribbon -->
+    <linearGradient id="rbRibbon" x1="710" y1="200" x2="750" y2="840" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#FDA4AF"/>
-      <stop offset="25%" stop-color="#F43F5E"/>
-      <stop offset="60%" stop-color="#E11D48"/>
+      <stop offset="30%" stop-color="#F43F5E"/>
+      <stop offset="70%" stop-color="#E11D48"/>
       <stop offset="100%" stop-color="#9F1239"/>
     </linearGradient>
 
     <!-- Drop Shadows -->
-    <filter id="rbShadow" x="-20%" y="-20%" width="140%" height="150%">
-      <feDropShadow dx="0" dy="28" stdDeviation="32" flood-color="#000000" flood-opacity="0.80"/>
-      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#312E81" flood-opacity="0.45"/>
+    <filter id="bookShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="32" stdDeviation="34" flood-color="#1E1B4B" flood-opacity="0.75"/>
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
     </filter>
 
-    <filter id="goldEmboss" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.65"/>
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#FEF08A" flood-opacity="0.30"/>
+    <filter id="goldShine" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.65"/>
     </filter>
 
     <!-- Top Gloss Sheen -->
-    <linearGradient id="rbSheen" x1="0" y1="0" x2="0" y2="340" gradientUnits="userSpaceOnUse">
+    <linearGradient id="topSheen" x1="0" y1="0" x2="0" y2="340" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.14"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
   </defs>
 
-  <!-- Base Canvas -->
+  <!-- Background -->
   <rect width="1024" height="1024" fill="url(#rbBg)"/>
   <rect width="1024" height="1024" fill="url(#rbGlow)"/>
   <rect width="1024" height="1024" fill="url(#rbVignette)"/>
 
-  <!-- Background Authority Star Constellation / Decorative Ring -->
-  <g opacity="0.30">
-    <circle cx="512" cy="512" r="380" fill="none" stroke="#4F46E5" stroke-width="3" stroke-dasharray="16 16"/>
-    <circle cx="512" cy="512" r="340" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="8 24" opacity="0.6"/>
-  </g>
+  <!-- ==================== REGAL LAW CODEX TOME ==================== -->
+  <g filter="url(#bookShadow)">
+    <!-- Gilded Pages Stack (Bottom & Right Page Edges) -->
+    <path d="M 280 754 L 752 754 C 772 754, 786 740, 786 720 L 786 280 L 806 290 L 806 738 C 806 764, 786 784, 760 784 L 298 784 Z" fill="url(#rbPages)"/>
 
-  <!-- ==================== ROYAL CODEX / LAW RULEBOOK ==================== -->
-  <g filter="url(#rbShadow)">
-    <!-- Book Drop Page Edge Block (Gilded Stack of Pages at Bottom and Right) -->
-    <path d="M 280 756 L 750 756 C 770 756, 784 742, 784 722 L 784 290 L 804 300 L 804 740 C 804 766, 784 786, 758 786 L 298 786 Z" fill="url(#rbPages)"/>
-    <line x1="310" y1="766" x2="780" y2="766" stroke="#92400E" stroke-width="2" opacity="0.5"/>
-    <line x1="310" y1="776" x2="774" y2="776" stroke="#92400E" stroke-width="2" opacity="0.5"/>
-
-    <!-- Main Front Cover -->
-    <rect x="250" y="234" width="516" height="526" rx="28" fill="url(#rbCover)" stroke="#818CF8" stroke-width="4"/>
+    <!-- Main Front Leather Cover -->
+    <rect x="250" y="230" width="520" height="530" rx="28" fill="url(#rbCover)" stroke="#818CF8" stroke-width="4"/>
 
     <!-- Book Spine Rib (Left side) -->
-    <path d="M 250 262 C 250 246, 264 234, 280 234 L 320 234 L 320 760 L 280 760 C 264 760, 250 748, 250 732 Z" fill="url(#rbSpine)"/>
-    <line x1="320" y1="234" x2="320" y2="760" stroke="#1E1B4B" stroke-width="6"/>
-    <line x1="322" y1="234" x2="322" y2="760" stroke="#818CF8" stroke-width="2" opacity="0.6"/>
+    <path d="M 250 258 C 250 242, 264 230, 280 230 L 320 230 L 320 760 L 280 760 C 264 760, 250 748, 250 732 Z" fill="#1E1B4B"/>
+    <line x1="320" y1="230" x2="320" y2="760" stroke="#0F172A" stroke-width="5"/>
+    <line x1="322" y1="230" x2="322" y2="760" stroke="#818CF8" stroke-width="2" opacity="0.6"/>
 
-    <!-- Decorative Gold Spine Bands -->
-    <rect x="250" y="320" width="70" height="12" fill="url(#rbGold)"/>
-    <rect x="250" y="440" width="70" height="12" fill="url(#rbGold)"/>
-    <rect x="250" y="560" width="70" height="12" fill="url(#rbGold)"/>
-    <rect x="250" y="680" width="70" height="12" fill="url(#rbGold)"/>
+    <!-- Clean Gold Spine Bands -->
+    <rect x="250" y="316" width="70" height="10" fill="url(#rbGold)"/>
+    <rect x="250" y="436" width="70" height="10" fill="url(#rbGold)"/>
+    <rect x="250" y="556" width="70" height="10" fill="url(#rbGold)"/>
+    <rect x="250" y="676" width="70" height="10" fill="url(#rbGold)"/>
 
-    <!-- Gold Filigree Corner Ornaments on Cover -->
-    <g stroke="url(#rbGold)" stroke-width="3" fill="none">
-      <path d="M 720 264 L 736 264 L 736 280"/>
-      <circle cx="724" cy="276" r="4" fill="url(#rbGold)"/>
-      <path d="M 720 730 L 736 730 L 736 714"/>
-      <circle cx="724" cy="718" r="4" fill="url(#rbGold)"/>
-    </g>
+    <!-- Clean Gold Cover Inset Fillet -->
+    <rect x="346" y="256" width="398" height="478" rx="16" fill="none" stroke="url(#rbGold)" stroke-width="3" opacity="0.85"/>
 
-    <!-- Outer Gold Cover Border Fillet -->
-    <rect x="346" y="260" width="394" height="474" rx="16" fill="none" stroke="url(#rbGold)" stroke-width="3.5" opacity="0.85"/>
-    <rect x="356" y="270" width="374" height="454" rx="12" fill="none" stroke="url(#rbGold)" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.65"/>
+    <!-- Crimson Silk Bookmark Ribbon (Positioned gracefully on outer right page edge) -->
+    <path d="M 732 204 L 772 204 L 772 780 L 752 756 L 732 780 Z" fill="url(#rbRibbon)"/>
 
-    <!-- Royal Crimson Bookmark Ribbon (Positioned on the RIGHT edge so it does NOT block the center scale!) -->
-    <path d="M 696 210 L 734 210 L 734 796 L 715 770 L 696 796 Z" fill="url(#rbRibbon)" filter="url(#goldEmboss)"/>
-    <line x1="715" y1="210" x2="715" y2="770" stroke="#FDA4AF" stroke-width="2" opacity="0.6"/>
-
-    <!-- ==================== CENTRAL LAW EMBLEM: SCALES OF JUSTICE ==================== -->
-    <g filter="url(#goldEmboss)">
+    <!-- ==================== HERO GLYPH: 24K GOLD SCALES OF JUSTICE ==================== -->
+    <g filter="url(#goldShine)">
       <!-- Central Pillar of Justice -->
-      <line x1="532" y1="360" x2="532" y2="600" stroke="url(#rbGold)" stroke-width="14" stroke-linecap="round"/>
-      <!-- Pillar Finial (Top Imperial Spear / Diamond) -->
-      <polygon points="532,328 546,358 532,366 518,358" fill="url(#rbGold)"/>
+      <line x1="534" y1="360" x2="534" y2="600" stroke="url(#rbGold)" stroke-width="14" stroke-linecap="round"/>
+      <!-- Top Imperial Finial -->
+      <polygon points="534,324 550,358 534,366 518,358" fill="url(#rbGold)"/>
 
-      <!-- Scales Balance Beam (Horizontal Bar with Pivot) -->
-      <path d="M 390 412 Q 532 396 674 412" fill="none" stroke="url(#rbGold)" stroke-width="12" stroke-linecap="round"/>
+      <!-- Balance Beam (Curved Stately Bar) -->
+      <path d="M 390 412 Q 534 394 678 412" fill="none" stroke="url(#rbGold)" stroke-width="12" stroke-linecap="round"/>
       
-      <!-- Center Pivot Ring & Core Gem -->
-      <circle cx="532" cy="404" r="20" fill="url(#rbCover)" stroke="url(#rbGold)" stroke-width="5"/>
-      <circle cx="532" cy="404" r="10" fill="url(#rbGold)"/>
+      <!-- Central Pivot Ring -->
+      <circle cx="534" cy="403" r="18" fill="#1E1B4B" stroke="url(#rbGold)" stroke-width="5"/>
+      <circle cx="534" cy="403" r="8" fill="url(#rbGold)"/>
 
       <!-- Left Scale Pan & Cords -->
       <g id="leftScale">
-        <line x1="390" y1="412" x2="354" y2="494" stroke="url(#rbGold)" stroke-width="4"/>
-        <line x1="390" y1="412" x2="426" y2="494" stroke="url(#rbGold)" stroke-width="4"/>
-        <!-- Scale Bowl (Deep 3D Metallic Dish) -->
-        <path d="M 340 494 Q 390 538 440 494 Z" fill="url(#rbGold)" stroke="#FFFBEB" stroke-width="2"/>
-        <ellipse cx="390" cy="494" rx="50" ry="8" fill="url(#rbGold)"/>
+        <line x1="390" y1="412" x2="352" y2="496" stroke="url(#rbGold)" stroke-width="4"/>
+        <line x1="390" y1="412" x2="428" y2="496" stroke="url(#rbGold)" stroke-width="4"/>
+        <path d="M 338 496 Q 390 544 442 496 Z" fill="url(#rbGold)" stroke="#FFFBEB" stroke-width="2"/>
+        <ellipse cx="390" cy="496" rx="52" ry="8" fill="url(#rbGold)"/>
       </g>
 
       <!-- Right Scale Pan & Cords -->
       <g id="rightScale">
-        <line x1="674" y1="412" x2="638" y2="494" stroke="url(#rbGold)" stroke-width="4"/>
-        <line x1="674" y1="412" x2="710" y2="494" stroke="url(#rbGold)" stroke-width="4"/>
-        <!-- Scale Bowl (Deep 3D Metallic Dish) -->
-        <path d="M 624 494 Q 674 538 724 494 Z" fill="url(#rbGold)" stroke="#FFFBEB" stroke-width="2"/>
-        <ellipse cx="674" cy="494" rx="50" ry="8" fill="url(#rbGold)"/>
+        <line x1="678" y1="412" x2="640" y2="496" stroke="url(#rbGold)" stroke-width="4"/>
+        <line x1="678" y1="412" x2="716" y2="496" stroke="url(#rbGold)" stroke-width="4"/>
+        <path d="M 626 496 Q 678 544 730 496 Z" fill="url(#rbGold)" stroke="#FFFBEB" stroke-width="2"/>
+        <ellipse cx="678" cy="496" rx="52" ry="8" fill="url(#rbGold)"/>
       </g>
 
-      <!-- Pedestal / 3-Tier Foundation Base of Justice -->
-      <rect x="472" y="600" width="120" height="18" rx="8" fill="url(#rbGold)"/>
-      <rect x="452" y="618" width="160" height="22" rx="9" fill="url(#rbGold)"/>
-      <rect x="432" y="640" width="200" height="26" rx="10" fill="url(#rbGold)"/>
-
-      <!-- Star / Sunburst of Authority at base -->
-      <circle cx="532" cy="653" r="6" fill="#FFFFFF"/>
+      <!-- Pedestal Foundation Base -->
+      <rect x="474" y="600" width="120" height="18" rx="8" fill="url(#rbGold)"/>
+      <rect x="444" y="618" width="180" height="22" rx="9" fill="url(#rbGold)"/>
     </g>
   </g>
 
-  <!-- Top Gloss Sheen -->
-  <rect width="1024" height="340" fill="url(#rbSheen)"/>
+  <!-- Top Sheen Gloss -->
+  <rect width="1024" height="340" fill="url(#topSheen)"/>
 </svg>

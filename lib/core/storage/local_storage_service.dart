@@ -52,6 +52,40 @@ class LocalStorageService {
     return _prefs.remove('${AppConstants.keyCustomNotes}_$ruleId');
   }
 
+  Map<String, String> getAllNotes() {
+    final result = <String, String>{};
+    final prefix = '${AppConstants.keyCustomNotes}_';
+    for (final key in _prefs.getKeys()) {
+      if (key.startsWith(prefix)) {
+        final ruleId = key.substring(prefix.length);
+        final val = _prefs.getString(key);
+        if (val != null && val.isNotEmpty) {
+          result[ruleId] = val;
+        }
+      }
+    }
+    return result;
+  }
+
+  Set<String> getCheckedItems(String checklistId) {
+    final list = _prefs.getStringList('rulebook_chk_$checklistId') ?? [];
+    return list.toSet();
+  }
+
+  Future<bool> toggleChecklistItem(String checklistId, String itemId) async {
+    final checked = getCheckedItems(checklistId);
+    if (checked.contains(itemId)) {
+      checked.remove(itemId);
+    } else {
+      checked.add(itemId);
+    }
+    return _prefs.setStringList('rulebook_chk_$checklistId', checked.toList());
+  }
+
+  Future<bool> resetChecklist(String checklistId) async {
+    return _prefs.remove('rulebook_chk_$checklistId');
+  }
+
   Future<bool> clearAllData() async {
     final keys = _prefs.getKeys();
     for (final k in keys) {
@@ -62,3 +96,4 @@ class LocalStorageService {
     return true;
   }
 }
+

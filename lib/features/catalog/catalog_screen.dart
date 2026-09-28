@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/models/rule_category.dart';
 import '../../core/models/rule_item.dart';
@@ -15,6 +16,17 @@ class CatalogScreen extends ConsumerStatefulWidget {
 
 class _CatalogScreenState extends ConsumerState<CatalogScreen> {
   late TextEditingController _searchController;
+
+  final List<String> _quickFilterKeywords = [
+    'Tilang',
+    'Lembur',
+    'Pesangon',
+    'UU PDP',
+    'K3',
+    'Garansi',
+    'Busway',
+    'Knalpot',
+  ];
 
   @override
   void initState() {
@@ -33,6 +45,7 @@ class _CatalogScreenState extends ConsumerState<CatalogScreen> {
     final rules = ref.watch(filteredRulesProvider);
     final activeCategory = ref.watch(selectedCategoryProvider);
     final bookmarkedIds = ref.watch(bookmarksProvider);
+    final currentQuery = ref.watch(searchQueryProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -43,16 +56,23 @@ class _CatalogScreenState extends ConsumerState<CatalogScreen> {
             Text('RuleBook', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18)),
           ],
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings_outlined),
+            tooltip: 'Pengaturan & Privasi',
+            onPressed: () => context.push('/settings'),
+          ),
+        ],
       ),
       body: Column(
         children: [
           // Search Bar
           Padding(
-            padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+            padding: const EdgeInsets.fromLTRB(16, 12, 16, 6),
             child: TextField(
               controller: _searchController,
               decoration: InputDecoration(
-                hintText: 'Cari aturan, tilang, jam lembur, pasal...',
+                hintText: 'Cari pasal, tilang, pesangon, ITE, SOP...',
                 prefixIcon: const Icon(Icons.search, size: 20),
                 suffixIcon: _searchController.text.isNotEmpty
                     ? IconButton(
@@ -70,11 +90,46 @@ class _CatalogScreenState extends ConsumerState<CatalogScreen> {
             ),
           ),
 
+          // Quick Keywords Chips
+          SizedBox(
+            height: 36,
+            child: ListView.separated(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              scrollDirection: Axis.horizontal,
+              itemCount: _quickFilterKeywords.length,
+              separatorBuilder: (ctx, i) => const SizedBox(width: 6),
+              itemBuilder: (context, index) {
+                final kw = _quickFilterKeywords[index];
+                final isSelected = currentQuery.toLowerCase() == kw.toLowerCase();
+                return ActionChip(
+                  label: Text(kw, style: TextStyle(fontSize: 11, color: isSelected ? Colors.white : const Color(0xFF94A3B8))),
+                  backgroundColor: isSelected ? AppColors.primary : AppColors.bgSurface,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    side: BorderSide(
+                      color: isSelected ? AppColors.primaryLight : AppColors.border,
+                    ),
+                  ),
+                  onPressed: () {
+                    if (isSelected) {
+                      _searchController.clear();
+                      ref.read(searchQueryProvider.notifier).clear();
+                    } else {
+                      _searchController.text = kw;
+                      ref.read(searchQueryProvider.notifier).setQuery(kw);
+                    }
+                  },
+                );
+              },
+            ),
+          ),
+          const SizedBox(height: 8),
+
           // Categories Horizontal Selector
           SizedBox(
-            height: 48,
+            height: 44,
             child: ListView.separated(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
               scrollDirection: Axis.horizontal,
               itemCount: RuleCategory.values.length,
               separatorBuilder: (ctx, i) => const SizedBox(width: 8),
@@ -82,7 +137,7 @@ class _CatalogScreenState extends ConsumerState<CatalogScreen> {
                 final cat = RuleCategory.values[index];
                 final isSelected = activeCategory == cat;
                 return ChoiceChip(
-                  avatar: Icon(cat.icon, size: 15, color: isSelected ? Colors.white : cat.tagColor),
+                  avatar: Icon(cat.icon, size: 14, color: isSelected ? Colors.white : cat.tagColor),
                   label: Text(cat.label),
                   selected: isSelected,
                   selectedColor: AppColors.primary,
@@ -98,7 +153,32 @@ class _CatalogScreenState extends ConsumerState<CatalogScreen> {
               },
             ),
           ),
-          const SizedBox(height: 8),
+
+          // Counter indicator
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Menampilkan ${rules.length} aturan hukum',
+                  style: const TextStyle(fontSize: 11, color: Color(0xFF94A3B8)),
+                ),
+                if (currentQuery.isNotEmpty || activeCategory != RuleCategory.all)
+                  GestureDetector(
+                    onTap: () {
+                      _searchController.clear();
+                      ref.read(searchQueryProvider.notifier).clear();
+                      ref.read(selectedCategoryProvider.notifier).selectCategory(RuleCategory.all);
+                    },
+                    child: const Text(
+                      'Reset Filter',
+                      style: TextStyle(fontSize: 11, color: AppColors.primaryLight, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+              ],
+            ),
+          ),
 
           // Rules List
           Expanded(
@@ -122,7 +202,7 @@ class _CatalogScreenState extends ConsumerState<CatalogScreen> {
                     ),
                   )
                 : ListView.builder(
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                     itemCount: rules.length,
                     itemBuilder: (context, index) {
                       final item = rules[index];
