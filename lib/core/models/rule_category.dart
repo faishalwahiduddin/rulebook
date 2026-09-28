@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constants/app_colors.dart';
+import '../../l10n/app_localizations.dart';
 
 enum RuleCategory {
   all('Semua', 'Semua aturan dan panduan', Icons.grid_view, AppColors.primaryLight),
@@ -16,4 +17,24 @@ enum RuleCategory {
   final Color tagColor;
 
   const RuleCategory(this.label, this.description, this.icon, this.tagColor);
+
+  String localizedLabel(AppLocalizations l10n) {
+    switch (this) {
+      case RuleCategory.all:
+        return l10n.categoryAll;
+      case RuleCategory.traffic:
+        return l10n.catTraffic;
+      case RuleCategory.labor:
+        return l10n.catLabor;
+      case RuleCategory.privacy:
+        return l10n.catCyber;
+      case RuleCategory.consumer:
+        return l10n.catConsumer;
+      case RuleCategory.safety:
+        return l10n.catSafety;
+      case RuleCategory.ethics:
+        return l10n.catCivil;
+    }
+  }
 }
+

@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/models/rule_category.dart';
 import '../../core/providers/app_providers.dart';
+import '../../l10n/app_localizations.dart';
 import 'checklist_detail_screen.dart';
 
 class ChecklistScreen extends ConsumerWidget {
@@ -10,6 +11,7 @@ class ChecklistScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final checklists = ref.watch(allChecklistsProvider);
     final activeCategory = ref.watch(selectedCategoryProvider);
 
@@ -20,11 +22,11 @@ class ChecklistScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Row(
+        title: Row(
           children: [
-            Icon(Icons.fact_check_outlined, color: AppColors.primaryLight, size: 22),
-            SizedBox(width: 10),
-            Text('Audit Kepatuhan Mandiri', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18)),
+            const Icon(Icons.fact_check_outlined, color: AppColors.primaryLight, size: 22),
+            const SizedBox(width: 10),
+            Text(l10n.checklistTitle, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 18)),
           ],
         ),
       ),
@@ -35,9 +37,9 @@ class ChecklistScreen extends ConsumerWidget {
             width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             color: AppColors.bgSurface,
-            child: const Text(
-              'Alat audit kepatuhan interaktif untuk mengecek kelayakan kendaraan, hak kerja normatif, standar K3 gedung, dan keamanan privasi data.',
-              style: TextStyle(fontSize: 12, color: Color(0xFF94A3B8), height: 1.35),
+            child: Text(
+              l10n.checklistBanner,
+              style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8), height: 1.35),
             ),
           ),
 
@@ -54,7 +56,7 @@ class ChecklistScreen extends ConsumerWidget {
                 final isSelected = activeCategory == cat;
                 return ChoiceChip(
                   avatar: Icon(cat.icon, size: 15, color: isSelected ? Colors.white : cat.tagColor),
-                  label: Text(cat.label),
+                  label: Text(cat.localizedLabel(l10n)),
                   selected: isSelected,
                   selectedColor: AppColors.primary,
                   onSelected: (_) {
@@ -73,8 +75,8 @@ class ChecklistScreen extends ConsumerWidget {
           // Checklists List
           Expanded(
             child: filtered.isEmpty
-                ? const Center(
-                    child: Text('Tidak ada modul audit untuk kategori ini.', style: TextStyle(color: Color(0xFF94A3B8))),
+                ? Center(
+                    child: Text(l10n.noAuditModules, style: const TextStyle(color: Color(0xFF94A3B8))),
                   )
                 : ListView.builder(
                     padding: const EdgeInsets.all(16),
@@ -159,17 +161,17 @@ class ChecklistScreen extends ConsumerWidget {
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        '$checked dari $total butir terpenuhi',
+                                        '$checked / $total ${l10n.itemsFulfilled}',
                                         style: const TextStyle(fontSize: 11, color: Color(0xFF94A3B8)),
                                       ),
-                                      const Row(
+                                      Row(
                                         children: [
                                           Text(
-                                            'Mulai Audit',
-                                            style: TextStyle(fontSize: 12, color: AppColors.primaryLight, fontWeight: FontWeight.w600),
+                                            l10n.startAudit,
+                                            style: const TextStyle(fontSize: 12, color: AppColors.primaryLight, fontWeight: FontWeight.w600),
                                           ),
-                                          SizedBox(width: 4),
-                                          Icon(Icons.arrow_forward_ios, size: 10, color: AppColors.primaryLight),
+                                          const SizedBox(width: 4),
+                                          const Icon(Icons.arrow_forward_ios, size: 10, color: AppColors.primaryLight),
                                         ],
                                       ),
                                     ],

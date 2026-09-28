@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/models/rule_category.dart';
 import '../../core/providers/app_providers.dart';
+import '../../l10n/app_localizations.dart';
 import '../catalog/rule_detail_screen.dart';
 
 class BookmarksScreen extends ConsumerStatefulWidget {
@@ -18,6 +19,7 @@ class _BookmarksScreenState extends ConsumerState<BookmarksScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final bookmarkedIds = ref.watch(bookmarksProvider);
     final allRules = ref.watch(allRulesProvider);
     final allNotes = ref.watch(ruleNotesProvider);
@@ -36,7 +38,7 @@ class _BookmarksScreenState extends ConsumerState<BookmarksScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tersimpan & Catatan'),
+        title: Text(l10n.savedAndNotes),
       ),
       body: Column(
         children: [
@@ -64,7 +66,7 @@ class _BookmarksScreenState extends ConsumerState<BookmarksScreen> {
                         ),
                         alignment: Alignment.center,
                         child: Text(
-                          'Bookmark (${bookmarkedIds.length})',
+                          '${l10n.bookmarkTitle} (${bookmarkedIds.length})',
                           style: TextStyle(
                             fontSize: 13,
                             fontWeight: FontWeight.bold,
@@ -86,7 +88,7 @@ class _BookmarksScreenState extends ConsumerState<BookmarksScreen> {
                         ),
                         alignment: Alignment.center,
                         child: Text(
-                          'Catatan Saya (${allNotes.length})',
+                          '${l10n.myNotes} (${allNotes.length})',
                           style: TextStyle(
                             fontSize: 13,
                             fontWeight: FontWeight.bold,
@@ -113,7 +115,7 @@ class _BookmarksScreenState extends ConsumerState<BookmarksScreen> {
                 final cat = RuleCategory.values[index];
                 final isSelected = _filterCategory == cat;
                 return ChoiceChip(
-                  label: Text(cat.label, style: const TextStyle(fontSize: 11)),
+                  label: Text(cat.localizedLabel(l10n), style: const TextStyle(fontSize: 11)),
                   selected: isSelected,
                   selectedColor: AppColors.primary,
                   onSelected: (_) => setState(() => _filterCategory = cat),
@@ -126,15 +128,15 @@ class _BookmarksScreenState extends ConsumerState<BookmarksScreen> {
           // Content
           Expanded(
             child: _viewMode == 0
-                ? _buildBookmarksList(bookmarkedRules)
-                : _buildNotesList(notesRules, allNotes),
+                ? _buildBookmarksList(bookmarkedRules, l10n)
+                : _buildNotesList(notesRules, allNotes, l10n),
           ),
         ],
       ),
     );
   }
 
-  Widget _buildBookmarksList(List rules) {
+  Widget _buildBookmarksList(List rules, AppLocalizations l10n) {
     if (rules.isEmpty) {
       return Center(
         child: Column(
@@ -149,15 +151,15 @@ class _BookmarksScreenState extends ConsumerState<BookmarksScreen> {
               child: const Icon(Icons.bookmark_border, size: 40, color: AppColors.accent),
             ),
             const SizedBox(height: 16),
-            const Text(
-              'Belum Ada Aturan Tersimpan',
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
+            Text(
+              l10n.noBookmarks,
+              style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
             ),
             const SizedBox(height: 6),
-            const Text(
-              'Tekan ikon bookmark pada aturan untuk menyimpannya ke daftar akses cepat.',
+            Text(
+              l10n.noBookmarksHint,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 12, color: Color(0xFF94A3B8)),
+              style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8)),
             ),
           ],
         ),
@@ -205,7 +207,7 @@ class _BookmarksScreenState extends ConsumerState<BookmarksScreen> {
               ),
               trailing: IconButton(
                 icon: const Icon(Icons.bookmark_remove, color: AppColors.danger, size: 20),
-                tooltip: 'Hapus Simpanan',
+                tooltip: l10n.removeBookmark,
                 onPressed: () {
                   ref.read(bookmarksProvider.notifier).toggleBookmark(item.id);
                 },
@@ -223,7 +225,7 @@ class _BookmarksScreenState extends ConsumerState<BookmarksScreen> {
     );
   }
 
-  Widget _buildNotesList(List rules, Map<String, String> allNotes) {
+  Widget _buildNotesList(List rules, Map<String, String> allNotes, AppLocalizations l10n) {
     if (rules.isEmpty) {
       return Center(
         child: Column(
@@ -238,15 +240,15 @@ class _BookmarksScreenState extends ConsumerState<BookmarksScreen> {
               child: const Icon(Icons.note_alt_outlined, size: 40, color: AppColors.primaryLight),
             ),
             const SizedBox(height: 16),
-            const Text(
-              'Belum Ada Catatan Pribadi',
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
+            Text(
+              l10n.noNotes,
+              style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
             ),
             const SizedBox(height: 6),
-            const Text(
-              'Buka detail aturan untuk menambahkan catatan kasus atau pengingat penting Anda.',
+            Text(
+              l10n.noNotesHint,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 12, color: Color(0xFF94A3B8)),
+              style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8)),
             ),
           ],
         ),

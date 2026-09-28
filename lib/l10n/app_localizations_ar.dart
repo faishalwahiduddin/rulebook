@@ -243,4 +243,377 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get privacyNotice =>
       '100% في وضع عدم الاتصال وخصوصية تامة دون إرسال بيانات لخوادم خارجية.';
+
+  @override
+  String get settingsAndPrivacy => 'الإعدادات والخصوصية';
+
+  @override
+  String get offlineAndPrivate => '100% غير متصل وخاص';
+
+  @override
+  String get offlineNoticeDetail =>
+      'يتم تخزين جميع اللوائح القانونية وإجراءات التشغيل المعيارية (SOPs) في حالات الطوارئ وقوائم مراجعة التدقيق والملاحظات الشخصية بأمان على جهازك المحلي دون إرسال البيانات إلى خوادم خارجية.';
+
+  @override
+  String get deleteNotesBookmarksDesc =>
+      'مسح جميع عمليات الحفظ والسجلات المحلية';
+
+  @override
+  String get deleteAllDataConfirm => 'مسح كافة البيانات؟';
+
+  @override
+  String get deleteAllDataDesc =>
+      'سيؤدي هذا الإجراء إلى حذف جميع الإشارات المرجعية وملاحظات القاعدة التي قمت بإنشائها.';
+
+  @override
+  String get allBookmarksCleared =>
+      'تم مسح كافة الإشارات المرجعية وبيانات الملاحظات.';
+
+  @override
+  String get aboutApplication => 'حول التطبيق';
+
+  @override
+  String get application => 'طلب';
+
+  @override
+  String get version => 'إصدار';
+
+  @override
+  String get ecosystem => 'النظام البيئي';
+
+  @override
+  String get subdomain => 'النطاقات الفرعية';
+
+  @override
+  String get applicationId => 'معرف التطبيق';
+
+  @override
+  String get simulationAndCalculator => 'محاكاة وآلة حاسبة';
+
+  @override
+  String get tabOvertimePay => 'الأجر الإضافي';
+
+  @override
+  String get tabSeverancePay => 'مكافأة نهاية الخدمة';
+
+  @override
+  String get tabProratedThr => 'نسبة THR';
+
+  @override
+  String get tabTrafficFine => 'غرامات التذاكر';
+
+  @override
+  String get tabCyberIteSanctions => 'عقوبات ITE Cyber';
+
+  @override
+  String get tenureMinMonthError => 'يجب أن لا تقل مدة العمل عن شهر واحد';
+
+  @override
+  String get tenureMaxMonthError => 'الحد الأقصى لمدة العمل 600 شهر';
+
+  @override
+  String get overtimeLegalBasis =>
+      'الأساس القانوني: PP رقم 35 لسنة 2021 المواد 26-31. يتم احتساب الأجر بالساعة على أنه 1/173 × الأجر الشهري (الراتب الأساسي + العلاوة الثابتة).';
+
+  @override
+  String get monthlyBasicSalaryRp => 'الراتب الأساسي الشهري (روبية)';
+
+  @override
+  String get totalOvertimeHours => 'إجمالي ساعات العمل الإضافي';
+
+  @override
+  String get exampleOvertimeHours => 'على سبيل المثال: 3';
+
+  @override
+  String get overtimeHolidayTitle =>
+      'العمل الإضافي في أيام العطل الرسمية / فترات الراحة الأسبوعية';
+
+  @override
+  String get overtimeHolidayDesc =>
+      'المضاعف 2x لأول 8 ساعات، 3x الساعة التاسعة، 4x الساعة العاشرة+';
+
+  @override
+  String get estimatedOvertimePay => 'يجب دفع أجور العمل الإضافي المقدرة';
+
+  @override
+  String get overtimeRateHoliday =>
+      'أسعار العمل الإضافي الرسمي للعطلات (PP 35/2021)';
+
+  @override
+  String get overtimeRateRegular =>
+      'معدل العمل الإضافي في يوم العمل العادي (1.5 × الساعة الأولى، 2 × الساعة التالية)';
+
+  @override
+  String get hourlyWage => 'أجر الساعة (1/173)';
+
+  @override
+  String get totalHoursLabel => 'إجمالي الساعات';
+
+  @override
+  String get hoursUnit => 'الساعة';
+
+  @override
+  String get overtimeCopiedSuccess =>
+      'تم نسخ نتائج العمل الإضافي بنجاح إلى الحافظة!';
+
+  @override
+  String get severanceLegalBasis =>
+      'حاسبة تعويضات نهاية الخدمة الرسمية حسب PP رقم 35/2021 جو. قانون خلق فرص العمل رقم . 6/2023. حساب مكافأة نهاية الخدمة (UP)، ومكافآت الخدمة الطويلة (UPMK)، وحقوق الاستبدال (UPH).';
+
+  @override
+  String get basicSalaryFixedAllowance =>
+      'الراتب الأساسي + البدل الثابت (روبية)';
+
+  @override
+  String get serviceExtraMonths => 'تجاوز (أشهر)';
+
+  @override
+  String get uphCompensation =>
+      'أموال الاستبدال / UPH (الإجازة لم تنته بعد / التكاليف)';
+
+  @override
+  String get totalSeverancePayTitle =>
+      'يجب قبول حقوق التعويض الكاملة عن حالات تسريح العمال';
+
+  @override
+  String get severancePayLabel => 'مكافأة نهاية الخدمة';
+
+  @override
+  String get upmkPayLabel => 'أموال مكافأة الخدمة الطويلة';
+
+  @override
+  String get severanceCopiedSuccess =>
+      'تم نسخ تفاصيل دفع نهاية الخدمة بنجاح إلى الحافظة!';
+
+  @override
+  String get thrLegalBasis =>
+      'الأساس القانوني: نظام وزير القوى العاملة رقم 6/2016 جو. ص 36/2021. مدة العمل >= 12 شهراً = شهر كامل الراتب. يتم احتساب فترة العمل من 1 إلى 12 شهرًا بشكل متناسب (تناسبي).';
+
+  @override
+  String get monthlyNetWage =>
+      'صافي الأجر الشهري (الراتب الأساسي + العلاوة الثابتة)';
+
+  @override
+  String get continuousServiceMonths => 'فترة العمل المستمر (أشهر)';
+
+  @override
+  String get exampleEightMonths => 'على سبيل المثال: 8 أشهر';
+
+  @override
+  String get estimatedThrTitle => 'بدل الإجازة المقدر (THR)';
+
+  @override
+  String get thrRuleFull => 'مدة العمل >= 12 شهرًا: شهر كامل الأجر';
+
+  @override
+  String get thrRuleProrate =>
+      'فترة العمل < 12 شهرًا: يتم حسابها على أساس تناسبي (فترة العمل / 12 × الأجر)';
+
+  @override
+  String get thrLatePenalty =>
+      'العقوبات المفروضة على رواد الأعمال المتأخرين: غرامة قدرها 5٪ من إجمالي THR الاسمي';
+
+  @override
+  String get thrCopiedSuccess => 'تم نسخ حساب THR بنجاح!';
+
+  @override
+  String get trafficLegalBasis =>
+      'الأساس القانوني: القانون رقم. قانون رقم (22) لسنة 2009 في شأن حركة المرور والنقل على الطرق القيم الدقيقة التالية هي الحد الأقصى لغرامات المحكمة على مخالفات المرور الجنائية.';
+
+  @override
+  String get totalEstimatedMaxFine => 'إجمالي الحد الأقصى للغرامات المقدرة';
+
+  @override
+  String get resetSelection => 'إعادة تعيين الخيارات';
+
+  @override
+  String get selectViolationsHint =>
+      'اختر مخالفة ذات صلة لعرض الغرامة الافتراضية:';
+
+  @override
+  String get iteLegalBasis =>
+      'الأساس القانوني: قانون ITE رقم. قانون رقم (1) لسنة 2024 وقانون PDP رقم. قانون رقم 27 لسنة 2022. التمييز بين جرائم الشكوى المطلقة (التلوث) والجرائم العادية (الاحتيال والخدع السيبرانية).';
+
+  @override
+  String get complaintOffenseOnly =>
+      'إظهار جرائم الشكوى فقط (الضحايا المباشرين)';
+
+  @override
+  String get complaintOffense => 'جريمة الشكوى';
+
+  @override
+  String get ordinaryOffense => 'جريمة عادية';
+
+  @override
+  String get maxPrison => 'سجن ماكس.';
+
+  @override
+  String get yearsUnit => 'سنة';
+
+  @override
+  String get maxFine => 'ماكس فاين';
+
+  @override
+  String get legalTips => 'نصائح قانونية';
+
+  @override
+  String get defenseExemption => 'استثناء';
+
+  @override
+  String get copyResults => 'نسخ النتائج';
+
+  @override
+  String get noteDeleted => 'تم حذف الملاحظة.';
+
+  @override
+  String get saveRule => 'حفظ القواعد';
+
+  @override
+  String get removeBookmark => 'حذف الحفظ';
+
+  @override
+  String get officialPenaltyOrRight => 'العقوبات/الحقوق الرسمية';
+
+  @override
+  String get summaryExplanation => 'شرح الملخص';
+
+  @override
+  String get practicalGuidance => 'الدليل العملي في الميدان';
+
+  @override
+  String get writeCaseNotesHint =>
+      'قم بتدوين ملاحظات الحالة أو تواريخ الأحداث أو التذكيرات...';
+
+  @override
+  String get saveNote => 'حفظ الملاحظات';
+
+  @override
+  String get relatedRules => 'القواعد ذات الصلة';
+
+  @override
+  String get copySummary => 'ملخص النسخ';
+
+  @override
+  String get searchRulesHint =>
+      'ابحث عن المقالات والغرامات ومكافأة نهاية الخدمة وITE وSOP...';
+
+  @override
+  String get resetFilter => 'إعادة تعيين المرشحات';
+
+  @override
+  String get noRulesMatch => 'لا توجد قواعد مطابقة';
+
+  @override
+  String get tryOtherKeywords => 'جرب كلمات رئيسية أخرى أو حدد فئة الكل.';
+
+  @override
+  String get sopEmergencyGuide =>
+      'إجراءات التشغيل القياسية والمبادئ التوجيهية في حالات الطوارئ';
+
+  @override
+  String get sopBanner =>
+      'الدليل الرسمي خطوة بخطوة عند مواجهة المواقف الحرجة: مخالفات السرعة، وتسريح العمال من جانب واحد، والبضائع التالفة، وتسرب البيانات، وحوادث العمل.';
+
+  @override
+  String get noSopForCategory => 'لا يوجد إجراء تشغيلي موحد (SOP) لهذه الفئة';
+
+  @override
+  String get chooseAllCategoryForSop =>
+      'حدد فئة \"الكل\" لعرض دليل إجراءات الطوارئ بالكامل.';
+
+  @override
+  String stepsCount(int count) {
+    return '$count الخطوات';
+  }
+
+  @override
+  String get copySopSummary => 'انسخ ملخص إجراءات التشغيل القياسية (SOP).';
+
+  @override
+  String get sopSummaryCopied => 'تم نسخ ملخص SOP بنجاح!';
+
+  @override
+  String get officialSop => 'إجراءات التشغيل القياسية الرسمية';
+
+  @override
+  String get situation => 'الموقف';
+
+  @override
+  String get savedAndNotes => 'المحفوظة والملاحظات';
+
+  @override
+  String get myNotes => 'ملاحظاتي';
+
+  @override
+  String get noBookmarksHint =>
+      'اضغط على أيقونة الإشارة المرجعية الموجودة على القاعدة لحفظها في قائمة الوصول السريع.';
+
+  @override
+  String get noNotes => 'لا توجد ملاحظات شخصية حتى الآن';
+
+  @override
+  String get noNotesHint =>
+      'انتقل إلى تفاصيل القاعدة لإضافة ملاحظات الحالة أو التذكيرات المهمة.';
+
+  @override
+  String get checklistBanner =>
+      'أداة تدقيق الامتثال التفاعلية للتحقق من ملاءمة السيارة وحقوق العمل المعيارية وبناء معايير K3 وأمن خصوصية البيانات.';
+
+  @override
+  String get noAuditModules => 'لا توجد وحدة تدقيق لهذه الفئة.';
+
+  @override
+  String get itemsFulfilled => 'تم استيفاء البند';
+
+  @override
+  String get startAudit => 'ابدأ التدقيق';
+
+  @override
+  String get perfectCompliance => 'الامتثال التام (100%)';
+
+  @override
+  String get goodCompliance => 'الامتثال الجيد';
+
+  @override
+  String get moderateCompliance => 'الامتثال المعتدل - يتطلب الاهتمام';
+
+  @override
+  String get criticalCompliance => 'مستوى الامتثال الحرج';
+
+  @override
+  String get targetLabel => 'هدف';
+
+  @override
+  String get checklistItems => 'قائمة عناصر التفتيش';
+
+  @override
+  String get crucial => 'مهم';
+
+  @override
+  String get resetChecklist => 'إعادة تعيين قائمة التحقق';
+
+  @override
+  String get resetChecklistTitle => 'إعادة تعيين قائمة التحقق؟';
+
+  @override
+  String get resetChecklistConfirmMsg =>
+      'سيؤدي هذا الإجراء إلى مسح جميع علامات الاختيار في وحدة التدقيق هذه.';
+
+  @override
+  String get navCatalogShort => 'كتالوج';
+
+  @override
+  String get navSimulationShort => 'محاكاة';
+
+  @override
+  String get navSopShort => 'إجراءات التشغيل القياسية في حالات الطوارئ';
+
+  @override
+  String get navComplianceShort => 'امتثال';
+
+  @override
+  String get categoryAll => 'الجميع';
+
+  @override
+  String get catSafety => 'السلامة (K3)';
 }

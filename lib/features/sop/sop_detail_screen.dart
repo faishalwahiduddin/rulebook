@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/models/sop_guide.dart';
+import '../../l10n/app_localizations.dart';
 
 class SopDetailScreen extends StatelessWidget {
   final SopGuide sop;
@@ -21,24 +22,26 @@ class SopDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(sop.title),
         actions: [
           IconButton(
             icon: const Icon(Icons.share_outlined),
-            tooltip: 'Salin Ringkasan SOP',
+            tooltip: l10n.copySopSummary,
             onPressed: () {
               final buffer = StringBuffer();
               buffer.writeln('📋 ${sop.title}');
-              buffer.writeln('Dasar Hukum: ${sop.legalBasis}');
-              buffer.writeln('Situasi: ${sop.targetScenario}\n');
-              buffer.writeln('--- LANGKAH TINDAKAN DARURAT ---');
+              buffer.writeln('${l10n.legalBasis}: ${sop.legalBasis}');
+              buffer.writeln('${l10n.situation}: ${sop.targetScenario}\n');
+              buffer.writeln('--- ${l10n.emergencySteps} ---');
               for (final s in sop.steps) {
                 buffer.writeln('${s.stepNumber}. ${s.title}: ${s.detail}');
               }
               buffer.writeln('\nReferensi: RuleBook App (https://rulebook.faishal.id)');
-              _copyToClipboard(context, buffer.toString(), 'Ringkasan SOP berhasil disalin!');
+              _copyToClipboard(context, buffer.toString(), l10n.sopSummaryCopied);
             },
           ),
         ],
@@ -67,7 +70,7 @@ class SopDetailScreen extends StatelessWidget {
                           Icon(sop.category.icon, color: sop.category.tagColor, size: 20),
                           const SizedBox(width: 8),
                           Text(
-                            sop.category.label,
+                            sop.category.localizedLabel(l10n),
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w700,
@@ -81,13 +84,13 @@ class SopDetailScreen extends StatelessWidget {
                               color: Colors.red.withValues(alpha: 0.2),
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            child: const Row(
+                            child: Row(
                               children: [
-                                Icon(Icons.emergency_outlined, size: 14, color: AppColors.danger),
-                                SizedBox(width: 4),
+                                const Icon(Icons.emergency_outlined, size: 14, color: AppColors.danger),
+                                const SizedBox(width: 4),
                                 Text(
-                                  'SOP RESMI',
-                                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.danger),
+                                  l10n.officialSop,
+                                  style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.danger),
                                 ),
                               ],
                             ),
@@ -101,7 +104,7 @@ class SopDetailScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        'Dasar Hukum: ${sop.legalBasis}',
+                        '${l10n.legalBasis}: ${sop.legalBasis}',
                         style: const TextStyle(fontSize: 12, color: AppColors.accent, fontWeight: FontWeight.w600),
                       ),
                     ],
@@ -110,13 +113,13 @@ class SopDetailScreen extends StatelessWidget {
                 const SizedBox(height: 24),
 
                 // Hak Penting Anda (Rights)
-                const Row(
+                Row(
                   children: [
-                    Icon(Icons.verified_user_outlined, color: AppColors.success, size: 20),
-                    SizedBox(width: 8),
+                    const Icon(Icons.verified_user_outlined, color: AppColors.success, size: 20),
+                    const SizedBox(width: 8),
                     Text(
-                      'Hak Hukum Wajib Anda Ketahui',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
+                      l10n.rights,
+                      style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
                     ),
                   ],
                 ),
@@ -151,13 +154,13 @@ class SopDetailScreen extends StatelessWidget {
                 const SizedBox(height: 28),
 
                 // Langkah Bertindak (Step by Step Timeline)
-                const Row(
+                Row(
                   children: [
-                    Icon(Icons.timeline, color: AppColors.primaryLight, size: 20),
-                    SizedBox(width: 8),
+                    const Icon(Icons.timeline, color: AppColors.primaryLight, size: 20),
+                    const SizedBox(width: 8),
                     Text(
-                      'Langkah Demi Langkah Tindakan Darurat',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
+                      l10n.emergencySteps,
+                      style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
                     ),
                   ],
                 ),
@@ -259,13 +262,13 @@ class SopDetailScreen extends StatelessWidget {
 
                 // Kontak Layanan / Hotline Darurat
                 if (sop.emergencyContacts.isNotEmpty) ...[
-                  const Row(
+                  Row(
                     children: [
-                      Icon(Icons.phone_in_talk, color: AppColors.accent, size: 20),
-                      SizedBox(width: 8),
+                      const Icon(Icons.phone_in_talk, color: AppColors.accent, size: 20),
+                      const SizedBox(width: 8),
                       Text(
-                        'Hotline & Kontak Resmi Terkait',
-                        style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
+                        l10n.hotlineContacts,
+                        style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
                       ),
                     ],
                   ),

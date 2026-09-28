@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/models/compliance_checklist.dart';
 import '../../core/providers/app_providers.dart';
+import '../../l10n/app_localizations.dart';
 
 class ChecklistDetailScreen extends ConsumerWidget {
   final ComplianceChecklist checklist;
@@ -11,6 +12,7 @@ class ChecklistDetailScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final checkedMap = ref.watch(checklistStateProvider);
     final checkedIds = checkedMap[checklist.id] ?? <String>{};
     final totalItems = checklist.items.length;
@@ -21,16 +23,16 @@ class ChecklistDetailScreen extends ConsumerWidget {
     String scoreStatus;
     if (percentage == 1.0) {
       progressColor = AppColors.success;
-      scoreStatus = 'Kepatuhan Sempurna (100%)';
+      scoreStatus = l10n.perfectCompliance;
     } else if (percentage >= 0.7) {
       progressColor = AppColors.primaryLight;
-      scoreStatus = 'Kepatuhan Baik';
+      scoreStatus = l10n.goodCompliance;
     } else if (percentage >= 0.4) {
       progressColor = AppColors.accent;
-      scoreStatus = 'Kepatuhan Sedang — Butuh Perhatian';
+      scoreStatus = l10n.moderateCompliance;
     } else {
       progressColor = AppColors.danger;
-      scoreStatus = 'Tingkat Kepatuhan Kritis';
+      scoreStatus = l10n.criticalCompliance;
     }
 
     return Scaffold(
@@ -39,23 +41,23 @@ class ChecklistDetailScreen extends ConsumerWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
-            tooltip: 'Reset Checklist',
+            tooltip: l10n.resetChecklist,
             onPressed: () async {
               final confirm = await showDialog<bool>(
                 context: context,
                 builder: (ctx) => AlertDialog(
                   backgroundColor: AppColors.bgSurface,
-                  title: const Text('Reset Checklist?', style: TextStyle(color: Colors.white)),
-                  content: const Text(
-                    'Tindakan ini akan mengosongkan semua tanda centang pada modul audit ini.',
-                    style: TextStyle(color: Color(0xFF94A3B8)),
+                  title: Text(l10n.resetChecklistTitle, style: const TextStyle(color: Colors.white)),
+                  content: Text(
+                    l10n.resetChecklistConfirmMsg,
+                    style: const TextStyle(color: Color(0xFF94A3B8)),
                   ),
                   actions: [
-                    TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Batal')),
+                    TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(l10n.cancel)),
                     ElevatedButton(
                       onPressed: () => Navigator.pop(ctx, true),
                       style: ElevatedButton.styleFrom(backgroundColor: AppColors.danger),
-                      child: const Text('Reset'),
+                      child: Text(l10n.reset),
                     ),
                   ],
                 ),
@@ -99,7 +101,7 @@ class ChecklistDetailScreen extends ConsumerWidget {
                               ),
                               const SizedBox(height: 4),
                               Text(
-                                '$checkedCount dari $totalItems butir audit terpenuhi',
+                                '$checkedCount / $totalItems ${l10n.itemsFulfilled}',
                                 style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8)),
                               ),
                             ],
@@ -138,7 +140,7 @@ class ChecklistDetailScreen extends ConsumerWidget {
                       const SizedBox(width: 8),
                       Expanded(
                         child: Text(
-                          'Sasaran: ${checklist.targetAudience} • ${checklist.description}',
+                          '${l10n.targetLabel}: ${checklist.targetAudience} • ${checklist.description}',
                           style: const TextStyle(fontSize: 12, color: Color(0xFFE2E8F0)),
                         ),
                       ),
@@ -148,9 +150,9 @@ class ChecklistDetailScreen extends ConsumerWidget {
                 const SizedBox(height: 20),
 
                 // Items Checklist
-                const Text(
-                  'Daftar Butir Pemeriksaan',
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
+                Text(
+                  l10n.checklistItems,
+                  style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
                 ),
                 const SizedBox(height: 10),
                 ...checklist.items.map((item) {
@@ -192,9 +194,9 @@ class ChecklistDetailScreen extends ConsumerWidget {
                                 color: AppColors.danger.withValues(alpha: 0.2),
                                 borderRadius: BorderRadius.circular(4),
                               ),
-                              child: const Text(
-                                'KRUSIAL',
-                                style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: AppColors.danger),
+                              child: Text(
+                                l10n.crucial,
+                                style: const TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: AppColors.danger),
                               ),
                             ),
                         ],

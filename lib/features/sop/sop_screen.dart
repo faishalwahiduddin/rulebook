@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/models/rule_category.dart';
 import '../../core/providers/app_providers.dart';
+import '../../l10n/app_localizations.dart';
 import 'sop_detail_screen.dart';
 
 class SopScreen extends ConsumerWidget {
@@ -10,16 +11,17 @@ class SopScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final sops = ref.watch(filteredSopGuidesProvider);
     final activeCategory = ref.watch(selectedCategoryProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Row(
+        title: Row(
           children: [
-            Icon(Icons.shield_outlined, color: AppColors.accent, size: 22),
-            SizedBox(width: 10),
-            Text('SOP & Panduan Darurat', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18)),
+            const Icon(Icons.shield_outlined, color: AppColors.accent, size: 22),
+            const SizedBox(width: 10),
+            Text(l10n.sopEmergencyGuide, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 18)),
           ],
         ),
       ),
@@ -30,9 +32,9 @@ class SopScreen extends ConsumerWidget {
             width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             color: AppColors.bgSurface,
-            child: const Text(
-              'Panduan langkah-demi-langkah resmi saat menghadapi situasi kritis: razia tilang, PHK sepihak, barang rusak, kebocoran data, dan kecelakaan kerja.',
-              style: TextStyle(fontSize: 12, color: Color(0xFF94A3B8), height: 1.35),
+            child: Text(
+              l10n.sopBanner,
+              style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8), height: 1.35),
             ),
           ),
 
@@ -49,7 +51,7 @@ class SopScreen extends ConsumerWidget {
                 final isSelected = activeCategory == cat;
                 return ChoiceChip(
                   avatar: Icon(cat.icon, size: 15, color: isSelected ? Colors.white : cat.tagColor),
-                  label: Text(cat.label),
+                  label: Text(cat.localizedLabel(l10n)),
                   selected: isSelected,
                   selectedColor: AppColors.primary,
                   onSelected: (_) {
@@ -68,23 +70,23 @@ class SopScreen extends ConsumerWidget {
           // SOP List
           Expanded(
             child: sops.isEmpty
-                ? const Center(
+                ? Center(
                     child: Padding(
-                      padding: EdgeInsets.all(24),
+                      padding: const EdgeInsets.all(24),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.rule_folder_outlined, size: 48, color: Color(0xFF64748B)),
-                          SizedBox(height: 12),
+                          const Icon(Icons.rule_folder_outlined, size: 48, color: Color(0xFF64748B)),
+                          const SizedBox(height: 12),
                           Text(
-                            'Tidak Ada SOP untuk Kategori Ini',
-                            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+                            l10n.noSopForCategory,
+                            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
                           ),
-                          SizedBox(height: 6),
+                          const SizedBox(height: 6),
                           Text(
-                            'Pilih kategori "Semua" untuk melihat seluruh panduan tindakan darurat.',
+                            l10n.chooseAllCategoryForSop,
                             textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 12, color: Color(0xFF94A3B8)),
+                            style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8)),
                           ),
                         ],
                       ),
@@ -122,7 +124,7 @@ class SopScreen extends ConsumerWidget {
                                           borderRadius: BorderRadius.circular(6),
                                         ),
                                         child: Text(
-                                          item.category.label,
+                                          item.category.localizedLabel(l10n),
                                           style: TextStyle(
                                             fontSize: 11,
                                             fontWeight: FontWeight.w700,
@@ -138,7 +140,7 @@ class SopScreen extends ConsumerWidget {
                                           borderRadius: BorderRadius.circular(4),
                                         ),
                                         child: Text(
-                                          '${item.steps.length} Langkah',
+                                          l10n.stepsCount(item.steps.length),
                                           style: const TextStyle(fontSize: 10, color: AppColors.primaryLight, fontWeight: FontWeight.bold),
                                         ),
                                       ),

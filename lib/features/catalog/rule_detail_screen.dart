@@ -5,6 +5,7 @@ import '../../core/constants/app_colors.dart';
 import '../../core/models/rule_item.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/utils/validators.dart';
+import '../../l10n/app_localizations.dart';
 
 class RuleDetailScreen extends ConsumerStatefulWidget {
   final RuleItem rule;
@@ -46,12 +47,13 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
   }
 
   Future<void> _saveNote() async {
+    final l10n = AppLocalizations.of(context)!;
     final text = _noteController.text.trim();
     if (text.isEmpty) {
       await ref.read(ruleNotesProvider.notifier).deleteNote(widget.rule.id);
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Catatan dihapus.')),
+          SnackBar(content: Text(l10n.noteDeleted)),
         );
       }
       return;
@@ -69,7 +71,7 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
       if (mounted) {
         setState(() => _noteError = null);
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Catatan berhasil disimpan!')),
+          SnackBar(content: Text(l10n.noteSaved)),
         );
       }
     } finally {
@@ -79,6 +81,7 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final isBookmarked = ref.watch(bookmarksProvider).contains(widget.rule.id);
     final allRules = ref.watch(allRulesProvider);
     final relatedRules = allRules
@@ -92,14 +95,14 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
         actions: [
           IconButton(
             icon: const Icon(Icons.share_outlined),
-            tooltip: 'Salin Ringkasan',
+            tooltip: l10n.copySummary,
             onPressed: () {
               final text = '📖 ${widget.rule.title}\n'
-                  'Dasar Hukum: ${widget.rule.legalBasis}\n'
-                  'Intisari: ${widget.rule.summary}\n'
-                  'Sanksi/Hak: ${widget.rule.penaltyOrRight}\n\n'
+                  '${l10n.legalBasis}: ${widget.rule.legalBasis}\n'
+                  '${l10n.summary}: ${widget.rule.summary}\n'
+                  '${l10n.penalties}: ${widget.rule.penaltyOrRight}\n\n'
                   'Aplikasi RuleBook (https://rulebook.faishal.id)';
-              _copyToClipboard(text, 'Ringkasan aturan berhasil disalin!');
+              _copyToClipboard(text, l10n.noteSaved);
             },
           ),
           IconButton(
@@ -107,7 +110,7 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
               isBookmarked ? Icons.bookmark : Icons.bookmark_border,
               color: isBookmarked ? AppColors.accent : Colors.white,
             ),
-            tooltip: isBookmarked ? 'Hapus Simpanan' : 'Simpan Aturan',
+            tooltip: isBookmarked ? l10n.removeBookmark : l10n.saveRule,
             onPressed: () {
               ref.read(bookmarksProvider.notifier).toggleBookmark(widget.rule.id);
             },
@@ -203,9 +206,9 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Text(
-                                'Sanksi / Hak Resmi',
-                                style: TextStyle(
+                              Text(
+                                l10n.officialPenaltyOrRight,
+                                style: const TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w700,
                                   color: AppColors.danger,
@@ -237,9 +240,9 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'Penjelasan Intisari',
-                          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
+                        Text(
+                          l10n.summaryExplanation,
+                          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
                         ),
                         const SizedBox(height: 10),
                         Text(
@@ -259,9 +262,9 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'Panduan Praktis di Lapangan',
-                          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
+                        Text(
+                          l10n.practicalGuidance,
+                          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
                         ),
                         const SizedBox(height: 14),
                         ...widget.rule.keyDos.map((doItem) => Padding(
@@ -304,13 +307,13 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Row(
+                        Row(
                           children: [
-                            Icon(Icons.edit_note, size: 20, color: AppColors.primaryLight),
-                            SizedBox(width: 8),
+                            const Icon(Icons.edit_note, size: 20, color: AppColors.primaryLight),
+                            const SizedBox(width: 8),
                             Text(
-                              'Catatan Pribadi',
-                              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
+                              l10n.personalNote,
+                              style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
                             ),
                           ],
                         ),
@@ -319,7 +322,7 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
                           controller: _noteController,
                           maxLines: 3,
                           decoration: InputDecoration(
-                            hintText: 'Tuliskan catatan kasus, tanggal kejadian, atau pengingat...',
+                            hintText: l10n.writeCaseNotesHint,
                             errorText: _noteError,
                           ),
                           onChanged: (val) {
@@ -334,7 +337,7 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
                           child: ElevatedButton.icon(
                             onPressed: _isSavingNote ? null : _saveNote,
                             icon: const Icon(Icons.save, size: 16),
-                            label: const Text('Simpan Catatan'),
+                            label: Text(l10n.saveNote),
                           ),
                         ),
                       ],
@@ -346,7 +349,7 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
                 // Related Rules in same category
                 if (relatedRules.isNotEmpty) ...[
                   Text(
-                    'Aturan Terkait dalam ${widget.rule.category.label}',
+                    '${l10n.relatedRules} (${widget.rule.category.localizedLabel(l10n)})',
                     style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
                   ),
                   const SizedBox(height: 12),

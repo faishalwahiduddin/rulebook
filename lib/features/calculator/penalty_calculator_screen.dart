@@ -5,6 +5,7 @@ import '../../core/constants/app_colors.dart';
 import '../../core/models/cyber_penalty_models.dart';
 import '../../core/models/severance_calculator_models.dart';
 import '../../core/utils/validators.dart';
+import '../../l10n/app_localizations.dart';
 
 class PenaltyCalculatorScreen extends StatefulWidget {
   const PenaltyCalculatorScreen({super.key});
@@ -220,9 +221,11 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Simulasi & Kalkulator'),
+        title: Text(l10n.simulationAndCalculator),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
@@ -237,26 +240,26 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      _buildTabButton(0, 'Upah Lembur', Icons.access_time),
+                      _buildTabButton(0, l10n.tabOvertimePay, Icons.access_time),
                       const SizedBox(width: 8),
-                      _buildTabButton(1, 'Pesangon PHK', Icons.work_outline),
+                      _buildTabButton(1, l10n.tabSeverancePay, Icons.work_outline),
                       const SizedBox(width: 8),
-                      _buildTabButton(2, 'THR Prorata', Icons.card_giftcard),
+                      _buildTabButton(2, l10n.tabProratedThr, Icons.card_giftcard),
                       const SizedBox(width: 8),
-                      _buildTabButton(3, 'Denda Tilang', Icons.traffic),
+                      _buildTabButton(3, l10n.tabTrafficFine, Icons.traffic),
                       const SizedBox(width: 8),
-                      _buildTabButton(4, 'Sanksi Siber ITE', Icons.security),
+                      _buildTabButton(4, l10n.tabCyberIteSanctions, Icons.security),
                     ],
                   ),
                 ),
                 const SizedBox(height: 24),
 
                 // Active Tab Content
-                if (_selectedTab == 0) _buildOvertimeTab(),
-                if (_selectedTab == 1) _buildSeveranceTab(),
-                if (_selectedTab == 2) _buildThrTab(),
-                if (_selectedTab == 3) _buildTrafficFineTab(),
-                if (_selectedTab == 4) _buildCyberPenaltyTab(),
+                if (_selectedTab == 0) _buildOvertimeTab(l10n),
+                if (_selectedTab == 1) _buildSeveranceTab(l10n),
+                if (_selectedTab == 2) _buildThrTab(l10n),
+                if (_selectedTab == 3) _buildTrafficFineTab(l10n),
+                if (_selectedTab == 4) _buildCyberPenaltyTab(l10n),
               ],
             ),
           ),
@@ -300,7 +303,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
   // ==========================================
   // TAB 0: UPAH LEMBUR (PP 35/2021)
   // ==========================================
-  Widget _buildOvertimeTab() {
+  Widget _buildOvertimeTab(AppLocalizations l10n) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -311,13 +314,13 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: AppColors.primary.withValues(alpha: 0.3)),
           ),
-          child: const Row(
+          child: Row(
             children: [
-              Icon(Icons.info_outline, color: AppColors.primaryLight, size: 20),
-              SizedBox(width: 10),
+              const Icon(Icons.info_outline, color: AppColors.primaryLight, size: 20),
+              const SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  'Dasar Hukum: PP No. 35 Tahun 2021 Pasal 26–31. Upah sejam dihitung 1/173 x Upah Bulanan (Gaji Pokok + Tunjangan Tetap).',
+                  l10n.overtimeLegalBasis,
                   style: TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.35),
                 ),
               ),
@@ -329,8 +332,8 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
         TextField(
           controller: _overtimeSalaryController,
           keyboardType: TextInputType.number,
-          decoration: const InputDecoration(
-            labelText: 'Gaji Pokok Bulanan (Rp)',
+          decoration: InputDecoration(
+            labelText: l10n.monthlyBasicSalaryRp,
             prefixIcon: Icon(Icons.payments_outlined),
             hintText: '5000000',
           ),
@@ -341,10 +344,10 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
         TextField(
           controller: _overtimeHoursController,
           keyboardType: const TextInputType.numberWithOptions(decimal: true),
-          decoration: const InputDecoration(
-            labelText: 'Total Jam Lembur',
+          decoration: InputDecoration(
+            labelText: l10n.totalOvertimeHours,
             prefixIcon: Icon(Icons.timer_outlined),
-            hintText: 'Misal: 3',
+            hintText: l10n.exampleOvertimeHours,
           ),
           onChanged: (_) => _calculateOvertime(),
         ),
@@ -354,8 +357,8 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
           value: _isHoliday,
           contentPadding: EdgeInsets.zero,
           activeThumbColor: AppColors.primaryLight,
-          title: const Text('Lembur di Hari Libur Resmi / Istirahat Mingguan', style: TextStyle(fontSize: 13, color: Colors.white)),
-          subtitle: const Text('Pengali 2x untuk 8 jam pertama, 3x jam ke-9, 4x jam ke-10+', style: TextStyle(fontSize: 11, color: Color(0xFF94A3B8))),
+          title: Text(l10n.overtimeHolidayTitle, style: const TextStyle(fontSize: 13, color: Colors.white)),
+          subtitle: Text(l10n.overtimeHolidayDesc, style: const TextStyle(fontSize: 11, color: Color(0xFF94A3B8))),
           onChanged: (val) {
             setState(() => _isHoliday = val);
             _calculateOvertime();
@@ -370,11 +373,11 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
 
         // Result Card
         _buildResultCard(
-          title: 'Estimasi Upah Lembur Wajib Dibayar',
+          title: l10n.estimatedOvertimePay,
           amountText: _currencyFormat.format(_calculatedOvertimePay),
           subtitle: _isHoliday
-              ? 'Tarif lembur hari libur resmi (PP 35/2021)'
-              : 'Tarif lembur hari kerja biasa (1.5x jam 1, 2x jam berikutnya)',
+              ? l10n.overtimeRateHoliday
+              : l10n.overtimeRateRegular,
           details: [
             'Upah per Jam (1/173): ${_currencyFormat.format(double.tryParse(_overtimeSalaryController.text.replaceAll(RegExp(r'[^0-9]'), '')) != null ? (double.parse(_overtimeSalaryController.text.replaceAll(RegExp(r'[^0-9]'), '')) / 173) : 0)}',
             'Total Jam: ${_overtimeHoursController.text.trim()} Jam',
@@ -383,7 +386,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
           onCopy: () {
             _copyToClipboard(
               'Simulasi Lembur RuleBook:\nGaji: ${_overtimeSalaryController.text}\nJam: ${_overtimeHoursController.text}\nEstimasi Hak Upah: ${_currencyFormat.format(_calculatedOvertimePay)}\nDasar Hukum: PP 35/2021',
-              'Hasil lembur berhasil disalin ke clipboard!',
+              l10n.overtimeCopiedSuccess,
             );
           },
         ),
@@ -394,7 +397,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
   // ==========================================
   // TAB 1: PESANGON PHK (PP 35/2021)
   // ==========================================
-  Widget _buildSeveranceTab() {
+  Widget _buildSeveranceTab(AppLocalizations l10n) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -405,13 +408,13 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: AppColors.laborTag.withValues(alpha: 0.3)),
           ),
-          child: const Row(
+          child: Row(
             children: [
-              Icon(Icons.gavel, color: AppColors.laborTag, size: 20),
-              SizedBox(width: 10),
+              const Icon(Icons.gavel, color: AppColors.laborTag, size: 20),
+              const SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  'Kalkulator Pesangon Resmi sesuai PP No. 35/2021 jo. UU Cipta Kerja No. 6/2023. Menghitung Uang Pesangon (UP), Penghargaan Masa Kerja (UPMK), & Penggantian Hak (UPH).',
+                  l10n.severanceLegalBasis,
                   style: TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.35),
                 ),
               ),
@@ -423,8 +426,8 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
         TextField(
           controller: _severanceSalaryController,
           keyboardType: TextInputType.number,
-          decoration: const InputDecoration(
-            labelText: 'Gaji Pokok + Tunjangan Tetap (Rp)',
+          decoration: InputDecoration(
+            labelText: l10n.basicSalaryFixedAllowance,
             prefixIcon: Icon(Icons.account_balance_wallet_outlined),
             hintText: '6500000',
           ),
@@ -438,8 +441,8 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
               child: TextField(
                 controller: _severanceYearsController,
                 keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  labelText: 'Masa Kerja (Tahun)',
+                decoration: InputDecoration(
+                  labelText: l10n.yearsOfService,
                   prefixIcon: Icon(Icons.calendar_today_outlined),
                   hintText: '3',
                 ),
@@ -451,8 +454,8 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
               child: TextField(
                 controller: _severanceMonthsController,
                 keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  labelText: 'Lebihan (Bulan)',
+                decoration: InputDecoration(
+                  labelText: l10n.serviceExtraMonths,
                   prefixIcon: Icon(Icons.date_range_outlined),
                   hintText: '6',
                 ),
@@ -467,8 +470,8 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
         DropdownButtonFormField<PhkReason>(
           initialValue: _selectedPhkReason,
           isExpanded: true,
-          decoration: const InputDecoration(
-            labelText: 'Alasan Pemutusan Hubungan Kerja (PHK)',
+          decoration: InputDecoration(
+            labelText: l10n.terminationReason,
             prefixIcon: Icon(Icons.rule_outlined),
           ),
           items: SeveranceCalculatorEngine.reasons.map((r) {
@@ -494,8 +497,8 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
         TextField(
           controller: _severanceUphController,
           keyboardType: TextInputType.number,
-          decoration: const InputDecoration(
-            labelText: 'Uang Penggantian Hak / UPH (Cuti belum gugur/ongkos)',
+          decoration: InputDecoration(
+            labelText: l10n.uphCompensation,
             prefixIcon: Icon(Icons.add_circle_outline),
             hintText: '0',
           ),
@@ -510,7 +513,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
 
         if (_severanceResult != null)
           _buildResultCard(
-            title: 'Total Hak Kompensasi PHK Wajib Diterima',
+            title: l10n.totalSeverancePayTitle,
             amountText: _currencyFormat.format(_severanceResult!.totalSeverancePay),
             subtitle: _selectedPhkReason.title,
             details: [
@@ -523,7 +526,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
               final r = _severanceResult!;
               _copyToClipboard(
                 'Simulasi Kompensasi PHK (PP 35/2021):\nUpah: ${_currencyFormat.format(r.monthlyWage)}\nMasa Kerja: ${r.tenureYears} Thn ${r.tenureMonths} Bln\nAlasan: ${r.reason.title}\nUang Pesangon: ${_currencyFormat.format(r.calculatedPesangon)}\nUPMK: ${_currencyFormat.format(r.calculatedUpmk)}\nUPH: ${_currencyFormat.format(r.compensationRights)}\nTOTAL KOMPENSASI: ${_currencyFormat.format(r.totalSeverancePay)}\nDasar: ${r.reason.legalArticle}',
-                'Rincian pesangon berhasil disalin ke clipboard!',
+                l10n.severanceCopiedSuccess,
               );
             },
           ),
@@ -534,7 +537,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
   // ==========================================
   // TAB 2: THR KEAGAMAAN
   // ==========================================
-  Widget _buildThrTab() {
+  Widget _buildThrTab(AppLocalizations l10n) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -545,13 +548,13 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: AppColors.consumerTag.withValues(alpha: 0.3)),
           ),
-          child: const Row(
+          child: Row(
             children: [
-              Icon(Icons.card_giftcard, color: AppColors.consumerTag, size: 20),
-              SizedBox(width: 10),
+              const Icon(Icons.card_giftcard, color: AppColors.consumerTag, size: 20),
+              const SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  'Dasar Hukum: Permenaker No. 6/2016 jo. PP 36/2021. Masa kerja >= 12 bulan = 1 bulan upah penuh. Masa kerja 1 s.d. 12 bulan dihitung proporsional (prorata).',
+                  l10n.thrLegalBasis,
                   style: TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.35),
                 ),
               ),
@@ -563,8 +566,8 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
         TextField(
           controller: _thrSalaryController,
           keyboardType: TextInputType.number,
-          decoration: const InputDecoration(
-            labelText: 'Upah Bulanan Bersih (Gaji Pokok + Tunjangan Tetap)',
+          decoration: InputDecoration(
+            labelText: l10n.monthlyNetWage,
             prefixIcon: Icon(Icons.monetization_on_outlined),
             hintText: '5000000',
           ),
@@ -575,10 +578,10 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
         TextField(
           controller: _thrMonthsController,
           keyboardType: TextInputType.number,
-          decoration: const InputDecoration(
-            labelText: 'Masa Kerja Terus Menerus (Bulan)',
+          decoration: InputDecoration(
+            labelText: l10n.continuousServiceMonths,
             prefixIcon: Icon(Icons.date_range),
-            hintText: 'Misal: 8 bulan',
+            hintText: l10n.exampleEightMonths,
           ),
           onChanged: (_) => _calculateThr(),
         ),
@@ -590,20 +593,20 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
         const SizedBox(height: 24),
 
         _buildResultCard(
-          title: 'Estimasi Hak Tunjangan Hari Raya (THR)',
+          title: l10n.estimatedThrTitle,
           amountText: _currencyFormat.format(_calculatedThr),
           subtitle: (int.tryParse(_thrMonthsController.text.trim()) ?? 0) >= 12
-              ? 'Masa kerja >= 12 bulan: 1 Bulan Upah Penuh'
-              : 'Masa kerja < 12 bulan: Dihitung Prorata (Masa Kerja / 12 x Upah)',
+              ? l10n.thrRuleFull
+              : l10n.thrRuleProrate,
           details: [
             'Batas Akhir Pembayaran: H-7 Hari Raya Keagamaan',
             'Bentuk Pembayaran: Wajib Uang Rupiah (Dilarang dalam bentuk barang/bingkisan)',
-            'Sanksi Pengusaha Telat: Denda 5% dari total nominal THR',
+            l10n.thrLatePenalty,
           ],
           onCopy: () {
             _copyToClipboard(
               'Simulasi THR (Permenaker 6/2016):\nUpah: ${_thrSalaryController.text}\nMasa Kerja: ${_thrMonthsController.text} Bulan\nHak THR: ${_currencyFormat.format(_calculatedThr)}\nWajib dibayar paling lambat H-7!',
-              'Perhitungan THR berhasil disalin!',
+              l10n.thrCopiedSuccess,
             );
           },
         ),
@@ -614,7 +617,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
   // ==========================================
   // TAB 3: DENDA TILANG LLAJ (UU 22/2009)
   // ==========================================
-  Widget _buildTrafficFineTab() {
+  Widget _buildTrafficFineTab(AppLocalizations l10n) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -625,13 +628,13 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: AppColors.trafficTag.withValues(alpha: 0.3)),
           ),
-          child: const Row(
+          child: Row(
             children: [
-              Icon(Icons.traffic, color: AppColors.trafficTag, size: 20),
-              SizedBox(width: 10),
+              const Icon(Icons.traffic, color: AppColors.trafficTag, size: 20),
+              const SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  'Dasar Hukum: UU No. 22 Tahun 2009 tentang Lalu Lintas dan Angkutan Jalan. Nilai denda berikut adalah batas maksimal denda tilang pidana pengadilan.',
+                  l10n.trafficLegalBasis,
                   style: TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.35),
                 ),
               ),
@@ -656,7 +659,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('Total Estimasi Denda Maksimal', style: TextStyle(fontSize: 12, color: Color(0xFF94A3B8))),
+                  Text(l10n.totalEstimatedMaxFine, style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8))),
                   const SizedBox(height: 4),
                   Text(
                     _currencyFormat.format(_totalFine),
@@ -667,15 +670,15 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
               if (_selectedViolations.isNotEmpty)
                 TextButton(
                   onPressed: () => setState(() => _selectedViolations.clear()),
-                  child: const Text('Reset Pilihan', style: TextStyle(color: Color(0xFF94A3B8), fontSize: 12)),
+                  child: Text(l10n.resetSelection, style: const TextStyle(color: Color(0xFF94A3B8), fontSize: 12)),
                 ),
             ],
           ),
         ),
         const SizedBox(height: 16),
 
-        const Text(
-          'Pilih Pelanggaran Terkait untuk Melihat Simulasi Denda:',
+        Text(
+          l10n.selectViolationsHint,
           style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Colors.white),
         ),
         const SizedBox(height: 10),
@@ -719,7 +722,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
   // ==========================================
   // TAB 4: SANKSI SIBER & UU ITE (UU 1/2024)
   // ==========================================
-  Widget _buildCyberPenaltyTab() {
+  Widget _buildCyberPenaltyTab(AppLocalizations l10n) {
     final items = CyberPenaltyDatabase.items.where((i) {
       if (_onlyComplaintDelict && !i.isComplaintDelict) return false;
       return true;
@@ -735,13 +738,13 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: AppColors.privacyTag.withValues(alpha: 0.3)),
           ),
-          child: const Row(
+          child: Row(
             children: [
-              Icon(Icons.security, color: AppColors.privacyTag, size: 20),
-              SizedBox(width: 10),
+              const Icon(Icons.security, color: AppColors.privacyTag, size: 20),
+              const SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  'Dasar Hukum: UU ITE No. 1 Tahun 2024 & UU PDP No. 27 Tahun 2022. Membedakan delik aduan absolut (pencemaran) dan delik biasa (penipuan siber/hoaks).',
+                  l10n.iteLegalBasis,
                   style: TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.35),
                 ),
               ),
@@ -752,7 +755,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
 
         FilterChip(
           avatar: const Icon(Icons.filter_list, size: 16),
-          label: const Text('Hanya Tampilkan Delik Aduan (Korban Langsung)'),
+          label: Text(l10n.complaintOffenseOnly),
           selected: _onlyComplaintDelict,
           selectedColor: AppColors.primary,
           onSelected: (val) => setState(() => _onlyComplaintDelict = val),
@@ -789,7 +792,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: Text(
-                        item.isComplaintDelict ? 'Delik Aduan' : 'Delik Biasa',
+                        item.isComplaintDelict ? l10n.complaintOffense : l10n.ordinaryOffense,
                         style: TextStyle(
                           fontSize: 10,
                           fontWeight: FontWeight.bold,
@@ -825,7 +828,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
                           const Icon(Icons.lock_clock, size: 14, color: AppColors.danger),
                           const SizedBox(width: 4),
                           Text(
-                            'Penjara Maks. ${item.maxPrisonYears} Thn',
+                            '${l10n.maxPrison} ${item.maxPrisonYears} ${l10n.yearsUnit}',
                             style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.danger),
                           ),
                         ],
@@ -843,7 +846,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
                           const Icon(Icons.monetization_on, size: 14, color: AppColors.accent),
                           const SizedBox(width: 4),
                           Text(
-                            'Denda Maks. ${_currencyFormat.format(item.maxFineRupiah)}',
+                            '${l10n.maxFine} ${_currencyFormat.format(item.maxFineRupiah)}',
                             style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.accent),
                           ),
                         ],
@@ -863,13 +866,13 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '💡 Tips Hukum: ${item.guidance}',
+                        '💡 ${l10n.legalTips}: ${item.guidance}',
                         style: const TextStyle(fontSize: 11, color: Color(0xFFE2E8F0), height: 1.35),
                       ),
                       if (item.publicDefenseExemption.isNotEmpty) ...[
                         const SizedBox(height: 4),
                         Text(
-                          '🛡️ Pengecualian: ${item.publicDefenseExemption}',
+                          '🛡️ ${l10n.defenseExemption}: ${item.publicDefenseExemption}',
                           style: const TextStyle(fontSize: 11, color: AppColors.success, height: 1.35),
                         ),
                       ],
@@ -915,7 +918,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
               Text(title, style: const TextStyle(fontSize: 13, color: Color(0xFF94A3B8))),
               IconButton(
                 icon: const Icon(Icons.copy, size: 18, color: AppColors.primaryLight),
-                tooltip: 'Salin Hasil',
+                tooltip: 'Salin Hasil', // result copy
                 onPressed: onCopy,
               ),
             ],
