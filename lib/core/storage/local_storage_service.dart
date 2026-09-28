@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../constants/app_constants.dart';
 import '../utils/validators.dart';
@@ -88,10 +90,33 @@ class LocalStorageService {
     return _prefs.remove('rulebook_chk_$checklistId');
   }
 
+  ThemeMode getThemeMode() {
+    final mode = _prefs.getString('theme_mode');
+    if (mode == 'light') return ThemeMode.light;
+    if (mode == 'dark') return ThemeMode.dark;
+    return ThemeMode.system;
+  }
+
+  Future<bool> saveThemeMode(ThemeMode mode) async {
+    final str = mode == ThemeMode.light ? 'light' : (mode == ThemeMode.dark ? 'dark' : 'system');
+    return _prefs.setString('theme_mode', str);
+  }
+
+  String exportBackupJson() {
+    final data = {
+      'app': 'RuleBook',
+      'version': AppConstants.appVersion,
+      'exported_at': DateTime.now().toIso8601String(),
+      'bookmarks': getBookmarks().toList(),
+      'notes': getAllNotes(),
+    };
+    return const JsonEncoder.withIndent('  ').convert(data);
+  }
+
   Future<bool> clearAllData() async {
     final keys = _prefs.getKeys();
     for (final k in keys) {
-      if (k.startsWith('rulebook_')) {
+      if (k.startsWith('rulebook_') || k == AppConstants.keyBookmarks) {
         await _prefs.remove(k);
       }
     }
