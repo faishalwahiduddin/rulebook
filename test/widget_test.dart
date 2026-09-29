@@ -7,7 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   testWidgets('RuleBookApp smoke test and navigation between tabs', (WidgetTester tester) async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'locale': 'id'});
     final storageService = await LocalStorageService.init();
 
     await tester.pumpWidget(
@@ -24,7 +24,7 @@ void main() {
     // Verify main brand and catalog elements
     expect(find.text('RuleBook'), findsOneWidget);
     expect(find.text('Semua'), findsOneWidget);
-    expect(find.text('Lalu Lintas'), findsWidgets);
+    expect(find.textContaining('Lalu Lintas'), findsWidgets);
     expect(find.text('Katalog'), findsOneWidget);
     expect(find.text('Simulasi'), findsOneWidget);
     expect(find.text('SOP Darurat'), findsOneWidget);

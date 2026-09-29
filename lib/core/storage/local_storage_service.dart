@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../constants/app_constants.dart';
 import '../utils/validators.dart';
+import '../utils/backup_codec.dart';
 
 class LocalStorageService {
   final SharedPreferences _prefs;
@@ -19,6 +20,10 @@ class LocalStorageService {
   Set<String> getBookmarks() {
     final list = _prefs.getStringList(AppConstants.keyBookmarks) ?? [];
     return list.toSet();
+  }
+
+  Future<bool> saveBookmarks(Set<String> bookmarks) async {
+    return _prefs.setStringList(AppConstants.keyBookmarks, bookmarks.toList());
   }
 
   Future<bool> toggleBookmark(String ruleId) async {
@@ -110,7 +115,26 @@ class LocalStorageService {
       'bookmarks': getBookmarks().toList(),
       'notes': getAllNotes(),
     };
-    return const JsonEncoder.withIndent('  ').convert(data);
+    return FleetBackupCodec.encode(appTag: 'RULEBOOK', data: data);
+  }
+
+  Future<bool> restoreFromBackup(String encoded) async {
+    try {
+      final data = FleetBackupCodec.decode(appTag: 'RULEBOOK', encoded: encoded);
+      if (data.containsKey('bookmarks') && data['bookmarks'] is List) {
+        final bookmarks = (data['bookmarks'] as List).cast<String>().toSet();
+        await saveBookmarks(bookmarks);
+      }
+      if (data.containsKey('notes') && data['notes'] is Map) {
+        final notes = Map<String, String>.from(data['notes'] as Map);
+        for (final entry in notes.entries) {
+          await saveNote(entry.key, entry.value);
+        }
+      }
+      return true;
+    } catch (_) {
+      return false;
+    }
   }
 
   Future<bool> clearAllData() async {
