@@ -197,5 +197,9 @@
         "type": "int"
       }
     }
-  }
+  },
+  "languageSelection": "Language Selection",
+  "exportBackupJson": "Export Data Backup (JSON)",
+  "copyBookmarkNotesClipboard": "Copy bookmarks and notes to clipboard",
+  "backupCopiedSnackbar": "RuleBook data backup successfully copied to clipboard! 📋"
 }

@@ -613,4 +613,18 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String get catSafety => 'Kasalametan (K3)';
+
+  @override
+  String get languageSelection => 'Pilihan Basa';
+
+  @override
+  String get exportBackupJson => 'Ékspor Cadangan Data (JSON)';
+
+  @override
+  String get copyBookmarkNotesClipboard =>
+      'Salin tetengger jeung catetan ka clipboard';
+
+  @override
+  String get backupCopiedSnackbar =>
+      'Cadangan data RuleBook junun disalin ka clipboard! 📋';
 }

@@ -615,4 +615,18 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get catSafety => 'Keselamatan (K3)';
+
+  @override
+  String get languageSelection => 'Pilihan Bahasa';
+
+  @override
+  String get exportBackupJson => 'Ekspor Cadangan Data (JSON)';
+
+  @override
+  String get copyBookmarkNotesClipboard =>
+      'Salin bookmark dan catatan ke clipboard';
+
+  @override
+  String get backupCopiedSnackbar =>
+      'Cadangan data RuleBook berhasil disalin ke clipboard! 📋';
 }

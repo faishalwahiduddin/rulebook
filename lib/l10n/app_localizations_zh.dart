@@ -588,4 +588,16 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get catSafety => '安全（K3）';
+
+  @override
+  String get languageSelection => '语言选择';
+
+  @override
+  String get exportBackupJson => '导出数据备份 (JSON)';
+
+  @override
+  String get copyBookmarkNotesClipboard => '将书签和笔记复制到剪贴板';
+
+  @override
+  String get backupCopiedSnackbar => 'RuleBook 数据备份已成功复制到剪贴板！📋';
 }

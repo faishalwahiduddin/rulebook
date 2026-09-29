@@ -197,5 +197,9 @@
         "type": "int"
       }
     }
-  }
+  },
+  "languageSelection": "语言选择",
+  "exportBackupJson": "导出数据备份 (JSON)",
+  "copyBookmarkNotesClipboard": "将书签和笔记复制到剪贴板",
+  "backupCopiedSnackbar": "RuleBook 数据备份已成功复制到剪贴板！📋"
 }

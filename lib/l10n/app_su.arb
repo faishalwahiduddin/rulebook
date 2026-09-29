@@ -197,5 +197,9 @@
         "type": "int"
       }
     }
-  }
+  },
+  "languageSelection": "Pilihan Basa",
+  "exportBackupJson": "Ékspor Cadangan Data (JSON)",
+  "copyBookmarkNotesClipboard": "Salin tetengger jeung catetan ka clipboard",
+  "backupCopiedSnackbar": "Cadangan data RuleBook junun disalin ka clipboard! 📋"
 }

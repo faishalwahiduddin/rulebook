@@ -615,4 +615,18 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get catSafety => 'Safety (K3)';
+
+  @override
+  String get languageSelection => 'Language Selection';
+
+  @override
+  String get exportBackupJson => 'Export Data Backup (JSON)';
+
+  @override
+  String get copyBookmarkNotesClipboard =>
+      'Copy bookmarks and notes to clipboard';
+
+  @override
+  String get backupCopiedSnackbar =>
+      'RuleBook data backup successfully copied to clipboard! 📋';
 }

@@ -1255,6 +1255,30 @@ abstract class AppLocalizations {
   /// In id, this message translates to:
   /// **'Keselamatan (K3)'**
   String get catSafety;
+
+  /// No description provided for @languageSelection.
+  ///
+  /// In id, this message translates to:
+  /// **'Pilihan Bahasa'**
+  String get languageSelection;
+
+  /// No description provided for @exportBackupJson.
+  ///
+  /// In id, this message translates to:
+  /// **'Ekspor Cadangan Data (JSON)'**
+  String get exportBackupJson;
+
+  /// No description provided for @copyBookmarkNotesClipboard.
+  ///
+  /// In id, this message translates to:
+  /// **'Salin bookmark dan catatan ke clipboard'**
+  String get copyBookmarkNotesClipboard;
+
+  /// No description provided for @backupCopiedSnackbar.
+  ///
+  /// In id, this message translates to:
+  /// **'Cadangan data RuleBook berhasil disalin ke clipboard! 📋'**
+  String get backupCopiedSnackbar;
 }
 
 class _AppLocalizationsDelegate

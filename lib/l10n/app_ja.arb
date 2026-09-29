@@ -197,5 +197,9 @@
         "type": "int"
       }
     }
-  }
+  },
+  "languageSelection": "言語選択",
+  "exportBackupJson": "データバックアップのエクスポート (JSON)",
+  "copyBookmarkNotesClipboard": "ブックマークとメモをクリップボードにコピー",
+  "backupCopiedSnackbar": "RuleBook のデータバックアップがクリップボードに正常にコピーされました！📋"
 }

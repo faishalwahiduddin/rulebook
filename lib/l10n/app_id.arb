@@ -197,5 +197,9 @@
         "type": "int"
       }
     }
-  }
+  },
+  "languageSelection": "Pilihan Bahasa",
+  "exportBackupJson": "Ekspor Cadangan Data (JSON)",
+  "copyBookmarkNotesClipboard": "Salin bookmark dan catatan ke clipboard",
+  "backupCopiedSnackbar": "Cadangan data RuleBook berhasil disalin ke clipboard! 📋"
 }

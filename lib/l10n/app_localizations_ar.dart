@@ -616,4 +616,18 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get catSafety => 'السلامة (K3)';
+
+  @override
+  String get languageSelection => 'اختيار اللغة';
+
+  @override
+  String get exportBackupJson => 'تصدير النسخة الاحتياطية للبيانات (JSON)';
+
+  @override
+  String get copyBookmarkNotesClipboard =>
+      'نسخ الإشارات المرجعية والملاحظات إلى الحافظة';
+
+  @override
+  String get backupCopiedSnackbar =>
+      'تم نسخ النسخة الاحتياطية لبيانات RuleBook بنجاح إلى الحافظة! 📋';
 }

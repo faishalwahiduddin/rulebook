@@ -180,7 +180,7 @@ class SettingsScreen extends ConsumerWidget {
           Card(
             child: ListTile(
               leading: const Icon(Icons.translate, color: AppColors.primaryLight),
-              title: const Text('Pilihan Bahasa', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
+              title: Text(l10n.languageSelection, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
               subtitle: Text(
                 '${_languages[langCode]?.nativeName ?? langCode} (${_languages[langCode]?.name ?? langCode})',
                 style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8)),
@@ -202,15 +202,15 @@ class SettingsScreen extends ConsumerWidget {
               children: [
                 ListTile(
                   leading: const Icon(Icons.file_download_outlined, color: AppColors.success),
-                  title: const Text('Ekspor Cadangan Data (JSON)', style: TextStyle(fontSize: 14)),
-                  subtitle: const Text('Salin bookmark dan catatan ke clipboard', style: TextStyle(fontSize: 12, color: Color(0xFF94A3B8))),
+                  title: Text(l10n.exportBackupJson, style: const TextStyle(fontSize: 14)),
+                  subtitle: Text(l10n.copyBookmarkNotesClipboard, style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8))),
                   trailing: const Icon(Icons.copy, size: 18),
                   onTap: () {
                     final jsonStr = ref.read(localStorageServiceProvider).exportBackupJson();
                     Clipboard.setData(ClipboardData(text: jsonStr));
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Cadangan data RuleBook berhasil disalin ke clipboard! 📋'),
+                      SnackBar(
+                        content: Text(l10n.backupCopiedSnackbar),
                         backgroundColor: AppColors.primary,
                       ),
                     );

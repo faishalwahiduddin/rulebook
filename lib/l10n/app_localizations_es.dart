@@ -621,4 +621,18 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get catSafety => 'Seguridad (K3)';
+
+  @override
+  String get languageSelection => 'Selección de idioma';
+
+  @override
+  String get exportBackupJson => 'Exportar copia de seguridad de datos (JSON)';
+
+  @override
+  String get copyBookmarkNotesClipboard =>
+      'Copiar marcadores y notas al portapapeles';
+
+  @override
+  String get backupCopiedSnackbar =>
+      '¡La copia de seguridad de los datos de RuleBook se copió al portapapeles! 📋';
 }
