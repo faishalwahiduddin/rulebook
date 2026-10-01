@@ -118,7 +118,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get navChecklist => 'Audit Manut';
 
   @override
-  String get navBookmarks => 'Kasimpen';
+  String get navBookmarks => 'Simpenan';
 
   @override
   String get navSettings => 'Setelan';
@@ -221,13 +221,13 @@ class AppLocalizationsJv extends AppLocalizations {
   String get noBookmarks => 'Dereng Wonten Aturan Kasimpen';
 
   @override
-  String get personalNote => 'Cathetan Pribadhi';
+  String get personalNote => 'Cathetan pribadi';
 
   @override
   String get addNote => 'Tambah Cathetan';
 
   @override
-  String get noteSaved => 'Cathetan kasil dipun-simpen!';
+  String get noteSaved => 'Cathetan kasimpen';
 
   @override
   String get disclaimerTitle => 'Panyélaki Hukum (Disclaimer)';
@@ -406,11 +406,20 @@ class AppLocalizationsJv extends AppLocalizations {
 
   @override
   String get thrRuleProrate =>
-      'Periode kerja < 12 sasi: Dietung minangka prorata (masa kerja / 12 x upah)';
+      'Masa kerja kurang saka 12 sasi: diétung proporsional (masa kerja / 12 × upah)';
+
+  @override
+  String get thrMonthsNeeded => 'Isi masa kerjamu, minimal 1 sasi';
+
+  @override
+  String get thrDeadlineDetail => 'Bates pungkasan mbayar: H-7 dina riyaya';
+
+  @override
+  String get thrCashOnlyDetail => 'Kudu dibayar nganggo dhuwit, dudu barang';
 
   @override
   String get thrLatePenalty =>
-      'Sanksi kanggo Pengusaha Telat: Denda 5% saka total THR nominal';
+      'Yen telat: denda 5% saka total THR kanggo pengusaha';
 
   @override
   String get thrCopiedSuccess => 'Petungan THR kasil disalin!';
@@ -462,13 +471,13 @@ class AppLocalizationsJv extends AppLocalizations {
   String get copyResults => 'Salin Asil';
 
   @override
-  String get noteDeleted => 'Cathetan dibusak.';
+  String get noteDeleted => 'Cathetan kabusak';
 
   @override
-  String get saveRule => 'Simpen Aturan';
+  String get saveRule => 'Simpen aturan';
 
   @override
-  String get removeBookmark => 'Mbusak Simpenan';
+  String get removeBookmark => 'Busak saka simpenan';
 
   @override
   String get officialPenaltyOrRight => 'Sanksi Resmi/Hak';
@@ -484,26 +493,25 @@ class AppLocalizationsJv extends AppLocalizations {
       'Tulis cathetan kasus, tanggal kedadeyan, utawa pangeling ...';
 
   @override
-  String get saveNote => 'Simpen Cathetan';
+  String get saveNote => 'Simpen';
 
   @override
-  String get relatedRules => 'Aturan sing gegandhengan';
+  String get relatedRules => 'Isih siji topik';
 
   @override
-  String get copySummary => 'Salin Ringkesan';
+  String get copySummary => 'Salin ringkesan';
 
   @override
-  String get searchRulesHint => 'Golek artikel, denda, pesangon, ITE, SOP...';
+  String get searchRulesHint => 'Golèk aturan, pasal, utawa kahanan…';
 
   @override
   String get resetFilter => 'Reset Filter';
 
   @override
-  String get noRulesMatch => 'Ora ana aturan sing cocog';
+  String get noRulesMatch => 'Durung ana sing cocog';
 
   @override
-  String get tryOtherKeywords =>
-      'Coba tembung kunci liyane utawa pilih kategori Kabeh.';
+  String get tryOtherKeywords => 'Coba tembung liya, utawa ganti topike.';
 
   @override
   String get sopEmergencyGuide => 'SOP & Pedoman Darurat';
@@ -573,7 +581,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get goodCompliance => 'Kepatuhan sing apik';
 
   @override
-  String get moderateCompliance => 'Selaras Moderate - Mbutuhake manungsa waé';
+  String get moderateCompliance => 'Kepatuhan sedang, perlu ditingkatkan';
 
   @override
   String get criticalCompliance => 'Tingkat Kepatuhan Kritis';
@@ -598,16 +606,16 @@ class AppLocalizationsJv extends AppLocalizations {
       'Tindakan iki bakal mbusak kabeh tandha mriksa ing modul audit iki.';
 
   @override
-  String get navCatalogShort => 'Katalog';
+  String get navCatalogShort => 'Aturan';
 
   @override
-  String get navSimulationShort => 'Simulasi';
+  String get navSimulationShort => 'Hitung';
 
   @override
-  String get navSopShort => 'SOP darurat';
+  String get navSopShort => 'Darurat';
 
   @override
-  String get navComplianceShort => 'Kepatuhan';
+  String get navComplianceShort => 'Audit';
 
   @override
   String get categoryAll => 'Kabeh';
@@ -628,4 +636,145 @@ class AppLocalizationsJv extends AppLocalizations {
   @override
   String get backupCopiedSnackbar =>
       'Cadangan data RuleBook kasil disalin menyang clipboard! 📋';
+
+  @override
+  String get catTrafficShort => 'Lalu Lintas';
+
+  @override
+  String get catLaborShort => 'Kerja';
+
+  @override
+  String get catCyberShort => 'Data & ITE';
+
+  @override
+  String get catConsumerShort => 'Konsumen';
+
+  @override
+  String get catSafetyShort => 'K3';
+
+  @override
+  String get catCivilShort => 'Etika';
+
+  @override
+  String get catAllDesc =>
+      'Kabeh aturan, pandhuan, lan SOP ana ing siji panggonan.';
+
+  @override
+  String get catTrafficDesc => 'Aturan nyopir, tilang, lan keslametan dalan.';
+
+  @override
+  String get catLaborDesc => 'Jam kerja, lembur, cuti, lan hak pesangon.';
+
+  @override
+  String get catCyberDesc =>
+      'Protèksi data pribadi lan jejak digital panjenengan.';
+
+  @override
+  String get catConsumerDesc => 'Hak panuku, garansi, lan cara komplain.';
+
+  @override
+  String get catSafetyDesc => 'Prosedur darurat, APD, lan keslametan kerja.';
+
+  @override
+  String get catCivilDesc =>
+      'Katartiban umum lan urip bebarengan ing papan umum.';
+
+  @override
+  String get forYou => 'Kanggo Panjenengan';
+
+  @override
+  String get browseByTopic => 'Telusuri topik';
+
+  @override
+  String get searchAriaLabel => 'Kolom panggolèkan aturan';
+
+  @override
+  String resultsCount(Object count) {
+    return '$count aturan';
+  }
+
+  @override
+  String get clearSearch => 'Resiki panggolèkan';
+
+  @override
+  String get resetFilters => 'Setel ulang';
+
+  @override
+  String readingTime(Object minutes) {
+    return '$minutes mnt maca';
+  }
+
+  @override
+  String get ruleDetailMeta => 'Rincian aturan';
+
+  @override
+  String get whatItMeans => 'Apa tegesé kanggo panjenengan';
+
+  @override
+  String get doThis => 'Lakoni';
+
+  @override
+  String get avoidThis => 'Dihindari';
+
+  @override
+  String get legalBasisLabel => 'Dasar hukum';
+
+  @override
+  String get consequenceLabel => 'Akibaté';
+
+  @override
+  String get noteEmptyHint =>
+      'Simpen tanggal, nomer layang, utawa bab sing kudu diéling-éling.';
+
+  @override
+  String get summaryCopied => 'Ringkesan disalin';
+
+  @override
+  String get clearNote => 'Kosongna';
+
+  @override
+  String noteLengthCounter(Object count, Object max) {
+    return '$count/$max karakter';
+  }
+
+  @override
+  String get deleteNoteTitle => 'Busak cathetan iki?';
+
+  @override
+  String get deleteNoteDesc =>
+      'Cathetan sing wis dibusak ora bisa bali maneh. Aturane isih ana ing katalog.';
+
+  @override
+  String get licenseLabel => 'Lisensi';
+
+  @override
+  String get licenseValue => 'Pribadi & Non-Profit';
+
+  @override
+  String get noAuditModulesTitle => 'Durung ana modul audit kene';
+
+  @override
+  String get noAuditModulesHint =>
+      'Coba kategori liyane, utawa pilih Kabeh kanggo ndeleng kabeh modul.';
+
+  @override
+  String itemsFulfilledCount(Object count, Object max) {
+    return '$count/$max butir kawujud';
+  }
+
+  @override
+  String get missingTitle => 'Kaca ora ketemu';
+
+  @override
+  String get missingDesc =>
+      'Tautane mbok-menawa wis lawas. Bali maneh lan coba maneh.';
+
+  @override
+  String get backToRules => 'Bali menyang aturan';
+
+  @override
+  String get timezone => 'Zona Waktu';
+
+  @override
+  String get timezoneAuto => 'Otomatis (ikut perangkat)';
 }

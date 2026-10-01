@@ -219,13 +219,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get noBookmarks => 'No Saved Rules Yet';
 
   @override
-  String get personalNote => 'Personal Note';
+  String get personalNote => 'Your note';
 
   @override
   String get addNote => 'Add Note';
 
   @override
-  String get noteSaved => 'Note saved successfully!';
+  String get noteSaved => 'Note saved';
 
   @override
   String get disclaimerTitle => 'Legal Disclaimer';
@@ -350,7 +350,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get totalHoursLabel => 'Total Hours';
 
   @override
-  String get hoursUnit => 'O\'clock';
+  String get hoursUnit => 'hours';
 
   @override
   String get overtimeCopiedSuccess =>
@@ -406,11 +406,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get thrRuleProrate =>
-      'Working period < 12 months: Calculated as a prorate (working period / 12 x wages)';
+      'Below 12 months of service: prorated (months worked / 12 × wage)';
 
   @override
-  String get thrLatePenalty =>
-      'Sanctions for Late Entrepreneurs: A fine of 5% of the total nominal THR';
+  String get thrMonthsNeeded => 'Enter your time in the job, at least 1 month';
+
+  @override
+  String get thrDeadlineDetail => 'Payment deadline: 7 days before the holiday';
+
+  @override
+  String get thrCashOnlyDetail => 'Must be paid in cash, not goods';
+
+  @override
+  String get thrLatePenalty => 'Late payment costs the employer a 5% fine';
 
   @override
   String get thrCopiedSuccess => 'THR calculation successfully copied!';
@@ -462,13 +470,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get copyResults => 'Copy Results';
 
   @override
-  String get noteDeleted => 'Note deleted.';
+  String get noteDeleted => 'Note removed';
 
   @override
-  String get saveRule => 'Save Rules';
+  String get saveRule => 'Save rule';
 
   @override
-  String get removeBookmark => 'Delete Saves';
+  String get removeBookmark => 'Remove from saved';
 
   @override
   String get officialPenaltyOrRight => 'Official Sanctions/Rights';
@@ -484,27 +492,26 @@ class AppLocalizationsEn extends AppLocalizations {
       'Write down case notes, incident dates, or reminders...';
 
   @override
-  String get saveNote => 'Save Notes';
+  String get saveNote => 'Save';
 
   @override
-  String get relatedRules => 'Related Rules';
+  String get relatedRules => 'More on this topic';
 
   @override
-  String get copySummary => 'Copy Summary';
+  String get copySummary => 'Copy summary';
 
   @override
-  String get searchRulesHint =>
-      'Look for articles, fines, severance pay, ITE, SOP...';
+  String get searchRulesHint => 'Search a rule, article, or situation…';
 
   @override
   String get resetFilter => 'Reset Filters';
 
   @override
-  String get noRulesMatch => 'There are no matching rules';
+  String get noRulesMatch => 'Nothing matched yet';
 
   @override
   String get tryOtherKeywords =>
-      'Try other keywords or select the All category.';
+      'Try a different keyword, or switch the topic.';
 
   @override
   String get sopEmergencyGuide => 'Emergency SOPs & Guidelines';
@@ -574,7 +581,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get goodCompliance => 'Good Compliance';
 
   @override
-  String get moderateCompliance => 'Moderate Compliance — Requires Attention';
+  String get moderateCompliance => 'Moderate compliance, needs work';
 
   @override
   String get criticalCompliance => 'Critical Compliance Level';
@@ -599,16 +606,16 @@ class AppLocalizationsEn extends AppLocalizations {
       'This action will clear all check marks in this audit module.';
 
   @override
-  String get navCatalogShort => 'Catalog';
+  String get navCatalogShort => 'Rules';
 
   @override
-  String get navSimulationShort => 'Simulation';
+  String get navSimulationShort => 'Calculate';
 
   @override
-  String get navSopShort => 'Emergency SOPs';
+  String get navSopShort => 'Emergency';
 
   @override
-  String get navComplianceShort => 'Compliance';
+  String get navComplianceShort => 'Audit';
 
   @override
   String get categoryAll => 'All';
@@ -629,4 +636,146 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get backupCopiedSnackbar =>
       'RuleBook data backup successfully copied to clipboard! 📋';
+
+  @override
+  String get catTrafficShort => 'Traffic';
+
+  @override
+  String get catLaborShort => 'Work';
+
+  @override
+  String get catCyberShort => 'Data & ITE';
+
+  @override
+  String get catConsumerShort => 'Consumer';
+
+  @override
+  String get catSafetyShort => 'Safety';
+
+  @override
+  String get catCivilShort => 'Ethics';
+
+  @override
+  String get catAllDesc => 'Every rule, guide, and SOP in one place.';
+
+  @override
+  String get catTrafficDesc => 'Driving rules, traffic fines, and road safety.';
+
+  @override
+  String get catLaborDesc =>
+      'Work hours, overtime, leave, and severance rights.';
+
+  @override
+  String get catCyberDesc =>
+      'Personal data protection and your digital footprint.';
+
+  @override
+  String get catConsumerDesc =>
+      'Buyer rights, warranties, and how to complain.';
+
+  @override
+  String get catSafetyDesc =>
+      'Emergency procedures, PPE, and workplace safety.';
+
+  @override
+  String get catCivilDesc => 'Public order and getting along in shared spaces.';
+
+  @override
+  String get forYou => 'For you';
+
+  @override
+  String get browseByTopic => 'Browse by topic';
+
+  @override
+  String get searchAriaLabel => 'Rule search field';
+
+  @override
+  String resultsCount(Object count) {
+    return '$count rules';
+  }
+
+  @override
+  String get clearSearch => 'Clear search';
+
+  @override
+  String get resetFilters => 'Reset';
+
+  @override
+  String readingTime(Object minutes) {
+    return '$minutes min read';
+  }
+
+  @override
+  String get ruleDetailMeta => 'Rule detail';
+
+  @override
+  String get whatItMeans => 'What it means for you';
+
+  @override
+  String get doThis => 'Do';
+
+  @override
+  String get avoidThis => 'Avoid';
+
+  @override
+  String get legalBasisLabel => 'Legal basis';
+
+  @override
+  String get consequenceLabel => 'Consequence';
+
+  @override
+  String get noteEmptyHint =>
+      'Save a date, a reference number, or anything you don\'t want to forget.';
+
+  @override
+  String get summaryCopied => 'Summary copied';
+
+  @override
+  String get clearNote => 'Clear';
+
+  @override
+  String noteLengthCounter(Object count, Object max) {
+    return '$count/$max characters';
+  }
+
+  @override
+  String get deleteNoteTitle => 'Delete this note?';
+
+  @override
+  String get deleteNoteDesc =>
+      'A deleted note can\'t be brought back. The rule stays in the catalog.';
+
+  @override
+  String get licenseLabel => 'License';
+
+  @override
+  String get licenseValue => 'Personal & Non-Profit';
+
+  @override
+  String get noAuditModulesTitle => 'No audit modules here yet';
+
+  @override
+  String get noAuditModulesHint =>
+      'Try another category, or pick All to see every module.';
+
+  @override
+  String itemsFulfilledCount(Object count, Object max) {
+    return '$count/$max items fulfilled';
+  }
+
+  @override
+  String get missingTitle => 'Page not found';
+
+  @override
+  String get missingDesc =>
+      'The link may be out of date. Head back and try again.';
+
+  @override
+  String get backToRules => 'Back to rules';
+
+  @override
+  String get timezone => 'Time Zone';
+
+  @override
+  String get timezoneAuto => 'Automatic (follow device)';
 }

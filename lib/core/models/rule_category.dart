@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
-import '../constants/app_colors.dart';
+import '../theme/app_colors.dart';
+import '../theme/app_icons.dart';
 import '../../l10n/app_localizations.dart';
 
+/// Domain classification for rules, SOPs and checklists.
+///
+/// Colors are resolved from the active [AppColors] theme extension rather than
+/// baked in, so lights and darks stay legible.
 enum RuleCategory {
-  all('Semua', 'Semua aturan dan panduan', Icons.grid_view, AppColors.primaryLight),
-  traffic('Lalu Lintas', 'UU LLAJ, tilang, rambu, & batas kecepatan', Icons.traffic, AppColors.trafficTag),
-  labor('Ketenagakerjaan', 'Jam kerja, lembur, hak cuti, & pesangon', Icons.work_outline, AppColors.laborTag),
-  privacy('Privasi & ITE', 'UU PDP, perlindungan data, & transaksi digital', Icons.security, AppColors.privacyTag),
-  consumer('Konsumen', 'Hak pembeli, garansi, & komplain barang cacat', Icons.shopping_bag_outlined, AppColors.consumerTag),
-  safety('Keselamatan (K3)', 'SOP darurat, APD, & keselamatan tempat kerja', Icons.health_and_safety_outlined, AppColors.safetyTag),
-  ethics('Etika & Ketertiban', 'Ketertiban umum, kebisingan, & norma publik', Icons.gavel_outlined, AppColors.ethicsTag);
+  all(AppIconData.layers),
+  traffic(AppIconData.traffic),
+  labor(AppIconData.briefcase),
+  privacy(AppIconData.lock),
+  consumer(AppIconData.cart),
+  safety(AppIconData.hardhat),
+  ethics(AppIconData.megaphone);
 
-  final String label;
-  final String description;
-  final IconData icon;
-  final Color tagColor;
+  final AppIconData icon;
 
-  const RuleCategory(this.label, this.description, this.icon, this.tagColor);
+  const RuleCategory(this.icon);
 
   String localizedLabel(AppLocalizations l10n) {
     switch (this) {
@@ -36,5 +38,63 @@ enum RuleCategory {
         return l10n.catCivil;
     }
   }
-}
 
+  /// Short label for compact chips / tab bars.
+  String localizedShortLabel(AppLocalizations l10n) {
+    switch (this) {
+      case RuleCategory.all:
+        return l10n.categoryAll;
+      case RuleCategory.traffic:
+        return l10n.catTrafficShort;
+      case RuleCategory.labor:
+        return l10n.catLaborShort;
+      case RuleCategory.privacy:
+        return l10n.catCyberShort;
+      case RuleCategory.consumer:
+        return l10n.catConsumerShort;
+      case RuleCategory.safety:
+        return l10n.catSafetyShort;
+      case RuleCategory.ethics:
+        return l10n.catCivilShort;
+    }
+  }
+
+  /// One-line, plain-language description of what lives in this category.
+  String localizedDescription(AppLocalizations l10n) {
+    switch (this) {
+      case RuleCategory.all:
+        return l10n.catAllDesc;
+      case RuleCategory.traffic:
+        return l10n.catTrafficDesc;
+      case RuleCategory.labor:
+        return l10n.catLaborDesc;
+      case RuleCategory.privacy:
+        return l10n.catCyberDesc;
+      case RuleCategory.consumer:
+        return l10n.catConsumerDesc;
+      case RuleCategory.safety:
+        return l10n.catSafetyDesc;
+      case RuleCategory.ethics:
+        return l10n.catCivilDesc;
+    }
+  }
+
+  Color accent(AppColors c) {
+    switch (this) {
+      case RuleCategory.all:
+        return c.brand;
+      case RuleCategory.traffic:
+        return c.catTraffic;
+      case RuleCategory.labor:
+        return c.catLabor;
+      case RuleCategory.privacy:
+        return c.catPrivacy;
+      case RuleCategory.consumer:
+        return c.catConsumer;
+      case RuleCategory.safety:
+        return c.catSafety;
+      case RuleCategory.ethics:
+        return c.catEthics;
+    }
+  }
+}

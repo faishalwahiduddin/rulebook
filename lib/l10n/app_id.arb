@@ -35,7 +35,7 @@
   "navCalculator": "Kalkulator Denda",
   "navSop": "SOP Tanggap",
   "navChecklist": "Audit Kepatuhan",
-  "navBookmarks": "Tersimpan",
+  "navBookmarks": "Simpanan",
   "navSettings": "Pengaturan",
   "catalogTitle": "Katalog Regulasi & Panduan Praktis",
   "allCategories": "Semua Kategori",
@@ -69,9 +69,9 @@
   "checklistTitle": "Audit Kepatuhan Mandiri",
   "bookmarkTitle": "Aturan & Catatan Tersimpan",
   "noBookmarks": "Belum Ada Aturan Tersimpan",
-  "personalNote": "Catatan Pribadi",
+  "personalNote": "Catatan pribadi",
   "addNote": "Tambah Catatan",
-  "noteSaved": "Catatan berhasil disimpan!",
+  "noteSaved": "Catatan tersimpan",
   "disclaimerTitle": "Pernyataan Penyangkalan (Disclaimer)",
   "disclaimerText": "Aplikasi ini adalah media edukasi dan panduan saku hukum praktis, bukan merupakan nasihat hukum formal atau perwakilan lembaga pemerintah resmi.",
   "dataManagement": "Manajemen Data & Catatan",
@@ -125,8 +125,11 @@
   "exampleEightMonths": "Misal: 8 bulan",
   "estimatedThrTitle": "Estimasi Hak Tunjangan Hari Raya (THR)",
   "thrRuleFull": "Masa kerja >= 12 bulan: 1 Bulan Upah Penuh",
-  "thrRuleProrate": "Masa kerja < 12 bulan: Dihitung Prorata (Masa Kerja / 12 x Upah)",
-  "thrLatePenalty": "Sanksi Pengusaha Telat: Denda 5% dari total nominal THR",
+  "thrRuleProrate": "Masa kerja di bawah 12 bulan: dihitung proporsional (masa kerja / 12 × upah)",
+  "thrMonthsNeeded": "Isi masa kerja Anda, minimal 1 bulan",
+  "thrDeadlineDetail": "Batas akhir pembayaran: H-7 hari raya",
+  "thrCashOnlyDetail": "Wajib dibayar dalam bentuk uang, bukan barang",
+  "thrLatePenalty": "Jika telat: denda 5% dari total THR bagi pengusaha",
   "thrCopiedSuccess": "Perhitungan THR berhasil disalin!",
   "trafficLegalBasis": "Dasar Hukum: UU No. 22 Tahun 2009 tentang Lalu Lintas dan Angkutan Jalan. Nilai denda berikut adalah batas maksimal denda tilang pidana pengadilan.",
   "totalEstimatedMaxFine": "Total Estimasi Denda Maksimal",
@@ -142,20 +145,20 @@
   "legalTips": "Tips Hukum",
   "defenseExemption": "Pengecualian",
   "copyResults": "Salin Hasil",
-  "noteDeleted": "Catatan dihapus.",
-  "saveRule": "Simpan Aturan",
-  "removeBookmark": "Hapus Simpanan",
+  "noteDeleted": "Catatan dihapus",
+  "saveRule": "Simpan aturan",
+  "removeBookmark": "Hapus dari simpanan",
   "officialPenaltyOrRight": "Sanksi / Hak Resmi",
   "summaryExplanation": "Penjelasan Intisari",
   "practicalGuidance": "Panduan Praktis di Lapangan",
   "writeCaseNotesHint": "Tuliskan catatan kasus, tanggal kejadian, atau pengingat...",
-  "saveNote": "Simpan Catatan",
-  "relatedRules": "Aturan Terkait",
-  "copySummary": "Salin Ringkasan",
-  "searchRulesHint": "Cari pasal, tilang, pesangon, ITE, SOP...",
+  "saveNote": "Simpan",
+  "relatedRules": "Masih satu topik",
+  "copySummary": "Salin ringkasan",
+  "searchRulesHint": "Cari aturan, pasal, atau situasi...",
   "resetFilter": "Reset Filter",
-  "noRulesMatch": "Tidak ada aturan yang cocok",
-  "tryOtherKeywords": "Coba kata kunci lain atau pilih kategori Semua.",
+  "noRulesMatch": "Belum ada yang cocok",
+  "tryOtherKeywords": "Coba kata kunci lain, atau ganti topiknya.",
   "sopEmergencyGuide": "SOP & Panduan Darurat",
   "sopBanner": "Panduan langkah-demi-langkah resmi saat menghadapi situasi kritis: razia tilang, PHK sepihak, barang rusak, kebocoran data, dan kecelakaan kerja.",
   "noSopForCategory": "Tidak Ada SOP untuk Kategori Ini",
@@ -176,7 +179,7 @@
   "startAudit": "Mulai Audit",
   "perfectCompliance": "Kepatuhan Sempurna (100%)",
   "goodCompliance": "Kepatuhan Baik",
-  "moderateCompliance": "Kepatuhan Sedang — Butuh Perhatian",
+  "moderateCompliance": "Kepatuhan sedang, perlu perbaikan",
   "criticalCompliance": "Tingkat Kepatuhan Kritis",
   "targetLabel": "Sasaran",
   "checklistItems": "Daftar Butir Pemeriksaan",
@@ -184,10 +187,10 @@
   "resetChecklist": "Reset Checklist",
   "resetChecklistTitle": "Reset Checklist?",
   "resetChecklistConfirmMsg": "Tindakan ini akan mengosongkan semua tanda centang pada modul audit ini.",
-  "navCatalogShort": "Katalog",
-  "navSimulationShort": "Simulasi",
-  "navSopShort": "SOP Darurat",
-  "navComplianceShort": "Kepatuhan",
+  "navCatalogShort": "Aturan",
+  "navSimulationShort": "Hitung",
+  "navSopShort": "Darurat",
+  "navComplianceShort": "Audit",
   "categoryAll": "Semua",
   "catSafety": "Keselamatan (K3)",
   "@stepsCount": {
@@ -201,5 +204,79 @@
   "languageSelection": "Pilihan Bahasa",
   "exportBackupJson": "Ekspor Cadangan Data (JSON)",
   "copyBookmarkNotesClipboard": "Salin bookmark dan catatan ke clipboard",
-  "backupCopiedSnackbar": "Cadangan data RuleBook berhasil disalin ke clipboard! 📋"
+  "backupCopiedSnackbar": "Cadangan data RuleBook berhasil disalin ke clipboard! 📋",
+  "catTrafficShort": "Lalu Lintas",
+  "catLaborShort": "Kerja",
+  "catCyberShort": "Data & ITE",
+  "catConsumerShort": "Konsumen",
+  "catSafetyShort": "K3",
+  "catCivilShort": "Etika",
+  "catAllDesc": "Semua aturan, panduan, dan SOP dalam satu tempat.",
+  "catTrafficDesc": "Aturan berkendara, tilang, dan keselamatan jalan.",
+  "catLaborDesc": "Jam kerja, lembur, cuti, dan hak pesangon.",
+  "catCyberDesc": "Perlindungan data pribadi dan jejak digital Anda.",
+  "catConsumerDesc": "Hak pembeli, garansi, dan cara komplain.",
+  "catSafetyDesc": "Prosedur darurat, APD, dan keselamatan kerja.",
+  "catCivilDesc": "Ketertiban umum dan hidup bersama di ruang publik.",
+  "forYou": "Untuk Anda",
+  "browseByTopic": "Telusuri topik",
+  "searchAriaLabel": "Kolom pencarian aturan",
+  "resultsCount": "{count} aturan",
+  "@resultsCount": {
+    "count": {
+      "type": "int"
+    }
+  },
+  "clearSearch": "Bersihkan pencarian",
+  "resetFilters": "Atur ulang",
+  "readingTime": "{minutes} mnt baca",
+  "@readingTime": {
+    "minutes": {
+      "type": "int"
+    }
+  },
+  "ruleDetailMeta": "Detail aturan",
+  "whatItMeans": "Apa artinya untuk Anda",
+  "doThis": "Lakukan",
+  "avoidThis": "Hindari",
+  "legalBasisLabel": "Dasar hukum",
+  "consequenceLabel": "Konsekuensi",
+  "noteEmptyHint": "Simpan tanggal kejadian, nomor surat, atau hal yang perlu Anda ingat.",
+  "summaryCopied": "Ringkasan disalin",
+  "clearNote": "Kosongkan",
+  "noteLengthCounter": "{count}/{max} karakter",
+  "@noteLengthCounter": {
+    "count": {
+      "type": "int"
+    },
+    "max": {
+      "type": "int"
+    }
+  },
+  "deleteNoteTitle": "Hapus catatan ini?",
+  "deleteNoteDesc": "Catatan yang sudah dihapus tidak bisa dikembalikan. Aturannya tetap ada di katalog.",
+  "licenseLabel": "Lisensi",
+  "licenseValue": "Personal & Non-Profit",
+  "noAuditModulesTitle": "Belum ada modul audit di sini",
+  "noAuditModulesHint": "Coba kategori lain, atau pilih Semua untuk melihat semua modul.",
+  "itemsFulfilledCount": "{count}/{max} butir terpenuhi",
+  "missingTitle": "Halaman tidak ditemukan",
+  "missingDesc": "Tautannya mungkin sudah usang. Kembali dan coba lagi.",
+  "backToRules": "Kembali ke aturan",
+  "timezone": "Zona Waktu",
+  "@timezone": {
+    "description": "Judul seksi pengaturan zona waktu"
+  },
+  "timezoneAuto": "Otomatis (ikut perangkat)",
+  "@timezoneAuto": {
+    "description": "Opsi zona waktu otomatis mengikuti perangkat"
+  },
+  "@itemsFulfilledCount": {
+    "count": {
+      "type": "int"
+    },
+    "max": {
+      "type": "int"
+    }
+  }
 }

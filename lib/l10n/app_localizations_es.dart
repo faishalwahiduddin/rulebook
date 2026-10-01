@@ -118,7 +118,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get navChecklist => 'Auditoría';
 
   @override
-  String get navBookmarks => 'Guardados';
+  String get navBookmarks => 'Guardado';
 
   @override
   String get navSettings => 'Ajustes';
@@ -220,13 +220,13 @@ class AppLocalizationsEs extends AppLocalizations {
   String get noBookmarks => 'No hay regulaciones guardadas aún';
 
   @override
-  String get personalNote => 'Nota Personal';
+  String get personalNote => 'Tu nota';
 
   @override
   String get addNote => 'Añadir Nota';
 
   @override
-  String get noteSaved => '¡Nota guardada con éxito!';
+  String get noteSaved => 'Nota guardada';
 
   @override
   String get disclaimerTitle => 'Descargo de Responsabilidad Legal';
@@ -353,7 +353,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get totalHoursLabel => 'Horas totales';
 
   @override
-  String get hoursUnit => 'En punto';
+  String get hoursUnit => 'horas';
 
   @override
   String get overtimeCopiedSuccess =>
@@ -411,11 +411,21 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get thrRuleProrate =>
-      'Período de trabajo < 12 meses: Calculado como prorrateo (período de trabajo / 12 x salario)';
+      'Menos de 12 meses de servicio: prorrateado (meses trabajados / 12 × salario)';
+
+  @override
+  String get thrMonthsNeeded => 'Escribe tu tiempo en el trabajo, mínimo 1 mes';
+
+  @override
+  String get thrDeadlineDetail =>
+      'Fecha límite de pago: 7 días antes de la festividad';
+
+  @override
+  String get thrCashOnlyDetail => 'Debe pagarse en dinero, no en especie';
 
   @override
   String get thrLatePenalty =>
-      'Sanciones a empresarios tardíos: multa del 5% del total del THR nominal';
+      'El retraso cuesta al empleador una multa del 5%';
 
   @override
   String get thrCopiedSuccess => '¡El cálculo de THR se copió correctamente!';
@@ -467,13 +477,13 @@ class AppLocalizationsEs extends AppLocalizations {
   String get copyResults => 'Copiar resultados';
 
   @override
-  String get noteDeleted => 'Nota eliminada.';
+  String get noteDeleted => 'Nota eliminada';
 
   @override
-  String get saveRule => 'Guardar reglas';
+  String get saveRule => 'Guardar norma';
 
   @override
-  String get removeBookmark => 'Eliminar guardados';
+  String get removeBookmark => 'Quitar de guardados';
 
   @override
   String get officialPenaltyOrRight => 'Sanciones/Derechos Oficiales';
@@ -489,27 +499,25 @@ class AppLocalizationsEs extends AppLocalizations {
       'Anota notas de casos, fechas de incidentes o recordatorios...';
 
   @override
-  String get saveNote => 'Guardar notas';
+  String get saveNote => 'Guardar';
 
   @override
-  String get relatedRules => 'Reglas relacionadas';
+  String get relatedRules => 'Más sobre este tema';
 
   @override
   String get copySummary => 'Copiar resumen';
 
   @override
-  String get searchRulesHint =>
-      'Busca artículos, multas, indemnizaciones, ITE, SOP...';
+  String get searchRulesHint => 'Busca una norma, artículo o situación…';
 
   @override
   String get resetFilter => 'Restablecer filtros';
 
   @override
-  String get noRulesMatch => 'No hay reglas coincidentes';
+  String get noRulesMatch => 'Aún no hay coincidencias';
 
   @override
-  String get tryOtherKeywords =>
-      'Pruebe otras palabras clave o seleccione la categoría Todos.';
+  String get tryOtherKeywords => 'Prueba otra palabra clave o cambia el tema.';
 
   @override
   String get sopEmergencyGuide => 'POE y pautas de emergencia';
@@ -580,7 +588,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get goodCompliance => 'Buen cumplimiento';
 
   @override
-  String get moderateCompliance => 'Cumplimiento moderado: requiere atención';
+  String get moderateCompliance => 'Cumplimiento moderado, necesita mejora';
 
   @override
   String get criticalCompliance => 'Nivel de cumplimiento crítico';
@@ -605,16 +613,16 @@ class AppLocalizationsEs extends AppLocalizations {
       'Esta acción borrará todas las marcas de verificación en este módulo de auditoría.';
 
   @override
-  String get navCatalogShort => 'Catalogar';
+  String get navCatalogShort => 'Normas';
 
   @override
-  String get navSimulationShort => 'Simulación';
+  String get navSimulationShort => 'Calcular';
 
   @override
-  String get navSopShort => 'POE de emergencia';
+  String get navSopShort => 'Emergencia';
 
   @override
-  String get navComplianceShort => 'Cumplimiento';
+  String get navComplianceShort => 'Auditoría';
 
   @override
   String get categoryAll => 'Todo';
@@ -635,4 +643,148 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get backupCopiedSnackbar =>
       '¡La copia de seguridad de los datos de RuleBook se copió al portapapeles! 📋';
+
+  @override
+  String get catTrafficShort => 'Tránsito';
+
+  @override
+  String get catLaborShort => 'Laboral';
+
+  @override
+  String get catCyberShort => 'Datos';
+
+  @override
+  String get catConsumerShort => 'Consumidor';
+
+  @override
+  String get catSafetyShort => 'Seguridad';
+
+  @override
+  String get catCivilShort => 'Ética';
+
+  @override
+  String get catAllDesc =>
+      'Todas las normas, guías y protocolos en un solo lugar.';
+
+  @override
+  String get catTrafficDesc => 'Normas de tránsito, multas y seguridad vial.';
+
+  @override
+  String get catLaborDesc =>
+      'Jornada, horas extra, vacaciones y derechos de despido.';
+
+  @override
+  String get catCyberDesc =>
+      'Protección de datos personales y tu huella digital.';
+
+  @override
+  String get catConsumerDesc =>
+      'Derechos del comprador, garantías y cómo reclamar.';
+
+  @override
+  String get catSafetyDesc =>
+      'Protocolos de emergencia, EPP y seguridad laboral.';
+
+  @override
+  String get catCivilDesc =>
+      'Orden público y convivencia en espacios compartidos.';
+
+  @override
+  String get forYou => 'Para ti';
+
+  @override
+  String get browseByTopic => 'Explorar por tema';
+
+  @override
+  String get searchAriaLabel => 'Campo de búsqueda de normas';
+
+  @override
+  String resultsCount(Object count) {
+    return '$count normas';
+  }
+
+  @override
+  String get clearSearch => 'Borrar búsqueda';
+
+  @override
+  String get resetFilters => 'Restablecer';
+
+  @override
+  String readingTime(Object minutes) {
+    return '$minutes min de lectura';
+  }
+
+  @override
+  String get ruleDetailMeta => 'Detalle de la norma';
+
+  @override
+  String get whatItMeans => 'Qué significa para ti';
+
+  @override
+  String get doThis => 'Hazlo';
+
+  @override
+  String get avoidThis => 'Evítalo';
+
+  @override
+  String get legalBasisLabel => 'Base legal';
+
+  @override
+  String get consequenceLabel => 'Consecuencia';
+
+  @override
+  String get noteEmptyHint =>
+      'Guarda una fecha, un número o algo que no quieras olvidar.';
+
+  @override
+  String get summaryCopied => 'Resumen copiado';
+
+  @override
+  String get clearNote => 'Vaciar';
+
+  @override
+  String noteLengthCounter(Object count, Object max) {
+    return '$count/$max caracteres';
+  }
+
+  @override
+  String get deleteNoteTitle => '¿Eliminar esta nota?';
+
+  @override
+  String get deleteNoteDesc =>
+      'Una nota eliminada no se puede recuperar. La regla sigue en el catálogo.';
+
+  @override
+  String get licenseLabel => 'Licencia';
+
+  @override
+  String get licenseValue => 'Personal y Sin Fines de Lucro';
+
+  @override
+  String get noAuditModulesTitle => 'Aún no hay módulos de auditoría aquí';
+
+  @override
+  String get noAuditModulesHint =>
+      'Prueba otra categoría o elige Todos para ver todos los módulos.';
+
+  @override
+  String itemsFulfilledCount(Object count, Object max) {
+    return '$count/$max ítems cumplidos';
+  }
+
+  @override
+  String get missingTitle => 'Página no encontrada';
+
+  @override
+  String get missingDesc =>
+      'El enlace puede estar desactualizado. Vuelve e inténtalo de nuevo.';
+
+  @override
+  String get backToRules => 'Volver a las reglas';
+
+  @override
+  String get timezone => 'Zona Waktu';
+
+  @override
+  String get timezoneAuto => 'Otomatis (ikut perangkat)';
 }

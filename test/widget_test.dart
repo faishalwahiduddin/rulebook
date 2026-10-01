@@ -25,31 +25,31 @@ void main() {
     expect(find.text('RuleBook'), findsOneWidget);
     expect(find.text('Semua'), findsOneWidget);
     expect(find.textContaining('Lalu Lintas'), findsWidgets);
-    expect(find.text('Katalog'), findsOneWidget);
-    expect(find.text('Simulasi'), findsOneWidget);
-    expect(find.text('SOP Darurat'), findsOneWidget);
-    expect(find.text('Kepatuhan'), findsOneWidget);
-    expect(find.text('Tersimpan'), findsOneWidget);
+    expect(find.text('Aturan'), findsOneWidget);
+    expect(find.text('Hitung'), findsOneWidget);
+    expect(find.text('Darurat'), findsOneWidget);
+    expect(find.text('Audit'), findsOneWidget);
+    expect(find.text('Simpanan'), findsOneWidget);
 
-    // Tap on Simulasi tab
-    await tester.tap(find.text('Simulasi'));
+    // Tap on Hitung tab
+    await tester.tap(find.text('Hitung'));
     await tester.pumpAndSettle();
     expect(find.text('Simulasi & Kalkulator'), findsOneWidget);
     expect(find.text('Upah Lembur'), findsWidgets);
     expect(find.text('Pesangon PHK'), findsOneWidget);
 
-    // Tap on SOP Darurat tab
-    await tester.tap(find.text('SOP Darurat'));
+    // Tap on Darurat tab
+    await tester.tap(find.text('Darurat'));
     await tester.pumpAndSettle();
     expect(find.text('SOP & Panduan Darurat'), findsOneWidget);
 
-    // Tap on Kepatuhan tab
-    await tester.tap(find.text('Kepatuhan'));
+    // Tap on Audit tab
+    await tester.tap(find.text('Audit'));
     await tester.pumpAndSettle();
     expect(find.text('Audit Kepatuhan Mandiri'), findsOneWidget);
 
-    // Tap on Tersimpan tab
-    await tester.tap(find.text('Tersimpan'));
+    // Tap on Simpanan tab
+    await tester.tap(find.text('Simpanan'));
     await tester.pumpAndSettle();
     expect(find.text('Tersimpan & Catatan'), findsOneWidget);
   });

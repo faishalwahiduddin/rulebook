@@ -219,13 +219,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get noBookmarks => 'لا توجد لوائح محفوظة بعد';
 
   @override
-  String get personalNote => 'ملاحظة شخصية';
+  String get personalNote => 'ملاحظتك';
 
   @override
   String get addNote => 'إضافة ملاحظة';
 
   @override
-  String get noteSaved => 'تم حفظ الملاحظة بنجاح!';
+  String get noteSaved => 'تم حفظ الملاحظة';
 
   @override
   String get disclaimerTitle => 'إخلاء مسؤولية قانوني';
@@ -350,7 +350,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get totalHoursLabel => 'إجمالي الساعات';
 
   @override
-  String get hoursUnit => 'الساعة';
+  String get hoursUnit => 'ساعات';
 
   @override
   String get overtimeCopiedSuccess =>
@@ -407,11 +407,19 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get thrRuleProrate =>
-      'فترة العمل < 12 شهرًا: يتم حسابها على أساس تناسبي (فترة العمل / 12 × الأجر)';
+      'أقل من 12 شهرًا من الخدمة: تُحسب بالتناسب (أشهر الخدمة / 12 × الأجر)';
 
   @override
-  String get thrLatePenalty =>
-      'العقوبات المفروضة على رواد الأعمال المتأخرين: غرامة قدرها 5٪ من إجمالي THR الاسمي';
+  String get thrMonthsNeeded => 'أدخل مدة خدمتك، شهر واحد على الأقل';
+
+  @override
+  String get thrDeadlineDetail => 'الموعد النهائي للدفع: قبل العيد بسبعة أيام';
+
+  @override
+  String get thrCashOnlyDetail => 'يجب الدفع نقدًا وليس عينًا';
+
+  @override
+  String get thrLatePenalty => 'التأخير يكلف صاحب العمل غرامة 5%';
 
   @override
   String get thrCopiedSuccess => 'تم نسخ حساب THR بنجاح!';
@@ -463,13 +471,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get copyResults => 'نسخ النتائج';
 
   @override
-  String get noteDeleted => 'تم حذف الملاحظة.';
+  String get noteDeleted => 'تم حذف الملاحظة';
 
   @override
-  String get saveRule => 'حفظ القواعد';
+  String get saveRule => 'حفظ القاعدة';
 
   @override
-  String get removeBookmark => 'حذف الحفظ';
+  String get removeBookmark => 'إزالة من المحفوظات';
 
   @override
   String get officialPenaltyOrRight => 'العقوبات/الحقوق الرسمية';
@@ -485,26 +493,25 @@ class AppLocalizationsAr extends AppLocalizations {
       'قم بتدوين ملاحظات الحالة أو تواريخ الأحداث أو التذكيرات...';
 
   @override
-  String get saveNote => 'حفظ الملاحظات';
+  String get saveNote => 'حفظ';
 
   @override
-  String get relatedRules => 'القواعد ذات الصلة';
+  String get relatedRules => 'المزيد في هذا الموضوع';
 
   @override
-  String get copySummary => 'ملخص النسخ';
+  String get copySummary => 'نسخ الملخص';
 
   @override
-  String get searchRulesHint =>
-      'ابحث عن المقالات والغرامات ومكافأة نهاية الخدمة وITE وSOP...';
+  String get searchRulesHint => 'ابحث عن قاعدة أو مادة أو حالة…';
 
   @override
   String get resetFilter => 'إعادة تعيين المرشحات';
 
   @override
-  String get noRulesMatch => 'لا توجد قواعد مطابقة';
+  String get noRulesMatch => 'لا نتائج مطابقة بعد';
 
   @override
-  String get tryOtherKeywords => 'جرب كلمات رئيسية أخرى أو حدد فئة الكل.';
+  String get tryOtherKeywords => 'جرّب كلمة أخرى أو غيّر الموضوع.';
 
   @override
   String get sopEmergencyGuide =>
@@ -575,7 +582,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get goodCompliance => 'الامتثال الجيد';
 
   @override
-  String get moderateCompliance => 'الامتثال المعتدل - يتطلب الاهتمام';
+  String get moderateCompliance => 'امتثال معتدل، يحتاج إلى تحسين';
 
   @override
   String get criticalCompliance => 'مستوى الامتثال الحرج';
@@ -600,16 +607,16 @@ class AppLocalizationsAr extends AppLocalizations {
       'سيؤدي هذا الإجراء إلى مسح جميع علامات الاختيار في وحدة التدقيق هذه.';
 
   @override
-  String get navCatalogShort => 'كتالوج';
+  String get navCatalogShort => 'القواعد';
 
   @override
-  String get navSimulationShort => 'محاكاة';
+  String get navSimulationShort => 'احسب';
 
   @override
-  String get navSopShort => 'إجراءات التشغيل القياسية في حالات الطوارئ';
+  String get navSopShort => 'طوارئ';
 
   @override
-  String get navComplianceShort => 'امتثال';
+  String get navComplianceShort => 'تدقيق';
 
   @override
   String get categoryAll => 'الجميع';
@@ -630,4 +637,142 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get backupCopiedSnackbar =>
       'تم نسخ النسخة الاحتياطية لبيانات RuleBook بنجاح إلى الحافظة! 📋';
+
+  @override
+  String get catTrafficShort => 'المرور';
+
+  @override
+  String get catLaborShort => 'العمل';
+
+  @override
+  String get catCyberShort => 'البيانات';
+
+  @override
+  String get catConsumerShort => 'المستهلك';
+
+  @override
+  String get catSafetyShort => 'السلامة';
+
+  @override
+  String get catCivilShort => 'الأخلاق';
+
+  @override
+  String get catAllDesc => 'كل القواعد والأدلة والإجراءات في مكان واحد.';
+
+  @override
+  String get catTrafficDesc => 'قواعد القيادة والمخالفات وسلامة الطريق.';
+
+  @override
+  String get catLaborDesc =>
+      'ساعات العمل والإضافي والإجازات وحقوق نهاية الخدمة.';
+
+  @override
+  String get catCyberDesc => 'حماية البيانات الشخصية وأثرك الرقمي.';
+
+  @override
+  String get catConsumerDesc => 'حقوق المشتري والضمان وطريقة تقديم شكوى.';
+
+  @override
+  String get catSafetyDesc => 'إجراءات الطوارئ ومعدات الوقاية وسلامة العمل.';
+
+  @override
+  String get catCivilDesc => 'النظام العام والتعايش في الأماكن العامة.';
+
+  @override
+  String get forYou => 'لك';
+
+  @override
+  String get browseByTopic => 'تصفح حسب الموضوع';
+
+  @override
+  String get searchAriaLabel => 'حقل البحث عن القواعد';
+
+  @override
+  String resultsCount(Object count) {
+    return '$count قاعدة';
+  }
+
+  @override
+  String get clearSearch => 'مسح البحث';
+
+  @override
+  String get resetFilters => 'إعادة تعيين';
+
+  @override
+  String readingTime(Object minutes) {
+    return 'قراءة $minutes د';
+  }
+
+  @override
+  String get ruleDetailMeta => 'تفاصيل القاعدة';
+
+  @override
+  String get whatItMeans => 'ماذا يعني لك';
+
+  @override
+  String get doThis => 'افعل';
+
+  @override
+  String get avoidThis => 'تجنّب';
+
+  @override
+  String get legalBasisLabel => 'الأساس القانوني';
+
+  @override
+  String get consequenceLabel => 'العقوبة';
+
+  @override
+  String get noteEmptyHint =>
+      'احفظ التاريخ أو رقم المستند أو أي شيء لا تريد نسيانه.';
+
+  @override
+  String get summaryCopied => 'تم نسخ الملخص';
+
+  @override
+  String get clearNote => 'تفريغ';
+
+  @override
+  String noteLengthCounter(Object count, Object max) {
+    return '$count/$max حرف';
+  }
+
+  @override
+  String get deleteNoteTitle => 'حذف هذه الملاحظة؟';
+
+  @override
+  String get deleteNoteDesc =>
+      'لا يمكن استرجاع الملاحظة بعد حذفها. تبقى القاعدة في الفهرس.';
+
+  @override
+  String get licenseLabel => 'الترخيص';
+
+  @override
+  String get licenseValue => 'شخصي وغير ربحي';
+
+  @override
+  String get noAuditModulesTitle => 'لا توجد وحدات تدقيق هنا بعد';
+
+  @override
+  String get noAuditModulesHint =>
+      'جرّب فئة أخرى، أو اختر الكل لعرض جميع الوحدات.';
+
+  @override
+  String itemsFulfilledCount(Object count, Object max) {
+    return '$count/$max بند مستوفى';
+  }
+
+  @override
+  String get missingTitle => 'الصفحة غير موجودة';
+
+  @override
+  String get missingDesc => 'قد يكون الرابط قديمًا. عد وحاول مرة أخرى.';
+
+  @override
+  String get backToRules => 'العودة إلى القواعد';
+
+  @override
+  String get timezone => 'Zona Waktu';
+
+  @override
+  String get timezoneAuto => 'Otomatis (ikut perangkat)';
 }

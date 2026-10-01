@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../core/constants/app_colors.dart';
+import '../../core/theme/app_colors.dart';
+import '../../core/theme/app_icons.dart';
 import '../../l10n/app_localizations.dart';
 
+/// The five-tab bottom navigation. Destinations carry short, human labels and
+/// the bespoke [AppIcon] family so the bar reads clean at 360dp.
 class NavigationShell extends StatelessWidget {
   final StatefulNavigationShell navigationShell;
 
@@ -18,42 +21,42 @@ class NavigationShell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final c = AppColors.of(context);
 
     return Scaffold(
       body: navigationShell,
-      bottomNavigationBar: Container(
-        decoration: const BoxDecoration(
-          border: Border(top: BorderSide(color: AppColors.border, width: 1)),
+      bottomNavigationBar: DecoratedBox(
+        decoration: BoxDecoration(
+          color: c.surface,
+          border: Border(top: BorderSide(color: c.border)),
         ),
         child: NavigationBar(
           selectedIndex: navigationShell.currentIndex,
           onDestinationSelected: _onTap,
-          backgroundColor: AppColors.bgSurface,
-          indicatorColor: AppColors.primary.withValues(alpha: 0.25),
           destinations: [
             NavigationDestination(
-              icon: const Icon(Icons.auto_stories_outlined),
-              selectedIcon: const Icon(Icons.auto_stories, color: AppColors.primaryLight),
+              icon: AppIcon(AppIconData.book, color: c.textMuted),
+              selectedIcon: AppIcon(AppIconData.book, color: c.onBrandSoft),
               label: l10n.navCatalogShort,
             ),
             NavigationDestination(
-              icon: const Icon(Icons.calculate_outlined),
-              selectedIcon: const Icon(Icons.calculate, color: AppColors.primaryLight),
+              icon: AppIcon(AppIconData.calculator, color: c.textMuted),
+              selectedIcon: AppIcon(AppIconData.calculator, color: c.onBrandSoft),
               label: l10n.navSimulationShort,
             ),
             NavigationDestination(
-              icon: const Icon(Icons.shield_outlined),
-              selectedIcon: const Icon(Icons.shield, color: AppColors.accent),
+              icon: AppIcon(AppIconData.shield, color: c.textMuted),
+              selectedIcon: AppIcon(AppIconData.shield, color: c.onBrandSoft),
               label: l10n.navSopShort,
             ),
             NavigationDestination(
-              icon: const Icon(Icons.fact_check_outlined),
-              selectedIcon: const Icon(Icons.fact_check, color: AppColors.success),
+              icon: AppIcon(AppIconData.checklist, color: c.textMuted),
+              selectedIcon: AppIcon(AppIconData.checklist, color: c.onBrandSoft),
               label: l10n.navComplianceShort,
             ),
             NavigationDestination(
-              icon: const Icon(Icons.bookmark_outline),
-              selectedIcon: const Icon(Icons.bookmark, color: AppColors.primaryLight),
+              icon: AppIcon(AppIconData.bookmark, color: c.textMuted),
+              selectedIcon: AppIcon(AppIconData.bookmarkFilled, color: c.onBrandSoft),
               label: l10n.navBookmarks,
             ),
           ],
@@ -62,4 +65,3 @@ class NavigationShell extends StatelessWidget {
     );
   }
 }
-

@@ -1,7 +1,8 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:timezone/timezone.dart' as tz;
 import '../constants/app_constants.dart';
+import '../utils/app_timezone.dart';
 import '../utils/validators.dart';
 import '../utils/backup_codec.dart';
 
@@ -111,11 +112,27 @@ class LocalStorageService {
     final data = {
       'app': 'RuleBook',
       'version': AppConstants.appVersion,
-      'exported_at': DateTime.now().toIso8601String(),
+      // Storage contract (§TZ): instants are stored as UTC `Z`, display
+      // projects into the selected zone via AppTimeZone — never here.
+      'exported_at': AppTimeZone.encodeForPrefs(AppTimeZone.nowUtc()),
       'bookmarks': getBookmarks().toList(),
       'notes': getAllNotes(),
     };
     return FleetBackupCodec.encode(appTag: 'RULEBOOK', data: data);
+  }
+
+  /// Displays a stored `exported_at` UTC instant in the selected zone
+  /// (`21/08/2026 13:45 WIB`-style). Garbage or missing values show as-is
+  /// or '—' — never guessed, never shifted by the device zone.
+  static String exportedAtDisplay(
+    Object? raw, {
+    required tz.Location loc,
+    required String ianaName,
+    String? locale,
+  }) {
+    final parsed = AppTimeZone.parseUtc(raw, zone: loc);
+    if (parsed == null) return raw?.toString() ?? '—';
+    return AppTimeZone.formatDateTime(parsed, loc, ianaName, locale: locale);
   }
 
   Future<bool> restoreFromBackup(String encoded) async {

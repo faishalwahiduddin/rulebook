@@ -1,7 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:rulebook/core/storage/local_storage_service.dart';
-import 'package:rulebook/core/utils/backup_codec.dart';
 
 void main() {
   group('RuleBook FleetBackupCodec & Storage Tests', () {

@@ -117,7 +117,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get navChecklist => '合规自查';
 
   @override
-  String get navBookmarks => '已保存';
+  String get navBookmarks => '收藏';
 
   @override
   String get navSettings => '设置';
@@ -219,13 +219,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get noBookmarks => '暂无收藏法规';
 
   @override
-  String get personalNote => '个人备忘笔记';
+  String get personalNote => '你的笔记';
 
   @override
   String get addNote => '添加笔记';
 
   @override
-  String get noteSaved => '笔记保存成功！';
+  String get noteSaved => '已保存笔记';
 
   @override
   String get disclaimerTitle => '法律免责声明';
@@ -341,7 +341,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get totalHoursLabel => '总小时数';
 
   @override
-  String get hoursUnit => '点钟';
+  String get hoursUnit => '小时';
 
   @override
   String get overtimeCopiedSuccess => '加时赛结果已成功复制到剪贴板！';
@@ -391,10 +391,19 @@ class AppLocalizationsZh extends AppLocalizations {
   String get thrRuleFull => '工作期限 >= 12 个月：1 个月全薪';
 
   @override
-  String get thrRuleProrate => '工作期限<12个月：按比例计算（工作期限/12×工资）';
+  String get thrRuleProrate => '在职不满 12 个月：按比例计算（在职月数 / 12 × 工资）';
 
   @override
-  String get thrLatePenalty => '对已故创业者的制裁：名义总THR 5%的罚款';
+  String get thrMonthsNeeded => '请填写工龄，至少 1 个月';
+
+  @override
+  String get thrDeadlineDetail => '最迟发放期限：节前 7 天';
+
+  @override
+  String get thrCashOnlyDetail => '必须以现金发放，不能用实物代替';
+
+  @override
+  String get thrLatePenalty => '逾期发放：雇主需支付 5% 罚金';
 
   @override
   String get thrCopiedSuccess => 'THR 计算已成功复制！';
@@ -444,13 +453,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get copyResults => '复制结果';
 
   @override
-  String get noteDeleted => '注释已删除。';
+  String get noteDeleted => '已删除笔记';
 
   @override
   String get saveRule => '保存规则';
 
   @override
-  String get removeBookmark => '删除保存';
+  String get removeBookmark => '从收藏中移除';
 
   @override
   String get officialPenaltyOrRight => '官方制裁/权利';
@@ -465,25 +474,25 @@ class AppLocalizationsZh extends AppLocalizations {
   String get writeCaseNotesHint => '写下案例注释、事件日期或提醒...';
 
   @override
-  String get saveNote => '保存笔记';
+  String get saveNote => '保存';
 
   @override
-  String get relatedRules => '相关规则';
+  String get relatedRules => '相关主题';
 
   @override
   String get copySummary => '复制摘要';
 
   @override
-  String get searchRulesHint => '查找文章、罚款、遣散费、ITE、SOP...';
+  String get searchRulesHint => '搜索规则、条款或情境……';
 
   @override
   String get resetFilter => '重置过滤器';
 
   @override
-  String get noRulesMatch => '没有匹配规则';
+  String get noRulesMatch => '暂时没有匹配结果';
 
   @override
-  String get tryOtherKeywords => '尝试其他关键字或选择“全部”类别。';
+  String get tryOtherKeywords => '换个关键词，或切换主题试试。';
 
   @override
   String get sopEmergencyGuide => '紧急标准操作程序和指南';
@@ -548,7 +557,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get goodCompliance => '良好的合规性';
 
   @override
-  String get moderateCompliance => '中等合规性——需要注意';
+  String get moderateCompliance => '中等合规，仍需改进';
 
   @override
   String get criticalCompliance => '关键合规级别';
@@ -572,16 +581,16 @@ class AppLocalizationsZh extends AppLocalizations {
   String get resetChecklistConfirmMsg => '此操作将清除此审核模块中的所有复选标记。';
 
   @override
-  String get navCatalogShort => '目录';
+  String get navCatalogShort => '规则';
 
   @override
-  String get navSimulationShort => '模拟';
+  String get navSimulationShort => '计算';
 
   @override
-  String get navSopShort => '紧急标准操作程序';
+  String get navSopShort => '应急';
 
   @override
-  String get navComplianceShort => '遵守';
+  String get navComplianceShort => '审计';
 
   @override
   String get categoryAll => '全部';
@@ -600,4 +609,138 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get backupCopiedSnackbar => 'RuleBook 数据备份已成功复制到剪贴板！📋';
+
+  @override
+  String get catTrafficShort => '交通';
+
+  @override
+  String get catLaborShort => '劳动';
+
+  @override
+  String get catCyberShort => '数据';
+
+  @override
+  String get catConsumerShort => '消费者';
+
+  @override
+  String get catSafetyShort => '安全';
+
+  @override
+  String get catCivilShort => '公德';
+
+  @override
+  String get catAllDesc => '所有规则、指南与流程，尽在一处。';
+
+  @override
+  String get catTrafficDesc => '驾驶规则、交通罚则与道路安全。';
+
+  @override
+  String get catLaborDesc => '工时、加班、休假与离职补偿权利。';
+
+  @override
+  String get catCyberDesc => '个人数据保护与你的数字足迹。';
+
+  @override
+  String get catConsumerDesc => '消费者权益、保修与投诉方式。';
+
+  @override
+  String get catSafetyDesc => '应急流程、防护装备与作业安全。';
+
+  @override
+  String get catCivilDesc => '公共秩序与共享空间的相处之道。';
+
+  @override
+  String get forYou => '为你推荐';
+
+  @override
+  String get browseByTopic => '按主题浏览';
+
+  @override
+  String get searchAriaLabel => '规则搜索框';
+
+  @override
+  String resultsCount(Object count) {
+    return '$count 条规则';
+  }
+
+  @override
+  String get clearSearch => '清除搜索';
+
+  @override
+  String get resetFilters => '重置';
+
+  @override
+  String readingTime(Object minutes) {
+    return '$minutes 分钟阅读';
+  }
+
+  @override
+  String get ruleDetailMeta => '规则详情';
+
+  @override
+  String get whatItMeans => '这对你意味着什么';
+
+  @override
+  String get doThis => '要做的';
+
+  @override
+  String get avoidThis => '要避免';
+
+  @override
+  String get legalBasisLabel => '法律依据';
+
+  @override
+  String get consequenceLabel => '后果';
+
+  @override
+  String get noteEmptyHint => '记下日期、编号，或任何你不想忘记的事。';
+
+  @override
+  String get summaryCopied => '已复制摘要';
+
+  @override
+  String get clearNote => '清空';
+
+  @override
+  String noteLengthCounter(Object count, Object max) {
+    return '$count/$max 字符';
+  }
+
+  @override
+  String get deleteNoteTitle => '删除这条备注？';
+
+  @override
+  String get deleteNoteDesc => '删除后的备注无法恢复，规则本身仍保留在目录中。';
+
+  @override
+  String get licenseLabel => '许可';
+
+  @override
+  String get licenseValue => '个人与非营利';
+
+  @override
+  String get noAuditModulesTitle => '此类别暂无审核模块';
+
+  @override
+  String get noAuditModulesHint => '试试其他类别，或选择“全部”查看所有模块。';
+
+  @override
+  String itemsFulfilledCount(Object count, Object max) {
+    return '已完成 $count/$max 项';
+  }
+
+  @override
+  String get missingTitle => '页面不存在';
+
+  @override
+  String get missingDesc => '链接可能已过期，请返回重试。';
+
+  @override
+  String get backToRules => '返回规则';
+
+  @override
+  String get timezone => 'Zona Waktu';
+
+  @override
+  String get timezoneAuto => 'Otomatis (ikut perangkat)';
 }

@@ -1,48 +1,55 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
-import '../../core/constants/app_colors.dart';
 import '../../core/models/cyber_penalty_models.dart';
 import '../../core/models/severance_calculator_models.dart';
+import '../../core/theme/app_colors.dart';
+import '../../core/theme/app_icons.dart';
+import '../../core/theme/app_theme.dart';
 import '../../core/utils/validators.dart';
+import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
 
+/// Five quick estimators: overtime, severance, THR, traffic fines, and the
+/// ITE/cyber penalty table. Everything recalculates as you type.
 class PenaltyCalculatorScreen extends StatefulWidget {
   const PenaltyCalculatorScreen({super.key});
 
   @override
-  State<PenaltyCalculatorScreen> createState() => _PenaltyCalculatorScreenState();
+  State<PenaltyCalculatorScreen> createState() =>
+      _PenaltyCalculatorScreenState();
 }
 
 class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
-  int _selectedTab = 0; // 0=Lembur, 1=Pesangon, 2=THR, 3=Tilang, 4=UU ITE
+  int _selectedTab = 0;
 
-  final _currencyFormat = NumberFormat.currency(locale: 'id_ID', symbol: 'Rp ', decimalDigits: 0);
+  final NumberFormat _rupiah = NumberFormat.currency(
+      locale: 'id_ID', symbol: 'Rp ', decimalDigits: 0);
 
-  // --- LEMBUR STATE ---
-  final TextEditingController _overtimeSalaryController = TextEditingController(text: '5000000');
-  final TextEditingController _overtimeHoursController = TextEditingController(text: '3');
+  // --- Overtime ---
+  final _overtimeSalaryController = TextEditingController(text: '5000000');
+  final _overtimeHoursController = TextEditingController(text: '3');
   bool _isHoliday = false;
-  double _calculatedOvertimePay = 0;
+  double _overtimePay = 0;
   String? _overtimeError;
 
-  // --- PESANGON STATE ---
-  final TextEditingController _severanceSalaryController = TextEditingController(text: '6500000');
-  final TextEditingController _severanceYearsController = TextEditingController(text: '3');
-  final TextEditingController _severanceMonthsController = TextEditingController(text: '6');
-  final TextEditingController _severanceUphController = TextEditingController(text: '0');
-  PhkReason _selectedPhkReason = SeveranceCalculatorEngine.reasons[0];
+  // --- Severance ---
+  final _severanceSalaryController = TextEditingController(text: '6500000');
+  final _severanceYearsController = TextEditingController(text: '3');
+  final _severanceMonthsController = TextEditingController(text: '6');
+  final _severanceUphController = TextEditingController(text: '0');
+  PhkReason _phkReason = SeveranceCalculatorEngine.reasons[0];
   SeveranceResult? _severanceResult;
   String? _severanceError;
 
-  // --- THR STATE ---
-  final TextEditingController _thrSalaryController = TextEditingController(text: '5000000');
-  final TextEditingController _thrMonthsController = TextEditingController(text: '8');
-  double _calculatedThr = 0;
+  // --- THR ---
+  final _thrSalaryController = TextEditingController(text: '5000000');
+  final _thrMonthsController = TextEditingController(text: '8');
+  double _thrPay = 0;
   String? _thrError;
 
-  // --- TILANG STATE ---
-  final Map<String, int> _violations = {
+  // --- Traffic fines ---
+  static const Map<String, int> _violations = {
     'Tidak Memiliki SIM yang Sah (Pasal 281)': 1000000,
     'Tidak Membawa STNK Sah (Pasal 288 ayat 1)': 500000,
     'Mengoperasikan HP Saat Mengemudi (Pasal 283)': 750000,
@@ -58,7 +65,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
   };
   final Set<String> _selectedViolations = {};
 
-  // --- UU ITE FILTER STATE ---
+  // --- ITE filter ---
   bool _onlyComplaintDelict = false;
 
   @override
@@ -82,21 +89,20 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
     super.dispose();
   }
 
-  void _copyToClipboard(String text, String message) {
+  void _copyResult(String text, String message) {
     Clipboard.setData(ClipboardData(text: text));
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-        backgroundColor: AppColors.success,
-        duration: const Duration(seconds: 2),
-      ),
-    );
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        SnackBar(content: Text(message), backgroundColor: AppColors.of(context).success),
+      );
   }
 
-  // --- CALCULATION LOGIC (§VAL) ---
+  // --- Calculations (§VAL: every input validated before it reaches math) ---
   void _calculateOvertime() {
     final salaryErr = AppValidators.validateSalary(_overtimeSalaryController.text);
-    final hoursErr = AppValidators.validateOvertimeHours(_overtimeHoursController.text);
+    final hoursErr =
+        AppValidators.validateOvertimeHours(_overtimeHoursController.text);
 
     if (salaryErr != null) {
       setState(() => _overtimeError = salaryErr);
@@ -107,35 +113,35 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
       return;
     }
 
-    final salary = double.parse(_overtimeSalaryController.text.replaceAll(RegExp(r'[^0-9]'), ''));
+    final salary =
+        double.parse(_overtimeSalaryController.text.replaceAll(RegExp(r'[^0-9]'), ''));
     final hours = double.parse(_overtimeHoursController.text.trim());
 
-    // PP 35/2021: Upah sejam = 1 / 173 x Upah Bulanan
-    final hourlyRate = salary / 173.0;
-    double total = 0;
+    // PP 35/2021: hourly wage = 1/173 of the monthly wage.
+    final hourly = salary / 173.0;
+    double total;
 
     if (!_isHoliday) {
-      // Hari kerja biasa: Jam 1 = 1.5x, Jam berikutnya = 2.0x
-      if (hours <= 1) {
-        total = hours * 1.5 * hourlyRate;
-      } else {
-        total = (1.5 * hourlyRate) + ((hours - 1) * 2.0 * hourlyRate);
-      }
+      // Regular day: first hour 1.5x, the rest 2x.
+      total = hours <= 1
+          ? hours * 1.5 * hourly
+          : (1.5 * hourly) + ((hours - 1) * 2.0 * hourly);
     } else {
-      // Hari libur resmi (5 hari kerja seminggu):
-      // Jam 1-8: 2x upah sejam, Jam 9: 3x, Jam 10-12: 4x
+      // Official holiday (5-day week): hours 1-8 at 2x, hour 9 at 3x, 10-12 at 4x.
       if (hours <= 8) {
-        total = hours * 2.0 * hourlyRate;
-      } else if (hours == 9) {
-        total = (8 * 2.0 * hourlyRate) + (1 * 3.0 * hourlyRate);
+        total = hours * 2.0 * hourly;
+      } else if (hours <= 9) {
+        total = (8 * 2.0 * hourly) + ((hours - 8) * 3.0 * hourly);
       } else {
-        total = (8 * 2.0 * hourlyRate) + (1 * 3.0 * hourlyRate) + ((hours - 9) * 4.0 * hourlyRate);
+        total = (8 * 2.0 * hourly) +
+            (1 * 3.0 * hourly) +
+            ((hours - 9) * 4.0 * hourly);
       }
     }
 
     setState(() {
       _overtimeError = null;
-      _calculatedOvertimePay = total;
+      _overtimePay = total;
     });
   }
 
@@ -157,16 +163,19 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
       return;
     }
 
-    final salary = double.parse(_severanceSalaryController.text.replaceAll(RegExp(r'[^0-9]'), ''));
+    final salary =
+        double.parse(_severanceSalaryController.text.replaceAll(RegExp(r'[^0-9]'), ''));
     final years = int.parse(_severanceYearsController.text.trim());
     final months = int.tryParse(_severanceMonthsController.text.trim()) ?? 0;
-    final uph = double.tryParse(_severanceUphController.text.replaceAll(RegExp(r'[^0-9]'), '')) ?? 0.0;
+    final uph =
+        double.tryParse(_severanceUphController.text.replaceAll(RegExp(r'[^0-9]'), '')) ??
+            0.0;
 
     final result = SeveranceCalculatorEngine.calculate(
       monthlyWage: salary,
       tenureYears: years,
       tenureMonths: months,
-      reason: _selectedPhkReason,
+      reason: _phkReason,
       manualUph: uph,
     );
 
@@ -183,41 +192,30 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
       return;
     }
 
-    final monthsText = _thrMonthsController.text.trim();
-    final months = int.tryParse(monthsText);
+    final months = int.tryParse(_thrMonthsController.text.trim());
     if (months == null || months <= 0) {
-      setState(() => _thrError = 'Masa kerja harus berupa angka minimal 1 bulan');
+      setState(() => _thrError = AppLocalizations.of(context)!.thrMonthsNeeded);
       return;
     }
     if (months > 600) {
-      setState(() => _thrError = 'Masa kerja maksimal 600 bulan');
+      setState(() => _thrError = AppLocalizations.of(context)!.tenureMaxMonthError);
       return;
     }
 
-    final salary = double.parse(_thrSalaryController.text.replaceAll(RegExp(r'[^0-9]'), ''));
+    final salary =
+        double.parse(_thrSalaryController.text.replaceAll(RegExp(r'[^0-9]'), ''));
 
-    double thr = 0;
-    if (months < 1) {
-      thr = 0;
-    } else if (months < 12) {
-      thr = (months / 12.0) * salary;
-    } else {
-      thr = salary;
-    }
+    // Permenaker 6/2016: proportional below 12 months of service.
+    final thr = months < 12 ? (months / 12.0) * salary : salary;
 
     setState(() {
       _thrError = null;
-      _calculatedThr = thr;
+      _thrPay = thr;
     });
   }
 
-  int get _totalFine {
-    int sum = 0;
-    for (final v in _selectedViolations) {
-      sum += _violations[v] ?? 0;
-    }
-    return sum;
-  }
+  int get _totalFine =>
+      _selectedViolations.fold(0, (sum, v) => sum + (_violations[v] ?? 0));
 
   @override
   Widget build(BuildContext context) {
@@ -225,731 +223,984 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
 
     return Scaffold(
       appBar: AppBar(
+        titleSpacing: AppSpacing.lg,
         title: Text(l10n.simulationAndCalculator),
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-        child: Center(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 800),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                // Top Tab Switcher (Scrollable horizontally)
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      _buildTabButton(0, l10n.tabOvertimePay, Icons.access_time),
-                      const SizedBox(width: 8),
-                      _buildTabButton(1, l10n.tabSeverancePay, Icons.work_outline),
-                      const SizedBox(width: 8),
-                      _buildTabButton(2, l10n.tabProratedThr, Icons.card_giftcard),
-                      const SizedBox(width: 8),
-                      _buildTabButton(3, l10n.tabTrafficFine, Icons.traffic),
-                      const SizedBox(width: 8),
-                      _buildTabButton(4, l10n.tabCyberIteSanctions, Icons.security),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 24),
-
-                // Active Tab Content
-                if (_selectedTab == 0) _buildOvertimeTab(l10n),
-                if (_selectedTab == 1) _buildSeveranceTab(l10n),
-                if (_selectedTab == 2) _buildThrTab(l10n),
-                if (_selectedTab == 3) _buildTrafficFineTab(l10n),
-                if (_selectedTab == 4) _buildCyberPenaltyTab(l10n),
-              ],
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(
+                AppSpacing.lg, AppSpacing.sm, AppSpacing.lg, 0),
+            child: _TabBar(
+              selected: _selectedTab,
+              onChanged: (i) => setState(() => _selectedTab = i),
             ),
           ),
-        ),
+          Expanded(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.fromLTRB(
+                  AppSpacing.lg, AppSpacing.lg, AppSpacing.lg, AppSpacing.xxl),
+              child: Center(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 640),
+                  child: switch (_selectedTab) {
+                    0 => _OvertimeTab(
+                        salaryController: _overtimeSalaryController,
+                        hoursController: _overtimeHoursController,
+                        isHoliday: _isHoliday,
+                        error: _overtimeError,
+                        pay: _overtimePay,
+                        onHolidayChanged: (v) {
+                          setState(() => _isHoliday = v);
+                          _calculateOvertime();
+                        },
+                        onInputChanged: _calculateOvertime,
+                        onCopy: _copyOvertime,
+                        formatRupiah: _rupiah.format,
+                      ),
+                    1 => _SeveranceTab(
+                        salaryController: _severanceSalaryController,
+                        yearsController: _severanceYearsController,
+                        monthsController: _severanceMonthsController,
+                        uphController: _severanceUphController,
+                        reason: _phkReason,
+                        result: _severanceResult,
+                        error: _severanceError,
+                        onReasonChanged: (r) {
+                          setState(() => _phkReason = r);
+                          _calculateSeverance();
+                        },
+                        onInputChanged: _calculateSeverance,
+                        onCopy: _copySeverance,
+                        formatRupiah: _rupiah.format,
+                      ),
+                    2 => _ThrTab(
+                        salaryController: _thrSalaryController,
+                        monthsController: _thrMonthsController,
+                        error: _thrError,
+                        pay: _thrPay,
+                        onInputChanged: _calculateThr,
+                        onCopy: _copyThr,
+                        formatRupiah: _rupiah.format,
+                      ),
+                    3 => _TrafficFineTab(
+                        violations: _violations,
+                        selected: _selectedViolations,
+                        totalFine: _totalFine,
+                        onToggle: (v) => setState(() {
+                          if (!_selectedViolations.remove(v)) {
+                            _selectedViolations.add(v);
+                          }
+                        }),
+                        onClear: () => setState(() => _selectedViolations.clear()),
+                        formatRupiah: _rupiah.format,
+                      ),
+                    _ => _CyberPenaltyTab(
+                        onlyComplaint: _onlyComplaintDelict,
+                        onFilterChanged: (v) =>
+                            setState(() => _onlyComplaintDelict = v),
+                        formatRupiah: _rupiah.format,
+                      ),
+                  },
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
 
-  Widget _buildTabButton(int index, String label, IconData icon) {
-    final isSelected = _selectedTab == index;
-    return InkWell(
-      onTap: () => setState(() => _selectedTab = index),
-      borderRadius: BorderRadius.circular(12),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-        decoration: BoxDecoration(
-          color: isSelected ? AppColors.primary : AppColors.bgSurface,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: isSelected ? AppColors.primaryLight : AppColors.border,
-          ),
-        ),
-        child: Row(
-          children: [
-            Icon(icon, size: 16, color: isSelected ? Colors.white : const Color(0xFF94A3B8)),
-            const SizedBox(width: 8),
-            Text(
-              label,
-              style: TextStyle(
-                fontSize: 13,
-                fontWeight: isSelected ? FontWeight.w700 : FontWeight.normal,
-                color: isSelected ? Colors.white : const Color(0xFFCBD5E1),
-              ),
-            ),
-          ],
-        ),
-      ),
+  void _copyOvertime() {
+    final l10n = AppLocalizations.of(context)!;
+    _copyResult(
+      'Simulasi Lembur RuleBook\n'
+      'Gaji: ${_overtimeSalaryController.text}\n'
+      'Jam: ${_overtimeHoursController.text}\n'
+      'Estimasi upah: ${_rupiah.format(_overtimePay)}\n'
+      'Dasar: PP 35/2021',
+      l10n.overtimeCopiedSuccess,
     );
   }
 
-  // ==========================================
-  // TAB 0: UPAH LEMBUR (PP 35/2021)
-  // ==========================================
-  Widget _buildOvertimeTab(AppLocalizations l10n) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Container(
-          padding: const EdgeInsets.all(14),
-          decoration: BoxDecoration(
-            color: AppColors.primary.withValues(alpha: 0.1),
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: AppColors.primary.withValues(alpha: 0.3)),
-          ),
-          child: Row(
-            children: [
-              const Icon(Icons.info_outline, color: AppColors.primaryLight, size: 20),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  l10n.overtimeLegalBasis,
-                  style: TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.35),
-                ),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 20),
-
-        TextField(
-          controller: _overtimeSalaryController,
-          keyboardType: TextInputType.number,
-          decoration: InputDecoration(
-            labelText: l10n.monthlyBasicSalaryRp,
-            prefixIcon: Icon(Icons.payments_outlined),
-            hintText: '5000000',
-          ),
-          onChanged: (_) => _calculateOvertime(),
-        ),
-        const SizedBox(height: 16),
-
-        TextField(
-          controller: _overtimeHoursController,
-          keyboardType: const TextInputType.numberWithOptions(decimal: true),
-          decoration: InputDecoration(
-            labelText: l10n.totalOvertimeHours,
-            prefixIcon: Icon(Icons.timer_outlined),
-            hintText: l10n.exampleOvertimeHours,
-          ),
-          onChanged: (_) => _calculateOvertime(),
-        ),
-        const SizedBox(height: 14),
-
-        SwitchListTile(
-          value: _isHoliday,
-          contentPadding: EdgeInsets.zero,
-          activeThumbColor: AppColors.primaryLight,
-          title: Text(l10n.overtimeHolidayTitle, style: const TextStyle(fontSize: 13, color: Colors.white)),
-          subtitle: Text(l10n.overtimeHolidayDesc, style: const TextStyle(fontSize: 11, color: Color(0xFF94A3B8))),
-          onChanged: (val) {
-            setState(() => _isHoliday = val);
-            _calculateOvertime();
-          },
-        ),
-
-        if (_overtimeError != null) ...[
-          const SizedBox(height: 10),
-          Text(_overtimeError!, style: const TextStyle(color: AppColors.danger, fontSize: 12)),
-        ],
-        const SizedBox(height: 24),
-
-        // Result Card
-        _buildResultCard(
-          title: l10n.estimatedOvertimePay,
-          amountText: _currencyFormat.format(_calculatedOvertimePay),
-          subtitle: _isHoliday
-              ? l10n.overtimeRateHoliday
-              : l10n.overtimeRateRegular,
-          details: [
-            'Upah per Jam (1/173): ${_currencyFormat.format(double.tryParse(_overtimeSalaryController.text.replaceAll(RegExp(r'[^0-9]'), '')) != null ? (double.parse(_overtimeSalaryController.text.replaceAll(RegExp(r'[^0-9]'), '')) / 173) : 0)}',
-            'Total Jam: ${_overtimeHoursController.text.trim()} Jam',
-            'Status: ${_isHoliday ? "Hari Libur" : "Hari Kerja Normal"}',
-          ],
-          onCopy: () {
-            _copyToClipboard(
-              'Simulasi Lembur RuleBook:\nGaji: ${_overtimeSalaryController.text}\nJam: ${_overtimeHoursController.text}\nEstimasi Hak Upah: ${_currencyFormat.format(_calculatedOvertimePay)}\nDasar Hukum: PP 35/2021',
-              l10n.overtimeCopiedSuccess,
-            );
-          },
-        ),
-      ],
+  void _copySeverance() {
+    final l10n = AppLocalizations.of(context)!;
+    final r = _severanceResult;
+    if (r == null) return;
+    _copyResult(
+      'Simulasi Kompensasi PHK RuleBook\n'
+      'Upah: ${_rupiah.format(r.monthlyWage)}\n'
+      'Masa kerja: ${r.tenureYears} th ${r.tenureMonths} bln\n'
+      'Alasan: ${r.reason.title}\n'
+      'Pesangon: ${_rupiah.format(r.calculatedPesangon)}\n'
+      'UPMK: ${_rupiah.format(r.calculatedUpmk)}\n'
+      'UPH: ${_rupiah.format(r.compensationRights)}\n'
+      'Total: ${_rupiah.format(r.totalSeverancePay)}\n'
+      'Dasar: ${r.reason.legalArticle}',
+      l10n.severanceCopiedSuccess,
     );
   }
 
-  // ==========================================
-  // TAB 1: PESANGON PHK (PP 35/2021)
-  // ==========================================
-  Widget _buildSeveranceTab(AppLocalizations l10n) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Container(
-          padding: const EdgeInsets.all(14),
-          decoration: BoxDecoration(
-            color: AppColors.laborTag.withValues(alpha: 0.1),
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: AppColors.laborTag.withValues(alpha: 0.3)),
-          ),
-          child: Row(
-            children: [
-              const Icon(Icons.gavel, color: AppColors.laborTag, size: 20),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  l10n.severanceLegalBasis,
-                  style: TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.35),
-                ),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 20),
-
-        TextField(
-          controller: _severanceSalaryController,
-          keyboardType: TextInputType.number,
-          decoration: InputDecoration(
-            labelText: l10n.basicSalaryFixedAllowance,
-            prefixIcon: Icon(Icons.account_balance_wallet_outlined),
-            hintText: '6500000',
-          ),
-          onChanged: (_) => _calculateSeverance(),
-        ),
-        const SizedBox(height: 16),
-
-        Row(
-          children: [
-            Expanded(
-              child: TextField(
-                controller: _severanceYearsController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: l10n.yearsOfService,
-                  prefixIcon: Icon(Icons.calendar_today_outlined),
-                  hintText: '3',
-                ),
-                onChanged: (_) => _calculateSeverance(),
-              ),
-            ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: TextField(
-                controller: _severanceMonthsController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: l10n.serviceExtraMonths,
-                  prefixIcon: Icon(Icons.date_range_outlined),
-                  hintText: '6',
-                ),
-                onChanged: (_) => _calculateSeverance(),
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 16),
-
-        // Dropdown Alasan PHK
-        DropdownButtonFormField<PhkReason>(
-          initialValue: _selectedPhkReason,
-          isExpanded: true,
-          decoration: InputDecoration(
-            labelText: l10n.terminationReason,
-            prefixIcon: Icon(Icons.rule_outlined),
-          ),
-          items: SeveranceCalculatorEngine.reasons.map((r) {
-            return DropdownMenuItem<PhkReason>(
-              value: r,
-              child: Text(r.title, style: const TextStyle(fontSize: 13), overflow: TextOverflow.ellipsis),
-            );
-          }).toList(),
-          onChanged: (val) {
-            if (val != null) {
-              setState(() => _selectedPhkReason = val);
-              _calculateSeverance();
-            }
-          },
-        ),
-        const SizedBox(height: 8),
-        Text(
-          'Dasar: ${_selectedPhkReason.legalArticle} (Pesangon ${_selectedPhkReason.pesangonFactor}x, UPMK ${_selectedPhkReason.upmkFactor}x)',
-          style: const TextStyle(fontSize: 11, color: AppColors.accent, fontWeight: FontWeight.w600),
-        ),
-        const SizedBox(height: 16),
-
-        TextField(
-          controller: _severanceUphController,
-          keyboardType: TextInputType.number,
-          decoration: InputDecoration(
-            labelText: l10n.uphCompensation,
-            prefixIcon: Icon(Icons.add_circle_outline),
-            hintText: '0',
-          ),
-          onChanged: (_) => _calculateSeverance(),
-        ),
-
-        if (_severanceError != null) ...[
-          const SizedBox(height: 10),
-          Text(_severanceError!, style: const TextStyle(color: AppColors.danger, fontSize: 12)),
-        ],
-        const SizedBox(height: 24),
-
-        if (_severanceResult != null)
-          _buildResultCard(
-            title: l10n.totalSeverancePayTitle,
-            amountText: _currencyFormat.format(_severanceResult!.totalSeverancePay),
-            subtitle: _selectedPhkReason.title,
-            details: [
-              'Uang Pesangon (${_severanceResult!.basePesangonMonths} bln x ${_selectedPhkReason.pesangonFactor}x): ${_currencyFormat.format(_severanceResult!.calculatedPesangon)}',
-              'Uang Penghargaan Masa Kerja (${_severanceResult!.baseUpmkMonths} bln x ${_selectedPhkReason.upmkFactor}x): ${_currencyFormat.format(_severanceResult!.calculatedUpmk)}',
-              'Uang Penggantian Hak (UPH): ${_currencyFormat.format(_severanceResult!.compensationRights)}',
-              'Dasar Hukum: ${_selectedPhkReason.legalArticle}',
-            ],
-            onCopy: () {
-              final r = _severanceResult!;
-              _copyToClipboard(
-                'Simulasi Kompensasi PHK (PP 35/2021):\nUpah: ${_currencyFormat.format(r.monthlyWage)}\nMasa Kerja: ${r.tenureYears} Thn ${r.tenureMonths} Bln\nAlasan: ${r.reason.title}\nUang Pesangon: ${_currencyFormat.format(r.calculatedPesangon)}\nUPMK: ${_currencyFormat.format(r.calculatedUpmk)}\nUPH: ${_currencyFormat.format(r.compensationRights)}\nTOTAL KOMPENSASI: ${_currencyFormat.format(r.totalSeverancePay)}\nDasar: ${r.reason.legalArticle}',
-                l10n.severanceCopiedSuccess,
-              );
-            },
-          ),
-      ],
+  void _copyThr() {
+    final l10n = AppLocalizations.of(context)!;
+    _copyResult(
+      'Simulasi THR RuleBook\n'
+      'Upah: ${_thrSalaryController.text}\n'
+      'Masa kerja: ${_thrMonthsController.text} bulan\n'
+      'Hak THR: ${_rupiah.format(_thrPay)}\n'
+      'Wajib dibayar paling lambat H-7 hari raya',
+      l10n.thrCopiedSuccess,
     );
   }
+}
 
-  // ==========================================
-  // TAB 2: THR KEAGAMAAN
-  // ==========================================
-  Widget _buildThrTab(AppLocalizations l10n) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Container(
-          padding: const EdgeInsets.all(14),
-          decoration: BoxDecoration(
-            color: AppColors.consumerTag.withValues(alpha: 0.1),
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: AppColors.consumerTag.withValues(alpha: 0.3)),
-          ),
-          child: Row(
-            children: [
-              const Icon(Icons.card_giftcard, color: AppColors.consumerTag, size: 20),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  l10n.thrLegalBasis,
-                  style: TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.35),
-                ),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 20),
+/// Horizontal tab pills, one row, scrollable when narrow.
+class _TabBar extends StatelessWidget {
+  final int selected;
+  final ValueChanged<int> onChanged;
 
-        TextField(
-          controller: _thrSalaryController,
-          keyboardType: TextInputType.number,
-          decoration: InputDecoration(
-            labelText: l10n.monthlyNetWage,
-            prefixIcon: Icon(Icons.monetization_on_outlined),
-            hintText: '5000000',
-          ),
-          onChanged: (_) => _calculateThr(),
-        ),
-        const SizedBox(height: 16),
+  const _TabBar({required this.selected, required this.onChanged});
 
-        TextField(
-          controller: _thrMonthsController,
-          keyboardType: TextInputType.number,
-          decoration: InputDecoration(
-            labelText: l10n.continuousServiceMonths,
-            prefixIcon: Icon(Icons.date_range),
-            hintText: l10n.exampleEightMonths,
-          ),
-          onChanged: (_) => _calculateThr(),
-        ),
-
-        if (_thrError != null) ...[
-          const SizedBox(height: 10),
-          Text(_thrError!, style: const TextStyle(color: AppColors.danger, fontSize: 12)),
-        ],
-        const SizedBox(height: 24),
-
-        _buildResultCard(
-          title: l10n.estimatedThrTitle,
-          amountText: _currencyFormat.format(_calculatedThr),
-          subtitle: (int.tryParse(_thrMonthsController.text.trim()) ?? 0) >= 12
-              ? l10n.thrRuleFull
-              : l10n.thrRuleProrate,
-          details: [
-            'Batas Akhir Pembayaran: H-7 Hari Raya Keagamaan',
-            'Bentuk Pembayaran: Wajib Uang Rupiah (Dilarang dalam bentuk barang/bingkisan)',
-            l10n.thrLatePenalty,
-          ],
-          onCopy: () {
-            _copyToClipboard(
-              'Simulasi THR (Permenaker 6/2016):\nUpah: ${_thrSalaryController.text}\nMasa Kerja: ${_thrMonthsController.text} Bulan\nHak THR: ${_currencyFormat.format(_calculatedThr)}\nWajib dibayar paling lambat H-7!',
-              l10n.thrCopiedSuccess,
-            );
-          },
-        ),
-      ],
-    );
-  }
-
-  // ==========================================
-  // TAB 3: DENDA TILANG LLAJ (UU 22/2009)
-  // ==========================================
-  Widget _buildTrafficFineTab(AppLocalizations l10n) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Container(
-          padding: const EdgeInsets.all(14),
-          decoration: BoxDecoration(
-            color: AppColors.trafficTag.withValues(alpha: 0.1),
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: AppColors.trafficTag.withValues(alpha: 0.3)),
-          ),
-          child: Row(
-            children: [
-              const Icon(Icons.traffic, color: AppColors.trafficTag, size: 20),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  l10n.trafficLegalBasis,
-                  style: TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.35),
-                ),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 16),
-
-        // Total Fine Sticky Card
-        Container(
-          padding: const EdgeInsets.all(18),
-          decoration: BoxDecoration(
-            color: AppColors.bgSurface,
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(
-              color: _totalFine > 0 ? AppColors.danger.withValues(alpha: 0.5) : AppColors.border,
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final c = AppColors.of(context);
+    return SizedBox(
+      height: 38,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        itemCount: 5,
+        separatorBuilder: (_, _) => const SizedBox(width: AppSpacing.sm),
+        itemBuilder: (context, index) {
+          final labels = [
+            l10n.tabOvertimePay,
+            l10n.tabSeverancePay,
+            l10n.tabProratedThr,
+            l10n.tabTrafficFine,
+            l10n.tabCyberIteSanctions,
+          ];
+          final icons = [
+            AppIconData.clock,
+            AppIconData.briefcase,
+            AppIconData.gift,
+            AppIconData.traffic,
+            AppIconData.lock,
+          ];
+          final isSelected = selected == index;
+          return Material(
+            color: isSelected ? c.brand : c.surface,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(AppRadius.sm + 2),
+              side: BorderSide(color: isSelected ? c.brand : c.border),
             ),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(l10n.totalEstimatedMaxFine, style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8))),
-                  const SizedBox(height: 4),
-                  Text(
-                    _currencyFormat.format(_totalFine),
-                    style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: AppColors.danger),
-                  ),
-                ],
-              ),
-              if (_selectedViolations.isNotEmpty)
-                TextButton(
-                  onPressed: () => setState(() => _selectedViolations.clear()),
-                  child: Text(l10n.resetSelection, style: const TextStyle(color: Color(0xFF94A3B8), fontSize: 12)),
-                ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 16),
-
-        Text(
-          l10n.selectViolationsHint,
-          style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Colors.white),
-        ),
-        const SizedBox(height: 10),
-
-        ..._violations.entries.map((entry) {
-          final isSelected = _selectedViolations.contains(entry.key);
-          return Container(
-            margin: const EdgeInsets.only(bottom: 8),
-            decoration: BoxDecoration(
-              color: isSelected ? AppColors.danger.withValues(alpha: 0.1) : AppColors.bgCard,
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(
-                color: isSelected ? AppColors.danger.withValues(alpha: 0.4) : AppColors.border,
-              ),
-            ),
-            child: CheckboxListTile(
-              value: isSelected,
-              activeColor: AppColors.danger,
-              checkColor: Colors.white,
-              onChanged: (_) {
-                setState(() {
-                  if (isSelected) {
-                    _selectedViolations.remove(entry.key);
-                  } else {
-                    _selectedViolations.add(entry.key);
-                  }
-                });
-              },
-              title: Text(entry.key, style: const TextStyle(fontSize: 13, color: Colors.white)),
-              subtitle: Text(
-                'Maksimal ${_currencyFormat.format(entry.value)}',
-                style: const TextStyle(fontSize: 12, color: AppColors.accent, fontWeight: FontWeight.w600),
-              ),
-            ),
-          );
-        }),
-      ],
-    );
-  }
-
-  // ==========================================
-  // TAB 4: SANKSI SIBER & UU ITE (UU 1/2024)
-  // ==========================================
-  Widget _buildCyberPenaltyTab(AppLocalizations l10n) {
-    final items = CyberPenaltyDatabase.items.where((i) {
-      if (_onlyComplaintDelict && !i.isComplaintDelict) return false;
-      return true;
-    }).toList();
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Container(
-          padding: const EdgeInsets.all(14),
-          decoration: BoxDecoration(
-            color: AppColors.privacyTag.withValues(alpha: 0.1),
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: AppColors.privacyTag.withValues(alpha: 0.3)),
-          ),
-          child: Row(
-            children: [
-              const Icon(Icons.security, color: AppColors.privacyTag, size: 20),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  l10n.iteLegalBasis,
-                  style: TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.35),
-                ),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 14),
-
-        FilterChip(
-          avatar: const Icon(Icons.filter_list, size: 16),
-          label: Text(l10n.complaintOffenseOnly),
-          selected: _onlyComplaintDelict,
-          selectedColor: AppColors.primary,
-          onSelected: (val) => setState(() => _onlyComplaintDelict = val),
-        ),
-        const SizedBox(height: 16),
-
-        ...items.map((item) {
-          return Container(
-            margin: const EdgeInsets.only(bottom: 14),
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: AppColors.bgSurface,
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: AppColors.border),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+            clipBehavior: Clip.antiAlias,
+            child: InkWell(
+              onTap: () => onChanged(index),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    Expanded(
-                      child: Text(
-                        item.title,
-                        style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
-                      ),
+                    AppIcon(
+                      icons[index],
+                      size: 14,
+                      color: isSelected ? c.onBrand : c.textMuted,
+                      strokeWidth: 1.9,
                     ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                      decoration: BoxDecoration(
-                        color: item.isComplaintDelict
-                            ? AppColors.primary.withValues(alpha: 0.2)
-                            : AppColors.danger.withValues(alpha: 0.2),
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      child: Text(
-                        item.isComplaintDelict ? l10n.complaintOffense : l10n.ordinaryOffense,
-                        style: TextStyle(
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          color: item.isComplaintDelict ? AppColors.primaryLight : AppColors.danger,
-                        ),
+                    const SizedBox(width: 6),
+                    Text(
+                      labels[index],
+                      style: TextStyle(
+                        fontSize: 12.5,
+                        fontWeight:
+                            isSelected ? FontWeight.w700 : FontWeight.w500,
+                        color: isSelected ? c.onBrand : c.textSecondary,
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 6),
-                Text(
-                  item.articleReference,
-                  style: const TextStyle(fontSize: 11, color: AppColors.accent, fontWeight: FontWeight.w600),
-                ),
-                const SizedBox(height: 10),
-                Text(
-                  item.description,
-                  style: const TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.35),
-                ),
-                const SizedBox(height: 12),
-
-                // Prison & Fine Metric Badges
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                      decoration: BoxDecoration(
-                        color: AppColors.danger.withValues(alpha: 0.15),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Row(
-                        children: [
-                          const Icon(Icons.lock_clock, size: 14, color: AppColors.danger),
-                          const SizedBox(width: 4),
-                          Text(
-                            '${l10n.maxPrison} ${item.maxPrisonYears} ${l10n.yearsUnit}',
-                            style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.danger),
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(width: 8),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                      decoration: BoxDecoration(
-                        color: AppColors.accent.withValues(alpha: 0.15),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Row(
-                        children: [
-                          const Icon(Icons.monetization_on, size: 14, color: AppColors.accent),
-                          const SizedBox(width: 4),
-                          Text(
-                            '${l10n.maxFine} ${_currencyFormat.format(item.maxFineRupiah)}',
-                            style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.accent),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 12),
-
-                Container(
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: AppColors.bgCard,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '💡 ${l10n.legalTips}: ${item.guidance}',
-                        style: const TextStyle(fontSize: 11, color: Color(0xFFE2E8F0), height: 1.35),
-                      ),
-                      if (item.publicDefenseExemption.isNotEmpty) ...[
-                        const SizedBox(height: 4),
-                        Text(
-                          '🛡️ ${l10n.defenseExemption}: ${item.publicDefenseExemption}',
-                          style: const TextStyle(fontSize: 11, color: AppColors.success, height: 1.35),
-                        ),
-                      ],
-                    ],
-                  ),
-                ),
-              ],
+              ),
             ),
           );
-        }),
+        },
+      ),
+    );
+  }
+}
+
+/// The legal reference strip that opens every tab.
+class _LegalNote extends StatelessWidget {
+  final AppIconData icon;
+  final Color tone;
+  final String text;
+
+  const _LegalNote({required this.icon, required this.tone, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        AppIcon(icon, size: 16, color: tone),
+        const SizedBox(width: 10),
+        Expanded(
+          child: Text(
+            text,
+            style: theme.textTheme.bodySmall?.copyWith(
+              color: AppColors.of(context).textSecondary,
+              height: 1.45,
+            ),
+          ),
+        ),
       ],
     );
   }
+}
 
-  // Common Result Card Component
-  Widget _buildResultCard({
-    required String title,
-    required String amountText,
-    required String subtitle,
-    required List<String> details,
-    required VoidCallback onCopy,
-  }) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        color: AppColors.bgSurface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppColors.primaryLight.withValues(alpha: 0.4), width: 1.5),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.primary.withValues(alpha: 0.1),
-            blurRadius: 16,
-            offset: const Offset(0, 4),
-          ),
-        ],
+/// Labeled numeric field with rupiah formatting helpers.
+class _AmountField extends StatelessWidget {
+  final TextEditingController controller;
+  final String label;
+  final String hint;
+  final String prefix;
+  final VoidCallback onChanged;
+  final bool decimal;
+
+  const _AmountField({
+    required this.controller,
+    required this.label,
+    required this.hint,
+    required this.prefix,
+    required this.onChanged,
+    this.decimal = false,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      controller: controller,
+      keyboardType: decimal
+          ? const TextInputType.numberWithOptions(decimal: true)
+          : TextInputType.number,
+      inputFormatters: [
+        FilteringTextInputFormatter.allow(RegExp(decimal ? r'[0-9.,]' : r'[0-9]')),
+      ],
+      decoration: InputDecoration(
+        labelText: label,
+        hintText: hint,
+        prefixText: prefix,
       ),
+      onChanged: (_) => onChanged(),
+    );
+  }
+}
+
+/// Shared result card: one number, one context line, a breakdown, copy action.
+class _ResultCard extends StatelessWidget {
+  final String title;
+  final String amount;
+  final String subtitle;
+  final List<String> details;
+  final VoidCallback onCopy;
+  final Color amountColor;
+
+  const _ResultCard({
+    required this.title,
+    required this.amount,
+    required this.subtitle,
+    required this.details,
+    required this.onCopy,
+    required this.amountColor,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final c = AppColors.of(context);
+    final theme = Theme.of(context);
+    final l10n = AppLocalizations.of(context)!;
+    return AppCard(
+      color: c.surfaceSunken,
+      borderColor: c.border,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(title, style: const TextStyle(fontSize: 13, color: Color(0xFF94A3B8))),
+              Expanded(
+                child: Text(
+                  title,
+                  style: theme.textTheme.labelMedium?.copyWith(
+                    color: c.textMuted,
+                  ),
+                ),
+              ),
               IconButton(
-                icon: const Icon(Icons.copy, size: 18, color: AppColors.primaryLight),
-                tooltip: 'Salin Hasil', // result copy
+                tooltip: l10n.copyResults,
+                icon: AppIcon(AppIconData.copy, size: 17, color: c.brand),
                 onPressed: onCopy,
               ),
             ],
           ),
-          const SizedBox(height: 6),
-          Text(
-            amountText,
-            style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w900, color: AppColors.success),
-          ),
           const SizedBox(height: 4),
           Text(
-            subtitle,
-            style: const TextStyle(fontSize: 12, color: Color(0xFFCBD5E1)),
+            amount,
+            style: theme.textTheme.headlineMedium?.copyWith(
+              color: amountColor,
+              fontWeight: FontWeight.w800,
+              letterSpacing: -0.5,
+            ),
           ),
-          const Divider(height: 24, color: AppColors.border),
-          ...details.map((d) {
-            return Padding(
-              padding: const EdgeInsets.only(bottom: 6),
+          const SizedBox(height: 6),
+          Text(
+            subtitle,
+            style: theme.textTheme.bodySmall?.copyWith(color: c.textMuted),
+          ),
+          const Divider(height: 24),
+          ...details.map(
+            (d) => Padding(
+              padding: const EdgeInsets.only(bottom: 7),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('• ', style: TextStyle(color: AppColors.primaryLight, fontWeight: FontWeight.bold)),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 6),
+                    child: Container(
+                      width: 4,
+                      height: 4,
+                      decoration:
+                          BoxDecoration(color: c.textFaint, shape: BoxShape.circle),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
                   Expanded(
-                    child: Text(d, style: const TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.35)),
+                    child: Text(
+                      d,
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: c.textSecondary,
+                        height: 1.45,
+                      ),
+                    ),
                   ),
                 ],
               ),
-            );
-          }),
+            ),
+          ),
         ],
       ),
+    );
+  }
+}
+
+class _ErrorText extends StatelessWidget {
+  final String? error;
+
+  const _ErrorText(this.error);
+
+  @override
+  Widget build(BuildContext context) {
+    if (error == null) return const SizedBox.shrink();
+    final c = AppColors.of(context);
+    return Padding(
+      padding: const EdgeInsets.only(top: AppSpacing.sm),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          AppIcon(AppIconData.warning, size: 15, color: c.danger),
+          const SizedBox(width: 7),
+          Expanded(
+            child: Text(
+              error!,
+              style: TextStyle(
+                color: c.danger,
+                fontSize: 12.5,
+                height: 1.4,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// --- TAB 0: Overtime ---
+class _OvertimeTab extends StatelessWidget {
+  final TextEditingController salaryController;
+  final TextEditingController hoursController;
+  final bool isHoliday;
+  final String? error;
+  final double pay;
+  final ValueChanged<bool> onHolidayChanged;
+  final VoidCallback onInputChanged;
+  final VoidCallback onCopy;
+  final String Function(double) formatRupiah;
+
+  const _OvertimeTab({
+    required this.salaryController,
+    required this.hoursController,
+    required this.isHoliday,
+    required this.error,
+    required this.pay,
+    required this.onHolidayChanged,
+    required this.onInputChanged,
+    required this.onCopy,
+    required this.formatRupiah,
+  });
+
+  double get _hourly {
+    final salary = double.tryParse(
+            salaryController.text.replaceAll(RegExp(r'[^0-9]'), '')) ??
+        0;
+    return salary / 173.0;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final c = AppColors.of(context);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _LegalNote(icon: AppIconData.info, tone: c.brand, text: l10n.overtimeLegalBasis),
+        const SizedBox(height: AppSpacing.lg),
+        _AmountField(
+          controller: salaryController,
+          label: l10n.monthlyBasicSalaryRp,
+          hint: '5000000',
+          prefix: 'Rp ',
+          onChanged: onInputChanged,
+        ),
+        const SizedBox(height: AppSpacing.md),
+        _AmountField(
+          controller: hoursController,
+          label: l10n.totalOvertimeHours,
+          hint: l10n.exampleOvertimeHours,
+          prefix: '',
+          onChanged: onInputChanged,
+          decimal: true,
+        ),
+        const SizedBox(height: AppSpacing.sm),
+        SwitchListTile(
+          value: isHoliday,
+          contentPadding: EdgeInsets.zero,
+          title: Text(l10n.overtimeHolidayTitle,
+              style: Theme.of(context).textTheme.titleSmall),
+          subtitle: Text(l10n.overtimeHolidayDesc,
+              style: Theme.of(context).textTheme.bodySmall),
+          onChanged: onHolidayChanged,
+        ),
+        _ErrorText(error),
+        const SizedBox(height: AppSpacing.md),
+        _ResultCard(
+          title: l10n.estimatedOvertimePay,
+          amount: formatRupiah(pay),
+          subtitle: isHoliday ? l10n.overtimeRateHoliday : l10n.overtimeRateRegular,
+          amountColor: c.success,
+          details: [
+            '${l10n.hourlyWage}: ${formatRupiah(_hourly)}',
+            '${l10n.totalHoursLabel}: ${hoursController.text.trim()} ${l10n.hoursUnit}',
+            '${l10n.overtimeHolidayTitle}: ${isHoliday ? l10n.yes : l10n.no}',
+          ],
+          onCopy: onCopy,
+        ),
+      ],
+    );
+  }
+}
+
+// --- TAB 1: Severance ---
+class _SeveranceTab extends StatelessWidget {
+  final TextEditingController salaryController;
+  final TextEditingController yearsController;
+  final TextEditingController monthsController;
+  final TextEditingController uphController;
+  final PhkReason reason;
+  final SeveranceResult? result;
+  final String? error;
+  final ValueChanged<PhkReason> onReasonChanged;
+  final VoidCallback onInputChanged;
+  final VoidCallback onCopy;
+  final String Function(double) formatRupiah;
+
+  const _SeveranceTab({
+    required this.salaryController,
+    required this.yearsController,
+    required this.monthsController,
+    required this.uphController,
+    required this.reason,
+    required this.result,
+    required this.error,
+    required this.onReasonChanged,
+    required this.onInputChanged,
+    required this.onCopy,
+    required this.formatRupiah,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final c = AppColors.of(context);
+    final theme = Theme.of(context);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _LegalNote(
+            icon: AppIconData.gavel, tone: c.catLabor, text: l10n.severanceLegalBasis),
+        const SizedBox(height: AppSpacing.lg),
+        _AmountField(
+          controller: salaryController,
+          label: l10n.basicSalaryFixedAllowance,
+          hint: '6500000',
+          prefix: 'Rp ',
+          onChanged: onInputChanged,
+        ),
+        const SizedBox(height: AppSpacing.md),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: _AmountField(
+                controller: yearsController,
+                label: l10n.yearsOfService,
+                hint: '3',
+                prefix: '',
+                onChanged: onInputChanged,
+              ),
+            ),
+            const SizedBox(width: AppSpacing.md),
+            Expanded(
+              child: _AmountField(
+                controller: monthsController,
+                label: l10n.serviceExtraMonths,
+                hint: '6',
+                prefix: '',
+                onChanged: onInputChanged,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: AppSpacing.md),
+        DropdownButtonFormField<PhkReason>(
+          initialValue: reason,
+          isExpanded: true,
+          decoration: InputDecoration(
+            labelText: l10n.terminationReason,
+            prefixIcon: Padding(
+              padding: const EdgeInsets.only(left: 4, right: 2),
+              child: AppIcon(AppIconData.scale, size: 19, color: c.textMuted),
+            ),
+          ),
+          items: SeveranceCalculatorEngine.reasons
+              .map(
+                (r) => DropdownMenuItem<PhkReason>(
+                  value: r,
+                  child: Text(
+                    r.title,
+                    style: const TextStyle(fontSize: 13),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ),
+                ),
+              )
+              .toList(),
+          onChanged: (v) {
+            if (v != null) onReasonChanged(v);
+          },
+        ),
+        const SizedBox(height: AppSpacing.sm),
+        Text(
+          '${reason.legalArticle} · Pesangon ${reason.pesangonFactor}x · UPMK ${reason.upmkFactor}x',
+          style: theme.textTheme.labelSmall?.copyWith(color: c.textMuted),
+        ),
+        const SizedBox(height: AppSpacing.md),
+        _AmountField(
+          controller: uphController,
+          label: l10n.uphCompensation,
+          hint: '0',
+          prefix: 'Rp ',
+          onChanged: onInputChanged,
+        ),
+        _ErrorText(error),
+        const SizedBox(height: AppSpacing.md),
+        if (result != null)
+          _ResultCard(
+            title: l10n.totalSeverancePayTitle,
+            amount: formatRupiah(result!.totalSeverancePay),
+            subtitle: reason.title,
+            amountColor: c.success,
+            details: [
+              '${l10n.severancePayLabel} (${result!.basePesangonMonths} bln × ${reason.pesangonFactor}x): ${formatRupiah(result!.calculatedPesangon)}',
+              '${l10n.upmkPayLabel} (${result!.baseUpmkMonths} bln × ${reason.upmkFactor}x): ${formatRupiah(result!.calculatedUpmk)}',
+              '${l10n.uphCompensation}: ${formatRupiah(result!.compensationRights)}',
+              '${l10n.legalBasisLabel}: ${reason.legalArticle}',
+            ],
+            onCopy: onCopy,
+          ),
+      ],
+    );
+  }
+}
+
+// --- TAB 2: THR ---
+class _ThrTab extends StatelessWidget {
+  final TextEditingController salaryController;
+  final TextEditingController monthsController;
+  final String? error;
+  final double pay;
+  final VoidCallback onInputChanged;
+  final VoidCallback onCopy;
+  final String Function(double) formatRupiah;
+
+  const _ThrTab({
+    required this.salaryController,
+    required this.monthsController,
+    required this.error,
+    required this.pay,
+    required this.onInputChanged,
+    required this.onCopy,
+    required this.formatRupiah,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final c = AppColors.of(context);
+    final months = int.tryParse(monthsController.text.trim()) ?? 0;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _LegalNote(
+            icon: AppIconData.gift,
+            tone: c.catConsumer,
+            text: l10n.thrLegalBasis),
+        const SizedBox(height: AppSpacing.lg),
+        _AmountField(
+          controller: salaryController,
+          label: l10n.monthlyNetWage,
+          hint: '5000000',
+          prefix: 'Rp ',
+          onChanged: onInputChanged,
+        ),
+        const SizedBox(height: AppSpacing.md),
+        _AmountField(
+          controller: monthsController,
+          label: l10n.continuousServiceMonths,
+          hint: l10n.exampleEightMonths,
+          prefix: '',
+          onChanged: onInputChanged,
+        ),
+        _ErrorText(error),
+        const SizedBox(height: AppSpacing.md),
+        _ResultCard(
+          title: l10n.estimatedThrTitle,
+          amount: formatRupiah(pay),
+          subtitle: months >= 12 ? l10n.thrRuleFull : l10n.thrRuleProrate,
+          amountColor: c.success,
+          details: [
+            l10n.thrDeadlineDetail,
+            l10n.thrCashOnlyDetail,
+            l10n.thrLatePenalty,
+          ],
+          onCopy: onCopy,
+        ),
+      ],
+    );
+  }
+}
+
+// --- TAB 3: Traffic fines ---
+class _TrafficFineTab extends StatelessWidget {
+  final Map<String, int> violations;
+  final Set<String> selected;
+  final int totalFine;
+  final ValueChanged<String> onToggle;
+  final VoidCallback onClear;
+  final String Function(int) formatRupiah;
+
+  const _TrafficFineTab({
+    required this.violations,
+    required this.selected,
+    required this.totalFine,
+    required this.onToggle,
+    required this.onClear,
+    required this.formatRupiah,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final c = AppColors.of(context);
+    final theme = Theme.of(context);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _LegalNote(
+            icon: AppIconData.traffic,
+            tone: c.catTraffic,
+            text: l10n.trafficLegalBasis),
+        const SizedBox(height: AppSpacing.lg),
+        AppCard(
+          color: totalFine > 0 ? c.dangerSoft : c.surfaceSunken,
+          borderColor:
+              totalFine > 0 ? c.danger.withValues(alpha: 0.3) : c.border,
+          child: Row(
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      l10n.totalEstimatedMaxFine,
+                      style: theme.textTheme.labelMedium
+                          ?.copyWith(color: c.textMuted),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      formatRupiah(totalFine),
+                      style: theme.textTheme.headlineSmall?.copyWith(
+                        color: totalFine > 0 ? c.danger : c.textPrimary,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              if (selected.isNotEmpty)
+                TextButton(
+                  onPressed: onClear,
+                  style: TextButton.styleFrom(
+                    minimumSize: const Size(0, 36),
+                    visualDensity: VisualDensity.compact,
+                  ),
+                  child: Text(l10n.resetSelection),
+                ),
+            ],
+          ),
+        ),
+        const SizedBox(height: AppSpacing.lg),
+        Text(l10n.selectViolationsHint, style: theme.textTheme.titleSmall),
+        const SizedBox(height: AppSpacing.md),
+        ...violations.entries.map((entry) {
+          final isSelected = selected.contains(entry.key);
+          return Padding(
+            padding: const EdgeInsets.only(bottom: AppSpacing.sm),
+            child: AppCard(
+              onTap: () => onToggle(entry.key),
+              color: isSelected ? c.dangerSoft : c.surface,
+              borderColor: isSelected
+                  ? c.danger.withValues(alpha: 0.35)
+                  : c.border,
+              padding: const EdgeInsets.symmetric(
+                  horizontal: AppSpacing.md, vertical: 6),
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 24,
+                    height: 24,
+                    child: Checkbox(
+                      value: isSelected,
+                      onChanged: (_) => onToggle(entry.key),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6)),
+                    ),
+                  ),
+                  const SizedBox(width: AppSpacing.md),
+                  Expanded(
+                    child: Text(
+                      entry.key,
+                      style: theme.textTheme.bodyMedium?.copyWith(
+                        fontWeight: FontWeight.w500,
+                        color: c.textPrimary,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: AppSpacing.sm),
+                  Text(
+                    formatRupiah(entry.value),
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: isSelected ? c.danger : c.textMuted,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        }),
+      ],
+    );
+  }
+}
+
+// --- TAB 4: ITE / cyber penalties ---
+class _CyberPenaltyTab extends StatelessWidget {
+  final bool onlyComplaint;
+  final ValueChanged<bool> onFilterChanged;
+  final String Function(int) formatRupiah;
+
+  const _CyberPenaltyTab({
+    required this.onlyComplaint,
+    required this.onFilterChanged,
+    required this.formatRupiah,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final c = AppColors.of(context);
+    final theme = Theme.of(context);
+
+    final items = CyberPenaltyDatabase.items
+        .where((i) => !onlyComplaint || i.isComplaintDelict)
+        .toList();
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _LegalNote(
+            icon: AppIconData.lock,
+            tone: c.catPrivacy,
+            text: l10n.iteLegalBasis),
+        const SizedBox(height: AppSpacing.md),
+        Row(
+          children: [
+            SizedBox(
+              height: 32,
+              child: FilterChip(
+                label: Text(l10n.complaintOffenseOnly,
+                    style: const TextStyle(fontSize: 12)),
+                selected: onlyComplaint,
+                showCheckmark: false,
+                onSelected: onFilterChanged,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: AppSpacing.lg),
+        ...items.map((item) {
+          final tone = item.isComplaintDelict ? c.brand : c.danger;
+          return Padding(
+            padding: const EdgeInsets.only(bottom: AppSpacing.md),
+            child: AppCard(
+              padding: const EdgeInsets.all(AppSpacing.lg),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          item.title,
+                          style: theme.textTheme.titleSmall,
+                        ),
+                      ),
+                      const SizedBox(width: AppSpacing.sm),
+                      Pill(
+                        label: item.isComplaintDelict
+                            ? l10n.complaintOffense
+                            : l10n.ordinaryOffense,
+                        tone: tone,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    item.articleReference,
+                    style: theme.textTheme.labelSmall?.copyWith(
+                      color: c.textMuted,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const SizedBox(height: AppSpacing.md),
+                  Text(
+                    item.description,
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: c.textSecondary,
+                      height: 1.5,
+                    ),
+                  ),
+                  const SizedBox(height: AppSpacing.md),
+                  Wrap(
+                    spacing: AppSpacing.sm,
+                    runSpacing: AppSpacing.sm,
+                    children: [
+                      Pill(
+                        label:
+                            '${l10n.maxPrison} ${item.maxPrisonYears} ${l10n.yearsUnit}',
+                        icon: AppIconData.warning,
+                        tone: c.danger,
+                      ),
+                      Pill(
+                        label:
+                            '${l10n.maxFine} ${formatRupiah(item.maxFineRupiah)}',
+                        icon: AppIconData.wallet,
+                        tone: c.catConsumer,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: AppSpacing.md),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(AppSpacing.md),
+                    decoration: BoxDecoration(
+                      color: c.surfaceSunken,
+                      borderRadius:
+                          BorderRadius.circular(AppRadius.sm + 2),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            AppIcon(AppIconData.bulb,
+                                size: 14, color: c.warning),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: Text(
+                                '${l10n.legalTips}: ${item.guidance}',
+                                style: theme.textTheme.bodySmall?.copyWith(
+                                  color: c.textSecondary,
+                                  height: 1.45,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        if (item.publicDefenseExemption.isNotEmpty &&
+                            !item.publicDefenseExemption
+                                .startsWith('Tidak')) ...[
+                          const SizedBox(height: 8),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              AppIcon(AppIconData.shield,
+                                  size: 14, color: c.success),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: Text(
+                                  '${l10n.defenseExemption}: ${item.publicDefenseExemption}',
+                                  style: theme.textTheme.bodySmall?.copyWith(
+                                    color: c.success,
+                                    height: 1.45,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        }),
+      ],
     );
   }
 }

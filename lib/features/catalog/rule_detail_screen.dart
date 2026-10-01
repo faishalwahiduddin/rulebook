@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../core/constants/app_colors.dart';
+import 'package:go_router/go_router.dart';
 import '../../core/models/rule_item.dart';
 import '../../core/providers/app_providers.dart';
+import '../../core/router/app_router.dart';
+import '../../core/theme/app_colors.dart';
+import '../../core/theme/app_icons.dart';
+import '../../core/theme/app_theme.dart';
 import '../../core/utils/validators.dart';
+import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
 
 class RuleDetailScreen extends ConsumerStatefulWidget {
@@ -17,16 +22,15 @@ class RuleDetailScreen extends ConsumerStatefulWidget {
 }
 
 class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
-  late TextEditingController _noteController;
+  late final TextEditingController _noteController;
   String? _noteError;
   bool _isSavingNote = false;
 
   @override
   void initState() {
     super.initState();
-    final storage = ref.read(localStorageServiceProvider);
-    final savedNote = storage.getNote(widget.rule.id) ?? '';
-    _noteController = TextEditingController(text: savedNote);
+    final saved = ref.read(localStorageServiceProvider).getNote(widget.rule.id) ?? '';
+    _noteController = TextEditingController(text: saved);
   }
 
   @override
@@ -35,26 +39,41 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
     super.dispose();
   }
 
-  void _copyToClipboard(String text, String message) {
+  RuleItem get _rule => widget.rule;
+
+  void _toast(String message, {bool success = false}) {
+    final c = AppColors.of(context);
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        SnackBar(
+          content: Text(message),
+          backgroundColor: success ? c.success : null,
+        ),
+      );
+  }
+
+  void _copySummary() {
+    final l10n = AppLocalizations.of(context)!;
+    final text = '${_rule.title}\n'
+        '${l10n.legalBasisLabel}: ${_rule.legalBasis}\n'
+        '${l10n.summary}: ${_rule.summary}\n'
+        '${l10n.consequenceLabel}: ${_rule.penaltyOrRight}\n\n'
+        '${l10n.appName} · rulebook.faishal.id';
     Clipboard.setData(ClipboardData(text: text));
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-        backgroundColor: AppColors.success,
-        duration: const Duration(seconds: 2),
-      ),
-    );
+    _toast(l10n.summaryCopied, success: true);
   }
 
   Future<void> _saveNote() async {
     final l10n = AppLocalizations.of(context)!;
     final text = _noteController.text.trim();
+    final notifier = ref.read(ruleNotesProvider.notifier);
+
     if (text.isEmpty) {
-      await ref.read(ruleNotesProvider.notifier).deleteNote(widget.rule.id);
+      await notifier.deleteNote(_rule.id);
       if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(l10n.noteDeleted)),
-        );
+        setState(() => _noteError = null);
+        _toast(l10n.noteDeleted);
       }
       return;
     }
@@ -67,12 +86,11 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
 
     setState(() => _isSavingNote = true);
     try {
-      await ref.read(ruleNotesProvider.notifier).saveNote(widget.rule.id, text);
+      await notifier.saveNote(_rule.id, text);
       if (mounted) {
         setState(() => _noteError = null);
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(l10n.noteSaved)),
-        );
+        _toast(l10n.noteSaved, success: true);
+        FocusScope.of(context).unfocus();
       }
     } finally {
       if (mounted) setState(() => _isSavingNote = false);
@@ -82,301 +100,283 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final isBookmarked = ref.watch(bookmarksProvider).contains(widget.rule.id);
-    final allRules = ref.watch(allRulesProvider);
-    final relatedRules = allRules
-        .where((r) => r.category == widget.rule.category && r.id != widget.rule.id)
+    final c = AppColors.of(context);
+    final theme = Theme.of(context);
+    final saved = ref.watch(bookmarksProvider).contains(_rule.id);
+    final accent = _rule.category.accent(c);
+    final related = ref
+        .watch(allRulesProvider)
+        .where((r) => r.category == _rule.category && r.id != _rule.id)
         .take(3)
         .toList();
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.rule.title),
+      appBar: appBar(
+        context,
         actions: [
           IconButton(
-            icon: const Icon(Icons.share_outlined),
             tooltip: l10n.copySummary,
-            onPressed: () {
-              final text = '📖 ${widget.rule.title}\n'
-                  '${l10n.legalBasis}: ${widget.rule.legalBasis}\n'
-                  '${l10n.summary}: ${widget.rule.summary}\n'
-                  '${l10n.penalties}: ${widget.rule.penaltyOrRight}\n\n'
-                  'Aplikasi RuleBook (https://rulebook.faishal.id)';
-              _copyToClipboard(text, l10n.noteSaved);
-            },
+            icon: AppIcon(AppIconData.copy, size: 20, color: c.textPrimary),
+            onPressed: _copySummary,
           ),
           IconButton(
-            icon: Icon(
-              isBookmarked ? Icons.bookmark : Icons.bookmark_border,
-              color: isBookmarked ? AppColors.accent : Colors.white,
+            tooltip: saved ? l10n.removeBookmark : l10n.saveRule,
+            icon: AppIcon(
+              saved ? AppIconData.bookmarkFilled : AppIconData.bookmark,
+              size: 21,
+              color: saved ? c.brand : c.textPrimary,
             ),
-            tooltip: isBookmarked ? l10n.removeBookmark : l10n.saveRule,
-            onPressed: () {
-              ref.read(bookmarksProvider.notifier).toggleBookmark(widget.rule.id);
-            },
+            onPressed: () =>
+                ref.read(bookmarksProvider.notifier).toggleBookmark(_rule.id),
           ),
+          const SizedBox(width: AppSpacing.xs),
         ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-        child: Center(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 800),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                // Header Category Badge & Legal Basis
-                Container(
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    color: AppColors.bgSurface,
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(color: AppColors.border),
+      body: ListView(
+        padding: const EdgeInsets.fromLTRB(
+            AppSpacing.lg, AppSpacing.sm, AppSpacing.lg, AppSpacing.xxxl),
+        children: [
+          Pill(
+            label: _rule.category.localizedLabel(l10n),
+            icon: _rule.category.icon,
+            tone: accent,
+          ),
+          const SizedBox(height: AppSpacing.md),
+          Text(
+            _rule.title,
+            style: theme.textTheme.headlineSmall,
+          ),
+          const SizedBox(height: AppSpacing.md),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              AppIcon(AppIconData.book, size: 15, color: c.textMuted),
+              const SizedBox(width: 7),
+              Expanded(
+                child: Text(
+                  _rule.legalBasis,
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: c.textMuted,
+                    fontWeight: FontWeight.w500,
                   ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: AppSpacing.xl),
+
+          // The single most important line: what happens.
+          AppCard(
+            color: c.dangerSoft,
+            borderColor: c.danger.withValues(alpha: 0.35),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                AppIcon(AppIconData.scale, size: 20, color: c.danger),
+                const SizedBox(width: AppSpacing.md),
+                Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                            decoration: BoxDecoration(
-                              color: widget.rule.category.tagColor.withValues(alpha: 0.2),
-                              borderRadius: BorderRadius.circular(6),
-                            ),
-                            child: Text(
-                              widget.rule.category.label,
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w700,
-                                color: widget.rule.category.tagColor,
-                              ),
-                            ),
-                          ),
-                          const Spacer(),
-                          const Icon(Icons.gavel, size: 16, color: AppColors.accent),
-                        ],
-                      ),
-                      const SizedBox(height: 12),
                       Text(
-                        widget.rule.title,
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w800,
-                          color: Colors.white,
+                        l10n.consequenceLabel.toUpperCase(),
+                        style: theme.textTheme.labelSmall?.copyWith(
+                          color: c.danger,
+                          letterSpacing: 0.8,
                         ),
                       ),
-                      const SizedBox(height: 8),
-                      Row(
-                        children: [
-                          const Icon(Icons.menu_book, size: 14, color: Color(0xFF94A3B8)),
-                          const SizedBox(width: 6),
-                          Expanded(
-                            child: Text(
-                              widget.rule.legalBasis,
-                              style: const TextStyle(
-                                fontSize: 12,
-                                color: Color(0xFF94A3B8),
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ),
-                        ],
+                      const SizedBox(height: 5),
+                      Text(
+                        _rule.penaltyOrRight,
+                        style: theme.textTheme.bodyLarge?.copyWith(
+                          fontWeight: FontWeight.w600,
+                          color: c.textPrimary,
+                        ),
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(height: 16),
-
-                // Sanksi atau Hak Card
-                Card(
-                  color: AppColors.danger.withValues(alpha: 0.1),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(14),
-                    side: BorderSide(color: AppColors.danger.withValues(alpha: 0.3)),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Icon(Icons.warning_amber_rounded, color: AppColors.danger, size: 24),
-                        const SizedBox(width: 12),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                l10n.officialPenaltyOrRight,
-                                style: const TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w700,
-                                  color: AppColors.danger,
-                                ),
-                              ),
-                              const SizedBox(height: 4),
-                              Text(
-                                widget.rule.penaltyOrRight,
-                                style: const TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.white,
-                                  height: 1.4,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 16),
-
-                // Full Explanation Card
-                Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(18),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          l10n.summaryExplanation,
-                          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
-                        ),
-                        const SizedBox(height: 10),
-                        Text(
-                          widget.rule.fullExplanation,
-                          style: const TextStyle(fontSize: 13, color: Color(0xFFCBD5E1), height: 1.5),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 16),
-
-                // Key DOs and DONTs
-                Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(18),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          l10n.practicalGuidance,
-                          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
-                        ),
-                        const SizedBox(height: 14),
-                        ...widget.rule.keyDos.map((doItem) => Padding(
-                              padding: const EdgeInsets.only(bottom: 8),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Icon(Icons.check_circle, size: 18, color: AppColors.success),
-                                  const SizedBox(width: 10),
-                                  Expanded(
-                                    child: Text(doItem, style: const TextStyle(fontSize: 13, color: Color(0xFFE2E8F0))),
-                                  ),
-                                ],
-                              ),
-                            )),
-                        const Divider(color: AppColors.border, height: 20),
-                        ...widget.rule.keyDonts.map((dontItem) => Padding(
-                              padding: const EdgeInsets.only(bottom: 8),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Icon(Icons.cancel, size: 18, color: AppColors.danger),
-                                  const SizedBox(width: 10),
-                                  Expanded(
-                                    child: Text(dontItem, style: const TextStyle(fontSize: 13, color: Color(0xFFE2E8F0))),
-                                  ),
-                                ],
-                              ),
-                            )),
-                      ],
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 16),
-
-                // Personal Note Section (§VAL)
-                Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(18),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            const Icon(Icons.edit_note, size: 20, color: AppColors.primaryLight),
-                            const SizedBox(width: 8),
-                            Text(
-                              l10n.personalNote,
-                              style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 10),
-                        TextField(
-                          controller: _noteController,
-                          maxLines: 3,
-                          decoration: InputDecoration(
-                            hintText: l10n.writeCaseNotesHint,
-                            errorText: _noteError,
-                          ),
-                          onChanged: (val) {
-                            if (_noteError != null) {
-                              setState(() => _noteError = AppValidators.validateNoteText(val));
-                            }
-                          },
-                        ),
-                        const SizedBox(height: 12),
-                        Align(
-                          alignment: Alignment.centerRight,
-                          child: ElevatedButton.icon(
-                            onPressed: _isSavingNote ? null : _saveNote,
-                            icon: const Icon(Icons.save, size: 16),
-                            label: Text(l10n.saveNote),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 24),
-
-                // Related Rules in same category
-                if (relatedRules.isNotEmpty) ...[
-                  Text(
-                    '${l10n.relatedRules} (${widget.rule.category.localizedLabel(l10n)})',
-                    style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
-                  ),
-                  const SizedBox(height: 12),
-                  ...relatedRules.map((rel) {
-                    return Card(
-                      margin: const EdgeInsets.only(bottom: 8),
-                      child: ListTile(
-                        leading: Icon(rel.category.icon, color: rel.category.tagColor, size: 20),
-                        title: Text(rel.title, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white)),
-                        subtitle: Text(rel.legalBasis, style: const TextStyle(fontSize: 11, color: AppColors.accent)),
-                        trailing: const Icon(Icons.arrow_forward_ios, size: 12, color: Color(0xFF64748B)),
-                        onTap: () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => RuleDetailScreen(rule: rel),
-                            ),
-                          );
-                        },
-                      ),
-                    );
-                  }),
-                ],
               ],
             ),
           ),
-        ),
+          const SizedBox(height: AppSpacing.xxl),
+
+          SectionHeader(
+            title: l10n.whatItMeans,
+            icon: AppIconData.info,
+          ),
+          Text(
+            _rule.fullExplanation,
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: c.textSecondary,
+              height: 1.65,
+            ),
+          ),
+          const SizedBox(height: AppSpacing.xxl),
+
+          SectionHeader(title: l10n.doThis, icon: AppIconData.checkCircle),
+          ..._rule.keyDos.map((item) => _GuidanceRow(
+                text: item,
+                tone: c.success,
+                icon: AppIconData.check,
+              )),
+          const SizedBox(height: AppSpacing.lg),
+          SectionHeader(title: l10n.avoidThis, icon: AppIconData.closeCircle),
+          ..._rule.keyDonts.map((item) => _GuidanceRow(
+                text: item,
+                tone: c.danger,
+                icon: AppIconData.close,
+              )),
+          const SizedBox(height: AppSpacing.xxl),
+
+          SectionHeader(title: l10n.personalNote, icon: AppIconData.note),
+          AppCard(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextField(
+                  controller: _noteController,
+                  maxLines: 4,
+                  minLines: 3,
+                  maxLength: 500,
+                  onChanged: (val) {
+                    if (_noteError != null) {
+                      setState(() => _noteError = AppValidators.validateNoteText(val));
+                    } else {
+                      setState(() {});
+                    }
+                  },
+                  decoration: InputDecoration(
+                    hintText: l10n.noteEmptyHint,
+                    errorText: _noteError,
+                    counterText: '',
+                    alignLabelWithHint: true,
+                  ),
+                ),
+                const SizedBox(height: AppSpacing.sm),
+                Row(
+                  children: [
+                    Text(
+                      l10n.noteLengthCounter(
+                        _noteController.text.trim().length,
+                        500,
+                      ),
+                      style: theme.textTheme.labelSmall?.copyWith(
+                        color: c.textFaint,
+                        letterSpacing: 0,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    const Spacer(),
+                    if (_noteController.text.trim().isNotEmpty)
+                      TextButton(
+                        onPressed: _isSavingNote
+                            ? null
+                            : () {
+                                _noteController.clear();
+                                _saveNote();
+                              },
+                        style: TextButton.styleFrom(
+                          foregroundColor: c.textMuted,
+                          minimumSize: const Size(0, 40),
+                        ),
+                        child: Text(l10n.clearNote),
+                      ),
+                    const SizedBox(width: AppSpacing.sm),
+                    FilledButton(
+                      onPressed: _isSavingNote ? null : _saveNote,
+                      style: FilledButton.styleFrom(
+                        minimumSize: const Size(0, 42),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: AppSpacing.lg),
+                      ),
+                      child: _isSavingNote
+                          ? const SizedBox(
+                              width: 16,
+                              height: 16,
+                              child: CircularProgressIndicator(strokeWidth: 2),
+                            )
+                          : Text(l10n.saveNote),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+
+          if (related.isNotEmpty) ...[
+            const SizedBox(height: AppSpacing.xxl),
+            SectionHeader(title: l10n.relatedRules, icon: AppIconData.layers),
+            ...related.map(
+              (rel) => Padding(
+                padding: const EdgeInsets.only(bottom: AppSpacing.sm),
+                child: AppCard(
+                  padding: const EdgeInsets.all(AppSpacing.md),
+                  onTap: () => context.pushReplacement(AppRoutes.rule(rel.id)),
+                  child: Row(
+                    children: [
+                      AppIcon(rel.category.icon,
+                          size: 18, color: rel.category.accent(c)),
+                      const SizedBox(width: AppSpacing.md),
+                      Expanded(
+                        child: Text(
+                          rel.title,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: theme.textTheme.titleSmall,
+                        ),
+                      ),
+                      AppIcon(AppIconData.chevronRight,
+                          size: 16, color: c.textFaint),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
+class _GuidanceRow extends StatelessWidget {
+  final String text;
+  final Color tone;
+  final AppIconData icon;
+
+  const _GuidanceRow({required this.text, required this.tone, required this.icon});
+
+  @override
+  Widget build(BuildContext context) {
+    final c = AppColors.of(context);
+    return Padding(
+      padding: const EdgeInsets.only(bottom: AppSpacing.md),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 20,
+            height: 20,
+            margin: const EdgeInsets.only(top: 1),
+            decoration: BoxDecoration(
+              color: tone.withValues(alpha: 0.12),
+              borderRadius: BorderRadius.circular(6),
+            ),
+            alignment: Alignment.center,
+            child: AppIcon(icon, size: 12, color: tone, strokeWidth: 2.2),
+          ),
+          const SizedBox(width: AppSpacing.md),
+          Expanded(
+            child: Text(
+              text,
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: c.textSecondary,
+                    height: 1.55,
+                  ),
+            ),
+          ),
+        ],
       ),
     );
   }

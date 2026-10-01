@@ -117,7 +117,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get navChecklist => '自主点検';
 
   @override
-  String get navBookmarks => '保存済み';
+  String get navBookmarks => '保存';
 
   @override
   String get navSettings => '設定';
@@ -219,13 +219,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get noBookmarks => '保存された条文はありません';
 
   @override
-  String get personalNote => '個人メモ';
+  String get personalNote => 'あなたのメモ';
 
   @override
   String get addNote => 'メモを追加';
 
   @override
-  String get noteSaved => 'メモを保存しました！';
+  String get noteSaved => 'メモを保存しました';
 
   @override
   String get disclaimerTitle => '法的免責事項';
@@ -342,7 +342,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get totalHoursLabel => '合計時間';
 
   @override
-  String get hoursUnit => '時';
+  String get hoursUnit => '時間';
 
   @override
   String get overtimeCopiedSuccess => '残業結果がクリップボードに正常にコピーされました。';
@@ -392,10 +392,19 @@ class AppLocalizationsJa extends AppLocalizations {
   String get thrRuleFull => '勤務期間 >= 12 か月: 1 か月分の賃金全額';
 
   @override
-  String get thrRuleProrate => '勤務期間が12か月未満：日割り計算（勤務期間/12×賃金）';
+  String get thrRuleProrate => '勤務12か月未満：日割り計算（勤務月数 / 12 × 賃金）';
 
   @override
-  String get thrLatePenalty => '後期起業家に対する制裁: 名目 THR 総額の 5% の罰金';
+  String get thrMonthsNeeded => '勤続月数を入力してください（最低1か月）';
+
+  @override
+  String get thrDeadlineDetail => '支払い期限：祝日の7日前';
+
+  @override
+  String get thrCashOnlyDetail => '現金での支払いが必須（現物は不可）';
+
+  @override
+  String get thrLatePenalty => '遅延の場合：雇用主に総額5%の罰金';
 
   @override
   String get thrCopiedSuccess => 'THR 計算が正常にコピーされました。';
@@ -445,13 +454,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get copyResults => '結果のコピー';
 
   @override
-  String get noteDeleted => '注は削除されました。';
+  String get noteDeleted => 'メモを削除しました';
 
   @override
-  String get saveRule => 'ルールの保存';
+  String get saveRule => 'ルールを保存';
 
   @override
-  String get removeBookmark => '保存の削除';
+  String get removeBookmark => '保存から削除';
 
   @override
   String get officialPenaltyOrRight => '公式の制裁/権利';
@@ -466,25 +475,25 @@ class AppLocalizationsJa extends AppLocalizations {
   String get writeCaseNotesHint => '事件のメモ、事件の日付、またはリマインダーを書き留めます...';
 
   @override
-  String get saveNote => 'メモの保存';
+  String get saveNote => '保存';
 
   @override
-  String get relatedRules => '関連ルール';
+  String get relatedRules => '関連するトピック';
 
   @override
-  String get copySummary => 'コピーの概要';
+  String get copySummary => '要約をコピー';
 
   @override
-  String get searchRulesHint => '記事、罰金、退職金、ITE、SOPなどを探してください。';
+  String get searchRulesHint => 'ルール・条文・状況を検索…';
 
   @override
   String get resetFilter => 'フィルターをリセットする';
 
   @override
-  String get noRulesMatch => '一致するルールはありません';
+  String get noRulesMatch => 'まだ一致するものはありません';
 
   @override
-  String get tryOtherKeywords => '他のキーワードを試すか、「すべて」カテゴリを選択してください。';
+  String get tryOtherKeywords => '別のキーワードかトピックをお試しください。';
 
   @override
   String get sopEmergencyGuide => '緊急時のSOPとガイドライン';
@@ -551,7 +560,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get goodCompliance => '優れたコンプライアンス';
 
   @override
-  String get moderateCompliance => '中程度のコンプライアンス - 注意が必要';
+  String get moderateCompliance => '中程度のコンプライアンス、改善の余地あり';
 
   @override
   String get criticalCompliance => 'クリティカルコンプライアンスレベル';
@@ -576,16 +585,16 @@ class AppLocalizationsJa extends AppLocalizations {
       'このアクションにより、この監査モジュールのすべてのチェック マークがクリアされます。';
 
   @override
-  String get navCatalogShort => 'カタログ';
+  String get navCatalogShort => 'ルール';
 
   @override
-  String get navSimulationShort => 'シミュレーション';
+  String get navSimulationShort => '計算';
 
   @override
-  String get navSopShort => '緊急SOP';
+  String get navSopShort => '緊急';
 
   @override
-  String get navComplianceShort => 'コンプライアンス';
+  String get navComplianceShort => '監査';
 
   @override
   String get categoryAll => '全て';
@@ -605,4 +614,138 @@ class AppLocalizationsJa extends AppLocalizations {
   @override
   String get backupCopiedSnackbar =>
       'RuleBook のデータバックアップがクリップボードに正常にコピーされました！📋';
+
+  @override
+  String get catTrafficShort => '交通';
+
+  @override
+  String get catLaborShort => '労働';
+
+  @override
+  String get catCyberShort => 'データ';
+
+  @override
+  String get catConsumerShort => '消費者';
+
+  @override
+  String get catSafetyShort => '安全';
+
+  @override
+  String get catCivilShort => '公徳';
+
+  @override
+  String get catAllDesc => 'すべてのルール・ガイド・SOPをひとつに。';
+
+  @override
+  String get catTrafficDesc => '運転ルール、反則金、道路の安全。';
+
+  @override
+  String get catLaborDesc => '労働時間、残業、休暇、退職金の権利。';
+
+  @override
+  String get catCyberDesc => '個人データの保護とデジタルの足跡。';
+
+  @override
+  String get catConsumerDesc => '購入者の権利、保証、苦情の伝え方。';
+
+  @override
+  String get catSafetyDesc => '緊急手順、保護具、職場の安全。';
+
+  @override
+  String get catCivilDesc => '公共の秩序と公共空間での暮らし方。';
+
+  @override
+  String get forYou => 'あなた向け';
+
+  @override
+  String get browseByTopic => 'トピックで探す';
+
+  @override
+  String get searchAriaLabel => 'ルール検索欄';
+
+  @override
+  String resultsCount(Object count) {
+    return '$count 件のルール';
+  }
+
+  @override
+  String get clearSearch => '検索をクリア';
+
+  @override
+  String get resetFilters => 'リセット';
+
+  @override
+  String readingTime(Object minutes) {
+    return '読了 $minutes 分';
+  }
+
+  @override
+  String get ruleDetailMeta => 'ルール詳細';
+
+  @override
+  String get whatItMeans => 'あなたにとっての意味';
+
+  @override
+  String get doThis => 'すべきこと';
+
+  @override
+  String get avoidThis => '避けること';
+
+  @override
+  String get legalBasisLabel => '法的根拠';
+
+  @override
+  String get consequenceLabel => '罰則';
+
+  @override
+  String get noteEmptyHint => '日付や整理番号など、忘れたくないことを残しましょう。';
+
+  @override
+  String get summaryCopied => '要約をコピーしました';
+
+  @override
+  String get clearNote => 'クリア';
+
+  @override
+  String noteLengthCounter(Object count, Object max) {
+    return '$count/$max 文字';
+  }
+
+  @override
+  String get deleteNoteTitle => 'このメモを削除しますか？';
+
+  @override
+  String get deleteNoteDesc => '削除したメモは元に戻せません。ルール自体は一覧に残ります。';
+
+  @override
+  String get licenseLabel => 'ライセンス';
+
+  @override
+  String get licenseValue => '個人・非営利';
+
+  @override
+  String get noAuditModulesTitle => 'このカテゴリにはまだ監査モジュールがありません';
+
+  @override
+  String get noAuditModulesHint => '別のカテゴリを試すか、「すべて」を選んで全モジュールを表示できます。';
+
+  @override
+  String itemsFulfilledCount(Object count, Object max) {
+    return '$count/$max 項目を満たしています';
+  }
+
+  @override
+  String get missingTitle => 'ページが見つかりません';
+
+  @override
+  String get missingDesc => 'リンクが古い可能性があります。戻ってもう一度お試しください。';
+
+  @override
+  String get backToRules => 'ルール一覧に戻る';
+
+  @override
+  String get timezone => 'Zona Waktu';
+
+  @override
+  String get timezoneAuto => 'Otomatis (ikut perangkat)';
 }

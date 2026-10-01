@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../core/constants/app_colors.dart';
 import '../../core/models/compliance_checklist.dart';
 import '../../core/providers/app_providers.dart';
+import '../../core/theme/app_colors.dart';
+import '../../core/theme/app_icons.dart';
+import '../../core/theme/app_theme.dart';
+import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
 
+/// One audit module: score header, items with legal basis, reset with
+/// confirmation.
 class ChecklistDetailScreen extends ConsumerWidget {
   final ComplianceChecklist checklist;
 
@@ -13,217 +18,218 @@ class ChecklistDetailScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
+    final c = AppColors.of(context);
+    final theme = Theme.of(context);
     final checkedMap = ref.watch(checklistStateProvider);
-    final checkedIds = checkedMap[checklist.id] ?? <String>{};
+    final checkedIds = checkedMap[checklist.id] ?? const <String>{};
     final totalItems = checklist.items.length;
     final checkedCount = checkedIds.length;
-    final percentage = totalItems > 0 ? (checkedCount / totalItems) : 0.0;
+    final ratio = totalItems > 0 ? checkedCount / totalItems : 0.0;
 
-    Color progressColor;
-    String scoreStatus;
-    if (percentage == 1.0) {
-      progressColor = AppColors.success;
-      scoreStatus = l10n.perfectCompliance;
-    } else if (percentage >= 0.7) {
-      progressColor = AppColors.primaryLight;
-      scoreStatus = l10n.goodCompliance;
-    } else if (percentage >= 0.4) {
-      progressColor = AppColors.accent;
-      scoreStatus = l10n.moderateCompliance;
-    } else {
-      progressColor = AppColors.danger;
-      scoreStatus = l10n.criticalCompliance;
-    }
+    final (statusLabel, tone) = switch (ratio) {
+      >= 1.0 => (l10n.perfectCompliance, c.success),
+      >= 0.7 => (l10n.goodCompliance, c.success),
+      >= 0.4 => (l10n.moderateCompliance, c.warning),
+      _ => (l10n.criticalCompliance, c.danger),
+    };
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(checklist.title),
+      appBar: appBar(
+        context,
         actions: [
           IconButton(
-            icon: const Icon(Icons.refresh),
             tooltip: l10n.resetChecklist,
-            onPressed: () async {
-              final confirm = await showDialog<bool>(
-                context: context,
-                builder: (ctx) => AlertDialog(
-                  backgroundColor: AppColors.bgSurface,
-                  title: Text(l10n.resetChecklistTitle, style: const TextStyle(color: Colors.white)),
-                  content: Text(
-                    l10n.resetChecklistConfirmMsg,
-                    style: const TextStyle(color: Color(0xFF94A3B8)),
+            icon: AppIcon(AppIconData.refresh, size: 20, color: c.textPrimary),
+            onPressed: checkedCount == 0
+                ? null
+                : () => _confirmReset(context, ref),
+          ),
+          const SizedBox(width: AppSpacing.xs),
+        ],
+      ),
+      body: ListView(
+        padding: const EdgeInsets.fromLTRB(
+            AppSpacing.lg, AppSpacing.sm, AppSpacing.lg, AppSpacing.xxxl),
+        children: [
+          Pill(
+            label: checklist.category.localizedLabel(l10n),
+            icon: checklist.category.icon,
+            tone: checklist.category.accent(c),
+          ),
+          const SizedBox(height: AppSpacing.md),
+          Text(checklist.title, style: theme.textTheme.headlineSmall),
+          const SizedBox(height: AppSpacing.md),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              AppIcon(AppIconData.info, size: 15, color: c.textMuted),
+              const SizedBox(width: 7),
+              Expanded(
+                child: Text(
+                  '${checklist.targetAudience}. ${checklist.description}',
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: c.textSecondary,
+                    height: 1.5,
                   ),
-                  actions: [
-                    TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(l10n.cancel)),
-                    ElevatedButton(
-                      onPressed: () => Navigator.pop(ctx, true),
-                      style: ElevatedButton.styleFrom(backgroundColor: AppColors.danger),
-                      child: Text(l10n.reset),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: AppSpacing.xl),
+
+          // Score summary. One glance: where you stand.
+          AppCard(
+            color: tone.withValues(alpha: 0.08),
+            borderColor: tone.withValues(alpha: 0.3),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            statusLabel,
+                            style: theme.textTheme.titleSmall?.copyWith(
+                              color: tone,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            l10n.itemsFulfilledCount(checkedCount, totalItems),
+                            style: theme.textTheme.bodySmall
+                                ?.copyWith(color: c.textMuted),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: AppSpacing.md),
+                    Text(
+                      '${(ratio * 100).round()}%',
+                      style: theme.textTheme.headlineMedium?.copyWith(
+                        color: tone,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: -0.5,
+                      ),
                     ),
                   ],
                 ),
-              );
-
-              if (confirm == true) {
-                await ref.read(checklistStateProvider.notifier).resetAll(checklist.id);
-              }
-            },
+                const SizedBox(height: AppSpacing.md),
+                AppProgressBar(value: ratio, color: tone, height: 8),
+              ],
+            ),
           ),
-        ],
-      ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-        child: Center(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 800),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                // Score Gauge Card
-                Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: AppColors.bgSurface,
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(color: progressColor.withValues(alpha: 0.5), width: 1.5),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                scoreStatus,
-                                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: progressColor),
-                              ),
-                              const SizedBox(height: 4),
-                              Text(
-                                '$checkedCount / $totalItems ${l10n.itemsFulfilled}',
-                                style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8)),
-                              ),
-                            ],
-                          ),
-                          Text(
-                            '${(percentage * 100).toInt()}%',
-                            style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: progressColor),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 12),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: LinearProgressIndicator(
-                          value: percentage,
-                          minHeight: 10,
-                          backgroundColor: const Color(0xFF1E293B),
-                          valueColor: AlwaysStoppedAnimation<Color>(progressColor),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 16),
+          const SizedBox(height: AppSpacing.xxl),
 
-                // Audience & Description
-                Container(
-                  padding: const EdgeInsets.all(14),
-                  decoration: BoxDecoration(
-                    color: checklist.category.tagColor.withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(Icons.info_outline, color: checklist.category.tagColor, size: 18),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Text(
-                          '${l10n.targetLabel}: ${checklist.targetAudience} • ${checklist.description}',
-                          style: const TextStyle(fontSize: 12, color: Color(0xFFE2E8F0)),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 20),
-
-                // Items Checklist
-                Text(
-                  l10n.checklistItems,
-                  style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
-                ),
-                const SizedBox(height: 10),
-                ...checklist.items.map((item) {
-                  final isChecked = checkedIds.contains(item.id);
-                  return Container(
-                    margin: const EdgeInsets.only(bottom: 10),
-                    decoration: BoxDecoration(
-                      color: isChecked ? AppColors.success.withValues(alpha: 0.08) : AppColors.bgCard,
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                        color: isChecked ? AppColors.success.withValues(alpha: 0.4) : AppColors.border,
+          SectionHeader(title: l10n.checklistItems, icon: AppIconData.checklist),
+          ...checklist.items.map((item) {
+            final isChecked = checkedIds.contains(item.id);
+            return Padding(
+              padding: const EdgeInsets.only(bottom: AppSpacing.sm),
+              child: AppCard(
+                onTap: () => ref
+                    .read(checklistStateProvider.notifier)
+                    .toggleItem(checklist.id, item.id),
+                color: isChecked ? c.successSoft : c.surface,
+                borderColor:
+                    isChecked ? c.success.withValues(alpha: 0.35) : c.border,
+                padding: const EdgeInsets.symmetric(
+                    horizontal: AppSpacing.md, vertical: AppSpacing.md),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      width: 22,
+                      height: 22,
+                      child: Checkbox(
+                        value: isChecked,
+                        onChanged: (_) => ref
+                            .read(checklistStateProvider.notifier)
+                            .toggleItem(checklist.id, item.id),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(6)),
                       ),
                     ),
-                    child: CheckboxListTile(
-                      value: isChecked,
-                      activeColor: AppColors.success,
-                      checkColor: Colors.white,
-                      onChanged: (_) {
-                        ref.read(checklistStateProvider.notifier).toggleItem(checklist.id, item.id);
-                      },
-                      contentPadding: const EdgeInsets.all(12),
-                      title: Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              item.title,
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w700,
-                                color: isChecked ? Colors.white : const Color(0xFFE2E8F0),
-                                decoration: isChecked ? TextDecoration.lineThrough : null,
-                              ),
-                            ),
-                          ),
-                          if (item.isCrucial)
-                            Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                              decoration: BoxDecoration(
-                                color: AppColors.danger.withValues(alpha: 0.2),
-                                borderRadius: BorderRadius.circular(4),
-                              ),
-                              child: Text(
-                                l10n.crucial,
-                                style: const TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: AppColors.danger),
-                              ),
-                            ),
-                        ],
-                      ),
-                      subtitle: Column(
+                    const SizedBox(width: AppSpacing.md),
+                    Expanded(
+                      child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  item.title,
+                                  style: theme.textTheme.titleSmall?.copyWith(
+                                    color: isChecked
+                                        ? c.textSecondary
+                                        : c.textPrimary,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+                              if (item.isCrucial) ...[
+                                const SizedBox(width: AppSpacing.sm),
+                                Pill(label: l10n.crucial, tone: c.danger),
+                              ],
+                            ],
+                          ),
                           const SizedBox(height: 4),
                           Text(
                             item.description,
-                            style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8), height: 1.35),
+                            style: theme.textTheme.bodySmall?.copyWith(
+                              color: c.textSecondary,
+                              height: 1.45,
+                            ),
                           ),
                           const SizedBox(height: 6),
                           Text(
                             item.legalBasis,
-                            style: const TextStyle(fontSize: 11, color: AppColors.accent, fontWeight: FontWeight.w600),
+                            style: theme.textTheme.labelSmall?.copyWith(
+                              color: c.textMuted,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ],
                       ),
                     ),
-                  );
-                }),
-              ],
-            ),
-          ),
-        ),
+                  ],
+                ),
+              ),
+            );
+          }),
+        ],
       ),
     );
+  }
+
+  Future<void> _confirmReset(BuildContext context, WidgetRef ref) async {
+    final l10n = AppLocalizations.of(context)!;
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(l10n.resetChecklistTitle),
+        content: Text(l10n.resetChecklistConfirmMsg),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, false),
+            child: Text(l10n.cancel),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(ctx, true),
+            child: Text(l10n.reset),
+          ),
+        ],
+      ),
+    );
+    if (confirmed == true) {
+      await ref
+          .read(checklistStateProvider.notifier)
+          .resetAll(checklist.id);
+    }
   }
 }

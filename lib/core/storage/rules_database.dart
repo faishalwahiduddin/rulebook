@@ -1067,4 +1067,29 @@ class RulesDatabase {
       ],
     ),
   ];
+
+  /// Stable lookups used by deep-link routes.
+  static RuleItem? findRule(String? id) {
+    if (id == null) return null;
+    for (final r in rules) {
+      if (r.id == id) return r;
+    }
+    return null;
+  }
+
+  static SopGuide? findSop(String? id) {
+    if (id == null) return null;
+    for (final s in sopGuides) {
+      if (s.id == id) return s;
+    }
+    return null;
+  }
+
+  static ComplianceChecklist? findChecklist(String? id) {
+    if (id == null) return null;
+    for (final c in checklists) {
+      if (c.id == id) return c;
+    }
+    return null;
+  }
 }

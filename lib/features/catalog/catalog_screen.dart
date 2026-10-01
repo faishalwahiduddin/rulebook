@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import '../../core/constants/app_colors.dart';
 import '../../core/models/rule_category.dart';
-import '../../core/models/rule_item.dart';
 import '../../core/providers/app_providers.dart';
+import '../../core/router/app_router.dart';
+import '../../core/theme/app_colors.dart';
+import '../../core/theme/app_icons.dart';
+import '../../core/theme/app_theme.dart';
+import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
-import 'rule_detail_screen.dart';
+import 'widgets/rule_card.dart';
 
 class CatalogScreen extends ConsumerStatefulWidget {
   const CatalogScreen({super.key});
@@ -16,9 +19,233 @@ class CatalogScreen extends ConsumerStatefulWidget {
 }
 
 class _CatalogScreenState extends ConsumerState<CatalogScreen> {
-  late TextEditingController _searchController;
+  late final TextEditingController _searchController;
 
-  final List<String> _quickFilterKeywords = [
+  @override
+  void initState() {
+    super.initState();
+    _searchController = TextEditingController(text: ref.read(searchQueryProvider));
+  }
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  void _setQuery(String value) {
+    _searchController.text = value;
+    _searchController.selection =
+        TextSelection.collapsed(offset: value.length);
+    ref.read(searchQueryProvider.notifier).setQuery(value);
+    setState(() {});
+  }
+
+  void _clearAll() {
+    _searchController.clear();
+    ref.read(searchQueryProvider.notifier).clear();
+    ref.read(selectedCategoryProvider.notifier).selectCategory(RuleCategory.all);
+    setState(() {});
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final c = AppColors.of(context);
+    final theme = Theme.of(context);
+    final rules = ref.watch(filteredRulesProvider);
+    final activeCategory = ref.watch(selectedCategoryProvider);
+    final query = ref.watch(searchQueryProvider);
+    final hasFilter =
+        query.trim().isNotEmpty || activeCategory != RuleCategory.all;
+
+    return Scaffold(
+      appBar: AppBar(
+        titleSpacing: AppSpacing.lg,
+        title: Row(
+          children: [
+            Container(
+              width: 32,
+              height: 32,
+              decoration: BoxDecoration(
+                color: c.brand,
+                borderRadius: BorderRadius.circular(AppRadius.sm),
+              ),
+              alignment: Alignment.center,
+              child: AppIcon(AppIconData.scale, size: 19, color: c.onBrand),
+            ),
+            const SizedBox(width: AppSpacing.md),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  l10n.appName,
+                  style: theme.textTheme.titleLarge?.copyWith(height: 1.1),
+                ),
+                Text(
+                  l10n.appDescription,
+                  style: theme.textTheme.labelSmall?.copyWith(
+                    color: c.textMuted,
+                    letterSpacing: 0.1,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+        actions: [
+          IconButton(
+            tooltip: l10n.settingsAndPrivacy,
+            icon: AppIcon(AppIconData.settings, size: 22, color: c.textPrimary),
+            onPressed: () => context.push(AppRoutes.settings),
+          ),
+          const SizedBox(width: AppSpacing.xs),
+        ],
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(
+                AppSpacing.lg, AppSpacing.sm, AppSpacing.lg, 0),
+            child: Column(
+              children: [
+                _SearchField(
+                  controller: _searchController,
+                  onChanged: (v) {
+                    ref.read(searchQueryProvider.notifier).setQuery(v);
+                    setState(() {});
+                  },
+                  onClear: () => _setQuery(''),
+                ),
+                const SizedBox(height: AppSpacing.md),
+              ],
+            ),
+          ),
+          _QuickChips(
+            activeQuery: query,
+            onSelect: _setQuery,
+          ),
+          const SizedBox(height: AppSpacing.md),
+          _CategoryRail(
+            active: activeCategory,
+            onSelect: (cat) {
+              ref.read(selectedCategoryProvider.notifier).selectCategory(cat);
+            },
+          ),
+          const SizedBox(height: AppSpacing.md),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
+            child: Row(
+              children: [
+                Text(
+                  l10n.resultsCount(rules.length),
+                  style: theme.textTheme.labelMedium?.copyWith(
+                    color: c.textMuted,
+                  ),
+                ),
+                const Spacer(),
+                if (hasFilter)
+                  TextButton.icon(
+                    onPressed: _clearAll,
+                    style: TextButton.styleFrom(
+                      minimumSize: const Size(0, 32),
+                      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.sm),
+                      visualDensity: VisualDensity.compact,
+                    ),
+                    icon: AppIcon(AppIconData.close, size: 14, color: c.brand),
+                    label: Text(l10n.resetFilters),
+                  ),
+              ],
+            ),
+          ),
+          const SizedBox(height: AppSpacing.xs),
+          Expanded(
+            child: rules.isEmpty
+                ? AppEmptyState(
+                    icon: AppIconData.search,
+                    title: l10n.noRulesMatch,
+                    message: l10n.tryOtherKeywords,
+                    actionLabel: hasFilter ? l10n.resetFilters : null,
+                    onAction: hasFilter ? _clearAll : null,
+                  )
+                : ListView.separated(
+                    padding: const EdgeInsets.fromLTRB(
+                        AppSpacing.lg, AppSpacing.xs, AppSpacing.lg, AppSpacing.xxl),
+                    itemCount: rules.length,
+                    separatorBuilder: (_, _) =>
+                        const SizedBox(height: AppSpacing.md),
+                    itemBuilder: (context, index) {
+                      final item = rules[index];
+                      return RuleCard(
+                        rule: item,
+                        onTap: () => context.push(AppRoutes.rule(item.id)),
+                      );
+                    },
+                  ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _SearchField extends StatelessWidget {
+  final TextEditingController controller;
+  final ValueChanged<String> onChanged;
+  final VoidCallback onClear;
+
+  const _SearchField({
+    required this.controller,
+    required this.onChanged,
+    required this.onClear,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final c = AppColors.of(context);
+    final l10n = AppLocalizations.of(context)!;
+    return Semantics(
+      textField: true,
+      label: l10n.searchAriaLabel,
+      child: TextField(
+        controller: controller,
+        onChanged: onChanged,
+        textInputAction: TextInputAction.search,
+        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+              color: c.textPrimary,
+              fontSize: 14.5,
+            ),
+        decoration: InputDecoration(
+          hintText: l10n.searchRulesHint,
+          prefixIcon: Padding(
+            padding: const EdgeInsets.only(left: 4, right: 2),
+            child: AppIcon(AppIconData.search, size: 19, color: c.textMuted),
+          ),
+          prefixIconConstraints:
+              const BoxConstraints(minWidth: 44, minHeight: 44),
+          suffixIcon: controller.text.isEmpty
+              ? null
+              : IconButton(
+                  tooltip: l10n.clearSearch,
+                  icon: AppIcon(AppIconData.close, size: 16, color: c.textMuted),
+                  onPressed: onClear,
+                ),
+          contentPadding: const EdgeInsets.symmetric(vertical: 14),
+        ),
+      ),
+    );
+  }
+}
+
+class _QuickChips extends StatelessWidget {
+  final String activeQuery;
+  final ValueChanged<String> onSelect;
+
+  const _QuickChips({required this.activeQuery, required this.onSelect});
+
+  static const _keywords = [
     'Tilang',
     'Lembur',
     'Pesangon',
@@ -30,278 +257,120 @@ class _CatalogScreenState extends ConsumerState<CatalogScreen> {
   ];
 
   @override
-  void initState() {
-    super.initState();
-    _searchController = TextEditingController();
-  }
-
-  @override
-  void dispose() {
-    _searchController.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-    final rules = ref.watch(filteredRulesProvider);
-    final activeCategory = ref.watch(selectedCategoryProvider);
-    final bookmarkedIds = ref.watch(bookmarksProvider);
-    final currentQuery = ref.watch(searchQueryProvider);
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: [
-            const Icon(Icons.auto_stories, color: AppColors.primaryLight, size: 22),
-            const SizedBox(width: 10),
-            Text(l10n.appName, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 18)),
-          ],
-        ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.settings_outlined),
-            tooltip: l10n.settingsAndPrivacy,
-            onPressed: () => context.push('/settings'),
-          ),
-        ],
-      ),
-      body: Column(
-        children: [
-          // Search Bar
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 12, 16, 6),
-            child: TextField(
-              controller: _searchController,
-              decoration: InputDecoration(
-                hintText: l10n.searchRulesHint,
-                prefixIcon: const Icon(Icons.search, size: 20),
-                suffixIcon: _searchController.text.isNotEmpty
-                    ? IconButton(
-                        icon: const Icon(Icons.clear, size: 18),
-                        onPressed: () {
-                          _searchController.clear();
-                          ref.read(searchQueryProvider.notifier).clear();
-                        },
-                      )
-                    : null,
-              ),
-              onChanged: (val) {
-                ref.read(searchQueryProvider.notifier).setQuery(val);
-              },
-            ),
-          ),
-
-          // Quick Keywords Chips
-          SizedBox(
-            height: 36,
-            child: ListView.separated(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              scrollDirection: Axis.horizontal,
-              itemCount: _quickFilterKeywords.length,
-              separatorBuilder: (ctx, i) => const SizedBox(width: 6),
-              itemBuilder: (context, index) {
-                final kw = _quickFilterKeywords[index];
-                final isSelected = currentQuery.toLowerCase() == kw.toLowerCase();
-                return ActionChip(
-                  label: Text(kw, style: TextStyle(fontSize: 11, color: isSelected ? Colors.white : const Color(0xFF94A3B8))),
-                  backgroundColor: isSelected ? AppColors.primary : AppColors.bgSurface,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    side: BorderSide(
-                      color: isSelected ? AppColors.primaryLight : AppColors.border,
-                    ),
-                  ),
-                  onPressed: () {
-                    if (isSelected) {
-                      _searchController.clear();
-                      ref.read(searchQueryProvider.notifier).clear();
-                    } else {
-                      _searchController.text = kw;
-                      ref.read(searchQueryProvider.notifier).setQuery(kw);
-                    }
-                  },
-                );
-              },
-            ),
-          ),
-          const SizedBox(height: 8),
-
-          // Categories Horizontal Selector
-          SizedBox(
-            height: 44,
-            child: ListView.separated(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
-              scrollDirection: Axis.horizontal,
-              itemCount: RuleCategory.values.length,
-              separatorBuilder: (ctx, i) => const SizedBox(width: 8),
-              itemBuilder: (context, index) {
-                final cat = RuleCategory.values[index];
-                final isSelected = activeCategory == cat;
-                return ChoiceChip(
-                  avatar: Icon(cat.icon, size: 14, color: isSelected ? Colors.white : cat.tagColor),
-                  label: Text(cat.localizedLabel(l10n)),
-                  selected: isSelected,
-                  selectedColor: AppColors.primary,
-                  onSelected: (_) {
-                    ref.read(selectedCategoryProvider.notifier).selectCategory(cat);
-                  },
-                  labelStyle: TextStyle(
-                    fontSize: 12,
-                    fontWeight: isSelected ? FontWeight.w700 : FontWeight.normal,
-                    color: isSelected ? Colors.white : const Color(0xFFCBD5E1),
-                  ),
-                );
-              },
-            ),
-          ),
-
-          // Counter indicator
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  '${rules.length} ${l10n.ruleNumber}',
-                  style: const TextStyle(fontSize: 11, color: Color(0xFF94A3B8)),
-                ),
-                if (currentQuery.isNotEmpty || activeCategory != RuleCategory.all)
-                  GestureDetector(
-                    onTap: () {
-                      _searchController.clear();
-                      ref.read(searchQueryProvider.notifier).clear();
-                      ref.read(selectedCategoryProvider.notifier).selectCategory(RuleCategory.all);
-                    },
-                    child: Text(
-                      l10n.resetFilter,
-                      style: const TextStyle(fontSize: 11, color: AppColors.primaryLight, fontWeight: FontWeight.bold),
-                    ),
-                  ),
-              ],
-            ),
-          ),
-
-          // Rules List
-          Expanded(
-            child: rules.isEmpty
-                ? Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.search_off, size: 48, color: Colors.grey.shade600),
-                        const SizedBox(height: 12),
-                        Text(
-                          l10n.noRulesMatch,
-                          style: const TextStyle(fontSize: 15, color: Colors.white, fontWeight: FontWeight.w600),
-                        ),
-                        const SizedBox(height: 4),
-                        Text(
-                          l10n.tryOtherKeywords,
-                          style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8)),
-                        ),
-                      ],
-                    ),
-                  )
-                : ListView.builder(
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                    itemCount: rules.length,
-                    itemBuilder: (context, index) {
-                      final item = rules[index];
-                      final isSaved = bookmarkedIds.contains(item.id);
-                      return _buildRuleCard(context, item, isSaved, l10n);
-                    },
-                  ),
-          ),
-        ],
+    final c = AppColors.of(context);
+    return SizedBox(
+      height: 34,
+      child: ListView.separated(
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
+        scrollDirection: Axis.horizontal,
+        itemCount: _keywords.length,
+        separatorBuilder: (_, _) => const SizedBox(width: AppSpacing.sm),
+        itemBuilder: (context, index) {
+          final kw = _keywords[index];
+          final selected = activeQuery.toLowerCase() == kw.toLowerCase();
+          return _SoftChip(
+            label: kw,
+            selected: selected,
+            onTap: () => onSelect(selected ? '' : kw),
+            selectedColor: c.brand,
+          );
+        },
       ),
     );
   }
+}
 
-  Widget _buildRuleCard(BuildContext context, RuleItem item, bool isSaved, AppLocalizations l10n) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
-      child: Card(
-        child: InkWell(
-          borderRadius: BorderRadius.circular(16),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (_) => RuleDetailScreen(rule: item),
-              ),
-            );
-          },
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                      decoration: BoxDecoration(
-                        color: item.category.tagColor.withValues(alpha: 0.15),
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      child: Text(
-                        item.category.localizedLabel(l10n),
-                        style: TextStyle(
-                          fontSize: 11,
-                          fontWeight: FontWeight.w700,
-                          color: item.category.tagColor,
-                        ),
-                      ),
-                    ),
-                    const Spacer(),
-                    IconButton(
-                      icon: Icon(
-                        isSaved ? Icons.bookmark : Icons.bookmark_border,
-                        size: 20,
-                        color: isSaved ? AppColors.accent : const Color(0xFF94A3B8),
-                      ),
-                      visualDensity: VisualDensity.compact,
-                      onPressed: () {
-                        ref.read(bookmarksProvider.notifier).toggleBookmark(item.id);
-                      },
-                    ),
-                  ],
+class _CategoryRail extends StatelessWidget {
+  final RuleCategory active;
+  final ValueChanged<RuleCategory> onSelect;
+
+  const _CategoryRail({required this.active, required this.onSelect});
+
+  @override
+  Widget build(BuildContext context) {
+    final c = AppColors.of(context);
+    final l10n = AppLocalizations.of(context)!;
+    return SizedBox(
+      height: 38,
+      child: ListView.separated(
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
+        scrollDirection: Axis.horizontal,
+        itemCount: RuleCategory.values.length,
+        separatorBuilder: (_, _) => const SizedBox(width: AppSpacing.sm),
+        itemBuilder: (context, index) {
+          final cat = RuleCategory.values[index];
+          final selected = active == cat;
+          final accent = cat.accent(c);
+          return _SoftChip(
+            label: cat.localizedShortLabel(l10n),
+            icon: cat.icon,
+            iconColor: selected ? c.onBrand : accent,
+            selected: selected,
+            onTap: () => onSelect(cat),
+            selectedColor: cat == RuleCategory.all ? c.brand : accent,
+          );
+        },
+      ),
+    );
+  }
+}
+
+/// One chip primitive for both quick keywords and categories.
+class _SoftChip extends StatelessWidget {
+  final String label;
+  final AppIconData? icon;
+  final Color? iconColor;
+  final bool selected;
+  final VoidCallback onTap;
+  final Color selectedColor;
+
+  const _SoftChip({
+    required this.label,
+    required this.selected,
+    required this.onTap,
+    required this.selectedColor,
+    this.icon,
+    this.iconColor,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final c = AppColors.of(context);
+    return Material(
+      color: selected ? selectedColor : c.surface,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(AppRadius.sm + 2),
+        side: BorderSide(
+          color: selected ? selectedColor : c.border,
+        ),
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              if (icon != null) ...[
+                AppIcon(
+                  icon!,
+                  size: 14,
+                  color: iconColor ?? (selected ? c.onBrand : c.textMuted),
+                  strokeWidth: 1.9,
                 ),
-                const SizedBox(height: 8),
-                Text(
-                  item.title,
-                  style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
-                ),
-                const SizedBox(height: 6),
-                Text(
-                  item.summary,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.4),
-                ),
-                const SizedBox(height: 12),
-                Row(
-                  children: [
-                    const Icon(Icons.gavel, size: 14, color: AppColors.accent),
-                    const SizedBox(width: 6),
-                    Expanded(
-                      child: Text(
-                        item.penaltyOrRight,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
-                          fontSize: 11,
-                          fontWeight: FontWeight.w600,
-                          color: AppColors.accent,
-                        ),
-                      ),
-                    ),
-                    const Icon(Icons.chevron_right, size: 16, color: Color(0xFF64748B)),
-                  ],
-                ),
+                const SizedBox(width: 6),
               ],
-            ),
+              Text(
+                label,
+                style: TextStyle(
+                  fontSize: 12.5,
+                  fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
+                  color: selected ? c.onBrand : c.textSecondary,
+                ),
+              ),
+            ],
           ),
         ),
       ),

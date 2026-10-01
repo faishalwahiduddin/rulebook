@@ -69,9 +69,9 @@
   "checklistTitle": "Self-Compliance Audit",
   "bookmarkTitle": "Saved Rules & Notes",
   "noBookmarks": "No Saved Rules Yet",
-  "personalNote": "Personal Note",
+  "personalNote": "Your note",
   "addNote": "Add Note",
-  "noteSaved": "Note saved successfully!",
+  "noteSaved": "Note saved",
   "disclaimerTitle": "Legal Disclaimer",
   "disclaimerText": "This application provides practical legal education and pocket references, and does not constitute formal legal counsel or government representation.",
   "dataManagement": "Data & Notes Management",
@@ -109,7 +109,7 @@
   "overtimeRateRegular": "Regular working day overtime rate (1.5x 1st hour, 2x next hour)",
   "hourlyWage": "Hourly Wages (1/173)",
   "totalHoursLabel": "Total Hours",
-  "hoursUnit": "O'clock",
+  "hoursUnit": "hours",
   "overtimeCopiedSuccess": "Overtime results successfully copied to clipboard!",
   "severanceLegalBasis": "Official Severance Pay Calculator according to PP No. 35/2021 jo. Job Creation Law no. 6/2023. Calculating Severance Pay (UP), Long Service Awards (UPMK), & Replacement Rights (UPH).",
   "basicSalaryFixedAllowance": "Basic Salary + Fixed Allowance (Rp)",
@@ -125,8 +125,11 @@
   "exampleEightMonths": "For example: 8 months",
   "estimatedThrTitle": "Estimated Holiday Allowance (THR)",
   "thrRuleFull": "Work period >= 12 months: 1 Month Full Wage",
-  "thrRuleProrate": "Working period < 12 months: Calculated as a prorate (working period / 12 x wages)",
-  "thrLatePenalty": "Sanctions for Late Entrepreneurs: A fine of 5% of the total nominal THR",
+  "thrRuleProrate": "Below 12 months of service: prorated (months worked / 12 × wage)",
+  "thrMonthsNeeded": "Enter your time in the job, at least 1 month",
+  "thrDeadlineDetail": "Payment deadline: 7 days before the holiday",
+  "thrCashOnlyDetail": "Must be paid in cash, not goods",
+  "thrLatePenalty": "Late payment costs the employer a 5% fine",
   "thrCopiedSuccess": "THR calculation successfully copied!",
   "trafficLegalBasis": "Legal Basis: Law no. 22 of 2009 concerning Road Traffic and Transportation. The following fine values ​​are the maximum court fines for criminal traffic tickets.",
   "totalEstimatedMaxFine": "Total Estimated Maximum Fines",
@@ -142,20 +145,20 @@
   "legalTips": "Legal Tips",
   "defenseExemption": "Exception",
   "copyResults": "Copy Results",
-  "noteDeleted": "Note deleted.",
-  "saveRule": "Save Rules",
-  "removeBookmark": "Delete Saves",
+  "noteDeleted": "Note removed",
+  "saveRule": "Save rule",
+  "removeBookmark": "Remove from saved",
   "officialPenaltyOrRight": "Official Sanctions/Rights",
   "summaryExplanation": "Digest Explanation",
   "practicalGuidance": "Practical Guide in the Field",
   "writeCaseNotesHint": "Write down case notes, incident dates, or reminders...",
-  "saveNote": "Save Notes",
-  "relatedRules": "Related Rules",
-  "copySummary": "Copy Summary",
-  "searchRulesHint": "Look for articles, fines, severance pay, ITE, SOP...",
+  "saveNote": "Save",
+  "relatedRules": "More on this topic",
+  "copySummary": "Copy summary",
+  "searchRulesHint": "Search a rule, article, or situation…",
   "resetFilter": "Reset Filters",
-  "noRulesMatch": "There are no matching rules",
-  "tryOtherKeywords": "Try other keywords or select the All category.",
+  "noRulesMatch": "Nothing matched yet",
+  "tryOtherKeywords": "Try a different keyword, or switch the topic.",
   "sopEmergencyGuide": "Emergency SOPs & Guidelines",
   "sopBanner": "The official step-by-step guide when facing critical situations: speeding tickets, unilateral layoffs, damaged goods, data leaks, and work accidents.",
   "noSopForCategory": "There is no SOP for this category",
@@ -176,7 +179,7 @@
   "startAudit": "Start Audit",
   "perfectCompliance": "Perfect Compliance (100%)",
   "goodCompliance": "Good Compliance",
-  "moderateCompliance": "Moderate Compliance — Requires Attention",
+  "moderateCompliance": "Moderate compliance, needs work",
   "criticalCompliance": "Critical Compliance Level",
   "targetLabel": "Target",
   "checklistItems": "List of Inspection Items",
@@ -184,10 +187,10 @@
   "resetChecklist": "Reset Checklist",
   "resetChecklistTitle": "Reset Checklist?",
   "resetChecklistConfirmMsg": "This action will clear all check marks in this audit module.",
-  "navCatalogShort": "Catalog",
-  "navSimulationShort": "Simulation",
-  "navSopShort": "Emergency SOPs",
-  "navComplianceShort": "Compliance",
+  "navCatalogShort": "Rules",
+  "navSimulationShort": "Calculate",
+  "navSopShort": "Emergency",
+  "navComplianceShort": "Audit",
   "categoryAll": "All",
   "catSafety": "Safety (K3)",
   "@stepsCount": {
@@ -201,5 +204,79 @@
   "languageSelection": "Language Selection",
   "exportBackupJson": "Export Data Backup (JSON)",
   "copyBookmarkNotesClipboard": "Copy bookmarks and notes to clipboard",
-  "backupCopiedSnackbar": "RuleBook data backup successfully copied to clipboard! 📋"
+  "backupCopiedSnackbar": "RuleBook data backup successfully copied to clipboard! 📋",
+  "catTrafficShort": "Traffic",
+  "catLaborShort": "Work",
+  "catCyberShort": "Data & ITE",
+  "catConsumerShort": "Consumer",
+  "catSafetyShort": "Safety",
+  "catCivilShort": "Ethics",
+  "catAllDesc": "Every rule, guide, and SOP in one place.",
+  "catTrafficDesc": "Driving rules, traffic fines, and road safety.",
+  "catLaborDesc": "Work hours, overtime, leave, and severance rights.",
+  "catCyberDesc": "Personal data protection and your digital footprint.",
+  "catConsumerDesc": "Buyer rights, warranties, and how to complain.",
+  "catSafetyDesc": "Emergency procedures, PPE, and workplace safety.",
+  "catCivilDesc": "Public order and getting along in shared spaces.",
+  "forYou": "For you",
+  "browseByTopic": "Browse by topic",
+  "searchAriaLabel": "Rule search field",
+  "resultsCount": "{count} rules",
+  "@resultsCount": {
+    "count": {
+      "type": "int"
+    }
+  },
+  "clearSearch": "Clear search",
+  "resetFilters": "Reset",
+  "readingTime": "{minutes} min read",
+  "@readingTime": {
+    "minutes": {
+      "type": "int"
+    }
+  },
+  "ruleDetailMeta": "Rule detail",
+  "whatItMeans": "What it means for you",
+  "doThis": "Do",
+  "avoidThis": "Avoid",
+  "legalBasisLabel": "Legal basis",
+  "consequenceLabel": "Consequence",
+  "noteEmptyHint": "Save a date, a reference number, or anything you don't want to forget.",
+  "summaryCopied": "Summary copied",
+  "clearNote": "Clear",
+  "noteLengthCounter": "{count}/{max} characters",
+  "@noteLengthCounter": {
+    "count": {
+      "type": "int"
+    },
+    "max": {
+      "type": "int"
+    }
+  },
+  "deleteNoteTitle": "Delete this note?",
+  "deleteNoteDesc": "A deleted note can't be brought back. The rule stays in the catalog.",
+  "licenseLabel": "License",
+  "licenseValue": "Personal & Non-Profit",
+  "noAuditModulesTitle": "No audit modules here yet",
+  "noAuditModulesHint": "Try another category, or pick All to see every module.",
+  "itemsFulfilledCount": "{count}/{max} items fulfilled",
+  "missingTitle": "Page not found",
+  "missingDesc": "The link may be out of date. Head back and try again.",
+  "backToRules": "Back to rules",
+  "timezone": "Time Zone",
+  "@timezone": {
+    "description": "Settings section title for the time zone picker"
+  },
+  "timezoneAuto": "Automatic (follow device)",
+  "@timezoneAuto": {
+    "description": "Automatic time zone option that follows the device"
+  },
+  "@itemsFulfilledCount": {
+    "count": {
+      "type": "int"
+    },
+    "max": {
+      "type": "int"
+    }
+  }
 }

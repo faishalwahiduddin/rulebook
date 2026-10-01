@@ -1,184 +1,246 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../core/constants/app_colors.dart';
+import 'package:go_router/go_router.dart';
 import '../../core/models/rule_category.dart';
+import '../../core/models/sop_guide.dart';
 import '../../core/providers/app_providers.dart';
+import '../../core/router/app_router.dart';
+import '../../core/theme/app_colors.dart';
+import '../../core/theme/app_icons.dart';
+import '../../core/theme/app_theme.dart';
+import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
-import 'sop_detail_screen.dart';
 
-class SopScreen extends ConsumerWidget {
+/// Emergency procedures. Category filtering is local to this screen so it
+/// never surprises the catalog tab with an unexpected filter.
+class SopScreen extends ConsumerStatefulWidget {
   const SopScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<SopScreen> createState() => _SopScreenState();
+}
+
+class _SopScreenState extends ConsumerState<SopScreen> {
+  RuleCategory _filter = RuleCategory.all;
+
+  @override
+  Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final sops = ref.watch(filteredSopGuidesProvider);
-    final activeCategory = ref.watch(selectedCategoryProvider);
+    final c = AppColors.of(context);
+    final theme = Theme.of(context);
+    final sops = ref.watch(allSopGuidesProvider);
+
+    final filtered = sops
+        .where((s) => _filter == RuleCategory.all || s.category == _filter)
+        .toList();
 
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          children: [
-            const Icon(Icons.shield_outlined, color: AppColors.accent, size: 22),
-            const SizedBox(width: 10),
-            Text(l10n.sopEmergencyGuide, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 18)),
-          ],
-        ),
+        titleSpacing: AppSpacing.lg,
+        title: Text(l10n.sopEmergencyGuide, style: theme.textTheme.titleLarge),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Banner Info
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-            color: AppColors.bgSurface,
-            child: Text(
-              l10n.sopBanner,
-              style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8), height: 1.35),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(
+                AppSpacing.lg, AppSpacing.sm, AppSpacing.lg, 0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                AppIcon(AppIconData.info, size: 16, color: c.textMuted),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    l10n.sopBanner,
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: c.textSecondary,
+                      height: 1.45,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-
-          // Categories Horizontal Chips
+          const SizedBox(height: AppSpacing.md),
           SizedBox(
-            height: 48,
+            height: 38,
             child: ListView.separated(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
               scrollDirection: Axis.horizontal,
               itemCount: RuleCategory.values.length,
-              separatorBuilder: (ctx, i) => const SizedBox(width: 8),
+              separatorBuilder: (_, _) => const SizedBox(width: AppSpacing.sm),
               itemBuilder: (context, index) {
                 final cat = RuleCategory.values[index];
-                final isSelected = activeCategory == cat;
-                return ChoiceChip(
-                  avatar: Icon(cat.icon, size: 15, color: isSelected ? Colors.white : cat.tagColor),
-                  label: Text(cat.localizedLabel(l10n)),
-                  selected: isSelected,
-                  selectedColor: AppColors.primary,
-                  onSelected: (_) {
-                    ref.read(selectedCategoryProvider.notifier).selectCategory(cat);
-                  },
-                  labelStyle: TextStyle(
-                    fontSize: 12,
-                    fontWeight: isSelected ? FontWeight.w700 : FontWeight.normal,
-                    color: isSelected ? Colors.white : const Color(0xFFCBD5E1),
-                  ),
+                final selected = _filter == cat;
+                final accent = cat.accent(c);
+                return _SopFilterChip(
+                  label: cat.localizedShortLabel(l10n),
+                  icon: cat.icon,
+                  selected: selected,
+                  selectedColor:
+                      cat == RuleCategory.all ? c.brand : accent,
+                  iconColor: selected ? c.onBrand : accent,
+                  onTap: () => setState(() => _filter = cat),
                 );
               },
             ),
           ),
-
-          // SOP List
+          const SizedBox(height: AppSpacing.md),
           Expanded(
-            child: sops.isEmpty
-                ? Center(
-                    child: Padding(
-                      padding: const EdgeInsets.all(24),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(Icons.rule_folder_outlined, size: 48, color: Color(0xFF64748B)),
-                          const SizedBox(height: 12),
-                          Text(
-                            l10n.noSopForCategory,
-                            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
-                          ),
-                          const SizedBox(height: 6),
-                          Text(
-                            l10n.chooseAllCategoryForSop,
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8)),
-                          ),
-                        ],
-                      ),
-                    ),
+            child: filtered.isEmpty
+                ? AppEmptyState(
+                    icon: AppIconData.shield,
+                    title: l10n.noSopForCategory,
+                    message: l10n.chooseAllCategoryForSop,
+                    actionLabel: l10n.categoryAll,
+                    onAction: () =>
+                        setState(() => _filter = RuleCategory.all),
                   )
-                : ListView.builder(
-                    padding: const EdgeInsets.all(16),
-                    itemCount: sops.length,
-                    itemBuilder: (context, index) {
-                      final item = sops[index];
-                      return Padding(
-                        padding: const EdgeInsets.only(bottom: 12),
-                        child: Card(
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(12),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => SopDetailScreen(sop: item),
-                                ),
-                              );
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.all(16),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                                        decoration: BoxDecoration(
-                                          color: item.category.tagColor.withValues(alpha: 0.15),
-                                          borderRadius: BorderRadius.circular(6),
-                                        ),
-                                        child: Text(
-                                          item.category.localizedLabel(l10n),
-                                          style: TextStyle(
-                                            fontSize: 11,
-                                            fontWeight: FontWeight.w700,
-                                            color: item.category.tagColor,
-                                          ),
-                                        ),
-                                      ),
-                                      const Spacer(),
-                                      Container(
-                                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                                        decoration: BoxDecoration(
-                                          color: AppColors.primary.withValues(alpha: 0.2),
-                                          borderRadius: BorderRadius.circular(4),
-                                        ),
-                                        child: Text(
-                                          l10n.stepsCount(item.steps.length),
-                                          style: const TextStyle(fontSize: 10, color: AppColors.primaryLight, fontWeight: FontWeight.bold),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Text(
-                                    item.title,
-                                    style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
-                                  ),
-                                  const SizedBox(height: 6),
-                                  Text(
-                                    item.targetScenario,
-                                    style: const TextStyle(fontSize: 12, color: Color(0xFFCBD5E1), height: 1.35),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Row(
-                                    children: [
-                                      const Icon(Icons.gavel, size: 14, color: AppColors.accent),
-                                      const SizedBox(width: 6),
-                                      Expanded(
-                                        child: Text(
-                                          item.legalBasis,
-                                          style: const TextStyle(fontSize: 11, color: AppColors.accent, fontWeight: FontWeight.w600),
-                                          overflow: TextOverflow.ellipsis,
-                                        ),
-                                      ),
-                                      const Icon(Icons.arrow_forward_ios, size: 12, color: Color(0xFF94A3B8)),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      );
-                    },
+                : ListView.separated(
+                    padding: const EdgeInsets.fromLTRB(AppSpacing.lg,
+                        AppSpacing.xs, AppSpacing.lg, AppSpacing.xxl),
+                    itemCount: filtered.length,
+                    separatorBuilder: (_, _) =>
+                        const SizedBox(height: AppSpacing.md),
+                    itemBuilder: (context, index) =>
+                        _SopCard(sop: filtered[index]),
                   ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _SopFilterChip extends StatelessWidget {
+  final String label;
+  final AppIconData icon;
+  final bool selected;
+  final Color selectedColor;
+  final Color iconColor;
+  final VoidCallback onTap;
+
+  const _SopFilterChip({
+    required this.label,
+    required this.icon,
+    required this.selected,
+    required this.selectedColor,
+    required this.iconColor,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final c = AppColors.of(context);
+    return Material(
+      color: selected ? selectedColor : c.surface,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(AppRadius.sm + 2),
+        side: BorderSide(color: selected ? selectedColor : c.border),
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              AppIcon(
+                icon,
+                size: 14,
+                color: selected ? c.onBrand : iconColor,
+                strokeWidth: 1.9,
+              ),
+              const SizedBox(width: 6),
+              Text(
+                label,
+                style: TextStyle(
+                  fontSize: 12.5,
+                  fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
+                  color: selected ? c.onBrand : c.textSecondary,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _SopCard extends StatelessWidget {
+  final SopGuide sop;
+
+  const _SopCard({required this.sop});
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final c = AppColors.of(context);
+    final theme = Theme.of(context);
+    final accent = sop.category.accent(c);
+
+    return AppCard(
+      onTap: () => context.push(AppRoutes.sopDetail(sop.id)),
+      padding: const EdgeInsets.all(AppSpacing.lg),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                width: 36,
+                height: 36,
+                decoration: BoxDecoration(
+                  color: accent.withValues(alpha: 0.12),
+                  borderRadius: BorderRadius.circular(AppRadius.sm + 2),
+                ),
+                alignment: Alignment.center,
+                child: AppIcon(
+                  sop.category.icon,
+                  size: 18,
+                  color: accent,
+                  strokeWidth: 1.9,
+                ),
+              ),
+              const SizedBox(width: AppSpacing.md),
+              Expanded(
+                child: Text(
+                  sop.title,
+                  style: theme.textTheme.titleSmall?.copyWith(height: 1.3),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: AppSpacing.md),
+          Text(
+            sop.targetScenario,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: theme.textTheme.bodySmall?.copyWith(
+              color: c.textSecondary,
+              height: 1.45,
+            ),
+          ),
+          const SizedBox(height: AppSpacing.md),
+          Row(
+            children: [
+              Pill(
+                label: sop.category.localizedShortLabel(l10n),
+                tone: accent,
+              ),
+              const SizedBox(width: AppSpacing.sm),
+              Pill(
+                label: l10n.stepsCount(sop.steps.length),
+                tone: c.textMuted,
+              ),
+              const Spacer(),
+              AppIcon(AppIconData.chevronRight,
+                  size: 16, color: c.textFaint),
+            ],
           ),
         ],
       ),

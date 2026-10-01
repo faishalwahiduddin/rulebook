@@ -329,7 +329,7 @@ abstract class AppLocalizations {
   /// No description provided for @navBookmarks.
   ///
   /// In id, this message translates to:
-  /// **'Tersimpan'**
+  /// **'Simpanan'**
   String get navBookmarks;
 
   /// No description provided for @navSettings.
@@ -533,7 +533,7 @@ abstract class AppLocalizations {
   /// No description provided for @personalNote.
   ///
   /// In id, this message translates to:
-  /// **'Catatan Pribadi'**
+  /// **'Catatan pribadi'**
   String get personalNote;
 
   /// No description provided for @addNote.
@@ -545,7 +545,7 @@ abstract class AppLocalizations {
   /// No description provided for @noteSaved.
   ///
   /// In id, this message translates to:
-  /// **'Catatan berhasil disimpan!'**
+  /// **'Catatan tersimpan'**
   String get noteSaved;
 
   /// No description provided for @disclaimerTitle.
@@ -869,13 +869,31 @@ abstract class AppLocalizations {
   /// No description provided for @thrRuleProrate.
   ///
   /// In id, this message translates to:
-  /// **'Masa kerja < 12 bulan: Dihitung Prorata (Masa Kerja / 12 x Upah)'**
+  /// **'Masa kerja di bawah 12 bulan: dihitung proporsional (masa kerja / 12 × upah)'**
   String get thrRuleProrate;
+
+  /// No description provided for @thrMonthsNeeded.
+  ///
+  /// In id, this message translates to:
+  /// **'Isi masa kerja Anda, minimal 1 bulan'**
+  String get thrMonthsNeeded;
+
+  /// No description provided for @thrDeadlineDetail.
+  ///
+  /// In id, this message translates to:
+  /// **'Batas akhir pembayaran: H-7 hari raya'**
+  String get thrDeadlineDetail;
+
+  /// No description provided for @thrCashOnlyDetail.
+  ///
+  /// In id, this message translates to:
+  /// **'Wajib dibayar dalam bentuk uang, bukan barang'**
+  String get thrCashOnlyDetail;
 
   /// No description provided for @thrLatePenalty.
   ///
   /// In id, this message translates to:
-  /// **'Sanksi Pengusaha Telat: Denda 5% dari total nominal THR'**
+  /// **'Jika telat: denda 5% dari total THR bagi pengusaha'**
   String get thrLatePenalty;
 
   /// No description provided for @thrCopiedSuccess.
@@ -971,19 +989,19 @@ abstract class AppLocalizations {
   /// No description provided for @noteDeleted.
   ///
   /// In id, this message translates to:
-  /// **'Catatan dihapus.'**
+  /// **'Catatan dihapus'**
   String get noteDeleted;
 
   /// No description provided for @saveRule.
   ///
   /// In id, this message translates to:
-  /// **'Simpan Aturan'**
+  /// **'Simpan aturan'**
   String get saveRule;
 
   /// No description provided for @removeBookmark.
   ///
   /// In id, this message translates to:
-  /// **'Hapus Simpanan'**
+  /// **'Hapus dari simpanan'**
   String get removeBookmark;
 
   /// No description provided for @officialPenaltyOrRight.
@@ -1013,25 +1031,25 @@ abstract class AppLocalizations {
   /// No description provided for @saveNote.
   ///
   /// In id, this message translates to:
-  /// **'Simpan Catatan'**
+  /// **'Simpan'**
   String get saveNote;
 
   /// No description provided for @relatedRules.
   ///
   /// In id, this message translates to:
-  /// **'Aturan Terkait'**
+  /// **'Masih satu topik'**
   String get relatedRules;
 
   /// No description provided for @copySummary.
   ///
   /// In id, this message translates to:
-  /// **'Salin Ringkasan'**
+  /// **'Salin ringkasan'**
   String get copySummary;
 
   /// No description provided for @searchRulesHint.
   ///
   /// In id, this message translates to:
-  /// **'Cari pasal, tilang, pesangon, ITE, SOP...'**
+  /// **'Cari aturan, pasal, atau situasi...'**
   String get searchRulesHint;
 
   /// No description provided for @resetFilter.
@@ -1043,13 +1061,13 @@ abstract class AppLocalizations {
   /// No description provided for @noRulesMatch.
   ///
   /// In id, this message translates to:
-  /// **'Tidak ada aturan yang cocok'**
+  /// **'Belum ada yang cocok'**
   String get noRulesMatch;
 
   /// No description provided for @tryOtherKeywords.
   ///
   /// In id, this message translates to:
-  /// **'Coba kata kunci lain atau pilih kategori Semua.'**
+  /// **'Coba kata kunci lain, atau ganti topiknya.'**
   String get tryOtherKeywords;
 
   /// No description provided for @sopEmergencyGuide.
@@ -1175,7 +1193,7 @@ abstract class AppLocalizations {
   /// No description provided for @moderateCompliance.
   ///
   /// In id, this message translates to:
-  /// **'Kepatuhan Sedang — Butuh Perhatian'**
+  /// **'Kepatuhan sedang, perlu perbaikan'**
   String get moderateCompliance;
 
   /// No description provided for @criticalCompliance.
@@ -1223,25 +1241,25 @@ abstract class AppLocalizations {
   /// No description provided for @navCatalogShort.
   ///
   /// In id, this message translates to:
-  /// **'Katalog'**
+  /// **'Aturan'**
   String get navCatalogShort;
 
   /// No description provided for @navSimulationShort.
   ///
   /// In id, this message translates to:
-  /// **'Simulasi'**
+  /// **'Hitung'**
   String get navSimulationShort;
 
   /// No description provided for @navSopShort.
   ///
   /// In id, this message translates to:
-  /// **'SOP Darurat'**
+  /// **'Darurat'**
   String get navSopShort;
 
   /// No description provided for @navComplianceShort.
   ///
   /// In id, this message translates to:
-  /// **'Kepatuhan'**
+  /// **'Audit'**
   String get navComplianceShort;
 
   /// No description provided for @categoryAll.
@@ -1279,6 +1297,258 @@ abstract class AppLocalizations {
   /// In id, this message translates to:
   /// **'Cadangan data RuleBook berhasil disalin ke clipboard! 📋'**
   String get backupCopiedSnackbar;
+
+  /// No description provided for @catTrafficShort.
+  ///
+  /// In id, this message translates to:
+  /// **'Lalu Lintas'**
+  String get catTrafficShort;
+
+  /// No description provided for @catLaborShort.
+  ///
+  /// In id, this message translates to:
+  /// **'Kerja'**
+  String get catLaborShort;
+
+  /// No description provided for @catCyberShort.
+  ///
+  /// In id, this message translates to:
+  /// **'Data & ITE'**
+  String get catCyberShort;
+
+  /// No description provided for @catConsumerShort.
+  ///
+  /// In id, this message translates to:
+  /// **'Konsumen'**
+  String get catConsumerShort;
+
+  /// No description provided for @catSafetyShort.
+  ///
+  /// In id, this message translates to:
+  /// **'K3'**
+  String get catSafetyShort;
+
+  /// No description provided for @catCivilShort.
+  ///
+  /// In id, this message translates to:
+  /// **'Etika'**
+  String get catCivilShort;
+
+  /// No description provided for @catAllDesc.
+  ///
+  /// In id, this message translates to:
+  /// **'Semua aturan, panduan, dan SOP dalam satu tempat.'**
+  String get catAllDesc;
+
+  /// No description provided for @catTrafficDesc.
+  ///
+  /// In id, this message translates to:
+  /// **'Aturan berkendara, tilang, dan keselamatan jalan.'**
+  String get catTrafficDesc;
+
+  /// No description provided for @catLaborDesc.
+  ///
+  /// In id, this message translates to:
+  /// **'Jam kerja, lembur, cuti, dan hak pesangon.'**
+  String get catLaborDesc;
+
+  /// No description provided for @catCyberDesc.
+  ///
+  /// In id, this message translates to:
+  /// **'Perlindungan data pribadi dan jejak digital Anda.'**
+  String get catCyberDesc;
+
+  /// No description provided for @catConsumerDesc.
+  ///
+  /// In id, this message translates to:
+  /// **'Hak pembeli, garansi, dan cara komplain.'**
+  String get catConsumerDesc;
+
+  /// No description provided for @catSafetyDesc.
+  ///
+  /// In id, this message translates to:
+  /// **'Prosedur darurat, APD, dan keselamatan kerja.'**
+  String get catSafetyDesc;
+
+  /// No description provided for @catCivilDesc.
+  ///
+  /// In id, this message translates to:
+  /// **'Ketertiban umum dan hidup bersama di ruang publik.'**
+  String get catCivilDesc;
+
+  /// No description provided for @forYou.
+  ///
+  /// In id, this message translates to:
+  /// **'Untuk Anda'**
+  String get forYou;
+
+  /// No description provided for @browseByTopic.
+  ///
+  /// In id, this message translates to:
+  /// **'Telusuri topik'**
+  String get browseByTopic;
+
+  /// No description provided for @searchAriaLabel.
+  ///
+  /// In id, this message translates to:
+  /// **'Kolom pencarian aturan'**
+  String get searchAriaLabel;
+
+  /// No description provided for @resultsCount.
+  ///
+  /// In id, this message translates to:
+  /// **'{count} aturan'**
+  String resultsCount(Object count);
+
+  /// No description provided for @clearSearch.
+  ///
+  /// In id, this message translates to:
+  /// **'Bersihkan pencarian'**
+  String get clearSearch;
+
+  /// No description provided for @resetFilters.
+  ///
+  /// In id, this message translates to:
+  /// **'Atur ulang'**
+  String get resetFilters;
+
+  /// No description provided for @readingTime.
+  ///
+  /// In id, this message translates to:
+  /// **'{minutes} mnt baca'**
+  String readingTime(Object minutes);
+
+  /// No description provided for @ruleDetailMeta.
+  ///
+  /// In id, this message translates to:
+  /// **'Detail aturan'**
+  String get ruleDetailMeta;
+
+  /// No description provided for @whatItMeans.
+  ///
+  /// In id, this message translates to:
+  /// **'Apa artinya untuk Anda'**
+  String get whatItMeans;
+
+  /// No description provided for @doThis.
+  ///
+  /// In id, this message translates to:
+  /// **'Lakukan'**
+  String get doThis;
+
+  /// No description provided for @avoidThis.
+  ///
+  /// In id, this message translates to:
+  /// **'Hindari'**
+  String get avoidThis;
+
+  /// No description provided for @legalBasisLabel.
+  ///
+  /// In id, this message translates to:
+  /// **'Dasar hukum'**
+  String get legalBasisLabel;
+
+  /// No description provided for @consequenceLabel.
+  ///
+  /// In id, this message translates to:
+  /// **'Konsekuensi'**
+  String get consequenceLabel;
+
+  /// No description provided for @noteEmptyHint.
+  ///
+  /// In id, this message translates to:
+  /// **'Simpan tanggal kejadian, nomor surat, atau hal yang perlu Anda ingat.'**
+  String get noteEmptyHint;
+
+  /// No description provided for @summaryCopied.
+  ///
+  /// In id, this message translates to:
+  /// **'Ringkasan disalin'**
+  String get summaryCopied;
+
+  /// No description provided for @clearNote.
+  ///
+  /// In id, this message translates to:
+  /// **'Kosongkan'**
+  String get clearNote;
+
+  /// No description provided for @noteLengthCounter.
+  ///
+  /// In id, this message translates to:
+  /// **'{count}/{max} karakter'**
+  String noteLengthCounter(Object count, Object max);
+
+  /// No description provided for @deleteNoteTitle.
+  ///
+  /// In id, this message translates to:
+  /// **'Hapus catatan ini?'**
+  String get deleteNoteTitle;
+
+  /// No description provided for @deleteNoteDesc.
+  ///
+  /// In id, this message translates to:
+  /// **'Catatan yang sudah dihapus tidak bisa dikembalikan. Aturannya tetap ada di katalog.'**
+  String get deleteNoteDesc;
+
+  /// No description provided for @licenseLabel.
+  ///
+  /// In id, this message translates to:
+  /// **'Lisensi'**
+  String get licenseLabel;
+
+  /// No description provided for @licenseValue.
+  ///
+  /// In id, this message translates to:
+  /// **'Personal & Non-Profit'**
+  String get licenseValue;
+
+  /// No description provided for @noAuditModulesTitle.
+  ///
+  /// In id, this message translates to:
+  /// **'Belum ada modul audit di sini'**
+  String get noAuditModulesTitle;
+
+  /// No description provided for @noAuditModulesHint.
+  ///
+  /// In id, this message translates to:
+  /// **'Coba kategori lain, atau pilih Semua untuk melihat semua modul.'**
+  String get noAuditModulesHint;
+
+  /// No description provided for @itemsFulfilledCount.
+  ///
+  /// In id, this message translates to:
+  /// **'{count}/{max} butir terpenuhi'**
+  String itemsFulfilledCount(Object count, Object max);
+
+  /// No description provided for @missingTitle.
+  ///
+  /// In id, this message translates to:
+  /// **'Halaman tidak ditemukan'**
+  String get missingTitle;
+
+  /// No description provided for @missingDesc.
+  ///
+  /// In id, this message translates to:
+  /// **'Tautannya mungkin sudah usang. Kembali dan coba lagi.'**
+  String get missingDesc;
+
+  /// No description provided for @backToRules.
+  ///
+  /// In id, this message translates to:
+  /// **'Kembali ke aturan'**
+  String get backToRules;
+
+  /// Judul seksi pengaturan zona waktu
+  ///
+  /// In id, this message translates to:
+  /// **'Zona Waktu'**
+  String get timezone;
+
+  /// Opsi zona waktu otomatis mengikuti perangkat
+  ///
+  /// In id, this message translates to:
+  /// **'Otomatis (ikut perangkat)'**
+  String get timezoneAuto;
 }
 
 class _AppLocalizationsDelegate
