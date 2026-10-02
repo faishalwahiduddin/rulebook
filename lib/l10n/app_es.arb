@@ -204,7 +204,7 @@
   "languageSelection": "Selección de idioma",
   "exportBackupJson": "Exportar copia de seguridad de datos (JSON)",
   "copyBookmarkNotesClipboard": "Copiar marcadores y notas al portapapeles",
-  "backupCopiedSnackbar": "¡La copia de seguridad de los datos de RuleBook se copió al portapapeles! 📋",
+  "backupCopiedSnackbar": "¡La copia de seguridad de los datos de RuleBook se copió al portapapeles!",
   "catTrafficShort": "Tránsito",
   "catLaborShort": "Laboral",
   "catCyberShort": "Datos",

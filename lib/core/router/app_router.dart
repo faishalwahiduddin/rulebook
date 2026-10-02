@@ -12,6 +12,7 @@ import '../../features/shell/navigation_shell.dart';
 import '../../features/sop/sop_detail_screen.dart';
 import '../../features/sop/sop_screen.dart';
 import '../storage/rules_database.dart';
+import '../theme/app_icons.dart';
 import '../../l10n/app_localizations.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -148,7 +149,7 @@ class _MissingContentScreen extends ConsumerWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.search_off_rounded,
+              AppIcon(AppIconData.search,
                   size: 40, color: theme.colorScheme.onSurfaceVariant),
               const SizedBox(height: 16),
               Text(

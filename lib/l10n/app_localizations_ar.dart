@@ -636,7 +636,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get backupCopiedSnackbar =>
-      'تم نسخ النسخة الاحتياطية لبيانات RuleBook بنجاح إلى الحافظة! 📋';
+      'تم نسخ النسخة الاحتياطية لبيانات RuleBook بنجاح إلى الحافظة!';
 
   @override
   String get catTrafficShort => 'المرور';

@@ -204,7 +204,7 @@
   "languageSelection": "اختيار اللغة",
   "exportBackupJson": "تصدير النسخة الاحتياطية للبيانات (JSON)",
   "copyBookmarkNotesClipboard": "نسخ الإشارات المرجعية والملاحظات إلى الحافظة",
-  "backupCopiedSnackbar": "تم نسخ النسخة الاحتياطية لبيانات RuleBook بنجاح إلى الحافظة! 📋",
+  "backupCopiedSnackbar": "تم نسخ النسخة الاحتياطية لبيانات RuleBook بنجاح إلى الحافظة!",
   "catTrafficShort": "المرور",
   "catLaborShort": "العمل",
   "catCyberShort": "البيانات",

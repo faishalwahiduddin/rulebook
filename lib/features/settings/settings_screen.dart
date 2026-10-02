@@ -351,7 +351,7 @@ class SettingsScreen extends ConsumerWidget {
           FilledButton(
             style: FilledButton.styleFrom(
               backgroundColor: Theme.of(ctx).colorScheme.error,
-              foregroundColor: Colors.white,
+              foregroundColor: Theme.of(ctx).colorScheme.onError,
             ),
             onPressed: () => Navigator.pop(ctx, true),
             child: Text(l10n.delete),

@@ -635,7 +635,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backupCopiedSnackbar =>
-      'RuleBook data backup successfully copied to clipboard! 📋';
+      'RuleBook data backup successfully copied to clipboard!';
 
   @override
   String get catTrafficShort => 'Traffic';

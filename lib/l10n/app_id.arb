@@ -204,7 +204,7 @@
   "languageSelection": "Pilihan Bahasa",
   "exportBackupJson": "Ekspor Cadangan Data (JSON)",
   "copyBookmarkNotesClipboard": "Salin bookmark dan catatan ke clipboard",
-  "backupCopiedSnackbar": "Cadangan data RuleBook berhasil disalin ke clipboard! 📋",
+  "backupCopiedSnackbar": "Cadangan data RuleBook berhasil disalin ke clipboard!",
   "catTrafficShort": "Lalu Lintas",
   "catLaborShort": "Kerja",
   "catCyberShort": "Data & ITE",

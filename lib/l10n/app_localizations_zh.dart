@@ -608,7 +608,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get copyBookmarkNotesClipboard => '将书签和笔记复制到剪贴板';
 
   @override
-  String get backupCopiedSnackbar => 'RuleBook 数据备份已成功复制到剪贴板！📋';
+  String get backupCopiedSnackbar => 'RuleBook 数据备份已成功复制到剪贴板！';
 
   @override
   String get catTrafficShort => '交通';

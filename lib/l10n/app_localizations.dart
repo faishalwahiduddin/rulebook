@@ -1295,7 +1295,7 @@ abstract class AppLocalizations {
   /// No description provided for @backupCopiedSnackbar.
   ///
   /// In id, this message translates to:
-  /// **'Cadangan data RuleBook berhasil disalin ke clipboard! 📋'**
+  /// **'Cadangan data RuleBook berhasil disalin ke clipboard!'**
   String get backupCopiedSnackbar;
 
   /// No description provided for @catTrafficShort.

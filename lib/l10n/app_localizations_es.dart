@@ -642,7 +642,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get backupCopiedSnackbar =>
-      '¡La copia de seguridad de los datos de RuleBook se copió al portapapeles! 📋';
+      '¡La copia de seguridad de los datos de RuleBook se copió al portapapeles!';
 
   @override
   String get catTrafficShort => 'Tránsito';

@@ -387,7 +387,7 @@ class _ConfirmDeleteNoteDialog extends StatelessWidget {
         FilledButton(
           style: FilledButton.styleFrom(
             backgroundColor: Theme.of(context).colorScheme.error,
-            foregroundColor: Colors.white,
+            foregroundColor: Theme.of(context).colorScheme.onError,
           ),
           onPressed: () => Navigator.pop(context, true),
           child: Text(l10n.delete),

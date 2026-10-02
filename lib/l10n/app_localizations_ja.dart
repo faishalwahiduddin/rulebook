@@ -612,8 +612,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get copyBookmarkNotesClipboard => 'ブックマークとメモをクリップボードにコピー';
 
   @override
-  String get backupCopiedSnackbar =>
-      'RuleBook のデータバックアップがクリップボードに正常にコピーされました！📋';
+  String get backupCopiedSnackbar => 'RuleBook のデータバックアップがクリップボードに正常にコピーされました！';
 
   @override
   String get catTrafficShort => '交通';

@@ -204,7 +204,7 @@
   "languageSelection": "言語選択",
   "exportBackupJson": "データバックアップのエクスポート (JSON)",
   "copyBookmarkNotesClipboard": "ブックマークとメモをクリップボードにコピー",
-  "backupCopiedSnackbar": "RuleBook のデータバックアップがクリップボードに正常にコピーされました！📋",
+  "backupCopiedSnackbar": "RuleBook のデータバックアップがクリップボードに正常にコピーされました！",
   "catTrafficShort": "交通",
   "catLaborShort": "労働",
   "catCyberShort": "データ",

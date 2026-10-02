@@ -204,7 +204,7 @@
   "languageSelection": "Pilihan Basa",
   "exportBackupJson": "Ékspor Cadangan Data (JSON)",
   "copyBookmarkNotesClipboard": "Salin tetenger lan cathetan menyang clipboard",
-  "backupCopiedSnackbar": "Cadangan data RuleBook kasil disalin menyang clipboard! 📋",
+  "backupCopiedSnackbar": "Cadangan data RuleBook kasil disalin menyang clipboard!",
   "catTrafficShort": "Lalu Lintas",
   "catLaborShort": "Kerja",
   "catCyberShort": "Data & ITE",

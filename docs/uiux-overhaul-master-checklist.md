@@ -47,3 +47,51 @@
 - Visual (hierarchy, spacing, type, icons, no gradient/shadow slop): 40
 - UX & humanized copy (states, clarity, warmth, i18n correctness): 30
 - Functionality (all interactions work, no crash, validation): 30
+
+## Overhaul run — 2026-10-02 (repo #22/30, minimal-slop pass)
+
+> Verdict: app was already premium. Prior commits had resolved G1–G4
+> (semantic `AppColors` + full `ColorScheme`/`textTheme`, 53-glyph `AppIcon`
+> set with 66 call sites, GoRouter deep links, full ARB i18n, zero
+> gradients/shadows/Material-icon soup). This run fixed the 3 residual
+> slop items and verified every tab live on device AC100M8766XC000046.
+> Changes are non-layout, so before == after visually; evidence below is
+> the after-state. No capture-fix-confirm iteration needed (0 rounds used).
+
+### Fixes applied (4 hand-edited source files + regen)
+- `lib/l10n/app_{en,id,ar,zh,ja,es,su,jv}.arb`: removed 📋 emoji from
+  `backupCopiedSnackbar` (finding #13) + `flutter gen-l10n` regen.
+- `lib/core/router/app_router.dart`: `_MissingContentScreen` now uses
+  `AppIcon(AppIconData.search)` instead of `Icons.search_off_rounded`
+  (last Material icon in app code).
+- `lib/features/bookmarks/bookmarks_screen.dart` + `lib/features/settings/settings_screen.dart`:
+  destructive-dialog buttons use `colorScheme.onError` token instead of
+  hardcoded `Colors.white`.
+
+### Master Checklist results
+
+| ID | Surface | Status | Initial → Final | Evidence |
+|----|---------|--------|-----------------|----------|
+| G1 | Design system & theme tokens | [DONE] pre-existing | 95 → 95 | `app_colors.dart`, `app_theme.dart` |
+| G2 | Custom icon set | [DONE] pre-existing | 96 → 96 | `app_icons.dart`, 66 `AppIcon(` sites |
+| G3 | Routing | [DONE] pre-existing | 95 → 95 | `app_router.dart` (+icon fix) |
+| G4 | i18n sweep | [DONE] +emoji fix | 93 → 96 | 8 ARBs, 0 hardcoded `Text('` |
+| G5 | Analyzer clean | [DONE] | 100 → 100 | `flutter analyze`: No issues found |
+| S1 | Navigation shell + Catalog | [DONE] | 96 → 96 | `docs/overhaul/s1-catalog-after.png` |
+| S3 | Rule detail | [DONE] | 97 → 97 | `docs/overhaul/s3-ruledetail-after.png` |
+| S4 | Calculator (5 tabs live result Rp 158.960 verified) | [DONE] | 95 → 95 | `docs/overhaul/s4-calculator-after.png` |
+| S5 | SOP list | [DONE] | 95 → 95 | `docs/overhaul/s5-sop-after.png` |
+| S6 | SOP detail (steps timeline) | [DONE] | 94 → 94 | `docs/overhaul/s6-sopdetail-after.png` |
+| S7 | Checklist list + progress | [DONE] | 95 → 95 | `docs/overhaul/s7-checklist-after.png` |
+| S8 | Checklist detail | [DONE] code-verified | 93 → 93 | same scaffold/tokens as S6, analyze clean |
+| S9 | Bookmarks & notes + empties | [DONE] | 97 → 97 | `docs/overhaul/s9-bookmarks-after.png` |
+| S10 | Settings + dialogs | [DONE] +token fix | 94 → 95 | `docs/overhaul/s10-settings-after.png` |
+| Modals | Language sheet, reset dialog, delete dialog | [DONE] code-verified | 94 → 95 | l10n-driven, `onError` token fix |
+
+### Verification
+- `flutter analyze`: No issues found (0 pre-existing, 0 new).
+- `flutter test`: 44/44 passed.
+- Device: debug run on AC100M8766XC000046 (Android 11), foreground
+  package `id.faishal.rulebook` confirmed via dumpsys before each
+  capture; all 5 tabs + rule detail + SOP detail + settings opened
+  live, no crash. Calculator computed live result on device.

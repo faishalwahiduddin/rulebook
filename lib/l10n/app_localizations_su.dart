@@ -633,7 +633,7 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String get backupCopiedSnackbar =>
-      'Cadangan data RuleBook junun disalin ka clipboard! 📋';
+      'Cadangan data RuleBook junun disalin ka clipboard!';
 
   @override
   String get catTrafficShort => 'Lalu Lintas';

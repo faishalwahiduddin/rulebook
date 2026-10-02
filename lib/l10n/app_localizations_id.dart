@@ -637,7 +637,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get backupCopiedSnackbar =>
-      'Cadangan data RuleBook berhasil disalin ke clipboard! 📋';
+      'Cadangan data RuleBook berhasil disalin ke clipboard!';
 
   @override
   String get catTrafficShort => 'Lalu Lintas';
