@@ -9,6 +9,7 @@ import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
+import 'widgets/read_badge.dart';
 import 'widgets/rule_card.dart';
 
 class CatalogScreen extends ConsumerStatefulWidget {
@@ -126,6 +127,13 @@ class _CatalogScreenState extends ConsumerState<CatalogScreen> {
           _QuickChips(
             activeQuery: query,
             onSelect: _setQuery,
+          ),
+          const SizedBox(height: AppSpacing.md),
+          // Gamifikasi: badge aturan dibaca.
+          Padding(
+            padding:
+                const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
+            child: ReadBadge(total: rules.length),
           ),
           const SizedBox(height: AppSpacing.md),
           _CategoryRail(

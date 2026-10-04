@@ -11,6 +11,8 @@ import '../../core/theme/app_theme.dart';
 import '../../core/utils/validators.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
+import 'widgets/read_badge.dart';
+import 'widgets/rulebook_share_dialog.dart';
 
 class RuleDetailScreen extends ConsumerStatefulWidget {
   final RuleItem rule;
@@ -31,6 +33,8 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
     super.initState();
     final saved = ref.read(localStorageServiceProvider).getNote(widget.rule.id) ?? '';
     _noteController = TextEditingController(text: saved);
+    // Gamifikasi: membuka detail menandai aturan sebagai dibaca.
+    markRuleRead(ref, widget.rule.id);
   }
 
   @override
@@ -114,6 +118,11 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
       appBar: appBar(
         context,
         actions: [
+          IconButton(
+            tooltip: 'Bagikan Kartu Aturan',
+            icon: const Icon(Icons.share_rounded, size: 20),
+            onPressed: () => RulebookShareDialog.show(context, _rule),
+          ),
           IconButton(
             tooltip: l10n.copySummary,
             icon: AppIcon(AppIconData.copy, size: 20, color: c.textPrimary),
@@ -199,7 +208,20 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
               ],
             ),
           ),
-          const SizedBox(height: AppSpacing.xxl),
+          const SizedBox(height: AppSpacing.sm),
+          Align(
+            alignment: Alignment.centerRight,
+            child: TextButton.icon(
+              style: TextButton.styleFrom(
+                foregroundColor: c.brand,
+                visualDensity: VisualDensity.compact,
+              ),
+              icon: const Icon(Icons.share_rounded, size: 16),
+              label: const Text('Bagikan Kartu Aturan'),
+              onPressed: () => RulebookShareDialog.show(context, _rule),
+            ),
+          ),
+          const SizedBox(height: AppSpacing.lg),
 
           SectionHeader(
             title: l10n.whatItMeans,
