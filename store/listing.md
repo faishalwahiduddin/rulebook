@@ -4,7 +4,7 @@
 > files are the split, tool-ready copies of this content.
 > ⚠️ **Non-English drafts (ar, ja-JP, zh-CN, es-ES) need a native-speaker review before publishing.**
 
-- **Package:** `id.faishal.rulebook` · **Version:** 1.0.0+1 · **Category:** Books & Reference
+- **Package:** `id.faishal.rulebook` · **Version:** 1.0.3+4 · **Category:** Books & Reference
 
 ---
 
@@ -26,7 +26,7 @@ RuleBook adalah buku saku aturan lalu lintas, SOP, dan regulasi penting — sela
 
 </details>
 
-**Release notes** — versionCode 1 (52/500)
+**Release notes** — versionCode 4 (52/500)
 
 > Rilis store screenshots multi-bahasa untuk RuleBook.
 
@@ -61,7 +61,7 @@ RuleBook is a pocket guide to traffic rules, SOPs, and key regulations — alway
 
 </details>
 
-**Release notes** — versionCode 1 (52/500)
+**Release notes** — versionCode 4 (52/500)
 
 > Multi-locale store screenshots release for RuleBook.
 
@@ -98,7 +98,7 @@ RuleBook is a pocket guide to traffic rules, SOPs, and key regulations — alway
 
 </details>
 
-**Release notes** — versionCode 1 (39/500)
+**Release notes** — versionCode 4 (39/500)
 
 > إصدار أولي مع لقطات متجر متعددة اللغات.
 
@@ -135,7 +135,7 @@ faishal.idアプリファミリーの一員です。オフライン中心、広�
 
 </details>
 
-**Release notes** — versionCode 1 (27/500)
+**Release notes** — versionCode 4 (27/500)
 
 > 多言語ストア向けスクリーンショット対応の初回リリース。
 
@@ -172,7 +172,7 @@ faishal.id 应用家族成员。偏离线、无广告。
 
 </details>
 
-**Release notes** — versionCode 1 (15/500)
+**Release notes** — versionCode 4 (15/500)
 
 > 首次发布，支持多语言商店截图。
 
@@ -209,7 +209,7 @@ Parte de la familia de apps faishal.id. Enfoque offline, sin anuncios.
 
 </details>
 
-**Release notes** — versionCode 1 (51/500)
+**Release notes** — versionCode 4 (51/500)
 
 > Primera versión con capturas de tienda multiidioma.
 
