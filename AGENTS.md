@@ -12,6 +12,7 @@
 - **Cek**: `flutter analyze && flutter test` sebelum commit — wajib nol peringatan.
 - **CLI**: `gh-faishal` (remote `faishalwahiduddin/rulebook`) dan `wrangler-faishal` — jangan bare `gh`/`wrangler`.
 - **Validasi (§VAL)**: Di setiap project tanpa kecuali, setiap input, form, dan mutation wajib divalidasi di frontend dan backend.
+- **Versi (§VER)**: bump via `python3 ../tools/bump_version.py rulebook patch` (atau `minor`/`major`) sebelum commit kode di `lib/`/`assets`/platform. SSOT = `pubspec.yaml`; UI pakai `package_info_plus`. Detail: [`../../CLAUDE.md` §VER](../../CLAUDE.md#versioning-ver).
 - **Larangan**: Jangan menjalankan dev server (`flutter run`) atau `flutter build` kecuali diminta secara eksplisit oleh pengguna.
 <!-- trace:end -->
 

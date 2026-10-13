@@ -5,6 +5,7 @@ import '../../../core/providers/app_providers.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_icons.dart';
 import '../../../core/theme/app_theme.dart';
+import '../../../core/utils/l10n_helpers.dart';
 import '../../../core/widgets/app_ui.dart';
 import '../../../l10n/app_localizations.dart';
 
@@ -62,7 +63,7 @@ class RuleCard extends ConsumerWidget {
                   const SizedBox(height: 3),
                 ],
                 Text(
-                  rule.title,
+                  rule.localizedTitle(l10n),
                   style: theme.textTheme.titleSmall?.copyWith(
                     color: c.textPrimary,
                     height: 1.35,
@@ -70,7 +71,7 @@ class RuleCard extends ConsumerWidget {
                 ),
                 const SizedBox(height: AppSpacing.xs + 2),
                 Text(
-                  rule.summary,
+                  rule.localizedSummary(l10n),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: theme.textTheme.bodySmall?.copyWith(
@@ -85,7 +86,7 @@ class RuleCard extends ConsumerWidget {
                     const SizedBox(width: 6),
                     Expanded(
                       child: Text(
-                        rule.penaltyOrRight,
+                        rule.localizedPenalty(l10n),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: theme.textTheme.bodySmall?.copyWith(

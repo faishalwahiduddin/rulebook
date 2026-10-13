@@ -1,10 +1,18 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:rulebook/core/storage/local_storage_service.dart';
 
 void main() {
   group('RuleBook FleetBackupCodec & Storage Tests', () {
     test('exports and restores backup cleanly, rejects raw json', () async {
+      PackageInfo.setMockInitialValues(
+        appName: 'RuleBook',
+        packageName: 'id.faishal.rulebook',
+        version: '1.0.0',
+        buildNumber: '1',
+        buildSignature: '',
+      );
       SharedPreferences.setMockInitialValues({});
       final prefs = await SharedPreferences.getInstance();
       final storage = LocalStorageService(prefs);
@@ -12,7 +20,7 @@ void main() {
       await storage.saveBookmarks({'rule-1', 'rule-2'});
       await storage.saveNote('rule-1', 'Catatan penting');
 
-      final backupStr = storage.exportBackupJson();
+      final backupStr = await storage.exportBackupJson();
       expect(backupStr.startsWith('FSBK1#RULEBOOK#'), isTrue);
       expect(backupStr.startsWith('{'), isFalse);
 

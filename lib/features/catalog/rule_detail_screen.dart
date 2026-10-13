@@ -8,6 +8,7 @@ import '../../core/router/app_router.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
+import '../../core/utils/l10n_helpers.dart';
 import '../../core/utils/validators.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
@@ -59,10 +60,10 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
 
   void _copySummary() {
     final l10n = AppLocalizations.of(context)!;
-    final text = '${_rule.title}\n'
+    final text = '${_rule.localizedTitle(l10n)}\n'
         '${l10n.legalBasisLabel}: ${_rule.legalBasis}\n'
-        '${l10n.summary}: ${_rule.summary}\n'
-        '${l10n.consequenceLabel}: ${_rule.penaltyOrRight}\n\n'
+        '${l10n.summary}: ${_rule.localizedSummary(l10n)}\n'
+        '${l10n.consequenceLabel}: ${_rule.localizedPenalty(l10n)}\n\n'
         '${l10n.appName} · rulebook.faishal.id';
     Clipboard.setData(ClipboardData(text: text));
     _toast(l10n.summaryCopied, success: true);
@@ -119,7 +120,7 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
         context,
         actions: [
           IconButton(
-            tooltip: 'Bagikan Kartu Aturan',
+            tooltip: l10n.shareRuleCard,
             icon: const Icon(Icons.share_rounded, size: 20),
             onPressed: () => RulebookShareDialog.show(context, _rule),
           ),
@@ -152,7 +153,7 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
           ),
           const SizedBox(height: AppSpacing.md),
           Text(
-            _rule.title,
+            _rule.localizedTitle(l10n),
             style: theme.textTheme.headlineSmall,
           ),
           const SizedBox(height: AppSpacing.md),
@@ -196,7 +197,7 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
                       ),
                       const SizedBox(height: 5),
                       Text(
-                        _rule.penaltyOrRight,
+                        _rule.localizedPenalty(l10n),
                         style: theme.textTheme.bodyLarge?.copyWith(
                           fontWeight: FontWeight.w600,
                           color: c.textPrimary,
@@ -217,7 +218,7 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
                 visualDensity: VisualDensity.compact,
               ),
               icon: const Icon(Icons.share_rounded, size: 16),
-              label: const Text('Bagikan Kartu Aturan'),
+              label: Text(l10n.shareRuleCard),
               onPressed: () => RulebookShareDialog.show(context, _rule),
             ),
           ),
@@ -228,7 +229,7 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
             icon: AppIconData.info,
           ),
           Text(
-            _rule.fullExplanation,
+            _rule.localizedExplanation(l10n),
             style: theme.textTheme.bodyMedium?.copyWith(
               color: c.textSecondary,
               height: 1.65,
@@ -237,14 +238,14 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
           const SizedBox(height: AppSpacing.xxl),
 
           SectionHeader(title: l10n.doThis, icon: AppIconData.checkCircle),
-          ..._rule.keyDos.map((item) => _GuidanceRow(
+          ..._rule.localizedDos(l10n).map((item) => _GuidanceRow(
                 text: item,
                 tone: c.success,
                 icon: AppIconData.check,
               )),
           const SizedBox(height: AppSpacing.lg),
           SectionHeader(title: l10n.avoidThis, icon: AppIconData.closeCircle),
-          ..._rule.keyDonts.map((item) => _GuidanceRow(
+          ..._rule.localizedDonts(l10n).map((item) => _GuidanceRow(
                 text: item,
                 tone: c.danger,
                 icon: AppIconData.close,
@@ -270,7 +271,7 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
                   },
                   decoration: InputDecoration(
                     hintText: l10n.noteEmptyHint,
-                    errorText: _noteError,
+                    errorText: mapValidationError(_noteError, l10n),
                     counterText: '',
                     alignLabelWithHint: true,
                   ),
@@ -342,7 +343,7 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
                       const SizedBox(width: AppSpacing.md),
                       Expanded(
                         child: Text(
-                          rel.title,
+                          rel.localizedTitle(l10n),
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: theme.textTheme.titleSmall,

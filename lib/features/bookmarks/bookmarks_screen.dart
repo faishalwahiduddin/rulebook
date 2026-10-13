@@ -8,6 +8,7 @@ import '../../core/router/app_router.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
+import '../../core/utils/l10n_helpers.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
 import '../catalog/widgets/rule_card.dart';
@@ -314,7 +315,7 @@ class _NoteCard extends ConsumerWidget {
               const SizedBox(width: 8),
               Expanded(
                 child: Text(
-                  rule.title,
+                  rule.localizedTitle(l10n),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: theme.textTheme.titleSmall,
@@ -346,7 +347,7 @@ class _NoteCard extends ConsumerWidget {
                 onPressed: () async {
                   final confirmed = await showDialog<bool>(
                     context: context,
-                    builder: (ctx) => _ConfirmDeleteNoteDialog(ruleTitle: rule.title),
+                    builder: (ctx) => _ConfirmDeleteNoteDialog(ruleTitle: rule.localizedTitle(l10n)),
                   );
                   if (confirmed == true) {
                     ref.read(ruleNotesProvider.notifier).deleteNote(rule.id);

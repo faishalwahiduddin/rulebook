@@ -6,6 +6,7 @@ import '../../core/models/severance_calculator_models.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
+import '../../core/utils/l10n_helpers.dart';
 import '../../core/utils/validators.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
@@ -248,7 +249,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
                         salaryController: _overtimeSalaryController,
                         hoursController: _overtimeHoursController,
                         isHoliday: _isHoliday,
-                        error: _overtimeError,
+                        error: mapValidationError(_overtimeError, l10n),
                         pay: _overtimePay,
                         onHolidayChanged: (v) {
                           setState(() => _isHoliday = v);
@@ -265,7 +266,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
                         uphController: _severanceUphController,
                         reason: _phkReason,
                         result: _severanceResult,
-                        error: _severanceError,
+                        error: mapValidationError(_severanceError, l10n),
                         onReasonChanged: (r) {
                           setState(() => _phkReason = r);
                           _calculateSeverance();
@@ -277,7 +278,7 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
                     2 => _ThrTab(
                         salaryController: _thrSalaryController,
                         monthsController: _thrMonthsController,
-                        error: _thrError,
+                        error: mapValidationError(_thrError, l10n),
                         pay: _thrPay,
                         onInputChanged: _calculateThr,
                         onCopy: _copyThr,

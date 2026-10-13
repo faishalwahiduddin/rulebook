@@ -1283,20 +1283,44 @@ abstract class AppLocalizations {
   /// No description provided for @exportBackupJson.
   ///
   /// In id, this message translates to:
-  /// **'Ekspor Cadangan Data (JSON)'**
+  /// **'Ekspor cadangan (.rlb)'**
   String get exportBackupJson;
 
   /// No description provided for @copyBookmarkNotesClipboard.
   ///
   /// In id, this message translates to:
-  /// **'Salin bookmark dan catatan ke clipboard'**
+  /// **'Bagikan bookmark dan catatan sebagai berkas .rlb'**
   String get copyBookmarkNotesClipboard;
 
   /// No description provided for @backupCopiedSnackbar.
   ///
   /// In id, this message translates to:
-  /// **'Cadangan data RuleBook berhasil disalin ke clipboard!'**
+  /// **'Berkas cadangan siap dibagikan'**
   String get backupCopiedSnackbar;
+
+  /// No description provided for @importBackupTitle.
+  ///
+  /// In id, this message translates to:
+  /// **'Pulihkan dari berkas (.rlb)'**
+  String get importBackupTitle;
+
+  /// No description provided for @importBackupSubtitle.
+  ///
+  /// In id, this message translates to:
+  /// **'Pilih berkas .rlb — mengganti data lokal'**
+  String get importBackupSubtitle;
+
+  /// No description provided for @importBackupSuccess.
+  ///
+  /// In id, this message translates to:
+  /// **'Cadangan berhasil dipulihkan'**
+  String get importBackupSuccess;
+
+  /// No description provided for @importBackupFailed.
+  ///
+  /// In id, this message translates to:
+  /// **'Gagal mengimpor: berkas cadangan tidak valid.'**
+  String get importBackupFailed;
 
   /// No description provided for @catTrafficShort.
   ///
@@ -1549,6 +1573,1320 @@ abstract class AppLocalizations {
   /// In id, this message translates to:
   /// **'Otomatis (ikut perangkat)'**
   String get timezoneAuto;
+
+  /// No description provided for @errorSearchQueryTooLong.
+  ///
+  /// In id, this message translates to:
+  /// **'Kata kunci maksimal 64 karakter'**
+  String get errorSearchQueryTooLong;
+
+  /// No description provided for @errorNoteEmpty.
+  ///
+  /// In id, this message translates to:
+  /// **'Catatan tidak boleh kosong'**
+  String get errorNoteEmpty;
+
+  /// No description provided for @errorNoteTooLong.
+  ///
+  /// In id, this message translates to:
+  /// **'Catatan maksimal 500 karakter'**
+  String get errorNoteTooLong;
+
+  /// No description provided for @errorRuleIdInvalid.
+  ///
+  /// In id, this message translates to:
+  /// **'ID aturan tidak valid'**
+  String get errorRuleIdInvalid;
+
+  /// No description provided for @errorSalaryRequired.
+  ///
+  /// In id, this message translates to:
+  /// **'Gaji pokok bulanan wajib diisi'**
+  String get errorSalaryRequired;
+
+  /// No description provided for @errorSalaryInvalid.
+  ///
+  /// In id, this message translates to:
+  /// **'Nominal gaji harus berupa angka valid'**
+  String get errorSalaryInvalid;
+
+  /// No description provided for @errorSalaryMin.
+  ///
+  /// In id, this message translates to:
+  /// **'Gaji pokok minimal Rp 100.000'**
+  String get errorSalaryMin;
+
+  /// No description provided for @errorSalaryMax.
+  ///
+  /// In id, this message translates to:
+  /// **'Gaji pokok melebihi batas wajar simulasi (maksimal Rp 1 Miliar)'**
+  String get errorSalaryMax;
+
+  /// No description provided for @errorOvertimeHoursRequired.
+  ///
+  /// In id, this message translates to:
+  /// **'Total jam lembur wajib diisi'**
+  String get errorOvertimeHoursRequired;
+
+  /// No description provided for @errorOvertimeHoursInvalid.
+  ///
+  /// In id, this message translates to:
+  /// **'Jam lembur harus berupa angka numerik'**
+  String get errorOvertimeHoursInvalid;
+
+  /// No description provided for @errorOvertimeHoursMin.
+  ///
+  /// In id, this message translates to:
+  /// **'Jam lembur harus lebih besar dari 0'**
+  String get errorOvertimeHoursMin;
+
+  /// No description provided for @errorOvertimeHoursMax.
+  ///
+  /// In id, this message translates to:
+  /// **'Jam lembur maksimal 100 jam per periode hitung'**
+  String get errorOvertimeHoursMax;
+
+  /// No description provided for @errorTenureYearsRequired.
+  ///
+  /// In id, this message translates to:
+  /// **'Masa kerja (tahun) wajib diisi'**
+  String get errorTenureYearsRequired;
+
+  /// No description provided for @errorTenureYearsInvalid.
+  ///
+  /// In id, this message translates to:
+  /// **'Tahun masa kerja harus berupa bilangan bulat'**
+  String get errorTenureYearsInvalid;
+
+  /// No description provided for @errorTenureYearsMin.
+  ///
+  /// In id, this message translates to:
+  /// **'Tahun masa kerja tidak boleh negatif'**
+  String get errorTenureYearsMin;
+
+  /// No description provided for @errorTenureYearsMax.
+  ///
+  /// In id, this message translates to:
+  /// **'Tahun masa kerja maksimal 60 tahun'**
+  String get errorTenureYearsMax;
+
+  /// No description provided for @errorTenureMonthsInvalid.
+  ///
+  /// In id, this message translates to:
+  /// **'Bulan masa kerja harus berupa bilangan bulat'**
+  String get errorTenureMonthsInvalid;
+
+  /// No description provided for @errorTenureMonthsRange.
+  ///
+  /// In id, this message translates to:
+  /// **'Bulan masa kerja harus antara 0 dan 11 bulan'**
+  String get errorTenureMonthsRange;
+
+  /// No description provided for @ruleTraffic01Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Batas Kecepatan Jalan Tol & Arteri'**
+  String get ruleTraffic01Title;
+
+  /// No description provided for @ruleTraffic01Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Kecepatan maksimal 100 km/jam di jalan tol luar kota dan minimal 60 km/jam.'**
+  String get ruleTraffic01Summary;
+
+  /// No description provided for @ruleTraffic01Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Denda maksimal Rp 500.000 atau pidana kurungan paling lama 2 bulan'**
+  String get ruleTraffic01Penalty;
+
+  /// No description provided for @ruleTraffic01Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Setiap pengemudi wajib mematuhi rambu batas kecepatan. Di jalan tol luar kota batas maksimal adalah 100 km/jam dan minimal 60 km/jam. Di jalan tol dalam kota maksimal 80 km/jam. Di jalan antarkota maksimal 80 km/jam, kawasan perkotaan 50 km/jam, dan kawasan permukiman 30 km/jam.'**
+  String get ruleTraffic01Explanation;
+
+  /// No description provided for @ruleTraffic01Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Perhatikan rambu batas kecepatan di setiap ruas jalan\nJaga jarak aman antar kendaraan sesuai kecepatan (aturan 3 detik)'**
+  String get ruleTraffic01Dos;
+
+  /// No description provided for @ruleTraffic01Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Memacu kendaraan di atas 100 km/jam di jalan tol\nBerjalan lambat di lajur paling kanan (lajur hanya untuk mendahului)'**
+  String get ruleTraffic01Donts;
+
+  /// No description provided for @ruleTraffic02Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Larangan Menggunakan Ponsel Saat Berkendara'**
+  String get ruleTraffic02Title;
+
+  /// No description provided for @ruleTraffic02Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Dilarang mengoperasikan gawai atau melakukan kegiatan yang mengganggu konsentrasi saat mengemudi.'**
+  String get ruleTraffic02Summary;
+
+  /// No description provided for @ruleTraffic02Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Denda maksimal Rp 750.000 atau kurungan paling lama 3 bulan'**
+  String get ruleTraffic02Penalty;
+
+  /// No description provided for @ruleTraffic02Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Pengemudi dilarang melakukan kegiatan yang mengakibatkan gangguan konsentrasi, termasuk mengetik pesan, melihat video, atau memegang telepon saat kendaraan bergerak.'**
+  String get ruleTraffic02Explanation;
+
+  /// No description provided for @ruleTraffic02Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Gunakan holder GPS di dashboard dan atur rute sebelum mulai berjalan\nTepikan kendaraan di tempat aman jika harus menerima telepon darurat'**
+  String get ruleTraffic02Dos;
+
+  /// No description provided for @ruleTraffic02Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Membalas chat atau scrolling media sosial saat berhenti di lampu merah\nMenempelkan ponsel di telinga saat mengemudi'**
+  String get ruleTraffic02Donts;
+
+  /// No description provided for @ruleTraffic03Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Kewajiban Membawa SIM & STNK Asli'**
+  String get ruleTraffic03Title;
+
+  /// No description provided for @ruleTraffic03Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Pengendara wajib memiliki SIM sah dan dapat menunjukkan STNK yang sah saat pemeriksaan.'**
+  String get ruleTraffic03Summary;
+
+  /// No description provided for @ruleTraffic03Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Tidak punya SIM: denda maks Rp 1.000.000; Tidak bawa STNK: denda maks Rp 500.000'**
+  String get ruleTraffic03Penalty;
+
+  /// No description provided for @ruleTraffic03Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Setiap orang yang mengemudikan kendaraan bermotor di jalan wajib memiliki SIM yang masih berlaku sesuai jenis kendaraannya dan membawa STNK asli yang sah.'**
+  String get ruleTraffic03Explanation;
+
+  /// No description provided for @ruleTraffic03Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Periksa masa berlaku SIM dan pajak tahunan STNK secara berkala\nBawa dokumen fisik atau tunjukkan dokumen digital resmi terintegrasi (Korlantas)'**
+  String get ruleTraffic03Dos;
+
+  /// No description provided for @ruleTraffic03Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Mengemudi tanpa mengantongi SIM yang sah\nMeminjamkan kendaraan ke pengemudi di bawah umur / tanpa SIM'**
+  String get ruleTraffic03Donts;
+
+  /// No description provided for @ruleTraffic04Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Lampu Utama Sepeda Motor Siang Hari (DRL)'**
+  String get ruleTraffic04Title;
+
+  /// No description provided for @ruleTraffic04Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Pengendara sepeda motor wajib menyalakan lampu utama pada siang dan malam hari.'**
+  String get ruleTraffic04Summary;
+
+  /// No description provided for @ruleTraffic04Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Denda maksimal Rp 100.000 atau pidana kurungan paling lama 15 hari'**
+  String get ruleTraffic04Penalty;
+
+  /// No description provided for @ruleTraffic04Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Untuk meningkatkan visibilitas dan mencegah kecelakaan fatal, sepeda motor wajib menyalakan lampu utama di jalan pada siang hari maupun malam hari.'**
+  String get ruleTraffic04Explanation;
+
+  /// No description provided for @ruleTraffic04Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Pastikan lampu dekat (low beam) menyala otomatis saat mesin dihidupkan\nSegera ganti bohlam lampu jika mati'**
+  String get ruleTraffic04Dos;
+
+  /// No description provided for @ruleTraffic04Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Memasang saklar rahasia untuk mematikan lampu di siang hari\nMenggunakan lampu tembak menyilaukan (strobo/silau) yang melanggar standar'**
+  String get ruleTraffic04Donts;
+
+  /// No description provided for @ruleTraffic05Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Helm Berstandar Nasional Indonesia (SNI)'**
+  String get ruleTraffic05Title;
+
+  /// No description provided for @ruleTraffic05Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Pengendara sepeda motor dan penumpangnya wajib mengenakan helm yang memenuhi standar SNI.'**
+  String get ruleTraffic05Summary;
+
+  /// No description provided for @ruleTraffic05Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Denda maksimal Rp 250.000 atau kurungan paling lama 1 bulan'**
+  String get ruleTraffic05Penalty;
+
+  /// No description provided for @ruleTraffic05Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Setiap orang yang mengemudikan sepeda motor dan penumpang sepeda motor wajib mengenakan helm standar nasional Indonesia (SNI) terkunci dengan tali pengikat dagu yang benar (klik).'**
+  String get ruleTraffic05Explanation;
+
+  /// No description provided for @ruleTraffic05Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Pastikan logo SNI timbul (emboss) pada batok helm\nKaitkan tali helm hingga berbunyi \"klik\" sebelum mulai berkendara'**
+  String get ruleTraffic05Dos;
+
+  /// No description provided for @ruleTraffic05Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Mengenakan helm proyek atau helm sepeda santai untuk mengendarai motor\nMembiarkan tali helm menggantung tanpa dikunci'**
+  String get ruleTraffic05Donts;
+
+  /// No description provided for @ruleTraffic06Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Larangan Melawan Arus Lalu Lintas'**
+  String get ruleTraffic06Title;
+
+  /// No description provided for @ruleTraffic06Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Dilarang mengemudikan kendaraan melawan arah arus lalu lintas yang telah ditentukan rambu.'**
+  String get ruleTraffic06Summary;
+
+  /// No description provided for @ruleTraffic06Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Denda maksimal Rp 500.000 atau kurungan paling lama 2 bulan'**
+  String get ruleTraffic06Penalty;
+
+  /// No description provided for @ruleTraffic06Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Melawan arus membahayakan keselamatan umum secara ekstrem dan menjadi penyebab fatalitas kecelakaan lalu lintas tertinggi.'**
+  String get ruleTraffic06Explanation;
+
+  /// No description provided for @ruleTraffic06Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Patuhi rambu satu arah (one-way) dan panah petunjuk jalan\nPilih putaran balik resmi meskipun berjarak agak jauh demi keselamatan'**
+  String get ruleTraffic06Dos;
+
+  /// No description provided for @ruleTraffic06Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Melawan arus di jalur sempit, trotoar, atau bahu jalan layang\nMengikuti pengendara lain yang nekat menerobos jalur berlawanan'**
+  String get ruleTraffic06Donts;
+
+  /// No description provided for @ruleTraffic07Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Larangan Menerobos Jalur Busway (TransJakarta)'**
+  String get ruleTraffic07Title;
+
+  /// No description provided for @ruleTraffic07Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Kendaraan pribadi dilarang melintasi atau memasuki jalur khusus angkutan umum (Busway).'**
+  String get ruleTraffic07Summary;
+
+  /// No description provided for @ruleTraffic07Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Denda maksimal tilang Rp 500.000 atau kurungan paling lama 2 bulan'**
+  String get ruleTraffic07Penalty;
+
+  /// No description provided for @ruleTraffic07Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Jalur khusus busway steril hanya untuk armada TransJakarta dan kendaraan darurat yang diizinkan undang-undang (ambulan, pemadam kebakaran).'**
+  String get ruleTraffic07Explanation;
+
+  /// No description provided for @ruleTraffic07Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Tetap melaju di jalur reguler meskipun kondisi lalu lintas padat\nBeri jalan saat armada busway bermanuver di persimpangan'**
+  String get ruleTraffic07Dos;
+
+  /// No description provided for @ruleTraffic07Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Memasuki jalur busway untuk menghindari antrean macet\nBerhenti atau parkir di depan portal jalur busway'**
+  String get ruleTraffic07Donts;
+
+  /// No description provided for @ruleTraffic08Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Knalpot Bising & Standar Kelaikan Teknis'**
+  String get ruleTraffic08Title;
+
+  /// No description provided for @ruleTraffic08Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Kendaraan bermotor wajib memenuhi ambang batas kebisingan suara dan kelayakan teknis jalan.'**
+  String get ruleTraffic08Summary;
+
+  /// No description provided for @ruleTraffic08Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Denda maksimal Rp 250.000 atau kurungan paling lama 1 bulan'**
+  String get ruleTraffic08Penalty;
+
+  /// No description provided for @ruleTraffic08Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Penggunaan knalpot brong/bising tanpa peredam suara melanggar standar kebisingan desibel Kementerian Lingkungan Hidup dan Kehutanan serta standar kelayakan kendaraan.'**
+  String get ruleTraffic08Explanation;
+
+  /// No description provided for @ruleTraffic08Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Gunakan knalpot standar pabrikan atau yang memiliki sertifikasi desibel resmi\nLakukan uji emisi dan servis berkala'**
+  String get ruleTraffic08Dos;
+
+  /// No description provided for @ruleTraffic08Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Memasang knalpot pipa terbuka (knalpot brong) di jalan umum permukiman\nMelepas spion, lampu sein, atau komponen keselamatan demi estetika balap liar'**
+  String get ruleTraffic08Donts;
+
+  /// No description provided for @ruleLabor01Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Batas Jam Kerja & Perhitungan Upah Lembur'**
+  String get ruleLabor01Title;
+
+  /// No description provided for @ruleLabor01Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Maksimal 40 jam kerja per minggu. Lembur maksimal 4 jam/hari dan 18 jam/minggu dengan upah lembur resmi.'**
+  String get ruleLabor01Summary;
+
+  /// No description provided for @ruleLabor01Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Hak upah lembur wajib dibayarkan perusahaan; sanksi denda pidana bagi pengusaha pelanggar'**
+  String get ruleLabor01Penalty;
+
+  /// No description provided for @ruleLabor01Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Waktu kerja standar adalah 7 jam/hari (6 hari kerja) atau 8 jam/hari (5 hari kerja). Kerja lembur wajib mendapat persetujuan tertulis pekerja. Upah lembur jam pertama dihitung 1,5x upah sejam, jam berikutnya 2x upah sejam.'**
+  String get ruleLabor01Explanation;
+
+  /// No description provided for @ruleLabor01Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Catat jam masuk dan keluar kerja lembur secara mandiri\nPastikan ada perintah lembur resmi (Surat Perintah Lembur) dari atasan'**
+  String get ruleLabor01Dos;
+
+  /// No description provided for @ruleLabor01Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Bekerja lembur melebihi batas 4 jam per hari atau 18 jam per minggu\nMenerima sistem lembur tanpa kompensasi upah resmi'**
+  String get ruleLabor01Donts;
+
+  /// No description provided for @ruleLabor02Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Hak Cuti Tahunan & Hak Cuti Berbayar'**
+  String get ruleLabor02Title;
+
+  /// No description provided for @ruleLabor02Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Pekerja berhak atas cuti tahunan sekurang-kurangnya 12 hari kerja setelah bekerja 12 bulan secara terus-menerus.'**
+  String get ruleLabor02Summary;
+
+  /// No description provided for @ruleLabor02Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Hak mutlak pekerja berbayar penuh; denda sanksi administratif dan pidana kurungan bagi pengusaha'**
+  String get ruleLabor02Penalty;
+
+  /// No description provided for @ruleLabor02Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Pengusaha wajib memberikan cuti tahunan sekurang-kurangnya 12 hari kerja dengan upah penuh kepada pekerja yang telah bekerja selama 12 bulan terus-menerus. Cuti melahirkan diberikan 1,5 bulan sebelum dan 1,5 bulan sesudah melahirkan.'**
+  String get ruleLabor02Explanation;
+
+  /// No description provided for @ruleLabor02Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Ajukan rencana cuti tahunan sesuai mekanisme internal perusahaan\nSimpan bukti persetujuan cuti dan sisa saldo cuti resmi'**
+  String get ruleLabor02Dos;
+
+  /// No description provided for @ruleLabor02Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Mengurangi gaji pokok pekerja karena mengambil hak cuti resmi\nMenghanguskan saldo cuti tahunan tanpa mekanisme kompensasi tertulis'**
+  String get ruleLabor02Donts;
+
+  /// No description provided for @ruleLabor03Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Tunjangan Hari Raya (THR) Keagamaan'**
+  String get ruleLabor03Title;
+
+  /// No description provided for @ruleLabor03Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'THR Keagamaan wajib dibayarkan penuh paling lambat 7 hari (H-7) sebelum hari raya keagamaan.'**
+  String get ruleLabor03Summary;
+
+  /// No description provided for @ruleLabor03Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Denda keterlambatan 5% dari total THR yang harus dibayar serta sanksi administratif'**
+  String get ruleLabor03Penalty;
+
+  /// No description provided for @ruleLabor03Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Pengusaha wajib membayarkan THR Keagamaan kepada pekerja yang telah memiliki masa kerja minimal 1 bulan terus-menerus. Masa kerja 12 bulan atau lebih mendapat 1 bulan upah. Masa kerja kurang dari 12 bulan dihitung prorata: (masa kerja / 12) x 1 bulan upah.'**
+  String get ruleLabor03Explanation;
+
+  /// No description provided for @ruleLabor03Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Ketahui tanggal H-7 Idul Fitri / Hari Raya Keagamaan\nLaporkan ke Posko THR Kemnaker jika perusahaan mencicil atau telat membayar THR'**
+  String get ruleLabor03Dos;
+
+  /// No description provided for @ruleLabor03Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Menerima pembayaran THR dalam bentuk parsel atau barang pengganti uang\nMenerima cicilan THR tanpa kesepakatan tertulis resmi yang disahkan Disnaker'**
+  String get ruleLabor03Donts;
+
+  /// No description provided for @ruleLabor04Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Kompensasi Pengakhiran Hubungan Kerja (PHK & Pesangon)'**
+  String get ruleLabor04Title;
+
+  /// No description provided for @ruleLabor04Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Perusahaan wajib membayar Uang Pesangon, UPMK, dan UPH sesuai formula masa kerja dan alasan pemutusan hubungan kerja.'**
+  String get ruleLabor04Summary;
+
+  /// No description provided for @ruleLabor04Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Hak kompensasi wajib dibayar penuh; sanksi perdata PHI & pengawasan Disnaker'**
+  String get ruleLabor04Penalty;
+
+  /// No description provided for @ruleLabor04Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Dalam hal terjadi PHK, pengusaha wajib membayar kompensasi berupa Uang Pesangon (maksimal 9 bulan upah), Uang Penghargaan Masa Kerja / UPMK (maksimal 10 bulan upah), dan Uang Penggantian Hak (UPH cuti/ongkos pulang). Faktor pengali disesuaikan dengan alasan PHK.'**
+  String get ruleLabor04Explanation;
+
+  /// No description provided for @ruleLabor04Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Mintakan bukti tertulis alasan resmi PHK dari manajemen\nGunakan kalkulator pesangon resmi untuk memverifikasi nominal sebelum tanda tangan'**
+  String get ruleLabor04Dos;
+
+  /// No description provided for @ruleLabor04Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Menandatangani surat pengunduran diri palsu / paksaan yang menghilangkan hak pesangon\nMenerima nominal pesangon di bawah batas minimum regulasi PP 35/2021'**
+  String get ruleLabor04Donts;
+
+  /// No description provided for @ruleLabor05Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Kompensasi Pekerja Kontrak (PKWT)'**
+  String get ruleLabor05Title;
+
+  /// No description provided for @ruleLabor05Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Pekerja kontrak (PKWT) berhak mendapat uang kompensasi pada saat berakhirnya jangka waktu kontrak.'**
+  String get ruleLabor05Summary;
+
+  /// No description provided for @ruleLabor05Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Hak kompensasi wajib diserahkan paling lambat pada hari terakhir masa kontrak'**
+  String get ruleLabor05Penalty;
+
+  /// No description provided for @ruleLabor05Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Pengusaha wajib memberikan uang kompensasi kepada pekerja PKWT yang telah memiliki masa kerja minimal 1 bulan terus menerus saat kontrak berakhir atau diperpanjang. Formula: (Masa Kerja / 12) x 1 bulan upah.'**
+  String get ruleLabor05Explanation;
+
+  /// No description provided for @ruleLabor05Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Pastikan perjanjian kerja memuat tanggal mulai dan berakhirnya kontrak secara tegas\nHitung hak kompensasi PKWT setiap kali periode perpanjangan kontrak selesai'**
+  String get ruleLabor05Dos;
+
+  /// No description provided for @ruleLabor05Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Menganggap pekerja kontrak tidak memiliki hak pesangon/kompensasi sama sekali\nMemperkerjakan PKWT untuk pekerjaan yang bersifat tetap terus menerus tanpa batas'**
+  String get ruleLabor05Donts;
+
+  /// No description provided for @ruleLabor06Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Kewajiban Kepesertaan BPJS Ketenagakerjaan'**
+  String get ruleLabor06Title;
+
+  /// No description provided for @ruleLabor06Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Perusahaan wajib mendaftarkan seluruh pekerja ke program BPJS Ketenagakerjaan (JKK, JKM, JHT, JP).'**
+  String get ruleLabor06Summary;
+
+  /// No description provided for @ruleLabor06Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Sanksi tidak mendapat pelayanan publik tertentu bagi pengusaha dan denda keterlambatan'**
+  String get ruleLabor06Penalty;
+
+  /// No description provided for @ruleLabor06Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Setiap pemberi kerja wajib mendaftarkan pekerjanya dalam program Jaminan Kecelakaan Kerja (JKK), Jaminan Kematian (JKM), Jaminan Hari Tua (JHT), dan Jaminan Pensiun (JP) serta menyetorkan iurannya secara tertib.'**
+  String get ruleLabor06Explanation;
+
+  /// No description provided for @ruleLabor06Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Cek saldo JHT dan status kepesertaan aktif melalui aplikasi JMO secara berkala\nLaporkan ke Disnaker jika potongan upah BPJS tidak disetorkan oleh perusahaan'**
+  String get ruleLabor06Dos;
+
+  /// No description provided for @ruleLabor06Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Menerima pemotongan upah sepihak tanpa adanya kartu peserta BPJS resmi\nBekerja di lingkungan bahaya tanpa proteksi Jaminan Kecelakaan Kerja (JKK)'**
+  String get ruleLabor06Donts;
+
+  /// No description provided for @rulePrivacy01Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Pencemaran Nama Baik & Delik Aduan Siber'**
+  String get rulePrivacy01Title;
+
+  /// No description provided for @rulePrivacy01Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Penyerangan kehormatan di media elektronik adalah delik aduan absolut; kritik publik bukan pidana.'**
+  String get rulePrivacy01Summary;
+
+  /// No description provided for @rulePrivacy01Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Pidana penjara maksimal 2 tahun dan/atau denda maksimal Rp 400.000.000'**
+  String get rulePrivacy01Penalty;
+
+  /// No description provided for @rulePrivacy01Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'UU ITE Revisi Kedua No. 1/2024 menegaskan bahwa tindak pidana pencemaran nama baik adalah delik aduan absolut yang hanya bisa dilaporkan oleh korban perseorangan langsung. Ditegaskan pula perbuatan tidak dipidana jika dilakukan demi kepentingan umum atau terpaksa membela diri.'**
+  String get rulePrivacy01Explanation;
+
+  /// No description provided for @rulePrivacy01Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Sampaikan kritik dengan basis fakta, data, dan rujukan yang dapat dibuktikan\nGunakan bahasa etis tanpa melontarkan umpatan atau kata penghinaan pribadi'**
+  String get rulePrivacy01Dos;
+
+  /// No description provided for @rulePrivacy01Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Menyebarkan tuduhan asusila atau fitnah tanpa bukti di media sosial terbuka\nMenggunakan nama orang lain untuk membuat akun gosip palsu'**
+  String get rulePrivacy01Donts;
+
+  /// No description provided for @rulePrivacy02Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Hak Subjek Data Pribadi (UU PDP)'**
+  String get rulePrivacy02Title;
+
+  /// No description provided for @rulePrivacy02Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Masyarakat berhak mengakses, memperbaiki, menghapus, dan menarik persetujuan pemrosesan data pribadi.'**
+  String get rulePrivacy02Summary;
+
+  /// No description provided for @rulePrivacy02Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Denda administratif hingga 2% dari total pendapatan tahunan korporasi pelanggar'**
+  String get rulePrivacy02Penalty;
+
+  /// No description provided for @rulePrivacy02Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'UU Perlindungan Data Pribadi (UU PDP) menjamin hak subjek data untuk meminta salinan data, mengubah ketidakakuratan, membatasi pemrosesan, dan menuntut ganti rugi atas pelanggaran kebocoran data pribadi oleh korporasi atau badan publik.'**
+  String get rulePrivacy02Explanation;
+
+  /// No description provided for @rulePrivacy02Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Ajukan permohonan tertulis penghapusan data akun saat berhenti memakai layanan digital\nPeriksa izin akses kontak, mikrofon, dan lokasi pada aplikasi smartphone'**
+  String get rulePrivacy02Dos;
+
+  /// No description provided for @rulePrivacy02Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Membagikan foto KTP, Kartu Keluarga, atau nomor rekening di grup pesan publik\nMenyetujui syarat & ketentuan aplikasi yang meminta akses data tidak relevan'**
+  String get rulePrivacy02Donts;
+
+  /// No description provided for @rulePrivacy03Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Kewajiban Notifikasi Kebocoran Data (Aturan 72 Jam)'**
+  String get rulePrivacy03Title;
+
+  /// No description provided for @rulePrivacy03Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Pengendali data wajib menyampaikan pemberitahuan tertulis kebocoran data maksimal 3x24 jam (72 jam).'**
+  String get rulePrivacy03Summary;
+
+  /// No description provided for @rulePrivacy03Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Sanksi peringatan tertulis, pembekuan kegiatan bisnis, hingga denda administratif raksasa'**
+  String get rulePrivacy03Penalty;
+
+  /// No description provided for @rulePrivacy03Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Dalam hal terjadi kegagalan perlindungan data pribadi (data breach), Pengendali Data Pribadi wajib menyampaikan pemberitahuan tertulis paling lambat 72 jam kepada Subjek Data Pribadi dan lembaga pengawas resmi.'**
+  String get rulePrivacy03Explanation;
+
+  /// No description provided for @rulePrivacy03Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Segera ganti kata sandi dan aktifkan 2-Factor Authentication (2FA) jika ada pemberitahuan kebocoran\nPantau mutasi rekening bank dan peringatan login akun yang mencurigakan'**
+  String get rulePrivacy03Dos;
+
+  /// No description provided for @rulePrivacy03Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Menyembunyikan insiden peretasan sistem dari publik dan otoritas pengawas\nMengabaikan email notifikasi keamanan dari platform terpercaya'**
+  String get rulePrivacy03Donts;
+
+  /// No description provided for @rulePrivacy04Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Larangan Penyebaran Data Pribadi Tanpa Hak (Doxxing)'**
+  String get rulePrivacy04Title;
+
+  /// No description provided for @rulePrivacy04Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Dilarang keras menyebarkan data pribadi orang lain untuk mengintimidasi atau merugikan korban.'**
+  String get rulePrivacy04Summary;
+
+  /// No description provided for @rulePrivacy04Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Pidana penjara paling lama 5 tahun dan/atau pidana denda paling banyak Rp 5.000.000.000'**
+  String get rulePrivacy04Penalty;
+
+  /// No description provided for @rulePrivacy04Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Tindakan menyebarkan KTP, nomor telepon, alamat rumah, atau data finansial orang lain di internet dengan maksud mencelakakan atau mengintimidasi korban (doxxing) diancam sanksi pidana berat.'**
+  String get rulePrivacy04Explanation;
+
+  /// No description provided for @rulePrivacy04Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Sensor (blur) nama lengkap, NIK, dan nomor telepon saat membagikan bukti transaksi\nLaporkan konten doxxing ke tim moderasi platform dan patroli siber kepolisian'**
+  String get rulePrivacy04Dos;
+
+  /// No description provided for @rulePrivacy04Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Memposting KTP lawan transaksi di medsos dengan dalih penagihan utang / viralitas\nMembuat database data pribadi warga tanpa persetujuan eksplisit pemilik data'**
+  String get rulePrivacy04Donts;
+
+  /// No description provided for @rulePrivacy05Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Jerat Pidana Penipuan Transaksi Online & Phishing'**
+  String get rulePrivacy05Title;
+
+  /// No description provided for @rulePrivacy05Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Menyebarkan informasi bohong dalam transaksi elektronik yang merugikan konsumen diancam pidana.'**
+  String get rulePrivacy05Summary;
+
+  /// No description provided for @rulePrivacy05Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Pidana penjara paling lama 6 tahun dan/atau denda paling banyak Rp 1.000.000.000'**
+  String get rulePrivacy05Penalty;
+
+  /// No description provided for @rulePrivacy05Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Setiap orang yang dengan sengaja menyebarkan berita bohong dan menyesatkan dalam transaksi elektronik (toko online palsu, link phishing file APK, investasi bodong) dijerat pasal tindak pidana siber.'**
+  String get rulePrivacy05Explanation;
+
+  /// No description provided for @rulePrivacy05Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Gunakan fitur rekening bersama (rekber) resmi atau marketplace terpercaya\nCek kredibilitas nomor rekening tujuan di portal cekrekening.id resmi pemerintah'**
+  String get rulePrivacy05Dos;
+
+  /// No description provided for @rulePrivacy05Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Mengunduh atau mengklik file ekstensi .APK misterius dari WhatsApp\nMentransfer uang langsung tanpa jaminan escrow ke penjual anonim'**
+  String get rulePrivacy05Donts;
+
+  /// No description provided for @ruleConsumer01Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Hak Kompensasi & Ganti Rugi Barang Rusak'**
+  String get ruleConsumer01Title;
+
+  /// No description provided for @ruleConsumer01Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Konsumen berhak mendapat kompensasi, ganti rugi, atau penggantian jika barang yang diterima cacat.'**
+  String get ruleConsumer01Summary;
+
+  /// No description provided for @ruleConsumer01Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Pidana penjara paling lama 5 tahun atau pidana denda paling banyak Rp 2.000.000.000'**
+  String get ruleConsumer01Penalty;
+
+  /// No description provided for @ruleConsumer01Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Pasal 19 UU Perlindungan Konsumen No. 8/1999 mewajibkan pelaku usaha memberikan ganti rugi berupa pengembalian uang atau penggantian barang sejenis atas kerusakan, pencemaran, atau kerugian akibat mengonsumsi barang/jasa.'**
+  String get ruleConsumer01Explanation;
+
+  /// No description provided for @ruleConsumer01Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Rekam video unboxing paket tanpa jeda sejak kardus masih tersegel rapat\nSimpan nota pembelian, invoice digital, dan bukti pembayaran transaksi'**
+  String get ruleConsumer01Dos;
+
+  /// No description provided for @ruleConsumer01Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Menerima paket dengan segel terbuka tanpa membuat berita acara kurir\nMembuang struk fisik sebelum barang selesai diuji coba fungsinya'**
+  String get ruleConsumer01Donts;
+
+  /// No description provided for @ruleConsumer02Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Larangan Klausula Baku Sepihak (\"Barang Tidak Boleh Ditukar\")'**
+  String get ruleConsumer02Title;
+
+  /// No description provided for @ruleConsumer02Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Klausul pencantuman \"barang yang sudah dibeli tidak dapat ditukar/dikembalikan\" dinyatakan batal demi hukum.'**
+  String get ruleConsumer02Summary;
+
+  /// No description provided for @ruleConsumer02Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Pidana penjara paling lama 5 tahun atau denda maksimal Rp 2.000.000.000'**
+  String get ruleConsumer02Penalty;
+
+  /// No description provided for @ruleConsumer02Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Pasal 18 UU Perlindungan Konsumen melarang pelaku usaha mencantumkan klausula baku yang mengalihkan tanggung jawab, termasuk klausula sepihak menolak pengembalian barang jika barang tersebut terbukti cacat tersembunyi.'**
+  String get ruleConsumer02Explanation;
+
+  /// No description provided for @ruleConsumer02Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Tuntut hak retur jika produk terbukti cacat pabrik meskipun ada tulisan larangan di nota\nLaporkan klausula baku zalim ke Badan Penyelesaian Sengketa Konsumen (BPSK)'**
+  String get ruleConsumer02Dos;
+
+  /// No description provided for @ruleConsumer02Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Pasrah saat pedagang menolak retur barang rusak dengan alasan tulisan di struk\nMembuat surat perjanjian jual beli yang menghilangkan hak komplain pembeli'**
+  String get ruleConsumer02Donts;
+
+  /// No description provided for @ruleConsumer03Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Kewajiban Label Bahasa Indonesia & Kedaluwarsa'**
+  String get ruleConsumer03Title;
+
+  /// No description provided for @ruleConsumer03Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Barang beredar wajib mencantumkan label informasi bahasa Indonesia dan tanggal kedaluwarsa yang jelas.'**
+  String get ruleConsumer03Summary;
+
+  /// No description provided for @ruleConsumer03Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Pidana penjara paling lama 5 tahun atau denda maksimal Rp 2.000.000.000'**
+  String get ruleConsumer03Penalty;
+
+  /// No description provided for @ruleConsumer03Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Pelaku usaha dilarang memperdagangkan barang yang tidak mencantumkan label petunjuk penggunaan dalam bahasa Indonesia, nomor izin edar resmi (BPOM/SNI), serta tanggal kedaluwarsa pada kemasan.'**
+  String get ruleConsumer03Explanation;
+
+  /// No description provided for @ruleConsumer03Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Cek tanggal kedaluwarsa dan nomor izin edar BPOM sebelum membeli produk makanan/kosmetik\nPastikan petunjuk keamanan dan komposisi bahan tertera jelas pada kemasan'**
+  String get ruleConsumer03Dos;
+
+  /// No description provided for @ruleConsumer03Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Membeli produk kosmetik atau obat impor tanpa label izin resmi BPOM\nMenjual kembali produk pangan yang sudah melewati tanggal kedaluwarsa'**
+  String get ruleConsumer03Donts;
+
+  /// No description provided for @ruleConsumer04Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Hak Informasi Akurat & Larangan Iklan Menyesatkan'**
+  String get ruleConsumer04Title;
+
+  /// No description provided for @ruleConsumer04Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Pelaku usaha dilarang mengiklankan produk secara menyesatkan, bohong, atau berlebihan.'**
+  String get ruleConsumer04Summary;
+
+  /// No description provided for @ruleConsumer04Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Pidana penjara paling lama 5 tahun atau denda maksimal Rp 2.000.000.000'**
+  String get ruleConsumer04Penalty;
+
+  /// No description provided for @ruleConsumer04Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Pasal 9 & 10 UU Perlindungan Konsumen melarang penawaran barang/jasa dengan menyajikan klaim mutu, diskon fiktif, atau testimoni palsu yang menyesatkan dan menipu konsumen.'**
+  String get ruleConsumer04Explanation;
+
+  /// No description provided for @ruleConsumer04Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Bandingkan riwayat harga barang sebelum promo untuk mengonfirmasi diskon riil\nKritisi klaim medis instan pada produk suplemen non-resep dokter'**
+  String get ruleConsumer04Dos;
+
+  /// No description provided for @ruleConsumer04Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Membuat promo diskon palsu dengan menaikkan harga dasar secara drastis terlebih dahulu\nMenggunakan testimoni rekayasa / influencer bayaran tanpa klausul iklan berbayar'**
+  String get ruleConsumer04Donts;
+
+  /// No description provided for @ruleSafety01Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Kewajiban APAR & Jalur Evakuasi Bangunan Gedung'**
+  String get ruleSafety01Title;
+
+  /// No description provided for @ruleSafety01Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Gedung publik dan tempat usaha wajib menyediakan APAR terinspeksi dan jalur evakuasi bebas hambatan.'**
+  String get ruleSafety01Summary;
+
+  /// No description provided for @ruleSafety01Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Peringatan tertulis, pembekuan Sertifikat Laik Fungsi (SLF), hingga penutupan operasional'**
+  String get ruleSafety01Penalty;
+
+  /// No description provided for @ruleSafety01Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Permenaker No. 04/1980 dan Permen PUPR No. 14/2021 mewajibkan setiap bangunan komersial menyediakan Alat Pemadam Api Ringan (APAR) siap pakai setiap jarak 15 meter, tangga darurat bertekanan, dan pintu evakuasi yang tidak terkunci saat jam kerja.'**
+  String get ruleSafety01Explanation;
+
+  /// No description provided for @ruleSafety01Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Periksa jarum tekanan APAR berada di zona hijau dan balik tabung secara berkala\nPastikan koridor tangga darurat bebas dari tumpukan barang bekas'**
+  String get ruleSafety01Dos;
+
+  /// No description provided for @ruleSafety01Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Mengunci pintu darurat atau merantai handel pintu keluar evakuasi dengan gembok\nMenutupi rambu petunjuk \"EXIT\" menyala dengan spanduk promosi'**
+  String get ruleSafety01Donts;
+
+  /// No description provided for @ruleSafety02Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Standar K3 Konstruksi & Penggunaan APD Wajib'**
+  String get ruleSafety02Title;
+
+  /// No description provided for @ruleSafety02Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Pekerja dan pengawas di area proyek wajib mengenakan Alat Pelindung Diri (APD) standar SNI/ISO.'**
+  String get ruleSafety02Summary;
+
+  /// No description provided for @ruleSafety02Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Denda administratif, penghentian sementara proyek konstruksi, hingga pencabutan izin usaha'**
+  String get ruleSafety02Penalty;
+
+  /// No description provided for @ruleSafety02Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'UU Keselamatan Kerja No. 1/1970 mewajibkan kontraktor menyediakan helm pengaman (safety helmet), sepatu safety boots, rompi reflektif, dan tali keselamatan (full body harness) saat bekerja pada ketinggian di atas 1,8 meter.'**
+  String get ruleSafety02Explanation;
+
+  /// No description provided for @ruleSafety02Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Kaitkan kait ganda karabiner safety harness ke pipa scaffolding / lifeline kokoh\nGunakan helm keselamatan dengan tali dagu terpasang kencang di zona proyek'**
+  String get ruleSafety02Dos;
+
+  /// No description provided for @ruleSafety02Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Memasuki area konstruksi proyek aktif hanya memakai sandal jepit atau sepatu kasual\nBekerja pada scaffolding bambu tanpa railing pengaman jatuh (fall protection)'**
+  String get ruleSafety02Donts;
+
+  /// No description provided for @ruleSafety03Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Larangan Merokok di Kawasan Tanpa Rokok (KTR)'**
+  String get ruleSafety03Title;
+
+  /// No description provided for @ruleSafety03Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Dilarang merokok dan vape di fasilitas kesehatan, sekolah, tempat ibadah, angkutan umum, dan ruang tertutup.'**
+  String get ruleSafety03Summary;
+
+  /// No description provided for @ruleSafety03Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Denda perorangan hingga Rp 50.000.000 atau kurungan penjara maksimal 6 bulan (tergantung Perda)'**
+  String get ruleSafety03Penalty;
+
+  /// No description provided for @ruleSafety03Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'UU Kesehatan No. 17/2023 mewajibkan pengelola gedung menetapkan Kawasan Tanpa Rokok (KTR). Pelanggaran merokok konvensional maupun rokok elektronik di area KTR dikenakan sanksi denda tegas oleh Satpol PP.'**
+  String get ruleSafety03Explanation;
+
+  /// No description provided for @ruleSafety03Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Merokok hanya pada area khusus terbuka (smoking area) yang jauh dari akses keluar-masuk\nMatikan puntung rokok di asbak sampai benar-benar padam tanpa bara api tersisa'**
+  String get ruleSafety03Dos;
+
+  /// No description provided for @ruleSafety03Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Menghisap rokok atau pod vape di lorong rumah sakit, ruang kelas, atau dalam lift\nMembuang puntung rokok yang masih menyala ke tempat sampah kering / rumput kering'**
+  String get ruleSafety03Donts;
+
+  /// No description provided for @ruleSafety04Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Prosedur Tanggap Darurat & Hak Menolak Kerja Berbahaya'**
+  String get ruleSafety04Title;
+
+  /// No description provided for @ruleSafety04Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Pekerja berhak menolak pekerjaan jika lingkungan kerja mengancam nyawa tanpa perlindungan memadai.'**
+  String get ruleSafety04Summary;
+
+  /// No description provided for @ruleSafety04Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Sanksi pidana kurungan atau denda bagi pengusaha yang memaksa pekerja bekerja dalam bahaya ekstrem'**
+  String get ruleSafety04Penalty;
+
+  /// No description provided for @ruleSafety04Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Pasal 12 huruf d UU No. 1/1970 menjamin hak tenaga kerja untuk menyatakan keberatan dan menolak bekerja pada pekerjaan di mana syarat keselamatan dan kesehatan kerja (K3) serta APD tidak dipenuhi dan membahayakan keselamatan jiwanya.'**
+  String get ruleSafety04Explanation;
+
+  /// No description provided for @ruleSafety04Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Laporkan kondisi unsafe condition atau unsafe action kepada Ahli K3 / Supervisor kerja\nHafalkan titik kumpul aman (Assembly Point) di area lingkungan kerja Anda'**
+  String get ruleSafety04Dos;
+
+  /// No description provided for @ruleSafety04Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Memaksa masuk ke ruang terbatas (confined space) tanpa blower sirkulasi dan gas detector\nMenghukum atau memotong gaji buruh yang menolak tugas berisiko tinggi tanpa APD'**
+  String get ruleSafety04Donts;
+
+  /// No description provided for @ruleEthics01Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Larangan Gratifikasi & Suap Pejabat Publik'**
+  String get ruleEthics01Title;
+
+  /// No description provided for @ruleEthics01Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Pemberian hadiah atau fasilitas kepada pegawai negeri/penyelenggara negara dianggap suap bila berhubungan dengan jabatannya.'**
+  String get ruleEthics01Summary;
+
+  /// No description provided for @ruleEthics01Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Pidana penjara seumur hidup atau 4-20 tahun dan denda hingga Rp 1.000.000.000'**
+  String get ruleEthics01Penalty;
+
+  /// No description provided for @ruleEthics01Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Pasal 12B UU Tindak Pidana Korupsi (UU Tipikor) menyatakan setiap gratifikasi kepada pegawai negeri dianggap suap jika berhubungan dengan jabatan dan berlawanan dengan kewajibannya, kecuali dilaporkan ke KPK dalam waktu maksimal 30 hari kerja.'**
+  String get ruleEthics01Explanation;
+
+  /// No description provided for @ruleEthics01Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Laporkan setiap penerimaan parsel/bingkisan dinas ke Unit Pengendalian Gratifikasi (UPG) atau KPK\nTolak tawaran amplop pelicin atau fasilitas akomodasi mewah dari vendor tender'**
+  String get ruleEthics01Dos;
+
+  /// No description provided for @ruleEthics01Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Memberi parsel lebaran atau cinderamata mahal kepada pejabat pembuat komitmen proyek\nMenitipkan uang pelicin di loket pelayanan izin publik untuk mempercepat antrean'**
+  String get ruleEthics01Donts;
+
+  /// No description provided for @ruleEthics02Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Perlindungan Saksi & Pelapor Pidana (Whistleblower)'**
+  String get ruleEthics02Title;
+
+  /// No description provided for @ruleEthics02Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Pelapor tindak pidana korupsi dan kejahatan terorganisir dijamin kerahasiaan identitas dan perlindungan fisik hukum.'**
+  String get ruleEthics02Summary;
+
+  /// No description provided for @ruleEthics02Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Pidana penjara hingga 7 tahun bagi pihak yang mengintimidasi atau membalas dendam kepada saksi/korban'**
+  String get ruleEthics02Penalty;
+
+  /// No description provided for @ruleEthics02Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'UU Perlindungan Saksi dan Korban (UU LPSK) menjamin saksi dan pelapor (whistleblower) tidak dapat dituntut secara hukum, baik perdata maupun pidana, atas laporan kesaksian yang akan atau telah diberikannya secara beriktikad baik.'**
+  String get ruleEthics02Explanation;
+
+  /// No description provided for @ruleEthics02Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Kumpulkan bukti dokumen, rekaman, atau alur transaksi sebelum melapor ke LPSK / KPK\nGunakan kanal pengaduan resmi terenkripsi (Whistleblowing System / WBS)'**
+  String get ruleEthics02Dos;
+
+  /// No description provided for @ruleEthics02Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Membongkar identitas asli pelapor tindak pidana di lingkungan kantor atau medsos terbuka\nMemberikan sanksi mutasi jabatan atau PHK kepada pegawai yang melaporkan kecurangan korporasi'**
+  String get ruleEthics02Donts;
+
+  /// No description provided for @ruleEthics03Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Larangan Benturan Kepentingan Pengadaan Barang & Jasa'**
+  String get ruleEthics03Title;
+
+  /// No description provided for @ruleEthics03Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Pejabat pengadaan dilarang mengikutsertakan perusahaan milik pribadi atau keluarga dalam lelang proyek.'**
+  String get ruleEthics03Summary;
+
+  /// No description provided for @ruleEthics03Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Pembatalan kontrak sepihak, sanksi daftar hitam (blacklist), dan tuntutan korupsi pasal 12i UU Tipikor'**
+  String get ruleEthics03Penalty;
+
+  /// No description provided for @ruleEthics03Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Pasal 12 huruf i UU Tipikor dan aturan LKPP melarang pejabat atau aparatur sipil negara baik langsung maupun tidak langsung turut serta dalam pemborongan, pengadaan, atau persewaan yang pada saat dilakukan perbuatan, seluruh atau sebagian ditugaskan untuk mengurus atau mengawasinya.'**
+  String get ruleEthics03Explanation;
+
+  /// No description provided for @ruleEthics03Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Deklarasikan Surat Pernyataan Bebas Benturan Kepentingan sebelum panitia lelang dibentuk\nUndurkan diri dari proses evaluasi tender jika peserta tender memiliki hubungan darah/afinitas'**
+  String get ruleEthics03Dos;
+
+  /// No description provided for @ruleEthics03Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Memenangkan vendor titipan kenalan tanpa verifikasi teknis dan adu harga kompetitif\nMemecah paket pengadaan agar terhindar dari kewajiban lelang terbuka sistem elektronik'**
+  String get ruleEthics03Donts;
+
+  /// No description provided for @ruleEthics04Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Kerahasiaan Medis & Hubungan Dokter-Pasien'**
+  String get ruleEthics04Title;
+
+  /// No description provided for @ruleEthics04Summary.
+  ///
+  /// In id, this message translates to:
+  /// **'Tenaga kesehatan wajib menjaga kerahasiaan rekam medis dan data kesehatan pasien.'**
+  String get ruleEthics04Summary;
+
+  /// No description provided for @ruleEthics04Penalty.
+  ///
+  /// In id, this message translates to:
+  /// **'Sanksi disiplin etik kedokteran, pencabutan Surat Izin Praktik (SIP), hingga pidana pembocoran rahasia'**
+  String get ruleEthics04Penalty;
+
+  /// No description provided for @ruleEthics04Explanation.
+  ///
+  /// In id, this message translates to:
+  /// **'Pasal 296 UU Kesehatan No. 17/2023 dan Permenkes tentang Rekam Medis menegaskan bahwa isi rekam medis adalah rahasia dan milik pasien. Pembukaan rekam medis tanpa izin pasien hanya diizinkan untuk kepentingan penegakan hukum resmi.'**
+  String get ruleEthics04Explanation;
+
+  /// No description provided for @ruleEthics04Dos.
+  ///
+  /// In id, this message translates to:
+  /// **'Minta surat persetujuan tertulis (informed consent) sebelum melakukan tindakan medis invasif\nSimpan rekam medis fisik dalam lemari terkunci atau rekam medis elektronik terenkripsi'**
+  String get ruleEthics04Dos;
+
+  /// No description provided for @ruleEthics04Donts.
+  ///
+  /// In id, this message translates to:
+  /// **'Menceritakan riwayat penyakit atau foto kondisi luka pasien di media sosial pribadi\nMenyerahkan salinan resume medis kepada pihak asuransi tanpa otorisasi bertandatangan pasien'**
+  String get ruleEthics04Donts;
+
+  /// No description provided for @shareRuleCard.
+  ///
+  /// In id, this message translates to:
+  /// **'Bagikan Kartu Aturan'**
+  String get shareRuleCard;
+
+  /// No description provided for @shareRuleCardFailed.
+  ///
+  /// In id, this message translates to:
+  /// **'Gagal membagikan kartu aturan'**
+  String get shareRuleCardFailed;
+
+  /// No description provided for @shareRuleCardDownloaded.
+  ///
+  /// In id, this message translates to:
+  /// **'Kartu aturan berhasil disimpan'**
+  String get shareRuleCardDownloaded;
+
+  /// No description provided for @shareRuleTextCopied.
+  ///
+  /// In id, this message translates to:
+  /// **'Teks aturan berhasil disalin'**
+  String get shareRuleTextCopied;
+
+  /// No description provided for @shareCopyText.
+  ///
+  /// In id, this message translates to:
+  /// **'Salin Teks'**
+  String get shareCopyText;
+
+  /// No description provided for @shareDownloadImage.
+  ///
+  /// In id, this message translates to:
+  /// **'Simpan Gambar'**
+  String get shareDownloadImage;
+
+  /// No description provided for @sharePreparing.
+  ///
+  /// In id, this message translates to:
+  /// **'Menyiapkan kartu...'**
+  String get sharePreparing;
+
+  /// No description provided for @shareConsequenceHeader.
+  ///
+  /// In id, this message translates to:
+  /// **'KONSEKUENSI HUKUM'**
+  String get shareConsequenceHeader;
+
+  /// No description provided for @readBadgeTitle.
+  ///
+  /// In id, this message translates to:
+  /// **'Lencana Literasi Hukum'**
+  String get readBadgeTitle;
+
+  /// No description provided for @readBadgeShareTooltip.
+  ///
+  /// In id, this message translates to:
+  /// **'Bagikan pencapaian literasi hukum'**
+  String get readBadgeShareTooltip;
+
+  /// No description provided for @tierNew.
+  ///
+  /// In id, this message translates to:
+  /// **'Pemula'**
+  String get tierNew;
+
+  /// No description provided for @tierReader.
+  ///
+  /// In id, this message translates to:
+  /// **'Pembaca Hukum'**
+  String get tierReader;
+
+  /// No description provided for @tierLearner.
+  ///
+  /// In id, this message translates to:
+  /// **'Pemerhati Aturan'**
+  String get tierLearner;
+
+  /// No description provided for @tierScholar.
+  ///
+  /// In id, this message translates to:
+  /// **'Cendekia Hukum'**
+  String get tierScholar;
+
+  /// No description provided for @tierExpert.
+  ///
+  /// In id, this message translates to:
+  /// **'Pakar Regulasi'**
+  String get tierExpert;
 }
 
 class _AppLocalizationsDelegate

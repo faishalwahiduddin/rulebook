@@ -1,0 +1,238 @@
+import '../../l10n/app_localizations.dart';
+import '../models/rule_item.dart';
+
+extension LocalizedRuleItem on RuleItem {
+  String localizedTitle(AppLocalizations? l10n) {
+    if (l10n == null) return title;
+    return switch (id) {
+      'traffic-01' => l10n.ruleTraffic01Title,
+      'traffic-02' => l10n.ruleTraffic02Title,
+      'traffic-03' => l10n.ruleTraffic03Title,
+      'traffic-04' => l10n.ruleTraffic04Title,
+      'traffic-05' => l10n.ruleTraffic05Title,
+      'traffic-06' => l10n.ruleTraffic06Title,
+      'traffic-07' => l10n.ruleTraffic07Title,
+      'traffic-08' => l10n.ruleTraffic08Title,
+      'labor-01' => l10n.ruleLabor01Title,
+      'labor-02' => l10n.ruleLabor02Title,
+      'labor-03' => l10n.ruleLabor03Title,
+      'labor-04' => l10n.ruleLabor04Title,
+      'labor-05' => l10n.ruleLabor05Title,
+      'labor-06' => l10n.ruleLabor06Title,
+      'privacy-01' => l10n.rulePrivacy01Title,
+      'privacy-02' => l10n.rulePrivacy02Title,
+      'privacy-03' => l10n.rulePrivacy03Title,
+      'privacy-04' => l10n.rulePrivacy04Title,
+      'privacy-05' => l10n.rulePrivacy05Title,
+      'consumer-01' => l10n.ruleConsumer01Title,
+      'consumer-02' => l10n.ruleConsumer02Title,
+      'consumer-03' => l10n.ruleConsumer03Title,
+      'consumer-04' => l10n.ruleConsumer04Title,
+      'safety-01' => l10n.ruleSafety01Title,
+      'safety-02' => l10n.ruleSafety02Title,
+      'safety-03' => l10n.ruleSafety03Title,
+      'safety-04' => l10n.ruleSafety04Title,
+      'ethics-01' => l10n.ruleEthics01Title,
+      'ethics-02' => l10n.ruleEthics02Title,
+      'ethics-03' => l10n.ruleEthics03Title,
+      'ethics-04' => l10n.ruleEthics04Title,
+      _ => title,
+    };
+  }
+
+  String localizedSummary(AppLocalizations? l10n) {
+    if (l10n == null) return summary;
+    return switch (id) {
+      'traffic-01' => l10n.ruleTraffic01Summary,
+      'traffic-02' => l10n.ruleTraffic02Summary,
+      'traffic-03' => l10n.ruleTraffic03Summary,
+      'traffic-04' => l10n.ruleTraffic04Summary,
+      'traffic-05' => l10n.ruleTraffic05Summary,
+      'traffic-06' => l10n.ruleTraffic06Summary,
+      'traffic-07' => l10n.ruleTraffic07Summary,
+      'traffic-08' => l10n.ruleTraffic08Summary,
+      'labor-01' => l10n.ruleLabor01Summary,
+      'labor-02' => l10n.ruleLabor02Summary,
+      'labor-03' => l10n.ruleLabor03Summary,
+      'labor-04' => l10n.ruleLabor04Summary,
+      'labor-05' => l10n.ruleLabor05Summary,
+      'labor-06' => l10n.ruleLabor06Summary,
+      'privacy-01' => l10n.rulePrivacy01Summary,
+      'privacy-02' => l10n.rulePrivacy02Summary,
+      'privacy-03' => l10n.rulePrivacy03Summary,
+      'privacy-04' => l10n.rulePrivacy04Summary,
+      'privacy-05' => l10n.rulePrivacy05Summary,
+      'consumer-01' => l10n.ruleConsumer01Summary,
+      'consumer-02' => l10n.ruleConsumer02Summary,
+      'consumer-03' => l10n.ruleConsumer03Summary,
+      'consumer-04' => l10n.ruleConsumer04Summary,
+      'safety-01' => l10n.ruleSafety01Summary,
+      'safety-02' => l10n.ruleSafety02Summary,
+      'safety-03' => l10n.ruleSafety03Summary,
+      'safety-04' => l10n.ruleSafety04Summary,
+      'ethics-01' => l10n.ruleEthics01Summary,
+      'ethics-02' => l10n.ruleEthics02Summary,
+      'ethics-03' => l10n.ruleEthics03Summary,
+      'ethics-04' => l10n.ruleEthics04Summary,
+      _ => summary,
+    };
+  }
+
+  String localizedPenalty(AppLocalizations? l10n) {
+    if (l10n == null) return penaltyOrRight;
+    return switch (id) {
+      'traffic-01' => l10n.ruleTraffic01Penalty,
+      'traffic-02' => l10n.ruleTraffic02Penalty,
+      'traffic-03' => l10n.ruleTraffic03Penalty,
+      'traffic-04' => l10n.ruleTraffic04Penalty,
+      'traffic-05' => l10n.ruleTraffic05Penalty,
+      'traffic-06' => l10n.ruleTraffic06Penalty,
+      'traffic-07' => l10n.ruleTraffic07Penalty,
+      'traffic-08' => l10n.ruleTraffic08Penalty,
+      'labor-01' => l10n.ruleLabor01Penalty,
+      'labor-02' => l10n.ruleLabor02Penalty,
+      'labor-03' => l10n.ruleLabor03Penalty,
+      'labor-04' => l10n.ruleLabor04Penalty,
+      'labor-05' => l10n.ruleLabor05Penalty,
+      'labor-06' => l10n.ruleLabor06Penalty,
+      'privacy-01' => l10n.rulePrivacy01Penalty,
+      'privacy-02' => l10n.rulePrivacy02Penalty,
+      'privacy-03' => l10n.rulePrivacy03Penalty,
+      'privacy-04' => l10n.rulePrivacy04Penalty,
+      'privacy-05' => l10n.rulePrivacy05Penalty,
+      'consumer-01' => l10n.ruleConsumer01Penalty,
+      'consumer-02' => l10n.ruleConsumer02Penalty,
+      'consumer-03' => l10n.ruleConsumer03Penalty,
+      'consumer-04' => l10n.ruleConsumer04Penalty,
+      'safety-01' => l10n.ruleSafety01Penalty,
+      'safety-02' => l10n.ruleSafety02Penalty,
+      'safety-03' => l10n.ruleSafety03Penalty,
+      'safety-04' => l10n.ruleSafety04Penalty,
+      'ethics-01' => l10n.ruleEthics01Penalty,
+      'ethics-02' => l10n.ruleEthics02Penalty,
+      'ethics-03' => l10n.ruleEthics03Penalty,
+      'ethics-04' => l10n.ruleEthics04Penalty,
+      _ => penaltyOrRight,
+    };
+  }
+
+  String localizedExplanation(AppLocalizations? l10n) {
+    if (l10n == null) return fullExplanation;
+    return switch (id) {
+      'traffic-01' => l10n.ruleTraffic01Explanation,
+      'traffic-02' => l10n.ruleTraffic02Explanation,
+      'traffic-03' => l10n.ruleTraffic03Explanation,
+      'traffic-04' => l10n.ruleTraffic04Explanation,
+      'traffic-05' => l10n.ruleTraffic05Explanation,
+      'traffic-06' => l10n.ruleTraffic06Explanation,
+      'traffic-07' => l10n.ruleTraffic07Explanation,
+      'traffic-08' => l10n.ruleTraffic08Explanation,
+      'labor-01' => l10n.ruleLabor01Explanation,
+      'labor-02' => l10n.ruleLabor02Explanation,
+      'labor-03' => l10n.ruleLabor03Explanation,
+      'labor-04' => l10n.ruleLabor04Explanation,
+      'labor-05' => l10n.ruleLabor05Explanation,
+      'labor-06' => l10n.ruleLabor06Explanation,
+      'privacy-01' => l10n.rulePrivacy01Explanation,
+      'privacy-02' => l10n.rulePrivacy02Explanation,
+      'privacy-03' => l10n.rulePrivacy03Explanation,
+      'privacy-04' => l10n.rulePrivacy04Explanation,
+      'privacy-05' => l10n.rulePrivacy05Explanation,
+      'consumer-01' => l10n.ruleConsumer01Explanation,
+      'consumer-02' => l10n.ruleConsumer02Explanation,
+      'consumer-03' => l10n.ruleConsumer03Explanation,
+      'consumer-04' => l10n.ruleConsumer04Explanation,
+      'safety-01' => l10n.ruleSafety01Explanation,
+      'safety-02' => l10n.ruleSafety02Explanation,
+      'safety-03' => l10n.ruleSafety03Explanation,
+      'safety-04' => l10n.ruleSafety04Explanation,
+      'ethics-01' => l10n.ruleEthics01Explanation,
+      'ethics-02' => l10n.ruleEthics02Explanation,
+      'ethics-03' => l10n.ruleEthics03Explanation,
+      'ethics-04' => l10n.ruleEthics04Explanation,
+      _ => fullExplanation,
+    };
+  }
+
+  List<String> localizedDos(AppLocalizations? l10n) {
+    if (l10n == null) return keyDos;
+    final raw = switch (id) {
+      'traffic-01' => l10n.ruleTraffic01Dos,
+      'traffic-02' => l10n.ruleTraffic02Dos,
+      'traffic-03' => l10n.ruleTraffic03Dos,
+      'traffic-04' => l10n.ruleTraffic04Dos,
+      'traffic-05' => l10n.ruleTraffic05Dos,
+      'traffic-06' => l10n.ruleTraffic06Dos,
+      'traffic-07' => l10n.ruleTraffic07Dos,
+      'traffic-08' => l10n.ruleTraffic08Dos,
+      'labor-01' => l10n.ruleLabor01Dos,
+      'labor-02' => l10n.ruleLabor02Dos,
+      'labor-03' => l10n.ruleLabor03Dos,
+      'labor-04' => l10n.ruleLabor04Dos,
+      'labor-05' => l10n.ruleLabor05Dos,
+      'labor-06' => l10n.ruleLabor06Dos,
+      'privacy-01' => l10n.rulePrivacy01Dos,
+      'privacy-02' => l10n.rulePrivacy02Dos,
+      'privacy-03' => l10n.rulePrivacy03Dos,
+      'privacy-04' => l10n.rulePrivacy04Dos,
+      'privacy-05' => l10n.rulePrivacy05Dos,
+      'consumer-01' => l10n.ruleConsumer01Dos,
+      'consumer-02' => l10n.ruleConsumer02Dos,
+      'consumer-03' => l10n.ruleConsumer03Dos,
+      'consumer-04' => l10n.ruleConsumer04Dos,
+      'safety-01' => l10n.ruleSafety01Dos,
+      'safety-02' => l10n.ruleSafety02Dos,
+      'safety-03' => l10n.ruleSafety03Dos,
+      'safety-04' => l10n.ruleSafety04Dos,
+      'ethics-01' => l10n.ruleEthics01Dos,
+      'ethics-02' => l10n.ruleEthics02Dos,
+      'ethics-03' => l10n.ruleEthics03Dos,
+      'ethics-04' => l10n.ruleEthics04Dos,
+      _ => '',
+    };
+    if (raw.isEmpty) return keyDos;
+    final lines = raw.split('\n').map((s) => s.trim()).where((s) => s.isNotEmpty).toList();
+    return lines.isNotEmpty ? lines : keyDos;
+  }
+
+  List<String> localizedDonts(AppLocalizations? l10n) {
+    if (l10n == null) return keyDonts;
+    final raw = switch (id) {
+      'traffic-01' => l10n.ruleTraffic01Donts,
+      'traffic-02' => l10n.ruleTraffic02Donts,
+      'traffic-03' => l10n.ruleTraffic03Donts,
+      'traffic-04' => l10n.ruleTraffic04Donts,
+      'traffic-05' => l10n.ruleTraffic05Donts,
+      'traffic-06' => l10n.ruleTraffic06Donts,
+      'traffic-07' => l10n.ruleTraffic07Donts,
+      'traffic-08' => l10n.ruleTraffic08Donts,
+      'labor-01' => l10n.ruleLabor01Donts,
+      'labor-02' => l10n.ruleLabor02Donts,
+      'labor-03' => l10n.ruleLabor03Donts,
+      'labor-04' => l10n.ruleLabor04Donts,
+      'labor-05' => l10n.ruleLabor05Donts,
+      'labor-06' => l10n.ruleLabor06Donts,
+      'privacy-01' => l10n.rulePrivacy01Donts,
+      'privacy-02' => l10n.rulePrivacy02Donts,
+      'privacy-03' => l10n.rulePrivacy03Donts,
+      'privacy-04' => l10n.rulePrivacy04Donts,
+      'privacy-05' => l10n.rulePrivacy05Donts,
+      'consumer-01' => l10n.ruleConsumer01Donts,
+      'consumer-02' => l10n.ruleConsumer02Donts,
+      'consumer-03' => l10n.ruleConsumer03Donts,
+      'consumer-04' => l10n.ruleConsumer04Donts,
+      'safety-01' => l10n.ruleSafety01Donts,
+      'safety-02' => l10n.ruleSafety02Donts,
+      'safety-03' => l10n.ruleSafety03Donts,
+      'safety-04' => l10n.ruleSafety04Donts,
+      'ethics-01' => l10n.ruleEthics01Donts,
+      'ethics-02' => l10n.ruleEthics02Donts,
+      'ethics-03' => l10n.ruleEthics03Donts,
+      'ethics-04' => l10n.ruleEthics04Donts,
+      _ => '',
+    };
+    if (raw.isEmpty) return keyDonts;
+    final lines = raw.split('\n').map((s) => s.trim()).where((s) => s.isNotEmpty).toList();
+    return lines.isNotEmpty ? lines : keyDonts;
+  }
+}

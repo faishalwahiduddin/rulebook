@@ -9,6 +9,7 @@ import '../../../core/models/rule_item.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_icons.dart';
 import '../../../core/utils/app_timezone.dart';
+import '../../../core/utils/l10n_helpers.dart';
 import '../../../core/utils/web_download_helper.dart';
 import '../../../l10n/app_localizations.dart';
 
@@ -104,12 +105,12 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
   RuleShareTheme _selectedTheme = RuleShareTheme.pactNavy;
   bool _isExporting = false;
 
-  String get _shareText {
+  String _shareText(AppLocalizations l10n) {
     final rule = widget.rule;
-    return '📌 ${rule.title}\n'
-        '⚖️ Dasar Hukum: ${rule.legalBasis}\n'
-        '⚠️ Sanksi / Hak: ${rule.penaltyOrRight}\n\n'
-        '📖 Ringkasan:\n${rule.summary}\n\n'
+    return '📌 ${rule.localizedTitle(l10n)}\n'
+        '⚖️ ${l10n.legalBasisLabel}: ${rule.legalBasis}\n'
+        '⚠️ ${l10n.consequenceLabel}: ${rule.localizedPenalty(l10n)}\n\n'
+        '📖 ${l10n.summary}:\n${rule.localizedSummary(l10n)}\n\n'
         'Telusuri ratusan aturan & SOP di RuleBook: https://rulebook.faishal.id';
   }
 
@@ -129,13 +130,14 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
   }
 
   Future<void> _shareImage() async {
+    final l10n = AppLocalizations.of(context)!;
     setState(() => _isExporting = true);
     try {
       final bytes = await _capturePngBytes();
       if (bytes == null) {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Gagal membuat gambar kartu aturan')),
+            SnackBar(content: Text(l10n.shareRuleCardFailed)),
           );
         }
         return;
@@ -148,7 +150,7 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
         downloadFileWeb(bytes, filename, 'image/png');
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Gambar kartu aturan berhasil diunduh')),
+            SnackBar(content: Text(l10n.shareRuleCardDownloaded)),
           );
         }
       } else {
@@ -161,7 +163,7 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
               mimeType: 'image/png',
             ),
           ],
-          text: _shareText,
+          text: _shareText(l10n),
         );
       }
     } finally {
@@ -170,10 +172,11 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
   }
 
   void _copyText() {
-    Clipboard.setData(ClipboardData(text: _shareText));
+    final l10n = AppLocalizations.of(context)!;
+    Clipboard.setData(ClipboardData(text: _shareText(l10n)));
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Teks aturan berhasil disalin ke clipboard'),
+      SnackBar(
+        content: Text(l10n.shareRuleTextCopied),
         behavior: SnackBarBehavior.floating,
       ),
     );
@@ -204,7 +207,7 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
                   const SizedBox(width: 10),
                   Expanded(
                     child: Text(
-                      'Bagikan Kartu Aturan',
+                      l10n.shareRuleCard,
                       style: theme.textTheme.titleMedium?.copyWith(
                         fontWeight: FontWeight.w700,
                         color: c.textPrimary,
@@ -406,7 +409,7 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
 
                                     // Rule Title
                                     Text(
-                                      rule.title,
+                                      rule.localizedTitle(l10n),
                                       maxLines: _aspectRatio == RuleShareAspectRatio.feed ? 2 : 3,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
@@ -445,7 +448,7 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'KONSEKUENSI & SANKSI',
+                                                  l10n.shareConsequenceHeader,
                                                   style: TextStyle(
                                                     color: _selectedTheme.accentColor,
                                                     fontSize: 9,
@@ -455,7 +458,7 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
                                                 ),
                                                 const SizedBox(height: 3),
                                                 Text(
-                                                  rule.penaltyOrRight,
+                                                  rule.localizedPenalty(l10n),
                                                   maxLines: _aspectRatio == RuleShareAspectRatio.feed ? 2 : 3,
                                                   overflow: TextOverflow.ellipsis,
                                                   style: TextStyle(
@@ -475,7 +478,7 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
 
                                     // Ringkasan Aturan
                                     Text(
-                                      rule.summary,
+                                      rule.localizedSummary(l10n),
                                       maxLines: _aspectRatio == RuleShareAspectRatio.feed ? 3 : 5,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
@@ -487,7 +490,7 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
                                     const SizedBox(height: 12),
 
                                     // Do / Don't Quick Tips
-                                    if (rule.keyDos.isNotEmpty) ...[
+                                    if (rule.localizedDos(l10n).isNotEmpty) ...[
                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
@@ -501,7 +504,7 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
                                           ),
                                           Expanded(
                                             child: Text(
-                                              rule.keyDos.first,
+                                              rule.localizedDos(l10n).first,
                                               maxLines: 1,
                                               overflow: TextOverflow.ellipsis,
                                               style: TextStyle(
@@ -515,7 +518,7 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
                                       ),
                                       const SizedBox(height: 4),
                                     ],
-                                    if (rule.keyDonts.isNotEmpty) ...[
+                                    if (rule.localizedDonts(l10n).isNotEmpty) ...[
                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
@@ -529,7 +532,7 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
                                           ),
                                           Expanded(
                                             child: Text(
-                                              rule.keyDonts.first,
+                                              rule.localizedDonts(l10n).first,
                                               maxLines: 1,
                                               overflow: TextOverflow.ellipsis,
                                               style: TextStyle(
@@ -598,7 +601,7 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
                 children: [
                   OutlinedButton.icon(
                     icon: AppIcon(AppIconData.copy, size: 16, color: c.textPrimary),
-                    label: const Text('Salin Teks'),
+                    label: Text(l10n.shareCopyText),
                     onPressed: _copyText,
                   ),
                   const SizedBox(width: 12),
@@ -621,8 +624,8 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
                           : const Icon(Icons.share_rounded, size: 18),
                       label: Text(
                         _isExporting
-                            ? 'Menyiapkan...'
-                            : (kIsWeb ? 'Unduh Gambar' : 'Bagikan Kartu Aturan'),
+                            ? l10n.sharePreparing
+                            : (kIsWeb ? l10n.shareDownloadImage : l10n.shareRuleCard),
                         style: const TextStyle(fontWeight: FontWeight.w700),
                       ),
                       onPressed: _isExporting ? null : _shareImage,

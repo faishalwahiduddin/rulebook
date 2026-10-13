@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import '../../core/constants/app_constants.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/providers/locale_provider.dart';
@@ -10,22 +10,55 @@ import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/utils/app_timezone.dart';
+import '../../core/utils/backup_file_io.dart';
+import '../../core/utils/l10n_helpers.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
 
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
 
-  static const Map<String, ({String name, String nativeName})> _languages = {
-    'id': (name: 'Indonesian', nativeName: 'Bahasa Indonesia'),
-    'en': (name: 'English', nativeName: 'English'),
-    'ar': (name: 'Arabic', nativeName: 'العربية'),
-    'jv': (name: 'Javanese', nativeName: 'Basa Jawa'),
-    'su': (name: 'Sundanese', nativeName: 'Basa Sunda'),
-    'zh': (name: 'Chinese', nativeName: '中文 (简体)'),
-    'ja': (name: 'Japanese', nativeName: '日本語'),
-    'es': (name: 'Spanish', nativeName: 'Español'),
-  };
+  static const List<String> _supportedLocales = [
+    'id',
+    'en',
+    'ar',
+    'jv',
+    'su',
+    'zh',
+    'ja',
+    'es',
+  ];
+
+  Future<void> _importBackup(BuildContext context, WidgetRef ref) async {
+    void notify(String message, {required bool ok}) {
+      final cc = AppColors.of(context);
+      ScaffoldMessenger.of(context)
+        ..hideCurrentSnackBar()
+        ..showSnackBar(SnackBar(
+          content: Text(message),
+          backgroundColor: ok ? cc.success : cc.danger,
+        ));
+    }
+
+    final l = AppLocalizations.of(context)!;
+    final String? raw;
+    try {
+      raw = await BackupFileIo.pickBackupContents();
+    } catch (_) {
+      if (context.mounted) notify(l.importBackupFailed, ok: false);
+      return;
+    }
+    if (raw == null) return;
+    final ok = await ref
+        .read(localStorageServiceProvider)
+        .restoreFromBackup(raw.trim());
+    if (!context.mounted) return;
+    if (ok) {
+      ref.invalidate(bookmarksProvider);
+      ref.invalidate(ruleNotesProvider);
+    }
+    notify(ok ? l.importBackupSuccess : l.importBackupFailed, ok: ok);
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -141,14 +174,8 @@ class SettingsScreen extends ConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        _languages[langCode]?.nativeName ?? langCode,
+                        localeName(l10n, langCode),
                         style: theme.textTheme.titleSmall,
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        _languages[langCode]?.name ?? langCode,
-                        style: theme.textTheme.bodySmall
-                            ?.copyWith(color: c.textMuted),
                       ),
                     ],
                   ),
@@ -191,19 +218,14 @@ class SettingsScreen extends ConsumerWidget {
             child: Column(
               children: [
                 InkWell(
-                  onTap: () {
-                    final jsonStr = ref
+                  onTap: () async {
+                    final payload = await ref
                         .read(localStorageServiceProvider)
                         .exportBackupJson();
-                    Clipboard.setData(ClipboardData(text: jsonStr));
-                    final l = AppLocalizations.of(context)!;
-                    final cc = AppColors.of(context);
-                    ScaffoldMessenger.of(context)
-                      ..hideCurrentSnackBar()
-                      ..showSnackBar(SnackBar(
-                        content: Text(l.backupCopiedSnackbar),
-                        backgroundColor: cc.success,
-                      ));
+                    await BackupFileIo.exportToShareSheet(
+                      payload,
+                      subject: 'RuleBook',
+                    );
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(AppSpacing.lg),
@@ -223,6 +245,36 @@ class SettingsScreen extends ConsumerWidget {
                               const SizedBox(height: 2),
                               Text(
                                 l10n.copyBookmarkNotesClipboard,
+                                style: theme.textTheme.bodySmall
+                                    ?.copyWith(color: c.textMuted),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Divider(height: 1, color: c.divider),
+                InkWell(
+                  onTap: () => _importBackup(context, ref),
+                  child: Padding(
+                    padding: const EdgeInsets.all(AppSpacing.lg),
+                    child: Row(
+                      children: [
+                        AppIcon(AppIconData.refresh, size: 18, color: c.brand),
+                        const SizedBox(width: AppSpacing.md),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                l10n.importBackupTitle,
+                                style: theme.textTheme.titleSmall,
+                              ),
+                              const SizedBox(height: 2),
+                              Text(
+                                l10n.importBackupSubtitle,
                                 style: theme.textTheme.bodySmall
                                     ?.copyWith(color: c.textMuted),
                               ),
@@ -287,7 +339,15 @@ class SettingsScreen extends ConsumerWidget {
               children: [
                 _aboutRow(l10n.application, AppConstants.appName),
                 _divider(c),
-                _aboutRow(l10n.version, '${AppConstants.appVersion}+1'),
+                FutureBuilder<PackageInfo>(
+                  future: PackageInfo.fromPlatform(),
+                  builder: (context, snapshot) {
+                    final version = snapshot.hasData
+                        ? '${snapshot.data!.version}+${snapshot.data!.buildNumber}'
+                        : '...';
+                    return _aboutRow(l10n.version, version);
+                  },
+                ),
                 _divider(c),
                 _aboutRow(l10n.subdomain, 'rulebook.faishal.id'),
                 _divider(c),
@@ -492,12 +552,11 @@ class SettingsScreen extends ConsumerWidget {
               Flexible(
                 child: ListView(
                   shrinkWrap: true,
-                  children: _languages.entries.map((entry) {
-                    final isSelected = entry.key == currentLocale.languageCode;
+                  children: _supportedLocales.map((code) {
+                    final isSelected = code == currentLocale.languageCode;
                     return ListTile(
                       dense: true,
-                      title: Text(entry.value.nativeName),
-                      subtitle: Text(entry.value.name),
+                      title: Text(localeName(l10n, code)),
                       trailing: isSelected
                           ? AppIcon(AppIconData.checkCircle,
                               size: 20, color: c.brand)
@@ -505,7 +564,7 @@ class SettingsScreen extends ConsumerWidget {
                       onTap: () {
                         ref
                             .read(localeProvider.notifier)
-                            .setLocale(Locale(entry.key));
+                            .setLocale(Locale(code));
                         Navigator.pop(ctx);
                       },
                     );

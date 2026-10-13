@@ -1,0 +1,3 @@
+RuleBook is a pocket guide to traffic rules, SOPs, and key regulations — always offline.
+
+جزء من عائلة تطبيقات faishal.id. يعمل دون إنترنت قدر الإمكان، بلا إعلانات.

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:timezone/timezone.dart' as tz;
 import '../constants/app_constants.dart';
@@ -108,10 +109,11 @@ class LocalStorageService {
     return _prefs.setString('theme_mode', str);
   }
 
-  String exportBackupJson() {
+  Future<String> exportBackupJson() async {
+    final info = await PackageInfo.fromPlatform();
     final data = {
       'app': 'RuleBook',
-      'version': AppConstants.appVersion,
+      'version': '${info.version}+${info.buildNumber}',
       // Storage contract (§TZ): instants are stored as UTC `Z`, display
       // projects into the selected zone via AppTimeZone — never here.
       'exported_at': AppTimeZone.encodeForPrefs(AppTimeZone.nowUtc()),
