@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-30-optimasi-catatan-regulasi-bulanan-2026",
+  "app": "rulebook",
+  "publish_date": "2026-11-14",
+  "primary_keyword": "regulasi",
+  "idea_type": "advanced",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "optimasi-catatan-regulasi-bulanan-2026",
+    "en": "optimize-monthly-regulasi-logs",
+    "ar": "regulasi-4",
+    "jv": "pandhuan-regulasi-rulebook-4",
+    "su": "pituduh-regulasi-rulebook-4",
+    "zh": "rulebook-regulasi-实用指南-4",
+    "ja": "rulebookregulasi-ガイド-4"
+  },
+  "titles": {
+    "id": "Optimasi Catatan regulasi Bulanan",
+    "en": "Optimize Monthly regulasi Logs",
+    "ar": "regulasi — دليل RuleBook",
+    "jv": "Pandhuan: Optimasi Catatan regulasi Bulanan",
+    "su": "Pituduh: Optimasi Catatan regulasi Bulanan",
+    "zh": "RuleBook · regulasi 实用指南",
+    "ja": "RuleBook｜regulasi ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

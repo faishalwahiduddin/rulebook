@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-55-apakah-anda-perlu-tracker-untuk-aturan-l",
+  "app": "rulebook",
+  "publish_date": "2026-12-09",
+  "primary_keyword": "aturan lalu lintas",
+  "idea_type": "decide",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "apakah-anda-perlu-tracker-untuk-aturan-lalu-lintas",
+    "en": "do-you-need-a-tracker-for-aturan-lalu-lintas",
+    "ar": "aturan-lalu-lintas-7",
+    "jv": "pandhuan-aturan-lalu-lintas-rulebook-7",
+    "su": "pituduh-aturan-lalu-lintas-rulebook-7",
+    "zh": "rulebook-aturan-lalu-lintas-实用指南-7",
+    "ja": "rulebookaturan-lalu-lintas-ガイド-7"
+  },
+  "titles": {
+    "id": "Apakah Anda Perlu Tracker untuk aturan lalu lintas?",
+    "en": "Do You Need a Tracker for aturan lalu lintas?",
+    "ar": "aturan lalu lintas — دليل RuleBook",
+    "jv": "Pandhuan: Apakah Anda Perlu Tracker untuk aturan lalu lintas?",
+    "su": "Pituduh: Apakah Anda Perlu Tracker untuk aturan lalu lintas?",
+    "zh": "RuleBook · aturan lalu lintas 实用指南",
+    "ja": "RuleBook｜aturan lalu lintas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

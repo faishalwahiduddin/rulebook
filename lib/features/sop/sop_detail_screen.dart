@@ -4,6 +4,7 @@ import '../../core/models/sop_guide.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
+import '../../core/ui/app_scroll.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -59,8 +60,7 @@ class SopDetailScreen extends StatelessWidget {
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(
-            AppSpacing.lg, AppSpacing.sm, AppSpacing.lg, AppSpacing.xxxl),
+        padding: AppScroll.pagePadding(context, underShellNav: false),
         children: [
           Pill(
             label: sop.category.localizedLabel(l10n),

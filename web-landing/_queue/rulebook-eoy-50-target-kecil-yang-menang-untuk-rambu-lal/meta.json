@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-50-target-kecil-yang-menang-untuk-rambu-lal",
+  "app": "rulebook",
+  "publish_date": "2026-12-04",
+  "primary_keyword": "rambu lalu lintas",
+  "idea_type": "motivation",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "target-kecil-yang-menang-untuk-rambu-lalu-lintas-praktis",
+    "en": "small-winning-targets-for-rambu-lalu-lintas-practical",
+    "ar": "rambu-lalu-lintas-6",
+    "jv": "pandhuan-rambu-lalu-lintas-rulebook-6",
+    "su": "pituduh-rambu-lalu-lintas-rulebook-6",
+    "zh": "rulebook-rambu-lalu-lintas-实用指南-6",
+    "ja": "rulebookrambu-lalu-lintas-ガイド-6"
+  },
+  "titles": {
+    "id": "Target Kecil yang Menang untuk rambu lalu lintas",
+    "en": "Small Winning Targets for rambu lalu lintas (Practical)",
+    "ar": "rambu lalu lintas — دليل RuleBook",
+    "jv": "Pandhuan: Target Kecil yang Menang untuk rambu lalu lintas",
+    "su": "Pituduh: Target Kecil yang Menang untuk rambu lalu lintas",
+    "zh": "RuleBook · rambu lalu lintas 实用指南",
+    "ja": "RuleBook｜rambu lalu lintas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

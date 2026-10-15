@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-46-jadwal-terbaik-dalam-sehari-untuk-aturan",
+  "app": "rulebook",
+  "publish_date": "2026-11-30",
+  "primary_keyword": "aturan lalu lintas",
+  "idea_type": "time",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "jadwal-terbaik-dalam-sehari-untuk-aturan-lalu-lintas-mingguan",
+    "en": "best-time-of-day-for-aturan-lalu-lintas",
+    "ar": "aturan-lalu-lintas-6",
+    "jv": "pandhuan-aturan-lalu-lintas-rulebook-6",
+    "su": "pituduh-aturan-lalu-lintas-rulebook-6",
+    "zh": "rulebook-aturan-lalu-lintas-实用指南-6",
+    "ja": "rulebookaturan-lalu-lintas-ガイド-6"
+  },
+  "titles": {
+    "id": "Jadwal Terbaik dalam Sehari untuk aturan lalu lintas",
+    "en": "Best Time of Day for aturan lalu lintas — Offline First",
+    "ar": "aturan lalu lintas — دليل RuleBook",
+    "jv": "Pandhuan: Jadwal Terbaik dalam Sehari untuk aturan lalu lintas",
+    "su": "Pituduh: Jadwal Terbaik dalam Sehari untuk aturan lalu lintas",
+    "zh": "RuleBook · aturan lalu lintas 实用指南",
+    "ja": "RuleBook｜aturan lalu lintas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

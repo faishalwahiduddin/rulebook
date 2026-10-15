@@ -6,6 +6,8 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_icons.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/utils/l10n_helpers.dart';
+import '../../../core/ui/press_scale.dart';
+import '../../../core/ui/tap_target.dart';
 import '../../../core/widgets/app_ui.dart';
 import '../../../l10n/app_localizations.dart';
 
@@ -101,15 +103,17 @@ class RuleCard extends ConsumerWidget {
             ),
           ),
           const SizedBox(width: AppSpacing.xs),
-          IconButton(
-            visualDensity: VisualDensity.compact,
-            tooltip: saved ? l10n.removeBookmark : l10n.saveRule,
-            icon: AppIcon(
-              saved ? AppIconData.bookmarkFilled : AppIconData.bookmark,
-              size: 20,
-              color: saved ? c.brand : c.textFaint,
+          TapTarget(
+            semanticLabel: saved ? l10n.removeBookmark : l10n.saveRule,
+            onTap: () =>
+                ref.read(bookmarksProvider.notifier).toggleBookmark(rule.id),
+            child: PressScale(
+              child: AppIcon(
+                saved ? AppIconData.bookmarkFilled : AppIconData.bookmark,
+                size: 20,
+                color: saved ? c.brand : c.textFaint,
+              ),
             ),
-            onPressed: () => ref.read(bookmarksProvider.notifier).toggleBookmark(rule.id),
           ),
         ],
       ),

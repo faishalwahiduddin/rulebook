@@ -8,6 +8,8 @@ import '../../core/router/app_router.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
+import '../../core/ui/app_scroll.dart';
+import '../../core/ui/press_scale.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -99,8 +101,7 @@ class _ChecklistScreenState extends ConsumerState<ChecklistScreen> {
                         setState(() => _filter = RuleCategory.all),
                   )
                 : ListView.separated(
-                    padding: const EdgeInsets.fromLTRB(AppSpacing.lg,
-                        AppSpacing.xs, AppSpacing.lg, AppSpacing.xxl),
+                    padding: AppScroll.listPadding(context),
                     itemCount: filtered.length,
                     separatorBuilder: (_, _) =>
                         const SizedBox(height: AppSpacing.md),
@@ -140,15 +141,18 @@ class _ChecklistFilterChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
-    return Material(
-      color: selected ? selectedColor : c.surface,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(AppRadius.sm + 2),
-        side: BorderSide(color: selected ? selectedColor : c.border),
-      ),
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: onTap,
+    return PressScale(
+      onTap: onTap,
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          color: selected ? selectedColor : c.surface,
+          borderRadius: BorderRadius.circular(AppRadius.lg),
+          border: Border.all(
+            color: selected
+                ? selectedColor
+                : AppColors.hairlineBorder(context),
+          ),
+        ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
           child: Row(

@@ -10,6 +10,9 @@ import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/utils/l10n_helpers.dart';
 import '../../core/utils/validators.dart';
+import '../../core/ui/app_scroll.dart';
+import '../../core/ui/press_scale.dart';
+import '../../core/ui/tap_target.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
 import 'widgets/read_badge.dart';
@@ -129,22 +132,23 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
             icon: AppIcon(AppIconData.copy, size: 20, color: c.textPrimary),
             onPressed: _copySummary,
           ),
-          IconButton(
-            tooltip: saved ? l10n.removeBookmark : l10n.saveRule,
-            icon: AppIcon(
-              saved ? AppIconData.bookmarkFilled : AppIconData.bookmark,
-              size: 21,
-              color: saved ? c.brand : c.textPrimary,
-            ),
-            onPressed: () =>
+          TapTarget(
+            semanticLabel: saved ? l10n.removeBookmark : l10n.saveRule,
+            onTap: () =>
                 ref.read(bookmarksProvider.notifier).toggleBookmark(_rule.id),
+            child: PressScale(
+              child: AppIcon(
+                saved ? AppIconData.bookmarkFilled : AppIconData.bookmark,
+                size: 21,
+                color: saved ? c.brand : c.textPrimary,
+              ),
+            ),
           ),
           const SizedBox(width: AppSpacing.xs),
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(
-            AppSpacing.lg, AppSpacing.sm, AppSpacing.lg, AppSpacing.xxxl),
+        padding: AppScroll.pagePadding(context, underShellNav: false),
         children: [
           Pill(
             label: _rule.category.localizedLabel(l10n),

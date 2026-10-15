@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-57-amankan-log-regulasi-di-hp-bersama-haria",
+  "app": "rulebook",
+  "publish_date": "2026-12-11",
+  "primary_keyword": "regulasi",
+  "idea_type": "security",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "amankan-log-regulasi-di-hp-bersama-harian",
+    "en": "secure-regulasi-logs-on-a-shared-phone",
+    "ar": "regulasi-7",
+    "jv": "pandhuan-regulasi-rulebook-7",
+    "su": "pituduh-regulasi-rulebook-7",
+    "zh": "rulebook-regulasi-实用指南-7",
+    "ja": "rulebookregulasi-ガイド-7"
+  },
+  "titles": {
+    "id": "Amankan Log regulasi di HP Bersama",
+    "en": "Secure regulasi Logs on a Shared Phone",
+    "ar": "regulasi — دليل RuleBook",
+    "jv": "Pandhuan: Amankan Log regulasi di HP Bersama",
+    "su": "Pituduh: Amankan Log regulasi di HP Bersama",
+    "zh": "RuleBook · regulasi 实用指南",
+    "ja": "RuleBook｜regulasi ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

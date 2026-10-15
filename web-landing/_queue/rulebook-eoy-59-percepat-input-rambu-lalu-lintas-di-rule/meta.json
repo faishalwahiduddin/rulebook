@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-59-percepat-input-rambu-lalu-lintas-di-rule",
+  "app": "rulebook",
+  "publish_date": "2026-12-13",
+  "primary_keyword": "rambu lalu lintas",
+  "idea_type": "ux",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "percepat-input-rambu-lalu-lintas-di-rulebook-offline",
+    "en": "speed-up-rambu-lalu-lintas-input-in-rulebook",
+    "ar": "rambu-lalu-lintas-7",
+    "jv": "pandhuan-rambu-lalu-lintas-rulebook-7",
+    "su": "pituduh-rambu-lalu-lintas-rulebook-7",
+    "zh": "rulebook-rambu-lalu-lintas-实用指南-7",
+    "ja": "rulebookrambu-lalu-lintas-ガイド-7"
+  },
+  "titles": {
+    "id": "Percepat Input rambu lalu lintas di RuleBook",
+    "en": "Speed Up rambu lalu lintas Input in RuleBook",
+    "ar": "rambu lalu lintas — دليل RuleBook",
+    "jv": "Pandhuan: Percepat Input rambu lalu lintas di RuleBook",
+    "su": "Pituduh: Percepat Input rambu lalu lintas di RuleBook",
+    "zh": "RuleBook · rambu lalu lintas 实用指南",
+    "ja": "RuleBook｜rambu lalu lintas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

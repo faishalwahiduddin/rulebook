@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-11-kesalahan-umum-saat-sop-offline",
+  "app": "rulebook",
+  "publish_date": "2026-10-26",
+  "primary_keyword": "SOP",
+  "idea_type": "mistakes",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "kesalahan-umum-saat-sop-offline",
+    "en": "common-mistakes-when-doing-sop",
+    "ar": "sop-2",
+    "jv": "pandhuan-sop-rulebook-2",
+    "su": "pituduh-sop-rulebook-2",
+    "zh": "rulebook-sop-实用指南-2",
+    "ja": "rulebooksop-ガイド-2"
+  },
+  "titles": {
+    "id": "Kesalahan Umum saat SOP",
+    "en": "Common Mistakes When Doing SOP",
+    "ar": "SOP — دليل RuleBook",
+    "jv": "Pandhuan: Kesalahan Umum saat SOP",
+    "su": "Pituduh: Kesalahan Umum saat SOP",
+    "zh": "RuleBook · SOP 实用指南",
+    "ja": "RuleBook｜SOP ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

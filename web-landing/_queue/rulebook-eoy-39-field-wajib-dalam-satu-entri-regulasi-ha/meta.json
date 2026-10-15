@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-39-field-wajib-dalam-satu-entri-regulasi-ha",
+  "app": "rulebook",
+  "publish_date": "2026-11-23",
+  "primary_keyword": "regulasi",
+  "idea_type": "deep",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "field-wajib-dalam-satu-entri-regulasi-harian",
+    "en": "required-fields-in-one-regulasi-entry",
+    "ar": "regulasi-5",
+    "jv": "pandhuan-regulasi-rulebook-5",
+    "su": "pituduh-regulasi-rulebook-5",
+    "zh": "rulebook-regulasi-实用指南-5",
+    "ja": "rulebookregulasi-ガイド-5"
+  },
+  "titles": {
+    "id": "Field Wajib dalam Satu Entri regulasi",
+    "en": "Required Fields in One regulasi Entry",
+    "ar": "regulasi — دليل RuleBook",
+    "jv": "Pandhuan: Field Wajib dalam Satu Entri regulasi",
+    "su": "Pituduh: Field Wajib dalam Satu Entri regulasi",
+    "zh": "RuleBook · regulasi 实用指南",
+    "ja": "RuleBook｜regulasi ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

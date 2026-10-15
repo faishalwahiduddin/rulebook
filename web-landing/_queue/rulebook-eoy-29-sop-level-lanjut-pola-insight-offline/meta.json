@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-29-sop-level-lanjut-pola-insight-offline",
+  "app": "rulebook",
+  "publish_date": "2026-11-13",
+  "primary_keyword": "SOP",
+  "idea_type": "advanced",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "sop-level-lanjut-pola-insight-offline",
+    "en": "advanced-sop-patterns-insights",
+    "ar": "sop-4",
+    "jv": "pandhuan-sop-rulebook-4",
+    "su": "pituduh-sop-rulebook-4",
+    "zh": "rulebook-sop-实用指南-4",
+    "ja": "rulebooksop-ガイド-4"
+  },
+  "titles": {
+    "id": "SOP Level Lanjut: Pola &amp; Insight",
+    "en": "Advanced SOP: Patterns &amp; Insights",
+    "ar": "SOP — دليل RuleBook",
+    "jv": "Pandhuan: SOP Level Lanjut: Pola &amp; Insight",
+    "su": "Pituduh: SOP Level Lanjut: Pola &amp; Insight",
+    "zh": "RuleBook · SOP 实用指南",
+    "ja": "RuleBook｜SOP ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

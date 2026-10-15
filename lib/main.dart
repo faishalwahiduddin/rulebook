@@ -1,6 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'core/a11y/text_scale.dart';
 import 'core/providers/app_providers.dart';
+import 'core/theme/app_colors.dart';
+import 'core/ui/app_scroll.dart';
 import 'core/providers/locale_provider.dart';
 import 'core/providers/theme_provider.dart';
 import 'core/providers/timezone_provider.dart';
@@ -72,10 +76,23 @@ class _RuleBookAppState extends ConsumerState<RuleBookApp>
     return MaterialApp.router(
       title: 'RuleBook — Pocket Rules & Regulations',
       debugShowCheckedModeBanner: false,
+      scrollBehavior: const AppScrollBehavior(),
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: themeMode,
       routerConfig: appRouter,
+      builder: (context, child) {
+        final c = AppColors.of(context);
+        return AppTextScale(
+          child: CupertinoTheme(
+            data: CupertinoThemeData(
+              brightness: Theme.of(context).brightness,
+              barBackgroundColor: c.surface,
+            ),
+            child: child ?? const SizedBox.shrink(),
+          ),
+        );
+      },
       localizationsDelegates: const [
         AppLocalizations.delegate,
         FallbackMaterialLocalizationsDelegate(),

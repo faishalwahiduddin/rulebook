@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-60-desain-ritual-buka-aplikasi-untuk-rulebo",
+  "app": "rulebook",
+  "publish_date": "2026-12-14",
+  "primary_keyword": "aturan lalu lintas",
+  "idea_type": "ux",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "desain-ritual-buka-aplikasi-untuk-rulebook-2026",
+    "en": "app-open-ritual-design-for-rulebook",
+    "ar": "rulebook-7",
+    "jv": "pandhuan-rulebook-rulebook-7",
+    "su": "pituduh-rulebook-rulebook-7",
+    "zh": "rulebook-rulebook-实用指南-7",
+    "ja": "rulebookrulebook-ガイド-7"
+  },
+  "titles": {
+    "id": "Desain Ritual Buka Aplikasi untuk RuleBook",
+    "en": "App-Open Ritual Design for RuleBook",
+    "ar": "RuleBook — دليل RuleBook",
+    "jv": "Pandhuan: Desain Ritual Buka Aplikasi untuk RuleBook",
+    "su": "Pituduh: Desain Ritual Buka Aplikasi untuk RuleBook",
+    "zh": "RuleBook · RuleBook 实用指南",
+    "ja": "RuleBook｜RuleBook ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
+import '../../../core/ui/spring_sheet.dart';
 
 import '../../../core/models/rule_item.dart';
 import '../../../core/theme/app_colors.dart';
@@ -88,9 +89,8 @@ class RulebookShareDialog extends StatefulWidget {
   const RulebookShareDialog({super.key, required this.rule});
 
   static Future<void> show(BuildContext context, RuleItem rule) {
-    return showDialog(
+    return showSpringSheet<void>(
       context: context,
-      barrierColor: Colors.black.withValues(alpha: 0.75),
       builder: (context) => RulebookShareDialog(rule: rule),
     );
   }
@@ -189,18 +189,22 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
     final l10n = AppLocalizations.of(context)!;
     final rule = widget.rule;
 
-    return Dialog(
-      backgroundColor: c.surface,
-      surfaceTintColor: Colors.transparent,
-      insetPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 480, maxHeight: 720),
+    final maxH = MediaQuery.sizeOf(context).height * 0.92;
+    return Container(
+      decoration: BoxDecoration(
+        color: c.surface,
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      constraints: BoxConstraints(maxHeight: maxH),
+      child: SafeArea(
+        top: false,
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
+            const SpringSheetHandle(),
             // Modal header
             Padding(
-              padding: const EdgeInsets.fromLTRB(20, 16, 12, 12),
+              padding: const EdgeInsets.fromLTRB(20, 8, 12, 12),
               child: Row(
                 children: [
                   AppIcon(AppIconData.scale, size: 22, color: c.brand),
@@ -224,7 +228,7 @@ class _RulebookShareDialogState extends State<RulebookShareDialog> {
             const Divider(height: 1),
 
             // Main scrollable content
-            Expanded(
+            Flexible(
               child: SingleChildScrollView(
                 padding: const EdgeInsets.all(20),
                 child: Column(

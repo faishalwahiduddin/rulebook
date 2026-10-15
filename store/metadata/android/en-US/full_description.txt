@@ -1,1 +1,18 @@
-RuleBook is a pocket guide to traffic rules, SOPs, and key regulations — always offline.
+RuleBook is your tabletop game night companion. Easily record round-by-round player scores, keep games moving with turn timers, and store quick rule references for your favorite board games.
+
+Core Features:
+✓ Flexible multi-player score sheet accommodating variable scoring rules
+✓ Turn countdown timer to keep game pacing brisk and balanced
+✓ Custom rule summaries notebook for quick clarification during play
+✓ Match history ledger recording wins, dates, and player stats
+✓ Fair first-player randomizer tool
+✓ 100% offline with zero ads to prevent game night disruptions
+✓ Clean dark interface optimized for evening social sessions
+
+Why RuleBook?
+Tallying points on scrap paper often leads to math disputes and lost sheets. RuleBook ensures transparent, accurate scoring from the opening turn to the final victory declaration.
+
+Gaming Privacy:
+All match archives and player score histories remain on your local device.
+
+Part of the faishal.id leisure and tabletop suite.

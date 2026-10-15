@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-09-sop-regulasi-offline-untuk-orang-sibuk-h",
+  "app": "rulebook",
+  "publish_date": "2026-10-24",
+  "primary_keyword": "sop regulasi offline",
+  "idea_type": "persona",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "sop-regulasi-offline-untuk-orang-sibuk-harian",
+    "en": "sop-regulasi-offline-for-busy-people",
+    "ar": "sop-regulasi-offline",
+    "jv": "pandhuan-sop-regulasi-offline-rulebook",
+    "su": "pituduh-sop-regulasi-offline-rulebook",
+    "zh": "rulebook-sop-regulasi-offline-实用指南",
+    "ja": "rulebooksop-regulasi-offline-ガイド"
+  },
+  "titles": {
+    "id": "sop regulasi offline untuk orang yang waktunya sempit",
+    "en": "sop regulasi offline for Busy People",
+    "ar": "sop regulasi offline — دليل RuleBook",
+    "jv": "Pandhuan: sop regulasi offline untuk orang yang waktunya sempit",
+    "su": "Pituduh: sop regulasi offline untuk orang yang waktunya sempit",
+    "zh": "RuleBook · sop regulasi offline 实用指南",
+    "ja": "RuleBook｜sop regulasi offline ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

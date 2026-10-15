@@ -100,7 +100,9 @@ class AppTheme {
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppRadius.lg),
-          side: BorderSide(color: c.border),
+          side: BorderSide(
+            color: c.textPrimary.withValues(alpha: isDark ? 0.12 : 0.10),
+          ),
         ),
       ),
       dividerTheme: DividerThemeData(

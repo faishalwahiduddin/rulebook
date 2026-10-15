@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-64-bahasa-yang-konsisten-saat-mencatat-atur",
+  "app": "rulebook",
+  "publish_date": "2026-12-18",
+  "primary_keyword": "aturan lalu lintas",
+  "idea_type": "content",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "bahasa-yang-konsisten-saat-mencatat-aturan-lalu-lintas-mingguan",
+    "en": "consistent-language-when-logging-aturan-lalu-lintas",
+    "ar": "aturan-lalu-lintas-8",
+    "jv": "pandhuan-aturan-lalu-lintas-rulebook-8",
+    "su": "pituduh-aturan-lalu-lintas-rulebook-8",
+    "zh": "rulebook-aturan-lalu-lintas-实用指南-8",
+    "ja": "rulebookaturan-lalu-lintas-ガイド-8"
+  },
+  "titles": {
+    "id": "Bahasa yang Konsisten saat Mencatat aturan lalu lintas",
+    "en": "Consistent Language When Logging aturan lalu lintas — Offline First",
+    "ar": "aturan lalu lintas — دليل RuleBook",
+    "jv": "Pandhuan: Bahasa yang Konsisten saat Mencatat aturan lalu lintas",
+    "su": "Pituduh: Bahasa yang Konsisten saat Mencatat aturan lalu lintas",
+    "zh": "RuleBook · aturan lalu lintas 实用指南",
+    "ja": "RuleBook｜aturan lalu lintas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

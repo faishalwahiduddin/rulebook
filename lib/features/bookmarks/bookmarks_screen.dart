@@ -9,6 +9,8 @@ import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/utils/l10n_helpers.dart';
+import '../../core/ui/app_scroll.dart';
+import '../../core/ui/press_scale.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
 import '../catalog/widgets/rule_card.dart';
@@ -125,7 +127,7 @@ class _ModeSwitch extends StatelessWidget {
     Widget segment(int index, String label, int count) {
       final selected = mode == index;
       return Expanded(
-        child: GestureDetector(
+        child: PressScale(
           onTap: () => onChanged(index),
           child: AnimatedContainer(
             duration: AppMotion.fast,
@@ -156,7 +158,7 @@ class _ModeSwitch extends StatelessWidget {
       decoration: BoxDecoration(
         color: c.surfaceSunken,
         borderRadius: BorderRadius.circular(AppRadius.md),
-        border: Border.all(color: c.border),
+        border: Border.all(color: AppColors.hairlineBorder(context)),
       ),
       child: Row(
         children: [
@@ -189,15 +191,18 @@ class _FilterChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
-    return Material(
-      color: selected ? selectedColor : c.surface,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(AppRadius.sm + 2),
-        side: BorderSide(color: selected ? selectedColor : c.border),
-      ),
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: onTap,
+    return PressScale(
+      onTap: onTap,
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          color: selected ? selectedColor : c.surface,
+          borderRadius: BorderRadius.circular(AppRadius.lg),
+          border: Border.all(
+            color: selected
+                ? selectedColor
+                : AppColors.hairlineBorder(context),
+          ),
+        ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
           child: Row(
@@ -242,8 +247,7 @@ class _SavedRulesList extends ConsumerWidget {
       );
     }
     return ListView.separated(
-      padding: const EdgeInsets.fromLTRB(
-          AppSpacing.lg, AppSpacing.xs, AppSpacing.lg, AppSpacing.xxl),
+      padding: AppScroll.listPadding(context),
       itemCount: rules.length,
       separatorBuilder: (_, _) => const SizedBox(height: AppSpacing.md),
       itemBuilder: (context, index) {
@@ -276,8 +280,7 @@ class _NotesList extends ConsumerWidget {
     }
 
     return ListView.separated(
-      padding: const EdgeInsets.fromLTRB(
-          AppSpacing.lg, AppSpacing.xs, AppSpacing.lg, AppSpacing.xxl),
+      padding: AppScroll.listPadding(context),
       itemCount: rules.length,
       separatorBuilder: (_, _) => const SizedBox(height: AppSpacing.md),
       itemBuilder: (context, index) {

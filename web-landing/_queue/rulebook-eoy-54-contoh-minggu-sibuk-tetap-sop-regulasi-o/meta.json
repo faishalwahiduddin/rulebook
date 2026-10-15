@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-54-contoh-minggu-sibuk-tetap-sop-regulasi-o",
+  "app": "rulebook",
+  "publish_date": "2026-12-08",
+  "primary_keyword": "sop regulasi offline",
+  "idea_type": "cases",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "contoh-minggu-sibuk-tetap-sop-regulasi-offline-2026",
+    "en": "busy-week-example-still-doing-sop-regulasi-offline",
+    "ar": "sop-regulasi-offline-6",
+    "jv": "pandhuan-sop-regulasi-offline-rulebook-6",
+    "su": "pituduh-sop-regulasi-offline-rulebook-6",
+    "zh": "rulebook-sop-regulasi-offline-实用指南-6",
+    "ja": "rulebooksop-regulasi-offline-ガイド-6"
+  },
+  "titles": {
+    "id": "Contoh Minggu Sibuk tetap sop regulasi offline",
+    "en": "Busy-Week Example Still Doing sop regulasi offline",
+    "ar": "sop regulasi offline — دليل RuleBook",
+    "jv": "Pandhuan: Contoh Minggu Sibuk tetap sop regulasi offline",
+    "su": "Pituduh: Contoh Minggu Sibuk tetap sop regulasi offline",
+    "zh": "RuleBook · sop regulasi offline 实用指南",
+    "ja": "RuleBook｜sop regulasi offline ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-76-dasar-dasar-buku-saku-yang-tidak-kedaluw",
+  "app": "rulebook",
+  "publish_date": "2026-12-30",
+  "primary_keyword": "buku saku",
+  "idea_type": "evergreen",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "dasar-dasar-buku-saku-yang-tidak-kedaluwarsa-mingguan",
+    "en": "evergreen-basics-of-buku-saku",
+    "ar": "buku-saku-9",
+    "jv": "pandhuan-buku-saku-rulebook-9",
+    "su": "pituduh-buku-saku-rulebook-9",
+    "zh": "rulebook-buku-saku-实用指南-9",
+    "ja": "rulebookbuku-saku-ガイド-9"
+  },
+  "titles": {
+    "id": "Dasar-Dasar buku saku yang Tidak Kedaluwarsa",
+    "en": "Evergreen Basics of buku saku — Offline First",
+    "ar": "buku saku — دليل RuleBook",
+    "jv": "Pandhuan: Dasar-Dasar buku saku yang Tidak Kedaluwarsa",
+    "su": "Pituduh: Dasar-Dasar buku saku yang Tidak Kedaluwarsa",
+    "zh": "RuleBook · buku saku 实用指南",
+    "ja": "RuleBook｜buku saku ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_icons.dart';
 import '../theme/app_theme.dart';
+import '../ui/press_scale.dart';
 
 /// A flat, hairline-bordered surface. The app's single container primitive,
 /// replacing the mix of glows, gradients, and ad-hoc decorations it replaces.
@@ -28,24 +29,18 @@ class AppCard extends StatelessWidget {
     final c = AppColors.of(context);
     final shape = RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(radius),
-      side: BorderSide(color: borderColor ?? c.border),
+      side: BorderSide(color: borderColor ?? AppColors.hairlineBorder(context)),
     );
     final content = Padding(padding: padding, child: child);
-    if (onTap == null) {
-      return DecoratedBox(
-        decoration: ShapeDecoration(
-          color: color ?? c.surface,
-          shape: shape,
-        ),
-        child: content,
-      );
-    }
-    return Material(
-      color: color ?? c.surface,
-      shape: shape,
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(onTap: onTap, child: content),
+    final surface = DecoratedBox(
+      decoration: ShapeDecoration(
+        color: color ?? c.surface,
+        shape: shape,
+      ),
+      child: content,
     );
+    if (onTap == null) return surface;
+    return PressScale(onTap: onTap, child: surface);
   }
 }
 

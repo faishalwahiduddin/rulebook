@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-32-data-rambu-lalu-lintas-hilang-cek-ini-du",
+  "app": "rulebook",
+  "publish_date": "2026-11-16",
+  "primary_keyword": "rambu lalu lintas",
+  "idea_type": "troubleshoot",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "data-rambu-lalu-lintas-hilang-cek-ini-dulu-praktis",
+    "en": "rambu-lalu-lintas-data-missing-check-these-first-practical",
+    "ar": "rambu-lalu-lintas-4",
+    "jv": "pandhuan-rambu-lalu-lintas-rulebook-4",
+    "su": "pituduh-rambu-lalu-lintas-rulebook-4",
+    "zh": "rulebook-rambu-lalu-lintas-实用指南-4",
+    "ja": "rulebookrambu-lalu-lintas-ガイド-4"
+  },
+  "titles": {
+    "id": "Data rambu lalu lintas Hilang? Cek Ini Dulu",
+    "en": "rambu lalu lintas Data Missing? Check These First (Practical)",
+    "ar": "rambu lalu lintas — دليل RuleBook",
+    "jv": "Pandhuan: Data rambu lalu lintas Hilang? Cek Ini Dulu",
+    "su": "Pituduh: Data rambu lalu lintas Hilang? Cek Ini Dulu",
+    "zh": "RuleBook · rambu lalu lintas 实用指南",
+    "ja": "RuleBook｜rambu lalu lintas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-56-tanda-sudah-siap-naik-level-sop-praktis",
+  "app": "rulebook",
+  "publish_date": "2026-12-10",
+  "primary_keyword": "SOP",
+  "idea_type": "decide",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "tanda-sudah-siap-naik-level-sop-praktis",
+    "en": "signs-you-re-ready-to-level-up-sop-practical",
+    "ar": "sop-7",
+    "jv": "pandhuan-sop-rulebook-7",
+    "su": "pituduh-sop-rulebook-7",
+    "zh": "rulebook-sop-实用指南-7",
+    "ja": "rulebooksop-ガイド-7"
+  },
+  "titles": {
+    "id": "Tanda Sudah Siap Naik Level SOP",
+    "en": "Signs You&#x27;re Ready to Level Up SOP (Practical)",
+    "ar": "SOP — دليل RuleBook",
+    "jv": "Pandhuan: Tanda Sudah Siap Naik Level SOP",
+    "su": "Pituduh: Tanda Sudah Siap Naik Level SOP",
+    "zh": "RuleBook · SOP 实用指南",
+    "ja": "RuleBook｜SOP ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

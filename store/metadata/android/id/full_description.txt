@@ -1,1 +1,18 @@
-RuleBook adalah buku saku aturan lalu lintas, SOP, dan regulasi penting — selalu offline di saku Anda.
+RuleBook adalah asisten meja permainan yang memudahkan pencatatan skor board game, timer giliran pemain, dan penyimpanan rangkuman aturan main favorit Anda.
+
+Fitur Utama:
+✓ Pencatat skor pertandingan fleksibel untuk banyak pemain
+✓ Timer giliran pemain dengan peringatan waktu untuk menjaga ritme main
+✓ Penyimpanan ringkasan aturan permainan dan panduan cepat
+✓ Riwayat rekapitulasi kemenangan dan statistik performa pemain
+✓ Penentu giliran pemain pertama secara acak dan adil
+✓ 100% offline tanpa iklan yang merusak keseruan malam permainan
+✓ Antarmuka gelap yang hemat daya saat bermain bersama teman
+
+Kenapa RuleBook?
+Menghitung skor di secarik kertas sering memicu perdebatan dan kertas mudah hilang. RuleBook menjaga jalannya permainan tetap lancar, adil, dan tercatat rapi dari ronde pertama hingga penentuan pemenang.
+
+Privasi Meja Permainan:
+Seluruh catatan pertandingan dan statistik pemain tersimpan lokal di ponsel Anda.
+
+Bagian dari armada aplikasi rekreasi faishal.id.

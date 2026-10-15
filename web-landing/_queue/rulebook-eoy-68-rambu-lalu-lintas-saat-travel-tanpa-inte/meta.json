@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-68-rambu-lalu-lintas-saat-travel-tanpa-inte",
+  "app": "rulebook",
+  "publish_date": "2026-12-22",
+  "primary_keyword": "rambu lalu lintas",
+  "idea_type": "offline",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "rambu-lalu-lintas-saat-travel-tanpa-internet-praktis",
+    "en": "rambu-lalu-lintas-while-traveling-offline-practical",
+    "ar": "rambu-lalu-lintas-8",
+    "jv": "pandhuan-rambu-lalu-lintas-rulebook-8",
+    "su": "pituduh-rambu-lalu-lintas-rulebook-8",
+    "zh": "rulebook-rambu-lalu-lintas-实用指南-8",
+    "ja": "rulebookrambu-lalu-lintas-ガイド-8"
+  },
+  "titles": {
+    "id": "rambu lalu lintas full offline: uji & checklist",
+    "en": "rambu lalu lintas While Traveling Offline (Practical)",
+    "ar": "rambu lalu lintas — دليل RuleBook",
+    "jv": "Pandhuan: rambu lalu lintas full offline: uji & checklist",
+    "su": "Pituduh: rambu lalu lintas full offline: uji & checklist",
+    "zh": "RuleBook · rambu lalu lintas 实用指南",
+    "ja": "RuleBook｜rambu lalu lintas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

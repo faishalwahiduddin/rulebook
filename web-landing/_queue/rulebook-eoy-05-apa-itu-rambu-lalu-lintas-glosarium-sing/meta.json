@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-05-apa-itu-rambu-lalu-lintas-glosarium-sing",
+  "app": "rulebook",
+  "publish_date": "2026-10-20",
+  "primary_keyword": "rambu lalu lintas",
+  "idea_type": "glossary",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "apa-itu-rambu-lalu-lintas-glosarium-singkat-offline",
+    "en": "what-is-rambu-lalu-lintas-a-short-glossary",
+    "ar": "rambu-lalu-lintas",
+    "jv": "pandhuan-rambu-lalu-lintas-rulebook",
+    "su": "pituduh-rambu-lalu-lintas-rulebook",
+    "zh": "rulebook-rambu-lalu-lintas-实用指南",
+    "ja": "rulebookrambu-lalu-lintas-ガイド"
+  },
+  "titles": {
+    "id": "Apa Itu rambu lalu lintas? Glosarium Singkat",
+    "en": "What Is rambu lalu lintas? A Short Glossary",
+    "ar": "rambu lalu lintas — دليل RuleBook",
+    "jv": "Pandhuan: Apa Itu rambu lalu lintas? Glosarium Singkat",
+    "su": "Pituduh: Apa Itu rambu lalu lintas? Glosarium Singkat",
+    "zh": "RuleBook · rambu lalu lintas 实用指南",
+    "ja": "RuleBook｜rambu lalu lintas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

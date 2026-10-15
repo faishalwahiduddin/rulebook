@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-17-faq-rambu-marka-prioritas-pertanyaan-yan",
+  "app": "rulebook",
+  "publish_date": "2026-11-01",
+  "primary_keyword": "rambu marka prioritas",
+  "idea_type": "faq",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "faq-rambu-marka-prioritas-pertanyaan-yang-sering-muncul-offline",
+    "en": "rambu-marka-prioritas-faq-frequent-questions",
+    "ar": "rambu-marka-prioritas-2",
+    "jv": "pandhuan-rambu-marka-prioritas-rulebook-2",
+    "su": "pituduh-rambu-marka-prioritas-rulebook-2",
+    "zh": "rulebook-rambu-marka-prioritas-实用指南-2",
+    "ja": "rulebookrambu-marka-prioritas-ガイド-2"
+  },
+  "titles": {
+    "id": "FAQ rambu marka prioritas: Pertanyaan yang Sering Muncul",
+    "en": "rambu marka prioritas FAQ: Frequent Questions",
+    "ar": "rambu marka prioritas — دليل RuleBook",
+    "jv": "Pandhuan: FAQ rambu marka prioritas: Pertanyaan yang Sering Muncul",
+    "su": "Pituduh: FAQ rambu marka prioritas: Pertanyaan yang Sering Muncul",
+    "zh": "RuleBook · rambu marka prioritas 实用指南",
+    "ja": "RuleBook｜rambu marka prioritas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-74-kapan-saatnya-pakai-aplikasi-untuk-sop-p",
+  "app": "rulebook",
+  "publish_date": "2026-12-28",
+  "primary_keyword": "SOP",
+  "idea_type": "intent-buy",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "kapan-saatnya-pakai-aplikasi-untuk-sop-praktis",
+    "en": "when-to-use-an-app-for-sop-practical",
+    "ar": "sop-9",
+    "jv": "pandhuan-sop-rulebook-9",
+    "su": "pituduh-sop-rulebook-9",
+    "zh": "rulebook-sop-实用指南-9",
+    "ja": "rulebooksop-ガイド-9"
+  },
+  "titles": {
+    "id": "Kapan Saatnya Pakai Aplikasi untuk SOP",
+    "en": "When to Use an App for SOP (Practical)",
+    "ar": "SOP — دليل RuleBook",
+    "jv": "Pandhuan: Kapan Saatnya Pakai Aplikasi untuk SOP",
+    "su": "Pituduh: Kapan Saatnya Pakai Aplikasi untuk SOP",
+    "zh": "RuleBook · SOP 实用指南",
+    "ja": "RuleBook｜SOP ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

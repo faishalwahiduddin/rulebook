@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-04-checklist-mingguan-buku-saku-review-ming",
+  "app": "rulebook",
+  "publish_date": "2026-10-19",
+  "primary_keyword": "buku saku",
+  "idea_type": "checklist",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "checklist-mingguan-buku-saku-review-mingguan",
+    "en": "weekly-buku-saku-checklist-review",
+    "ar": "buku-saku",
+    "jv": "pandhuan-buku-saku-rulebook",
+    "su": "pituduh-buku-saku-rulebook",
+    "zh": "rulebook-buku-saku-实用指南",
+    "ja": "rulebookbuku-saku-ガイド"
+  },
+  "titles": {
+    "id": "Checklist Mingguan buku saku + Review",
+    "en": "Weekly buku saku Checklist + Review — Offline First",
+    "ar": "buku saku — دليل RuleBook",
+    "jv": "Pandhuan: Checklist Mingguan buku saku + Review",
+    "su": "Pituduh: Checklist Mingguan buku saku + Review",
+    "zh": "RuleBook · buku saku 实用指南",
+    "ja": "RuleBook｜buku saku ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

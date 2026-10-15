@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-22-buku-saku-tanpa-akun-plus-dan-minus-ming",
+  "app": "rulebook",
+  "publish_date": "2026-11-06",
+  "primary_keyword": "buku saku",
+  "idea_type": "privacy",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "buku-saku-tanpa-akun-plus-dan-minus-mingguan",
+    "en": "buku-saku-without-an-account-pros-cons",
+    "ar": "buku-saku-3",
+    "jv": "pandhuan-buku-saku-rulebook-3",
+    "su": "pituduh-buku-saku-rulebook-3",
+    "zh": "rulebook-buku-saku-实用指南-3",
+    "ja": "rulebookbuku-saku-ガイド-3"
+  },
+  "titles": {
+    "id": "Privasi data saat mencatat buku saku",
+    "en": "buku saku Without an Account: Pros &amp; Cons — Offline First",
+    "ar": "buku saku — دليل RuleBook",
+    "jv": "Pandhuan: Privasi data saat mencatat buku saku",
+    "su": "Pituduh: Privasi data saat mencatat buku saku",
+    "zh": "RuleBook · buku saku 实用指南",
+    "ja": "RuleBook｜buku saku ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

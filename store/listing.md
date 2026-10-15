@@ -10,29 +10,46 @@
 
 ## Bahasa Indonesia (`id`)
 
-**Title** (17/30)
+**Title** (28/30)
 
-> RuleBook — Aturan
+> RuleBook: Skor & Aturan Game
 
-**Short description** (44/80)
+**Short description** (63/80)
 
-> Buku saku aturan, SOP, dan regulasi offline.
+> Pencatat skor board game, aturan main, timer giliran & riwayat.
 
-**Full description** (102/4000)
+**Full description** (983/4000)
 
 <details><summary>show</summary>
 
-RuleBook adalah buku saku aturan lalu lintas, SOP, dan regulasi penting — selalu offline di saku Anda.
+RuleBook adalah asisten meja permainan yang memudahkan pencatatan skor board game, timer giliran pemain, dan penyimpanan rangkuman aturan main favorit Anda.
+
+Fitur Utama:
+✓ Pencatat skor pertandingan fleksibel untuk banyak pemain
+✓ Timer giliran pemain dengan peringatan waktu untuk menjaga ritme main
+✓ Penyimpanan ringkasan aturan permainan dan panduan cepat
+✓ Riwayat rekapitulasi kemenangan dan statistik performa pemain
+✓ Penentu giliran pemain pertama secara acak dan adil
+✓ 100% offline tanpa iklan yang merusak keseruan malam permainan
+✓ Antarmuka gelap yang hemat daya saat bermain bersama teman
+
+Kenapa RuleBook?
+Menghitung skor di secarik kertas sering memicu perdebatan dan kertas mudah hilang. RuleBook menjaga jalannya permainan tetap lancar, adil, dan tercatat rapi dari ronde pertama hingga penentuan pemenang.
+
+Privasi Meja Permainan:
+Seluruh catatan pertandingan dan statistik pemain tersimpan lokal di ponsel Anda.
+
+Bagian dari armada aplikasi rekreasi faishal.id.
 
 </details>
 
-**Release notes** — versionCode 4 (52/500)
+**Release notes** — versionCode 4 (60/500)
 
-> Rilis store screenshots multi-bahasa untuk RuleBook.
+> Rilis pembaruan metadata dan aset toko resmi untuk RuleBook.
 
 **Tagline** (feature graphic)
 
-> Buku saku aturan, SOP, dan regulasi offline.
+> Pencatat skor board game, aturan main, timer giliran & riwayat.
 
 **Screenshot captions**
 
@@ -45,29 +62,46 @@ RuleBook adalah buku saku aturan lalu lintas, SOP, dan regulasi penting — sela
 
 ## English (US) (`en-US`)
 
-**Title** (16/30)
+**Title** (27/30)
 
-> RuleBook — Rules
+> RuleBook: Board Game Scorer
 
-**Short description** (44/80)
+**Short description** (64/80)
 
-> Pocket rules, SOPs, and regulations offline.
+> Board game rules reference, round score tracker, and turn timer.
 
-**Full description** (88/4000)
+**Full description** (972/4000)
 
 <details><summary>show</summary>
 
-RuleBook is a pocket guide to traffic rules, SOPs, and key regulations — always offline.
+RuleBook is your tabletop game night companion. Easily record round-by-round player scores, keep games moving with turn timers, and store quick rule references for your favorite board games.
+
+Core Features:
+✓ Flexible multi-player score sheet accommodating variable scoring rules
+✓ Turn countdown timer to keep game pacing brisk and balanced
+✓ Custom rule summaries notebook for quick clarification during play
+✓ Match history ledger recording wins, dates, and player stats
+✓ Fair first-player randomizer tool
+✓ 100% offline with zero ads to prevent game night disruptions
+✓ Clean dark interface optimized for evening social sessions
+
+Why RuleBook?
+Tallying points on scrap paper often leads to math disputes and lost sheets. RuleBook ensures transparent, accurate scoring from the opening turn to the final victory declaration.
+
+Gaming Privacy:
+All match archives and player score histories remain on your local device.
+
+Part of the faishal.id leisure and tabletop suite.
 
 </details>
 
-**Release notes** — versionCode 4 (52/500)
+**Release notes** — versionCode 4 (69/500)
 
-> Multi-locale store screenshots release for RuleBook.
+> Official store metadata and presentation update release for RuleBook.
 
 **Tagline** (feature graphic)
 
-> Pocket rules, SOPs, and regulations offline.
+> Board game rules reference, round score tracker, and turn timer.
 
 **Screenshot captions**
 

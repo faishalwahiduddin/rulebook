@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-16-contoh-log-aturan-lalu-lintas-saku-7-har",
+  "app": "rulebook",
+  "publish_date": "2026-10-31",
+  "primary_keyword": "aturan lalu lintas saku",
+  "idea_type": "template",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "contoh-log-aturan-lalu-lintas-saku-7-hari-mingguan",
+    "en": "sample-7-day-aturan-lalu-lintas-saku-log",
+    "ar": "aturan-lalu-lintas-saku-2",
+    "jv": "pandhuan-aturan-lalu-lintas-saku-rulebook-2",
+    "su": "pituduh-aturan-lalu-lintas-saku-rulebook-2",
+    "zh": "rulebook-aturan-lalu-lintas-saku-实用指南-2",
+    "ja": "rulebookaturan-lalu-lintas-saku-ガイド-2"
+  },
+  "titles": {
+    "id": "Contoh Log aturan lalu lintas saku 7 Hari",
+    "en": "Sample 7-Day aturan lalu lintas saku Log — Offline First",
+    "ar": "aturan lalu lintas saku — دليل RuleBook",
+    "jv": "Pandhuan: Contoh Log aturan lalu lintas saku 7 Hari",
+    "su": "Pituduh: Contoh Log aturan lalu lintas saku 7 Hari",
+    "zh": "RuleBook · aturan lalu lintas saku 实用指南",
+    "ja": "RuleBook｜aturan lalu lintas saku ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

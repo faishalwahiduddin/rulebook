@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-42-pindah-perangkat-tanpa-hilang-rulebook-2",
+  "app": "rulebook",
+  "publish_date": "2026-11-26",
+  "primary_keyword": "aturan lalu lintas",
+  "idea_type": "export",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "pindah-perangkat-tanpa-hilang-rulebook-2026",
+    "en": "move-devices-without-losing-rulebook",
+    "ar": "rulebook-5",
+    "jv": "pandhuan-rulebook-rulebook-5",
+    "su": "pituduh-rulebook-rulebook-5",
+    "zh": "rulebook-rulebook-实用指南-5",
+    "ja": "rulebookrulebook-ガイド-5"
+  },
+  "titles": {
+    "id": "Pindah Perangkat tanpa Hilang RuleBook",
+    "en": "Move Devices Without Losing RuleBook",
+    "ar": "RuleBook — دليل RuleBook",
+    "jv": "Pandhuan: Pindah Perangkat tanpa Hilang RuleBook",
+    "su": "Pituduh: Pindah Perangkat tanpa Hilang RuleBook",
+    "zh": "RuleBook · RuleBook 实用指南",
+    "ja": "RuleBook｜RuleBook ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

@@ -8,6 +8,8 @@ import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/utils/l10n_helpers.dart';
 import '../../core/utils/validators.dart';
+import '../../core/ui/app_scroll.dart';
+import '../../core/ui/press_scale.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -239,8 +241,8 @@ class _PenaltyCalculatorScreenState extends State<PenaltyCalculatorScreen> {
           ),
           Expanded(
             child: SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(
-                  AppSpacing.lg, AppSpacing.lg, AppSpacing.lg, AppSpacing.xxl),
+              physics: AppScroll.physics,
+              padding: AppScroll.listPadding(context, top: AppSpacing.lg),
               child: Center(
                 child: ConstrainedBox(
                   constraints: const BoxConstraints(maxWidth: 640),
@@ -388,15 +390,18 @@ class _TabBar extends StatelessWidget {
             AppIconData.lock,
           ];
           final isSelected = selected == index;
-          return Material(
-            color: isSelected ? c.brand : c.surface,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(AppRadius.sm + 2),
-              side: BorderSide(color: isSelected ? c.brand : c.border),
-            ),
-            clipBehavior: Clip.antiAlias,
-            child: InkWell(
-              onTap: () => onChanged(index),
+          return PressScale(
+            onTap: () => onChanged(index),
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                color: isSelected ? c.brand : c.surface,
+                borderRadius: BorderRadius.circular(AppRadius.lg),
+                border: Border.all(
+                  color: isSelected
+                      ? c.brand
+                      : AppColors.hairlineBorder(context),
+                ),
+              ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
                 child: Row(

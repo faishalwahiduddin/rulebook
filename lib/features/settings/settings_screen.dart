@@ -12,8 +12,11 @@ import '../../core/theme/app_theme.dart';
 import '../../core/utils/app_timezone.dart';
 import '../../core/utils/backup_file_io.dart';
 import '../../core/utils/l10n_helpers.dart';
+import '../../core/ui/app_scroll.dart';
+import '../../core/ui/press_scale.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
+import '../../../core/ui/spring_sheet.dart';
 
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
@@ -72,8 +75,7 @@ class SettingsScreen extends ConsumerWidget {
     return Scaffold(
       appBar: appBar(context),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(AppSpacing.lg, AppSpacing.sm,
-            AppSpacing.lg, AppSpacing.xxxl),
+        padding: AppScroll.pagePadding(context, underShellNav: false),
         children: [
           // What this app does with your data: nothing, because it never
           // leaves the phone.
@@ -217,7 +219,7 @@ class SettingsScreen extends ConsumerWidget {
             padding: EdgeInsets.zero,
             child: Column(
               children: [
-                InkWell(
+                PressScale(
                   onTap: () async {
                     final payload = await ref
                         .read(localStorageServiceProvider)
@@ -256,7 +258,7 @@ class SettingsScreen extends ConsumerWidget {
                   ),
                 ),
                 Divider(height: 1, color: c.divider),
-                InkWell(
+                PressScale(
                   onTap: () => _importBackup(context, ref),
                   child: Padding(
                     padding: const EdgeInsets.all(AppSpacing.lg),
@@ -286,7 +288,7 @@ class SettingsScreen extends ConsumerWidget {
                   ),
                 ),
                 Divider(height: 1, color: c.divider),
-                InkWell(
+                PressScale(
                   onTap: () => _confirmClearAll(context, ref),
                   child: Padding(
                     padding: const EdgeInsets.all(AppSpacing.lg),
@@ -468,7 +470,7 @@ class SettingsScreen extends ConsumerWidget {
     final now = AppTimeZone.nowUtc();
     final current = ref.read(timezoneProvider);
     final device = ref.read(timezoneNameProvider);
-    showModalBottomSheet<void>(
+    showSpringSheet<void>(
       context: context,
       builder: (ctx) {
         return SafeArea(
@@ -476,6 +478,7 @@ class SettingsScreen extends ConsumerWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SpringSheetHandle(),
               Padding(
                 padding: const EdgeInsets.fromLTRB(
                     AppSpacing.xl, AppSpacing.lg, AppSpacing.xl, AppSpacing.sm),
@@ -487,6 +490,7 @@ class SettingsScreen extends ConsumerWidget {
               Flexible(
                 child: ListView(
                   shrinkWrap: true,
+                  physics: AppScroll.physics,
                   children: [
                     ListTile(
                       dense: true,
@@ -533,7 +537,7 @@ class SettingsScreen extends ConsumerWidget {
 
     final l10n = AppLocalizations.of(context)!;
     final c = AppColors.of(context);
-    showModalBottomSheet<void>(
+    showSpringSheet<void>(
       context: context,
       builder: (ctx) {
         return SafeArea(
@@ -541,6 +545,7 @@ class SettingsScreen extends ConsumerWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SpringSheetHandle(),
               Padding(
                 padding: const EdgeInsets.fromLTRB(
                     AppSpacing.xl, AppSpacing.lg, AppSpacing.xl, AppSpacing.sm),
@@ -552,6 +557,7 @@ class SettingsScreen extends ConsumerWidget {
               Flexible(
                 child: ListView(
                   shrinkWrap: true,
+                  physics: AppScroll.physics,
                   children: _supportedLocales.map((code) {
                     final isSelected = code == currentLocale.languageCode;
                     return ListTile(

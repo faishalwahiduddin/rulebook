@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-25-bangun-kebiasaan-aturan-lalu-lintas-saku",
+  "app": "rulebook",
+  "publish_date": "2026-11-09",
+  "primary_keyword": "aturan lalu lintas saku",
+  "idea_type": "habit",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "bangun-kebiasaan-aturan-lalu-lintas-saku-21-hari",
+    "en": "build-a-21-day-aturan-lalu-lintas-saku-habit",
+    "ar": "aturan-lalu-lintas-saku-3",
+    "jv": "pandhuan-aturan-lalu-lintas-saku-rulebook-3",
+    "su": "pituduh-aturan-lalu-lintas-saku-rulebook-3",
+    "zh": "rulebook-aturan-lalu-lintas-saku-实用指南-3",
+    "ja": "rulebookaturan-lalu-lintas-saku-ガイド-3"
+  },
+  "titles": {
+    "id": "Bangun Kebiasaan aturan lalu lintas saku 21 Hari",
+    "en": "Build a 21-Day aturan lalu lintas saku Habit",
+    "ar": "aturan lalu lintas saku — دليل RuleBook",
+    "jv": "Pandhuan: Bangun Kebiasaan aturan lalu lintas saku 21 Hari",
+    "su": "Pituduh: Bangun Kebiasaan aturan lalu lintas saku 21 Hari",
+    "zh": "RuleBook · aturan lalu lintas saku 实用指南",
+    "ja": "RuleBook｜aturan lalu lintas saku ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

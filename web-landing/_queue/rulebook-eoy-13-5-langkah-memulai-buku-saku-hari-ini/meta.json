@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-13-5-langkah-memulai-buku-saku-hari-ini",
+  "app": "rulebook",
+  "publish_date": "2026-10-28",
+  "primary_keyword": "buku saku",
+  "idea_type": "steps",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "5-langkah-memulai-buku-saku-hari-ini",
+    "en": "5-steps-to-start-buku-saku-today",
+    "ar": "buku-saku-2",
+    "jv": "pandhuan-buku-saku-rulebook-2",
+    "su": "pituduh-buku-saku-rulebook-2",
+    "zh": "rulebook-buku-saku-实用指南-2",
+    "ja": "rulebookbuku-saku-ガイド-2"
+  },
+  "titles": {
+    "id": "5 Langkah Memulai buku saku Hari Ini",
+    "en": "5 Steps to Start buku saku Today",
+    "ar": "buku saku — دليل RuleBook",
+    "jv": "Pandhuan: 5 Langkah Memulai buku saku Hari Ini",
+    "su": "Pituduh: 5 Langkah Memulai buku saku Hari Ini",
+    "zh": "RuleBook · buku saku 实用指南",
+    "ja": "RuleBook｜buku saku ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-18-sop-regulasi-offline-2",
+  "app": "rulebook",
+  "publish_date": "2026-11-02",
+  "primary_keyword": "sop regulasi offline",
+  "idea_type": "faq",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "sop-regulasi-offline-2",
+    "en": "sop-regulasi-offline",
+    "ar": "sop-regulasi-offline-2",
+    "jv": "pandhuan-sop-regulasi-offline-rulebook-2",
+    "su": "pituduh-sop-regulasi-offline-rulebook-2",
+    "zh": "rulebook-sop-regulasi-offline-实用指南-2",
+    "ja": "rulebooksop-regulasi-offline-ガイド-2"
+  },
+  "titles": {
+    "id": "FAQ sop regulasi offline: jawaban singkat yang dipakai",
+    "en": "sop regulasi offline — Practical Q&amp;A",
+    "ar": "sop regulasi offline — دليل RuleBook",
+    "jv": "Pandhuan: FAQ sop regulasi offline: jawaban singkat yang dipakai",
+    "su": "Pituduh: FAQ sop regulasi offline: jawaban singkat yang dipakai",
+    "zh": "RuleBook · sop regulasi offline 实用指南",
+    "ja": "RuleBook｜sop regulasi offline ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

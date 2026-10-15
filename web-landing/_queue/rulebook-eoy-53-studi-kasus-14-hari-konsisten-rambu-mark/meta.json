@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-53-studi-kasus-14-hari-konsisten-rambu-mark",
+  "app": "rulebook",
+  "publish_date": "2026-12-07",
+  "primary_keyword": "rambu marka prioritas",
+  "idea_type": "cases",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "studi-kasus-14-hari-konsisten-rambu-marka-prioritas-offline",
+    "en": "case-study-14-consistent-days-of-rambu-marka-prioritas",
+    "ar": "rambu-marka-prioritas-6",
+    "jv": "pandhuan-rambu-marka-prioritas-rulebook-6",
+    "su": "pituduh-rambu-marka-prioritas-rulebook-6",
+    "zh": "rulebook-rambu-marka-prioritas-实用指南-6",
+    "ja": "rulebookrambu-marka-prioritas-ガイド-6"
+  },
+  "titles": {
+    "id": "Studi Kasus: 14 Hari Konsisten rambu marka prioritas",
+    "en": "Case Study: 14 Consistent Days of rambu marka prioritas",
+    "ar": "rambu marka prioritas — دليل RuleBook",
+    "jv": "Pandhuan: Studi Kasus: 14 Hari Konsisten rambu marka prioritas",
+    "su": "Pituduh: Studi Kasus: 14 Hari Konsisten rambu marka prioritas",
+    "zh": "RuleBook · rambu marka prioritas 实用指南",
+    "ja": "RuleBook｜rambu marka prioritas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

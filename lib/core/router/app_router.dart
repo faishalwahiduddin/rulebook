@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import '../ui/fleet_splash_screen.dart';
+import '../ui/fleet_onboarding_screen.dart';
 import '../../features/bookmarks/bookmarks_screen.dart';
 import '../../features/calculator/penalty_calculator_screen.dart';
 import '../../features/catalog/catalog_screen.dart';
@@ -34,8 +36,18 @@ class AppRoutes {
 
 final appRouter = GoRouter(
   navigatorKey: _rootNavigatorKey,
-  initialLocation: AppRoutes.catalog,
+  initialLocation: '/splash',
   routes: [
+    GoRoute(
+      path: '/splash',
+      parentNavigatorKey: _rootNavigatorKey,
+      builder: (context, state) => const FleetSplashScreen(),
+    ),
+    GoRoute(
+      path: '/onboarding',
+      parentNavigatorKey: _rootNavigatorKey,
+      builder: (context, state) => const FleetOnboardingScreen(),
+    ),
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
         return NavigationShell(navigationShell: navigationShell);

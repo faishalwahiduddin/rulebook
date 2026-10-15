@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-58-jangan-screenshot-sembarangan-log-buku-s",
+  "app": "rulebook",
+  "publish_date": "2026-12-12",
+  "primary_keyword": "buku saku",
+  "idea_type": "security",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "jangan-screenshot-sembarangan-log-buku-saku-mingguan",
+    "en": "don-t-casually-screenshot-buku-saku-logs",
+    "ar": "buku-saku-7",
+    "jv": "pandhuan-buku-saku-rulebook-7",
+    "su": "pituduh-buku-saku-rulebook-7",
+    "zh": "rulebook-buku-saku-实用指南-7",
+    "ja": "rulebookbuku-saku-ガイド-7"
+  },
+  "titles": {
+    "id": "Jangan Screenshot Sembarangan Log buku saku",
+    "en": "Don&#x27;t Casually Screenshot buku saku Logs — Offline First",
+    "ar": "buku saku — دليل RuleBook",
+    "jv": "Pandhuan: Jangan Screenshot Sembarangan Log buku saku",
+    "su": "Pituduh: Jangan Screenshot Sembarangan Log buku saku",
+    "zh": "RuleBook · buku saku 实用指南",
+    "ja": "RuleBook｜buku saku ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

@@ -1,1 +1,1 @@
-Multi-locale store screenshots release for RuleBook.
+Official store metadata and presentation update release for RuleBook.

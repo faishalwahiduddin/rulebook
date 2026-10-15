@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-48-audit-bulanan-catatan-regulasi-2026",
+  "app": "rulebook",
+  "publish_date": "2026-12-02",
+  "primary_keyword": "regulasi",
+  "idea_type": "quality",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "audit-bulanan-catatan-regulasi-2026",
+    "en": "monthly-audit-of-regulasi-logs",
+    "ar": "regulasi-6",
+    "jv": "pandhuan-regulasi-rulebook-6",
+    "su": "pituduh-regulasi-rulebook-6",
+    "zh": "rulebook-regulasi-实用指南-6",
+    "ja": "rulebookregulasi-ガイド-6"
+  },
+  "titles": {
+    "id": "Audit Bulanan Catatan regulasi",
+    "en": "Monthly Audit of regulasi Logs",
+    "ar": "regulasi — دليل RuleBook",
+    "jv": "Pandhuan: Audit Bulanan Catatan regulasi",
+    "su": "Pituduh: Audit Bulanan Catatan regulasi",
+    "zh": "RuleBook · regulasi 实用指南",
+    "ja": "RuleBook｜regulasi ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

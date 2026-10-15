@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-47-kualitas-data-sop-vs-kuantitas-offline",
+  "app": "rulebook",
+  "publish_date": "2026-12-01",
+  "primary_keyword": "SOP",
+  "idea_type": "quality",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "kualitas-data-sop-vs-kuantitas-offline",
+    "en": "sop-data-quality-vs-quantity",
+    "ar": "sop-6",
+    "jv": "pandhuan-sop-rulebook-6",
+    "su": "pituduh-sop-rulebook-6",
+    "zh": "rulebook-sop-实用指南-6",
+    "ja": "rulebooksop-ガイド-6"
+  },
+  "titles": {
+    "id": "Kualitas Data SOP vs Kuantitas",
+    "en": "SOP Data Quality vs Quantity",
+    "ar": "SOP — دليل RuleBook",
+    "jv": "Pandhuan: Kualitas Data SOP vs Kuantitas",
+    "su": "Pituduh: Kualitas Data SOP vs Kuantitas",
+    "zh": "RuleBook · SOP 实用指南",
+    "ja": "RuleBook｜SOP ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

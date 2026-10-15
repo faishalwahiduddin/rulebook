@@ -189,6 +189,13 @@ class AppColors extends ThemeExtension<AppColors> {
   static AppColors of(BuildContext context) =>
       Theme.of(context).extension<AppColors>() ?? light;
 
+  /// Hairline border for cards and surfaces (8–12% opacity).
+  static Color hairlineBorder(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return (isDark ? const Color(0xFFFFFFFF) : const Color(0xFF000000))
+        .withValues(alpha: isDark ? 0.12 : 0.10);
+  }
+
   @override
   AppColors copyWith({
     Color? brand,

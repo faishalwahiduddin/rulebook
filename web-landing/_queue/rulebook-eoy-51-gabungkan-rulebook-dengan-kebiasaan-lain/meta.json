@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-51-gabungkan-rulebook-dengan-kebiasaan-lain",
+  "app": "rulebook",
+  "publish_date": "2026-12-05",
+  "primary_keyword": "aturan lalu lintas",
+  "idea_type": "integration",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "gabungkan-rulebook-dengan-kebiasaan-lain-harian",
+    "en": "stack-rulebook-with-other-habits",
+    "ar": "rulebook-6",
+    "jv": "pandhuan-rulebook-rulebook-6",
+    "su": "pituduh-rulebook-rulebook-6",
+    "zh": "rulebook-rulebook-实用指南-6",
+    "ja": "rulebookrulebook-ガイド-6"
+  },
+  "titles": {
+    "id": "Gabungkan RuleBook dengan Kebiasaan Lain",
+    "en": "Stack RuleBook with Other Habits",
+    "ar": "RuleBook — دليل RuleBook",
+    "jv": "Pandhuan: Gabungkan RuleBook dengan Kebiasaan Lain",
+    "su": "Pituduh: Gabungkan RuleBook dengan Kebiasaan Lain",
+    "zh": "RuleBook · RuleBook 实用指南",
+    "ja": "RuleBook｜RuleBook ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

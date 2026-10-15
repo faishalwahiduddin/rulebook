@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-15-template-catatan-rulebook-siap-pakai-har",
+  "app": "rulebook",
+  "publish_date": "2026-10-30",
+  "primary_keyword": "aturan lalu lintas",
+  "idea_type": "template",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "template-catatan-rulebook-siap-pakai-harian",
+    "en": "ready-to-use-rulebook-log-template",
+    "ar": "rulebook-2",
+    "jv": "pandhuan-rulebook-rulebook-2",
+    "su": "pituduh-rulebook-rulebook-2",
+    "zh": "rulebook-rulebook-实用指南-2",
+    "ja": "rulebookrulebook-ガイド-2"
+  },
+  "titles": {
+    "id": "Template Catatan RuleBook Siap Pakai",
+    "en": "Ready-to-Use RuleBook Log Template",
+    "ar": "RuleBook — دليل RuleBook",
+    "jv": "Pandhuan: Template Catatan RuleBook Siap Pakai",
+    "su": "Pituduh: Template Catatan RuleBook Siap Pakai",
+    "zh": "RuleBook · RuleBook 实用指南",
+    "ja": "RuleBook｜RuleBook ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

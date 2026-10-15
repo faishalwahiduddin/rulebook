@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-14-alur-kerja-rambu-lalu-lintas-dari-a-samp",
+  "app": "rulebook",
+  "publish_date": "2026-10-29",
+  "primary_keyword": "rambu lalu lintas",
+  "idea_type": "steps",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "alur-kerja-rambu-lalu-lintas-dari-a-sampai-z-praktis",
+    "en": "rambu-lalu-lintas-workflow-a-to-z-practical",
+    "ar": "rambu-lalu-lintas-2",
+    "jv": "pandhuan-rambu-lalu-lintas-rulebook-2",
+    "su": "pituduh-rambu-lalu-lintas-rulebook-2",
+    "zh": "rulebook-rambu-lalu-lintas-实用指南-2",
+    "ja": "rulebookrambu-lalu-lintas-ガイド-2"
+  },
+  "titles": {
+    "id": "Alur Kerja rambu lalu lintas dari A sampai Z",
+    "en": "rambu lalu lintas Workflow A to Z (Practical)",
+    "ar": "rambu lalu lintas — دليل RuleBook",
+    "jv": "Pandhuan: Alur Kerja rambu lalu lintas dari A sampai Z",
+    "su": "Pituduh: Alur Kerja rambu lalu lintas dari A sampai Z",
+    "zh": "RuleBook · rambu lalu lintas 实用指南",
+    "ja": "RuleBook｜rambu lalu lintas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

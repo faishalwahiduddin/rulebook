@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-38-update-terbaru-soal-sop-praktis",
+  "app": "rulebook",
+  "publish_date": "2026-11-22",
+  "primary_keyword": "SOP",
+  "idea_type": "seo-year",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "update-terbaru-soal-sop-praktis",
+    "en": "latest-practical-update-on-sop-practical",
+    "ar": "sop-5",
+    "jv": "pandhuan-sop-rulebook-5",
+    "su": "pituduh-sop-rulebook-5",
+    "zh": "rulebook-sop-实用指南-5",
+    "ja": "rulebooksop-ガイド-5"
+  },
+  "titles": {
+    "id": "Update Terbaru Soal SOP",
+    "en": "Latest Practical Update on SOP (Practical)",
+    "ar": "SOP — دليل RuleBook",
+    "jv": "Pandhuan: Update Terbaru Soal SOP",
+    "su": "Pituduh: Update Terbaru Soal SOP",
+    "zh": "RuleBook · SOP 实用指南",
+    "ja": "RuleBook｜SOP ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

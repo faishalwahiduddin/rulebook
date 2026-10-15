@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-31-troubleshooting-buku-saku-yang-macet",
+  "app": "rulebook",
+  "publish_date": "2026-11-15",
+  "primary_keyword": "buku saku",
+  "idea_type": "troubleshoot",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "troubleshooting-buku-saku-yang-macet",
+    "en": "troubleshooting-stuck-buku-saku-habits",
+    "ar": "buku-saku-4",
+    "jv": "pandhuan-buku-saku-rulebook-4",
+    "su": "pituduh-buku-saku-rulebook-4",
+    "zh": "rulebook-buku-saku-实用指南-4",
+    "ja": "rulebookbuku-saku-ガイド-4"
+  },
+  "titles": {
+    "id": "Troubleshooting buku saku yang Macet",
+    "en": "Troubleshooting Stuck buku saku Habits",
+    "ar": "buku saku — دليل RuleBook",
+    "jv": "Pandhuan: Troubleshooting buku saku yang Macet",
+    "su": "Pituduh: Troubleshooting buku saku yang Macet",
+    "zh": "RuleBook · buku saku 实用指南",
+    "ja": "RuleBook｜buku saku ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-41-backup-ekspor-catatan-rambu-lalu-lintas-",
+  "app": "rulebook",
+  "publish_date": "2026-11-25",
+  "primary_keyword": "rambu lalu lintas",
+  "idea_type": "export",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "backup-ekspor-catatan-rambu-lalu-lintas-offline",
+    "en": "backup-export-rambu-lalu-lintas-notes",
+    "ar": "rambu-lalu-lintas-5",
+    "jv": "pandhuan-rambu-lalu-lintas-rulebook-5",
+    "su": "pituduh-rambu-lalu-lintas-rulebook-5",
+    "zh": "rulebook-rambu-lalu-lintas-实用指南-5",
+    "ja": "rulebookrambu-lalu-lintas-ガイド-5"
+  },
+  "titles": {
+    "id": "Backup &amp; Ekspor Catatan rambu lalu lintas",
+    "en": "Backup &amp; Export rambu lalu lintas Notes",
+    "ar": "rambu lalu lintas — دليل RuleBook",
+    "jv": "Pandhuan: Backup &amp; Ekspor Catatan rambu lalu lintas",
+    "su": "Pituduh: Backup &amp; Ekspor Catatan rambu lalu lintas",
+    "zh": "RuleBook · rambu lalu lintas 实用指南",
+    "ja": "RuleBook｜rambu lalu lintas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

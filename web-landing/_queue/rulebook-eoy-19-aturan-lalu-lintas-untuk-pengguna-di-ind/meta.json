@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-19-aturan-lalu-lintas-untuk-pengguna-di-ind",
+  "app": "rulebook",
+  "publish_date": "2026-11-03",
+  "primary_keyword": "aturan lalu lintas",
+  "idea_type": "local",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "aturan-lalu-lintas-untuk-pengguna-di-indonesia",
+    "en": "aturan-lalu-lintas-for-users-in-indonesia",
+    "ar": "aturan-lalu-lintas-3",
+    "jv": "pandhuan-aturan-lalu-lintas-rulebook-3",
+    "su": "pituduh-aturan-lalu-lintas-rulebook-3",
+    "zh": "rulebook-aturan-lalu-lintas-实用指南-3",
+    "ja": "rulebookaturan-lalu-lintas-ガイド-3"
+  },
+  "titles": {
+    "id": "aturan lalu lintas: panduan praktis di RuleBook",
+    "en": "aturan lalu lintas for Users in Indonesia",
+    "ar": "aturan lalu lintas — دليل RuleBook",
+    "jv": "Pandhuan: aturan lalu lintas: panduan praktis di RuleBook",
+    "su": "Pituduh: aturan lalu lintas: panduan praktis di RuleBook",
+    "zh": "RuleBook · aturan lalu lintas 实用指南",
+    "ja": "RuleBook｜aturan lalu lintas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

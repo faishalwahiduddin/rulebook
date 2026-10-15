@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-03-checklist-regulasi-harian-yang-bisa-diti",
+  "app": "rulebook",
+  "publish_date": "2026-10-18",
+  "primary_keyword": "regulasi",
+  "idea_type": "checklist",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "checklist-regulasi-harian-yang-bisa-ditiru-harian",
+    "en": "daily-regulasi-checklist-you-can-copy",
+    "ar": "regulasi",
+    "jv": "pandhuan-regulasi-rulebook",
+    "su": "pituduh-regulasi-rulebook",
+    "zh": "rulebook-regulasi-实用指南",
+    "ja": "rulebookregulasi-ガイド"
+  },
+  "titles": {
+    "id": "Checklist regulasi Harian yang Bisa Ditiru",
+    "en": "Daily regulasi Checklist You Can Copy",
+    "ar": "regulasi — دليل RuleBook",
+    "jv": "Pandhuan: Checklist regulasi Harian yang Bisa Ditiru",
+    "su": "Pituduh: Checklist regulasi Harian yang Bisa Ditiru",
+    "zh": "RuleBook · regulasi 实用指南",
+    "ja": "RuleBook｜regulasi ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

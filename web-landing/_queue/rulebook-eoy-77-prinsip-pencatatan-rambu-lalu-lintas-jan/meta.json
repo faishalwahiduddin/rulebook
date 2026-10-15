@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-77-prinsip-pencatatan-rambu-lalu-lintas-jan",
+  "app": "rulebook",
+  "publish_date": "2026-12-31",
+  "primary_keyword": "rambu lalu lintas",
+  "idea_type": "evergreen",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "prinsip-pencatatan-rambu-lalu-lintas-jangka-panjang-offline",
+    "en": "long-term-rambu-lalu-lintas-logging-principles",
+    "ar": "rambu-lalu-lintas-9",
+    "jv": "pandhuan-rambu-lalu-lintas-rulebook-9",
+    "su": "pituduh-rambu-lalu-lintas-rulebook-9",
+    "zh": "rulebook-rambu-lalu-lintas-实用指南-9",
+    "ja": "rulebookrambu-lalu-lintas-ガイド-9"
+  },
+  "titles": {
+    "id": "Prinsip Pencatatan rambu lalu lintas Jangka Panjang",
+    "en": "Long-Term rambu lalu lintas Logging Principles",
+    "ar": "rambu lalu lintas — دليل RuleBook",
+    "jv": "Pandhuan: Prinsip Pencatatan rambu lalu lintas Jangka Panjang",
+    "su": "Pituduh: Prinsip Pencatatan rambu lalu lintas Jangka Panjang",
+    "zh": "RuleBook · rambu lalu lintas 实用指南",
+    "ja": "RuleBook｜rambu lalu lintas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

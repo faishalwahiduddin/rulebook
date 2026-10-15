@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-40-cara-menamai-kategori-buku-saku-mingguan",
+  "app": "rulebook",
+  "publish_date": "2026-11-24",
+  "primary_keyword": "buku saku",
+  "idea_type": "deep",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "cara-menamai-kategori-buku-saku-mingguan",
+    "en": "how-to-name-buku-saku-categories",
+    "ar": "buku-saku-5",
+    "jv": "pandhuan-buku-saku-rulebook-5",
+    "su": "pituduh-buku-saku-rulebook-5",
+    "zh": "rulebook-buku-saku-实用指南-5",
+    "ja": "rulebookbuku-saku-ガイド-5"
+  },
+  "titles": {
+    "id": "Cara Menamai Kategori buku saku",
+    "en": "How to Name buku saku Categories — Offline First",
+    "ar": "buku saku — دليل RuleBook",
+    "jv": "Pandhuan: Cara Menamai Kategori buku saku",
+    "su": "Pituduh: Cara Menamai Kategori buku saku",
+    "zh": "RuleBook · buku saku 实用指南",
+    "ja": "RuleBook｜buku saku ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

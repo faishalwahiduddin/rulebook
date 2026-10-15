@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-66-breakdown-target-regulasi-per-minggu-202",
+  "app": "rulebook",
+  "publish_date": "2026-12-20",
+  "primary_keyword": "regulasi",
+  "idea_type": "plan",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "breakdown-target-regulasi-per-minggu-2026",
+    "en": "weekly-breakdown-of-regulasi-targets",
+    "ar": "regulasi-8",
+    "jv": "pandhuan-regulasi-rulebook-8",
+    "su": "pituduh-regulasi-rulebook-8",
+    "zh": "rulebook-regulasi-实用指南-8",
+    "ja": "rulebookregulasi-ガイド-8"
+  },
+  "titles": {
+    "id": "Breakdown Target regulasi per Minggu",
+    "en": "Weekly Breakdown of regulasi Targets",
+    "ar": "regulasi — دليل RuleBook",
+    "jv": "Pandhuan: Breakdown Target regulasi per Minggu",
+    "su": "Pituduh: Breakdown Target regulasi per Minggu",
+    "zh": "RuleBook · regulasi 实用指南",
+    "ja": "RuleBook｜regulasi ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

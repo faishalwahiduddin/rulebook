@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-33-rulebook-aplikasi-vs-catatan-di-browser-",
+  "app": "rulebook",
+  "publish_date": "2026-11-17",
+  "primary_keyword": "aturan lalu lintas",
+  "idea_type": "vs-web",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "rulebook-aplikasi-vs-catatan-di-browser-harian",
+    "en": "rulebook-app-vs-browser-notes",
+    "ar": "rulebook-4",
+    "jv": "pandhuan-rulebook-rulebook-4",
+    "su": "pituduh-rulebook-rulebook-4",
+    "zh": "rulebook-rulebook-实用指南-4",
+    "ja": "rulebookrulebook-ガイド-4"
+  },
+  "titles": {
+    "id": "RuleBook: Aplikasi vs Catatan di Browser",
+    "en": "RuleBook: App vs Browser Notes",
+    "ar": "RuleBook — دليل RuleBook",
+    "jv": "Pandhuan: RuleBook: Aplikasi vs Catatan di Browser",
+    "su": "Pituduh: RuleBook: Aplikasi vs Catatan di Browser",
+    "zh": "RuleBook · RuleBook 实用指南",
+    "ja": "RuleBook｜RuleBook ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

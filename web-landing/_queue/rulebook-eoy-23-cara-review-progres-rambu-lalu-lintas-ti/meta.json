@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-23-cara-review-progres-rambu-lalu-lintas-ti",
+  "app": "rulebook",
+  "publish_date": "2026-11-07",
+  "primary_keyword": "rambu lalu lintas",
+  "idea_type": "review",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "cara-review-progres-rambu-lalu-lintas-tiap-minggu-offline",
+    "en": "how-to-review-rambu-lalu-lintas-progress-weekly",
+    "ar": "rambu-lalu-lintas-3",
+    "jv": "pandhuan-rambu-lalu-lintas-rulebook-3",
+    "su": "pituduh-rambu-lalu-lintas-rulebook-3",
+    "zh": "rulebook-rambu-lalu-lintas-实用指南-3",
+    "ja": "rulebookrambu-lalu-lintas-ガイド-3"
+  },
+  "titles": {
+    "id": "Cara Review Progres rambu lalu lintas Tiap Minggu",
+    "en": "How to Review rambu lalu lintas Progress Weekly",
+    "ar": "rambu lalu lintas — دليل RuleBook",
+    "jv": "Pandhuan: Cara Review Progres rambu lalu lintas Tiap Minggu",
+    "su": "Pituduh: Cara Review Progres rambu lalu lintas Tiap Minggu",
+    "zh": "RuleBook · rambu lalu lintas 实用指南",
+    "ja": "RuleBook｜rambu lalu lintas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

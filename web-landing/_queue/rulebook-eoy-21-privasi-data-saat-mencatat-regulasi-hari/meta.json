@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-21-privasi-data-saat-mencatat-regulasi-hari",
+  "app": "rulebook",
+  "publish_date": "2026-11-05",
+  "primary_keyword": "regulasi",
+  "idea_type": "privacy",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "privasi-data-saat-mencatat-regulasi-harian",
+    "en": "data-privacy-when-logging-regulasi",
+    "ar": "regulasi-3",
+    "jv": "pandhuan-regulasi-rulebook-3",
+    "su": "pituduh-regulasi-rulebook-3",
+    "zh": "rulebook-regulasi-实用指南-3",
+    "ja": "rulebookregulasi-ガイド-3"
+  },
+  "titles": {
+    "id": "Privasi Data saat Mencatat regulasi",
+    "en": "Data Privacy When Logging regulasi",
+    "ar": "regulasi — دليل RuleBook",
+    "jv": "Pandhuan: Privasi Data saat Mencatat regulasi",
+    "su": "Pituduh: Privasi Data saat Mencatat regulasi",
+    "zh": "RuleBook · regulasi 实用指南",
+    "ja": "RuleBook｜regulasi ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

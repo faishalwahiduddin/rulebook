@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-65-rencana-30-hari-sop-offline",
+  "app": "rulebook",
+  "publish_date": "2026-12-19",
+  "primary_keyword": "SOP",
+  "idea_type": "plan",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "rencana-30-hari-sop-offline",
+    "en": "30-day-sop-plan",
+    "ar": "sop-8",
+    "jv": "pandhuan-sop-rulebook-8",
+    "su": "pituduh-sop-rulebook-8",
+    "zh": "rulebook-sop-实用指南-8",
+    "ja": "rulebooksop-ガイド-8"
+  },
+  "titles": {
+    "id": "Rencana 30 Hari SOP",
+    "en": "30-Day SOP Plan",
+    "ar": "SOP — دليل RuleBook",
+    "jv": "Pandhuan: Rencana 30 Hari SOP",
+    "su": "Pituduh: Rencana 30 Hari SOP",
+    "zh": "RuleBook · SOP 实用指南",
+    "ja": "RuleBook｜SOP ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

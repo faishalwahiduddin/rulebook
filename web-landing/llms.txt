@@ -1,0 +1,20 @@
+# RuleBook
+
+> Pencatat skor board game, aturan main, timer giliran & riwayat.
+
+RuleBook is a free app in the faishal.id fleet. Offline-first product; this marketing site may use optional consent-gated analytics.
+
+## Links
+
+- Home: https://rulebook.faishal.id/id/
+- Blog: https://rulebook.faishal.id/id/blog/
+- Privacy: https://rulebook.faishal.id/id/privacy.html
+- Terms: https://rulebook.faishal.id/id/terms.html
+- Pricing: https://rulebook.faishal.id/pricing.md
+- Publisher: https://faishal.id
+
+## Blog posts
+
+- https://rulebook.faishal.id/id/blog/aturan-lalu-lintas-saku/
+- https://rulebook.faishal.id/id/blog/rambu-marka-prioritas/
+- https://rulebook.faishal.id/id/blog/sop-regulasi-offline/

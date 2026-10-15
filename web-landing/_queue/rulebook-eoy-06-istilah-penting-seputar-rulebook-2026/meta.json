@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-06-istilah-penting-seputar-rulebook-2026",
+  "app": "rulebook",
+  "publish_date": "2026-10-21",
+  "primary_keyword": "aturan lalu lintas",
+  "idea_type": "glossary",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "istilah-penting-seputar-rulebook-2026",
+    "en": "key-terms-around-rulebook",
+    "ar": "rulebook",
+    "jv": "pandhuan-rulebook-rulebook",
+    "su": "pituduh-rulebook-rulebook",
+    "zh": "rulebook-rulebook-实用指南",
+    "ja": "rulebookrulebook-ガイド"
+  },
+  "titles": {
+    "id": "Istilah Penting seputar RuleBook",
+    "en": "Key Terms Around RuleBook",
+    "ar": "RuleBook — دليل RuleBook",
+    "jv": "Pandhuan: Istilah Penting seputar RuleBook",
+    "su": "Pituduh: Istilah Penting seputar RuleBook",
+    "zh": "RuleBook · RuleBook 实用指南",
+    "ja": "RuleBook｜RuleBook ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

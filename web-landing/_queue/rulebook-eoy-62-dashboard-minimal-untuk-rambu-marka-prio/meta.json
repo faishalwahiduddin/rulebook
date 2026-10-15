@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-62-dashboard-minimal-untuk-rambu-marka-prio",
+  "app": "rulebook",
+  "publish_date": "2026-12-16",
+  "primary_keyword": "rambu marka prioritas",
+  "idea_type": "measure",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "dashboard-minimal-untuk-rambu-marka-prioritas-praktis",
+    "en": "minimal-dashboard-for-rambu-marka-prioritas-practical",
+    "ar": "rambu-marka-prioritas-7",
+    "jv": "pandhuan-rambu-marka-prioritas-rulebook-7",
+    "su": "pituduh-rambu-marka-prioritas-rulebook-7",
+    "zh": "rulebook-rambu-marka-prioritas-实用指南-7",
+    "ja": "rulebookrambu-marka-prioritas-ガイド-7"
+  },
+  "titles": {
+    "id": "Dashboard Minimal untuk rambu marka prioritas",
+    "en": "Minimal Dashboard for rambu marka prioritas (Practical)",
+    "ar": "rambu marka prioritas — دليل RuleBook",
+    "jv": "Pandhuan: Dashboard Minimal untuk rambu marka prioritas",
+    "su": "Pituduh: Dashboard Minimal untuk rambu marka prioritas",
+    "zh": "RuleBook · rambu marka prioritas 实用指南",
+    "ja": "RuleBook｜rambu marka prioritas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

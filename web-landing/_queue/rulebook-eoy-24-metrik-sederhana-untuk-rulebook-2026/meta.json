@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-24-metrik-sederhana-untuk-rulebook-2026",
+  "app": "rulebook",
+  "publish_date": "2026-11-08",
+  "primary_keyword": "aturan lalu lintas",
+  "idea_type": "review",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "metrik-sederhana-untuk-rulebook-2026",
+    "en": "simple-metrics-for-rulebook",
+    "ar": "rulebook-3",
+    "jv": "pandhuan-rulebook-rulebook-3",
+    "su": "pituduh-rulebook-rulebook-3",
+    "zh": "rulebook-rulebook-实用指南-3",
+    "ja": "rulebookrulebook-ガイド-3"
+  },
+  "titles": {
+    "id": "Metrik Sederhana untuk RuleBook",
+    "en": "Simple Metrics for RuleBook",
+    "ar": "RuleBook — دليل RuleBook",
+    "jv": "Pandhuan: Metrik Sederhana untuk RuleBook",
+    "su": "Pituduh: Metrik Sederhana untuk RuleBook",
+    "zh": "RuleBook · RuleBook 实用指南",
+    "ja": "RuleBook｜RuleBook ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

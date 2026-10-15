@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-20-setup-sop-offline-tanpa-kuota-praktis",
+  "app": "rulebook",
+  "publish_date": "2026-11-04",
+  "primary_keyword": "SOP",
+  "idea_type": "local",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "setup-sop-offline-tanpa-kuota-praktis",
+    "en": "set-up-offline-sop-without-data-practical",
+    "ar": "sop-3",
+    "jv": "pandhuan-sop-rulebook-3",
+    "su": "pituduh-sop-rulebook-3",
+    "zh": "rulebook-sop-实用指南-3",
+    "ja": "rulebooksop-ガイド-3"
+  },
+  "titles": {
+    "id": "Setup SOP Offline tanpa Kuota",
+    "en": "Set Up Offline SOP Without Data (Practical)",
+    "ar": "SOP — دليل RuleBook",
+    "jv": "Pandhuan: Setup SOP Offline tanpa Kuota",
+    "su": "Pituduh: Setup SOP Offline tanpa Kuota",
+    "zh": "RuleBook · SOP 实用指南",
+    "ja": "RuleBook｜SOP ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

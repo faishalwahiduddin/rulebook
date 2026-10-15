@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-75-kriteria-memilih-aplikasi-regulasi-haria",
+  "app": "rulebook",
+  "publish_date": "2026-12-29",
+  "primary_keyword": "regulasi",
+  "idea_type": "intent-buy",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "kriteria-memilih-aplikasi-regulasi-harian",
+    "en": "criteria-for-choosing-a-regulasi-app",
+    "ar": "regulasi-9",
+    "jv": "pandhuan-regulasi-rulebook-9",
+    "su": "pituduh-regulasi-rulebook-9",
+    "zh": "rulebook-regulasi-实用指南-9",
+    "ja": "rulebookregulasi-ガイド-9"
+  },
+  "titles": {
+    "id": "Kriteria Memilih Aplikasi regulasi",
+    "en": "Criteria for Choosing a regulasi App",
+    "ar": "regulasi — دليل RuleBook",
+    "jv": "Pandhuan: Kriteria Memilih Aplikasi regulasi",
+    "su": "Pituduh: Kriteria Memilih Aplikasi regulasi",
+    "zh": "RuleBook · regulasi 实用指南",
+    "ja": "RuleBook｜regulasi ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-44-komunikasi-soal-progres-rambu-marka-prio",
+  "app": "rulebook",
+  "publish_date": "2026-11-28",
+  "primary_keyword": "rambu marka prioritas",
+  "idea_type": "family",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "komunikasi-soal-progres-rambu-marka-prioritas-praktis",
+    "en": "talking-about-rambu-marka-prioritas-progress-practical",
+    "ar": "rambu-marka-prioritas-5",
+    "jv": "pandhuan-rambu-marka-prioritas-rulebook-5",
+    "su": "pituduh-rambu-marka-prioritas-rulebook-5",
+    "zh": "rulebook-rambu-marka-prioritas-实用指南-5",
+    "ja": "rulebookrambu-marka-prioritas-ガイド-5"
+  },
+  "titles": {
+    "id": "Komunikasi soal Progres rambu marka prioritas",
+    "en": "Talking About rambu marka prioritas Progress (Practical)",
+    "ar": "rambu marka prioritas — دليل RuleBook",
+    "jv": "Pandhuan: Komunikasi soal Progres rambu marka prioritas",
+    "su": "Pituduh: Komunikasi soal Progres rambu marka prioritas",
+    "zh": "RuleBook · rambu marka prioritas 实用指南",
+    "ja": "RuleBook｜rambu marka prioritas ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

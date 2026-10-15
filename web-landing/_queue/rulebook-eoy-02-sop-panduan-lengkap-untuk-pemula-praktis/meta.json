@@ -1,0 +1,29 @@
+{
+  "package_id": "rulebook-eoy-02-sop-panduan-lengkap-untuk-pemula-praktis",
+  "app": "rulebook",
+  "publish_date": "2026-10-17",
+  "primary_keyword": "SOP",
+  "idea_type": "how-to",
+  "status": "queued",
+  "banner_ready": false,
+  "seo": true,
+  "slugs": {
+    "id": "sop-panduan-lengkap-untuk-pemula-praktis",
+    "en": "sop-complete-beginner-guide-practical",
+    "ar": "sop",
+    "jv": "pandhuan-sop-rulebook",
+    "su": "pituduh-sop-rulebook",
+    "zh": "rulebook-sop-实用指南",
+    "ja": "rulebooksop-ガイド"
+  },
+  "titles": {
+    "id": "SOP: Panduan Lengkap untuk Pemula",
+    "en": "SOP: Complete Beginner Guide (Practical)",
+    "ar": "SOP — دليل RuleBook",
+    "jv": "Pandhuan: SOP: Panduan Lengkap untuk Pemula",
+    "su": "Pituduh: SOP: Panduan Lengkap untuk Pemula",
+    "zh": "RuleBook · SOP 实用指南",
+    "ja": "RuleBook｜SOP ガイド"
+  },
+  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+}

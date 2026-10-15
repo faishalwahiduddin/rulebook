@@ -21,8 +21,8 @@ window.STORE_CONFIG = {
     "es-ES": "ES"
   },
   "tagline": {
-    "id": "Buku saku aturan, SOP, dan regulasi offline.",
-    "en-US": "Pocket rules, SOPs, and regulations offline.",
+    "id": "Pencatat skor board game, aturan main, timer giliran & riwayat.",
+    "en-US": "Board game rules reference, round score tracker, and turn timer.",
     "ar": "Pocket rules, SOPs, and regulations offline.",
     "ja-JP": "Pocket rules, SOPs, and regulations offline.",
     "zh-CN": "Pocket rules, SOPs, and regulations offline.",
