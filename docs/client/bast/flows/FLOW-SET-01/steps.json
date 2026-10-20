@@ -1,0 +1,32 @@
+{
+  "flow": "FLOW-SET-01",
+  "title": "Mengatur bahasa, tema, dan cadangan data",
+  "summary": "Pengguna membuka **Pengaturan & Privasi** untuk memilih tema, bahasa, zona waktu, serta mengekspor atau memulihkan cadangan `.rlb`.",
+  "role": "ROL-001",
+  "tc": "FLOW-SET-01-T01",
+  "baseURL": "flutter build web (lokal)",
+  "video": "video.mp4",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Buka pengaturan",
+      "instruction": "Ketuk ikon **Pengaturan & Privasi** di kanan atas layar **Aturan**.",
+      "image": "step-01.png",
+      "t": 6.5
+    },
+    {
+      "n": 2,
+      "title": "Pilih tema",
+      "instruction": "Pada **Tema**, ketuk **Gelap** untuk mode gelap. Pilihan tersimpan otomatis.",
+      "image": "step-02.png",
+      "t": 8.1
+    },
+    {
+      "n": 3,
+      "title": "Kelola data",
+      "instruction": "Pada **Manajemen Data & Catatan** pilih **Ekspor cadangan (.rlb)**, **Pulihkan dari berkas (.rlb)**, atau **Hapus Semua Catatan & Bookmark**. **Pernyataan Penyangkalan** menegaskan isi app bukan nasihat hukum.",
+      "image": "step-03.png",
+      "t": 10.7
+    }
+  ]
+}

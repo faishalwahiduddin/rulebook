@@ -64,3 +64,18 @@ Satu aktor saja; tidak ada peran berbasis server.
 - Regulasi berubah; konten perlu tinjau berkala tiap rilis.
 - Perbedaan interpretasi pasal perlu dirujuk ke teks asli, bukan
    diputuskan aplikasi.
+
+## 6. Kebutuhan bisnis (§TRACE)
+
+ID di kolom pertama adalah SSOT `BR-NNN`; kolom terakhir menunjuk kebutuhan
+produk di [PRD](./PRD.md) yang merealisasikannya.
+
+| ID | Kebutuhan bisnis | Direalisasikan oleh |
+|---|---|---|
+| BR-001 | Cepat saat dibutuhkan: orang awam menemukan aturan, pasal, dan sanksinya dalam hitungan detik. | FR-001, FR-004, NFR-002 |
+| BR-002 | Manusiawi tapi sah: intisari boleh/dilarang/sanksi ditulis ringan tanpa menghilangkan dasar hukum formal; bisa dibagikan apa adanya. | FR-002, FR-003, FR-007, FR-011 |
+| BR-003 | Selalu tersedia: seluruh konten tertanam lokal dan jalan penuh saat offline. | NFR-001 |
+| BR-004 | Favorit siap buka: pasal penting dan catatan pribadi dibuka kembali dalam dua tap. | FR-005, FR-006 |
+| BR-005 | Panduan bertindak: SOP darurat, audit kepatuhan, dan kalkulator hak (lembur, pesangon) melengkapi bacaan aturan. | FR-008, FR-009, FR-010 |
+| BR-006 | Data pribadi milik pengguna: tanpa akun dan tracking; simpanan bisa dicadangkan, dipulihkan, dan dihapus sendiri. | FR-012 |
+| BR-007 | Penafian: aplikasi menyatakan isinya ringkasan informasi, bukan nasihat hukum profesional. | FR-013 |

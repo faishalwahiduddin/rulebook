@@ -1,0 +1,25 @@
+{
+  "flow": "FLOW-SOP-01",
+  "title": "Membuka SOP darurat",
+  "summary": "Pengguna dalam situasi darurat membuka tab **Darurat** dan mengikuti langkah SOP beserta dasar hukumnya.",
+  "role": "ROL-001",
+  "tc": "FLOW-SOP-01-T01",
+  "baseURL": "flutter build web (lokal)",
+  "video": "video.mp4",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Buka tab Darurat",
+      "instruction": "Ketuk tab **Darurat**. Daftar SOP menampilkan skenario dan jumlah langkahnya.",
+      "image": "step-01.png",
+      "t": 6.1
+    },
+    {
+      "n": 2,
+      "title": "Ikuti langkah SOP",
+      "instruction": "Ketuk **SOP Menghadapi Razia & Tilang Polisi**. Ikuti langkah bernomor dari atas ke bawah.",
+      "image": "step-02.png",
+      "t": 8.2
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "flow": "FLOW-RUL-03",
+  "title": "Membagikan butir aturan",
+  "summary": "Pengguna membuka butir aturan lalu menyiapkan **Kartu Aturan** untuk dibagikan ke teman, lengkap dengan dasar hukumnya.",
+  "role": "ROL-001",
+  "tc": "FLOW-RUL-03-T01",
+  "baseURL": "flutter build web (lokal)",
+  "video": "video.mp4",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Buka butir aturan",
+      "instruction": "Ketuk kartu **Batas Kecepatan Jalan Tol & Arteri** pada layar **Aturan**.",
+      "image": "step-01.png",
+      "t": 6.1
+    },
+    {
+      "n": 2,
+      "title": "Siapkan kartu aturan",
+      "instruction": "Ketuk **Bagikan Kartu Aturan**. Pilih rasio (**4:5 Feed** / **9:16 Story**) dan tema kartu; pratinjau memuat judul, sanksi, dan dasar hukum.",
+      "image": "step-02.png",
+      "t": 8.1
+    },
+    {
+      "n": 3,
+      "title": "Kirim atau salin",
+      "instruction": "Ketuk **Simpan Gambar** untuk menyimpan/membagikan kartu, atau **Salin Teks** untuk menempel ringkasan beserta dasar hukumnya di chat.",
+      "image": "step-03.png",
+      "t": 9.3
+    }
+  ]
+}

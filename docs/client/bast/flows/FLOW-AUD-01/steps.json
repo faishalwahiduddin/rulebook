@@ -1,0 +1,32 @@
+{
+  "flow": "FLOW-AUD-01",
+  "title": "Menjalankan audit kepatuhan",
+  "summary": "Pengguna mencentang butir audit kelaikan berkendara; progres kepatuhan tersimpan di perangkat dan bisa direset.",
+  "role": "ROL-001",
+  "tc": "FLOW-AUD-01-T01",
+  "baseURL": "flutter build web (lokal)",
+  "video": "video.mp4",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Buka tab Audit",
+      "instruction": "Ketuk tab **Audit**. Setiap modul audit menampilkan persentase butir yang sudah terpenuhi.",
+      "image": "step-01.png",
+      "t": 6.7
+    },
+    {
+      "n": 2,
+      "title": "Buka modul audit",
+      "instruction": "Ketuk **Audit Kelaikan Berkendara & Dokumen Legalitas**. Butir **KRUSIAL** ditandai khusus.",
+      "image": "step-02.png",
+      "t": 8.6
+    },
+    {
+      "n": 3,
+      "title": "Centang butir terpenuhi",
+      "instruction": "Ketuk **Masa Berlaku SIM Masih Aktif** dan **STNK Asli & Pajak Tahunan Sah**. Bilah **Tingkat Kepatuhan** naik otomatis.",
+      "image": "step-03.png",
+      "t": 10.4
+    }
+  ]
+}

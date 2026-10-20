@@ -1,0 +1,291 @@
+{
+  "schema": 1,
+  "app": "rulebook",
+  "note": "SSOT §TRACE (standards.md). Layar = pages (route GoRouter); app lokal tanpa API/email. Turunan: trace-graph.json, traceability-matrix.md (graph.mjs --write).",
+  "roles": {
+    "USR": "ROL-001"
+  },
+  "modules": {
+    "RUL": "MOD-001",
+    "BKM": "MOD-002",
+    "CAL": "MOD-003",
+    "SOP": "MOD-004",
+    "AUD": "MOD-005",
+    "SET": "MOD-006"
+  },
+  "epics": [
+    {
+      "id": "EP-001",
+      "module": "MOD-001",
+      "title": "Referensi aturan offline"
+    },
+    {
+      "id": "EP-002",
+      "module": "MOD-003",
+      "title": "Panduan bertindak (kalkulator, SOP, audit)"
+    },
+    {
+      "id": "EP-003",
+      "module": "MOD-006",
+      "title": "Data pribadi & preferensi"
+    }
+  ],
+  "flows": [
+    {
+      "id": "FLOW-RUL-01",
+      "story": [
+        "US-001",
+        "US-002",
+        "US-005",
+        "US-006"
+      ],
+      "epic": "EP-001",
+      "role": "ROL-001",
+      "module": "MOD-001",
+      "title": "Menelusuri kategori dan membaca butir aturan",
+      "status": "as-built"
+    },
+    {
+      "id": "FLOW-RUL-02",
+      "story": "US-003",
+      "epic": "EP-001",
+      "role": "ROL-001",
+      "module": "MOD-001",
+      "title": "Mencari aturan secara instan",
+      "status": "as-built"
+    },
+    {
+      "id": "FLOW-RUL-03",
+      "story": "US-007",
+      "epic": "EP-001",
+      "role": "ROL-001",
+      "module": "MOD-001",
+      "title": "Membagikan butir aturan",
+      "status": "as-built"
+    },
+    {
+      "id": "FLOW-BKM-01",
+      "story": "US-004",
+      "epic": "EP-001",
+      "role": "ROL-001",
+      "module": "MOD-002",
+      "title": "Menyimpan aturan dan catatan pribadi",
+      "status": "as-built"
+    },
+    {
+      "id": "FLOW-CAL-01",
+      "story": "US-009",
+      "epic": "EP-002",
+      "role": "ROL-001",
+      "module": "MOD-003",
+      "title": "Menghitung estimasi upah lembur dan pesangon",
+      "status": "as-built"
+    },
+    {
+      "id": "FLOW-SOP-01",
+      "story": "US-010",
+      "epic": "EP-002",
+      "role": "ROL-001",
+      "module": "MOD-004",
+      "title": "Membuka SOP darurat",
+      "status": "as-built"
+    },
+    {
+      "id": "FLOW-AUD-01",
+      "story": "US-011",
+      "epic": "EP-002",
+      "role": "ROL-001",
+      "module": "MOD-005",
+      "title": "Menjalankan audit kepatuhan",
+      "status": "as-built"
+    },
+    {
+      "id": "FLOW-SET-01",
+      "story": [
+        "US-008",
+        "US-012"
+      ],
+      "epic": "EP-003",
+      "role": "ROL-001",
+      "module": "MOD-006",
+      "title": "Mengatur bahasa, tema, dan cadangan data",
+      "status": "as-built"
+    }
+  ],
+  "pages": [
+    {
+      "id": "USR-RUL-001",
+      "route": "/onboarding",
+      "source": "lib/core/ui/fleet_onboarding_screen.dart",
+      "role": "ROL-001",
+      "module": "MOD-001",
+      "flows": [
+        "FLOW-RUL-01"
+      ]
+    },
+    {
+      "id": "USR-RUL-002",
+      "route": "/",
+      "source": "lib/features/catalog/catalog_screen.dart",
+      "role": "ROL-001",
+      "module": "MOD-001",
+      "flows": [
+        "FLOW-RUL-01",
+        "FLOW-RUL-02"
+      ]
+    },
+    {
+      "id": "USR-RUL-003",
+      "route": "/rule/:id",
+      "source": "lib/features/catalog/rule_detail_screen.dart",
+      "role": "ROL-001",
+      "module": "MOD-001",
+      "flows": [
+        "FLOW-RUL-01",
+        "FLOW-RUL-03",
+        "FLOW-BKM-01"
+      ]
+    },
+    {
+      "id": "USR-BKM-001",
+      "route": "/bookmarks",
+      "source": "lib/features/bookmarks/bookmarks_screen.dart",
+      "role": "ROL-001",
+      "module": "MOD-002",
+      "flows": [
+        "FLOW-BKM-01"
+      ]
+    },
+    {
+      "id": "USR-CAL-001",
+      "route": "/calculator",
+      "source": "lib/features/calculator/penalty_calculator_screen.dart",
+      "role": "ROL-001",
+      "module": "MOD-003",
+      "flows": [
+        "FLOW-CAL-01"
+      ]
+    },
+    {
+      "id": "USR-SOP-001",
+      "route": "/sop",
+      "source": "lib/features/sop/sop_screen.dart",
+      "role": "ROL-001",
+      "module": "MOD-004",
+      "flows": [
+        "FLOW-SOP-01"
+      ]
+    },
+    {
+      "id": "USR-SOP-002",
+      "route": "/sop/:id",
+      "source": "lib/features/sop/sop_detail_screen.dart",
+      "role": "ROL-001",
+      "module": "MOD-004",
+      "flows": [
+        "FLOW-SOP-01"
+      ]
+    },
+    {
+      "id": "USR-AUD-001",
+      "route": "/checklist",
+      "source": "lib/features/checklist/checklist_screen.dart",
+      "role": "ROL-001",
+      "module": "MOD-005",
+      "flows": [
+        "FLOW-AUD-01"
+      ]
+    },
+    {
+      "id": "USR-AUD-002",
+      "route": "/checklist/:id",
+      "source": "lib/features/checklist/checklist_detail_screen.dart",
+      "role": "ROL-001",
+      "module": "MOD-005",
+      "flows": [
+        "FLOW-AUD-01"
+      ]
+    },
+    {
+      "id": "USR-SET-001",
+      "route": "/settings",
+      "source": "lib/features/settings/settings_screen.dart",
+      "role": "ROL-001",
+      "module": "MOD-006",
+      "flows": [
+        "FLOW-SET-01"
+      ]
+    }
+  ],
+  "apis": [],
+  "emails": [],
+  "functions": [
+    {
+      "id": "USR-RUL-101",
+      "name": "RulesDatabase",
+      "source": "lib/core/storage/rules_database.dart",
+      "role": "ROL-001",
+      "module": "MOD-001",
+      "flows": [
+        "FLOW-RUL-01",
+        "FLOW-SOP-01",
+        "FLOW-AUD-01"
+      ]
+    },
+    {
+      "id": "USR-RUL-102",
+      "name": "filteredRulesProvider",
+      "source": "lib/core/providers/app_providers.dart",
+      "role": "ROL-001",
+      "module": "MOD-001",
+      "flows": [
+        "FLOW-RUL-01",
+        "FLOW-RUL-02"
+      ]
+    },
+    {
+      "id": "USR-BKM-101",
+      "name": "LocalStorageService",
+      "source": "lib/core/storage/local_storage_service.dart",
+      "role": "ROL-001",
+      "module": "MOD-002",
+      "flows": [
+        "FLOW-BKM-01",
+        "FLOW-AUD-01",
+        "FLOW-SET-01"
+      ]
+    },
+    {
+      "id": "USR-CAL-101",
+      "name": "SeveranceCalculatorEngine",
+      "source": "lib/core/models/severance_calculator_models.dart",
+      "role": "ROL-001",
+      "module": "MOD-003",
+      "flows": [
+        "FLOW-CAL-01"
+      ]
+    },
+    {
+      "id": "USR-CAL-102",
+      "name": "AppValidators",
+      "source": "lib/core/utils/validators.dart",
+      "role": "ROL-001",
+      "module": "MOD-003",
+      "flows": [
+        "FLOW-CAL-01",
+        "FLOW-RUL-02",
+        "FLOW-BKM-01"
+      ]
+    },
+    {
+      "id": "USR-SET-101",
+      "name": "FleetBackupCodec",
+      "source": "lib/core/utils/backup_codec.dart",
+      "role": "ROL-001",
+      "module": "MOD-006",
+      "flows": [
+        "FLOW-SET-01"
+      ]
+    }
+  ]
+}

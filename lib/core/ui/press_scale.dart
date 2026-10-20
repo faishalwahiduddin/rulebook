@@ -102,6 +102,27 @@ class _PressScaleState extends State<PressScale>
   Widget build(BuildContext context) {
     if (!widget.enabled) return widget.child;
 
+    final scaled = AnimatedBuilder(
+      animation: _controller,
+      builder: (context, child) => Transform.scale(
+        scale: _controller.value,
+        child: child,
+      ),
+      child: widget.child,
+    );
+
+    // Visual-only (no onTap): a Listener stays out of the gesture arena, so
+    // the enclosing TapTarget's onTap still wins the tap. A GestureDetector
+    // here would claim the tap and the wrapped action would never fire.
+    if (widget.onTap == null) {
+      return Listener(
+        onPointerDown: (_) => _springTo(widget.scale),
+        onPointerUp: (_) => _springTo(1.0),
+        onPointerCancel: (_) => _springTo(1.0),
+        child: scaled,
+      );
+    }
+
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       // Down/up/cancel rather than onTap, so the visual responds the instant
@@ -109,14 +130,7 @@ class _PressScaleState extends State<PressScale>
       onTapDown: _onTapDown,
       onTapUp: _onTapUp,
       onTapCancel: _onTapCancel,
-      child: AnimatedBuilder(
-        animation: _controller,
-        builder: (context, child) => Transform.scale(
-          scale: _controller.value,
-          child: child,
-        ),
-        child: widget.child,
-      ),
+      child: scaled,
     );
   }
 }

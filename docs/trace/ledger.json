@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "app": "rulebook",
+  "cases": {
+    "FLOW-AUD-01-T01": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-AUD-01-T02": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-AUD-01-T03": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-AUD-01-T04": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-BKM-01-T01": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test+flutter-web-bast"
+    },
+    "FLOW-BKM-01-T02": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-BKM-01-T03": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-BKM-01-T04": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-BKM-01-T05": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-CAL-01-T01": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-CAL-01-T02": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-CAL-01-T03": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-CAL-01-T04": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-RUL-01-T01": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-RUL-01-T02": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-RUL-01-T03": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-RUL-01-T04": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-RUL-02-T01": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-RUL-02-T02": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-RUL-02-T03": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-RUL-02-T04": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-RUL-02-T05": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-RUL-03-T01": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-RUL-03-T02": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-RUL-03-T03": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-RUL-03-T04": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-SET-01-T01": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-SET-01-T02": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-SET-01-T03": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-SET-01-T04": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-SOP-01-T01": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-SOP-01-T02": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-SOP-01-T03": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    },
+    "FLOW-SOP-01-T04": {
+      "result": "pass",
+      "sha": "21454ce",
+      "at": "2026-10-20T10:48:47.732Z",
+      "runner": "flutter-test"
+    }
+  }
+}

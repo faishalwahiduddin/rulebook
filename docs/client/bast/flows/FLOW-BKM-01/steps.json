@@ -1,0 +1,46 @@
+{
+  "flow": "FLOW-BKM-01",
+  "title": "Menyimpan aturan dan catatan pribadi",
+  "summary": "Pengguna menandai butir aturan penting, menambahkan catatan pribadi, lalu membukanya kembali dari tab **Simpanan** tanpa mencari ulang.",
+  "role": "ROL-001",
+  "tc": "FLOW-BKM-01-T01",
+  "baseURL": "flutter build web (lokal)",
+  "video": "video.mp4",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Buka butir aturan",
+      "instruction": "Ketuk kartu **Kewajiban Membawa SIM & STNK Asli**.",
+      "image": "step-01.png",
+      "t": 7.2
+    },
+    {
+      "n": 2,
+      "title": "Simpan aturan",
+      "instruction": "Ketuk ikon penanda **Simpan aturan** di kanan atas. Ikon berubah terisi tanda aturan tersimpan.",
+      "image": "step-02.png",
+      "t": 8.4
+    },
+    {
+      "n": 3,
+      "title": "Tulis catatan pribadi",
+      "instruction": "Pada bagian **Catatan Pribadi**, ketik pengingat Anda (maksimal 500 karakter).",
+      "image": "step-03.png",
+      "t": 13.7
+    },
+    {
+      "n": 4,
+      "title": "Simpan catatan",
+      "instruction": "Ketuk **Simpan**. Catatan tersimpan di perangkat dan muncul konfirmasi **Catatan tersimpan**.",
+      "image": "step-04.png",
+      "t": 14.9
+    },
+    {
+      "n": 5,
+      "title": "Buka tab Simpanan",
+      "instruction": "Ketuk tab **Simpanan**. Aturan yang ditandai dan catatan Anda tersedia di sini, termasuk saat offline.",
+      "image": "step-05.png",
+      "t": 21.4
+    }
+  ]
+}

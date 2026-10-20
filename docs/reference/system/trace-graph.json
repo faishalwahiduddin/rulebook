@@ -1,0 +1,2093 @@
+{
+  "generatedBy": "trace-graph",
+  "app": "rulebook",
+  "stats": {
+    "BR": 7,
+    "FR": 13,
+    "NFR": 2,
+    "ROL": 1,
+    "MOD": 6,
+    "EP": 3,
+    "FLOW": 8,
+    "US": 12,
+    "PG": 10,
+    "FN": 6,
+    "TC": 34,
+    "TC_by_kind": {
+      "positive": 10,
+      "negative": 8,
+      "edge": 8,
+      "corner": 8
+    },
+    "TC_with_evidence": 34,
+    "BAST": 8
+  },
+  "nodes": [
+    {
+      "id": "BR-001",
+      "type": "BR",
+      "title": "Cepat saat dibutuhkan: orang awam menemukan aturan, pasal, dan sanksinya dalam hitungan detik. FR-001, FR-004, NFR-002",
+      "source": "docs/BRD.md"
+    },
+    {
+      "id": "BR-002",
+      "type": "BR",
+      "title": "Manusiawi tapi sah: intisari boleh/dilarang/sanksi ditulis ringan tanpa menghilangkan dasar hukum formal; bisa dibagikan apa adanya. FR-002,",
+      "source": "docs/BRD.md"
+    },
+    {
+      "id": "BR-003",
+      "type": "BR",
+      "title": "Selalu tersedia: seluruh konten tertanam lokal dan jalan penuh saat offline. NFR-001",
+      "source": "docs/BRD.md"
+    },
+    {
+      "id": "BR-004",
+      "type": "BR",
+      "title": "Favorit siap buka: pasal penting dan catatan pribadi dibuka kembali dalam dua tap. FR-005, FR-006",
+      "source": "docs/BRD.md"
+    },
+    {
+      "id": "BR-005",
+      "type": "BR",
+      "title": "Panduan bertindak: SOP darurat, audit kepatuhan, dan kalkulator hak (lembur, pesangon) melengkapi bacaan aturan. FR-008, FR-009, FR-010",
+      "source": "docs/BRD.md"
+    },
+    {
+      "id": "BR-006",
+      "type": "BR",
+      "title": "Data pribadi milik pengguna: tanpa akun dan tracking; simpanan bisa dicadangkan, dipulihkan, dan dihapus sendiri. FR-012",
+      "source": "docs/BRD.md"
+    },
+    {
+      "id": "BR-007",
+      "type": "BR",
+      "title": "Penafian: aplikasi menyatakan isinya ringkasan informasi, bukan nasihat hukum profesional. FR-013",
+      "source": "docs/BRD.md"
+    },
+    {
+      "id": "FR-001",
+      "type": "FR",
+      "title": "Katalog menampilkan semua butir dengan jumlahnya dan menyaring per kategori (Lalu Lintas, Kerja, Data & ITE, Konsumen, K3, Etika). BR-001 US",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "FR-002",
+      "type": "FR",
+      "title": "Detail butir menampilkan dasar hukum, konsekuensi/sanksi, intisari, daftar Lakukan dan Hindari; tautan butir yang tidak ada menampilkan laya",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "FR-003",
+      "type": "FR",
+      "title": "Setiap butir bawaan wajib punya judul, ringkasan, dasar hukum, dan sanksi/hak di semua bahasa. BR-002 US-006, FLOW-RUL-01",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "FR-004",
+      "type": "FR",
+      "title": "Pencarian instan di judul, ringkasan, dasar hukum (nomor pasal), dan kata kunci; maksimal 60 karakter; hasil kosong menawarkan Atur ulang . ",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "FR-005",
+      "type": "FR",
+      "title": "Bookmark butir aturan (toggle) tanpa duplikat, tersimpan lokal, tampil di tab Simpanan. BR-004 US-004, FLOW-BKM-01",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "FR-006",
+      "type": "FR",
+      "title": "Catatan pribadi per butir: wajib berisi, maksimal 500 karakter, bisa dikosongkan. BR-004 US-004, FLOW-BKM-01",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "FR-007",
+      "type": "FR",
+      "title": "Bagikan kartu aturan (gambar) atau salin teks ringkasan yang memuat dasar hukum dan tautan app. BR-002 US-007, FLOW-RUL-03",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "FR-008",
+      "type": "FR",
+      "title": "Kalkulator upah lembur, pesangon PHK (PP 35/2021), THR, denda tilang, dan sanksi ITE dengan validasi gaji Rp100.000–Rp1 miliar, jam lembur 0",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "FR-009",
+      "type": "FR",
+      "title": "SOP darurat per skenario: langkah bernomor, ringkasan hak, kontak darurat, dasar hukum. BR-005 US-010, FLOW-SOP-01",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "FR-010",
+      "type": "FR",
+      "title": "Audit kepatuhan: centang butir, persentase kepatuhan per modul tersimpan lokal, reset per modul. BR-005 US-011, FLOW-AUD-01",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "FR-011",
+      "type": "FR",
+      "title": "Antarmuka tersedia dalam 8 bahasa; tema sistem/terang/gelap tersimpan. BR-002 US-008, FLOW-SET-01",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "FR-012",
+      "type": "FR",
+      "title": "Ekspor dan pulihkan cadangan .rlb (bookmark + catatan); berkas rusak/asing ditolak; hapus semua simpanan tanpa menghapus preferensi. BR-006 ",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "FR-013",
+      "type": "FR",
+      "title": "Penafian \"bukan nasihat hukum\" tampil di Pengaturan. BR-007 US-012, FLOW-SET-01",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "NFR-001",
+      "type": "NFR",
+      "title": "Offline total: konten tertanam, tanpa request jaringan saat membaca. BR-003 FLOW-RUL-01",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "NFR-002",
+      "type": "NFR",
+      "title": "Pencarian mengembalikan hasil < 1 detik (filter lokal di memori). BR-001 FLOW-RUL-02",
+      "source": "docs/PRD.md"
+    },
+    {
+      "id": "ROL-001",
+      "type": "ROL",
+      "title": "USR",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "MOD-001",
+      "type": "MOD",
+      "title": "RUL",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "MOD-002",
+      "type": "MOD",
+      "title": "BKM",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "MOD-003",
+      "type": "MOD",
+      "title": "CAL",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "MOD-004",
+      "type": "MOD",
+      "title": "SOP",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "MOD-005",
+      "type": "MOD",
+      "title": "AUD",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "MOD-006",
+      "type": "MOD",
+      "title": "SET",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "EP-001",
+      "type": "EP",
+      "title": "Referensi aturan offline",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "EP-002",
+      "type": "EP",
+      "title": "Panduan bertindak (kalkulator, SOP, audit)",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "EP-003",
+      "type": "EP",
+      "title": "Data pribadi & preferensi",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "FLOW-RUL-01",
+      "type": "FLOW",
+      "title": "Menelusuri kategori dan membaca butir aturan",
+      "status": "as-built",
+      "source": "docs/reference/system/traceability.json",
+      "bast": null,
+      "bastReason": null
+    },
+    {
+      "id": "FLOW-RUL-02",
+      "type": "FLOW",
+      "title": "Mencari aturan secara instan",
+      "status": "as-built",
+      "source": "docs/reference/system/traceability.json",
+      "bast": null,
+      "bastReason": null
+    },
+    {
+      "id": "FLOW-RUL-03",
+      "type": "FLOW",
+      "title": "Membagikan butir aturan",
+      "status": "as-built",
+      "source": "docs/reference/system/traceability.json",
+      "bast": null,
+      "bastReason": null
+    },
+    {
+      "id": "FLOW-BKM-01",
+      "type": "FLOW",
+      "title": "Menyimpan aturan dan catatan pribadi",
+      "status": "as-built",
+      "source": "docs/reference/system/traceability.json",
+      "bast": null,
+      "bastReason": null
+    },
+    {
+      "id": "FLOW-CAL-01",
+      "type": "FLOW",
+      "title": "Menghitung estimasi upah lembur dan pesangon",
+      "status": "as-built",
+      "source": "docs/reference/system/traceability.json",
+      "bast": null,
+      "bastReason": null
+    },
+    {
+      "id": "FLOW-SOP-01",
+      "type": "FLOW",
+      "title": "Membuka SOP darurat",
+      "status": "as-built",
+      "source": "docs/reference/system/traceability.json",
+      "bast": null,
+      "bastReason": null
+    },
+    {
+      "id": "FLOW-AUD-01",
+      "type": "FLOW",
+      "title": "Menjalankan audit kepatuhan",
+      "status": "as-built",
+      "source": "docs/reference/system/traceability.json",
+      "bast": null,
+      "bastReason": null
+    },
+    {
+      "id": "FLOW-SET-01",
+      "type": "FLOW",
+      "title": "Mengatur bahasa, tema, dan cadangan data",
+      "status": "as-built",
+      "source": "docs/reference/system/traceability.json",
+      "bast": null,
+      "bastReason": null
+    },
+    {
+      "id": "US-001",
+      "type": "US",
+      "title": "Menelusuri kategori dan membaca butir aturan",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "US-002",
+      "type": "US",
+      "title": "Menelusuri kategori dan membaca butir aturan",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "US-005",
+      "type": "US",
+      "title": "Menelusuri kategori dan membaca butir aturan",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "US-006",
+      "type": "US",
+      "title": "Menelusuri kategori dan membaca butir aturan",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "US-003",
+      "type": "US",
+      "title": "Mencari aturan secara instan",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "US-007",
+      "type": "US",
+      "title": "Membagikan butir aturan",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "US-004",
+      "type": "US",
+      "title": "Menyimpan aturan dan catatan pribadi",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "US-009",
+      "type": "US",
+      "title": "Menghitung estimasi upah lembur dan pesangon",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "US-010",
+      "type": "US",
+      "title": "Membuka SOP darurat",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "US-011",
+      "type": "US",
+      "title": "Menjalankan audit kepatuhan",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "US-008",
+      "type": "US",
+      "title": "Mengatur bahasa, tema, dan cadangan data",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "US-012",
+      "type": "US",
+      "title": "Mengatur bahasa, tema, dan cadangan data",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-RUL-001",
+      "type": "PG",
+      "title": "/onboarding",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-RUL-002",
+      "type": "PG",
+      "title": "/",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-RUL-003",
+      "type": "PG",
+      "title": "/rule/:id",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-BKM-001",
+      "type": "PG",
+      "title": "/bookmarks",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-CAL-001",
+      "type": "PG",
+      "title": "/calculator",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-SOP-001",
+      "type": "PG",
+      "title": "/sop",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-SOP-002",
+      "type": "PG",
+      "title": "/sop/:id",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-AUD-001",
+      "type": "PG",
+      "title": "/checklist",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-AUD-002",
+      "type": "PG",
+      "title": "/checklist/:id",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-SET-001",
+      "type": "PG",
+      "title": "/settings",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-RUL-101",
+      "type": "FN",
+      "title": "RulesDatabase",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-RUL-102",
+      "type": "FN",
+      "title": "filteredRulesProvider",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-BKM-101",
+      "type": "FN",
+      "title": "LocalStorageService",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-CAL-101",
+      "type": "FN",
+      "title": "SeveranceCalculatorEngine",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-CAL-102",
+      "type": "FN",
+      "title": "AppValidators",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "USR-SET-101",
+      "type": "FN",
+      "title": "FleetBackupCodec",
+      "source": "docs/reference/system/traceability.json"
+    },
+    {
+      "id": "FLOW-RUL-01-T01",
+      "type": "TC",
+      "title": "kategori Lalu Lintas hanya memuat butir lalu lintas yang lengkap",
+      "layer": "unit",
+      "kind": "positive",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-RUL-01-T02",
+      "type": "TC",
+      "title": "deep link ke id aturan yang tidak ada ditolak (layar tidak ditemukan)",
+      "layer": "unit",
+      "kind": "negative",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-RUL-01-T03",
+      "type": "TC",
+      "title": "kategori Semua menampilkan seluruh butir dan id unik",
+      "layer": "unit",
+      "kind": "edge",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-RUL-01-T04",
+      "type": "TC",
+      "title": "id null / kosong pada tiga jenis konten tidak membuat crash",
+      "layer": "unit",
+      "kind": "corner",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-RUL-02-T01",
+      "type": "TC",
+      "title": "kata kunci \"helm\" menemukan aturan helm SNI",
+      "layer": "unit",
+      "kind": "positive",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-RUL-02-T02",
+      "type": "TC",
+      "title": "kueri lebih dari 60 karakter ditolak dan kueri lama dipertahankan",
+      "layer": "unit",
+      "kind": "negative",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-RUL-02-T03",
+      "type": "TC",
+      "title": "kueri hanya spasi dianggap kosong dan menampilkan semua aturan",
+      "layer": "unit",
+      "kind": "edge",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-RUL-02-T04",
+      "type": "TC",
+      "title": "kueri yang cocok di kategori lain menghasilkan 0 dan bisa diatur ulang",
+      "layer": "unit",
+      "kind": "corner",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-RUL-02-T05",
+      "type": "TC",
+      "title": "nomor pasal mencocokkan dasar hukum, tanpa membedakan huruf besar",
+      "layer": "unit",
+      "kind": "positive",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-RUL-03-T01",
+      "type": "TC",
+      "title": "pratinjau kartu memuat judul dan dasar hukum butir",
+      "layer": "unit",
+      "kind": "positive",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-RUL-03-T02",
+      "type": "TC",
+      "title": "butir yang tidak ada tidak dapat dibuka untuk dibagikan",
+      "layer": "unit",
+      "kind": "negative",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-RUL-03-T03",
+      "type": "TC",
+      "title": "semua butir di 8 bahasa punya judul dan sanksi tidak kosong untuk kartu",
+      "layer": "unit",
+      "kind": "edge",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-RUL-03-T04",
+      "type": "TC",
+      "title": "Salin Teks menaruh judul, dasar hukum, dan tautan app di clipboard",
+      "layer": "unit",
+      "kind": "corner",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-BKM-01-T01",
+      "type": "TC",
+      "title": "bookmark tersimpan ke perangkat dan terbaca ulang",
+      "layer": "unit",
+      "kind": "positive",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-BKM-01-T02",
+      "type": "TC",
+      "title": "id aturan kosong dan catatan kosong ditolak",
+      "layer": "unit",
+      "kind": "negative",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-BKM-01-T03",
+      "type": "TC",
+      "title": "catatan tepat 500 karakter diterima, 501 ditolak",
+      "layer": "unit",
+      "kind": "edge",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-BKM-01-T04",
+      "type": "TC",
+      "title": "bookmark ganda tidak dobel dan ketuk dua kali melepas simpanan",
+      "layer": "unit",
+      "kind": "corner",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-BKM-01-T05",
+      "type": "TC",
+      "title": "ikon simpan (TapTarget + PressScale) memicu aksi saat diketuk",
+      "layer": "unit",
+      "kind": "positive",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-CAL-01-T01",
+      "type": "TC",
+      "title": "pesangon efisiensi 3 tahun 6 bulan sesuai PP 35/2021",
+      "layer": "unit",
+      "kind": "positive",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-CAL-01-T02",
+      "type": "TC",
+      "title": "gaji di bawah Rp100.000, jam lembur 0, dan masa kerja negatif ditolak",
+      "layer": "unit",
+      "kind": "negative",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-CAL-01-T03",
+      "type": "TC",
+      "title": "batas masa kerja: 11 bulan = 1 bulan, 8 tahun = 9 bulan, UPMK 24 tahun = 10",
+      "layer": "unit",
+      "kind": "edge",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-CAL-01-T04",
+      "type": "TC",
+      "title": "gaji berformat \"Rp 5.000.000\" dibersihkan; di atas Rp1 miliar ditolak",
+      "layer": "unit",
+      "kind": "corner",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-SOP-01-T01",
+      "type": "TC",
+      "title": "setiap SOP punya langkah bernomor, dasar hukum, dan kontak darurat",
+      "layer": "unit",
+      "kind": "positive",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-SOP-01-T02",
+      "type": "TC",
+      "title": "tautan SOP yang tidak ada ditolak",
+      "layer": "unit",
+      "kind": "negative",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-SOP-01-T03",
+      "type": "TC",
+      "title": "kategori tanpa SOP dan kueri tanpa hasil menghasilkan daftar kosong",
+      "layer": "unit",
+      "kind": "edge",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-SOP-01-T04",
+      "type": "TC",
+      "title": "SOP dengan kategori tak dikenal di data tersimpan jatuh ke kategori default",
+      "layer": "unit",
+      "kind": "corner",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-AUD-01-T01",
+      "type": "TC",
+      "title": "centang butir audit tersimpan dan terbaca ulang",
+      "layer": "unit",
+      "kind": "positive",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-AUD-01-T02",
+      "type": "TC",
+      "title": "tautan modul audit yang tidak ada ditolak",
+      "layer": "unit",
+      "kind": "negative",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-AUD-01-T03",
+      "type": "TC",
+      "title": "semua butir tercentang = 100%, reset mengosongkan",
+      "layer": "unit",
+      "kind": "edge",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-AUD-01-T04",
+      "type": "TC",
+      "title": "ketuk dua kali melepas centang; modul lain tidak terpengaruh",
+      "layer": "unit",
+      "kind": "corner",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-SET-01-T01",
+      "type": "TC",
+      "title": "ekspor lalu pulihkan cadangan .rlb mengembalikan bookmark dan catatan",
+      "layer": "unit",
+      "kind": "positive",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-SET-01-T02",
+      "type": "TC",
+      "title": "berkas cadangan JSON mentah atau rusak ditolak tanpa mengubah data",
+      "layer": "unit",
+      "kind": "negative",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-SET-01-T03",
+      "type": "TC",
+      "title": "hapus semua data menghapus simpanan tetapi mempertahankan bahasa dan tema",
+      "layer": "unit",
+      "kind": "edge",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-SET-01-T04",
+      "type": "TC",
+      "title": "nilai tema korup di penyimpanan jatuh ke mode sistem",
+      "layer": "unit",
+      "kind": "corner",
+      "source": "docs/trace/flows.yaml"
+    }
+  ],
+  "edges": [
+    {
+      "from": "BR-001",
+      "to": "FR-001",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "BR-001",
+      "to": "FR-004",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "BR-001",
+      "to": "NFR-002",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "BR-002",
+      "to": "FR-002",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "BR-002",
+      "to": "FR-003",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "BR-002",
+      "to": "FR-007",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "BR-002",
+      "to": "FR-011",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "BR-003",
+      "to": "NFR-001",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "BR-004",
+      "to": "FR-005",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "BR-004",
+      "to": "FR-006",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "BR-005",
+      "to": "FR-008",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "BR-005",
+      "to": "FR-009",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "BR-005",
+      "to": "FR-010",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "BR-006",
+      "to": "FR-012",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "BR-007",
+      "to": "FR-013",
+      "via": "docs/BRD.md"
+    },
+    {
+      "from": "FR-001",
+      "to": "BR-001",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-001",
+      "to": "US-001",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-001",
+      "to": "FLOW-RUL-01",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-002",
+      "to": "BR-002",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-002",
+      "to": "US-002",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-002",
+      "to": "US-005",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-002",
+      "to": "FLOW-RUL-01",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-003",
+      "to": "BR-002",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-003",
+      "to": "US-006",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-003",
+      "to": "FLOW-RUL-01",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-004",
+      "to": "BR-001",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-004",
+      "to": "US-003",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-004",
+      "to": "FLOW-RUL-02",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-005",
+      "to": "BR-004",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-005",
+      "to": "US-004",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-005",
+      "to": "FLOW-BKM-01",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-006",
+      "to": "BR-004",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-006",
+      "to": "US-004",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-006",
+      "to": "FLOW-BKM-01",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-007",
+      "to": "BR-002",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-007",
+      "to": "US-007",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-007",
+      "to": "FLOW-RUL-03",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-008",
+      "to": "BR-005",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-008",
+      "to": "US-009",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-008",
+      "to": "FLOW-CAL-01",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-009",
+      "to": "BR-005",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-009",
+      "to": "US-010",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-009",
+      "to": "FLOW-SOP-01",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-010",
+      "to": "BR-005",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-010",
+      "to": "US-011",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-010",
+      "to": "FLOW-AUD-01",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-011",
+      "to": "BR-002",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-011",
+      "to": "US-008",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-011",
+      "to": "FLOW-SET-01",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-012",
+      "to": "BR-006",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-012",
+      "to": "US-012",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-012",
+      "to": "FLOW-SET-01",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-013",
+      "to": "BR-007",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-013",
+      "to": "US-012",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "FR-013",
+      "to": "FLOW-SET-01",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "NFR-001",
+      "to": "BR-003",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "NFR-001",
+      "to": "FLOW-RUL-01",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "NFR-002",
+      "to": "BR-001",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "NFR-002",
+      "to": "FLOW-RUL-02",
+      "via": "docs/PRD.md"
+    },
+    {
+      "from": "EP-001",
+      "to": "MOD-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "EP-002",
+      "to": "MOD-003",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "EP-003",
+      "to": "MOD-006",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-01",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-01",
+      "to": "MOD-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-01",
+      "to": "EP-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-01",
+      "to": "US-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-01",
+      "to": "US-002",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-01",
+      "to": "US-005",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-01",
+      "to": "US-006",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-02",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-02",
+      "to": "MOD-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-02",
+      "to": "EP-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-02",
+      "to": "US-003",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-03",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-03",
+      "to": "MOD-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-03",
+      "to": "EP-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-03",
+      "to": "US-007",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-BKM-01",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-BKM-01",
+      "to": "MOD-002",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-BKM-01",
+      "to": "EP-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-BKM-01",
+      "to": "US-004",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-CAL-01",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-CAL-01",
+      "to": "MOD-003",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-CAL-01",
+      "to": "EP-002",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-CAL-01",
+      "to": "US-009",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-SOP-01",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-SOP-01",
+      "to": "MOD-004",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-SOP-01",
+      "to": "EP-002",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-SOP-01",
+      "to": "US-010",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-AUD-01",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-AUD-01",
+      "to": "MOD-005",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-AUD-01",
+      "to": "EP-002",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-AUD-01",
+      "to": "US-011",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-SET-01",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-SET-01",
+      "to": "MOD-006",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-SET-01",
+      "to": "EP-003",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-SET-01",
+      "to": "US-008",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-SET-01",
+      "to": "US-012",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "US-001",
+      "to": "EP-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "US-002",
+      "to": "EP-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "US-005",
+      "to": "EP-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "US-006",
+      "to": "EP-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "US-003",
+      "to": "EP-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "US-007",
+      "to": "EP-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "US-004",
+      "to": "EP-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "US-009",
+      "to": "EP-002",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "US-010",
+      "to": "EP-002",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "US-011",
+      "to": "EP-002",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "US-008",
+      "to": "EP-003",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "US-012",
+      "to": "EP-003",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-001",
+      "to": "FLOW-RUL-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-001",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-001",
+      "to": "MOD-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-002",
+      "to": "FLOW-RUL-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-002",
+      "to": "FLOW-RUL-02",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-002",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-002",
+      "to": "MOD-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-003",
+      "to": "FLOW-RUL-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-003",
+      "to": "FLOW-RUL-03",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-003",
+      "to": "FLOW-BKM-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-003",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-003",
+      "to": "MOD-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-BKM-001",
+      "to": "FLOW-BKM-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-BKM-001",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-BKM-001",
+      "to": "MOD-002",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-CAL-001",
+      "to": "FLOW-CAL-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-CAL-001",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-CAL-001",
+      "to": "MOD-003",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-SOP-001",
+      "to": "FLOW-SOP-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-SOP-001",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-SOP-001",
+      "to": "MOD-004",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-SOP-002",
+      "to": "FLOW-SOP-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-SOP-002",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-SOP-002",
+      "to": "MOD-004",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-AUD-001",
+      "to": "FLOW-AUD-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-AUD-001",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-AUD-001",
+      "to": "MOD-005",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-AUD-002",
+      "to": "FLOW-AUD-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-AUD-002",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-AUD-002",
+      "to": "MOD-005",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-SET-001",
+      "to": "FLOW-SET-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-SET-001",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-SET-001",
+      "to": "MOD-006",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-101",
+      "to": "FLOW-RUL-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-101",
+      "to": "FLOW-SOP-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-101",
+      "to": "FLOW-AUD-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-101",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-101",
+      "to": "MOD-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-102",
+      "to": "FLOW-RUL-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-102",
+      "to": "FLOW-RUL-02",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-102",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-RUL-102",
+      "to": "MOD-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-BKM-101",
+      "to": "FLOW-BKM-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-BKM-101",
+      "to": "FLOW-AUD-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-BKM-101",
+      "to": "FLOW-SET-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-BKM-101",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-BKM-101",
+      "to": "MOD-002",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-CAL-101",
+      "to": "FLOW-CAL-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-CAL-101",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-CAL-101",
+      "to": "MOD-003",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-CAL-102",
+      "to": "FLOW-CAL-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-CAL-102",
+      "to": "FLOW-RUL-02",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-CAL-102",
+      "to": "FLOW-BKM-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-CAL-102",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-CAL-102",
+      "to": "MOD-003",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-SET-101",
+      "to": "FLOW-SET-01",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-SET-101",
+      "to": "ROL-001",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "USR-SET-101",
+      "to": "MOD-006",
+      "via": "docs/reference/system/traceability.json"
+    },
+    {
+      "from": "FLOW-RUL-01",
+      "to": "FR-001",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-01",
+      "to": "FR-002",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-01",
+      "to": "FR-003",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-01",
+      "to": "NFR-001",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-01-T01",
+      "to": "FLOW-RUL-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-01-T02",
+      "to": "FLOW-RUL-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-01-T03",
+      "to": "FLOW-RUL-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-01-T04",
+      "to": "FLOW-RUL-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-02",
+      "to": "FR-004",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-02",
+      "to": "NFR-002",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-02-T01",
+      "to": "FLOW-RUL-02",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-02-T02",
+      "to": "FLOW-RUL-02",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-02-T03",
+      "to": "FLOW-RUL-02",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-02-T04",
+      "to": "FLOW-RUL-02",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-02-T05",
+      "to": "FLOW-RUL-02",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-03",
+      "to": "FR-007",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-03-T01",
+      "to": "FLOW-RUL-03",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-03-T02",
+      "to": "FLOW-RUL-03",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-03-T03",
+      "to": "FLOW-RUL-03",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-03-T04",
+      "to": "FLOW-RUL-03",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-BKM-01",
+      "to": "FR-005",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-BKM-01",
+      "to": "FR-006",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-BKM-01-T01",
+      "to": "FLOW-BKM-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-BKM-01-T02",
+      "to": "FLOW-BKM-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-BKM-01-T03",
+      "to": "FLOW-BKM-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-BKM-01-T04",
+      "to": "FLOW-BKM-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-BKM-01-T05",
+      "to": "FLOW-BKM-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-CAL-01",
+      "to": "FR-008",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-CAL-01-T01",
+      "to": "FLOW-CAL-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-CAL-01-T02",
+      "to": "FLOW-CAL-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-CAL-01-T03",
+      "to": "FLOW-CAL-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-CAL-01-T04",
+      "to": "FLOW-CAL-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-SOP-01",
+      "to": "FR-009",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-SOP-01-T01",
+      "to": "FLOW-SOP-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-SOP-01-T02",
+      "to": "FLOW-SOP-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-SOP-01-T03",
+      "to": "FLOW-SOP-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-SOP-01-T04",
+      "to": "FLOW-SOP-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-AUD-01",
+      "to": "FR-010",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-AUD-01-T01",
+      "to": "FLOW-AUD-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-AUD-01-T02",
+      "to": "FLOW-AUD-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-AUD-01-T03",
+      "to": "FLOW-AUD-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-AUD-01-T04",
+      "to": "FLOW-AUD-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-SET-01",
+      "to": "FR-011",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-SET-01",
+      "to": "FR-012",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-SET-01",
+      "to": "FR-013",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-SET-01-T01",
+      "to": "FLOW-SET-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-SET-01-T02",
+      "to": "FLOW-SET-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-SET-01-T03",
+      "to": "FLOW-SET-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-SET-01-T04",
+      "to": "FLOW-SET-01",
+      "via": "docs/trace/flows.yaml"
+    }
+  ],
+  "cases": [
+    {
+      "id": "FLOW-RUL-01-T01",
+      "flow": "FLOW-RUL-01",
+      "title": "kategori Lalu Lintas hanya memuat butir lalu lintas yang lengkap",
+      "layer": "unit",
+      "kind": "positive",
+      "walk": false
+    },
+    {
+      "id": "FLOW-RUL-01-T02",
+      "flow": "FLOW-RUL-01",
+      "title": "deep link ke id aturan yang tidak ada ditolak (layar tidak ditemukan)",
+      "layer": "unit",
+      "kind": "negative",
+      "walk": false
+    },
+    {
+      "id": "FLOW-RUL-01-T03",
+      "flow": "FLOW-RUL-01",
+      "title": "kategori Semua menampilkan seluruh butir dan id unik",
+      "layer": "unit",
+      "kind": "edge",
+      "walk": false
+    },
+    {
+      "id": "FLOW-RUL-01-T04",
+      "flow": "FLOW-RUL-01",
+      "title": "id null / kosong pada tiga jenis konten tidak membuat crash",
+      "layer": "unit",
+      "kind": "corner",
+      "walk": false
+    },
+    {
+      "id": "FLOW-RUL-02-T01",
+      "flow": "FLOW-RUL-02",
+      "title": "kata kunci \"helm\" menemukan aturan helm SNI",
+      "layer": "unit",
+      "kind": "positive",
+      "walk": false
+    },
+    {
+      "id": "FLOW-RUL-02-T02",
+      "flow": "FLOW-RUL-02",
+      "title": "kueri lebih dari 60 karakter ditolak dan kueri lama dipertahankan",
+      "layer": "unit",
+      "kind": "negative",
+      "walk": false
+    },
+    {
+      "id": "FLOW-RUL-02-T03",
+      "flow": "FLOW-RUL-02",
+      "title": "kueri hanya spasi dianggap kosong dan menampilkan semua aturan",
+      "layer": "unit",
+      "kind": "edge",
+      "walk": false
+    },
+    {
+      "id": "FLOW-RUL-02-T04",
+      "flow": "FLOW-RUL-02",
+      "title": "kueri yang cocok di kategori lain menghasilkan 0 dan bisa diatur ulang",
+      "layer": "unit",
+      "kind": "corner",
+      "walk": false
+    },
+    {
+      "id": "FLOW-RUL-02-T05",
+      "flow": "FLOW-RUL-02",
+      "title": "nomor pasal mencocokkan dasar hukum, tanpa membedakan huruf besar",
+      "layer": "unit",
+      "kind": "positive",
+      "walk": false
+    },
+    {
+      "id": "FLOW-RUL-03-T01",
+      "flow": "FLOW-RUL-03",
+      "title": "pratinjau kartu memuat judul dan dasar hukum butir",
+      "layer": "unit",
+      "kind": "positive",
+      "walk": false
+    },
+    {
+      "id": "FLOW-RUL-03-T02",
+      "flow": "FLOW-RUL-03",
+      "title": "butir yang tidak ada tidak dapat dibuka untuk dibagikan",
+      "layer": "unit",
+      "kind": "negative",
+      "walk": false
+    },
+    {
+      "id": "FLOW-RUL-03-T03",
+      "flow": "FLOW-RUL-03",
+      "title": "semua butir di 8 bahasa punya judul dan sanksi tidak kosong untuk kartu",
+      "layer": "unit",
+      "kind": "edge",
+      "walk": false
+    },
+    {
+      "id": "FLOW-RUL-03-T04",
+      "flow": "FLOW-RUL-03",
+      "title": "Salin Teks menaruh judul, dasar hukum, dan tautan app di clipboard",
+      "layer": "unit",
+      "kind": "corner",
+      "walk": false
+    },
+    {
+      "id": "FLOW-BKM-01-T01",
+      "flow": "FLOW-BKM-01",
+      "title": "bookmark tersimpan ke perangkat dan terbaca ulang",
+      "layer": "unit",
+      "kind": "positive",
+      "walk": false
+    },
+    {
+      "id": "FLOW-BKM-01-T02",
+      "flow": "FLOW-BKM-01",
+      "title": "id aturan kosong dan catatan kosong ditolak",
+      "layer": "unit",
+      "kind": "negative",
+      "walk": false
+    },
+    {
+      "id": "FLOW-BKM-01-T03",
+      "flow": "FLOW-BKM-01",
+      "title": "catatan tepat 500 karakter diterima, 501 ditolak",
+      "layer": "unit",
+      "kind": "edge",
+      "walk": false
+    },
+    {
+      "id": "FLOW-BKM-01-T04",
+      "flow": "FLOW-BKM-01",
+      "title": "bookmark ganda tidak dobel dan ketuk dua kali melepas simpanan",
+      "layer": "unit",
+      "kind": "corner",
+      "walk": false
+    },
+    {
+      "id": "FLOW-BKM-01-T05",
+      "flow": "FLOW-BKM-01",
+      "title": "ikon simpan (TapTarget + PressScale) memicu aksi saat diketuk",
+      "layer": "unit",
+      "kind": "positive",
+      "walk": false
+    },
+    {
+      "id": "FLOW-CAL-01-T01",
+      "flow": "FLOW-CAL-01",
+      "title": "pesangon efisiensi 3 tahun 6 bulan sesuai PP 35/2021",
+      "layer": "unit",
+      "kind": "positive",
+      "walk": false
+    },
+    {
+      "id": "FLOW-CAL-01-T02",
+      "flow": "FLOW-CAL-01",
+      "title": "gaji di bawah Rp100.000, jam lembur 0, dan masa kerja negatif ditolak",
+      "layer": "unit",
+      "kind": "negative",
+      "walk": false
+    },
+    {
+      "id": "FLOW-CAL-01-T03",
+      "flow": "FLOW-CAL-01",
+      "title": "batas masa kerja: 11 bulan = 1 bulan, 8 tahun = 9 bulan, UPMK 24 tahun = 10",
+      "layer": "unit",
+      "kind": "edge",
+      "walk": false
+    },
+    {
+      "id": "FLOW-CAL-01-T04",
+      "flow": "FLOW-CAL-01",
+      "title": "gaji berformat \"Rp 5.000.000\" dibersihkan; di atas Rp1 miliar ditolak",
+      "layer": "unit",
+      "kind": "corner",
+      "walk": false
+    },
+    {
+      "id": "FLOW-SOP-01-T01",
+      "flow": "FLOW-SOP-01",
+      "title": "setiap SOP punya langkah bernomor, dasar hukum, dan kontak darurat",
+      "layer": "unit",
+      "kind": "positive",
+      "walk": false
+    },
+    {
+      "id": "FLOW-SOP-01-T02",
+      "flow": "FLOW-SOP-01",
+      "title": "tautan SOP yang tidak ada ditolak",
+      "layer": "unit",
+      "kind": "negative",
+      "walk": false
+    },
+    {
+      "id": "FLOW-SOP-01-T03",
+      "flow": "FLOW-SOP-01",
+      "title": "kategori tanpa SOP dan kueri tanpa hasil menghasilkan daftar kosong",
+      "layer": "unit",
+      "kind": "edge",
+      "walk": false
+    },
+    {
+      "id": "FLOW-SOP-01-T04",
+      "flow": "FLOW-SOP-01",
+      "title": "SOP dengan kategori tak dikenal di data tersimpan jatuh ke kategori default",
+      "layer": "unit",
+      "kind": "corner",
+      "walk": false
+    },
+    {
+      "id": "FLOW-AUD-01-T01",
+      "flow": "FLOW-AUD-01",
+      "title": "centang butir audit tersimpan dan terbaca ulang",
+      "layer": "unit",
+      "kind": "positive",
+      "walk": false
+    },
+    {
+      "id": "FLOW-AUD-01-T02",
+      "flow": "FLOW-AUD-01",
+      "title": "tautan modul audit yang tidak ada ditolak",
+      "layer": "unit",
+      "kind": "negative",
+      "walk": false
+    },
+    {
+      "id": "FLOW-AUD-01-T03",
+      "flow": "FLOW-AUD-01",
+      "title": "semua butir tercentang = 100%, reset mengosongkan",
+      "layer": "unit",
+      "kind": "edge",
+      "walk": false
+    },
+    {
+      "id": "FLOW-AUD-01-T04",
+      "flow": "FLOW-AUD-01",
+      "title": "ketuk dua kali melepas centang; modul lain tidak terpengaruh",
+      "layer": "unit",
+      "kind": "corner",
+      "walk": false
+    },
+    {
+      "id": "FLOW-SET-01-T01",
+      "flow": "FLOW-SET-01",
+      "title": "ekspor lalu pulihkan cadangan .rlb mengembalikan bookmark dan catatan",
+      "layer": "unit",
+      "kind": "positive",
+      "walk": false
+    },
+    {
+      "id": "FLOW-SET-01-T02",
+      "flow": "FLOW-SET-01",
+      "title": "berkas cadangan JSON mentah atau rusak ditolak tanpa mengubah data",
+      "layer": "unit",
+      "kind": "negative",
+      "walk": false
+    },
+    {
+      "id": "FLOW-SET-01-T03",
+      "flow": "FLOW-SET-01",
+      "title": "hapus semua data menghapus simpanan tetapi mempertahankan bahasa dan tema",
+      "layer": "unit",
+      "kind": "edge",
+      "walk": false
+    },
+    {
+      "id": "FLOW-SET-01-T04",
+      "flow": "FLOW-SET-01",
+      "title": "nilai tema korup di penyimpanan jatuh ke mode sistem",
+      "layer": "unit",
+      "kind": "corner",
+      "walk": false
+    }
+  ],
+  "problems": []
+}

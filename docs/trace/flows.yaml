@@ -1,0 +1,219 @@
+# docs/trace/flows.yaml — test case per flow (standards §TRACE). Ditulis tangan.
+# Bukti: test("<TC-ID> …") / testWidgets("<TC-ID> …") di test/**/*_test.dart; BAST: test/bast/bast_flows.mjs.
+version: 1
+app: rulebook
+
+flows:
+  - id: FLOW-RUL-01
+    title: "Menelusuri kategori dan membaca butir aturan"
+    priority: P0
+    requirement: [FR-001, FR-002, FR-003, NFR-001]
+    touches:
+      - lib/features/catalog/**
+      - lib/core/storage/rules_database.dart
+      - lib/core/router/app_router.dart
+    cases:
+      - id: FLOW-RUL-01-T01
+        kind: positive
+        layer: unit
+        title: "kategori Lalu Lintas hanya memuat butir lalu lintas yang lengkap"
+      - id: FLOW-RUL-01-T02
+        kind: negative
+        layer: unit
+        title: "deep link ke id aturan yang tidak ada ditolak (layar tidak ditemukan)"
+      - id: FLOW-RUL-01-T03
+        kind: edge
+        layer: unit
+        title: "kategori Semua menampilkan seluruh butir dan id unik"
+      - id: FLOW-RUL-01-T04
+        kind: corner
+        layer: unit
+        title: "id null / kosong pada tiga jenis konten tidak membuat crash"
+
+  - id: FLOW-RUL-02
+    title: "Mencari aturan secara instan"
+    priority: P0
+    requirement: [FR-004, NFR-002]
+    touches:
+      - lib/features/catalog/catalog_screen.dart
+      - lib/core/providers/app_providers.dart
+      - lib/core/utils/validators.dart
+    cases:
+      - id: FLOW-RUL-02-T01
+        kind: positive
+        layer: unit
+        title: "kata kunci \"helm\" menemukan aturan helm SNI"
+      - id: FLOW-RUL-02-T02
+        kind: negative
+        layer: unit
+        title: "kueri lebih dari 60 karakter ditolak dan kueri lama dipertahankan"
+      - id: FLOW-RUL-02-T03
+        kind: edge
+        layer: unit
+        title: "kueri hanya spasi dianggap kosong dan menampilkan semua aturan"
+      - id: FLOW-RUL-02-T04
+        kind: corner
+        layer: unit
+        title: "kueri yang cocok di kategori lain menghasilkan 0 dan bisa diatur ulang"
+      - id: FLOW-RUL-02-T05
+        kind: positive
+        layer: unit
+        title: "nomor pasal mencocokkan dasar hukum, tanpa membedakan huruf besar"
+
+  - id: FLOW-RUL-03
+    title: "Membagikan butir aturan"
+    priority: P2
+    requirement: [FR-007]
+    touches:
+      - lib/features/catalog/widgets/rulebook_share_dialog.dart
+    cases:
+      - id: FLOW-RUL-03-T01
+        kind: positive
+        layer: unit
+        title: "pratinjau kartu memuat judul dan dasar hukum butir"
+      - id: FLOW-RUL-03-T02
+        kind: negative
+        layer: unit
+        title: "butir yang tidak ada tidak dapat dibuka untuk dibagikan"
+      - id: FLOW-RUL-03-T03
+        kind: edge
+        layer: unit
+        title: "semua butir di 8 bahasa punya judul dan sanksi tidak kosong untuk kartu"
+      - id: FLOW-RUL-03-T04
+        kind: corner
+        layer: unit
+        title: "Salin Teks menaruh judul, dasar hukum, dan tautan app di clipboard"
+
+  - id: FLOW-BKM-01
+    title: "Menyimpan aturan dan catatan pribadi"
+    priority: P1
+    requirement: [FR-005, FR-006]
+    touches:
+      - lib/features/bookmarks/**
+      - lib/features/catalog/rule_detail_screen.dart
+      - lib/core/storage/local_storage_service.dart
+      - lib/core/ui/press_scale.dart
+    cases:
+      - id: FLOW-BKM-01-T01
+        kind: positive
+        layer: unit
+        title: "bookmark tersimpan ke perangkat dan terbaca ulang"
+      - id: FLOW-BKM-01-T02
+        kind: negative
+        layer: unit
+        title: "id aturan kosong dan catatan kosong ditolak"
+      - id: FLOW-BKM-01-T03
+        kind: edge
+        layer: unit
+        title: "catatan tepat 500 karakter diterima, 501 ditolak"
+      - id: FLOW-BKM-01-T04
+        kind: corner
+        layer: unit
+        title: "bookmark ganda tidak dobel dan ketuk dua kali melepas simpanan"
+      - id: FLOW-BKM-01-T05
+        kind: positive
+        layer: unit
+        title: "ikon simpan (TapTarget + PressScale) memicu aksi saat diketuk"
+
+  - id: FLOW-CAL-01
+    title: "Menghitung estimasi upah lembur dan pesangon"
+    priority: P1
+    requirement: [FR-008]
+    touches:
+      - lib/features/calculator/**
+      - lib/core/models/severance_calculator_models.dart
+      - lib/core/utils/validators.dart
+    cases:
+      - id: FLOW-CAL-01-T01
+        kind: positive
+        layer: unit
+        title: "pesangon efisiensi 3 tahun 6 bulan sesuai PP 35/2021"
+      - id: FLOW-CAL-01-T02
+        kind: negative
+        layer: unit
+        title: "gaji di bawah Rp100.000, jam lembur 0, dan masa kerja negatif ditolak"
+      - id: FLOW-CAL-01-T03
+        kind: edge
+        layer: unit
+        title: "batas masa kerja: 11 bulan = 1 bulan, 8 tahun = 9 bulan, UPMK 24 tahun = 10"
+      - id: FLOW-CAL-01-T04
+        kind: corner
+        layer: unit
+        title: "gaji berformat \"Rp 5.000.000\" dibersihkan; di atas Rp1 miliar ditolak"
+
+  - id: FLOW-SOP-01
+    title: "Membuka SOP darurat"
+    priority: P1
+    requirement: [FR-009]
+    touches:
+      - lib/features/sop/**
+      - lib/core/models/sop_guide.dart
+    cases:
+      - id: FLOW-SOP-01-T01
+        kind: positive
+        layer: unit
+        title: "setiap SOP punya langkah bernomor, dasar hukum, dan kontak darurat"
+      - id: FLOW-SOP-01-T02
+        kind: negative
+        layer: unit
+        title: "tautan SOP yang tidak ada ditolak"
+      - id: FLOW-SOP-01-T03
+        kind: edge
+        layer: unit
+        title: "kategori tanpa SOP dan kueri tanpa hasil menghasilkan daftar kosong"
+      - id: FLOW-SOP-01-T04
+        kind: corner
+        layer: unit
+        title: "SOP dengan kategori tak dikenal di data tersimpan jatuh ke kategori default"
+
+  - id: FLOW-AUD-01
+    title: "Menjalankan audit kepatuhan"
+    priority: P2
+    requirement: [FR-010]
+    touches:
+      - lib/features/checklist/**
+      - lib/core/models/compliance_checklist.dart
+    cases:
+      - id: FLOW-AUD-01-T01
+        kind: positive
+        layer: unit
+        title: "centang butir audit tersimpan dan terbaca ulang"
+      - id: FLOW-AUD-01-T02
+        kind: negative
+        layer: unit
+        title: "tautan modul audit yang tidak ada ditolak"
+      - id: FLOW-AUD-01-T03
+        kind: edge
+        layer: unit
+        title: "semua butir tercentang = 100%, reset mengosongkan"
+      - id: FLOW-AUD-01-T04
+        kind: corner
+        layer: unit
+        title: "ketuk dua kali melepas centang; modul lain tidak terpengaruh"
+
+  - id: FLOW-SET-01
+    title: "Mengatur bahasa, tema, dan cadangan data"
+    priority: P2
+    requirement: [FR-011, FR-012, FR-013]
+    touches:
+      - lib/features/settings/**
+      - lib/core/storage/local_storage_service.dart
+      - lib/core/utils/backup_codec.dart
+      - lib/core/providers/locale_provider.dart
+    cases:
+      - id: FLOW-SET-01-T01
+        kind: positive
+        layer: unit
+        title: "ekspor lalu pulihkan cadangan .rlb mengembalikan bookmark dan catatan"
+      - id: FLOW-SET-01-T02
+        kind: negative
+        layer: unit
+        title: "berkas cadangan JSON mentah atau rusak ditolak tanpa mengubah data"
+      - id: FLOW-SET-01-T03
+        kind: edge
+        layer: unit
+        title: "hapus semua data menghapus simpanan tetapi mempertahankan bahasa dan tema"
+      - id: FLOW-SET-01-T04
+        kind: corner
+        layer: unit
+        title: "nilai tema korup di penyimpanan jatuh ke mode sistem"
