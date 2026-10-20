@@ -29,6 +29,14 @@ flows:
         kind: corner
         layer: unit
         title: "id null / kosong pada tiga jenis konten tidak membuat crash"
+      - id: FLOW-RUL-01-T05
+        kind: corner
+        layer: unit
+        title: "aplikasi dibuka lewat splash sampai katalog tanpa exception"
+      - id: FLOW-RUL-01-T06
+        kind: corner
+        layer: unit
+        title: "membuka detail aturan menandai dibaca tanpa mengubah provider saat build"
 
   - id: FLOW-RUL-02
     title: "Mencari aturan secara instan"
@@ -217,3 +225,7 @@ flows:
         kind: corner
         layer: unit
         title: "nilai tema korup di penyimpanan jatuh ke mode sistem"
+      - id: FLOW-SET-01-T05
+        kind: corner
+        layer: unit
+        title: "tema gelap: semua teks di 9 layar utama terbaca (kontras >= 4.5)"

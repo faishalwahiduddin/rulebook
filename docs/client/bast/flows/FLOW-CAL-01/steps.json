@@ -12,28 +12,28 @@
       "title": "Buka kalkulator",
       "instruction": "Ketuk tab **Hitung**. Tab **Upah Lembur** terbuka dengan dasar hukum **PP No. 35 Tahun 2021**.",
       "image": "step-01.png",
-      "t": 5.9
+      "t": 8.9
     },
     {
       "n": 2,
       "title": "Isi gaji dan jam lembur",
       "instruction": "Isi **Gaji Pokok Bulanan (Rp)** dan **Total Jam Lembur**. Estimasi dihitung otomatis: upah per jam = 1/173 gaji bulanan.",
       "image": "step-02.png",
-      "t": 10.5
+      "t": 22.1
     },
     {
       "n": 3,
       "title": "Lembur di hari libur",
       "instruction": "Aktifkan **Lembur di Hari Libur Resmi / Istirahat Mingguan** untuk memakai pengali 2x, 3x, dan 4x.",
       "image": "step-03.png",
-      "t": 11.6
+      "t": 23.4
     },
     {
       "n": 4,
       "title": "Pindah ke pesangon",
       "instruction": "Ketuk **Pesangon PHK** untuk menghitung pesangon dan UPMK berdasarkan masa kerja dan alasan PHK.",
       "image": "step-04.png",
-      "t": 12.8
+      "t": 24.9
     }
   ]
 }

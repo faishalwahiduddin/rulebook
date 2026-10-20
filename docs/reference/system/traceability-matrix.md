@@ -25,10 +25,10 @@ Satu graph untuk seluruh artefak (standar: `~/projects/docs/standards.md` §TRAC
 | US | 12 |
 | PG | 10 |
 | FN | 6 |
-| TC | 34 |
-| TC_with_evidence | 34 |
+| TC | 37 |
+| TC_with_evidence | 37 |
 | BAST | 8 |
-| TC per kind | positive 10 · negative 8 · edge 8 · corner 8 |
+| TC per kind | positive 10 · negative 8 · edge 8 · corner 11 |
 
 > ✅ Graph utuh: 0 orphan, 0 referensi menggantung, 0 duplikat, setiap flow punya 4 jenis case.
 
@@ -68,14 +68,14 @@ Satu graph untuk seluruh artefak (standar: `~/projects/docs/standards.md` §TRAC
 
 | Flow | Judul | Role | Modul | Epic · Story | Kebutuhan | Case (+ − edge corner) | Bukti otomatis | BAST |
 |---|---|---|---|---|---|---|---|---|
-| FLOW-RUL-01 | Menelusuri kategori dan membaca butir aturan | ROL-001 | MOD-001 | EP-001, US-001, US-002, US-005, US-006, USR-RUL-001, USR-RUL-002, USR-RUL-003, USR-RUL-101, USR-RUL-102 | FR-001, FR-002, FR-003, NFR-001 | 4 (1 · 1 · 1 · 1) | 4/4 | [BAST-FLOW-RUL-01](../../client/bast/guide/FLOW-RUL-01.html) |
+| FLOW-RUL-01 | Menelusuri kategori dan membaca butir aturan | ROL-001 | MOD-001 | EP-001, US-001, US-002, US-005, US-006, USR-RUL-001, USR-RUL-002, USR-RUL-003, USR-RUL-101, USR-RUL-102 | FR-001, FR-002, FR-003, NFR-001 | 6 (1 · 1 · 1 · 3) | 6/6 | [BAST-FLOW-RUL-01](../../client/bast/guide/FLOW-RUL-01.html) |
 | FLOW-RUL-02 | Mencari aturan secara instan | ROL-001 | MOD-001 | EP-001, US-003, USR-CAL-102, USR-RUL-002, USR-RUL-102 | FR-004, NFR-002 | 5 (2 · 1 · 1 · 1) | 5/5 | [BAST-FLOW-RUL-02](../../client/bast/guide/FLOW-RUL-02.html) |
 | FLOW-RUL-03 | Membagikan butir aturan | ROL-001 | MOD-001 | EP-001, US-007, USR-RUL-003 | FR-007 | 4 (1 · 1 · 1 · 1) | 4/4 | [BAST-FLOW-RUL-03](../../client/bast/guide/FLOW-RUL-03.html) |
 | FLOW-BKM-01 | Menyimpan aturan dan catatan pribadi | ROL-001 | MOD-002 | EP-001, US-004, USR-BKM-001, USR-BKM-101, USR-CAL-102, USR-RUL-003 | FR-005, FR-006 | 5 (2 · 1 · 1 · 1) | 5/5 | [BAST-FLOW-BKM-01](../../client/bast/guide/FLOW-BKM-01.html) |
 | FLOW-CAL-01 | Menghitung estimasi upah lembur dan pesangon | ROL-001 | MOD-003 | EP-002, US-009, USR-CAL-001, USR-CAL-101, USR-CAL-102 | FR-008 | 4 (1 · 1 · 1 · 1) | 4/4 | [BAST-FLOW-CAL-01](../../client/bast/guide/FLOW-CAL-01.html) |
 | FLOW-SOP-01 | Membuka SOP darurat | ROL-001 | MOD-004 | EP-002, US-010, USR-RUL-101, USR-SOP-001, USR-SOP-002 | FR-009 | 4 (1 · 1 · 1 · 1) | 4/4 | [BAST-FLOW-SOP-01](../../client/bast/guide/FLOW-SOP-01.html) |
 | FLOW-AUD-01 | Menjalankan audit kepatuhan | ROL-001 | MOD-005 | EP-002, US-011, USR-AUD-001, USR-AUD-002, USR-BKM-101, USR-RUL-101 | FR-010 | 4 (1 · 1 · 1 · 1) | 4/4 | [BAST-FLOW-AUD-01](../../client/bast/guide/FLOW-AUD-01.html) |
-| FLOW-SET-01 | Mengatur bahasa, tema, dan cadangan data | ROL-001 | MOD-006 | EP-003, US-008, US-012, USR-BKM-101, USR-SET-001, USR-SET-101 | FR-011, FR-012, FR-013 | 4 (1 · 1 · 1 · 1) | 4/4 | [BAST-FLOW-SET-01](../../client/bast/guide/FLOW-SET-01.html) |
+| FLOW-SET-01 | Mengatur bahasa, tema, dan cadangan data | ROL-001 | MOD-006 | EP-003, US-008, US-012, USR-BKM-101, USR-SET-001, USR-SET-101 | FR-011, FR-012, FR-013 | 5 (1 · 1 · 1 · 2) | 5/5 | [BAST-FLOW-SET-01](../../client/bast/guide/FLOW-SET-01.html) |
 
 ## 4. Test case
 
@@ -85,6 +85,8 @@ Satu graph untuk seluruh artefak (standar: `~/projects/docs/standards.md` §TRAC
 | FLOW-RUL-01-T02 | FLOW-RUL-01 | negative | unit | deep link ke id aturan yang tidak ada ditolak (layar tidak ditemukan) | `test/trace/trace_cases_test.dart` | pass |
 | FLOW-RUL-01-T03 | FLOW-RUL-01 | edge | unit | kategori Semua menampilkan seluruh butir dan id unik | `test/trace/trace_cases_test.dart` | pass |
 | FLOW-RUL-01-T04 | FLOW-RUL-01 | corner | unit | id null / kosong pada tiga jenis konten tidak membuat crash | `test/trace/trace_cases_test.dart` | pass |
+| FLOW-RUL-01-T05 | FLOW-RUL-01 | corner | unit | aplikasi dibuka lewat splash sampai katalog tanpa exception | `test/trace/app_boot_test.dart` | pass |
+| FLOW-RUL-01-T06 | FLOW-RUL-01 | corner | unit | membuka detail aturan menandai dibaca tanpa mengubah provider saat build | `test/trace/app_boot_test.dart` | pass |
 | FLOW-RUL-02-T01 | FLOW-RUL-02 | positive | unit | kata kunci "helm" menemukan aturan helm SNI | `test/trace/trace_cases_test.dart` | pass |
 | FLOW-RUL-02-T02 | FLOW-RUL-02 | negative | unit | kueri lebih dari 60 karakter ditolak dan kueri lama dipertahankan | `test/trace/trace_cases_test.dart` | pass |
 | FLOW-RUL-02-T03 | FLOW-RUL-02 | edge | unit | kueri hanya spasi dianggap kosong dan menampilkan semua aturan | `test/trace/trace_cases_test.dart` | pass |
@@ -115,6 +117,7 @@ Satu graph untuk seluruh artefak (standar: `~/projects/docs/standards.md` §TRAC
 | FLOW-SET-01-T02 | FLOW-SET-01 | negative | unit | berkas cadangan JSON mentah atau rusak ditolak tanpa mengubah data | `test/trace/trace_cases_test.dart` | pass |
 | FLOW-SET-01-T03 | FLOW-SET-01 | edge | unit | hapus semua data menghapus simpanan tetapi mempertahankan bahasa dan tema | `test/trace/trace_cases_test.dart` | pass |
 | FLOW-SET-01-T04 | FLOW-SET-01 | corner | unit | nilai tema korup di penyimpanan jatuh ke mode sistem | `test/trace/trace_cases_test.dart` | pass |
+| FLOW-SET-01-T05 | FLOW-SET-01 | corner | unit | tema gelap: semua teks di 9 layar utama terbaca (kontras >= 4.5) | `test/trace/dark_contrast_test.dart` | pass |
 
 ## Halaman
 

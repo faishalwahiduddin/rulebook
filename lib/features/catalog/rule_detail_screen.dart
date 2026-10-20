@@ -37,8 +37,11 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
     super.initState();
     final saved = ref.read(localStorageServiceProvider).getNote(widget.rule.id) ?? '';
     _noteController = TextEditingController(text: saved);
-    // Gamifikasi: membuka detail menandai aturan sebagai dibaca.
-    markRuleRead(ref, widget.rule.id);
+    // Gamifikasi: membuka detail menandai aturan sebagai dibaca. Ditunda ke
+    // setelah frame: provider tidak boleh diubah saat widget tree dibangun.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) markRuleRead(ref, widget.rule.id);
+    });
   }
 
   @override

@@ -7,7 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   testWidgets('RuleBookApp smoke test and navigation between tabs', (WidgetTester tester) async {
-    SharedPreferences.setMockInitialValues({'locale': 'id'});
+    SharedPreferences.setMockInitialValues({'locale': 'id', 'onboarding_completed': true});
     final storageService = await LocalStorageService.init();
 
     await tester.pumpWidget(

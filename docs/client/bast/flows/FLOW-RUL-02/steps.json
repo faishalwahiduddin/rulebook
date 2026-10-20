@@ -12,28 +12,28 @@
       "title": "Buka layar Aturan",
       "instruction": "Kolom **Cari aturan, pasal, atau situasi...** ada di bagian atas layar **Aturan**.",
       "image": "step-01.png",
-      "t": 5.1
+      "t": 10.6
     },
     {
       "n": 2,
       "title": "Ketik kata kunci",
       "instruction": "Ketik **helm**. Daftar langsung tersaring menjadi **2 aturan** yang relevan.",
       "image": "step-02.png",
-      "t": 7.8
+      "t": 21.1
     },
     {
       "n": 3,
       "title": "Bersihkan pencarian",
       "instruction": "Ketuk ikon **Bersihkan pencarian** untuk kembali ke seluruh **31 aturan**.",
       "image": "step-03.png",
-      "t": 9.1
+      "t": 29.1
     },
     {
       "n": 4,
       "title": "Gunakan pencarian cepat",
       "instruction": "Ketuk chip **Lembur** di bawah kolom pencarian untuk mencari topik populer tanpa mengetik.",
       "image": "step-04.png",
-      "t": 10.4
+      "t": 33.8
     }
   ]
 }

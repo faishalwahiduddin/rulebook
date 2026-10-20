@@ -12,21 +12,21 @@
       "title": "Buka tab Audit",
       "instruction": "Ketuk tab **Audit**. Setiap modul audit menampilkan persentase butir yang sudah terpenuhi.",
       "image": "step-01.png",
-      "t": 6.7
+      "t": 10.4
     },
     {
       "n": 2,
       "title": "Buka modul audit",
       "instruction": "Ketuk **Audit Kelaikan Berkendara & Dokumen Legalitas**. Butir **KRUSIAL** ditandai khusus.",
       "image": "step-02.png",
-      "t": 8.6
+      "t": 12.3
     },
     {
       "n": 3,
       "title": "Centang butir terpenuhi",
       "instruction": "Ketuk **Masa Berlaku SIM Masih Aktif** dan **STNK Asli & Pajak Tahunan Sah**. Bilah **Tingkat Kepatuhan** naik otomatis.",
       "image": "step-03.png",
-      "t": 10.4
+      "t": 14.2
     }
   ]
 }

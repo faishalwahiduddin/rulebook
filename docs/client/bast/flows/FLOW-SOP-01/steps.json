@@ -12,14 +12,14 @@
       "title": "Buka tab Darurat",
       "instruction": "Ketuk tab **Darurat**. Daftar SOP menampilkan skenario dan jumlah langkahnya.",
       "image": "step-01.png",
-      "t": 6.1
+      "t": 7.9
     },
     {
       "n": 2,
       "title": "Ikuti langkah SOP",
       "instruction": "Ketuk **SOP Menghadapi Razia & Tilang Polisi**. Ikuti langkah bernomor dari atas ke bawah.",
       "image": "step-02.png",
-      "t": 8.2
+      "t": 10.1
     }
   ]
 }

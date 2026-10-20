@@ -77,7 +77,11 @@ class _FleetSplashScreenState extends State<FleetSplashScreen>
     );
 
     _controller.forward();
-    _startHandoff();
+    // _startHandoff reads MediaQuery; inherited widgets are not available
+    // until initState has completed.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) _startHandoff();
+    });
   }
 
   @override

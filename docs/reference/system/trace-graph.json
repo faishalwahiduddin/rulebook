@@ -12,14 +12,14 @@
     "US": 12,
     "PG": 10,
     "FN": 6,
-    "TC": 34,
+    "TC": 37,
     "TC_by_kind": {
       "positive": 10,
       "negative": 8,
       "edge": 8,
-      "corner": 8
+      "corner": 11
     },
-    "TC_with_evidence": 34,
+    "TC_with_evidence": 37,
     "BAST": 8
   },
   "nodes": [
@@ -488,6 +488,22 @@
       "source": "docs/trace/flows.yaml"
     },
     {
+      "id": "FLOW-RUL-01-T05",
+      "type": "TC",
+      "title": "aplikasi dibuka lewat splash sampai katalog tanpa exception",
+      "layer": "unit",
+      "kind": "corner",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-RUL-01-T06",
+      "type": "TC",
+      "title": "membuka detail aturan menandai dibaca tanpa mengubah provider saat build",
+      "layer": "unit",
+      "kind": "corner",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
       "id": "FLOW-RUL-02-T01",
       "type": "TC",
       "title": "kata kunci \"helm\" menemukan aturan helm SNI",
@@ -723,6 +739,14 @@
       "id": "FLOW-SET-01-T04",
       "type": "TC",
       "title": "nilai tema korup di penyimpanan jatuh ke mode sistem",
+      "layer": "unit",
+      "kind": "corner",
+      "source": "docs/trace/flows.yaml"
+    },
+    {
+      "id": "FLOW-SET-01-T05",
+      "type": "TC",
+      "title": "tema gelap: semua teks di 9 layar utama terbaca (kontras >= 4.5)",
       "layer": "unit",
       "kind": "corner",
       "source": "docs/trace/flows.yaml"
@@ -1610,6 +1634,16 @@
       "via": "docs/trace/flows.yaml"
     },
     {
+      "from": "FLOW-RUL-01-T05",
+      "to": "FLOW-RUL-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-RUL-01-T06",
+      "to": "FLOW-RUL-01",
+      "via": "docs/trace/flows.yaml"
+    },
+    {
       "from": "FLOW-RUL-02",
       "to": "FR-004",
       "via": "docs/trace/flows.yaml"
@@ -1813,6 +1847,11 @@
       "from": "FLOW-SET-01-T04",
       "to": "FLOW-SET-01",
       "via": "docs/trace/flows.yaml"
+    },
+    {
+      "from": "FLOW-SET-01-T05",
+      "to": "FLOW-SET-01",
+      "via": "docs/trace/flows.yaml"
     }
   ],
   "cases": [
@@ -1844,6 +1883,22 @@
       "id": "FLOW-RUL-01-T04",
       "flow": "FLOW-RUL-01",
       "title": "id null / kosong pada tiga jenis konten tidak membuat crash",
+      "layer": "unit",
+      "kind": "corner",
+      "walk": false
+    },
+    {
+      "id": "FLOW-RUL-01-T05",
+      "flow": "FLOW-RUL-01",
+      "title": "aplikasi dibuka lewat splash sampai katalog tanpa exception",
+      "layer": "unit",
+      "kind": "corner",
+      "walk": false
+    },
+    {
+      "id": "FLOW-RUL-01-T06",
+      "flow": "FLOW-RUL-01",
+      "title": "membuka detail aturan menandai dibaca tanpa mengubah provider saat build",
       "layer": "unit",
       "kind": "corner",
       "walk": false
@@ -2084,6 +2139,14 @@
       "id": "FLOW-SET-01-T04",
       "flow": "FLOW-SET-01",
       "title": "nilai tema korup di penyimpanan jatuh ke mode sistem",
+      "layer": "unit",
+      "kind": "corner",
+      "walk": false
+    },
+    {
+      "id": "FLOW-SET-01-T05",
+      "flow": "FLOW-SET-01",
+      "title": "tema gelap: semua teks di 9 layar utama terbaca (kontras >= 4.5)",
       "layer": "unit",
       "kind": "corner",
       "walk": false

@@ -12,35 +12,35 @@
       "title": "Buka aplikasi",
       "instruction": "Saat pertama dibuka, RuleBook menampilkan layar perkenalan. Ketuk **Lewati** untuk langsung masuk.",
       "image": "step-01.png",
-      "t": 5.2
+      "t": 7.3
     },
     {
       "n": 2,
       "title": "Lihat katalog aturan",
       "instruction": "Layar **Aturan** menampilkan seluruh butir aturan beserta jumlahnya dan lencana literasi hukum.",
       "image": "step-02.png",
-      "t": 7.6
+      "t": 11.6
     },
     {
       "n": 3,
       "title": "Pilih kategori",
       "instruction": "Ketuk chip **Lalu Lintas** untuk menyaring daftar hanya ke aturan lalu lintas dan jalan raya.",
       "image": "step-03.png",
-      "t": 8.7
+      "t": 12.8
     },
     {
       "n": 4,
       "title": "Baca butir aturan",
       "instruction": "Ketuk kartu **Larangan Menggunakan Ponsel Saat Berkendara**. Detail menampilkan dasar hukum **UU No. 22 Tahun 2009 Pasal 283** dan **Konsekuensi** berupa denda maksimal Rp 750.000.",
       "image": "step-04.png",
-      "t": 10.7
+      "t": 15.2
     },
     {
       "n": 5,
       "title": "Pahami intisari",
       "instruction": "Gulir ke bawah untuk membaca **Apa artinya untuk Anda**, daftar **Lakukan**, dan **Hindari** dalam bahasa sehari-hari.",
       "image": "step-05.png",
-      "t": 12.1
+      "t": 18
     }
   ]
 }

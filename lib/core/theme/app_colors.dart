@@ -168,7 +168,7 @@ class AppColors extends ThemeExtension<AppColors> {
     textPrimary: Color(0xFFF1F5F9),
     textSecondary: Color(0xFFC3CCDA),
     textMuted: Color(0xFF94A3B8),
-    textFaint: Color(0xFF64748B),
+    textFaint: Color(0xFF8090A6), // >= 4.5:1 on background, surface, surfaceRaised, brandSoft
     border: Color(0xFF27304A),
     borderStrong: Color(0xFF364159),
     divider: Color(0xFF1E263A),
