@@ -1,1 +1,1 @@
-rules,sop,regulations,offline
+法律,インドネシア,規則,SOP,労働,交通,計算機,オフライン,権利,罰金

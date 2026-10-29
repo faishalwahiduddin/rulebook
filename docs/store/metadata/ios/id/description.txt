@@ -1,18 +1,20 @@
-RuleBook adalah asisten meja permainan yang memudahkan pencatatan skor board game, timer giliran pemain, dan penyimpanan rangkuman aturan main favorit Anda.
+RuleBook adalah panduan hukum praktis di saku untuk aturan dan regulasi Indonesia: katalog peraturan, kalkulator hak dan sanksi, SOP tindakan darurat, dan daftar periksa kepatuhan.
 
 Fitur Utama:
-✓ Pencatat skor pertandingan fleksibel untuk banyak pemain
-✓ Timer giliran pemain dengan peringatan waktu untuk menjaga ritme main
-✓ Penyimpanan ringkasan aturan permainan dan panduan cepat
-✓ Riwayat rekapitulasi kemenangan dan statistik performa pemain
-✓ Penentu giliran pemain pertama secara acak dan adil
-✓ 100% offline tanpa iklan yang merusak keseruan malam permainan
-✓ Antarmuka gelap yang hemat daya saat bermain bersama teman
+✓ Katalog peraturan: lalu lintas, ketenagakerjaan, perlindungan konsumen, ITE/siber, properti, perdata & keluarga, dan pidana umum
+✓ Ringkasan, dasar hukum, sanksi/denda, dan hak penting untuk setiap aturan
+✓ Kalkulator: lembur, pesangon, THR prorata, simulasi denda tilang, dan sanksi ITE
+✓ SOP tindakan darurat langkah demi langkah beserta nomor darurat resmi
+✓ Daftar periksa audit kepatuhan mandiri
+✓ Simpan aturan favorit dan tambahkan catatan pribadi
+✓ 100% offline, tanpa iklan, tanpa akun
 
 Kenapa RuleBook?
-Menghitung skor di secarik kertas sering memicu perdebatan dan kertas mudah hilang. RuleBook menjaga jalannya permainan tetap lancar, adil, dan tercatat rapi dari ronde pertama hingga penentuan pemenang.
+Aturan dan hak sering sulit ditemukan saat dibutuhkan. RuleBook merangkum dasar hukum, sanksi, dan langkah praktis dalam satu aplikasi yang bisa dibuka kapan saja tanpa internet.
 
-Privasi Meja Permainan:
-Seluruh catatan pertandingan dan statistik pemain tersimpan lokal di ponsel Anda.
+Catatan: RuleBook adalah edukasi hukum praktis dan bukan nasihat hukum.
 
-Bagian dari armada aplikasi rekreasi faishal.id.
+Privasi:
+Pencarian dan catatan Anda tersimpan lokal di ponsel dan tidak dikirim ke server mana pun.
+
+Bagian dari armada aplikasi faishal.id.

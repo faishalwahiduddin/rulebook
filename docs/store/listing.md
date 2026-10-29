@@ -10,36 +10,38 @@
 
 ## Bahasa Indonesia (`id`)
 
-**Title** (28/30)
+**Title** (29/30)
 
-> RuleBook: Skor & Aturan Game
+> RuleBook: Hukum & SOP Praktis
 
-**Short description** (63/80)
+**Short description** (74/80)
 
-> Pencatat skor board game, aturan main, timer giliran & riwayat.
+> Panduan hukum Indonesia: katalog aturan, kalkulator, SOP & daftar periksa.
 
-**Full description** (983/4000)
+**Full description** (1103/4000)
 
 <details><summary>show</summary>
 
-RuleBook adalah asisten meja permainan yang memudahkan pencatatan skor board game, timer giliran pemain, dan penyimpanan rangkuman aturan main favorit Anda.
+RuleBook adalah panduan hukum praktis di saku untuk aturan dan regulasi Indonesia: katalog peraturan, kalkulator hak dan sanksi, SOP tindakan darurat, dan daftar periksa kepatuhan.
 
 Fitur Utama:
-✓ Pencatat skor pertandingan fleksibel untuk banyak pemain
-✓ Timer giliran pemain dengan peringatan waktu untuk menjaga ritme main
-✓ Penyimpanan ringkasan aturan permainan dan panduan cepat
-✓ Riwayat rekapitulasi kemenangan dan statistik performa pemain
-✓ Penentu giliran pemain pertama secara acak dan adil
-✓ 100% offline tanpa iklan yang merusak keseruan malam permainan
-✓ Antarmuka gelap yang hemat daya saat bermain bersama teman
+✓ Katalog peraturan: lalu lintas, ketenagakerjaan, perlindungan konsumen, ITE/siber, properti, perdata & keluarga, dan pidana umum
+✓ Ringkasan, dasar hukum, sanksi/denda, dan hak penting untuk setiap aturan
+✓ Kalkulator: lembur, pesangon, THR prorata, simulasi denda tilang, dan sanksi ITE
+✓ SOP tindakan darurat langkah demi langkah beserta nomor darurat resmi
+✓ Daftar periksa audit kepatuhan mandiri
+✓ Simpan aturan favorit dan tambahkan catatan pribadi
+✓ 100% offline, tanpa iklan, tanpa akun
 
 Kenapa RuleBook?
-Menghitung skor di secarik kertas sering memicu perdebatan dan kertas mudah hilang. RuleBook menjaga jalannya permainan tetap lancar, adil, dan tercatat rapi dari ronde pertama hingga penentuan pemenang.
+Aturan dan hak sering sulit ditemukan saat dibutuhkan. RuleBook merangkum dasar hukum, sanksi, dan langkah praktis dalam satu aplikasi yang bisa dibuka kapan saja tanpa internet.
 
-Privasi Meja Permainan:
-Seluruh catatan pertandingan dan statistik pemain tersimpan lokal di ponsel Anda.
+Catatan: RuleBook adalah edukasi hukum praktis dan bukan nasihat hukum.
 
-Bagian dari armada aplikasi rekreasi faishal.id.
+Privasi:
+Pencarian dan catatan Anda tersimpan lokal di ponsel dan tidak dikirim ke server mana pun.
+
+Bagian dari armada aplikasi faishal.id.
 
 </details>
 
@@ -49,7 +51,7 @@ Bagian dari armada aplikasi rekreasi faishal.id.
 
 **Tagline** (feature graphic)
 
-> Pencatat skor board game, aturan main, timer giliran & riwayat.
+> Panduan hukum Indonesia: katalog aturan, kalkulator, SOP & daftar periksa.
 
 **Screenshot captions**
 
@@ -62,36 +64,38 @@ Bagian dari armada aplikasi rekreasi faishal.id.
 
 ## English (US) (`en-US`)
 
-**Title** (27/30)
+**Title** (28/30)
 
-> RuleBook: Board Game Scorer
+> RuleBook: Pocket Legal Guide
 
-**Short description** (64/80)
+**Short description** (76/80)
 
-> Board game rules reference, round score tracker, and turn timer.
+> Pocket guide to Indonesian law: rule catalog, calculators, SOPs, checklists.
 
-**Full description** (972/4000)
+**Full description** (1001/4000)
 
 <details><summary>show</summary>
 
-RuleBook is your tabletop game night companion. Easily record round-by-round player scores, keep games moving with turn timers, and store quick rule references for your favorite board games.
+RuleBook is a pocket guide to Indonesian rules and regulations: a rule catalog, calculators for rights and penalties, emergency SOPs, and compliance checklists.
 
 Core Features:
-✓ Flexible multi-player score sheet accommodating variable scoring rules
-✓ Turn countdown timer to keep game pacing brisk and balanced
-✓ Custom rule summaries notebook for quick clarification during play
-✓ Match history ledger recording wins, dates, and player stats
-✓ Fair first-player randomizer tool
-✓ 100% offline with zero ads to prevent game night disruptions
-✓ Clean dark interface optimized for evening social sessions
+✓ Rule catalog: traffic, labor, consumer protection, cyber/ITE, property, civil & family, and general criminal law
+✓ Summary, legal basis, sanctions/fines, and key rights for every rule
+✓ Calculators: overtime, severance, prorated THR, traffic fine simulation, and ITE sanctions
+✓ Step-by-step emergency SOPs with official hotline numbers
+✓ Self-compliance audit checklist
+✓ Save favorite rules and add personal notes
+✓ 100% offline, no ads, no account
 
 Why RuleBook?
-Tallying points on scrap paper often leads to math disputes and lost sheets. RuleBook ensures transparent, accurate scoring from the opening turn to the final victory declaration.
+Rules and rights are hard to find when you need them. RuleBook gathers the legal basis, penalties, and practical steps in one app you can open anytime without internet.
 
-Gaming Privacy:
-All match archives and player score histories remain on your local device.
+Note: RuleBook is practical legal education, not legal advice.
 
-Part of the faishal.id leisure and tabletop suite.
+Privacy:
+Your searches and notes stay on your device and are never sent to any server.
+
+Part of the faishal.id app family.
 
 </details>
 
@@ -101,7 +105,7 @@ Part of the faishal.id leisure and tabletop suite.
 
 **Tagline** (feature graphic)
 
-> Board game rules reference, round score tracker, and turn timer.
+> Pocket guide to Indonesian law: rule catalog, calculators, SOPs, checklists.
 
 **Screenshot captions**
 

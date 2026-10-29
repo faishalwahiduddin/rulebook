@@ -1,0 +1,3 @@
+Fixes and improvements (1.0.9):
+• Text is easier to read (better contrast) in light and dark themes
+• Fixed a start-up crash and read-mark handling

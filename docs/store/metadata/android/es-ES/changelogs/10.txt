@@ -1,0 +1,3 @@
+Correcciones y mejoras (1.0.9):
+• Texto más legible (mejor contraste) en los temas claro y oscuro
+• Corregido un cierre al iniciar y el marcado de leído
