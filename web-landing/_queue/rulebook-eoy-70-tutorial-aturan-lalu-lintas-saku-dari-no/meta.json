@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "tutorial-aturan-lalu-lintas-saku-dari-nol-tanpa-ribet-mingguan",
-    "en": "aturan-lalu-lintas-saku-tutorial-from-zero-no-fluff",
-    "ar": "aturan-lalu-lintas-saku-8",
-    "jv": "pandhuan-aturan-lalu-lintas-saku-rulebook-8",
-    "su": "pituduh-aturan-lalu-lintas-saku-rulebook-8",
-    "zh": "rulebook-aturan-lalu-lintas-saku-实用指南-8",
-    "ja": "rulebookaturan-lalu-lintas-saku-ガイド-8"
+    "id": "aturan-lalu-lintas-saku-untuk-pemula-mulai-dari-mana",
+    "en": "aturan-lalu-lintas-saku-for-beginners-where-to-start",
+    "ar": "almalwmat-almhma-dlyl-ybqa-mfyda",
+    "jv": "aturan-lalu-lintas-saku-kanggo-pamula-wiwit-saka-ngendi",
+    "su": "aturan-lalu-lintas-saku-pikeun-pamula-mimitian-ti-mana",
+    "zh": "zhong-yao-xin-xi-chang-qi-you-xiao-de-zhi-nan",
+    "ja": "taisetsu-na-jouhou-nagaku-tsukae-ru-gaido"
   },
   "titles": {
-    "id": "Tutorial aturan lalu lintas saku dari Nol (Tanpa Ribet)",
-    "en": "aturan lalu lintas saku Tutorial from Zero (No Fluff) — Offline First",
-    "ar": "aturan lalu lintas saku — دليل RuleBook",
-    "jv": "Pandhuan: Tutorial aturan lalu lintas saku dari Nol (Tanpa Ribet)",
-    "su": "Pituduh: Tutorial aturan lalu lintas saku dari Nol (Tanpa Ribet)",
-    "zh": "RuleBook · aturan lalu lintas saku 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas saku ガイド"
+    "id": "aturan lalu lintas saku untuk pemula: mulai dari mana",
+    "en": "aturan lalu lintas saku for beginners: where to start",
+    "ar": "المعلومات المهمة: دليل يبقى مفيداً",
+    "jv": "aturan lalu lintas saku kanggo pamula: wiwit saka ngendi",
+    "su": "aturan lalu lintas saku pikeun pamula: mimitian ti mana",
+    "zh": "重要信息：长期有效的指南",
+    "ja": "大切な情報：長く使えるガイド"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Aturan lalu lintas saku untuk pemula: arti praktisnya, versi paling kecil untuk mulai dari nol, dan data yang tersimpan di perangkat Anda.",
+    "en": "New to aturan lalu lintas saku? Start here: what it means in practice, the smallest version to start from zero, and data stored on your own device.",
+    "ar": "aturan lalu lintas saku للمبتدئين: معناه العملي، وأصغر نسخة للبدء من الصفر، والبيانات المحفوظة على جهازك وحده.",
+    "ja": "aturan lalu lintas sakuの初心者向けガイド。実践での意味、ゼロから始める最小版、端末内のデータ保存。",
+    "zh": "给初学者的aturan lalu lintas saku：实际含义、从零开始的最小版本，以及保存在自己设备上的数据。",
+    "jv": "Kanggo pemula, aturan lalu lintas saku: teges ing praktik, versi paling cilik kanggo miwiti saka nol, lan data sing kasimpen ing piranti sampeyan.",
+    "su": "Pikeun pamula, aturan lalu lintas saku: hartina dina prak-prakan, versi pangleutikna pikeun mimiti ti nol, jeung data nu disimpen dina alat anjeun."
+  }
 }

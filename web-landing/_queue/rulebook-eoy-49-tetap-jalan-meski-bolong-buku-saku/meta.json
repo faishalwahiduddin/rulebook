@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "tetap-jalan-meski-bolong-buku-saku",
-    "en": "keep-going-after-missing-buku-saku",
-    "ar": "buku-saku-6",
-    "jv": "pandhuan-buku-saku-rulebook-6",
-    "su": "pituduh-buku-saku-rulebook-6",
-    "zh": "rulebook-buku-saku-实用指南-6",
-    "ja": "rulebookbuku-saku-ガイド-6"
+    "id": "menjaga-buku-saku-saat-semangat-turun",
+    "en": "keeping-buku-saku-going-when-motivation-drops",
+    "ar": "alahtfaz-balmalwmat-almhma-hyn-tdaf-alhmasa-aljz-2",
+    "jv": "njaga-buku-saku-nalika-semangat-mudhun",
+    "su": "ngajaga-buku-saku-nalika-sumanget-turun",
+    "zh": "re-qing-xia-jiang-shi-ru-he-shou-zhu-zhong-yao-xin-xi-di-2-pian",
+    "ja": "yaru-kiga-saga-tta-nichi-no-taisetsu-na-jouhou-dai-2-kai"
   },
   "titles": {
-    "id": "Tetap Jalan meski Bolong buku saku",
-    "en": "Keep Going After Missing buku saku",
-    "ar": "buku saku — دليل RuleBook",
-    "jv": "Pandhuan: Tetap Jalan meski Bolong buku saku",
-    "su": "Pituduh: Tetap Jalan meski Bolong buku saku",
-    "zh": "RuleBook · buku saku 实用指南",
-    "ja": "RuleBook｜buku saku ガイド"
+    "id": "Menjaga buku saku saat semangat turun",
+    "en": "Keeping buku saku going when motivation drops",
+    "ar": "الاحتفاظ بـالمعلومات المهمة حين تضعف الحماسة · الجزء 2",
+    "jv": "Njaga buku saku nalika semangat mudhun",
+    "su": "Ngajaga buku saku nalika sumanget turun",
+    "zh": "热情下降时如何守住重要信息 · 第2篇",
+    "ja": "やる気が下がった日の大切な情報 · 第2回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Menjaga buku saku saat semangat turun: kenapa kebiasaan putus, versi paling kecil untuk dilanjutkan, dan cara kembali setelah jeda.",
+    "en": "Keeping buku saku going when motivation drops: why habits break, the smallest version to continue with, and how to return after a pause.",
+    "ar": "الحفاظ على buku saku عندما يخفت الحماس: لماذا تنقطع العادات، وأصغر نسخة للاستمرار بها، وكيف تعود بعد توقف.",
+    "ja": "やる気が落ちてもbuku sakuを続ける方法。習慣が途切れる理由、続けるための最小版、中断後の戻り方。",
+    "zh": "动力下降时如何坚持buku saku：习惯为何中断，用来延续的最小版本，以及停下后如何回来。",
+    "jv": "Njaga buku saku nalika semangat mudhun: kenapa kebiasan ambyar, versi paling cilik kanggo diterusaké, lan cara bali sawisé jeda.",
+    "su": "Ngajaga buku saku nalika sumanget turun: naha kabiasaan eureun, versi pangleutikna pikeun diteruskeun, jeung cara balik sanggeus jeda."
+  }
 }

@@ -369,7 +369,7 @@ class _TabBar extends StatelessWidget {
     final l10n = AppLocalizations.of(context)!;
     final c = AppColors.of(context);
     return SizedBox(
-      height: 38,
+      height: 44,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemCount: 5,
@@ -390,40 +390,48 @@ class _TabBar extends StatelessWidget {
             AppIconData.lock,
           ];
           final isSelected = selected == index;
-          return PressScale(
-            onTap: () => onChanged(index),
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                color: isSelected ? c.brand : c.surface,
-                borderRadius: BorderRadius.circular(AppRadius.lg),
-                border: Border.all(
-                  color: isSelected
-                      ? c.brand
-                      : AppColors.hairlineBorder(context),
-                ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    AppIcon(
-                      icons[index],
-                      size: 14,
-                      color: isSelected ? c.onBrand : c.textMuted,
-                      strokeWidth: 1.9,
-                    ),
-                    const SizedBox(width: 6),
-                    Text(
-                      labels[index],
-                      style: TextStyle(
-                        fontSize: 12.5,
-                        fontWeight:
-                            isSelected ? FontWeight.w700 : FontWeight.w500,
-                        color: isSelected ? c.onBrand : c.textSecondary,
+          return SizedBox(
+            height: 44,
+            child: PressScale(
+              onTap: () => onChanged(index),
+              child: Center(
+                child: SizedBox(
+                  height: 34,
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      color: isSelected ? c.brand : c.surface,
+                      borderRadius: BorderRadius.circular(AppRadius.lg),
+                      border: Border.all(
+                        color: isSelected
+                            ? c.brand
+                            : AppColors.hairlineBorder(context),
                       ),
                     ),
-                  ],
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          AppIcon(
+                            icons[index],
+                            size: 14,
+                            color: isSelected ? c.onBrand : c.textMuted,
+                            strokeWidth: 1.9,
+                          ),
+                          const SizedBox(width: 6),
+                          Text(
+                            labels[index],
+                            style: TextStyle(
+                              fontSize: 12.5,
+                              fontWeight:
+                                  isSelected ? FontWeight.w700 : FontWeight.w500,
+                              color: isSelected ? c.onBrand : c.textSecondary,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -977,7 +985,7 @@ class _TrafficFineTab extends StatelessWidget {
                 TextButton(
                   onPressed: onClear,
                   style: TextButton.styleFrom(
-                    minimumSize: const Size(0, 36),
+                    minimumSize: const Size(0, 44),
                     visualDensity: VisualDensity.compact,
                   ),
                   child: Text(l10n.resetSelection),

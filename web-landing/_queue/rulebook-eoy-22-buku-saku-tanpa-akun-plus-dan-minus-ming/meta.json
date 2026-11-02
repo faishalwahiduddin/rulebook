@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "buku-saku-tanpa-akun-plus-dan-minus-mingguan",
-    "en": "buku-saku-without-an-account-pros-cons",
-    "ar": "buku-saku-3",
-    "jv": "pandhuan-buku-saku-rulebook-3",
-    "su": "pituduh-buku-saku-rulebook-3",
-    "zh": "rulebook-buku-saku-实用指南-3",
-    "ja": "rulebookbuku-saku-ガイド-3"
+    "id": "privasi-buku-saku-apa-yang-tersimpan-di-perangkat",
+    "en": "where-your-buku-saku-data-actually-lives",
+    "ar": "almalwmat-almhma-bla-atsal-tmama-ma-ybqa-yaml",
+    "jv": "data-buku-saku-kasimpen-ing-ngendi",
+    "su": "data-buku-saku-disimpen-di-mana",
+    "zh": "zhong-yao-xin-xi-wan-quan-li-xian-na-xie-gong-neng-hai-neng-yong",
+    "ja": "taisetsu-na-jouhou-kanzen-ofurain-nani-ga-ugoku-ka"
   },
   "titles": {
-    "id": "Privasi data saat mencatat buku saku",
-    "en": "buku saku Without an Account: Pros &amp; Cons — Offline First",
-    "ar": "buku saku — دليل RuleBook",
-    "jv": "Pandhuan: Privasi data saat mencatat buku saku",
-    "su": "Pituduh: Privasi data saat mencatat buku saku",
-    "zh": "RuleBook · buku saku 实用指南",
-    "ja": "RuleBook｜buku saku ガイド"
+    "id": "Privasi buku saku: apa yang tersimpan di perangkat",
+    "en": "Where your buku saku data actually lives",
+    "ar": "المعلومات المهمة بلا اتصال تماماً: ما يبقى يعمل",
+    "jv": "Data buku saku kasimpen ing ngendi",
+    "su": "Data buku saku disimpen di mana",
+    "zh": "重要信息完全离线：哪些功能还能用",
+    "ja": "大切な情報完全オフライン：何が動くか"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Data buku saku disimpan di mana: penjelasan tersimpan di perangkat, cara tinjauan mingguan, dan apa yang tetap berjalan setelah ada jeda.",
+    "en": "Where your buku saku data is kept, what stays on your device, how the weekly review works, and what keeps running after a break.",
+    "ar": "أين تُحفظ بيانات buku saku؟ ما الذي يبقى على جهازك، وكيف تعمل المراجعة الأسبوعية، وما الذي يستمر بعد فترة من الانقطاع.",
+    "ja": "buku sakuのデータの保存場所。端末に残るもの、週次見直しの進め方、休止後も動き続けるものを解説。",
+    "zh": "buku saku的数据存放在哪里：哪些保存在设备上，每周复盘如何进行，中断后哪些功能仍可用。",
+    "jv": "Data buku saku kasimpen ing ngendi: apa sing kasimpen ing piranti, cara tinjauan mingguan, lan apa sing tetep mlaku sawisé ana jeda.",
+    "su": "Data buku saku disimpen di mana: naon nu disimpen dina alat, kumaha tinjauan mingguan, jeung naon nu tetep jalan sanggeus aya jeda."
+  }
 }

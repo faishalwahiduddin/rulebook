@@ -49,7 +49,8 @@ class AppTheme {
       secondaryContainer: c.surfaceSunken,
       onSecondaryContainer: c.textPrimary,
       error: c.danger,
-      onError: Colors.white,
+      // Dark danger is red400 (light), so white text on it is only ~2.6:1.
+      onError: isDark ? AppPalette.slate950 : Colors.white,
       errorContainer: c.dangerSoft,
       onErrorContainer: c.danger,
       surface: c.surface,

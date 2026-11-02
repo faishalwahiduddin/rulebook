@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "cara-aturan-lalu-lintas-yang-praktis-offline",
-    "en": "how-to-aturan-lalu-lintas-offline",
-    "ar": "aturan-lalu-lintas",
-    "jv": "pandhuan-aturan-lalu-lintas-rulebook",
-    "su": "pituduh-aturan-lalu-lintas-rulebook",
-    "zh": "rulebook-aturan-lalu-lintas-实用指南",
-    "ja": "rulebookaturan-lalu-lintas-ガイド"
+    "id": "cara-memulai-aturan-lalu-lintas-tanpa-ribet",
+    "en": "how-to-start-aturan-lalu-lintas-without-friction",
+    "ar": "kyf-tbda-qwaad-almrwr-dwn-taqyd",
+    "jv": "kepriye-miwiti-aturan-lalu-lintas-tanpa-ruwet",
+    "su": "kumaha-ngamimitian-aturan-lalu-lintas-tanpa-ribet",
+    "zh": "ru-he-kai-shi-jiao-tong-gui-ze-bu-bi-fu-za",
+    "ja": "koutsuu-ruuru-wo-muri-naku-hajime-ru-houhou"
   },
   "titles": {
-    "id": "Cara aturan lalu lintas yang Praktis (Offline)",
-    "en": "How to aturan lalu lintas Offline — Practical Steps",
-    "ar": "aturan lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: Cara aturan lalu lintas yang Praktis (Offline)",
-    "su": "Pituduh: Cara aturan lalu lintas yang Praktis (Offline)",
-    "zh": "RuleBook · aturan lalu lintas 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas ガイド"
+    "id": "Cara memulai aturan lalu lintas tanpa ribet",
+    "en": "How to start aturan lalu lintas without friction",
+    "ar": "كيف تبدأ قواعد المرور دون تعقيد",
+    "jv": "Kepriyé miwiti aturan lalu lintas tanpa ruwet",
+    "su": "Kumaha ngamimitian aturan lalu lintas tanpa ribet",
+    "zh": "如何开始交通规则（不必复杂）",
+    "ja": "交通ルールを無理なく始める方法"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Cara memulai aturan lalu lintas tanpa ribet: mulai dari versi paling kecil, tentukan kapan menjalankannya, lalu lakukan tinjauan mingguan yang singkat.",
+    "en": "Start aturan lalu lintas without the fuss: begin with the smallest version, pick the right time to run it, and keep a short weekly check.",
+    "ar": "كيف تبدأ مع aturan lalu lintas دون تعقيد: ابدأ بأصغر نسخة، وحدّد وقت التشغيل المناسب، ثم راجع الأمر أسبوعياً بخطوة قصيرة.",
+    "ja": "はじめの一歩：aturan lalu lintasを最小版から無理なく始める手順。実行タイミングと週次の見直しまで解説します。",
+    "zh": "如何轻松开始aturan lalu lintas：从最小版本起步，确定执行时机，并做简短的每周复盘。",
+    "jv": "Kepriyé miwiti aturan lalu lintas tanpa ruwet: wiwit saka versi paling cilik, mituwa kapan dilakokaké, banjur priksa saben minggu sing cekak.",
+    "su": "Kumaha ngamimitian aturan lalu lintas tanpa ribet: mimitian ti versi pangleutikna, tangtukeun iraha ngajalankeunana, teras tinjauan mingguan nu singkat."
+  }
 }

@@ -91,7 +91,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get filter => 'Saring';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Balèni';
 
   @override
   String get confirm => 'Konfirmasi';
@@ -284,7 +284,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get ecosystem => 'Ekosistem';
 
   @override
-  String get subdomain => 'Subdomains';
+  String get subdomain => 'Subdomain';
 
   @override
   String get applicationId => 'ID aplikasi';
@@ -587,7 +587,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get criticalCompliance => 'Tingkat Kepatuhan Kritis';
 
   @override
-  String get targetLabel => 'Target';
+  String get targetLabel => 'Sasaran';
 
   @override
   String get checklistItems => 'Dhaptar Item Inspeksi';
@@ -615,7 +615,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get navSopShort => 'Darurat';
 
   @override
-  String get navComplianceShort => 'Audit';
+  String get navComplianceShort => 'Pamriksa';
 
   @override
   String get categoryAll => 'Kabeh';
@@ -655,7 +655,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get catLaborShort => 'Kerja';
 
   @override
-  String get catCyberShort => 'Data & ITE';
+  String get catCyberShort => 'Data & Siber';
 
   @override
   String get catConsumerShort => 'Konsumen';
@@ -1612,4 +1612,99 @@ class AppLocalizationsJv extends AppLocalizations {
 
   @override
   String get tierExpert => 'Pakar Regulasi';
+
+  @override
+  String get appTitle => 'RuleBook';
+
+  @override
+  String get appTagline => 'Paugeran, angger-angger & SOP ing kanthong';
+
+  @override
+  String get loadingLabel => 'Ngamot…';
+
+  @override
+  String get onbSkip => 'Liwati';
+
+  @override
+  String get onbNext => 'Sabanjuré';
+
+  @override
+  String get onbGetStarted => 'Wiwit Saiki';
+
+  @override
+  String get onbPrivacyHeadline => 'Privasi & Offline Kareksa';
+
+  @override
+  String get onbPrivacyDetail =>
+      'Kabeh data kasimpen aman ing piranti panjenengan, tanpa pelacak.';
+
+  @override
+  String get onbSlide1Title => 'Paugeran ing kanthong';
+
+  @override
+  String get onbSlide1Sub => 'Lalu lintas, pegaweyan, konsumen';
+
+  @override
+  String get onbSlide1Badge => '100% Offline & Pribadi';
+
+  @override
+  String get onbSlide2Title => 'Kalkulator denda';
+
+  @override
+  String get onbSlide2Sub => 'Tilang, lembur, pesangon & THR';
+
+  @override
+  String get onbSlide2Badge => 'Adhedhasar dhasar hukum';
+
+  @override
+  String get onbSlide3Title => 'Checklist SOP';
+
+  @override
+  String get onbSlide3Sub => 'Langkah-langkah nalika darurat';
+
+  @override
+  String get onbSlide3Badge => 'Tanpa Iklan & Tanpa Akun';
+
+  @override
+  String get onbSlide4Title => 'Tansah bisa dibukak';
+
+  @override
+  String get onbSlide4Sub => 'Tanpa internet, data tetep ing piranti';
+
+  @override
+  String get onbSlide4Badge => 'Data Kasimpen ing Piranti';
+
+  @override
+  String copyOvertimeSummary(String salary, String hours, String pay) {
+    return 'Simulasi Lembur RuleBook\nGaji: $salary\nJam: $hours\nKira-kira upah: $pay\nDhasar: PP 35/2021';
+  }
+
+  @override
+  String copySeveranceSummary(
+    String wage,
+    String years,
+    String months,
+    String reason,
+    String pesangon,
+    String upmk,
+    String uph,
+    String total,
+    String basis,
+  ) {
+    return 'Simulasi Kompensasi PHK RuleBook\nUpah: $wage\nMasa kerja: $years th $months bln\nAlesan: $reason\nPesangon: $pesangon\nUPMK: $upmk\nUPH: $uph\nGunggung: $total\nDhasar: $basis';
+  }
+
+  @override
+  String copyThrSummary(String wage, String months, String pay) {
+    return 'Simulasi THR RuleBook\nUpah: $wage\nMasa kerja: $months sasi\nHak THR: $pay\nKudu dibayar paling telat H-7 dina gedhe';
+  }
+
+  @override
+  String get shareTrailingNote =>
+      'Golèki atusan paugeran & SOP ing RuleBook: https://rulebook.faishal.id';
+
+  @override
+  String shareCardVerifiedOn(String date) {
+    return 'Dipesthèkaké: $date';
+  }
 }

@@ -600,7 +600,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get checklistItems => 'Lista de artículos de inspección';
 
   @override
-  String get crucial => 'CRUCIAL';
+  String get crucial => 'CLAVE';
 
   @override
   String get resetChecklist => 'Restablecer lista de verificación';
@@ -1653,4 +1653,100 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get tierExpert => 'Experto en regulación';
+
+  @override
+  String get appTitle => 'RuleBook';
+
+  @override
+  String get appTagline => 'Leyes, normativas y protocolos en tu bolsillo';
+
+  @override
+  String get loadingLabel => 'Cargando…';
+
+  @override
+  String get onbSkip => 'Omitir';
+
+  @override
+  String get onbNext => 'Siguiente';
+
+  @override
+  String get onbGetStarted => 'Empezar';
+
+  @override
+  String get onbPrivacyHeadline => 'Privacidad total, sin conexión';
+
+  @override
+  String get onbPrivacyDetail =>
+      'Todo se queda en tu dispositivo. Sin rastreadores ni cuentas.';
+
+  @override
+  String get onbSlide1Title => 'Toda la norma, a mano';
+
+  @override
+  String get onbSlide1Sub => 'Tránsito, trabajo y consumo';
+
+  @override
+  String get onbSlide1Badge => '100% sin conexión y privado';
+
+  @override
+  String get onbSlide2Title => 'Calculadora de multas';
+
+  @override
+  String get onbSlide2Sub => 'Multas, horas extra, despido y aguinaldo';
+
+  @override
+  String get onbSlide2Badge => 'Basada en el articulado';
+
+  @override
+  String get onbSlide3Title => 'Protocolos paso a paso';
+
+  @override
+  String get onbSlide3Sub => 'Qué hacer cuando de verdad importa';
+
+  @override
+  String get onbSlide3Badge => 'Sin anuncios ni registro';
+
+  @override
+  String get onbSlide4Title => 'Siempre disponible';
+
+  @override
+  String get onbSlide4Sub =>
+      'Funciona sin internet y tus datos no salen del móvil';
+
+  @override
+  String get onbSlide4Badge => 'Guardado en tu dispositivo';
+
+  @override
+  String copyOvertimeSummary(String salary, String hours, String pay) {
+    return 'Simulación de horas extra RuleBook\nSalario: $salary\nHoras: $hours\nPago estimado: $pay\nBase: PP 35/2021';
+  }
+
+  @override
+  String copySeveranceSummary(
+    String wage,
+    String years,
+    String months,
+    String reason,
+    String pesangon,
+    String upmk,
+    String uph,
+    String total,
+    String basis,
+  ) {
+    return 'Simulación de indemnización RuleBook\nSalario: $wage\nAntigüedad: $years a $months m\nMotivo: $reason\nIndemnización: $pesangon\nUPMK: $upmk\nUPH: $uph\nTotal: $total\nBase: $basis';
+  }
+
+  @override
+  String copyThrSummary(String wage, String months, String pay) {
+    return 'Simulación de paga festiva (THR) RuleBook\nSalario: $wage\nAntigüedad: $months meses\nTHR correspondiente: $pay\nDebe pagarse antes de los 7 días previos al festivo';
+  }
+
+  @override
+  String get shareTrailingNote =>
+      'Consulta cientos de normas y protocolos en RuleBook: https://rulebook.faishal.id';
+
+  @override
+  String shareCardVerifiedOn(String date) {
+    return 'Verificado: $date';
+  }
 }

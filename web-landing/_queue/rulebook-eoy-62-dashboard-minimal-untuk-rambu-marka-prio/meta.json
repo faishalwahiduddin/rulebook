@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "dashboard-minimal-untuk-rambu-marka-prioritas-praktis",
-    "en": "minimal-dashboard-for-rambu-marka-prioritas-practical",
-    "ar": "rambu-marka-prioritas-7",
-    "jv": "pandhuan-rambu-marka-prioritas-rulebook-7",
-    "su": "pituduh-rambu-marka-prioritas-rulebook-7",
-    "zh": "rulebook-rambu-marka-prioritas-实用指南-7",
-    "ja": "rulebookrambu-marka-prioritas-ガイド-7"
+    "id": "cara-mengukur-rambu-marka-prioritas-tanpa-angka-palsu",
+    "en": "measuring-rambu-marka-prioritas-without-fake-numbers",
+    "ar": "qyas-almalwmat-almhma-dwn-arqam-whmya-aljz-3",
+    "jv": "ngukur-rambu-marka-prioritas-tanpa-angka-goroh",
+    "su": "ngukur-rambu-marka-prioritas-tanpa-angka-bohong",
+    "zh": "ru-he-heng-liang-zhong-yao-xin-xi-er-bu-kao-gu-ji-di-3-pian",
+    "ja": "suisoku-ni-tayora-zu-taisetsu-na-jouhou-wo-hakaru-dai-3-kai"
   },
   "titles": {
-    "id": "Dashboard Minimal untuk rambu marka prioritas",
-    "en": "Minimal Dashboard for rambu marka prioritas (Practical)",
-    "ar": "rambu marka prioritas — دليل RuleBook",
-    "jv": "Pandhuan: Dashboard Minimal untuk rambu marka prioritas",
-    "su": "Pituduh: Dashboard Minimal untuk rambu marka prioritas",
-    "zh": "RuleBook · rambu marka prioritas 实用指南",
-    "ja": "RuleBook｜rambu marka prioritas ガイド"
+    "id": "Cara mengukur rambu marka prioritas tanpa angka palsu",
+    "en": "Measuring rambu marka prioritas without fake numbers",
+    "ar": "قياس المعلومات المهمة دون أرقام وهمية · الجزء 3",
+    "jv": "Ngukur rambu marka prioritas tanpa angka goroh",
+    "su": "Ngukur rambu marka prioritas tanpa angka bohong",
+    "zh": "如何衡量重要信息而不靠估计 · 第3篇",
+    "ja": "推測に頼らず大切な情報を測る · 第3回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Cara mengukur rambu marka prioritas tanpa angka palsu: tinjauan mingguan, penyimpanan di perangkat, dan cara membaca catatan setelah jeda.",
+    "en": "Measuring rambu marka prioritas without fake numbers: a weekly check, on-device storage, and how to read your notes honestly after a gap.",
+    "ar": "قياس rambu marka prioritas دون أرقام وهمية: مراجعة أسبوعية، والحفظ على الجهاز، وكيف تقرأ ملاحظاتك بصدق بعد فجوة.",
+    "ja": "数字に頼らずrambu marka prioritasを測る方法。週次チェック、端末内の保存、空白後にメモを正直に読む。",
+    "zh": "不靠虚假数字衡量rambu marka prioritas：每周检查、设备端存储，以及间隔后如何诚实地读取笔记。",
+    "jv": "Ngukur rambu marka prioritas tanpa angka goroh: tinjauan mingguan, nyimpen ing piranti, lan cara maca cathetan kanthi jujur sawisé bolong.",
+    "su": "Ngukur rambu marka prioritas tanpa angka bohong: tinjauan mingguan, nyimpen dina alat, jeung cara maca catetan kalawan jujur sanggeus bolong."
+  }
 }

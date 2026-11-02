@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "7-tips-rambu-marka-prioritas-yang-paling-berdampak-offline",
-    "en": "7-high-impact-rambu-marka-prioritas-tips",
-    "ar": "rambu-marka-prioritas-8",
-    "jv": "pandhuan-rambu-marka-prioritas-rulebook-8",
-    "su": "pituduh-rambu-marka-prioritas-rulebook-8",
-    "zh": "rulebook-rambu-marka-prioritas-实用指南-8",
-    "ja": "rulebookrambu-marka-prioritas-ガイド-8"
+    "id": "rambu-marka-prioritas-daftar-pilihan-yang-masuk-akal",
+    "en": "rambu-marka-prioritas-a-shortlist-that-makes-sense",
+    "ar": "almalwmat-almhma-khyarat-qlyla-mntqya-aljz-2",
+    "jv": "rambu-marka-prioritas-pilihan-sing-cukup-masuk-akal",
+    "su": "rambu-marka-prioritas-pilihan-anu-asup-akal",
+    "zh": "zhong-yao-xin-xi-zhi-de-kao-lv-de-ji-zhong-xuan-ze-di-2-pian",
+    "ja": "taisetsu-na-jouhou-nattoku-dekiru-sentakushi-dai-2-kai"
   },
   "titles": {
-    "id": "7 Tips rambu marka prioritas yang Paling Berdampak",
-    "en": "7 High-Impact rambu marka prioritas Tips",
-    "ar": "rambu marka prioritas — دليل RuleBook",
-    "jv": "Pandhuan: 7 Tips rambu marka prioritas yang Paling Berdampak",
-    "su": "Pituduh: 7 Tips rambu marka prioritas yang Paling Berdampak",
-    "zh": "RuleBook · rambu marka prioritas 实用指南",
-    "ja": "RuleBook｜rambu marka prioritas ガイド"
+    "id": "rambu marka prioritas: daftar pilihan yang masuk akal",
+    "en": "rambu marka prioritas: a shortlist that makes sense",
+    "ar": "المعلومات المهمة: خيارات قليلة منطقية · الجزء 2",
+    "jv": "rambu marka prioritas: pilihan sing cukup masuk akal",
+    "su": "rambu marka prioritas: pilihan anu asup akal",
+    "zh": "重要信息：值得考虑的几种选择 · 第2篇",
+    "ja": "大切な情報：納得できる選択肢 · 第2回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Rambu marka prioritas: daftar pilihan yang masuk akal, dengan versi paling kecil, kapan menjalankannya, dan tinjauan mingguan untuk memutuskan.",
+    "en": "Rambu marka prioritas: a shortlist of sensible options, the smallest version to try, when to run it, and a weekly review to help you decide.",
+    "ar": "rambu marka prioritas: قائمة خيارات منطقية، وأصغر نسخة للتجربة، ومتى تشغّلها، ومراجعة أسبوعية تساعدك على القرار.",
+    "ja": "納得できる選択肢を絞る：rambu marka prioritasの候補一覧、試す最小版、実行タイミング、週次見直し。",
+    "zh": "合理选项的简短清单：rambu marka prioritas的候选方案，附上可尝试的最小版本、执行时机和每周复盘。",
+    "jv": "Rambu marka prioritas: dhaftar pilihan sing masuk akal, karo versi paling cilik, kapan dilakokaké, lan tinjauan mingguan kanggo mutusaké.",
+    "su": "Rambu marka prioritas: daptar pilihan nu masuk akal, kalawan versi pangleutikna, iraha ngajalankeunana, jeung tinjauan mingguan pikeun mutuskeun."
+  }
 }

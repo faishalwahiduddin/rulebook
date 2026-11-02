@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "studi-kasus-14-hari-konsisten-rambu-marka-prioritas-offline",
-    "en": "case-study-14-consistent-days-of-rambu-marka-prioritas",
-    "ar": "rambu-marka-prioritas-6",
-    "jv": "pandhuan-rambu-marka-prioritas-rulebook-6",
-    "su": "pituduh-rambu-marka-prioritas-rulebook-6",
-    "zh": "rulebook-rambu-marka-prioritas-实用指南-6",
-    "ja": "rulebookrambu-marka-prioritas-ガイド-6"
+    "id": "studi-kasus-rambu-marka-prioritas-selama-14-hari",
+    "en": "case-study-rambu-marka-prioritas-for-14-days",
+    "ar": "qyas-almalwmat-almhma-dwn-arqam-whmya",
+    "jv": "studi-kasus-rambu-marka-prioritas-14-dina",
+    "su": "studi-kasus-rambu-marka-prioritas-14-poe",
+    "zh": "ru-he-heng-liang-zhong-yao-xin-xi-er-bu-kao-gu-ji",
+    "ja": "suisoku-ni-tayora-zu-taisetsu-na-jouhou-wo-hakaru"
   },
   "titles": {
-    "id": "Studi Kasus: 14 Hari Konsisten rambu marka prioritas",
-    "en": "Case Study: 14 Consistent Days of rambu marka prioritas",
-    "ar": "rambu marka prioritas — دليل RuleBook",
-    "jv": "Pandhuan: Studi Kasus: 14 Hari Konsisten rambu marka prioritas",
-    "su": "Pituduh: Studi Kasus: 14 Hari Konsisten rambu marka prioritas",
-    "zh": "RuleBook · rambu marka prioritas 实用指南",
-    "ja": "RuleBook｜rambu marka prioritas ガイド"
+    "id": "Studi kasus: rambu marka prioritas selama 14 hari",
+    "en": "Case study: rambu marka prioritas for 14 days",
+    "ar": "قياس المعلومات المهمة دون أرقام وهمية",
+    "jv": "Studi kasus: rambu marka prioritas 14 dina",
+    "su": "Studi kasus: rambu marka prioritas 14 poé",
+    "zh": "如何衡量重要信息而不靠估计",
+    "ja": "推測に頼らず大切な情報を測る"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Studi kasus rambu marka prioritas selama 14 hari: tinjauan mingguan, catatan yang tersimpan di perangkat, dan apa yang terjadi setelah jeda.",
+    "en": "Case study: rambu marka prioritas over 14 days, with the weekly check, what stays stored on your device, and what happens after a gap.",
+    "ar": "دراسة حالة لـ rambu marka prioritas خلال 14 يوماً: المراجعة الأسبوعية، والملاحظات المحفوظة على جهازك، وما يحدث بعد فجوة.",
+    "ja": "14日間のrambu marka prioritas事例。週次チェック、端末に保存される記録、空白があった後の結果。",
+    "zh": "rambu marka prioritas的14天案例研究：每周检查、设备上保存的内容，以及中间断开后会发生什么。",
+    "jv": "Studi kasus rambu marka prioritas sajrone 14 dina: tinjauan mingguan, cathetan sing kasimpen ing piranti, lan apa sing kedadeyan sawisé jeda.",
+    "su": "Studi kasus rambu marka prioritas salila 14 poé: tinjauan mingguan, catetan nu disimpen dina alat, jeung naon nu lumangsung sanggeus jeda."
+  }
 }

@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "kpi-pribadi-untuk-aturan-lalu-lintas-saku",
-    "en": "personal-kpis-for-aturan-lalu-lintas-saku",
-    "ar": "aturan-lalu-lintas-saku-7",
-    "jv": "pandhuan-aturan-lalu-lintas-saku-rulebook-7",
-    "su": "pituduh-aturan-lalu-lintas-saku-rulebook-7",
-    "zh": "rulebook-aturan-lalu-lintas-saku-实用指南-7",
-    "ja": "rulebookaturan-lalu-lintas-saku-ガイド-7"
+    "id": "cara-mengukur-aturan-lalu-lintas-saku-tanpa-angka-palsu",
+    "en": "measuring-aturan-lalu-lintas-saku-without-fake-numbers",
+    "ar": "ktaba-almalwmat-almhma-bshkl-yqra",
+    "jv": "ngukur-aturan-lalu-lintas-saku-tanpa-angka-goroh",
+    "su": "ngukur-aturan-lalu-lintas-saku-tanpa-angka-bohong",
+    "zh": "ba-zhong-yao-xin-xi-xie-de-rang-ren-du-de-xia-qu",
+    "ja": "yome-ru-taisetsu-na-jouhou-no-kakikata"
   },
   "titles": {
-    "id": "KPI Pribadi untuk aturan lalu lintas saku",
-    "en": "Personal KPIs for aturan lalu lintas saku",
-    "ar": "aturan lalu lintas saku — دليل RuleBook",
-    "jv": "Pandhuan: KPI Pribadi untuk aturan lalu lintas saku",
-    "su": "Pituduh: KPI Pribadi untuk aturan lalu lintas saku",
-    "zh": "RuleBook · aturan lalu lintas saku 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas saku ガイド"
+    "id": "Cara mengukur aturan lalu lintas saku tanpa angka palsu",
+    "en": "Measuring aturan lalu lintas saku without fake numbers",
+    "ar": "كتابة المعلومات المهمة بشكل يُقرأ",
+    "jv": "Ngukur aturan lalu lintas saku tanpa angka goroh",
+    "su": "Ngukur aturan lalu lintas saku tanpa angka bohong",
+    "zh": "把重要信息写得让人读得下去",
+    "ja": "読める大切な情報の書き方"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Cara mengukur aturan lalu lintas saku tanpa angka palsu: tinjauan mingguan, penyimpanan di perangkat, dan cara membaca catatan setelah jeda.",
+    "en": "Measuring aturan lalu lintas saku without fake numbers: a weekly check, on-device storage, and how to read your notes honestly after a gap.",
+    "ar": "قياس aturan lalu lintas saku دون أرقام وهمية: مراجعة أسبوعية، والحفظ على الجهاز، وكيف تقرأ ملاحظاتك بصدق بعد فجوة.",
+    "ja": "数字に頼らずaturan lalu lintas sakuを測る方法。週次チェック、端末内の保存、空白後の読み返し。",
+    "zh": "不靠虚假数字衡量aturan lalu lintas saku：每周检查、设备端存储，以及间隔后如何诚实地读取笔记。",
+    "jv": "Ngukur aturan lalu lintas saku tanpa angka goroh: tinjauan mingguan, nyimpen ing piranti, lan cara maca cathetan kanthi jujur sawisé bolong.",
+    "su": "Ngukur aturan lalu lintas saku tanpa angka bohong: tinjauan mingguan, nyimpen dina alat, jeung cara maca catetan kalawan jujur sanggeus bolong."
+  }
 }

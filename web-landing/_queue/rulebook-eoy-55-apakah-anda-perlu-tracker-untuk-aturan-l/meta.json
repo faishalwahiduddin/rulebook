@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "apakah-anda-perlu-tracker-untuk-aturan-lalu-lintas",
-    "en": "do-you-need-a-tracker-for-aturan-lalu-lintas",
-    "ar": "aturan-lalu-lintas-7",
-    "jv": "pandhuan-aturan-lalu-lintas-rulebook-7",
-    "su": "pituduh-aturan-lalu-lintas-rulebook-7",
-    "zh": "rulebook-aturan-lalu-lintas-实用指南-7",
-    "ja": "rulebookaturan-lalu-lintas-ガイド-7"
+    "id": "aturan-lalu-lintas-memutuskan-tanpa-overthinking",
+    "en": "aturan-lalu-lintas-deciding-without-overthinking",
+    "ar": "qwaad-almrwr-qrar-bla-tfkyr-zaid",
+    "jv": "aturan-lalu-lintas-mutusake-tanpa-mikir-kebangeten",
+    "su": "aturan-lalu-lintas-mutuskeun-tanpa-mikir-kaleuleuwihi",
+    "zh": "jiao-tong-gui-ze-bu-bi-jiu-jie-de-xuan-ze-fang-fa",
+    "ja": "koutsuu-ruuru-kangae-sugizuni-kime-ru"
   },
   "titles": {
-    "id": "Apakah Anda Perlu Tracker untuk aturan lalu lintas?",
-    "en": "Do You Need a Tracker for aturan lalu lintas?",
-    "ar": "aturan lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: Apakah Anda Perlu Tracker untuk aturan lalu lintas?",
-    "su": "Pituduh: Apakah Anda Perlu Tracker untuk aturan lalu lintas?",
-    "zh": "RuleBook · aturan lalu lintas 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas ガイド"
+    "id": "aturan lalu lintas: memutuskan tanpa overthinking",
+    "en": "aturan lalu lintas: deciding without overthinking",
+    "ar": "قواعد المرور: قرار بلا تفكير زائد",
+    "jv": "aturan lalu lintas: mutusaké tanpa mikir kebangeten",
+    "su": "aturan lalu lintas: mutuskeun tanpa mikir kaleuleuwihi",
+    "zh": "交通规则：不必纠结的选择方法",
+    "ja": "交通ルール：考えすぎずに決める"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Soal aturan lalu lintas: cara memutuskan tanpa overthinking, kenapa keputusan sering putus, data tersimpan di perangkat, dan tinjauan mingguan.",
+    "en": "Choosing aturan lalu lintas: how to decide without overthinking, why decisions stall, data kept on your device, and a short weekly review.",
+    "ar": "قرار بشأن aturan lalu lintas: كيف تقرر دون إفراط في التفكير، ولماذا تتعطل القرارات، والبيانات على جهازك، ومراجعة أسبوعية قصيرة.",
+    "ja": "考えすぎない判断術：aturan lalu lintasで決める方法。判断が止まる理由、端末に残るデータ、短い週次見直し。",
+    "zh": "aturan lalu lintas：不必过度纠结的决策方法，为何决定会卡住，设备上的数据，以及每周复盘。",
+    "jv": "Aturan lalu lintas: cara mutusaké tanpa mikir kebangeten, kenapa keputusan kerep mandheg, data kasimpen ing piranti, lan tinjauan mingguan.",
+    "su": "Aturan lalu lintas: cara mutuskeun tanpa mikir kaleuleuwihan, naha kaputusan sering macét, data disimpen dina alat, jeung tinjauan mingguan."
+  }
 }

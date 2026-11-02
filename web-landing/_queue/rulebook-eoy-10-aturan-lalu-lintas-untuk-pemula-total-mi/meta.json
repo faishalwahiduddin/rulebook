@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "aturan-lalu-lintas-untuk-pemula-total-mingguan",
-    "en": "aturan-lalu-lintas-for-absolute-beginners",
-    "ar": "aturan-lalu-lintas-2",
-    "jv": "pandhuan-aturan-lalu-lintas-rulebook-2",
-    "su": "pituduh-aturan-lalu-lintas-rulebook-2",
-    "zh": "rulebook-aturan-lalu-lintas-实用指南-2",
-    "ja": "rulebookaturan-lalu-lintas-ガイド-2"
+    "id": "aturan-lalu-lintas-untuk-orang-yang-waktunya-sempit",
+    "en": "aturan-lalu-lintas-for-people-with-no-spare-time",
+    "ar": "qwaad-almrwr-lmn-la-ymlk-wqta",
+    "jv": "aturan-lalu-lintas-kanggo-sing-wektune-sempit",
+    "su": "aturan-lalu-lintas-pikeun-anu-waktosna-heureut",
+    "zh": "shi-jian-hen-shao-de-ren-zen-me-zuo-jiao-tong-gui-ze",
+    "ja": "jikan-ganai-nin-notameno-koutsuu-ruuru"
   },
   "titles": {
     "id": "aturan lalu lintas untuk orang yang waktunya sempit",
-    "en": "aturan lalu lintas for Absolute Beginners — Offline First",
-    "ar": "aturan lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: aturan lalu lintas untuk orang yang waktunya sempit",
-    "su": "Pituduh: aturan lalu lintas untuk orang yang waktunya sempit",
-    "zh": "RuleBook · aturan lalu lintas 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas ガイド"
+    "en": "aturan lalu lintas for people with no spare time",
+    "ar": "قواعد المرور لمن لا يملك وقتاً",
+    "jv": "aturan lalu lintas kanggo sing wektuné sempit",
+    "su": "aturan lalu lintas pikeun anu waktosna heureut",
+    "zh": "时间很少的人怎么做交通规则",
+    "ja": "時間がない人のための交通ルール"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Panduan aturan lalu lintas untuk orang yang waktunya sempit, dengan kapan menjalankannya, versi paling kecil, dan cara kembali lagi setelah ada jeda.",
+    "en": "Short on time? Aturan lalu lintas guidance, covering when to run it, the smallest version to keep going, and how to return after a gap.",
+    "ar": "قواعد المرور لمن لا يملك وقتاً واسعاً، تشمل متى تشغّلها، وأصغر نسخة تبقيك مستمراً، وكيف تعود بعد فترة من الانقطاع.",
+    "ja": "時間が少ない人のaturan lalu lintas。実行のタイミング、最小版、空白の後に再開する方法をまとめました。",
+    "zh": "时间很少的人如何使用aturan lalu lintas：执行时机、保持进度的最小版本，以及停顿后如何恢复。",
+    "jv": "Kanggo wong sing wektuné sempit, aturan lalu lintas, kalebu kapan dilakokaké, versi paling cilik supaya tetep mlaku, lan cara bali sawisé ana jeda.",
+    "su": "Pikeun jalma anu waktuna sempit, aturan lalu lintas, kaasup iraha ngajalankeunana, versi pangleutikna supaya tetep jalan, jeung cara balik sanggeus aya jeda."
+  }
 }

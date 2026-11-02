@@ -1,6 +1,6 @@
 # RuleBook
 
-> Pencatat skor board game, aturan main, timer giliran & riwayat.
+> RuleBook adalah buku saku digital berisi aturan lalu lintas, SOP, dan regulasi per topik yang bisa dibaca offline. Dilengkapi pencarian cepat dan favorit.
 
 RuleBook is a free app in the faishal.id fleet. Offline-first product; this marketing site may use optional consent-gated analytics.
 
@@ -12,9 +12,10 @@ RuleBook is a free app in the faishal.id fleet. Offline-first product; this mark
 - Terms: https://rulebook.faishal.id/id/terms.html
 - Pricing: https://rulebook.faishal.id/pricing.md
 - Publisher: https://faishal.id
+- Google Play: https://play.google.com/store/apps/details?id=id.faishal.rulebook
 
 ## Blog posts
 
-- https://rulebook.faishal.id/id/blog/aturan-lalu-lintas-saku/
-- https://rulebook.faishal.id/id/blog/rambu-marka-prioritas/
-- https://rulebook.faishal.id/id/blog/sop-regulasi-offline/
+- https://rulebook.faishal.id/id/blog/aturan-lalu-lintas-saku-cari-pasal-saat-dibutuhkan/
+- https://rulebook.faishal.id/id/blog/rambu-marka-dan-prioritas-tiga-bacaan-inti-pengendara/
+- https://rulebook.faishal.id/id/blog/sop-dan-regulasi-prosedur-umum-mudah-dicari/

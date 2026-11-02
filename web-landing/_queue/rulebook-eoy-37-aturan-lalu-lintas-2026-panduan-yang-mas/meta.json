@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "aturan-lalu-lintas-2026-panduan-yang-masih-relevan",
-    "en": "aturan-lalu-lintas-2026-still-relevant-guide",
-    "ar": "aturan-lalu-lintas-5",
-    "jv": "pandhuan-aturan-lalu-lintas-rulebook-5",
-    "su": "pituduh-aturan-lalu-lintas-rulebook-5",
-    "zh": "rulebook-aturan-lalu-lintas-实用指南-5",
-    "ja": "rulebookaturan-lalu-lintas-ガイド-5"
+    "id": "aturan-lalu-lintas-di-2026-apa-yang-berubah",
+    "en": "aturan-lalu-lintas-in-2026-what-changed",
+    "ar": "qwaad-almrwr-fy-2026-ma-aldhy-tghyr",
+    "jv": "aturan-lalu-lintas-ing-2026-apa-sing-owah",
+    "su": "aturan-lalu-lintas-taun-2026-naon-anu-robah",
+    "zh": "2026-nian-de-jiao-tong-gui-ze-you-shen-me-bian-hua",
+    "ja": "2026-nen-no-koutsuu-ruuru-nani-ga-kawa-ttaka"
   },
   "titles": {
-    "id": "aturan lalu lintas: panduan praktis di RuleBook",
-    "en": "aturan lalu lintas 2026: Still-Relevant Guide",
-    "ar": "aturan lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: aturan lalu lintas: panduan praktis di RuleBook",
-    "su": "Pituduh: aturan lalu lintas: panduan praktis di RuleBook",
-    "zh": "RuleBook · aturan lalu lintas 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas ガイド"
+    "id": "aturan lalu lintas di 2026: apa yang berubah",
+    "en": "aturan lalu lintas in 2026: what changed",
+    "ar": "قواعد المرور في 2026: ما الذي تغيّر",
+    "jv": "aturan lalu lintas ing 2026: apa sing owah",
+    "su": "aturan lalu lintas taun 2026: naon anu robah",
+    "zh": "2026 年的交通规则：有什么变化",
+    "ja": "2026年の交通ルール：何が変わったか"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Tentang aturan lalu lintas di 2026: apa yang berubah, arti praktisnya, versi paling kecil untuk mulai, dan catatan yang tersimpan di perangkat Anda.",
+    "en": "Updates on aturan lalu lintas in 2026: what changed, what it means in practice, the smallest version to start, and where notes are stored on your device.",
+    "ar": "ما الجديد في aturan lalu lintas في 2026: ما الذي تغيّر، ومعناه العملي، وأصغر نسخة للبدء، وأين تُحفظ الملاحظات على جهازك.",
+    "ja": "2026年のaturan lalu lintas：何が変わったか。実践での意味、始めるための最小版、端末内に残るメモ。",
+    "zh": "2026年的aturan lalu lintas：有哪些变化，实际含义是什么，从哪个最小版本开始，笔记存在设备的哪里。",
+    "jv": "Owah-owahan aturan lalu lintas ing 2026, teges ing praktik, versi paling cilik kanggo miwiti, lan cathetan sing kasimpen ing piranti sampeyan.",
+    "su": "Naon nu robah dina aturan lalu lintas taun 2026, hartina dina prak-prakan, versi pangleutikna pikeun mimiti, jeung catetan nu disimpen dina alat anjeun."
+  }
 }

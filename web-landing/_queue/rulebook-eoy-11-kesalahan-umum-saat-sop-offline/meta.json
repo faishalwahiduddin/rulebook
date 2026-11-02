@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "kesalahan-umum-saat-sop-offline",
-    "en": "common-mistakes-when-doing-sop",
-    "ar": "sop-2",
-    "jv": "pandhuan-sop-rulebook-2",
-    "su": "pituduh-sop-rulebook-2",
-    "zh": "rulebook-sop-实用指南-2",
-    "ja": "rulebooksop-ガイド-2"
+    "id": "kenapa-sop-sulit-konsisten",
+    "en": "why-sop-habits-break",
+    "ar": "lmadha-ytathr-almalwmat-almhma",
+    "jv": "kenapa-sop-angel-konsisten",
+    "su": "naha-sop-hese-konsisten",
+    "zh": "wei-shen-me-zhong-yao-xin-xi-zong-shi-nan-yi-jian-chi",
+    "ja": "taisetsu-na-jouhou-ga-tsuzuka-nai-riyuu"
   },
   "titles": {
-    "id": "Kesalahan Umum saat SOP",
-    "en": "Common Mistakes When Doing SOP",
-    "ar": "SOP — دليل RuleBook",
-    "jv": "Pandhuan: Kesalahan Umum saat SOP",
-    "su": "Pituduh: Kesalahan Umum saat SOP",
-    "zh": "RuleBook · SOP 实用指南",
-    "ja": "RuleBook｜SOP ガイド"
+    "id": "Kenapa SOP sulit konsisten?",
+    "en": "Why SOP habits break",
+    "ar": "لماذا يتعثر المعلومات المهمة؟",
+    "jv": "Kenapa SOP angel konsisten?",
+    "su": "Naha SOP hésé konsisten?",
+    "zh": "为什么重要信息总是难以坚持",
+    "ja": "大切な情報が続かない理由"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Alasan kebiasaan SOP sering putus di tengah jalan, plus versi paling kecil untuk mulai lagi dan cara melanjutkan setelah beberapa hari tidak rutin.",
+    "en": "Why SOP habits break partway through, plus the smallest version to restart with and how to pick the routine back up after a few missed days.",
+    "ar": "لماذا تتعثر عادة SOP في منتصف الطريق، مع أصغر نسخة تبدأ بها من جديد وطريقة استعادة الروتين بعد أيام قليلة دون متابعة.",
+    "ja": "SOPの習慣が途中で途切れる理由と、最小版からの再開方法。数日空いたあとに戻るコツも解説します。",
+    "zh": "SOP离线模式的常见错误：为何习惯会断，能重新开始的最小版本，以及几天没做后如何回到节奏。",
+    "jv": "Kenapa kebiasaan SOP kerep ambyar ing tengah dalan, uga versi paling cilik kanggo miwiti maneh lan cara nerusaké sawisé sawetara dina ora rutin.",
+    "su": "Naha kabiasaan SOP sering eureun di tengah jalan, ogé versi pangleutikna pikeun mimiti deui jeung cara neruskeun sanggeus sababaraha poé teu rutin."
+  }
 }

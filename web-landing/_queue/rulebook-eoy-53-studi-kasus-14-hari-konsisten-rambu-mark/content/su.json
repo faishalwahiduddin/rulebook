@@ -1,0 +1,85 @@
+{
+  "title": "Studi kasus: rambu marka prioritas 14 poé",
+  "description": "Studi kasus rambu marka prioritas salila 14 poé: tinjauan mingguan, catetan nu disimpen dina alat, jeung naon nu lumangsung sanggeus jeda.",
+  "badge": "kaamanan · offline",
+  "answer": "Nalika diperlukeun, rambu marka prioritas sumebar di tilu tempat—anu dibuka heula gé geus lami. RuleBook nyimpen rambu marka prioritas dina alat, jadi tetep kabuka tanpa kuota jeung tanpa akun.",
+  "toc": [
+    "Tinjauan unggal minggu",
+    "Kasimpen dina alat",
+    "Sanggeus bolong"
+  ],
+  "sections": [
+    {
+      "h2": "Tinjauan unggal minggu",
+      "p": "Saminggu sakali, tempo bagian anu paling sering bolong, tuluy leutikan targetna.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Kasimpen dina alat",
+      "p": "RuleBook nyimpen rambu marka prioritas dina alat, jadi tetep kabuka tanpa kuota jeung tanpa akun.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Sanggeus bolong",
+      "p": "Lamun bolong sababaraha poé, ulah mupus riwayat. Buka catetan panungtungan, eusian hiji poé, tuluy tutup.",
+      "h3": null,
+      "p3": null
+    }
+  ],
+  "table": {
+    "caption": "Rangka rambu marka prioritas",
+    "headers": [
+      "Léngkah",
+      "Eusi minimal",
+      "Bérés lamun"
+    ],
+    "rows": [
+      [
+        "Kartu darurat",
+        "kontak + lokasi",
+        "bisa dibuka offline"
+      ],
+      [
+        "Pananda",
+        "posisi panungtungan",
+        "bisa diteruskeun isukan"
+      ],
+      [
+        "Evaluasi minggu",
+        "hiji panyesuaian",
+        "diterapkeun Senén"
+      ]
+    ]
+  },
+  "list": [
+    "Tangtukeun hiji waktu tetep, lain “mun sempet”.",
+    "Buka RuleBook basa waktu éta datang, ulah engké peuting.",
+    "Catet hiji halangan, lain alesan panjang.",
+    "Cadangkeun data saméméh ganti HP."
+  ],
+  "faqs": [
+    [
+      "Naha rambu marka prioritas bisa dibuka offline?",
+      "Bisa. RuleBook nyimpen kabéh dina alat, jadi teu butuh kuota."
+    ],
+    [
+      "Kudu akun heula?",
+      "Teu. Mimitian tanpa login; cadangkeun data sakapeung."
+    ],
+    [
+      "Mimitian ti mana?",
+      "Ti bagian pangpondokna. Tambahan yén geus dua minggu stabil."
+    ],
+    [
+      "Lamun bolong sababaraha poé?",
+      "Ulah mupus riwayat. Teraskeun tina catetan panungtungan jeung catet hiji halangan."
+    ]
+  ],
+  "cta": [
+    "Mimitian rambu marka prioritas poé ieu",
+    "Buka RuleBook"
+  ],
+  "slug": "pituduh-rambu-marka-prioritas-rulebook-6"
+}

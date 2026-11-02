@@ -1624,4 +1624,99 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get tierExpert => 'Pakar Regulasi';
+
+  @override
+  String get appTitle => 'RuleBook';
+
+  @override
+  String get appTagline => 'Aturan, regulasi & SOP dalam saku';
+
+  @override
+  String get loadingLabel => 'Memuat…';
+
+  @override
+  String get onbSkip => 'Lewati';
+
+  @override
+  String get onbNext => 'Lanjut';
+
+  @override
+  String get onbGetStarted => 'Mulai Sekarang';
+
+  @override
+  String get onbPrivacyHeadline => 'Privasi & Offline Terjamin';
+
+  @override
+  String get onbPrivacyDetail =>
+      'Semua data tersimpan aman di perangkat Anda tanpa pelacak.';
+
+  @override
+  String get onbSlide1Title => 'Aturan dalam saku';
+
+  @override
+  String get onbSlide1Sub => 'Lalu lintas, ketenagakerjaan, konsumen';
+
+  @override
+  String get onbSlide1Badge => '100% Offline & Privat';
+
+  @override
+  String get onbSlide2Title => 'Kalkulator denda';
+
+  @override
+  String get onbSlide2Sub => 'Tilang, lembur, pesangon & THR';
+
+  @override
+  String get onbSlide2Badge => 'Berbasis dasar hukum';
+
+  @override
+  String get onbSlide3Title => 'Checklist SOP';
+
+  @override
+  String get onbSlide3Sub => 'Langkah demi langkah saat darurat';
+
+  @override
+  String get onbSlide3Badge => 'Tanpa Iklan & Tanpa Akun';
+
+  @override
+  String get onbSlide4Title => 'Selalu bisa dibuka';
+
+  @override
+  String get onbSlide4Sub => 'Tanpa internet, data tetap di perangkat';
+
+  @override
+  String get onbSlide4Badge => 'Data Tersimpan di Perangkat';
+
+  @override
+  String copyOvertimeSummary(String salary, String hours, String pay) {
+    return 'Simulasi Lembur RuleBook\nGaji: $salary\nJam: $hours\nEstimasi upah: $pay\nDasar: PP 35/2021';
+  }
+
+  @override
+  String copySeveranceSummary(
+    String wage,
+    String years,
+    String months,
+    String reason,
+    String pesangon,
+    String upmk,
+    String uph,
+    String total,
+    String basis,
+  ) {
+    return 'Simulasi Kompensasi PHK RuleBook\nUpah: $wage\nMasa kerja: $years th $months bln\nAlasan: $reason\nPesangon: $pesangon\nUPMK: $upmk\nUPH: $uph\nTotal: $total\nDasar: $basis';
+  }
+
+  @override
+  String copyThrSummary(String wage, String months, String pay) {
+    return 'Simulasi THR RuleBook\nUpah: $wage\nMasa kerja: $months bulan\nHak THR: $pay\nWajib dibayar paling lambat H-7 hari raya';
+  }
+
+  @override
+  String get shareTrailingNote =>
+      'Telusuri ratusan aturan & SOP di RuleBook: https://rulebook.faishal.id';
+
+  @override
+  String shareCardVerifiedOn(String date) {
+    return 'Diverifikasi: $date';
+  }
 }

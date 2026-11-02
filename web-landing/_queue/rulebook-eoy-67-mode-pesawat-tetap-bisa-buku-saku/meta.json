@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "mode-pesawat-tetap-bisa-buku-saku",
-    "en": "airplane-mode-still-do-buku-saku",
-    "ar": "buku-saku-8",
-    "jv": "pandhuan-buku-saku-rulebook-8",
-    "su": "pituduh-buku-saku-rulebook-8",
-    "zh": "rulebook-buku-saku-实用指南-8",
-    "ja": "rulebookbuku-saku-ガイド-8"
+    "id": "buku-saku-full-offline-apa-yang-tetap-jalan",
+    "en": "buku-saku-fully-offline-what-still-works",
+    "ar": "almalwmat-almhma-bla-atsal-tmama-ma-ybqa-yaml-aljz-2",
+    "jv": "buku-saku-full-offline-apa-sing-tetep-mlaku",
+    "su": "buku-saku-full-offline-naon-anu-tetep-jalan",
+    "zh": "zhong-yao-xin-xi-wan-quan-li-xian-na-xie-gong-neng-hai-neng-yong-di-2",
+    "ja": "taisetsu-na-jouhou-kanzen-ofurain-nani-ga-ugoku-ka-dai-2-kai"
   },
   "titles": {
-    "id": "Mode Pesawat: Tetap Bisa buku saku",
-    "en": "Airplane Mode: Still Do buku saku",
-    "ar": "buku saku — دليل RuleBook",
-    "jv": "Pandhuan: Mode Pesawat: Tetap Bisa buku saku",
-    "su": "Pituduh: Mode Pesawat: Tetap Bisa buku saku",
-    "zh": "RuleBook · buku saku 实用指南",
-    "ja": "RuleBook｜buku saku ガイド"
+    "id": "buku saku full offline: apa yang tetap jalan",
+    "en": "buku saku fully offline: what still works",
+    "ar": "المعلومات المهمة بلا اتصال تماماً: ما يبقى يعمل · الجزء 2",
+    "jv": "buku saku full offline: apa sing tetep mlaku",
+    "su": "buku saku full offline: naon anu tetep jalan",
+    "zh": "重要信息完全离线：哪些功能还能用 · 第2篇",
+    "ja": "大切な情報完全オフライン：何が動くか · 第2回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Buku saku sepenuhnya offline: apa yang tetap berjalan tanpa internet, catatan yang tersimpan di perangkat, dan tinjauan mingguan.",
+    "en": "Buku saku fully offline: what keeps working without an internet connection, what stays stored on your device, and a weekly review.",
+    "ar": "buku saku بلا اتصال تماماً: ما الذي يبقى عاملاً دون إنترنت، وما يُحفظ على جهازك، ومراجعة أسبوعية تضبط الإيقاع.",
+    "ja": "buku sakuを完全オフラインで使う方法。インターネットなしで動くもの、端末に残るメモ、週次見直し。",
+    "zh": "buku saku完全离线：没有网络时仍能运行的功能，设备上保存的内容，以及每周复盘。",
+    "jv": "Buku saku full offline: apa sing tetep mlaku tanpa internet, cathetan sing kasimpen ing piranti, lan tinjauan mingguan.",
+    "su": "Buku saku full offline: naon nu tetep jalan tanpa internet, catetan nu disimpen dina alat, jeung tinjauan mingguan."
+  }
 }

@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "rencana-30-hari-sop-offline",
-    "en": "30-day-sop-plan",
-    "ar": "sop-8",
-    "jv": "pandhuan-sop-rulebook-8",
-    "su": "pituduh-sop-rulebook-8",
-    "zh": "rulebook-sop-实用指南-8",
-    "ja": "rulebooksop-ガイド-8"
+    "id": "rencana-30-hari-untuk-sop",
+    "en": "a-30-day-plan-for-sop",
+    "ar": "khta-thlathyn-ywma-lalmalwmat-almhma-aljz-2",
+    "jv": "rencana-30-dina-kanggo-sop",
+    "su": "rencana-30-poe-pikeun-sop",
+    "zh": "zhong-yao-xin-xi-de-30-tian-ji-hua-di-2-pian",
+    "ja": "taisetsu-na-jouhou-no-30-nichi-puran-dai-2-kai"
   },
   "titles": {
-    "id": "Rencana 30 Hari SOP",
-    "en": "30-Day SOP Plan",
-    "ar": "SOP — دليل RuleBook",
-    "jv": "Pandhuan: Rencana 30 Hari SOP",
-    "su": "Pituduh: Rencana 30 Hari SOP",
-    "zh": "RuleBook · SOP 实用指南",
-    "ja": "RuleBook｜SOP ガイド"
+    "id": "Rencana 30 hari untuk SOP",
+    "en": "A 30-day plan for SOP",
+    "ar": "خطة ثلاثين يوماً لـالمعلومات المهمة · الجزء 2",
+    "jv": "Rencana 30 dina kanggo SOP",
+    "su": "Rencana 30 poé pikeun SOP",
+    "zh": "重要信息的30天计划 · 第2篇",
+    "ja": "大切な情報の30日プラン · 第2回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Rencana 30 hari untuk SOP: versi paling kecil di awal, kapan menjalankannya setiap hari, dan tinjauan mingguan untuk menilai langkah.",
+    "en": "A 30-day plan for SOP: start with the smallest version, run it at a set time each day, and use a weekly review to judge your progress.",
+    "ar": "خطة ثلاثين يوماً لـ SOP: ابدأ بأصغر نسخة، وشغّلها في وقت ثابت كل يوم، واستخدم مراجعة أسبوعية لتقييم تقدمك.",
+    "ja": "SOPの30日計画。最初は最小版から始め、毎日決まった時間に実行し、週次見直しで進みを確認します。",
+    "zh": "SOP的30天计划：开始时用最小版本，每天固定时间执行，并用每周复盘判断自己的进展。",
+    "jv": "Rencana 30 dina kanggo SOP: wiwit saka versi paling cilik, dilakokaké saben dina ing wektu tetep, lan tinjauan mingguan kanggo nilai progrès.",
+    "su": "Rencana 30 poé pikeun SOP: mimitian ti versi pangleutikna, dijalankeun unggal poé dina waktu nu tetep, jeung tinjauan mingguan pikeun ngukur kamajuan."
+  }
 }

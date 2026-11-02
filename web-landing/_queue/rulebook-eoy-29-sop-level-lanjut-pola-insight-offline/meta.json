@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "sop-level-lanjut-pola-insight-offline",
-    "en": "advanced-sop-patterns-insights",
-    "ar": "sop-4",
-    "jv": "pandhuan-sop-rulebook-4",
-    "su": "pituduh-sop-rulebook-4",
-    "zh": "rulebook-sop-实用指南-4",
-    "ja": "rulebooksop-ガイド-4"
+    "id": "sop-tingkat-lanjut-setelah-rutin-stabil",
+    "en": "advanced-sop-once-the-routine-holds",
+    "ar": "almalwmat-almhma-almtqdm-bad-thbat-alrwtyn",
+    "jv": "sop-lanjutan-sawise-rutinitas-mantep",
+    "su": "sop-lanjutan-sanggeus-rutinitas-mantep",
+    "zh": "xi-guan-wen-ding-hou-de-zhong-yao-xin-xi-jin-jie",
+    "ja": "shuukan-ga-antei-shita-nochino-taisetsu-na-jouhououyou"
   },
   "titles": {
-    "id": "SOP Level Lanjut: Pola &amp; Insight",
-    "en": "Advanced SOP: Patterns &amp; Insights",
-    "ar": "SOP — دليل RuleBook",
-    "jv": "Pandhuan: SOP Level Lanjut: Pola &amp; Insight",
-    "su": "Pituduh: SOP Level Lanjut: Pola &amp; Insight",
-    "zh": "RuleBook · SOP 实用指南",
-    "ja": "RuleBook｜SOP ガイド"
+    "id": "SOP tingkat lanjut setelah rutin stabil",
+    "en": "Advanced SOP once the routine holds",
+    "ar": "المعلومات المهمة المتقدم بعد ثبات الروتين",
+    "jv": "SOP lanjutan sawisé rutinitas mantep",
+    "su": "SOP lanjutan sanggeus rutinitas mantep",
+    "zh": "习惯稳定后的重要信息进阶",
+    "ja": "習慣が安定した後の大切な情報応用"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "SOP tingkat lanjut setelah rutinitas stabil: arti praktisnya, versi paling kecil sebagai pijakan, dan data yang tetap tersimpan di perangkat.",
+    "en": "Advanced SOP once the routine holds steady: what it means in practice, the smallest version to keep as your base, and on-device storage.",
+    "ar": "SOP المتقدم بعد استقرار الروتين: معناه العملي، وأصغر نسخة تبقى أساساً لك، وحفظ البيانات على جهازك.",
+    "ja": "ルーティンが安定した後のSOP応用編。実践での意味、土台となる最小版、端末内のデータ保存について。",
+    "zh": "节奏稳定后的SOP进阶：实际含义、作为基础保留的最小版本，以及设备端的数据存放。",
+    "jv": "SOP tingkat lanjut sawisé rutinitas mantep: teges ing praktik, versi paling cilik minangka pijakan, lan data sing tetep kasimpen ing piranti.",
+    "su": "SOP lanjutan sanggeus rutinitas stabil: hartina dina prak-prakan, versi pangleutikna salaku dasar, jeung data nu tetep disimpen dina alat."
+  }
 }

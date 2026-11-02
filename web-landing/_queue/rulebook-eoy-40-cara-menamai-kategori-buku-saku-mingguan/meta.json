@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "cara-menamai-kategori-buku-saku-mingguan",
-    "en": "how-to-name-buku-saku-categories",
-    "ar": "buku-saku-5",
-    "jv": "pandhuan-buku-saku-rulebook-5",
-    "su": "pituduh-buku-saku-rulebook-5",
-    "zh": "rulebook-buku-saku-实用指南-5",
-    "ja": "rulebookbuku-saku-ガイド-5"
+    "id": "buku-saku-secara-mendalam-tanpa-muter-muter",
+    "en": "buku-saku-explained-without-the-runaround",
+    "ar": "almalwmat-almhma-bshrh-mbashr-bla-lf-aljz-3",
+    "jv": "buku-saku-kanthi-jero-tanpa-mubeng-mubeng",
+    "su": "buku-saku-diwincik-tanpa-muter-muter",
+    "zh": "zhong-yao-xin-xi-shen-ru-jiang-qing-chu-di-3-pian",
+    "ja": "taisetsu-na-jouhou-wo-toomawari-sezuni-shin-hori-dai-3-kai"
   },
   "titles": {
-    "id": "Cara Menamai Kategori buku saku",
-    "en": "How to Name buku saku Categories — Offline First",
-    "ar": "buku saku — دليل RuleBook",
-    "jv": "Pandhuan: Cara Menamai Kategori buku saku",
-    "su": "Pituduh: Cara Menamai Kategori buku saku",
-    "zh": "RuleBook · buku saku 实用指南",
-    "ja": "RuleBook｜buku saku ガイド"
+    "id": "buku saku secara mendalam tanpa muter-muter",
+    "en": "buku saku, explained without the runaround",
+    "ar": "المعلومات المهمة بشرح مباشر بلا لفّ · الجزء 3",
+    "jv": "buku saku kanthi jero tanpa mubeng-mubeng",
+    "su": "buku saku diwincik tanpa muter-muter",
+    "zh": "重要信息深入讲清楚 · 第3篇",
+    "ja": "大切な情報を遠回りせずに深掘り · 第3回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Buku saku dijelaskan secara mendalam tanpa muter-muter: arti praktisnya, versi paling kecil untuk memulai, dan catatan yang tersimpan di perangkat.",
+    "en": "Buku saku explained in depth without the runaround: what it means in practice, the smallest version to start with, and notes kept on your device.",
+    "ar": "شرح buku saku بعمق دون لفّ أو دوران: معناه العملي، وأصغر نسخة للبدء بها، والملاحظات المحفوظة على جهازك.",
+    "ja": "buku sakuを遠回りせずに深く解説。実践での意味、始めるための最小版、端末に残るメモについて説明します。",
+    "zh": "深入讲清buku saku，不绕弯子：实际含义、开始时的最小版本，以及保留在设备上的笔记。",
+    "jv": "Buku saku diterangké kanthi jero tanpa mubeng-mubeng: teges ing praktik, versi paling cilik kanggo miwiti, lan cathetan sing kasimpen ing piranti.",
+    "su": "Buku saku diwincik kalawan jelas tanpa muter-muter: hartina dina prak-prakan, versi pangleutikna pikeun mimiti, jeung catetan nu disimpen dina alat."
+  }
 }

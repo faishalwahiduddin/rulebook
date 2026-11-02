@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "5-langkah-memulai-buku-saku-hari-ini",
-    "en": "5-steps-to-start-buku-saku-today",
-    "ar": "buku-saku-2",
-    "jv": "pandhuan-buku-saku-rulebook-2",
-    "su": "pituduh-buku-saku-rulebook-2",
-    "zh": "rulebook-buku-saku-实用指南-2",
-    "ja": "rulebookbuku-saku-ガイド-2"
+    "id": "buku-saku-lima-langkah-pertama",
+    "en": "buku-saku-the-first-five-steps",
+    "ar": "almalwmat-almhma-alkhtwat-alkhms-alawla",
+    "jv": "buku-saku-limang-langkah-kapisan",
+    "su": "buku-saku-lima-lengkah-munggaran",
+    "zh": "zhong-yao-xin-xi-de-tou-wu-ge-bu-zhou",
+    "ja": "taisetsu-na-jouhou-no-saisho-no-5-suteppu"
   },
   "titles": {
-    "id": "5 Langkah Memulai buku saku Hari Ini",
-    "en": "5 Steps to Start buku saku Today",
-    "ar": "buku saku — دليل RuleBook",
-    "jv": "Pandhuan: 5 Langkah Memulai buku saku Hari Ini",
-    "su": "Pituduh: 5 Langkah Memulai buku saku Hari Ini",
-    "zh": "RuleBook · buku saku 实用指南",
-    "ja": "RuleBook｜buku saku ガイド"
+    "id": "buku saku: lima langkah pertama",
+    "en": "buku saku: the first five steps",
+    "ar": "المعلومات المهمة: الخطوات الخمس الأولى",
+    "jv": "buku saku: limang langkah kapisan",
+    "su": "buku saku: lima léngkah munggaran",
+    "zh": "重要信息的头五个步骤",
+    "ja": "大切な情報の最初の5ステップ"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Lima langkah pertama buku saku: mulai dari versi paling kecil, tentukan kapan menjalankannya, dan jadwalkan tinjauan mingguan agar langkahnya berlanjut.",
+    "en": "The first five steps for buku saku: begin with the smallest version, decide when to run it, and schedule a weekly review so the steps keep going.",
+    "ar": "الخطوات الخمس الأولى لـ buku saku: ابدأ بأصغر نسخة، وقرّر متى تشغّلها، وحدد مراجعة أسبوعية حتى تستمر الخطوات بانتظام.",
+    "ja": "buku sakuを始める最初の5ステップ。最小版から始め、実行タイミングと週次見直しを決めて続けます。",
+    "zh": "buku saku的前五个步骤：从最小版本开始，决定执行时机，并安排每周复盘，让步骤持续下去。",
+    "jv": "Limang langkah kapisan buku saku: wiwit saka versi paling cilik, mutusaké kapan dilakokaké, lan njadwalké tinjauan mingguan supaya langkahé terus.",
+    "su": "Lima léngkah munggaran buku saku: mimitian ti versi pangleutikna, mutuskeun iraha ngajalankeunana, jeung jadwalkeun tinjauan mingguan supaya léngkahna terus."
+  }
 }

@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "rulebook-adalah-apa-penjelasan-cara-mulai-harian",
-    "en": "what-is-rulebook-explanation-how-to-start",
-    "ar": "rulebook-8",
-    "jv": "pandhuan-rulebook-rulebook-8",
-    "su": "pituduh-rulebook-rulebook-8",
-    "zh": "rulebook-rulebook-实用指南-8",
-    "ja": "rulebookrulebook-ガイド-8"
+    "id": "aturan-lalu-lintas-untuk-pemula-mulai-dari-mana",
+    "en": "aturan-lalu-lintas-for-beginners-where-to-start",
+    "ar": "qwaad-almrwr-llmbtdiyn-mn-ayn-tbda",
+    "jv": "aturan-lalu-lintas-kanggo-pamula-wiwit-saka-ngendi",
+    "su": "aturan-lalu-lintas-pikeun-pamula-mimitian-ti-mana",
+    "zh": "jiao-tong-gui-ze-ru-men-cong-na-li-kai-shi",
+    "ja": "koutsuu-ruuru-nyuumon-dokokara-hajime-ruka"
   },
   "titles": {
-    "id": "RuleBook Adalah Apa? Penjelasan + Cara Mulai",
-    "en": "What Is RuleBook? Explanation + How to Start",
-    "ar": "RuleBook — دليل RuleBook",
-    "jv": "Pandhuan: RuleBook Adalah Apa? Penjelasan + Cara Mulai",
-    "su": "Pituduh: RuleBook Adalah Apa? Penjelasan + Cara Mulai",
-    "zh": "RuleBook · RuleBook 实用指南",
-    "ja": "RuleBook｜RuleBook ガイド"
+    "id": "aturan lalu lintas untuk pemula: mulai dari mana",
+    "en": "aturan lalu lintas for beginners: where to start",
+    "ar": "قواعد المرور للمبتدئين: من أين تبدأ",
+    "jv": "aturan lalu lintas kanggo pamula: wiwit saka ngendi",
+    "su": "aturan lalu lintas pikeun pamula: mimitian ti mana",
+    "zh": "交通规则入门：从哪里开始",
+    "ja": "交通ルール入門：どこから始めるか"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Bagi pemula, aturan lalu lintas: arti praktisnya, versi paling kecil untuk mulai dari nol, dan data yang tersimpan di perangkat Anda.",
+    "en": "New to aturan lalu lintas? Start here: what it means in practice, the smallest version to start from zero, and data stored on your own device.",
+    "ar": "للمبتدئين، aturan lalu lintas: معناه العملي، وأصغر نسخة للبدء من الصفر، والبيانات المحفوظة على جهازك وحده.",
+    "ja": "aturan lalu lintasの初心者向けガイド。実践での意味、ゼロから始める最小版、端末に保存されるデータ。",
+    "zh": "给初学者的aturan lalu lintas：实际含义、从零开始的最小版本，以及保存在自己设备上的数据。",
+    "jv": "Kanggo pemula, aturan lalu lintas: teges ing praktik, versi paling cilik kanggo miwiti saka nol, lan data sing kasimpen ing piranti sampeyan.",
+    "su": "Pikeun pamula, aturan lalu lintas: hartina dina prak-prakan, versi pangleutikna pikeun mimiti ti nol, jeung data nu disimpen dina alat anjeun."
+  }
 }

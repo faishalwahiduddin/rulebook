@@ -2887,6 +2887,166 @@ abstract class AppLocalizations {
   /// In id, this message translates to:
   /// **'Pakar Regulasi'**
   String get tierExpert;
+
+  /// No description provided for @appTitle.
+  ///
+  /// In id, this message translates to:
+  /// **'RuleBook'**
+  String get appTitle;
+
+  /// No description provided for @appTagline.
+  ///
+  /// In id, this message translates to:
+  /// **'Aturan, regulasi & SOP dalam saku'**
+  String get appTagline;
+
+  /// No description provided for @loadingLabel.
+  ///
+  /// In id, this message translates to:
+  /// **'Memuat…'**
+  String get loadingLabel;
+
+  /// No description provided for @onbSkip.
+  ///
+  /// In id, this message translates to:
+  /// **'Lewati'**
+  String get onbSkip;
+
+  /// No description provided for @onbNext.
+  ///
+  /// In id, this message translates to:
+  /// **'Lanjut'**
+  String get onbNext;
+
+  /// No description provided for @onbGetStarted.
+  ///
+  /// In id, this message translates to:
+  /// **'Mulai Sekarang'**
+  String get onbGetStarted;
+
+  /// No description provided for @onbPrivacyHeadline.
+  ///
+  /// In id, this message translates to:
+  /// **'Privasi & Offline Terjamin'**
+  String get onbPrivacyHeadline;
+
+  /// No description provided for @onbPrivacyDetail.
+  ///
+  /// In id, this message translates to:
+  /// **'Semua data tersimpan aman di perangkat Anda tanpa pelacak.'**
+  String get onbPrivacyDetail;
+
+  /// No description provided for @onbSlide1Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Aturan dalam saku'**
+  String get onbSlide1Title;
+
+  /// No description provided for @onbSlide1Sub.
+  ///
+  /// In id, this message translates to:
+  /// **'Lalu lintas, ketenagakerjaan, konsumen'**
+  String get onbSlide1Sub;
+
+  /// No description provided for @onbSlide1Badge.
+  ///
+  /// In id, this message translates to:
+  /// **'100% Offline & Privat'**
+  String get onbSlide1Badge;
+
+  /// No description provided for @onbSlide2Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Kalkulator denda'**
+  String get onbSlide2Title;
+
+  /// No description provided for @onbSlide2Sub.
+  ///
+  /// In id, this message translates to:
+  /// **'Tilang, lembur, pesangon & THR'**
+  String get onbSlide2Sub;
+
+  /// No description provided for @onbSlide2Badge.
+  ///
+  /// In id, this message translates to:
+  /// **'Berbasis dasar hukum'**
+  String get onbSlide2Badge;
+
+  /// No description provided for @onbSlide3Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Checklist SOP'**
+  String get onbSlide3Title;
+
+  /// No description provided for @onbSlide3Sub.
+  ///
+  /// In id, this message translates to:
+  /// **'Langkah demi langkah saat darurat'**
+  String get onbSlide3Sub;
+
+  /// No description provided for @onbSlide3Badge.
+  ///
+  /// In id, this message translates to:
+  /// **'Tanpa Iklan & Tanpa Akun'**
+  String get onbSlide3Badge;
+
+  /// No description provided for @onbSlide4Title.
+  ///
+  /// In id, this message translates to:
+  /// **'Selalu bisa dibuka'**
+  String get onbSlide4Title;
+
+  /// No description provided for @onbSlide4Sub.
+  ///
+  /// In id, this message translates to:
+  /// **'Tanpa internet, data tetap di perangkat'**
+  String get onbSlide4Sub;
+
+  /// No description provided for @onbSlide4Badge.
+  ///
+  /// In id, this message translates to:
+  /// **'Data Tersimpan di Perangkat'**
+  String get onbSlide4Badge;
+
+  /// No description provided for @copyOvertimeSummary.
+  ///
+  /// In id, this message translates to:
+  /// **'Simulasi Lembur RuleBook\nGaji: {salary}\nJam: {hours}\nEstimasi upah: {pay}\nDasar: PP 35/2021'**
+  String copyOvertimeSummary(String salary, String hours, String pay);
+
+  /// No description provided for @copySeveranceSummary.
+  ///
+  /// In id, this message translates to:
+  /// **'Simulasi Kompensasi PHK RuleBook\nUpah: {wage}\nMasa kerja: {years} th {months} bln\nAlasan: {reason}\nPesangon: {pesangon}\nUPMK: {upmk}\nUPH: {uph}\nTotal: {total}\nDasar: {basis}'**
+  String copySeveranceSummary(
+    String wage,
+    String years,
+    String months,
+    String reason,
+    String pesangon,
+    String upmk,
+    String uph,
+    String total,
+    String basis,
+  );
+
+  /// No description provided for @copyThrSummary.
+  ///
+  /// In id, this message translates to:
+  /// **'Simulasi THR RuleBook\nUpah: {wage}\nMasa kerja: {months} bulan\nHak THR: {pay}\nWajib dibayar paling lambat H-7 hari raya'**
+  String copyThrSummary(String wage, String months, String pay);
+
+  /// No description provided for @shareTrailingNote.
+  ///
+  /// In id, this message translates to:
+  /// **'Telusuri ratusan aturan & SOP di RuleBook: https://rulebook.faishal.id'**
+  String get shareTrailingNote;
+
+  /// No description provided for @shareCardVerifiedOn.
+  ///
+  /// In id, this message translates to:
+  /// **'Diverifikasi: {date}'**
+  String shareCardVerifiedOn(String date);
 }
 
 class _AppLocalizationsDelegate

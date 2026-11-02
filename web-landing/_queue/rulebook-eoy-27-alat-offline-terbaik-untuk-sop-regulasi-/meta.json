@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "alat-offline-terbaik-untuk-sop-regulasi-offline-harian",
-    "en": "best-offline-tools-for-sop-regulasi-offline",
-    "ar": "sop-regulasi-offline-3",
-    "jv": "pandhuan-sop-regulasi-offline-rulebook-3",
-    "su": "pituduh-sop-regulasi-offline-rulebook-3",
-    "zh": "rulebook-sop-regulasi-offline-实用指南-3",
-    "ja": "rulebooksop-regulasi-offline-ガイド-3"
+    "id": "mode-offline-alat-mana-yang-benar-benar-dipakai",
+    "en": "sop-regulasi-offline-which-tool-you-will-actually-use",
+    "ar": "almalwmat-almhma-ay-adaa-ststkhdmha-fala",
+    "jv": "mode-offline-piranti-endi-sing-tenan-dipigunakake",
+    "su": "mode-offline-alat-mana-anu-beneran-dipake",
+    "zh": "zhong-yao-xin-xi-na-ge-gong-ju-zhen-de-hui-yong",
+    "ja": "taisetsu-na-jouhou-jissaini-tsukau-dougu-hadoreka"
   },
   "titles": {
-    "id": "Alat Offline Terbaik untuk sop regulasi offline",
-    "en": "Best Offline Tools for sop regulasi offline",
-    "ar": "sop regulasi offline — دليل RuleBook",
-    "jv": "Pandhuan: Alat Offline Terbaik untuk sop regulasi offline",
-    "su": "Pituduh: Alat Offline Terbaik untuk sop regulasi offline",
-    "zh": "RuleBook · sop regulasi offline 实用指南",
-    "ja": "RuleBook｜sop regulasi offline ガイド"
+    "id": "mode offline: alat mana yang benar-benar dipakai",
+    "en": "sop regulasi offline: which tool you will actually use",
+    "ar": "المعلومات المهمة: أي أداة ستستخدمها فعلاً",
+    "jv": "mode offline: piranti endi sing tenan dipigunakaké",
+    "su": "mode offline: alat mana anu beneran dipaké",
+    "zh": "重要信息：哪个工具真的会用",
+    "ja": "大切な情報：実際に使う道具はどれか"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Memilih alat mode offline yang benar-benar akan dipakai: kenapa alat sering ditinggalkan, penyimpanan di perangkat, dan tinjauan mingguan.",
+    "en": "Choosing an offline mode tool you will actually use: why tools get abandoned, what stays on your device, and a simple weekly review.",
+    "ar": "اختيار أداة mode offline التي ستستخدمها فعلاً: لماذا تُهجر الأدوات، وما الذي يبقى على جهازك، ومراجعة أسبوعية بسيطة.",
+    "ja": "実際に使い続けるオフラインツールの選び方。手放される理由、端末に残るデータ、シンプルな週次見直し。",
+    "zh": "选择你真正会用的离线模式工具：工具为何被弃用，设备上保存什么，以及简单的每周复盘。",
+    "jv": "Milih piranti mode offline sing bener-bener bakal dienggo: kenapa piranti kerep ditinggal, data kasimpen ing piranti, lan tinjauan mingguan.",
+    "su": "Milih alat mode offline nu bener-bener bakal dipaké: naha alat sering ditinggalkeun, data disimpen dina alat, jeung tinjauan mingguan."
+  }
 }

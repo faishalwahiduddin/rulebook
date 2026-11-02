@@ -74,7 +74,8 @@ class _RuleBookAppState extends ConsumerState<RuleBookApp>
     final themeMode = ref.watch(themeModeProvider);
 
     return MaterialApp.router(
-      title: 'RuleBook — Pocket Rules & Regulations',
+      onGenerateTitle: (context) =>
+          AppLocalizations.of(context)!.appTitle,
       debugShowCheckedModeBanner: false,
       scrollBehavior: const AppScrollBehavior(),
       theme: AppTheme.lightTheme,

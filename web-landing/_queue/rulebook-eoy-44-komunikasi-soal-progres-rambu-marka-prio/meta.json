@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "komunikasi-soal-progres-rambu-marka-prioritas-praktis",
-    "en": "talking-about-rambu-marka-prioritas-progress-practical",
-    "ar": "rambu-marka-prioritas-5",
-    "jv": "pandhuan-rambu-marka-prioritas-rulebook-5",
-    "su": "pituduh-rambu-marka-prioritas-rulebook-5",
-    "zh": "rulebook-rambu-marka-prioritas-实用指南-5",
-    "ja": "rulebookrambu-marka-prioritas-ガイド-5"
+    "id": "rambu-marka-prioritas-untuk-satu-rumah",
+    "en": "rambu-marka-prioritas-for-the-whole-household",
+    "ar": "hala-amlya-almalwmat-almhma-larbaa-ashr-ywma",
+    "jv": "rambu-marka-prioritas-kanggo-sakulawarga",
+    "su": "rambu-marka-prioritas-pikeun-sakulawarga",
+    "zh": "an-li-14-tian-de-zhong-yao-xin-xi",
+    "ja": "jirei-14-nichikan-no-taisetsu-na-jouhou"
   },
   "titles": {
-    "id": "Komunikasi soal Progres rambu marka prioritas",
-    "en": "Talking About rambu marka prioritas Progress (Practical)",
-    "ar": "rambu marka prioritas — دليل RuleBook",
-    "jv": "Pandhuan: Komunikasi soal Progres rambu marka prioritas",
-    "su": "Pituduh: Komunikasi soal Progres rambu marka prioritas",
-    "zh": "RuleBook · rambu marka prioritas 实用指南",
-    "ja": "RuleBook｜rambu marka prioritas ガイド"
+    "id": "rambu marka prioritas untuk satu rumah",
+    "en": "rambu marka prioritas for the whole household",
+    "ar": "حالة عملية: المعلومات المهمة لأربعة عشر يوماً",
+    "jv": "rambu marka prioritas kanggo sakulawarga",
+    "su": "rambu marka prioritas pikeun sakulawarga",
+    "zh": "案例：14 天的重要信息",
+    "ja": "事例：14日間の大切な情報"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Rambu marka prioritas untuk satu rumah: tinjauan mingguan bersama, data tersimpan di perangkat, dan cara melanjutkan setelah bolong beberapa hari.",
+    "en": "Rambu marka prioritas for the whole household: a shared weekly review, on-device data storage, and how to resume after a few missed days.",
+    "ar": "rambu marka prioritas لعائلة واحدة: مراجعة أسبوعية مشتركة، وحفظ البيانات على الجهاز، وكيف تستأنف بعد أيام فائتة.",
+    "ja": "家族みんなで使うrambu marka prioritas。共有の週次見直し、端末内のデータ保存、数日空いた後の再開方法。",
+    "zh": "全家人共用的rambu marka prioritas：共同的每周复盘、设备端数据存储，以及漏掉几天后如何恢复。",
+    "jv": "Rambu marka prioritas kanggo sakulawarga: tinjauan mingguan bareng, data kasimpen ing piranti, lan cara nerusaké sawisé bolong sawetara dina.",
+    "su": "Rambu marka prioritas pikeun sakulawarga: tinjauan mingguan bareng, data disimpen dina alat, jeung cara neruskeun sanggeus bolong sababaraha poé."
+  }
 }

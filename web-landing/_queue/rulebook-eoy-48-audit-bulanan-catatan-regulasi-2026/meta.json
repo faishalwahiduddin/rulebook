@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "audit-bulanan-catatan-regulasi-2026",
-    "en": "monthly-audit-of-regulasi-logs",
-    "ar": "regulasi-6",
-    "jv": "pandhuan-regulasi-rulebook-6",
-    "su": "pituduh-regulasi-rulebook-6",
-    "zh": "rulebook-regulasi-实用指南-6",
-    "ja": "rulebookregulasi-ガイド-6"
+    "id": "regulasi-yang-datanya-bisa-dipercaya",
+    "en": "regulasi-whose-records-you-can-trust",
+    "ar": "almalwmat-almhma-bsjlat-mwthwqa-aljz-3",
+    "jv": "regulasi-sing-dhatae-bisa-dipercaya",
+    "su": "regulasi-anu-datana-bisa-dipercaya",
+    "zh": "ji-lu-ke-xin-de-zhong-yao-xin-xi-di-3-pian",
+    "ja": "kiroku-wo-shinrai-dekiru-taisetsu-na-jouhou-dai-3-kai"
   },
   "titles": {
-    "id": "Audit Bulanan Catatan regulasi",
-    "en": "Monthly Audit of regulasi Logs",
-    "ar": "regulasi — دليل RuleBook",
-    "jv": "Pandhuan: Audit Bulanan Catatan regulasi",
-    "su": "Pituduh: Audit Bulanan Catatan regulasi",
-    "zh": "RuleBook · regulasi 实用指南",
-    "ja": "RuleBook｜regulasi ガイド"
+    "id": "regulasi yang datanya bisa dipercaya",
+    "en": "regulasi whose records you can trust",
+    "ar": "المعلومات المهمة بسجلات موثوقة · الجزء 3",
+    "jv": "regulasi sing dhataé bisa dipercaya",
+    "su": "regulasi anu datana bisa dipercaya",
+    "zh": "记录可信的重要信息 · 第3篇",
+    "ja": "記録を信頼できる大切な情報 · 第3回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Regulasi yang datanya bisa dipercaya: kenapa catatan sering putus, versi paling kecil untuk menjaga isi, dan cara kembali setelah jeda.",
+    "en": "Regulasi whose records you can trust: why entries break down, the smallest version that keeps the content solid, and how to return after a gap.",
+    "ar": "regulasi الذي تثق ببياناته: لماذا تتفكك السجلات، وأصغر نسخة تحفظ المحتوى متيناً، وكيف تعود بعد فجوة.",
+    "ja": "信頼できるregulasiの記録。内容が途切れる理由、中身を保つ最小版、空白の後に戻る方法を紹介します。",
+    "zh": "值得信赖的regulasi记录：内容为何会断，保持内容扎实的最小版本，以及空档后如何恢复。",
+    "jv": "Regulasi sing datané bisa dipercaya: kenapa cathetan kerep ambyar, versi paling cilik kanggo njaga isi, lan cara bali sawisé jeda.",
+    "su": "Regulasi nu datana bisa dipercaya: naha catetan sering ambruk, versi pangleutikna pikeun ngajaga eusi, jeung cara balik sanggeus jeda."
+  }
 }

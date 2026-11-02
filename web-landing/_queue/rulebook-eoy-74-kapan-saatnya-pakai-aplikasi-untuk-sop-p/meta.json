@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "kapan-saatnya-pakai-aplikasi-untuk-sop-praktis",
-    "en": "when-to-use-an-app-for-sop-practical",
-    "ar": "sop-9",
-    "jv": "pandhuan-sop-rulebook-9",
-    "su": "pituduh-sop-rulebook-9",
-    "zh": "rulebook-sop-实用指南-9",
-    "ja": "rulebooksop-ガイド-9"
+    "id": "sop-yang-perlu-dicek-sebelum-memilih",
+    "en": "sop-what-to-check-before-you-choose",
+    "ar": "almalwmat-almhma-alttbyq-mqabl-nskha-alwyb",
+    "jv": "sop-sing-kudu-dipriksa-sadurunge-milih",
+    "su": "sop-anu-kudu-dipariksa-samemeh-milih",
+    "zh": "zhong-yao-xin-xi-ying-yong-ban-yu-wang-ye-ban",
+    "ja": "taisetsu-na-jouhou-apuri-han-to-uebu-han"
   },
   "titles": {
-    "id": "Kapan Saatnya Pakai Aplikasi untuk SOP",
-    "en": "When to Use an App for SOP (Practical)",
-    "ar": "SOP — دليل RuleBook",
-    "jv": "Pandhuan: Kapan Saatnya Pakai Aplikasi untuk SOP",
-    "su": "Pituduh: Kapan Saatnya Pakai Aplikasi untuk SOP",
-    "zh": "RuleBook · SOP 实用指南",
-    "ja": "RuleBook｜SOP ガイド"
+    "id": "SOP: yang perlu dicek sebelum memilih",
+    "en": "SOP: what to check before you choose",
+    "ar": "المعلومات المهمة: التطبيق مقابل نسخة الويب",
+    "jv": "SOP: sing kudu dipriksa sadurungé milih",
+    "su": "SOP: anu kudu dipariksa saméméh milih",
+    "zh": "重要信息：应用版与网页版",
+    "ja": "大切な情報：アプリ版とウェブ版"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "SOP: hal yang perlu dicek sebelum memilih, kenapa pilihan sering putus, data tersimpan di perangkat, dan tinjauan mingguan setelah memilih.",
+    "en": "SOP: what to check before you choose, why choices stall, where data is stored on your device, and a weekly review after you decide.",
+    "ar": "SOP: ما يجب فحصه قبل الاختيار، ولماذا تتعثر الخيارات، وأين تُحفظ البيانات على جهازك، ومراجعة أسبوعية بعد القرار.",
+    "ja": "SOP：選ぶ前に確認すること。選択が止まる理由、端末に保存されるデータ、決めた後の週次見直し。",
+    "zh": "SOP：选择前该确认什么，为何选择容易停滞，数据在设备上的存放位置，以及决定后的每周复盘。",
+    "jv": "SOP: apa sing kudu dipriksa sadurungé milih, kenapa pilihan kerep ambyar, data kasimpen ing piranti, lan tinjauan mingguan sawisé milih.",
+    "su": "SOP: naon nu kudu dipariksa saméméh milih, naha pilihan sering macét, data disimpen dina alat, jeung tinjauan mingguan sanggeus milih."
+  }
 }

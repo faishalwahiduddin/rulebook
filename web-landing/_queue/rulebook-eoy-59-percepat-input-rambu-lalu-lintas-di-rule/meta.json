@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "percepat-input-rambu-lalu-lintas-di-rulebook-offline",
-    "en": "speed-up-rambu-lalu-lintas-input-in-rulebook",
-    "ar": "rambu-lalu-lintas-7",
-    "jv": "pandhuan-rambu-lalu-lintas-rulebook-7",
-    "su": "pituduh-rambu-lalu-lintas-rulebook-7",
-    "zh": "rulebook-rambu-lalu-lintas-实用指南-7",
-    "ja": "rulebookrambu-lalu-lintas-ガイド-7"
+    "id": "rambu-lalu-lintas-yang-tidak-bikin-malas-membuka-app",
+    "en": "rambu-lalu-lintas-that-does-not-feel-like-a-chore-to-open",
+    "ar": "almalwmat-almhma-la-ythql-fthh-aljz-2",
+    "jv": "rambu-lalu-lintas-sing-ora-males-dibukak",
+    "su": "rambu-lalu-lintas-anu-teu-hoream-dibuka",
+    "zh": "da-kai-bu-fei-jin-de-zhong-yao-xin-xi-di-2-pian",
+    "ja": "hiraku-noga-okkuu-ninaranai-taisetsu-na-jouhou-dai-2-kai"
   },
   "titles": {
-    "id": "Percepat Input rambu lalu lintas di RuleBook",
-    "en": "Speed Up rambu lalu lintas Input in RuleBook",
-    "ar": "rambu lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: Percepat Input rambu lalu lintas di RuleBook",
-    "su": "Pituduh: Percepat Input rambu lalu lintas di RuleBook",
-    "zh": "RuleBook · rambu lalu lintas 实用指南",
-    "ja": "RuleBook｜rambu lalu lintas ガイド"
+    "id": "rambu lalu lintas yang tidak bikin malas membuka app",
+    "en": "rambu lalu lintas that does not feel like a chore to open",
+    "ar": "المعلومات المهمة لا يثقل فتحه · الجزء 2",
+    "jv": "rambu lalu lintas sing ora males dibukak",
+    "su": "rambu lalu lintas anu teu hoream dibuka",
+    "zh": "打开不费劲的重要信息 · 第2篇",
+    "ja": "開くのが億劫にならない大切な情報 · 第2回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Rambu lalu lintas yang tidak bikin malas membuka aplikasi: kenapa kebiasaan putus, versi paling kecil, dan cara kembali setelah jeda.",
+    "en": "Rambu lalu lintas that does not feel like a chore to open: why habits break, the smallest version, and how to get back in after a pause.",
+    "ar": "rambu lalu lintas بطريقة لا تجعل فتح التطبيق عبئاً: لماذا تنقطع العادات، وأصغر نسخة، وكيف تعود بعد توقف قصير.",
+    "ja": "rambu lalu lintasを開くのが億劫にならない工夫。習慣が途切れる理由、最小版、休んだ後の戻り方。",
+    "zh": "rambu lalu lintas让人不觉得打开很麻烦：习惯为何中断，最小版本，以及停顿后如何重新进入。",
+    "jv": "Rambu lalu lintas sing ora males dibukak: kenapa kebiasan ambyar, versi paling cilik, lan cara mlebu maneh sawisé jeda.",
+    "su": "Rambu lalu lintas nu teu hoream dibuka: naha kabiasaan eureun, versi pangleutikna, jeung cara asup deui sanggeus jeda."
+  }
 }

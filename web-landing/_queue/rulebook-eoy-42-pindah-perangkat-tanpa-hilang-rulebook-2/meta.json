@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "pindah-perangkat-tanpa-hilang-rulebook-2026",
-    "en": "move-devices-without-losing-rulebook",
-    "ar": "rulebook-5",
-    "jv": "pandhuan-rulebook-rulebook-5",
-    "su": "pituduh-rulebook-rulebook-5",
-    "zh": "rulebook-rulebook-实用指南-5",
-    "ja": "rulebookrulebook-ガイド-5"
+    "id": "ekspor-data-aturan-lalu-lintas-apa-yang-ikut-tersimpan",
+    "en": "exporting-aturan-lalu-lintas-what-comes-with-the-file",
+    "ar": "tsdyr-qwaad-almrwr-ma-aldhy-yhfz-fala",
+    "jv": "ekspor-data-aturan-lalu-lintas-apa-sing-melu-kasimpen",
+    "su": "ekspor-data-aturan-lalu-lintas-naon-anu-milu-kasimpen",
+    "zh": "dao-chu-jiao-tong-gui-ze-wen-jian-li-dou-you-shen-me",
+    "ja": "koutsuu-ruuru-no-kakidashi-nani-ga-hozon-sareruka"
   },
   "titles": {
-    "id": "Pindah Perangkat tanpa Hilang RuleBook",
-    "en": "Move Devices Without Losing RuleBook",
-    "ar": "RuleBook — دليل RuleBook",
-    "jv": "Pandhuan: Pindah Perangkat tanpa Hilang RuleBook",
-    "su": "Pituduh: Pindah Perangkat tanpa Hilang RuleBook",
-    "zh": "RuleBook · RuleBook 实用指南",
-    "ja": "RuleBook｜RuleBook ガイド"
+    "id": "Ekspor data aturan lalu lintas: apa yang ikut tersimpan",
+    "en": "Exporting aturan lalu lintas: what comes with the file",
+    "ar": "تصدير قواعد المرور: ما الذي يُحفظ فعلاً",
+    "jv": "Ekspor data aturan lalu lintas: apa sing melu kasimpen",
+    "su": "Ékspor data aturan lalu lintas: naon anu milu kasimpen",
+    "zh": "导出交通规则：文件里都有什么",
+    "ja": "交通ルールの書き出し：何が保存されるか"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Ekspor data aturan lalu lintas dan apa yang ikut tersimpan di dalam file, plus tinjauan mingguan dan cara membaca data setelah jeda.",
+    "en": "Exporting aturan lalu lintas data and what gets saved inside the file, plus the weekly review and how to read your data after a break.",
+    "ar": "تصدير بيانات aturan lalu lintas وما يُحفظ داخل الملف، إضافة إلى المراجعة الأسبوعية وطريقة قراءة البيانات بعد توقف.",
+    "ja": "データ書き出しの中身：aturan lalu lintasのファイルに何が保存されるか。週次見直しと中断後の扱い。",
+    "zh": "导出aturan lalu lintas数据，说明文件内保存了哪些内容，同时介绍每周复盘与中断后如何读取数据。",
+    "jv": "Ekspor data aturan lalu lintas lan apa sing kasimpen ing jero file, uga tinjauan mingguan lan cara maca data sawisé ana jeda.",
+    "su": "Ékspor data aturan lalu lintas jeung naon nu kasimpen jero file, kalawan tinjauan mingguan jeung cara maca data sanggeus aya jeda."
+  }
 }

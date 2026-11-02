@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "apa-itu-rambu-lalu-lintas-glosarium-singkat-offline",
-    "en": "what-is-rambu-lalu-lintas-a-short-glossary",
-    "ar": "rambu-lalu-lintas",
-    "jv": "pandhuan-rambu-lalu-lintas-rulebook",
-    "su": "pituduh-rambu-lalu-lintas-rulebook",
-    "zh": "rulebook-rambu-lalu-lintas-实用指南",
-    "ja": "rulebookrambu-lalu-lintas-ガイド"
+    "id": "apa-itu-rambu-lalu-lintas-penjelasan-singkat",
+    "en": "what-is-rambu-lalu-lintas-a-short-explanation",
+    "ar": "ma-mana-almalwmat-almhma-shrh-mwjz",
+    "jv": "apa-iku-rambu-lalu-lintas-katrangan-cekak",
+    "su": "naon-eta-rambu-lalu-lintas-katerangan-pondok",
+    "zh": "zhong-yao-xin-xi-shi-shen-me-jian-ming-jie-shi",
+    "ja": "taisetsu-na-jouhou-toha-mijikai-setsumei"
   },
   "titles": {
-    "id": "Apa Itu rambu lalu lintas? Glosarium Singkat",
-    "en": "What Is rambu lalu lintas? A Short Glossary",
-    "ar": "rambu lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: Apa Itu rambu lalu lintas? Glosarium Singkat",
-    "su": "Pituduh: Apa Itu rambu lalu lintas? Glosarium Singkat",
-    "zh": "RuleBook · rambu lalu lintas 实用指南",
-    "ja": "RuleBook｜rambu lalu lintas ガイド"
+    "id": "Apa itu rambu lalu lintas? Penjelasan singkat",
+    "en": "What is rambu lalu lintas? A short explanation",
+    "ar": "ما معنى المعلومات المهمة؟ شرح موجز",
+    "jv": "Apa iku rambu lalu lintas? Katrangan cekak",
+    "su": "Naon éta rambu lalu lintas? Katerangan pondok",
+    "zh": "重要信息是什么？简明解释",
+    "ja": "大切な情報とは？短い説明"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Arti rambu lalu lintas dijelaskan singkat: maknanya dalam praktik, versi paling kecil untuk mencobanya, dan catatan yang tersimpan di perangkat Anda.",
+    "en": "What rambu lalu lintas means in practice, explained briefly, with the smallest version to try and how your notes stay on your own device.",
+    "ar": "ما المقصود بـ rambu lalu lintas عملياً؟ شرح موجز يتضمن أصغر نسخة للتجربة، وكيف تبقى ملاحظاتك محفوظة على جهازك وحده.",
+    "ja": "rambu lalu lintasとは何か。実践での意味を短く説明し、試せる最小版と端末内の保存についても触れます。",
+    "zh": "rambu lalu lintas是什么：简要说明其实际含义，附上可尝试的最小版本，以及笔记如何保存在设备上。",
+    "jv": "Apa iku rambu lalu lintas? Katrangan cekak babagan teges ing praktik, versi paling cilik kanggo dicoba, lan cathetan sing kasimpen ing piranti.",
+    "su": "Naon éta rambu lalu lintas? Katerangan pondok ngeunaan hartina dina prak-prakan, versi pangleutikna pikeun dicoba, jeung catetan nu disimpen dina alat."
+  }
 }

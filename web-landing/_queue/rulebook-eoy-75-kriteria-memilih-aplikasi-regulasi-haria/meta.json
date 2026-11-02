@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "kriteria-memilih-aplikasi-regulasi-harian",
-    "en": "criteria-for-choosing-a-regulasi-app",
-    "ar": "regulasi-9",
-    "jv": "pandhuan-regulasi-rulebook-9",
-    "su": "pituduh-regulasi-rulebook-9",
-    "zh": "rulebook-regulasi-实用指南-9",
-    "ja": "rulebookregulasi-ガイド-9"
+    "id": "regulasi-yang-perlu-dicek-sebelum-memilih",
+    "en": "regulasi-what-to-check-before-you-choose",
+    "ar": "almalwmat-almhma-ma-tthqq-mnh-qbl-alakhtyar-aljz-3",
+    "jv": "regulasi-sing-kudu-dipriksa-sadurunge-milih",
+    "su": "regulasi-anu-kudu-dipariksa-samemeh-milih",
+    "zh": "zhong-yao-xin-xi-xuan-ze-qian-gai-que-ren-shen-me-di-3-pian",
+    "ja": "taisetsu-na-jouhou-erabu-mae-ni-kakuninsu-rukoto-dai-3-kai"
   },
   "titles": {
-    "id": "Kriteria Memilih Aplikasi regulasi",
-    "en": "Criteria for Choosing a regulasi App",
-    "ar": "regulasi — دليل RuleBook",
-    "jv": "Pandhuan: Kriteria Memilih Aplikasi regulasi",
-    "su": "Pituduh: Kriteria Memilih Aplikasi regulasi",
-    "zh": "RuleBook · regulasi 实用指南",
-    "ja": "RuleBook｜regulasi ガイド"
+    "id": "regulasi: yang perlu dicek sebelum memilih",
+    "en": "regulasi: what to check before you choose",
+    "ar": "المعلومات المهمة: ما تتحقق منه قبل الاختيار · الجزء 3",
+    "jv": "regulasi: sing kudu dipriksa sadurungé milih",
+    "su": "regulasi: anu kudu dipariksa saméméh milih",
+    "zh": "重要信息：选择前该确认什么 · 第3篇",
+    "ja": "大切な情報：選ぶ前に確認すること · 第3回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Regulasi: hal yang perlu dicek sebelum memilih, kenapa pilihan sering putus, data tersimpan di perangkat, dan tinjauan mingguan setelah memilih.",
+    "en": "Regulasi: what to check before you choose, why choices stall, where data is stored on your device, and a weekly review after you decide.",
+    "ar": "regulasi: ما يجب فحصه قبل الاختيار، ولماذا تتعثر الخيارات، وأين تُحفظ البيانات على جهازك، ومراجعة أسبوعية بعد القرار.",
+    "ja": "regulasi：選ぶ前に確認すること。選択が止まる理由、端末に保存されるデータ、決めた後の週次見直し。",
+    "zh": "regulasi：选择前该确认什么，为何选择容易停滞，数据在设备上的存放位置，以及决定后的每周复盘。",
+    "jv": "Regulasi: apa sing kudu dipriksa sadurungé milih, kenapa pilihan kerep ambyar, data kasimpen ing piranti, lan tinjauan mingguan sawisé milih.",
+    "su": "Regulasi: naon nu kudu dipariksa saméméh milih, naha pilihan sering macét, data disimpen dina alat, jeung tinjauan mingguan sanggeus milih."
+  }
 }

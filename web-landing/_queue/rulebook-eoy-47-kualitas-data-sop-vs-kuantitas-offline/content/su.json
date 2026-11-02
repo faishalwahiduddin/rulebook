@@ -1,0 +1,85 @@
+{
+  "title": "SOP anu datana bisa dipercaya",
+  "description": "SOP nu datana bisa dipercaya: naha catetan sering ambruk, versi pangleutikna pikeun ngajaga kualitas, jeung cara balik sanggeus jeda.",
+  "badge": "kaamanan · offline",
+  "answer": "Nalika diperlukeun, SOP sumebar di tilu tempat—anu dibuka heula gé geus lami. RuleBook nyimpen SOP dina alat, jadi tetep kabuka tanpa kuota jeung tanpa akun.",
+  "toc": [
+    "Naha gampang pegat",
+    "Versi pangleutikna",
+    "Sanggeus bolong"
+  ],
+  "sections": [
+    {
+      "h2": "Naha gampang pegat",
+      "p": "Nalika diperlukeun, SOP sumebar di tilu tempat—anu dibuka heula gé geus lami.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Versi pangleutikna",
+      "p": "Simpen hiji kartu: kontak, lokasi, jeung nomer penting anu bisa dibuka tanpa sinyal.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Sanggeus bolong",
+      "p": "Lamun bolong sababaraha poé, ulah mupus riwayat. Buka catetan panungtungan, eusian hiji poé, tuluy tutup.",
+      "h3": null,
+      "p3": null
+    }
+  ],
+  "table": {
+    "caption": "Rangka SOP",
+    "headers": [
+      "Léngkah",
+      "Eusi minimal",
+      "Bérés lamun"
+    ],
+    "rows": [
+      [
+        "Kartu darurat",
+        "kontak + lokasi",
+        "bisa dibuka offline"
+      ],
+      [
+        "Pananda",
+        "posisi panungtungan",
+        "bisa diteruskeun isukan"
+      ],
+      [
+        "Evaluasi minggu",
+        "hiji panyesuaian",
+        "diterapkeun Senén"
+      ]
+    ]
+  },
+  "list": [
+    "Tangtukeun hiji waktu tetep, lain “mun sempet”.",
+    "Buka RuleBook basa waktu éta datang, ulah engké peuting.",
+    "Catet hiji halangan, lain alesan panjang.",
+    "Cadangkeun data saméméh ganti HP."
+  ],
+  "faqs": [
+    [
+      "Naha SOP bisa dibuka offline?",
+      "Bisa. RuleBook nyimpen kabéh dina alat, jadi teu butuh kuota."
+    ],
+    [
+      "Kudu akun heula?",
+      "Teu. Mimitian tanpa login; cadangkeun data sakapeung."
+    ],
+    [
+      "Mimitian ti mana?",
+      "Ti bagian pangpondokna. Tambahan yén geus dua minggu stabil."
+    ],
+    [
+      "Lamun bolong sababaraha poé?",
+      "Ulah mupus riwayat. Teraskeun tina catetan panungtungan jeung catet hiji halangan."
+    ]
+  ],
+  "cta": [
+    "Mimitian SOP poé ieu",
+    "Buka RuleBook"
+  ],
+  "slug": "pituduh-sop-rulebook-6"
+}

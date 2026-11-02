@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "alur-kerja-rambu-lalu-lintas-dari-a-sampai-z-praktis",
-    "en": "rambu-lalu-lintas-workflow-a-to-z-practical",
-    "ar": "rambu-lalu-lintas-2",
-    "jv": "pandhuan-rambu-lalu-lintas-rulebook-2",
-    "su": "pituduh-rambu-lalu-lintas-rulebook-2",
-    "zh": "rulebook-rambu-lalu-lintas-实用指南-2",
-    "ja": "rulebookrambu-lalu-lintas-ガイド-2"
+    "id": "rambu-lalu-lintas-lima-langkah-pertama",
+    "en": "rambu-lalu-lintas-the-first-five-steps",
+    "ar": "almalwmat-almhma-hyn-la-ybqa-wqt",
+    "jv": "rambu-lalu-lintas-limang-langkah-kapisan",
+    "su": "rambu-lalu-lintas-lima-lengkah-munggaran",
+    "zh": "shi-jian-hen-shao-shi-zen-me-zuo-zhong-yao-xin-xi",
+    "ja": "jikan-gahotondonai-nichi-no-taisetsu-na-jouhou"
   },
   "titles": {
-    "id": "Alur Kerja rambu lalu lintas dari A sampai Z",
-    "en": "rambu lalu lintas Workflow A to Z (Practical)",
-    "ar": "rambu lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: Alur Kerja rambu lalu lintas dari A sampai Z",
-    "su": "Pituduh: Alur Kerja rambu lalu lintas dari A sampai Z",
-    "zh": "RuleBook · rambu lalu lintas 实用指南",
-    "ja": "RuleBook｜rambu lalu lintas ガイド"
+    "id": "rambu lalu lintas: lima langkah pertama",
+    "en": "rambu lalu lintas: the first five steps",
+    "ar": "المعلومات المهمة حين لا يبقى وقت",
+    "jv": "rambu lalu lintas: limang langkah kapisan",
+    "su": "rambu lalu lintas: lima léngkah munggaran",
+    "zh": "时间很少时怎么做重要信息",
+    "ja": "時間がほとんどない日の大切な情報"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Lima langkah pertama rambu lalu lintas untuk hari ketika waktu hampir habis: versi paling kecil, kapan menjalankannya, dan tinjauan mingguan.",
+    "en": "The first five steps for rambu lalu lintas on days when time is nearly gone: the smallest version, when to run it, and a weekly review.",
+    "ar": "الخطوات الخمس الأولى لـ rambu lalu lintas في الأيام التي لا يبقى فيها وقت: أصغر نسخة، ومتى تشغّلها، ومراجعة أسبوعية قصيرة.",
+    "ja": "時間がほぼない日のrambu lalu lintas。最初の5ステップとして、最小版、実行タイミング、週次見直しを紹介。",
+    "zh": "时间几乎不够的日子里，rambu lalu lintas的前五步：最小版本、执行时机和简短的每周复盘。",
+    "jv": "Limang langkah kapisan rambu lalu lintas kanggo dina nalika wektu meh entek: versi paling cilik, kapan dilakokaké, lan tinjauan mingguan.",
+    "su": "Lima léngkah munggaran rambu lalu lintas pikeun poé nalika waktu ampir béak: versi pangleutikna, iraha ngajalankeunana, jeung tinjauan mingguan."
+  }
 }

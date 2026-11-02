@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "cara-review-progres-rambu-lalu-lintas-tiap-minggu-offline",
-    "en": "how-to-review-rambu-lalu-lintas-progress-weekly",
-    "ar": "rambu-lalu-lintas-3",
-    "jv": "pandhuan-rambu-lalu-lintas-rulebook-3",
-    "su": "pituduh-rambu-lalu-lintas-rulebook-3",
-    "zh": "rulebook-rambu-lalu-lintas-实用指南-3",
-    "ja": "rulebookrambu-lalu-lintas-ガイド-3"
+    "id": "cara-meninjau-rambu-lalu-lintas-tiap-minggu",
+    "en": "how-to-review-rambu-lalu-lintas-every-week",
+    "ar": "kyf-traja-almalwmat-almhma-asbwaya",
+    "jv": "kepriye-ninjau-rambu-lalu-lintas-saben-minggu",
+    "su": "kumaha-ninjau-rambu-lalu-lintas-unggal-minggu",
+    "zh": "mei-zhou-ru-he-fu-pan-zhong-yao-xin-xi",
+    "ja": "maishuu-taisetsu-na-jouhou-wo-minaosu-houhou"
   },
   "titles": {
-    "id": "Cara Review Progres rambu lalu lintas Tiap Minggu",
-    "en": "How to Review rambu lalu lintas Progress Weekly",
-    "ar": "rambu lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: Cara Review Progres rambu lalu lintas Tiap Minggu",
-    "su": "Pituduh: Cara Review Progres rambu lalu lintas Tiap Minggu",
-    "zh": "RuleBook · rambu lalu lintas 实用指南",
-    "ja": "RuleBook｜rambu lalu lintas ガイド"
+    "id": "Cara meninjau rambu lalu lintas tiap minggu",
+    "en": "How to review rambu lalu lintas every week",
+    "ar": "كيف تراجع المعلومات المهمة أسبوعياً",
+    "jv": "Kepriyé ninjau rambu lalu lintas saben minggu",
+    "su": "Kumaha ninjau rambu lalu lintas unggal minggu",
+    "zh": "每周如何复盘重要信息",
+    "ja": "毎週大切な情報を見直す方法"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Cara meninjau rambu lalu lintas setiap minggu: langkah tinjauan mingguan, catatan yang tersimpan di perangkat, dan cara kembali setelah bolong.",
+    "en": "How to review rambu lalu lintas every week: the weekly check, what stays stored on your device, and how to get back on track after a gap.",
+    "ar": "كيف تراجع rambu lalu lintas كل أسبوع: خطوات المراجعة الأسبوعية، والملاحظات المحفوظة على جهازك، وطريقة العودة بعد الانقطاع.",
+    "ja": "毎週の見直し方法：rambu lalu lintasの週次チェック手順、端末に保存される記録、空白後の戻り方。",
+    "zh": "如何每周复盘rambu lalu lintas：复盘步骤、设备上保存的记录，以及中断后如何回到正轨。",
+    "jv": "Cara ninjau rambu lalu lintas saben minggu: langkah tinjauan mingguan, cathetan sing kasimpen ing piranti, lan cara bali sawisé bolong.",
+    "su": "Kumaha ninjau rambu lalu lintas unggal minggu: léngkah tinjauan mingguan, catetan nu disimpen dina alat, jeung cara balik sanggeus bolong."
+  }
 }

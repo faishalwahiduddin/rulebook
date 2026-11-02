@@ -1,0 +1,85 @@
+{
+  "title": "mode offline kanggo sing wektuné sempit",
+  "description": "Mode offline kanggo wong sing wektuné sempit: kapan dilakokaké, versi paling cilik sing isih bisa rampung, lan cara bali sawisé bolong.",
+  "badge": "keamanan · offline",
+  "answer": "Nalika butuh, mode offline sumebar ing telung panggonan—sing mbukak dhisik malah wis lawas. RuleBook nyimpen mode offline ing piranti, dadi tetep kebukak tanpa kuota lan tanpa akun.",
+  "toc": [
+    "Kapan nglakoni",
+    "Versi paling cilik",
+    "Sawisé bolong"
+  ],
+  "sections": [
+    {
+      "h2": "Kapan nglakoni",
+      "p": "Anyarana kertu saben sasi, utawa yèn ana nomer lan alamat sing owah.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Versi paling cilik",
+      "p": "Simpenen kertu siji: kontak, panggonan, lan nomer penting sing bisa dibukak tanpa sinyal.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Sawisé bolong",
+      "p": "Yèn bolong sawetara dina, aja mbusak riwayat. Bukak cathetan pungkasan, isinen sedina, banjur tutup.",
+      "h3": null,
+      "p3": null
+    }
+  ],
+  "table": {
+    "caption": "Rangka mode offline",
+    "headers": [
+      "Langkah",
+      "Isi minimal",
+      "Rampung yèn"
+    ],
+    "rows": [
+      [
+        "Kertu darurat",
+        "kontak + panggonan",
+        "bisa dibukak offline"
+      ],
+      [
+        "Pananda",
+        "posisi pungkasan",
+        "bisa diterusaké sesuk"
+      ],
+      [
+        "Evaluasi minggu",
+        "siji panyesuaian",
+        "diterapaké Senén"
+      ]
+    ]
+  },
+  "list": [
+    "Temtokna siji wektu tetep, dudu “yèn sempet”.",
+    "Bukak RuleBook nalika wektu iku teka, aja mengko bengi.",
+    "Catheten siji alangan, dudu alesan dawa.",
+    "Cadhangana data sadurungé ganti HP."
+  ],
+  "faqs": [
+    [
+      "Apa mode offline bisa dibukak offline?",
+      "Bisa. RuleBook nyimpen kabèh ing piranti, dadi ora butuh kuota."
+    ],
+    [
+      "Kudu akun dhisik?",
+      "Ora. Wiwit tanpa login; cadhangana data sak dhéwé."
+    ],
+    [
+      "Wiwit saka ngendi?",
+      "Saka bagéan paling cendhak. Tambah jembar yèn wis rong minggu stabil."
+    ],
+    [
+      "Yèn bolong sawetara dina?",
+      "Aja mbusak riwayat. Terusaké saka cathetan pungkasan lan catheten siji alangan."
+    ]
+  ],
+  "cta": [
+    "Wiwiti mode offline dina iki",
+    "Bukak RuleBook"
+  ],
+  "slug": "pandhuan-sop-regulasi-offline-rulebook"
+}

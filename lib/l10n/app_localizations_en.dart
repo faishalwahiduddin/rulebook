@@ -655,7 +655,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get catLaborShort => 'Work';
 
   @override
-  String get catCyberShort => 'Data & ITE';
+  String get catCyberShort => 'Cyber';
 
   @override
   String get catConsumerShort => 'Consumer';
@@ -1625,4 +1625,99 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tierExpert => 'Regulatory Expert';
+
+  @override
+  String get appTitle => 'RuleBook';
+
+  @override
+  String get appTagline => 'Rules, regulations & SOPs in your pocket';
+
+  @override
+  String get loadingLabel => 'Loading…';
+
+  @override
+  String get onbSkip => 'Skip';
+
+  @override
+  String get onbNext => 'Next';
+
+  @override
+  String get onbGetStarted => 'Get Started';
+
+  @override
+  String get onbPrivacyHeadline => 'Private & fully offline';
+
+  @override
+  String get onbPrivacyDetail =>
+      'Everything stays on your device. No trackers, no accounts.';
+
+  @override
+  String get onbSlide1Title => 'Every rule in your pocket';
+
+  @override
+  String get onbSlide1Sub => 'Traffic, labour and consumer law';
+
+  @override
+  String get onbSlide1Badge => '100% offline & private';
+
+  @override
+  String get onbSlide2Title => 'Penalty calculator';
+
+  @override
+  String get onbSlide2Sub => 'Fines, overtime, severance & holiday pay';
+
+  @override
+  String get onbSlide2Badge => 'Grounded in the statute';
+
+  @override
+  String get onbSlide3Title => 'Step-by-step SOPs';
+
+  @override
+  String get onbSlide3Sub => 'Know what to do the moment it matters';
+
+  @override
+  String get onbSlide3Badge => 'No ads. No sign-up.';
+
+  @override
+  String get onbSlide4Title => 'Always at hand';
+
+  @override
+  String get onbSlide4Sub => 'Works offline; your data stays on device';
+
+  @override
+  String get onbSlide4Badge => 'Stored on your device';
+
+  @override
+  String copyOvertimeSummary(String salary, String hours, String pay) {
+    return 'RuleBook overtime simulation\nSalary: $salary\nHours: $hours\nEstimated pay: $pay\nBasis: PP 35/2021';
+  }
+
+  @override
+  String copySeveranceSummary(
+    String wage,
+    String years,
+    String months,
+    String reason,
+    String pesangon,
+    String upmk,
+    String uph,
+    String total,
+    String basis,
+  ) {
+    return 'RuleBook severance simulation\nWage: $wage\nService: $years yr $months mo\nReason: $reason\nSeverance: $pesangon\nUPMK: $upmk\nUPH: $uph\nTotal: $total\nBasis: $basis';
+  }
+
+  @override
+  String copyThrSummary(String wage, String months, String pay) {
+    return 'RuleBook holiday-pay (THR) simulation\nWage: $wage\nService: $months months\nTHR entitlement: $pay\nDue no later than 7 days before the holiday';
+  }
+
+  @override
+  String get shareTrailingNote =>
+      'Browse hundreds of rules and SOPs in RuleBook: https://rulebook.faishal.id';
+
+  @override
+  String shareCardVerifiedOn(String date) {
+    return 'Verified: $date';
+  }
 }

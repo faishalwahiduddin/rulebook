@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "contoh-minggu-sibuk-tetap-sop-regulasi-offline-2026",
-    "en": "busy-week-example-still-doing-sop-regulasi-offline",
-    "ar": "sop-regulasi-offline-6",
-    "jv": "pandhuan-sop-regulasi-offline-rulebook-6",
-    "su": "pituduh-sop-regulasi-offline-rulebook-6",
-    "zh": "rulebook-sop-regulasi-offline-实用指南-6",
-    "ja": "rulebooksop-regulasi-offline-ガイド-6"
+    "id": "studi-kasus-mode-offline-selama-14-hari",
+    "en": "case-study-sop-regulasi-offline-for-14-days",
+    "ar": "hala-amlya-almalwmat-almhma-larbaa-ashr-ywma-aljz-3",
+    "jv": "studi-kasus-mode-offline-14-dina",
+    "su": "studi-kasus-mode-offline-14-poe",
+    "zh": "an-li-14-tian-de-zhong-yao-xin-xi-di-3-pian",
+    "ja": "jirei-14-nichikan-no-taisetsu-na-jouhou-dai-3-kai"
   },
   "titles": {
-    "id": "Contoh Minggu Sibuk tetap sop regulasi offline",
-    "en": "Busy-Week Example Still Doing sop regulasi offline",
-    "ar": "sop regulasi offline — دليل RuleBook",
-    "jv": "Pandhuan: Contoh Minggu Sibuk tetap sop regulasi offline",
-    "su": "Pituduh: Contoh Minggu Sibuk tetap sop regulasi offline",
-    "zh": "RuleBook · sop regulasi offline 实用指南",
-    "ja": "RuleBook｜sop regulasi offline ガイド"
+    "id": "Studi kasus: mode offline selama 14 hari",
+    "en": "Case study: sop regulasi offline for 14 days",
+    "ar": "حالة عملية: المعلومات المهمة لأربعة عشر يوماً · الجزء 3",
+    "jv": "Studi kasus: mode offline 14 dina",
+    "su": "Studi kasus: mode offline 14 poé",
+    "zh": "案例：14 天的重要信息 · 第3篇",
+    "ja": "事例：14日間の大切な情報 · 第3回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Studi kasus mode offline selama 14 hari: tinjauan mingguan, penyimpanan di perangkat, dan langkah kembali setelah ada jeda di tengah jalan.",
+    "en": "Case study: offline mode over 14 days, covering the weekly check, on-device storage, and the steps to return after a break in the middle.",
+    "ar": "دراسة حالة للوضع بلا اتصال خلال 14 يوماً: المراجعة الأسبوعية، والحفظ على الجهاز، وخطوات العودة بعد توقف في منتصف الطريق.",
+    "ja": "14日間のオフラインモード事例。週次チェック、端末内の保存、途中で間が空いた後に戻る手順。",
+    "zh": "离线模式的14天案例研究：每周检查、设备端存储，以及中途断开后如何回到节奏的步骤。",
+    "jv": "Studi kasus mode offline sajrone 14 dina: tinjauan mingguan, nyimpen ing piranti, lan langkah bali yen ana bolong ing tengah dalan.",
+    "su": "Studi kasus mode offline salila 14 poé: tinjauan mingguan, nyimpen dina alat, jeung léngkah balik lamun aya bolong di tengah jalan."
+  }
 }

@@ -1,0 +1,85 @@
+{
+  "title": "Menjaga rambu lalu lintas saat semangat turun",
+  "description": "Menjaga rambu lalu lintas saat semangat turun: kenapa kebiasaan putus, versi paling kecil untuk dilanjutkan, dan cara kembali setelah jeda.",
+  "badge": "keamanan · offline",
+  "answer": "Saat dibutuhkan, rambu lalu lintas tersebar di tiga tempat—dan yang pertama dibuka justru yang usang. RuleBook menyimpan rambu lalu lintas di perangkat, jadi datanya tetap terbuka tanpa kuota dan tanpa akun.",
+  "toc": [
+    "Kenapa mudah putus",
+    "Versi paling kecil",
+    "Setelah bolong"
+  ],
+  "sections": [
+    {
+      "h2": "Kenapa mudah putus",
+      "p": "Saat dibutuhkan, rambu lalu lintas tersebar di tiga tempat—dan yang pertama dibuka justru yang usang.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Versi paling kecil",
+      "p": "Simpan satu kartu berisi kontak, lokasi, dan nomor penting yang bisa dibuka tanpa sinyal.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Setelah bolong",
+      "p": "Kalau bolong beberapa hari, jangan hapus riwayat. Lanjut dari bagian terakhir yang sudah dibaca—satu sesi pendek, lalu tutup.",
+      "h3": null,
+      "p3": null
+    }
+  ],
+  "table": {
+    "caption": "Kerangka rambu lalu lintas",
+    "headers": [
+      "Langkah",
+      "Isi minimal",
+      "Selesai bila"
+    ],
+    "rows": [
+      [
+        "Kartu darurat",
+        "kontak + lokasi",
+        "bisa dibuka offline"
+      ],
+      [
+        "Penanda",
+        "posisi terakhir",
+        "bisa dilanjut besok"
+      ],
+      [
+        "Evaluasi minggu",
+        "satu penyesuaian",
+        "diterapkan Senin"
+      ]
+    ]
+  },
+  "list": [
+    "Tetapkan satu waktu tetap, bukan “kapan sempat”.",
+    "Buka RuleBook saat waktu itu tiba, bukan nanti malam.",
+    "Catat satu hambatan, bukan alasan panjang.",
+    "Cadangkan data sebelum ganti ponsel."
+  ],
+  "faqs": [
+    [
+      "Apakah rambu lalu lintas bisa dibuka offline?",
+      "Ya. RuleBook menyimpan semuanya di perangkat, jadi tidak butuh kuota."
+    ],
+    [
+      "Perlu akun dulu?",
+      "Tidak. Mulai tanpa login; cadangkan data secara berkala."
+    ],
+    [
+      "Mulai dari mana?",
+      "Dari bagian terpendek. Tambah cakupan hanya setelah dua minggu stabil."
+    ],
+    [
+      "Kalau bolong beberapa hari?",
+      "Jangan hapus riwayat. Lanjut dari bagian terakhir dan catat satu hambatan."
+    ]
+  ],
+  "cta": [
+    "Mulai rambu lalu lintas hari ini",
+    "Buka RuleBook"
+  ],
+  "slug": "target-kecil-yang-menang-untuk-rambu-lalu-lintas-praktis"
+}

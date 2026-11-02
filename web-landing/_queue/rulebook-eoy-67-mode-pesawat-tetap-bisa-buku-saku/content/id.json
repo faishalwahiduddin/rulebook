@@ -1,0 +1,85 @@
+{
+  "title": "buku saku full offline: apa yang tetap jalan",
+  "description": "Buku saku sepenuhnya offline: apa yang tetap berjalan tanpa internet, catatan yang tersimpan di perangkat, dan tinjauan mingguan.",
+  "badge": "keamanan · offline",
+  "answer": "Saat dibutuhkan, buku saku tersebar di tiga tempat—dan yang pertama dibuka justru yang usang. RuleBook menyimpan buku saku di perangkat, jadi datanya tetap terbuka tanpa kuota dan tanpa akun.",
+  "toc": [
+    "Tersimpan di perangkat",
+    "Tinjauan mingguan",
+    "Setelah bolong"
+  ],
+  "sections": [
+    {
+      "h2": "Tersimpan di perangkat",
+      "p": "RuleBook menyimpan buku saku di perangkat, jadi datanya tetap terbuka tanpa kuota dan tanpa akun.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Tinjauan mingguan",
+      "p": "Sekali seminggu, lihat bagian mana yang paling sering bolong, lalu kecilkan target—bukan menambah semangat.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Setelah bolong",
+      "p": "Kalau bolong beberapa hari, jangan hapus riwayat. Lanjut dari bagian terakhir yang sudah dibaca—satu sesi pendek, lalu tutup.",
+      "h3": null,
+      "p3": null
+    }
+  ],
+  "table": {
+    "caption": "Kerangka buku saku",
+    "headers": [
+      "Langkah",
+      "Isi minimal",
+      "Selesai bila"
+    ],
+    "rows": [
+      [
+        "Kartu darurat",
+        "kontak + lokasi",
+        "bisa dibuka offline"
+      ],
+      [
+        "Penanda",
+        "posisi terakhir",
+        "bisa dilanjut besok"
+      ],
+      [
+        "Evaluasi minggu",
+        "satu penyesuaian",
+        "diterapkan Senin"
+      ]
+    ]
+  },
+  "list": [
+    "Tetapkan satu waktu tetap, bukan “kapan sempat”.",
+    "Buka RuleBook saat waktu itu tiba, bukan nanti malam.",
+    "Catat satu hambatan, bukan alasan panjang.",
+    "Cadangkan data sebelum ganti ponsel."
+  ],
+  "faqs": [
+    [
+      "Apakah buku saku bisa dibuka offline?",
+      "Ya. RuleBook menyimpan semuanya di perangkat, jadi tidak butuh kuota."
+    ],
+    [
+      "Perlu akun dulu?",
+      "Tidak. Mulai tanpa login; cadangkan data secara berkala."
+    ],
+    [
+      "Mulai dari mana?",
+      "Dari bagian terpendek. Tambah cakupan hanya setelah dua minggu stabil."
+    ],
+    [
+      "Kalau bolong beberapa hari?",
+      "Jangan hapus riwayat. Lanjut dari bagian terakhir dan catat satu hambatan."
+    ]
+  ],
+  "cta": [
+    "Mulai buku saku hari ini",
+    "Buka RuleBook"
+  ],
+  "slug": "mode-pesawat-tetap-bisa-buku-saku"
+}

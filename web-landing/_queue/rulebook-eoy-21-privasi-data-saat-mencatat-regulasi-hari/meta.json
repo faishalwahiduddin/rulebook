@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "privasi-data-saat-mencatat-regulasi-harian",
-    "en": "data-privacy-when-logging-regulasi",
-    "ar": "regulasi-3",
-    "jv": "pandhuan-regulasi-rulebook-3",
-    "su": "pituduh-regulasi-rulebook-3",
-    "zh": "rulebook-regulasi-实用指南-3",
-    "ja": "rulebookregulasi-ガイド-3"
+    "id": "privasi-regulasi-apa-yang-tersimpan-di-perangkat",
+    "en": "where-your-regulasi-data-actually-lives",
+    "ar": "ayn-thfz-byanat-almalwmat-almhma",
+    "jv": "data-regulasi-kasimpen-ing-ngendi",
+    "su": "data-regulasi-disimpen-di-mana",
+    "zh": "zhong-yao-xin-xi-de-shu-ju-bao-cun-zai-na-li",
+    "ja": "taisetsu-na-jouhou-no-deeta-hadokoni-hozon-sareruka"
   },
   "titles": {
-    "id": "Privasi Data saat Mencatat regulasi",
-    "en": "Data Privacy When Logging regulasi",
-    "ar": "regulasi — دليل RuleBook",
-    "jv": "Pandhuan: Privasi Data saat Mencatat regulasi",
-    "su": "Pituduh: Privasi Data saat Mencatat regulasi",
-    "zh": "RuleBook · regulasi 实用指南",
-    "ja": "RuleBook｜regulasi ガイド"
+    "id": "Privasi regulasi: apa yang tersimpan di perangkat",
+    "en": "Where your regulasi data actually lives",
+    "ar": "أين تُحفظ بيانات المعلومات المهمة",
+    "jv": "Data regulasi kasimpen ing ngendi",
+    "su": "Data regulasi disimpen di mana",
+    "zh": "重要信息的数据保存在哪里",
+    "ja": "大切な情報のデータはどこに保存されるか"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Tempat data regulasi Anda benar-benar disimpan: di perangkat sendiri, cara tinjauan mingguan, dan apa yang terjadi setelah jeda beberapa hari.",
+    "en": "Where your regulasi data actually lives, whether it stays on your own device, how to run the weekly check, and what happens after a few days away.",
+    "ar": "أين تُحفظ بيانات regulasi فعلاً؟ هل تبقى على جهازك وحده، وكيف تجري المراجعة الأسبوعية، وما الذي يحدث بعد غياب بضعة أيام.",
+    "ja": "regulasiのデータはどこに残るのか。端末内に保存されるか、週次チェックの方法、数日離れた後の扱い。",
+    "zh": "regulasi数据究竟存在哪里：是否只留在自己设备上，每周检查怎么做，离开几天后会怎样。",
+    "jv": "Papan data regulasi sampeyan kasimpen: apa tetep ana ing piranti dhewe, cara tinjauan mingguan, lan apa sing kedadeyan sawisé jeda sawetara dina.",
+    "su": "Di mana data regulasi anjeun sabenerna disimpen: tetep dina alat sorangan, kumaha tinjauan mingguan, jeung naon nu lumangsung sanggeus jeda sababaraha poé."
+  }
 }

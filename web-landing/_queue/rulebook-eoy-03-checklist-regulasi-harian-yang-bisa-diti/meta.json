@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "checklist-regulasi-harian-yang-bisa-ditiru-harian",
-    "en": "daily-regulasi-checklist-you-can-copy",
-    "ar": "regulasi",
-    "jv": "pandhuan-regulasi-rulebook",
-    "su": "pituduh-regulasi-rulebook",
-    "zh": "rulebook-regulasi-实用指南",
-    "ja": "rulebookregulasi-ガイド"
+    "id": "checklist-regulasi-untuk-satu-layar",
+    "en": "a-one-screen-regulasi-checklist",
+    "ar": "qaima-almalwmat-almhma-fy-shasha-wahda",
+    "jv": "dhaftar-priksa-regulasi-mung-siji-layar",
+    "su": "daptar-pariksa-regulasi-dina-hiji-layar",
+    "zh": "yi-ye-zhi-de-zhong-yao-xin-xi-qing-dan",
+    "ja": "1-gamen-de-owa-ru-taisetsu-na-jouhou-chekkurisuto"
   },
   "titles": {
-    "id": "Checklist regulasi Harian yang Bisa Ditiru",
-    "en": "Daily regulasi Checklist You Can Copy",
-    "ar": "regulasi — دليل RuleBook",
-    "jv": "Pandhuan: Checklist regulasi Harian yang Bisa Ditiru",
-    "su": "Pituduh: Checklist regulasi Harian yang Bisa Ditiru",
-    "zh": "RuleBook · regulasi 实用指南",
-    "ja": "RuleBook｜regulasi ガイド"
+    "id": "Checklist regulasi untuk satu layar",
+    "en": "A one-screen regulasi checklist",
+    "ar": "قائمة المعلومات المهمة في شاشة واحدة",
+    "jv": "Dhaftar priksa regulasi mung siji layar",
+    "su": "Daptar pariksa regulasi dina hiji layar",
+    "zh": "一页纸的重要信息清单",
+    "ja": "1画面で終わる大切な情報チェックリスト"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Daftar periksa regulasi yang muat dalam satu layar, disusun dari versi paling kecil, waktu menjalankannya, dan tinjauan mingguan yang cepat dicek.",
+    "en": "A one-screen regulasi checklist built from the smallest version, the right moment to run it, and a weekly review you can scan in seconds.",
+    "ar": "قائمة تحقق لـ regulasi تتسع لشاشة واحدة، تبدأ بأصغر نسخة وتحدد وقت التشغيل، وتنتهي بمراجعة أسبوعية يمكن قراءتها بسرعة.",
+    "ja": "regulasiの一画面チェックリスト。最小版、実行のタイミング、一目で確認できる週次の見直しをまとめました。",
+    "zh": "一页纸的regulasi清单：从最小版本、执行时机到每周复盘，扫一眼就能跟上，适合每天忙碌时使用。",
+    "jv": "Dhaftar priksa regulasi sing mung siji layar, disusun saka versi paling cilik, wektu dilakokaké, lan tinjauan mingguan sing gampang dipriksa.",
+    "su": "Daptar pariksa regulasi nu muat dina hiji layar, disusun ti versi pangleutikna, waktu ngajalankeunana, jeung tinjauan mingguan nu gampang dipariksa."
+  }
 }

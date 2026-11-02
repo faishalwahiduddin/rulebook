@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "rambu-lalu-lintas-saat-travel-tanpa-internet-praktis",
-    "en": "rambu-lalu-lintas-while-traveling-offline-practical",
-    "ar": "rambu-lalu-lintas-8",
-    "jv": "pandhuan-rambu-lalu-lintas-rulebook-8",
-    "su": "pituduh-rambu-lalu-lintas-rulebook-8",
-    "zh": "rulebook-rambu-lalu-lintas-实用指南-8",
-    "ja": "rulebookrambu-lalu-lintas-ガイド-8"
+    "id": "rambu-lalu-lintas-full-offline-apa-yang-tetap-jalan",
+    "en": "rambu-lalu-lintas-fully-offline-what-still-works",
+    "ar": "almalwmat-almhma-bla-atsal-tmama-ma-ybqa-yaml-aljz-3",
+    "jv": "rambu-lalu-lintas-full-offline-apa-sing-tetep-mlaku",
+    "su": "rambu-lalu-lintas-full-offline-naon-anu-tetep-jalan",
+    "zh": "zhong-yao-xin-xi-wan-quan-li-xian-na-xie-gong-neng-hai-neng-yong-di-3",
+    "ja": "taisetsu-na-jouhou-kanzen-ofurain-nani-ga-ugoku-ka-dai-3-kai"
   },
   "titles": {
-    "id": "rambu lalu lintas full offline: uji & checklist",
-    "en": "rambu lalu lintas While Traveling Offline (Practical)",
-    "ar": "rambu lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: rambu lalu lintas full offline: uji & checklist",
-    "su": "Pituduh: rambu lalu lintas full offline: uji & checklist",
-    "zh": "RuleBook · rambu lalu lintas 实用指南",
-    "ja": "RuleBook｜rambu lalu lintas ガイド"
+    "id": "rambu lalu lintas full offline: apa yang tetap jalan",
+    "en": "rambu lalu lintas fully offline: what still works",
+    "ar": "المعلومات المهمة بلا اتصال تماماً: ما يبقى يعمل · الجزء 3",
+    "jv": "rambu lalu lintas full offline: apa sing tetep mlaku",
+    "su": "rambu lalu lintas full offline: naon anu tetep jalan",
+    "zh": "重要信息完全离线：哪些功能还能用 · 第3篇",
+    "ja": "大切な情報完全オフライン：何が動くか · 第3回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Rambu lalu lintas sepenuhnya offline: apa yang tetap berjalan tanpa internet, catatan yang tersimpan di perangkat, dan langkah setelah jeda.",
+    "en": "Rambu lalu lintas fully offline: what keeps working without an internet connection, what stays stored on your device, and what to do after a gap.",
+    "ar": "rambu lalu lintas بلا اتصال تماماً: ما الذي يبقى عاملاً دون إنترنت، وما يُحفظ على جهازك، وما الذي تفعله بعد فجوة.",
+    "ja": "rambu lalu lintasを完全オフラインで使う方法。通信なしで動くもの、端末に保存されるメモ、空白後の対応。",
+    "zh": "rambu lalu lintas完全离线：无需联网仍能运行的功能，设备上保存的内容，以及间隔后该怎么做。",
+    "jv": "Rambu lalu lintas full offline: apa sing tetep mlaku tanpa internet, cathetan sing kasimpen ing piranti, lan langkah sawisé jeda.",
+    "su": "Rambu lalu lintas full offline: naon nu tetep jalan tanpa internet, catetan nu disimpen dina alat, jeung léngkah sanggeus jeda."
+  }
 }

@@ -1624,4 +1624,99 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get tierExpert => 'خبير اللوائح';
+
+  @override
+  String get appTitle => 'RuleBook';
+
+  @override
+  String get appTagline => 'القوانين واللوائح وإجراءات العمل في جيبك';
+
+  @override
+  String get loadingLabel => 'جارٍ التحميل…';
+
+  @override
+  String get onbSkip => 'تخطٍّ';
+
+  @override
+  String get onbNext => 'التالي';
+
+  @override
+  String get onbGetStarted => 'ابدأ الآن';
+
+  @override
+  String get onbPrivacyHeadline => 'خصوصية تامة وعمل دون اتصال';
+
+  @override
+  String get onbPrivacyDetail =>
+      'تبقى جميع بياناتك على جهازك، دون متتبعات أو حسابات.';
+
+  @override
+  String get onbSlide1Title => 'كل قاعدة في جيبك';
+
+  @override
+  String get onbSlide1Sub => 'المرور والعمل وحقوق المستهلك';
+
+  @override
+  String get onbSlide1Badge => 'أوفلاين وخاصة 100%';
+
+  @override
+  String get onbSlide2Title => 'حاسبة الغرامات';
+
+  @override
+  String get onbSlide2Sub => 'المخالفات والساعات الإضافية ونهاية الخدمة';
+
+  @override
+  String get onbSlide2Badge => 'مستندة إلى النص القانوني';
+
+  @override
+  String get onbSlide3Title => 'قوائم إجراءات مباشرة';
+
+  @override
+  String get onbSlide3Sub => 'خطوة بخطوة عند الحاجة';
+
+  @override
+  String get onbSlide3Badge => 'بلا إعلانات وبلا حساب';
+
+  @override
+  String get onbSlide4Title => 'جاهز في كل وقت';
+
+  @override
+  String get onbSlide4Sub => 'يعمل بلا إنترنت وبياناتك على جهازك';
+
+  @override
+  String get onbSlide4Badge => 'محفوظة على جهازك';
+
+  @override
+  String copyOvertimeSummary(String salary, String hours, String pay) {
+    return 'محاكاة العمل الإضافي RuleBook\nالراتب: $salary\nالساعات: $hours\nالأجر التقديري: $pay\nالأساس: PP 35/2021';
+  }
+
+  @override
+  String copySeveranceSummary(
+    String wage,
+    String years,
+    String months,
+    String reason,
+    String pesangon,
+    String upmk,
+    String uph,
+    String total,
+    String basis,
+  ) {
+    return 'محاكاة تعويض إنهاء الخدمة RuleBook\nالأجر: $wage\nمدة الخدمة: $years سنة $months شهر\nالسبب: $reason\nتعويض نهاية الخدمة: $pesangon\nUPMK: $upmk\nUPH: $uph\nالإجمالي: $total\nالأساس: $basis';
+  }
+
+  @override
+  String copyThrSummary(String wage, String months, String pay) {
+    return 'محاكاة علاوة العيد (THR) RuleBook\nالأجر: $wage\nمدة الخدمة: $months شهر\nاستحقاق THR: $pay\nيجب السداد قبل العيد بسبعة أيام على الأقل';
+  }
+
+  @override
+  String get shareTrailingNote =>
+      'تصفّح مئات القواعد وإجراءات العمل في RuleBook: https://rulebook.faishal.id';
+
+  @override
+  String shareCardVerifiedOn(String date) {
+    return 'تم التحقق: $date';
+  }
 }

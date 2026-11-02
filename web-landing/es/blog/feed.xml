@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Blog — RuleBook</title>
+    <link>https://rulebook.faishal.id/es/blog/</link>
+    <description>Blog de RuleBook: reglas de tránsito, SOP y normativas de bolsillo: señales, marcas, prioridad, búsqueda instantánea y revisiones mensuales. Sin conexión y privado.</description>
+    <language>es</language>
+    <lastBuildDate>Sun, 04 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>SOP y normativas: procedimientos comunes fáciles de encontrar</title>
+      <link>https://rulebook.faishal.id/es/blog/sops-and-regulations-common-procedures-made-findable/</link>
+      <guid isPermaLink="true">https://rulebook.faishal.id/es/blog/sops-and-regulations-common-procedures-made-findable/</guid>
+      <description>Una colección consultable de SOP y normativas comunes: procedimientos por pasos, búsqueda por palabra clave, favoritos y revisiones mensuales. Lee sin conexión con RuleBook.</description>
+      <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Señales, marcas y prioridad: tres lecturas clave para el motociclista</title>
+      <link>https://rulebook.faishal.id/es/blog/signs-markings-priority-three-core-rider-readings/</link>
+      <guid isPermaLink="true">https://rulebook.faishal.id/es/blog/signs-markings-priority-three-core-rider-readings/</guid>
+      <description>Tres lecturas clave para el motociclista: señales de prohibición, marcas de límite de carril y prioridad en cruces. Domina las tres con RuleBook sin conexión. Tablas y preguntas frecuentes incluidas.</description>
+      <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Reglas de tránsito de bolsillo: encuentra el artículo cuando lo necesites</title>
+      <link>https://rulebook.faishal.id/es/blog/pocket-traffic-rules-find-the-clause-when-needed/</link>
+      <guid isPermaLink="true">https://rulebook.faishal.id/es/blog/pocket-traffic-rules-find-the-clause-when-needed/</guid>
+      <description>Reglas de tránsito de bolsillo por tema, legibles sin conexión: señales, marcas, prioridad de paso y conducción segura. Búsqueda instantánea con RuleBook cuando la necesites.</description>
+      <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

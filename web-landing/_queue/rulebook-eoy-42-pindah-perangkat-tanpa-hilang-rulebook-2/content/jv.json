@@ -1,0 +1,85 @@
+{
+  "title": "Ekspor data aturan lalu lintas: apa sing melu kasimpen",
+  "description": "Ekspor data aturan lalu lintas lan apa sing kasimpen ing jero file, uga tinjauan mingguan lan cara maca data sawisé ana jeda.",
+  "badge": "keamanan · offline",
+  "answer": "Nalika butuh, aturan lalu lintas sumebar ing telung panggonan—sing mbukak dhisik malah wis lawas. RuleBook nyimpen aturan lalu lintas ing piranti, dadi tetep kebukak tanpa kuota lan tanpa akun.",
+  "toc": [
+    "Tinjauan saben minggu",
+    "Kasimpen ing piranti",
+    "Sawisé bolong"
+  ],
+  "sections": [
+    {
+      "h2": "Tinjauan saben minggu",
+      "p": "Seminggu sepisan, tilik bagéan sing paling kerep bolong, banjur cilikna targeté.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Kasimpen ing piranti",
+      "p": "RuleBook nyimpen aturan lalu lintas ing piranti, dadi tetep kebukak tanpa kuota lan tanpa akun.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Sawisé bolong",
+      "p": "Yèn bolong sawetara dina, aja mbusak riwayat. Bukak cathetan pungkasan, isinen sedina, banjur tutup.",
+      "h3": null,
+      "p3": null
+    }
+  ],
+  "table": {
+    "caption": "Rangka aturan lalu lintas",
+    "headers": [
+      "Langkah",
+      "Isi minimal",
+      "Rampung yèn"
+    ],
+    "rows": [
+      [
+        "Kertu darurat",
+        "kontak + panggonan",
+        "bisa dibukak offline"
+      ],
+      [
+        "Pananda",
+        "posisi pungkasan",
+        "bisa diterusaké sesuk"
+      ],
+      [
+        "Evaluasi minggu",
+        "siji panyesuaian",
+        "diterapaké Senén"
+      ]
+    ]
+  },
+  "list": [
+    "Temtokna siji wektu tetep, dudu “yèn sempet”.",
+    "Bukak RuleBook nalika wektu iku teka, aja mengko bengi.",
+    "Catheten siji alangan, dudu alesan dawa.",
+    "Cadhangana data sadurungé ganti HP."
+  ],
+  "faqs": [
+    [
+      "Apa aturan lalu lintas bisa dibukak offline?",
+      "Bisa. RuleBook nyimpen kabèh ing piranti, dadi ora butuh kuota."
+    ],
+    [
+      "Kudu akun dhisik?",
+      "Ora. Wiwit tanpa login; cadhangana data sak dhéwé."
+    ],
+    [
+      "Wiwit saka ngendi?",
+      "Saka bagéan paling cendhak. Tambah jembar yèn wis rong minggu stabil."
+    ],
+    [
+      "Yèn bolong sawetara dina?",
+      "Aja mbusak riwayat. Terusaké saka cathetan pungkasan lan catheten siji alangan."
+    ]
+  ],
+  "cta": [
+    "Wiwiti aturan lalu lintas dina iki",
+    "Bukak RuleBook"
+  ],
+  "slug": "pandhuan-rulebook-rulebook-5"
+}

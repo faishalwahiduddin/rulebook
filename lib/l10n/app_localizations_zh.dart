@@ -1489,4 +1489,98 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get tierExpert => '法规精研专员';
+
+  @override
+  String get appTitle => 'RuleBook';
+
+  @override
+  String get appTagline => '口袋里的法规条例与实用流程';
+
+  @override
+  String get loadingLabel => '正在加载…';
+
+  @override
+  String get onbSkip => '跳过';
+
+  @override
+  String get onbNext => '下一步';
+
+  @override
+  String get onbGetStarted => '开始使用';
+
+  @override
+  String get onbPrivacyHeadline => '隐私保护，全程离线';
+
+  @override
+  String get onbPrivacyDetail => '所有数据仅保存在本机，无追踪、无需账号。';
+
+  @override
+  String get onbSlide1Title => '法规随身查';
+
+  @override
+  String get onbSlide1Sub => '交通、劳动与消费者权益';
+
+  @override
+  String get onbSlide1Badge => '100% 离线且私密';
+
+  @override
+  String get onbSlide2Title => '罚则计算器';
+
+  @override
+  String get onbSlide2Sub => '罚单、加班、离职补偿与节日津贴';
+
+  @override
+  String get onbSlide2Badge => '依据法条';
+
+  @override
+  String get onbSlide3Title => '逐步流程清单';
+
+  @override
+  String get onbSlide3Sub => '关键时刻照着做';
+
+  @override
+  String get onbSlide3Badge => '无广告，免注册';
+
+  @override
+  String get onbSlide4Title => '随时可用';
+
+  @override
+  String get onbSlide4Sub => '断网也能查，数据留在本机';
+
+  @override
+  String get onbSlide4Badge => '数据保存在本机';
+
+  @override
+  String copyOvertimeSummary(String salary, String hours, String pay) {
+    return 'RuleBook 加班模拟\n工资：$salary\n工时：$hours\n预计加班费：$pay\n依据：PP 35/2021';
+  }
+
+  @override
+  String copySeveranceSummary(
+    String wage,
+    String years,
+    String months,
+    String reason,
+    String pesangon,
+    String upmk,
+    String uph,
+    String total,
+    String basis,
+  ) {
+    return 'RuleBook 离职补偿模拟\n工资：$wage\n工龄：$years 年 $months 个月\n原因：$reason\n遣散费：$pesangon\nUPMK：$upmk\nUPH：$uph\n合计：$total\n依据：$basis';
+  }
+
+  @override
+  String copyThrSummary(String wage, String months, String pay) {
+    return 'RuleBook 节日津贴（THR）模拟\n工资：$wage\n工龄：$months 个月\nTHR 权益：$pay\n最迟须于节前 7 天发放';
+  }
+
+  @override
+  String get shareTrailingNote =>
+      '在 RuleBook 中浏览数百条法规与流程：https://rulebook.faishal.id';
+
+  @override
+  String shareCardVerifiedOn(String date) {
+    return '核验日期：$date';
+  }
 }

@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "data-rambu-lalu-lintas-hilang-cek-ini-dulu-praktis",
-    "en": "rambu-lalu-lintas-data-missing-check-these-first-practical",
-    "ar": "rambu-lalu-lintas-4",
-    "jv": "pandhuan-rambu-lalu-lintas-rulebook-4",
-    "su": "pituduh-rambu-lalu-lintas-rulebook-4",
-    "zh": "rulebook-rambu-lalu-lintas-实用指南-4",
-    "ja": "rulebookrambu-lalu-lintas-ガイド-4"
+    "id": "rambu-lalu-lintas-macet-perbaiki-friksi-dulu",
+    "en": "rambu-lalu-lintas-stuck-fix-the-friction-first",
+    "ar": "almalwmat-almhma-mtwqf-qll-alahtkak-awla-aljz-2",
+    "jv": "rambu-lalu-lintas-macet-ngurangi-alangan-dhisik",
+    "su": "rambu-lalu-lintas-macet-kurangan-halangan-heula",
+    "zh": "zhong-yao-xin-xi-ka-zhu-le-xian-jian-shao-mo-ca-di-2-pian",
+    "ja": "taisetsu-na-jouhou-ga-toma-ttara-mazu-masatsu-wo-hera-su-dai-2-kai"
   },
   "titles": {
-    "id": "Data rambu lalu lintas Hilang? Cek Ini Dulu",
-    "en": "rambu lalu lintas Data Missing? Check These First (Practical)",
-    "ar": "rambu lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: Data rambu lalu lintas Hilang? Cek Ini Dulu",
-    "su": "Pituduh: Data rambu lalu lintas Hilang? Cek Ini Dulu",
-    "zh": "RuleBook · rambu lalu lintas 实用指南",
-    "ja": "RuleBook｜rambu lalu lintas ガイド"
+    "id": "rambu lalu lintas macet? Perbaiki friksi dulu",
+    "en": "rambu lalu lintas stuck? Fix the friction first",
+    "ar": "المعلومات المهمة متوقف؟ قلّل الاحتكاك أولاً · الجزء 2",
+    "jv": "rambu lalu lintas macet? Ngurangi alangan dhisik",
+    "su": "rambu lalu lintas macét? Kurangan halangan heula",
+    "zh": "重要信息卡住了？先减少摩擦 · 第2篇",
+    "ja": "大切な情報が止まったら、まず摩擦を減らす · 第2回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Rambu lalu lintas macet? Kurangi friksi dulu, dengan alasan kebiasaan putus, versi paling kecil, dan langkah kembali setelah ada jeda.",
+    "en": "Is your rambu lalu lintas stuck? Reduce the friction first, with the reasons habits break, the smallest version, and steps to come back after a gap.",
+    "ar": "هل توقف rambu lalu lintas؟ خفّف الاحتكاك أولاً، مع أسباب انقطاع العادات، وأصغر نسخة، وخطوات العودة بعد فجوة.",
+    "ja": "rambu lalu lintasが止まったら、まず摩擦を減らす。習慣が切れる理由、最小版、空白後に戻る手順を解説。",
+    "zh": "rambu lalu lintas停滞了？先减少阻力，说明习惯中断的原因、最小版本和间隔后的回归步骤。",
+    "jv": "Rambu lalu lintas macet? Kurangi alangan dhisik, karo sebab kebiasan ambyar, versi paling cilik, lan langkah bali sawisé ana bolong.",
+    "su": "Rambu lalu lintas macét? Kurangan halangan heula, kalawan alesan kabiasaan eureun, versi pangleutikna, jeung léngkah balik sanggeus aya bolong."
+  }
 }

@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../ui/fleet_splash_screen.dart';
 import '../ui/fleet_onboarding_screen.dart';
+import '../ui/fleet_app_config.dart';
 import '../../features/bookmarks/bookmarks_screen.dart';
 import '../../features/calculator/penalty_calculator_screen.dart';
 import '../../features/catalog/catalog_screen.dart';
@@ -46,7 +47,7 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/onboarding',
       parentNavigatorKey: _rootNavigatorKey,
-      builder: (context, state) => const FleetOnboardingScreen(),
+      builder: (context, state) => FleetOnboardingScreen(config: FleetAppConfig.current),
     ),
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {

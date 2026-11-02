@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "backup-ekspor-catatan-rambu-lalu-lintas-offline",
-    "en": "backup-export-rambu-lalu-lintas-notes",
-    "ar": "rambu-lalu-lintas-5",
-    "jv": "pandhuan-rambu-lalu-lintas-rulebook-5",
-    "su": "pituduh-rambu-lalu-lintas-rulebook-5",
-    "zh": "rulebook-rambu-lalu-lintas-实用指南-5",
-    "ja": "rulebookrambu-lalu-lintas-ガイド-5"
+    "id": "ekspor-data-rambu-lalu-lintas-apa-yang-ikut-tersimpan",
+    "en": "exporting-rambu-lalu-lintas-what-comes-with-the-file",
+    "ar": "tsdyr-almalwmat-almhma-ma-aldhy-yhfz-fala",
+    "jv": "ekspor-data-rambu-lalu-lintas-apa-sing-melu-kasimpen",
+    "su": "ekspor-data-rambu-lalu-lintas-naon-anu-milu-kasimpen",
+    "zh": "dao-chu-zhong-yao-xin-xi-wen-jian-li-dou-you-shen-me",
+    "ja": "taisetsu-na-jouhou-no-kakidashi-nani-ga-hozon-sareruka"
   },
   "titles": {
-    "id": "Backup &amp; Ekspor Catatan rambu lalu lintas",
-    "en": "Backup &amp; Export rambu lalu lintas Notes",
-    "ar": "rambu lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: Backup &amp; Ekspor Catatan rambu lalu lintas",
-    "su": "Pituduh: Backup &amp; Ekspor Catatan rambu lalu lintas",
-    "zh": "RuleBook · rambu lalu lintas 实用指南",
-    "ja": "RuleBook｜rambu lalu lintas ガイド"
+    "id": "Ekspor data rambu lalu lintas: apa yang ikut tersimpan",
+    "en": "Exporting rambu lalu lintas: what comes with the file",
+    "ar": "تصدير المعلومات المهمة: ما الذي يُحفظ فعلاً",
+    "jv": "Ekspor data rambu lalu lintas: apa sing melu kasimpen",
+    "su": "Ékspor data rambu lalu lintas: naon anu milu kasimpen",
+    "zh": "导出重要信息：文件里都有什么",
+    "ja": "大切な情報の書き出し：何が保存されるか"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Ekspor data rambu lalu lintas dan isi filenya: apa saja yang ikut tersimpan, tinjauan mingguan, dan cara menjaga data setelah jeda.",
+    "en": "Exporting rambu lalu lintas data and what the file contains: what comes along with it, the weekly check, and how to protect your data after a gap.",
+    "ar": "تصدير بيانات rambu lalu lintas وما يحتويه الملف: ما الذي يُحفظ معه، والمراجعة الأسبوعية، وكيف تحمي بياناتك بعد فجوة.",
+    "ja": "書き出しの方法：rambu lalu lintasのデータをファイルにまとめ、含まれる項目、週次見直し、空白後の扱い。",
+    "zh": "如何导出rambu lalu lintas数据，以及文件里包含什么：随文件保存的内容、每周复盘和间隔后的数据保护。",
+    "jv": "Ekspor data rambu lalu lintas lan isi file-né: apa sing melu kasimpen, tinjauan mingguan, lan cara njaga data sawisé jeda.",
+    "su": "Ékspor data rambu lalu lintas jeung eusi file-na: naon nu milu kasimpen, tinjauan mingguan, jeung cara ngajaga data sanggeus jeda."
+  }
 }

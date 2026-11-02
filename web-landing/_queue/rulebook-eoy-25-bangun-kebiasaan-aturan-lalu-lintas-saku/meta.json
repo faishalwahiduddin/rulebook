@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "bangun-kebiasaan-aturan-lalu-lintas-saku-21-hari",
-    "en": "build-a-21-day-aturan-lalu-lintas-saku-habit",
-    "ar": "aturan-lalu-lintas-saku-3",
-    "jv": "pandhuan-aturan-lalu-lintas-saku-rulebook-3",
-    "su": "pituduh-aturan-lalu-lintas-saku-rulebook-3",
-    "zh": "rulebook-aturan-lalu-lintas-saku-实用指南-3",
-    "ja": "rulebookaturan-lalu-lintas-saku-ガイド-3"
+    "id": "membangun-kebiasaan-aturan-lalu-lintas-saku-tanpa-burnout",
+    "en": "build-a-aturan-lalu-lintas-saku-habit-without-burnout",
+    "ar": "bna-aada-almalwmat-almhma-dwn-inhak",
+    "jv": "mbangun-kebiasan-aturan-lalu-lintas-saku-tanpa-kesel",
+    "su": "ngawangun-kabiasaan-aturan-lalu-lintas-saku-tanpa-kacape",
+    "zh": "jian-li-zhong-yao-xin-xi-xi-guan-you-bu-zhi-yu-pi-bei",
+    "ja": "tsukare-zuni-taisetsu-na-jouhou-wo-shuukan-nisuru"
   },
   "titles": {
-    "id": "Bangun Kebiasaan aturan lalu lintas saku 21 Hari",
-    "en": "Build a 21-Day aturan lalu lintas saku Habit",
-    "ar": "aturan lalu lintas saku — دليل RuleBook",
-    "jv": "Pandhuan: Bangun Kebiasaan aturan lalu lintas saku 21 Hari",
-    "su": "Pituduh: Bangun Kebiasaan aturan lalu lintas saku 21 Hari",
-    "zh": "RuleBook · aturan lalu lintas saku 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas saku ガイド"
+    "id": "Membangun kebiasaan aturan lalu lintas saku tanpa burnout",
+    "en": "Build a aturan lalu lintas saku habit without burnout",
+    "ar": "بناء عادة المعلومات المهمة دون إنهاك",
+    "jv": "Mbangun kebiasan aturan lalu lintas saku tanpa kesel",
+    "su": "Ngawangun kabiasaan aturan lalu lintas saku tanpa kacapé",
+    "zh": "建立重要信息习惯又不至于疲惫",
+    "ja": "疲れずに大切な情報を習慣にする"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Membangun kebiasaan aturan lalu lintas saku tanpa kelelahan: kenapa kebiasaan mudah putus, versi paling kecil, dan cara melanjutkan setelah jeda.",
+    "en": "Building an aturan lalu lintas saku habit without burnout: why habits break, the smallest version to keep, and how to continue after a pause.",
+    "ar": "بناء عادة aturan lalu lintas saku دون إنهاك: لماذا تتوقف العادات، وأصغر نسخة يمكن الحفاظ عليها، وكيف تستمر بعد توقف.",
+    "ja": "燃え尽きずにaturan lalu lintas sakuを習慣化する方法。続かない理由、維持できる最小版、中断後の再開。",
+    "zh": "不会倦怠地养成aturan lalu lintas saku习惯：为何习惯会断，值得保留的最小版本，以及停顿后如何继续。",
+    "jv": "Mbangun kebiasan aturan lalu lintas saku tanpa kesel: kenapa kebiasan gampang ambyar, versi paling cilik, lan cara nerusaké sawisé jeda.",
+    "su": "Ngawangun kabiasaan aturan lalu lintas saku tanpa kacapé: naha kabiasaan gampang eureun, versi pangleutikna, jeung cara neruskeun sanggeus jeda."
+  }
 }

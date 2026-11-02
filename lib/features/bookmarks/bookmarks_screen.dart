@@ -240,11 +240,19 @@ class _SavedRulesList extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
     if (rules.isEmpty) {
-      return AppEmptyState(
+      return Padding(
+      // The shell nav bar floats over the body; keep the empty
+      // state clear of it (and of the keyboard).
+      padding: EdgeInsets.only(
+        bottom: AppScroll.shellNavContentHeight +
+            MediaQuery.paddingOf(context).bottom,
+      ),
+      child: AppEmptyState(
         icon: AppIconData.bookmark,
         title: l10n.noBookmarks,
         message: l10n.noBookmarksHint,
-      );
+      ),
+    );
     }
     return ListView.separated(
       padding: AppScroll.listPadding(context),
@@ -272,11 +280,19 @@ class _NotesList extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
     if (rules.isEmpty) {
-      return AppEmptyState(
+      return Padding(
+      // The shell nav bar floats over the body; keep the empty
+      // state clear of it (and of the keyboard).
+      padding: EdgeInsets.only(
+        bottom: AppScroll.shellNavContentHeight +
+            MediaQuery.paddingOf(context).bottom,
+      ),
+      child: AppEmptyState(
         icon: AppIconData.note,
         title: l10n.noNotes,
         message: l10n.noNotesHint,
-      );
+      ),
+    );
     }
 
     return ListView.separated(
@@ -358,7 +374,7 @@ class _NoteCard extends ConsumerWidget {
                 },
                 style: TextButton.styleFrom(
                   foregroundColor: c.danger,
-                  minimumSize: const Size(0, 36),
+                  minimumSize: const Size(0, 44),
                   visualDensity: VisualDensity.compact,
                 ),
                 icon: AppIcon(AppIconData.trash, size: 15, color: c.danger),

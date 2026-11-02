@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "jadwal-terbaik-dalam-sehari-untuk-aturan-lalu-lintas-mingguan",
-    "en": "best-time-of-day-for-aturan-lalu-lintas",
-    "ar": "aturan-lalu-lintas-6",
-    "jv": "pandhuan-aturan-lalu-lintas-rulebook-6",
-    "su": "pituduh-aturan-lalu-lintas-rulebook-6",
-    "zh": "rulebook-aturan-lalu-lintas-实用指南-6",
-    "ja": "rulebookaturan-lalu-lintas-ガイド-6"
+    "id": "aturan-lalu-lintas-saat-waktu-cuma-sedikit",
+    "en": "aturan-lalu-lintas-when-you-barely-have-time",
+    "ar": "qwaad-almrwr-hyn-la-ybqa-wqt",
+    "jv": "aturan-lalu-lintas-nalika-wektune-mung-sithik",
+    "su": "aturan-lalu-lintas-nalika-waktu-ukur-saeutik",
+    "zh": "shi-jian-hen-shao-shi-zen-me-zuo-jiao-tong-gui-ze",
+    "ja": "jikan-gahotondonai-nichi-no-koutsuu-ruuru"
   },
   "titles": {
-    "id": "Jadwal Terbaik dalam Sehari untuk aturan lalu lintas",
-    "en": "Best Time of Day for aturan lalu lintas — Offline First",
-    "ar": "aturan lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: Jadwal Terbaik dalam Sehari untuk aturan lalu lintas",
-    "su": "Pituduh: Jadwal Terbaik dalam Sehari untuk aturan lalu lintas",
-    "zh": "RuleBook · aturan lalu lintas 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas ガイド"
+    "id": "aturan lalu lintas saat waktu cuma sedikit",
+    "en": "aturan lalu lintas when you barely have time",
+    "ar": "قواعد المرور حين لا يبقى وقت",
+    "jv": "aturan lalu lintas nalika wektuné mung sithik",
+    "su": "aturan lalu lintas nalika waktu ukur saeutik",
+    "zh": "时间很少时怎么做交通规则",
+    "ja": "時間がほとんどない日の交通ルール"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Saat waktu hampir tidak ada, aturan lalu lintas: versi paling kecil, kapan menjalankannya, dan tinjauan mingguan yang tetap bisa dikerjakan.",
+    "en": "Keeping aturan lalu lintas going when you barely have time: the smallest version, when to run it, and a weekly review you can still get through.",
+    "ar": "حين لا يبقى وقت، aturan lalu lintas: أصغر نسخة، ومتى تشغّلها، ومراجعة أسبوعية يمكن إنجازها رغم ضيق الوقت.",
+    "ja": "時間がほとんどないときのaturan lalu lintas。最小版、実行タイミング、無理なく続けられる週次見直し。",
+    "zh": "时间很少时如何做aturan lalu lintas：最小版本、执行时机，以及仍然能完成的每周复盘。",
+    "jv": "Nalika wektu mung sithik, aturan lalu lintas: versi paling cilik, kapan dilakokaké, lan tinjauan mingguan sing isih bisa rampung.",
+    "su": "Nalika waktu ukur saeutik, aturan lalu lintas: versi pangleutikna, iraha ngajalankeunana, jeung tinjauan mingguan nu tetep bisa dikerjakeun."
+  }
 }

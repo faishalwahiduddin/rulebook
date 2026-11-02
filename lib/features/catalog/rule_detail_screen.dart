@@ -153,10 +153,13 @@ class _RuleDetailScreenState extends ConsumerState<RuleDetailScreen> {
       body: ListView(
         padding: AppScroll.pagePadding(context, underShellNav: false),
         children: [
-          Pill(
-            label: _rule.category.localizedLabel(l10n),
-            icon: _rule.category.icon,
-            tone: accent,
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Pill(
+              label: _rule.category.localizedLabel(l10n),
+              icon: _rule.category.icon,
+              tone: accent,
+            ),
           ),
           const SizedBox(height: AppSpacing.md),
           Text(

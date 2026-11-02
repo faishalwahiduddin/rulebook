@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../l10n/app_localizations.dart';
 import 'fleet_app_config.dart';
 
 /// Emil Kowalski style micro-settle splash screen.
@@ -127,6 +128,7 @@ class _FleetSplashScreenState extends State<FleetSplashScreen>
   @override
   Widget build(BuildContext context) {
     final config = FleetAppConfig.current;
+    final l10n = AppLocalizations.of(context)!;
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final primaryColor = config.primaryColor;
 
@@ -233,7 +235,7 @@ class _FleetSplashScreenState extends State<FleetSplashScreen>
                       child: Column(
                         children: [
                           Text(
-                            config.appName,
+                            l10n.appTitle,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 24,
@@ -244,7 +246,7 @@ class _FleetSplashScreenState extends State<FleetSplashScreen>
                           ),
                           const SizedBox(height: 8),
                           Text(
-                            config.tagline,
+                            l10n.appTagline,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 14,

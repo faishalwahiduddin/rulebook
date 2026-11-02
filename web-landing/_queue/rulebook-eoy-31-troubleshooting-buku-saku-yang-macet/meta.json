@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "troubleshooting-buku-saku-yang-macet",
-    "en": "troubleshooting-stuck-buku-saku-habits",
-    "ar": "buku-saku-4",
-    "jv": "pandhuan-buku-saku-rulebook-4",
-    "su": "pituduh-buku-saku-rulebook-4",
-    "zh": "rulebook-buku-saku-实用指南-4",
-    "ja": "rulebookbuku-saku-ガイド-4"
+    "id": "buku-saku-macet-perbaiki-friksi-dulu",
+    "en": "buku-saku-stuck-fix-the-friction-first",
+    "ar": "almalwmat-almhma-mtwqf-qll-alahtkak-awla",
+    "jv": "buku-saku-macet-ngurangi-alangan-dhisik",
+    "su": "buku-saku-macet-kurangan-halangan-heula",
+    "zh": "zhong-yao-xin-xi-ka-zhu-le-xian-jian-shao-mo-ca",
+    "ja": "taisetsu-na-jouhou-ga-toma-ttara-mazu-masatsu-wo-hera-su"
   },
   "titles": {
-    "id": "Troubleshooting buku saku yang Macet",
-    "en": "Troubleshooting Stuck buku saku Habits",
-    "ar": "buku saku — دليل RuleBook",
-    "jv": "Pandhuan: Troubleshooting buku saku yang Macet",
-    "su": "Pituduh: Troubleshooting buku saku yang Macet",
-    "zh": "RuleBook · buku saku 实用指南",
-    "ja": "RuleBook｜buku saku ガイド"
+    "id": "buku saku macet? Perbaiki friksi dulu",
+    "en": "buku saku stuck? Fix the friction first",
+    "ar": "المعلومات المهمة متوقف؟ قلّل الاحتكاك أولاً",
+    "jv": "buku saku macet? Ngurangi alangan dhisik",
+    "su": "buku saku macét? Kurangan halangan heula",
+    "zh": "重要信息卡住了？先减少摩擦",
+    "ja": "大切な情報が止まったら、まず摩擦を減らす"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Buku saku macet? Panduan mengurangi friksi dulu: kenapa kebiasaan putus, versi paling kecil untuk dimulai lagi, dan cara kembali setelah jeda.",
+    "en": "Is your buku saku stuck? Reduce the friction first: why habits break, the smallest version to restart with, and how to return after a pause.",
+    "ar": "هل توقف buku saku؟ خفّف الاحتكاك أولاً: لماذا تنقطع العادات، وأصغر نسخة للبدء من جديد، وكيف تعود بعد توقف.",
+    "ja": "buku sakuが止まったら、まず摩擦を減らす。習慣が切れる理由、再開用の最小版、中断後の戻り方を紹介。",
+    "zh": "buku saku停滞了？先减少阻力：习惯断掉的原因、用于重新开始的最小版本，以及中断后如何回来。",
+    "jv": "Buku saku macet? Kurangi alangan dhisik: kenapa kebiasan ambyar, versi paling cilik kanggo miwiti maneh, lan cara bali sawisé jeda.",
+    "su": "Buku saku macét? Kurangan halangan heula: naha kabiasaan eureun, versi pangleutikna pikeun mimiti deui, jeung cara balik sanggeus jeda."
+  }
 }

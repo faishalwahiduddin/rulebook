@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "amankan-log-regulasi-di-hp-bersama-harian",
-    "en": "secure-regulasi-logs-on-a-shared-phone",
-    "ar": "regulasi-7",
-    "jv": "pandhuan-regulasi-rulebook-7",
-    "su": "pituduh-regulasi-rulebook-7",
-    "zh": "rulebook-regulasi-实用指南-7",
-    "ja": "rulebookregulasi-ガイド-7"
+    "id": "keamanan-data-regulasi-di-ponsel",
+    "en": "keeping-regulasi-data-safe-on-your-phone",
+    "ar": "hmaya-byanat-almalwmat-almhma-ala-alhatf",
+    "jv": "keamanan-data-regulasi-ing-hp",
+    "su": "kaamanan-data-regulasi-dina-hp",
+    "zh": "shou-ji-shang-de-zhong-yao-xin-xi-shu-ju-an-quan",
+    "ja": "sumaho-no-taisetsu-na-jouhou-deeta-wo-mamoru"
   },
   "titles": {
-    "id": "Amankan Log regulasi di HP Bersama",
-    "en": "Secure regulasi Logs on a Shared Phone",
-    "ar": "regulasi — دليل RuleBook",
-    "jv": "Pandhuan: Amankan Log regulasi di HP Bersama",
-    "su": "Pituduh: Amankan Log regulasi di HP Bersama",
-    "zh": "RuleBook · regulasi 实用指南",
-    "ja": "RuleBook｜regulasi ガイド"
+    "id": "Keamanan data regulasi di ponsel",
+    "en": "Keeping regulasi data safe on your phone",
+    "ar": "حماية بيانات المعلومات المهمة على الهاتف",
+    "jv": "Keamanan data regulasi ing HP",
+    "su": "Kaamanan data regulasi dina HP",
+    "zh": "手机上的重要信息数据安全",
+    "ja": "スマホの大切な情報データを守る"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Keamanan data regulasi di ponsel: apa yang tersimpan di perangkat, tinjauan mingguan, dan langkah menjaga catatan setelah jeda.",
+    "en": "Keeping regulasi data safe on your phone: what stays stored on your device, the weekly check, and how to protect your notes after a gap.",
+    "ar": "الحفاظ على أمان بيانات regulasi على الهاتف: ما يُحفظ على جهازك، والمراجعة الأسبوعية، وكيف تحمي ملاحظاتك بعد فجوة.",
+    "ja": "スマホのregulasiデータを守る方法。端末に保存される内容、週次チェック、空白後にメモを守る手順。",
+    "zh": "手机上regulasi数据如何保持安全：设备上保存了什么，每周检查，以及间隔后如何保护笔记。",
+    "jv": "Keamanan data regulasi ing HP: apa sing kasimpen ing piranti, tinjauan mingguan, lan langkah njaga cathetan sawisé bolong.",
+    "su": "Kaamanan data regulasi dina HP: naon nu disimpen dina alat, tinjauan mingguan, jeung léngkah ngajaga catetan sanggeus bolong."
+  }
 }

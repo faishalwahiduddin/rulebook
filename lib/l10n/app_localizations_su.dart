@@ -75,7 +75,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get save => 'Simpen';
 
   @override
-  String get delete => 'Hapus';
+  String get delete => 'Pupus';
 
   @override
   String get edit => 'Édit';
@@ -90,7 +90,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get filter => 'Saring';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Setél deui';
 
   @override
   String get confirm => 'Konfirmasi';
@@ -282,7 +282,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get ecosystem => 'Ékosistem';
 
   @override
-  String get subdomain => 'Subdomains';
+  String get subdomain => 'Subdomain';
 
   @override
   String get applicationId => 'ID aplikasi';
@@ -613,7 +613,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get navSopShort => 'Darurat';
 
   @override
-  String get navComplianceShort => 'Audit';
+  String get navComplianceShort => 'Pariksa';
 
   @override
   String get categoryAll => 'Sadayana';
@@ -654,7 +654,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get catLaborShort => 'Pagawean';
 
   @override
-  String get catCyberShort => 'Data & ITE';
+  String get catCyberShort => 'Data & Siber';
 
   @override
   String get catConsumerShort => 'Konsumen';
@@ -1614,4 +1614,99 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String get tierExpert => 'Pakar Regulasi';
+
+  @override
+  String get appTitle => 'RuleBook';
+
+  @override
+  String get appTagline => 'Aturan, régulasi & SOP dina saku';
+
+  @override
+  String get loadingLabel => 'Ngamuat…';
+
+  @override
+  String get onbSkip => 'Liwat';
+
+  @override
+  String get onbNext => 'Teraskeun';
+
+  @override
+  String get onbGetStarted => 'Mimitian Ayeuna';
+
+  @override
+  String get onbPrivacyHeadline => 'Privasi & Offline Kajaga';
+
+  @override
+  String get onbPrivacyDetail =>
+      'Sadaya data disimpen aman dina alat anjeun, tanpa palacak.';
+
+  @override
+  String get onbSlide1Title => 'Aturan dina saku';
+
+  @override
+  String get onbSlide1Sub => 'Lalu lintas, pagawéan, konsumén';
+
+  @override
+  String get onbSlide1Badge => '100% Offline & Pribadi';
+
+  @override
+  String get onbSlide2Title => 'Kalkulator denda';
+
+  @override
+  String get onbSlide2Sub => 'Tilang, lembur, pesangon & THR';
+
+  @override
+  String get onbSlide2Badge => 'Dumasar dasar hukum';
+
+  @override
+  String get onbSlide3Title => 'Checklist SOP';
+
+  @override
+  String get onbSlide3Sub => 'Léngkah-léngkah nalika darurat';
+
+  @override
+  String get onbSlide3Badge => 'Tanpa Iklan & Tanpa Akun';
+
+  @override
+  String get onbSlide4Title => 'Sok bisa dibuka';
+
+  @override
+  String get onbSlide4Sub => 'Tanpa internét, data tetep dina alat';
+
+  @override
+  String get onbSlide4Badge => 'Data Disimpen dina Alat';
+
+  @override
+  String copyOvertimeSummary(String salary, String hours, String pay) {
+    return 'Simulasi Lembur RuleBook\nGaji: $salary\nJam: $hours\nPerkiraan upah: $pay\nDasar: PP 35/2021';
+  }
+
+  @override
+  String copySeveranceSummary(
+    String wage,
+    String years,
+    String months,
+    String reason,
+    String pesangon,
+    String upmk,
+    String uph,
+    String total,
+    String basis,
+  ) {
+    return 'Simulasi Kompensasi PHK RuleBook\nUpah: $wage\nMasa kerja: $years th $months bln\nAlesan: $reason\nPesangon: $pesangon\nUPMK: $upmk\nUPH: $uph\nJumlah: $total\nDasar: $basis';
+  }
+
+  @override
+  String copyThrSummary(String wage, String months, String pay) {
+    return 'Simulasi THR RuleBook\nUpah: $wage\nMasa kerja: $months bulan\nHak THR: $pay\nWajib dibayar panglambatna H-7 poé raya';
+  }
+
+  @override
+  String get shareTrailingNote =>
+      'Paluruh ratusan aturan & SOP di RuleBook: https://rulebook.faishal.id';
+
+  @override
+  String shareCardVerifiedOn(String date) {
+    return 'Dipastikeun: $date';
+  }
 }

@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "breakdown-target-regulasi-per-minggu-2026",
-    "en": "weekly-breakdown-of-regulasi-targets",
-    "ar": "regulasi-8",
-    "jv": "pandhuan-regulasi-rulebook-8",
-    "su": "pituduh-regulasi-rulebook-8",
-    "zh": "rulebook-regulasi-实用指南-8",
-    "ja": "rulebookregulasi-ガイド-8"
+    "id": "rencana-30-hari-untuk-regulasi",
+    "en": "a-30-day-plan-for-regulasi",
+    "ar": "khta-thlathyn-ywma-lalmalwmat-almhma-aljz-3",
+    "jv": "rencana-30-dina-kanggo-regulasi",
+    "su": "rencana-30-poe-pikeun-regulasi",
+    "zh": "zhong-yao-xin-xi-de-30-tian-ji-hua-di-3-pian",
+    "ja": "taisetsu-na-jouhou-no-30-nichi-puran-dai-3-kai"
   },
   "titles": {
-    "id": "Breakdown Target regulasi per Minggu",
-    "en": "Weekly Breakdown of regulasi Targets",
-    "ar": "regulasi — دليل RuleBook",
-    "jv": "Pandhuan: Breakdown Target regulasi per Minggu",
-    "su": "Pituduh: Breakdown Target regulasi per Minggu",
-    "zh": "RuleBook · regulasi 实用指南",
-    "ja": "RuleBook｜regulasi ガイド"
+    "id": "Rencana 30 hari untuk regulasi",
+    "en": "A 30-day plan for regulasi",
+    "ar": "خطة ثلاثين يوماً لـالمعلومات المهمة · الجزء 3",
+    "jv": "Rencana 30 dina kanggo regulasi",
+    "su": "Rencana 30 poé pikeun regulasi",
+    "zh": "重要信息的30天计划 · 第3篇",
+    "ja": "大切な情報の30日プラン · 第3回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Rencana 30 hari untuk regulasi: versi paling kecil di awal, kapan menjalankannya setiap hari, dan tinjauan mingguan untuk menilai progres.",
+    "en": "A 30-day plan for regulasi: start with the smallest version, run it at a set time each day, and use a weekly review to judge your progress.",
+    "ar": "خطة ثلاثين يوماً لـ regulasi: ابدأ بأصغر نسخة، وشغّلها في وقت ثابت كل يوم، واستخدم مراجعة أسبوعية لتقييم تقدمك.",
+    "ja": "regulasiの30日計画。最初は最小版から始め、毎日同じ時間に実行し、週次見直しで進みを確認します。",
+    "zh": "regulasi的30天计划：开始时用最小版本，每天固定时间执行，并用每周复盘判断自己的进展。",
+    "jv": "Rencana 30 dina kanggo regulasi: wiwit saka versi paling cilik, dilakokaké saben dina ing wektu tetep, lan tinjauan mingguan kanggo nilai progrès.",
+    "su": "Rencana 30 poé pikeun regulasi: mimitian ti versi pangleutikna, dijalankeun unggal poé dina waktu nu tetep, jeung tinjauan mingguan pikeun ngukur kamajuan."
+  }
 }

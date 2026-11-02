@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "contoh-log-aturan-lalu-lintas-saku-7-hari-mingguan",
-    "en": "sample-7-day-aturan-lalu-lintas-saku-log",
-    "ar": "aturan-lalu-lintas-saku-2",
-    "jv": "pandhuan-aturan-lalu-lintas-saku-rulebook-2",
-    "su": "pituduh-aturan-lalu-lintas-saku-rulebook-2",
-    "zh": "rulebook-aturan-lalu-lintas-saku-实用指南-2",
-    "ja": "rulebookaturan-lalu-lintas-saku-ガイド-2"
+    "id": "template-aturan-lalu-lintas-saku-siap-pakai",
+    "en": "a-ready-to-use-aturan-lalu-lintas-saku-template",
+    "ar": "qalb-almalwmat-almhma-jahz-llastkhdam",
+    "jv": "templat-aturan-lalu-lintas-saku-siap-dipigunakake",
+    "su": "citakan-aturan-lalu-lintas-saku-siap-dipake",
+    "zh": "zhong-yao-xin-xi-mu-ban-ke-zhi-jie-tao-yong",
+    "ja": "sugu-tsukae-ru-taisetsu-na-jouhou-tenpureeto"
   },
   "titles": {
-    "id": "Contoh Log aturan lalu lintas saku 7 Hari",
-    "en": "Sample 7-Day aturan lalu lintas saku Log — Offline First",
-    "ar": "aturan lalu lintas saku — دليل RuleBook",
-    "jv": "Pandhuan: Contoh Log aturan lalu lintas saku 7 Hari",
-    "su": "Pituduh: Contoh Log aturan lalu lintas saku 7 Hari",
-    "zh": "RuleBook · aturan lalu lintas saku 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas saku ガイド"
+    "id": "Template aturan lalu lintas saku siap pakai",
+    "en": "A ready-to-use aturan lalu lintas saku template",
+    "ar": "قالب المعلومات المهمة جاهز للاستخدام",
+    "jv": "Templat aturan lalu lintas saku siap dipigunakaké",
+    "su": "Citakan aturan lalu lintas saku siap dipaké",
+    "zh": "重要信息模板（可直接套用）",
+    "ja": "すぐ使える大切な情報テンプレート"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Templat aturan lalu lintas saku siap pakai: versi paling kecil, kapan menjalankannya, dan kolom tinjauan mingguan untuk diisi setiap minggu.",
+    "en": "A ready-to-use aturan lalu lintas saku template: the smallest version, when to run it, and a weekly review column to complete every week.",
+    "ar": "قالب جاهز لـ aturan lalu lintas saku: أصغر نسخة، ومتى تشغّلها، وعمود للمراجعة الأسبوعية تكمله كل أسبوع دون عناء.",
+    "ja": "すぐ使えるaturan lalu lintas sakuのテンプレート。最小版、実行タイミング、毎週埋める見直し欄を紹介します。",
+    "zh": "可直接套用的aturan lalu lintas saku模板：最小版本、执行时机，以及每周都要填写的复盘栏。",
+    "jv": "Templat aturan lalu lintas saku siap pakai: versi paling cilik, kapan dilakokaké, lan kolom tinjauan mingguan sing diisi saben minggu.",
+    "su": "Citakan aturan lalu lintas saku siap pakai: versi pangleutikna, iraha ngajalankeunana, jeung kolom tinjauan mingguan nu diisi unggal minggu."
+  }
 }

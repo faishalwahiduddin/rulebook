@@ -1533,4 +1533,98 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get tierExpert => '規制法制エキスパート';
+
+  @override
+  String get appTitle => 'RuleBook';
+
+  @override
+  String get appTagline => '法令・規則・業務フローをポケットに';
+
+  @override
+  String get loadingLabel => '読み込み中…';
+
+  @override
+  String get onbSkip => 'スキップ';
+
+  @override
+  String get onbNext => '次へ';
+
+  @override
+  String get onbGetStarted => 'はじめる';
+
+  @override
+  String get onbPrivacyHeadline => 'プライバシー重視・完全オフライン';
+
+  @override
+  String get onbPrivacyDetail => 'データはすべて端末内に保存。追跡もアカウント登録もありません。';
+
+  @override
+  String get onbSlide1Title => '法令をポケットに';
+
+  @override
+  String get onbSlide1Sub => '交通・労働・消費者保護';
+
+  @override
+  String get onbSlide1Badge => '100%オフライン&プライベート';
+
+  @override
+  String get onbSlide2Title => '罰則計算';
+
+  @override
+  String get onbSlide2Sub => '反則金・残業代・退職金・祝日手当';
+
+  @override
+  String get onbSlide2Badge => '条文に基づく算出';
+
+  @override
+  String get onbSlide3Title => '手順チェックリスト';
+
+  @override
+  String get onbSlide3Sub => 'いざという時に順番どおり';
+
+  @override
+  String get onbSlide3Badge => '広告なし・登録不要';
+
+  @override
+  String get onbSlide4Title => 'いつでも開ける';
+
+  @override
+  String get onbSlide4Sub => 'オフラインで動作、データは端末内';
+
+  @override
+  String get onbSlide4Badge => '端末内に保存';
+
+  @override
+  String copyOvertimeSummary(String salary, String hours, String pay) {
+    return 'RuleBook 残業代シミュレーション\n給与：$salary\n時間：$hours\n残業代見込み：$pay\n根拠：PP 35/2021';
+  }
+
+  @override
+  String copySeveranceSummary(
+    String wage,
+    String years,
+    String months,
+    String reason,
+    String pesangon,
+    String upmk,
+    String uph,
+    String total,
+    String basis,
+  ) {
+    return 'RuleBook 退職補償シミュレーション\n給与：$wage\n勤続年数：$years年$monthsか月\n理由：$reason\n退職金：$pesangon\nUPMK：$upmk\nUPH：$uph\n合計：$total\n根拠：$basis';
+  }
+
+  @override
+  String copyThrSummary(String wage, String months, String pay) {
+    return 'RuleBook 祝日手当（THR）シミュレーション\n給与：$wage\n勤続期間：$monthsか月\nTHR 支給額：$pay\n祝日の7日前までに支払い';
+  }
+
+  @override
+  String get shareTrailingNote =>
+      'RuleBook で数百の法令・業務フローを検索：https://rulebook.faishal.id';
+
+  @override
+  String shareCardVerifiedOn(String date) {
+    return '確認日：$date';
+  }
 }

@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "kualitas-data-sop-vs-kuantitas-offline",
-    "en": "sop-data-quality-vs-quantity",
-    "ar": "sop-6",
-    "jv": "pandhuan-sop-rulebook-6",
-    "su": "pituduh-sop-rulebook-6",
-    "zh": "rulebook-sop-实用指南-6",
-    "ja": "rulebooksop-ガイド-6"
+    "id": "sop-yang-datanya-bisa-dipercaya",
+    "en": "sop-whose-records-you-can-trust",
+    "ar": "almalwmat-almhma-la-ythql-fthh",
+    "jv": "sop-sing-dhatae-bisa-dipercaya",
+    "su": "sop-anu-datana-bisa-dipercaya",
+    "zh": "da-kai-bu-fei-jin-de-zhong-yao-xin-xi",
+    "ja": "hiraku-noga-okkuu-ninaranai-taisetsu-na-jouhou"
   },
   "titles": {
-    "id": "Kualitas Data SOP vs Kuantitas",
-    "en": "SOP Data Quality vs Quantity",
-    "ar": "SOP — دليل RuleBook",
-    "jv": "Pandhuan: Kualitas Data SOP vs Kuantitas",
-    "su": "Pituduh: Kualitas Data SOP vs Kuantitas",
-    "zh": "RuleBook · SOP 实用指南",
-    "ja": "RuleBook｜SOP ガイド"
+    "id": "SOP yang datanya bisa dipercaya",
+    "en": "SOP whose records you can trust",
+    "ar": "المعلومات المهمة لا يثقل فتحه",
+    "jv": "SOP sing dhataé bisa dipercaya",
+    "su": "SOP anu datana bisa dipercaya",
+    "zh": "打开不费劲的重要信息",
+    "ja": "開くのが億劫にならない大切な情報"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "SOP yang datanya bisa dipercaya: kenapa catatan sering putus, versi paling kecil untuk menjaga kualitas, dan cara kembali setelah jeda.",
+    "en": "SOP whose records you can trust: why entries break down, the smallest version that protects quality, and how to return after a gap.",
+    "ar": "SOP الذي تثق ببياناته: لماذا تتفكك السجلات، وأصغر نسخة تحفظ الجودة، وكيف تعود بعد فجوة زمنية.",
+    "ja": "続けられるSOPの記録。記録が途切れる理由、品質を保つ最小版、空白があった後に戻す方法を解説します。",
+    "zh": "值得信赖的SOP记录：记录为何会乱，能保证质量的最小版本，以及间隔之后如何回到正轨。",
+    "jv": "SOP sing datané bisa dipercaya: kenapa cathetan kerep ambyar, versi paling cilik kanggo njaga kualitas, lan cara bali sawisé jeda.",
+    "su": "SOP nu datana bisa dipercaya: naha catetan sering ambruk, versi pangleutikna pikeun ngajaga kualitas, jeung cara balik sanggeus jeda."
+  }
 }

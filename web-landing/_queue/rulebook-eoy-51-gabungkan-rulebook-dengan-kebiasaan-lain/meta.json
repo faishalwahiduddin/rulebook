@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "gabungkan-rulebook-dengan-kebiasaan-lain-harian",
-    "en": "stack-rulebook-with-other-habits",
-    "ar": "rulebook-6",
-    "jv": "pandhuan-rulebook-rulebook-6",
-    "su": "pituduh-rulebook-rulebook-6",
-    "zh": "rulebook-rulebook-实用指南-6",
-    "ja": "rulebookrulebook-ガイド-6"
+    "id": "aturan-lalu-lintas-dan-aplikasi-lain-di-ponsel-anda",
+    "en": "aturan-lalu-lintas-and-the-other-apps-on-your-phone",
+    "ar": "qwaad-almrwr-wttbyqat-hatfk-alakhra",
+    "jv": "aturan-lalu-lintas-lan-aplikasi-liya-ing-hp",
+    "su": "aturan-lalu-lintas-jeung-aplikasi-sejen-dina-hp",
+    "zh": "jiao-tong-gui-ze-yu-shou-ji-shang-de-qi-ta-ying-yong",
+    "ja": "koutsuu-ruuru-to-sumaho-no-hokano-apuri"
   },
   "titles": {
-    "id": "Gabungkan RuleBook dengan Kebiasaan Lain",
-    "en": "Stack RuleBook with Other Habits",
-    "ar": "RuleBook — دليل RuleBook",
-    "jv": "Pandhuan: Gabungkan RuleBook dengan Kebiasaan Lain",
-    "su": "Pituduh: Gabungkan RuleBook dengan Kebiasaan Lain",
-    "zh": "RuleBook · RuleBook 实用指南",
-    "ja": "RuleBook｜RuleBook ガイド"
+    "id": "aturan lalu lintas dan aplikasi lain di ponsel Anda",
+    "en": "aturan lalu lintas and the other apps on your phone",
+    "ar": "قواعد المرور وتطبيقات هاتفك الأخرى",
+    "jv": "aturan lalu lintas lan aplikasi liya ing HP",
+    "su": "aturan lalu lintas jeung aplikasi séjén dina HP",
+    "zh": "交通规则与手机上的其他应用",
+    "ja": "交通ルールとスマホの他のアプリ"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Aturan lalu lintas dan aplikasi lain di ponsel Anda: arti praktisnya, versi paling kecil untuk memulai, dan catatan yang tersimpan di perangkat.",
+    "en": "Using aturan lalu lintas and the other apps on your phone: what it means in practice, the smallest version to start with, and notes kept on your device.",
+    "ar": "استخدام aturan lalu lintas وتطبيقات هاتفك الأخرى: معناه العملي، وأصغر نسخة للبدء، والملاحظات المحفوظة على جهازك.",
+    "ja": "スマホの他のアプリと一緒に使う：aturan lalu lintasの実践的な意味、最小版、端末に保存されるメモ。",
+    "zh": "aturan lalu lintas与手机上的其他应用：实际含义、用来起步的最小版本，以及保存在设备上的笔记。",
+    "jv": "Gabungaké aturan lalu lintas lan aplikasi liya ing HP sampeyan: teges ing praktik, versi paling cilik kanggo miwiti, lan cathetan sing kasimpen ing piranti.",
+    "su": "Gabungkeun aturan lalu lintas jeung aplikasi séjén dina HP: hartina dina prak-prakan, versi pangleutikna pikeun mimiti, jeung catetan nu disimpen dina alat."
+  }
 }

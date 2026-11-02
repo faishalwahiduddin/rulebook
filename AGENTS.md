@@ -77,3 +77,21 @@ Before UI redesign work (including Jules cloud sessions), read and run:
 These trees are committed so remote agents (Jules) can load them after clone.
 <!-- jules-design-skills:end -->
 
+<!-- mascot-sheet:begin -->
+## Mascot sheet (50 poses + 50 expressions)
+
+The full character sheet for **Bubu** (burung hantu kerdil (pygmy owl)) lives **outside this repo** in the fleet library
+`../docs/mascots/sheets/rulebook/` (`~/projects/faishal.id/docs/mascots/sheets/rulebook/`). It is on this machine
+only, not in git and not in the app bundle.
+
+- `poses/pose-NN-<id>.png` (01 to 50) and `expressions/expr-NN-<id>.png` (01 to 50): transparent RGBA 1024x1024.
+- `README.md` there: an index of every file (ID, what it shows, QA result). Pick a pose from it by meaning.
+- Pose and expression lists: `../tools/mascot_kits/catalog.py`. How the sheet was made: `../tools/mascot_kits/README.md`.
+- Known gaps: none.
+
+To use one in the app:
+1. Copy only the files `lib/` uses into `assets/mascot/poses/` or `assets/mascot/expressions/` (keep the file name).
+   Downscale to 512 px when shown small. Never copy the whole sheet (about 50 MB).
+2. List each new subfolder under `flutter: assets:` in `pubspec.yaml`: `assets/mascot/` does not include subfolders.
+3. Bump the version (§VER) from the fleet root: `python3 tools/bump_version.py rulebook minor`.
+<!-- mascot-sheet:end -->

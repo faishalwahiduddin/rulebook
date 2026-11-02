@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "6-tanda-catatan-aturan-lalu-lintas-anda-sudah-sehat",
-    "en": "6-signs-your-aturan-lalu-lintas-log-is-healthy",
-    "ar": "aturan-lalu-lintas-9",
-    "jv": "pandhuan-aturan-lalu-lintas-rulebook-9",
-    "su": "pituduh-aturan-lalu-lintas-rulebook-9",
-    "zh": "rulebook-aturan-lalu-lintas-实用指南-9",
-    "ja": "rulebookaturan-lalu-lintas-ガイド-9"
+    "id": "aturan-lalu-lintas-daftar-pilihan-yang-masuk-akal",
+    "en": "aturan-lalu-lintas-a-shortlist-that-makes-sense",
+    "ar": "qwaad-almrwr-khyarat-qlyla-mntqya",
+    "jv": "aturan-lalu-lintas-pilihan-sing-cukup-masuk-akal",
+    "su": "aturan-lalu-lintas-pilihan-anu-asup-akal",
+    "zh": "jiao-tong-gui-ze-zhi-de-kao-lv-de-ji-zhong-xuan-ze",
+    "ja": "koutsuu-ruuru-nattoku-dekiru-sentakushi"
   },
   "titles": {
-    "id": "6 Tanda Catatan aturan lalu lintas Anda Sudah Sehat",
-    "en": "6 Signs Your aturan lalu lintas Log Is Healthy",
-    "ar": "aturan lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: 6 Tanda Catatan aturan lalu lintas Anda Sudah Sehat",
-    "su": "Pituduh: 6 Tanda Catatan aturan lalu lintas Anda Sudah Sehat",
-    "zh": "RuleBook · aturan lalu lintas 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas ガイド"
+    "id": "aturan lalu lintas: daftar pilihan yang masuk akal",
+    "en": "aturan lalu lintas: a shortlist that makes sense",
+    "ar": "قواعد المرور: خيارات قليلة منطقية",
+    "jv": "aturan lalu lintas: pilihan sing cukup masuk akal",
+    "su": "aturan lalu lintas: pilihan anu asup akal",
+    "zh": "交通规则：值得考虑的几种选择",
+    "ja": "交通ルール：納得できる選択肢"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Daftar pilihan aturan lalu lintas yang masuk akal, dengan versi paling kecil, kapan menjalankannya, dan tinjauan mingguan untuk memutuskan.",
+    "en": "Aturan lalu lintas: a shortlist of sensible options, the smallest version to try, when to run it, and a weekly review to help you decide.",
+    "ar": "aturan lalu lintas: قائمة خيارات منطقية، وأصغر نسخة للتجربة، ومتى تشغّلها، ومراجعة أسبوعية تساعدك على اتخاذ القرار.",
+    "ja": "aturan lalu lintas：納得できる選択肢の比較。試す最小版、実行のタイミング、決めるための週次見直し。",
+    "zh": "aturan lalu lintas：合理选项的简短清单，附上可尝试的最小版本、执行时机和帮助决策的每周复盘。",
+    "jv": "Aturan lalu lintas: dhaftar pilihan sing masuk akal, karo versi paling cilik, kapan dilakokaké, lan tinjauan mingguan kanggo mutusaké.",
+    "su": "Aturan lalu lintas: daptar pilihan nu masuk akal, kalawan versi pangleutikna, iraha ngajalankeunana, jeung tinjauan mingguan pikeun mutuskeun."
+  }
 }

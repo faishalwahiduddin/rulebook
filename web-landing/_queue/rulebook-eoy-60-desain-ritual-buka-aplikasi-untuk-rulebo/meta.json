@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "desain-ritual-buka-aplikasi-untuk-rulebook-2026",
-    "en": "app-open-ritual-design-for-rulebook",
-    "ar": "rulebook-7",
-    "jv": "pandhuan-rulebook-rulebook-7",
-    "su": "pituduh-rulebook-rulebook-7",
-    "zh": "rulebook-rulebook-实用指南-7",
-    "ja": "rulebookrulebook-ガイド-7"
+    "id": "aturan-lalu-lintas-yang-tidak-bikin-malas-membuka-app",
+    "en": "aturan-lalu-lintas-that-does-not-feel-like-a-chore-to-open",
+    "ar": "qwaad-almrwr-la-ythql-fthh",
+    "jv": "aturan-lalu-lintas-sing-ora-males-dibukak",
+    "su": "aturan-lalu-lintas-anu-teu-hoream-dibuka",
+    "zh": "da-kai-bu-fei-jin-de-jiao-tong-gui-ze",
+    "ja": "hiraku-noga-okkuu-ninaranai-koutsuu-ruuru"
   },
   "titles": {
-    "id": "Desain Ritual Buka Aplikasi untuk RuleBook",
-    "en": "App-Open Ritual Design for RuleBook",
-    "ar": "RuleBook — دليل RuleBook",
-    "jv": "Pandhuan: Desain Ritual Buka Aplikasi untuk RuleBook",
-    "su": "Pituduh: Desain Ritual Buka Aplikasi untuk RuleBook",
-    "zh": "RuleBook · RuleBook 实用指南",
-    "ja": "RuleBook｜RuleBook ガイド"
+    "id": "aturan lalu lintas yang tidak bikin malas membuka app",
+    "en": "aturan lalu lintas that does not feel like a chore to open",
+    "ar": "قواعد المرور لا يثقل فتحه",
+    "jv": "aturan lalu lintas sing ora males dibukak",
+    "su": "aturan lalu lintas anu teu hoream dibuka",
+    "zh": "打开不费劲的交通规则",
+    "ja": "開くのが億劫にならない交通ルール"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Aturan lalu lintas yang tidak bikin malas membuka aplikasi: kenapa kebiasaan putus, versi paling kecil, dan cara kembali setelah jeda.",
+    "en": "Making aturan lalu lintas that does not feel like a chore to open: why habits break, the smallest version to try, and how to return after a pause.",
+    "ar": "aturan lalu lintas بطريقة لا تجعل فتح التطبيق عبئاً: لماذا تنقطع العادات، وأصغر نسخة للتجربة، وكيف تعود بعد توقف.",
+    "ja": "aturan lalu lintasを開くのが億劫にならない工夫。習慣が途切れる理由、試す最小版、休止後の戻り方。",
+    "zh": "让人打开不觉得麻烦的aturan lalu lintas：习惯为何中断，值得尝试的最小版本，以及停顿后如何回来。",
+    "jv": "Aturan lalu lintas sing ora males dibukak: kenapa kebiasan ambyar, versi paling cilik kanggo nyoba, lan cara bali sawisé jeda.",
+    "su": "Aturan lalu lintas nu teu hoream dibuka: naha kabiasaan eureun, versi pangleutikna pikeun dicoba, jeung cara balik sanggeus jeda."
+  }
 }

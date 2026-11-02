@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "sop-regulasi-offline-2",
-    "en": "sop-regulasi-offline",
-    "ar": "sop-regulasi-offline-2",
-    "jv": "pandhuan-sop-regulasi-offline-rulebook-2",
-    "su": "pituduh-sop-regulasi-offline-rulebook-2",
-    "zh": "rulebook-sop-regulasi-offline-实用指南-2",
-    "ja": "rulebooksop-regulasi-offline-ガイド-2"
+    "id": "faq-mode-offline-jawaban-yang-sering-dicari",
+    "en": "sop-regulasi-offline-faq-the-questions-people-actually-ask",
+    "ar": "almalwmat-almhma-wttbyqat-hatfk-alakhra",
+    "jv": "pitakon-mode-offline-sing-kerep-ditakokake",
+    "su": "patarosan-mode-offline-anu-sering-ditaroskeun",
+    "zh": "zhong-yao-xin-xi-yu-shou-ji-shang-de-qi-ta-ying-yong",
+    "ja": "taisetsu-na-jouhou-to-sumaho-no-hokano-apuri"
   },
   "titles": {
-    "id": "FAQ sop regulasi offline: jawaban singkat yang dipakai",
-    "en": "sop regulasi offline — Practical Q&amp;A",
-    "ar": "sop regulasi offline — دليل RuleBook",
-    "jv": "Pandhuan: FAQ sop regulasi offline: jawaban singkat yang dipakai",
-    "su": "Pituduh: FAQ sop regulasi offline: jawaban singkat yang dipakai",
-    "zh": "RuleBook · sop regulasi offline 实用指南",
-    "ja": "RuleBook｜sop regulasi offline ガイド"
+    "id": "FAQ mode offline: jawaban yang sering dicari",
+    "en": "sop regulasi offline FAQ: the questions people actually ask",
+    "ar": "المعلومات المهمة وتطبيقات هاتفك الأخرى",
+    "jv": "Pitakon mode offline sing kerep ditakokaké",
+    "su": "Patarosan mode offline anu sering ditaroskeun",
+    "zh": "重要信息与手机上的其他应用",
+    "ja": "大切な情報とスマホの他のアプリ"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Pertanyaan umum soal mode offline dijawab singkat: arti praktisnya, versi paling kecil untuk mencoba, dan cara data tetap tersimpan di perangkat.",
+    "en": "Common questions about offline mode, answered briefly: what it means in practice, the smallest version to try, and how data stays on your device.",
+    "ar": "أسئلة شائعة عن الوضع بلا اتصال مع إجابات موجزة: معناه العملي، وأصغر نسخة للتجربة، وكيف تبقى البيانات على جهازك.",
+    "ja": "オフラインモードのよくある質問を短く回答。実践での意味、試せる最小版、データが端末に残る仕組みを説明。",
+    "zh": "关于离线模式的常见问题简答：实际含义、可尝试的最小版本，以及数据如何留在设备上。",
+    "jv": "Pitakon umum babagan mode offline dijawab cekak: teges ing praktik, versi paling cilik kanggo nyoba, lan cara data tetep kasimpen ing piranti.",
+    "su": "Patarosan umum ngeunaan mode offline dijawab ringkas: hartina dina prak-prakan, versi pangleutikna pikeun dicoba, jeung cara data tetep disimpen dina alat."
+  }
 }

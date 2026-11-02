@@ -66,7 +66,7 @@ class _SopScreenState extends ConsumerState<SopScreen> {
           ),
           const SizedBox(height: AppSpacing.md),
           SizedBox(
-            height: 38,
+            height: 44,
             child: ListView.separated(
               padding:
                   const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
@@ -92,14 +92,22 @@ class _SopScreenState extends ConsumerState<SopScreen> {
           const SizedBox(height: AppSpacing.md),
           Expanded(
             child: filtered.isEmpty
-                ? AppEmptyState(
+                ? Padding(
+      // The shell nav bar floats over the body; keep the empty
+      // state clear of it (and of the keyboard).
+      padding: EdgeInsets.only(
+        bottom: AppScroll.shellNavContentHeight +
+            MediaQuery.paddingOf(context).bottom,
+      ),
+      child: AppEmptyState(
                     icon: AppIconData.shield,
                     title: l10n.noSopForCategory,
                     message: l10n.chooseAllCategoryForSop,
                     actionLabel: l10n.categoryAll,
                     onAction: () =>
                         setState(() => _filter = RuleCategory.all),
-                  )
+                  ),
+    )
                 : ListView.separated(
                     padding: AppScroll.listPadding(context),
                     itemCount: filtered.length,
@@ -135,39 +143,47 @@ class _SopFilterChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
-    return PressScale(
-      onTap: onTap,
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          color: selected ? selectedColor : c.surface,
-          borderRadius: BorderRadius.circular(AppRadius.lg),
-          border: Border.all(
-            color: selected
-                ? selectedColor
-                : AppColors.hairlineBorder(context),
-          ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              AppIcon(
-                icon,
-                size: 14,
-                color: selected ? c.onBrand : iconColor,
-                strokeWidth: 1.9,
-              ),
-              const SizedBox(width: 6),
-              Text(
-                label,
-                style: TextStyle(
-                  fontSize: 12.5,
-                  fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
-                  color: selected ? c.onBrand : c.textSecondary,
+    return SizedBox(
+      height: 44,
+      child: PressScale(
+        onTap: onTap,
+        child: Center(
+          child: SizedBox(
+            height: 34,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                color: selected ? selectedColor : c.surface,
+                borderRadius: BorderRadius.circular(AppRadius.lg),
+                border: Border.all(
+                  color: selected
+                      ? selectedColor
+                      : AppColors.hairlineBorder(context),
                 ),
               ),
-            ],
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    AppIcon(
+                      icon,
+                      size: 14,
+                      color: selected ? c.onBrand : iconColor,
+                      strokeWidth: 1.9,
+                    ),
+                    const SizedBox(width: 6),
+                    Text(
+                      label,
+                      style: TextStyle(
+                        fontSize: 12.5,
+                        fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
+                        color: selected ? c.onBrand : c.textSecondary,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
       ),

@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "field-wajib-dalam-satu-entri-regulasi-harian",
-    "en": "required-fields-in-one-regulasi-entry",
-    "ar": "regulasi-5",
-    "jv": "pandhuan-regulasi-rulebook-5",
-    "su": "pituduh-regulasi-rulebook-5",
-    "zh": "rulebook-regulasi-实用指南-5",
-    "ja": "rulebookregulasi-ガイド-5"
+    "id": "regulasi-secara-mendalam-tanpa-muter-muter",
+    "en": "regulasi-explained-without-the-runaround",
+    "ar": "almalwmat-almhma-bshrh-mbashr-bla-lf-aljz-2",
+    "jv": "regulasi-kanthi-jero-tanpa-mubeng-mubeng",
+    "su": "regulasi-diwincik-tanpa-muter-muter",
+    "zh": "zhong-yao-xin-xi-shen-ru-jiang-qing-chu-di-2-pian",
+    "ja": "taisetsu-na-jouhou-wo-toomawari-sezuni-shin-hori-dai-2-kai"
   },
   "titles": {
-    "id": "Field Wajib dalam Satu Entri regulasi",
-    "en": "Required Fields in One regulasi Entry",
-    "ar": "regulasi — دليل RuleBook",
-    "jv": "Pandhuan: Field Wajib dalam Satu Entri regulasi",
-    "su": "Pituduh: Field Wajib dalam Satu Entri regulasi",
-    "zh": "RuleBook · regulasi 实用指南",
-    "ja": "RuleBook｜regulasi ガイド"
+    "id": "regulasi secara mendalam tanpa muter-muter",
+    "en": "regulasi, explained without the runaround",
+    "ar": "المعلومات المهمة بشرح مباشر بلا لفّ · الجزء 2",
+    "jv": "regulasi kanthi jero tanpa mubeng-mubeng",
+    "su": "regulasi diwincik tanpa muter-muter",
+    "zh": "重要信息深入讲清楚 · 第2篇",
+    "ja": "大切な情報を遠回りせずに深掘り · 第2回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Regulasi dijelaskan secara mendalam tanpa muter-muter: arti praktisnya, versi paling kecil sebagai titik awal, dan data yang tersimpan di perangkat.",
+    "en": "Regulasi explained in depth without the runaround: what it means in practice, the smallest version as a starting point, and data on your device.",
+    "ar": "شرح regulasi بعمق دون لفّ أو دوران: معناه العملي، وأصغر نسخة كنقطة بداية، والبيانات المحفوظة على جهازك.",
+    "ja": "regulasiを遠回りせずに深く解説。実践での意味、出発点となる最小版、端末に保存されるデータを紹介。",
+    "zh": "深入讲清regulasi，不绕弯子：实际含义、作为起点的最小版本，以及保存在设备上的数据。",
+    "jv": "Regulasi diterangké kanthi jero tanpa mubeng-mubeng: teges ing praktik, versi paling cilik minangka titik wiwitan, lan data ing piranti.",
+    "su": "Regulasi diwincik kalawan jelas tanpa muter-muter: hartina dina prak-prakan, versi pangleutikna salaku titik mimiti, jeung data nu disimpen dina alat."
+  }
 }

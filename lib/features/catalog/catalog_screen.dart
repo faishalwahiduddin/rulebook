@@ -161,7 +161,7 @@ class _CatalogScreenState extends ConsumerState<CatalogScreen> {
                   TextButton.icon(
                     onPressed: _clearAll,
                     style: TextButton.styleFrom(
-                      minimumSize: const Size(0, 32),
+                      minimumSize: const Size(0, 44),
                       padding: const EdgeInsets.symmetric(horizontal: AppSpacing.sm),
                       visualDensity: VisualDensity.compact,
                     ),
@@ -174,13 +174,21 @@ class _CatalogScreenState extends ConsumerState<CatalogScreen> {
           const SizedBox(height: AppSpacing.xs),
           Expanded(
             child: rules.isEmpty
-                ? AppEmptyState(
+                ? Padding(
+      // The shell nav bar floats over the body; keep the empty
+      // state clear of it (and of the keyboard).
+      padding: EdgeInsets.only(
+        bottom: AppScroll.shellNavContentHeight +
+            MediaQuery.paddingOf(context).bottom,
+      ),
+      child: AppEmptyState(
                     icon: AppIconData.search,
                     title: l10n.noRulesMatch,
                     message: l10n.tryOtherKeywords,
                     actionLabel: hasFilter ? l10n.resetFilters : null,
                     onAction: hasFilter ? _clearAll : null,
-                  )
+                  ),
+    )
                 : ListView.separated(
                     padding: AppScroll.listPadding(context),
                     itemCount: rules.length,
@@ -273,7 +281,7 @@ class _QuickChips extends StatelessWidget {
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
     return SizedBox(
-      height: 34,
+      height: 44,
       child: ListView.separated(
         padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
         scrollDirection: Axis.horizontal,
@@ -305,7 +313,7 @@ class _CategoryRail extends StatelessWidget {
     final c = AppColors.of(context);
     final l10n = AppLocalizations.of(context)!;
     return SizedBox(
-      height: 38,
+      height: 44,
       child: ListView.separated(
         padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
         scrollDirection: Axis.horizontal,
@@ -350,41 +358,49 @@ class _SoftChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
-    return PressScale(
-      onTap: onTap,
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          color: selected ? selectedColor : c.surface,
-          borderRadius: BorderRadius.circular(AppRadius.lg),
-          border: Border.all(
-            color: selected
-                ? selectedColor
-                : AppColors.hairlineBorder(context),
-          ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              if (icon != null) ...[
-                AppIcon(
-                  icon!,
-                  size: 14,
-                  color: iconColor ?? (selected ? c.onBrand : c.textMuted),
-                  strokeWidth: 1.9,
-                ),
-                const SizedBox(width: 6),
-              ],
-              Text(
-                label,
-                style: TextStyle(
-                  fontSize: 12.5,
-                  fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
-                  color: selected ? c.onBrand : c.textSecondary,
+    return SizedBox(
+      height: 44,
+      child: PressScale(
+        onTap: onTap,
+        child: Center(
+          child: SizedBox(
+            height: 34,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                color: selected ? selectedColor : c.surface,
+                borderRadius: BorderRadius.circular(AppRadius.lg),
+                border: Border.all(
+                  color: selected
+                      ? selectedColor
+                      : AppColors.hairlineBorder(context),
                 ),
               ),
-            ],
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (icon != null) ...[
+                      AppIcon(
+                        icon!,
+                        size: 14,
+                        color: iconColor ?? (selected ? c.onBrand : c.textMuted),
+                        strokeWidth: 1.9,
+                      ),
+                      const SizedBox(width: 6),
+                    ],
+                    Text(
+                      label,
+                      style: TextStyle(
+                        fontSize: 12.5,
+                        fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
+                        color: selected ? c.onBrand : c.textSecondary,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
       ),

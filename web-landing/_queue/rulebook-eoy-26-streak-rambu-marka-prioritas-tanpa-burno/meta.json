@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "streak-rambu-marka-prioritas-tanpa-burnout-praktis",
-    "en": "rambu-marka-prioritas-streaks-without-burnout-practical",
-    "ar": "rambu-marka-prioritas-3",
-    "jv": "pandhuan-rambu-marka-prioritas-rulebook-3",
-    "su": "pituduh-rambu-marka-prioritas-rulebook-3",
-    "zh": "rulebook-rambu-marka-prioritas-实用指南-3",
-    "ja": "rulebookrambu-marka-prioritas-ガイド-3"
+    "id": "membangun-kebiasaan-rambu-marka-prioritas-tanpa-burnout",
+    "en": "build-a-rambu-marka-prioritas-habit-without-burnout",
+    "ar": "alahtfaz-balmalwmat-almhma-hyn-tdaf-alhmasa",
+    "jv": "mbangun-kebiasan-rambu-marka-prioritas-tanpa-kesel",
+    "su": "ngawangun-kabiasaan-rambu-marka-prioritas-tanpa-kacape",
+    "zh": "re-qing-xia-jiang-shi-ru-he-shou-zhu-zhong-yao-xin-xi",
+    "ja": "yaru-kiga-saga-tta-nichi-no-taisetsu-na-jouhou"
   },
   "titles": {
-    "id": "Streak rambu marka prioritas tanpa Burnout",
-    "en": "rambu marka prioritas Streaks Without Burnout (Practical)",
-    "ar": "rambu marka prioritas — دليل RuleBook",
-    "jv": "Pandhuan: Streak rambu marka prioritas tanpa Burnout",
-    "su": "Pituduh: Streak rambu marka prioritas tanpa Burnout",
-    "zh": "RuleBook · rambu marka prioritas 实用指南",
-    "ja": "RuleBook｜rambu marka prioritas ガイド"
+    "id": "Membangun kebiasaan rambu marka prioritas tanpa burnout",
+    "en": "Build a rambu marka prioritas habit without burnout",
+    "ar": "الاحتفاظ بـالمعلومات المهمة حين تضعف الحماسة",
+    "jv": "Mbangun kebiasan rambu marka prioritas tanpa kesel",
+    "su": "Ngawangun kabiasaan rambu marka prioritas tanpa kacapé",
+    "zh": "热情下降时如何守住重要信息",
+    "ja": "やる気が下がった日の大切な情報"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Membangun kebiasaan rambu marka prioritas tanpa burnout: kenapa semangat turun, versi paling kecil, dan cara kembali setelah bolong beberapa hari.",
+    "en": "Building a rambu marka prioritas habit without burnout: why motivation drops, the smallest version to keep, and how to resume after missed days.",
+    "ar": "بناء عادة rambu marka prioritas دون احتراق: لماذا يخفت الحماس، وأصغر نسخة للحفاظ عليها، وكيف تعود بعد أيام فائتة.",
+    "ja": "やる気が下がってもrambu marka prioritasを続けるには。最小版を守る方法と、数日空いた後の戻り方。",
+    "zh": "热情下降时如何守住rambu marka prioritas：为何动力会减退，要保持的最小版本，以及漏掉几天后如何恢复。",
+    "jv": "Mbangun kebiasan rambu marka prioritas tanpa burnout: kenapa semangat mudhun, versi paling cilik, lan cara bali sawisé bolong sawetara dina.",
+    "su": "Ngawangun kabiasaan rambu marka prioritas tanpa burnout: naha sumangetna turun, versi pangleutikna, jeung cara balik sanggeus bolong sababaraha poé."
+  }
 }

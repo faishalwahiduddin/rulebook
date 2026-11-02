@@ -1,0 +1,85 @@
+{
+  "title": "How to review aturan lalu lintas every week",
+  "description": "How to review aturan lalu lintas each week, covering a short check-in, on-device storage, and the steps to return after a pause.",
+  "badge": "safety · offline",
+  "answer": "When it matters, aturan lalu lintas lives in three places, and the first one you open is already stale. RuleBook keeps aturan lalu lintas on-device, so it stays readable with no data plan and no account.",
+  "toc": [
+    "The weekly check",
+    "Stored on your device",
+    "After a gap"
+  ],
+  "sections": [
+    {
+      "h2": "The weekly check",
+      "p": "Once a week, look at the part that breaks most often and shrink the target instead of adding willpower.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Stored on your device",
+      "p": "RuleBook keeps aturan lalu lintas on-device, so it stays readable with no data plan and no account.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "After a gap",
+      "p": "If you miss several days, do not wipe history. Open the last entry, fill in one day, then close.",
+      "h3": null,
+      "p3": null
+    }
+  ],
+  "table": {
+    "caption": "A working frame for aturan lalu lintas",
+    "headers": [
+      "Step",
+      "Minimum",
+      "Done when"
+    ],
+    "rows": [
+      [
+        "Emergency card",
+        "contacts + location",
+        "opens offline"
+      ],
+      [
+        "Bookmark",
+        "last position",
+        "resumable tomorrow"
+      ],
+      [
+        "Weekly review",
+        "one adjustment",
+        "applied Monday"
+      ]
+    ]
+  },
+  "list": [
+    "Pick one fixed time, not “whenever there is room”.",
+    "Open RuleBook when that time arrives, not later tonight.",
+    "Note one blocker, not a long excuse.",
+    "Back up before you switch phones."
+  ],
+  "faqs": [
+    [
+      "Can I open aturan lalu lintas offline?",
+      "Yes. RuleBook keeps everything on-device, so no data plan is needed."
+    ],
+    [
+      "Do I need an account first?",
+      "No. Start without login; export a backup from time to time."
+    ],
+    [
+      "Where do I start?",
+      "With the shortest piece. Add scope only after two steady weeks."
+    ],
+    [
+      "What if I miss a few days?",
+      "Do not wipe history. Resume from the last entry and note one blocker."
+    ]
+  ],
+  "cta": [
+    "Start aturan lalu lintas today",
+    "Open RuleBook"
+  ],
+  "slug": "simple-metrics-for-rulebook"
+}

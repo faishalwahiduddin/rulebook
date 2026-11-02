@@ -51,10 +51,13 @@ class ChecklistDetailScreen extends ConsumerWidget {
       body: ListView(
         padding: AppScroll.pagePadding(context, underShellNav: false),
         children: [
-          Pill(
-            label: checklist.category.localizedLabel(l10n),
-            icon: checklist.category.icon,
-            tone: checklist.category.accent(c),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Pill(
+              label: checklist.category.localizedLabel(l10n),
+              icon: checklist.category.icon,
+              tone: checklist.category.accent(c),
+            ),
           ),
           const SizedBox(height: AppSpacing.md),
           Text(checklist.title, style: theme.textTheme.headlineSmall),

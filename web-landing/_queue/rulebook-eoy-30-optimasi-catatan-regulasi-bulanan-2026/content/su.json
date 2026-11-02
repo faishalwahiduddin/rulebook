@@ -1,0 +1,85 @@
+{
+  "title": "regulasi lanjutan sanggeus rutinitas mantep",
+  "description": "Regulasi lanjutan sanggeus rutinitas mapan: hartina dina prak-prakan, versi pangleutikna nu kudu dipertahankeun, jeung tempat data disimpen.",
+  "badge": "kaamanan · offline",
+  "answer": "Nalika diperlukeun, regulasi sumebar di tilu tempat—anu dibuka heula gé geus lami. RuleBook nyimpen regulasi dina alat, jadi tetep kabuka tanpa kuota jeung tanpa akun.",
+  "toc": [
+    "Hartina regulasi dina prakték",
+    "Versi pangleutikna",
+    "Kasimpen dina alat"
+  ],
+  "sections": [
+    {
+      "h2": "Hartina regulasi dina prakték",
+      "p": "Dina praktékna, regulasi téh bukti tanggalan anu bisa dibuka deui—lain niat anu ngan diinget-inget.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Versi pangleutikna",
+      "p": "Simpen hiji kartu: kontak, lokasi, jeung nomer penting anu bisa dibuka tanpa sinyal.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Kasimpen dina alat",
+      "p": "RuleBook nyimpen regulasi dina alat, jadi tetep kabuka tanpa kuota jeung tanpa akun.",
+      "h3": null,
+      "p3": null
+    }
+  ],
+  "table": {
+    "caption": "Rangka regulasi",
+    "headers": [
+      "Léngkah",
+      "Eusi minimal",
+      "Bérés lamun"
+    ],
+    "rows": [
+      [
+        "Kartu darurat",
+        "kontak + lokasi",
+        "bisa dibuka offline"
+      ],
+      [
+        "Pananda",
+        "posisi panungtungan",
+        "bisa diteruskeun isukan"
+      ],
+      [
+        "Evaluasi minggu",
+        "hiji panyesuaian",
+        "diterapkeun Senén"
+      ]
+    ]
+  },
+  "list": [
+    "Tangtukeun hiji waktu tetep, lain “mun sempet”.",
+    "Buka RuleBook basa waktu éta datang, ulah engké peuting.",
+    "Catet hiji halangan, lain alesan panjang.",
+    "Cadangkeun data saméméh ganti HP."
+  ],
+  "faqs": [
+    [
+      "Naha regulasi bisa dibuka offline?",
+      "Bisa. RuleBook nyimpen kabéh dina alat, jadi teu butuh kuota."
+    ],
+    [
+      "Kudu akun heula?",
+      "Teu. Mimitian tanpa login; cadangkeun data sakapeung."
+    ],
+    [
+      "Mimitian ti mana?",
+      "Ti bagian pangpondokna. Tambahan yén geus dua minggu stabil."
+    ],
+    [
+      "Lamun bolong sababaraha poé?",
+      "Ulah mupus riwayat. Teraskeun tina catetan panungtungan jeung catet hiji halangan."
+    ]
+  ],
+  "cta": [
+    "Mimitian regulasi poé ieu",
+    "Buka RuleBook"
+  ],
+  "slug": "pituduh-regulasi-rulebook-4"
+}

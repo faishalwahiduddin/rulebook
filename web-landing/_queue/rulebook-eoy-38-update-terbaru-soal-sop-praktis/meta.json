@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "update-terbaru-soal-sop-praktis",
-    "en": "latest-practical-update-on-sop-practical",
-    "ar": "sop-5",
-    "jv": "pandhuan-sop-rulebook-5",
-    "su": "pituduh-sop-rulebook-5",
-    "zh": "rulebook-sop-实用指南-5",
-    "ja": "rulebooksop-ガイド-5"
+    "id": "sop-di-2026-apa-yang-berubah",
+    "en": "sop-in-2026-what-changed",
+    "ar": "almalwmat-almhma-fy-2026-ma-aldhy-tghyr",
+    "jv": "sop-ing-2026-apa-sing-owah",
+    "su": "sop-taun-2026-naon-anu-robah",
+    "zh": "2026-nian-de-zhong-yao-xin-xi-you-shen-me-bian-hua",
+    "ja": "2026-nen-no-taisetsu-na-jouhou-nani-ga-kawa-ttaka"
   },
   "titles": {
-    "id": "Update Terbaru Soal SOP",
-    "en": "Latest Practical Update on SOP (Practical)",
-    "ar": "SOP — دليل RuleBook",
-    "jv": "Pandhuan: Update Terbaru Soal SOP",
-    "su": "Pituduh: Update Terbaru Soal SOP",
-    "zh": "RuleBook · SOP 实用指南",
-    "ja": "RuleBook｜SOP ガイド"
+    "id": "SOP di 2026: apa yang berubah",
+    "en": "SOP in 2026: what changed",
+    "ar": "المعلومات المهمة في 2026: ما الذي تغيّر",
+    "jv": "SOP ing 2026: apa sing owah",
+    "su": "SOP taun 2026: naon anu robah",
+    "zh": "2026 年的重要信息：有什么变化",
+    "ja": "2026年の大切な情報：何が変わったか"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "SOP di 2026: apa yang berubah dibanding sebelumnya, arti praktisnya, versi paling kecil untuk dicoba, dan penyimpanan catatan di perangkat.",
+    "en": "SOP in 2026: what has changed since before, what it means in practice, the smallest version to try, and how notes stay on your device.",
+    "ar": "SOP في 2026: ما الذي تغيّر مقارنة بالسابق، ومعناه العملي، وأصغر نسخة للتجربة، وكيف تبقى الملاحظات على جهازك.",
+    "ja": "2026年のSOP：以前と比べて何が変わったか。実践での意味、試す最小版、端末に保存されるメモについて。",
+    "zh": "2026年的SOP：与以前相比有什么变化，实际含义，可尝试的最小版本，以及笔记如何留在设备上。",
+    "jv": "SOP ing 2026: apa sing owah dibandhingaké sadurungé, teges ing praktik, versi paling cilik kanggo nyoba, lan cathetan kasimpen ing piranti.",
+    "su": "SOP taun 2026: naon nu robah dibandingkeun samemeh, hartina dina prak-prakan, versi pangleutikna pikeun dicoba, jeung catetan disimpen dina alat."
+  }
 }

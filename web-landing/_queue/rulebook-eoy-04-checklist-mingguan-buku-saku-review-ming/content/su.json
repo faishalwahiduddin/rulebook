@@ -1,0 +1,85 @@
+{
+  "title": "Daptar pariksa buku saku dina hiji layar",
+  "description": "Daptar pariksa buku saku dina hiji layar pikeun pamaca Indonésia: versi pangleutikna, iraha ngajalankeunana, jeung tinjauan mingguan supaya tetep konsisten.",
+  "badge": "kaamanan · offline",
+  "answer": "Nalika diperlukeun, buku saku sumebar di tilu tempat—anu dibuka heula gé geus lami. RuleBook nyimpen buku saku dina alat, jadi tetep kabuka tanpa kuota jeung tanpa akun.",
+  "toc": [
+    "Versi pangleutikna",
+    "Iraha ngalakukeunana",
+    "Tinjauan unggal minggu"
+  ],
+  "sections": [
+    {
+      "h2": "Versi pangleutikna",
+      "p": "Simpen hiji kartu: kontak, lokasi, jeung nomer penting anu bisa dibuka tanpa sinyal.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Iraha ngalakukeunana",
+      "p": "Anyarkeun kartuna unggal bulan, atawa pas aya nomer jeung alamat anu robah.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Tinjauan unggal minggu",
+      "p": "Saminggu sakali, tempo bagian anu paling sering bolong, tuluy leutikan targetna.",
+      "h3": null,
+      "p3": null
+    }
+  ],
+  "table": {
+    "caption": "Rangka buku saku",
+    "headers": [
+      "Léngkah",
+      "Eusi minimal",
+      "Bérés lamun"
+    ],
+    "rows": [
+      [
+        "Kartu darurat",
+        "kontak + lokasi",
+        "bisa dibuka offline"
+      ],
+      [
+        "Pananda",
+        "posisi panungtungan",
+        "bisa diteruskeun isukan"
+      ],
+      [
+        "Evaluasi minggu",
+        "hiji panyesuaian",
+        "diterapkeun Senén"
+      ]
+    ]
+  },
+  "list": [
+    "Tangtukeun hiji waktu tetep, lain “mun sempet”.",
+    "Buka RuleBook basa waktu éta datang, ulah engké peuting.",
+    "Catet hiji halangan, lain alesan panjang.",
+    "Cadangkeun data saméméh ganti HP."
+  ],
+  "faqs": [
+    [
+      "Naha buku saku bisa dibuka offline?",
+      "Bisa. RuleBook nyimpen kabéh dina alat, jadi teu butuh kuota."
+    ],
+    [
+      "Kudu akun heula?",
+      "Teu. Mimitian tanpa login; cadangkeun data sakapeung."
+    ],
+    [
+      "Mimitian ti mana?",
+      "Ti bagian pangpondokna. Tambahan yén geus dua minggu stabil."
+    ],
+    [
+      "Lamun bolong sababaraha poé?",
+      "Ulah mupus riwayat. Teraskeun tina catetan panungtungan jeung catet hiji halangan."
+    ]
+  ],
+  "cta": [
+    "Mimitian buku saku poé ieu",
+    "Buka RuleBook"
+  ],
+  "slug": "pituduh-buku-saku-rulebook"
+}

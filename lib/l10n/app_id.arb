@@ -501,5 +501,94 @@
   "tierReader": "Pembaca Hukum",
   "tierLearner": "Pemerhati Aturan",
   "tierScholar": "Cendekia Hukum",
-  "tierExpert": "Pakar Regulasi"
+  "tierExpert": "Pakar Regulasi",
+  "appTitle": "RuleBook",
+  "appTagline": "Aturan, regulasi & SOP dalam saku",
+  "loadingLabel": "Memuat…",
+  "onbSkip": "Lewati",
+  "onbNext": "Lanjut",
+  "onbGetStarted": "Mulai Sekarang",
+  "onbPrivacyHeadline": "Privasi & Offline Terjamin",
+  "onbPrivacyDetail": "Semua data tersimpan aman di perangkat Anda tanpa pelacak.",
+  "onbSlide1Title": "Aturan dalam saku",
+  "onbSlide1Sub": "Lalu lintas, ketenagakerjaan, konsumen",
+  "onbSlide1Badge": "100% Offline & Privat",
+  "onbSlide2Title": "Kalkulator denda",
+  "onbSlide2Sub": "Tilang, lembur, pesangon & THR",
+  "onbSlide2Badge": "Berbasis dasar hukum",
+  "onbSlide3Title": "Checklist SOP",
+  "onbSlide3Sub": "Langkah demi langkah saat darurat",
+  "onbSlide3Badge": "Tanpa Iklan & Tanpa Akun",
+  "onbSlide4Title": "Selalu bisa dibuka",
+  "onbSlide4Sub": "Tanpa internet, data tetap di perangkat",
+  "onbSlide4Badge": "Data Tersimpan di Perangkat",
+  "copyOvertimeSummary": "Simulasi Lembur RuleBook\nGaji: {salary}\nJam: {hours}\nEstimasi upah: {pay}\nDasar: PP 35/2021",
+  "@copyOvertimeSummary": {
+    "placeholders": {
+      "salary": {
+        "type": "String"
+      },
+      "hours": {
+        "type": "String"
+      },
+      "pay": {
+        "type": "String"
+      }
+    }
+  },
+  "copySeveranceSummary": "Simulasi Kompensasi PHK RuleBook\nUpah: {wage}\nMasa kerja: {years} th {months} bln\nAlasan: {reason}\nPesangon: {pesangon}\nUPMK: {upmk}\nUPH: {uph}\nTotal: {total}\nDasar: {basis}",
+  "@copySeveranceSummary": {
+    "placeholders": {
+      "wage": {
+        "type": "String"
+      },
+      "years": {
+        "type": "String"
+      },
+      "months": {
+        "type": "String"
+      },
+      "reason": {
+        "type": "String"
+      },
+      "pesangon": {
+        "type": "String"
+      },
+      "upmk": {
+        "type": "String"
+      },
+      "uph": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "basis": {
+        "type": "String"
+      }
+    }
+  },
+  "copyThrSummary": "Simulasi THR RuleBook\nUpah: {wage}\nMasa kerja: {months} bulan\nHak THR: {pay}\nWajib dibayar paling lambat H-7 hari raya",
+  "@copyThrSummary": {
+    "placeholders": {
+      "wage": {
+        "type": "String"
+      },
+      "months": {
+        "type": "String"
+      },
+      "pay": {
+        "type": "String"
+      }
+    }
+  },
+  "shareTrailingNote": "Telusuri ratusan aturan & SOP di RuleBook: https://rulebook.faishal.id",
+  "shareCardVerifiedOn": "Diverifikasi: {date}",
+  "@shareCardVerifiedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

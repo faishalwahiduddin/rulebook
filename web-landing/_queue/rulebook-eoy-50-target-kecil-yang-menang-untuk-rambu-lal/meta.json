@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "target-kecil-yang-menang-untuk-rambu-lalu-lintas-praktis",
-    "en": "small-winning-targets-for-rambu-lalu-lintas-practical",
-    "ar": "rambu-lalu-lintas-6",
-    "jv": "pandhuan-rambu-lalu-lintas-rulebook-6",
-    "su": "pituduh-rambu-lalu-lintas-rulebook-6",
-    "zh": "rulebook-rambu-lalu-lintas-实用指南-6",
-    "ja": "rulebookrambu-lalu-lintas-ガイド-6"
+    "id": "menjaga-rambu-lalu-lintas-saat-semangat-turun",
+    "en": "keeping-rambu-lalu-lintas-going-when-motivation-drops",
+    "ar": "alahtfaz-balmalwmat-almhma-hyn-tdaf-alhmasa-aljz-3",
+    "jv": "njaga-rambu-lalu-lintas-nalika-semangat-mudhun",
+    "su": "ngajaga-rambu-lalu-lintas-nalika-sumanget-turun",
+    "zh": "re-qing-xia-jiang-shi-ru-he-shou-zhu-zhong-yao-xin-xi-di-3-pian",
+    "ja": "yaru-kiga-saga-tta-nichi-no-taisetsu-na-jouhou-dai-3-kai"
   },
   "titles": {
-    "id": "Target Kecil yang Menang untuk rambu lalu lintas",
-    "en": "Small Winning Targets for rambu lalu lintas (Practical)",
-    "ar": "rambu lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: Target Kecil yang Menang untuk rambu lalu lintas",
-    "su": "Pituduh: Target Kecil yang Menang untuk rambu lalu lintas",
-    "zh": "RuleBook · rambu lalu lintas 实用指南",
-    "ja": "RuleBook｜rambu lalu lintas ガイド"
+    "id": "Menjaga rambu lalu lintas saat semangat turun",
+    "en": "Keeping rambu lalu lintas going when motivation drops",
+    "ar": "الاحتفاظ بـالمعلومات المهمة حين تضعف الحماسة · الجزء 3",
+    "jv": "Njaga rambu lalu lintas nalika semangat mudhun",
+    "su": "Ngajaga rambu lalu lintas nalika sumanget turun",
+    "zh": "热情下降时如何守住重要信息 · 第3篇",
+    "ja": "やる気が下がった日の大切な情報 · 第3回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Menjaga rambu lalu lintas saat semangat turun: kenapa kebiasaan putus, versi paling kecil untuk dilanjutkan, dan cara kembali setelah jeda.",
+    "en": "Keeping rambu lalu lintas going when motivation drops: why habits break, the smallest version to continue with, and how to return after a pause.",
+    "ar": "الحفاظ على rambu lalu lintas عندما يخفت الحماس: لماذا تنقطع العادات، وأصغر نسخة للاستمرار بها، وكيف تعود بعد توقف.",
+    "ja": "やる気が落ちてもrambu lalu lintasを続ける方法。習慣が途切れる理由、続けるための最小版、再開の手順。",
+    "zh": "动力下降时如何坚持rambu lalu lintas：习惯为何中断，用来延续的最小版本，以及停下后如何回来。",
+    "jv": "Njaga rambu lalu lintas nalika semangat mudhun: kenapa kebiasan ambyar, versi paling cilik kanggo diterusaké, lan cara bali sawisé jeda.",
+    "su": "Ngajaga rambu lalu lintas nalika sumanget turun: naha kabiasaan eureun, versi pangleutikna pikeun diteruskeun, jeung cara balik sanggeus jeda."
+  }
 }

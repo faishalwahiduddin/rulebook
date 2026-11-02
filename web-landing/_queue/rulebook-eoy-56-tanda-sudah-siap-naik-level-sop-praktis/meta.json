@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "tanda-sudah-siap-naik-level-sop-praktis",
-    "en": "signs-you-re-ready-to-level-up-sop-practical",
-    "ar": "sop-7",
-    "jv": "pandhuan-sop-rulebook-7",
-    "su": "pituduh-sop-rulebook-7",
-    "zh": "rulebook-sop-实用指南-7",
-    "ja": "rulebooksop-ガイド-7"
+    "id": "sop-memutuskan-tanpa-overthinking",
+    "en": "sop-deciding-without-overthinking",
+    "ar": "almalwmat-almhma-qrar-bla-tfkyr-zaid",
+    "jv": "sop-mutusake-tanpa-mikir-kebangeten",
+    "su": "sop-mutuskeun-tanpa-mikir-kaleuleuwihi",
+    "zh": "zhong-yao-xin-xi-bu-bi-jiu-jie-de-xuan-ze-fang-fa",
+    "ja": "taisetsu-na-jouhou-kangae-sugizuni-kime-ru"
   },
   "titles": {
-    "id": "Tanda Sudah Siap Naik Level SOP",
-    "en": "Signs You&#x27;re Ready to Level Up SOP (Practical)",
-    "ar": "SOP — دليل RuleBook",
-    "jv": "Pandhuan: Tanda Sudah Siap Naik Level SOP",
-    "su": "Pituduh: Tanda Sudah Siap Naik Level SOP",
-    "zh": "RuleBook · SOP 实用指南",
-    "ja": "RuleBook｜SOP ガイド"
+    "id": "SOP: memutuskan tanpa overthinking",
+    "en": "SOP: deciding without overthinking",
+    "ar": "المعلومات المهمة: قرار بلا تفكير زائد",
+    "jv": "SOP: mutusaké tanpa mikir kebangeten",
+    "su": "SOP: mutuskeun tanpa mikir kaleuleuwihi",
+    "zh": "重要信息：不必纠结的选择方法",
+    "ja": "大切な情報：考えすぎずに決める"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "SOP: cara memutuskan tanpa overthinking, kenapa keputusan sering macet, data tersimpan di perangkat, dan tinjauan mingguan yang singkat.",
+    "en": "SOP: how to decide without overthinking, why choices stall, where data is stored on your device, and a short weekly review.",
+    "ar": "SOP: كيف تقرر دون إفراط في التفكير، ولماذا تتوقف الخيارات، وأين تُحفظ البيانات على جهازك، ومراجعة أسبوعية قصيرة.",
+    "ja": "SOP：考えすぎずに決める方法。選択が止まる理由、端末内のデータ保存場所、短い週次見直し。",
+    "zh": "SOP：不必过度纠结的决策方法，为何选择会停滞，设备上的数据存放位置，以及简短的每周复盘。",
+    "jv": "SOP: cara mutusaké tanpa mikir kebangeten, kenapa pilihan kerep mandheg, data kasimpen ing piranti, lan tinjauan mingguan sing cekak.",
+    "su": "SOP: cara mutuskeun tanpa mikir kaleuleuwihan, naha pilihan sering macét, data disimpen dina alat, jeung tinjauan mingguan nu singkat."
+  }
 }

@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "setup-sop-offline-tanpa-kuota-praktis",
-    "en": "set-up-offline-sop-without-data-practical",
-    "ar": "sop-3",
-    "jv": "pandhuan-sop-rulebook-3",
-    "su": "pituduh-sop-rulebook-3",
-    "zh": "rulebook-sop-实用指南-3",
-    "ja": "rulebooksop-ガイド-3"
+    "id": "sop-untuk-pengguna-di-indonesia",
+    "en": "sop-for-readers-in-indonesia",
+    "ar": "almalwmat-almhma-khyarat-qlyla-mntqya",
+    "jv": "sop-kanggo-pangguna-ing-indonesia",
+    "su": "sop-pikeun-pamake-di-indonesia",
+    "zh": "zhong-yao-xin-xi-zhi-de-kao-lv-de-ji-zhong-xuan-ze",
+    "ja": "taisetsu-na-jouhou-nattoku-dekiru-sentakushi"
   },
   "titles": {
-    "id": "Setup SOP Offline tanpa Kuota",
-    "en": "Set Up Offline SOP Without Data (Practical)",
-    "ar": "SOP — دليل RuleBook",
-    "jv": "Pandhuan: Setup SOP Offline tanpa Kuota",
-    "su": "Pituduh: Setup SOP Offline tanpa Kuota",
-    "zh": "RuleBook · SOP 实用指南",
-    "ja": "RuleBook｜SOP ガイド"
+    "id": "SOP untuk pengguna di Indonesia",
+    "en": "SOP for readers in Indonesia",
+    "ar": "المعلومات المهمة: خيارات قليلة منطقية",
+    "jv": "SOP kanggo pangguna ing Indonesia",
+    "su": "SOP pikeun pamaké di Indonésia",
+    "zh": "重要信息：值得考虑的几种选择",
+    "ja": "大切な情報：納得できる選択肢"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "SOP untuk pembaca di Indonesia dengan pilihan yang masuk akal: versi paling kecil yang bisa dicoba, kapan menjalankannya, dan tinjauan mingguan.",
+    "en": "SOP for readers in Indonesia with a few sensible choices: the smallest version to try, when to run it, and a light weekly review.",
+    "ar": "SOP لقرّاء إندونيسيا مع خيارات منطقية قليلة: أصغر نسخة يمكن تجربتها، ومتى تشغّلها، ومراجعة أسبوعية خفيفة.",
+    "ja": "インドネシアの読者向けSOP。試しやすい最小版、実行タイミング、軽い週次見直しを無理なく紹介します。",
+    "zh": "给印度尼西亚读者的SOP：几种合理选择，包括可先尝试的最小版本、执行时机和轻量的每周复盘。",
+    "jv": "SOP kanggo pamaca ing Indonésia kanthi pilihan sing masuk akal: versi paling cilik sing bisa dicoba, kapan dilakokaké, lan tinjauan mingguan.",
+    "su": "SOP pikeun pamaca di Indonésia kalawan pilihan nu masuk akal: versi pangleutikna nu bisa dicoba, iraha ngajalankeunana, jeung tinjauan mingguan nu ringan."
+  }
 }

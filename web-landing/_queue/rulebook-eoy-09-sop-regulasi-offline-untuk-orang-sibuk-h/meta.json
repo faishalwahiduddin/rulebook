@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "sop-regulasi-offline-untuk-orang-sibuk-harian",
-    "en": "sop-regulasi-offline-for-busy-people",
-    "ar": "sop-regulasi-offline",
-    "jv": "pandhuan-sop-regulasi-offline-rulebook",
-    "su": "pituduh-sop-regulasi-offline-rulebook",
-    "zh": "rulebook-sop-regulasi-offline-实用指南",
-    "ja": "rulebooksop-regulasi-offline-ガイド"
+    "id": "mode-offline-untuk-orang-yang-waktunya-sempit",
+    "en": "sop-regulasi-offline-for-people-with-no-spare-time",
+    "ar": "almalwmat-almhma-lmn-la-ymlk-wqta",
+    "jv": "mode-offline-kanggo-sing-wektune-sempit",
+    "su": "mode-offline-pikeun-anu-waktosna-heureut",
+    "zh": "shi-jian-hen-shao-de-ren-zen-me-zuo-zhong-yao-xin-xi",
+    "ja": "jikan-ganai-nin-notameno-taisetsu-na-jouhou"
   },
   "titles": {
-    "id": "sop regulasi offline untuk orang yang waktunya sempit",
-    "en": "sop regulasi offline for Busy People",
-    "ar": "sop regulasi offline — دليل RuleBook",
-    "jv": "Pandhuan: sop regulasi offline untuk orang yang waktunya sempit",
-    "su": "Pituduh: sop regulasi offline untuk orang yang waktunya sempit",
-    "zh": "RuleBook · sop regulasi offline 实用指南",
-    "ja": "RuleBook｜sop regulasi offline ガイド"
+    "id": "mode offline untuk orang yang waktunya sempit",
+    "en": "sop regulasi offline for people with no spare time",
+    "ar": "المعلومات المهمة لمن لا يملك وقتاً",
+    "jv": "mode offline kanggo sing wektuné sempit",
+    "su": "mode offline pikeun anu waktosna heureut",
+    "zh": "时间很少的人怎么做重要信息",
+    "ja": "時間がない人のための大切な情報"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Mode offline untuk orang yang waktunya sempit: kapan menjalankannya, versi paling kecil yang tetap bisa dikerjakan, dan cara kembali setelah jeda.",
+    "en": "Offline mode for people short on time: when to run it, the smallest version you can still finish, and how to pick up again after a gap.",
+    "ar": "وضع بلا اتصال لمن لا يملك وقتاً واسعاً: متى تشغّله، وأصغر نسخة يمكنك إنهاؤها، وكيف تعود إلى الروتين بعد انقطاع قصير.",
+    "ja": "時間がない人のためのオフラインモード。実行タイミング、続けられる最小版、間が空いた後の戻り方を紹介。",
+    "zh": "给时间很少的人的离线模式：何时执行、仍能完成的最小版本，以及中断后如何接上，不必追求完美。",
+    "jv": "Mode offline kanggo wong sing wektuné sempit: kapan dilakokaké, versi paling cilik sing isih bisa rampung, lan cara bali sawisé bolong.",
+    "su": "Mode offline pikeun jalma anu waktuna sempit: iraha ngajalankeunana, versi pangleutikna anu tetep bisa rengse, jeung cara balik sanggeus heureut."
+  }
 }

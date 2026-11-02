@@ -1,0 +1,85 @@
+{
+  "title": "Cara memulai aturan lalu lintas tanpa ribet",
+  "description": "Cara memulai aturan lalu lintas tanpa ribet: mulai dari versi paling kecil, tentukan kapan menjalankannya, lalu lakukan tinjauan mingguan yang singkat.",
+  "badge": "keamanan · offline",
+  "answer": "Saat dibutuhkan, aturan lalu lintas tersebar di tiga tempat—dan yang pertama dibuka justru yang usang. RuleBook menyimpan aturan lalu lintas di perangkat, jadi datanya tetap terbuka tanpa kuota dan tanpa akun.",
+  "toc": [
+    "Versi paling kecil",
+    "Kapan menjalankannya",
+    "Tinjauan mingguan"
+  ],
+  "sections": [
+    {
+      "h2": "Versi paling kecil",
+      "p": "Simpan satu kartu berisi kontak, lokasi, dan nomor penting yang bisa dibuka tanpa sinyal.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Kapan menjalankannya",
+      "p": "Perbarui kartunya tiap bulan, atau begitu ada nomor dan alamat yang berubah.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Tinjauan mingguan",
+      "p": "Sekali seminggu, lihat bagian mana yang paling sering bolong, lalu kecilkan target—bukan menambah semangat.",
+      "h3": null,
+      "p3": null
+    }
+  ],
+  "table": {
+    "caption": "Kerangka aturan lalu lintas",
+    "headers": [
+      "Langkah",
+      "Isi minimal",
+      "Selesai bila"
+    ],
+    "rows": [
+      [
+        "Kartu darurat",
+        "kontak + lokasi",
+        "bisa dibuka offline"
+      ],
+      [
+        "Penanda",
+        "posisi terakhir",
+        "bisa dilanjut besok"
+      ],
+      [
+        "Evaluasi minggu",
+        "satu penyesuaian",
+        "diterapkan Senin"
+      ]
+    ]
+  },
+  "list": [
+    "Tetapkan satu waktu tetap, bukan “kapan sempat”.",
+    "Buka RuleBook saat waktu itu tiba, bukan nanti malam.",
+    "Catat satu hambatan, bukan alasan panjang.",
+    "Cadangkan data sebelum ganti ponsel."
+  ],
+  "faqs": [
+    [
+      "Apakah aturan lalu lintas bisa dibuka offline?",
+      "Ya. RuleBook menyimpan semuanya di perangkat, jadi tidak butuh kuota."
+    ],
+    [
+      "Perlu akun dulu?",
+      "Tidak. Mulai tanpa login; cadangkan data secara berkala."
+    ],
+    [
+      "Mulai dari mana?",
+      "Dari bagian terpendek. Tambah cakupan hanya setelah dua minggu stabil."
+    ],
+    [
+      "Kalau bolong beberapa hari?",
+      "Jangan hapus riwayat. Lanjut dari bagian terakhir dan catat satu hambatan."
+    ]
+  ],
+  "cta": [
+    "Mulai aturan lalu lintas hari ini",
+    "Buka RuleBook"
+  ],
+  "slug": "cara-aturan-lalu-lintas-yang-praktis-offline"
+}

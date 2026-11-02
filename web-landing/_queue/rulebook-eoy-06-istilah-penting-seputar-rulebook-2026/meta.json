@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "istilah-penting-seputar-rulebook-2026",
-    "en": "key-terms-around-rulebook",
-    "ar": "rulebook",
-    "jv": "pandhuan-rulebook-rulebook",
-    "su": "pituduh-rulebook-rulebook",
-    "zh": "rulebook-rulebook-实用指南",
-    "ja": "rulebookrulebook-ガイド"
+    "id": "apa-itu-aturan-lalu-lintas-penjelasan-singkat",
+    "en": "what-is-aturan-lalu-lintas-a-short-explanation",
+    "ar": "ma-mana-qwaad-almrwr-shrh-mwjz",
+    "jv": "apa-iku-aturan-lalu-lintas-katrangan-cekak",
+    "su": "naon-eta-aturan-lalu-lintas-katerangan-pondok",
+    "zh": "jiao-tong-gui-ze-shi-shen-me-jian-ming-jie-shi",
+    "ja": "koutsuu-ruuru-toha-mijikai-setsumei"
   },
   "titles": {
-    "id": "Istilah Penting seputar RuleBook",
-    "en": "Key Terms Around RuleBook",
-    "ar": "RuleBook — دليل RuleBook",
-    "jv": "Pandhuan: Istilah Penting seputar RuleBook",
-    "su": "Pituduh: Istilah Penting seputar RuleBook",
-    "zh": "RuleBook · RuleBook 实用指南",
-    "ja": "RuleBook｜RuleBook ガイド"
+    "id": "Apa itu aturan lalu lintas? Penjelasan singkat",
+    "en": "What is aturan lalu lintas? A short explanation",
+    "ar": "ما معنى قواعد المرور؟ شرح موجز",
+    "jv": "Apa iku aturan lalu lintas? Katrangan cekak",
+    "su": "Naon éta aturan lalu lintas? Katerangan pondok",
+    "zh": "交通规则是什么？简明解释",
+    "ja": "交通ルールとは？短い説明"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Arti aturan lalu lintas dalam praktik dijelaskan singkat, lengkap dengan versi paling kecil untuk mencoba dan cara menyimpan catatannya di perangkat.",
+    "en": "What aturan lalu lintas means in practice, explained briefly, along with the smallest version to try and how notes are kept on your device.",
+    "ar": "ما المقصود بـ aturan lalu lintas عملياً؟ شرح موجز مع أصغر نسخة للتجربة، وطريقة حفظ الملاحظات على جهازك دون اتصال دائم.",
+    "ja": "簡単解説：aturan lalu lintasとは何か。実践的な意味、最小版の試し方、端末への保存方法を紹介します。",
+    "zh": "aturan lalu lintas是什么：简要解释实际含义，并介绍最小版本的尝试方法和设备端的保存方式。",
+    "jv": "Apa iku aturan lalu lintas? Katrangan cekak ing praktik, uga versi paling cilik kanggo nyoba lan cara nyimpen cathetan ing piranti sampeyan.",
+    "su": "Naon éta aturan lalu lintas? Katerangan pondok dina prak-prakan, kalebet versi pangleutikna pikeun dicoba jeung cara nyimpen catetan dina alat anjeun."
+  }
 }

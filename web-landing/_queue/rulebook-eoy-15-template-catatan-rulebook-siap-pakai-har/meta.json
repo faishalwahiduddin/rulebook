@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "template-catatan-rulebook-siap-pakai-harian",
-    "en": "ready-to-use-rulebook-log-template",
-    "ar": "rulebook-2",
-    "jv": "pandhuan-rulebook-rulebook-2",
-    "su": "pituduh-rulebook-rulebook-2",
-    "zh": "rulebook-rulebook-实用指南-2",
-    "ja": "rulebookrulebook-ガイド-2"
+    "id": "template-aturan-lalu-lintas-siap-pakai",
+    "en": "a-ready-to-use-aturan-lalu-lintas-template",
+    "ar": "qalb-qwaad-almrwr-jahz-llastkhdam",
+    "jv": "templat-aturan-lalu-lintas-siap-dipigunakake",
+    "su": "citakan-aturan-lalu-lintas-siap-dipake",
+    "zh": "jiao-tong-gui-ze-mu-ban-ke-zhi-jie-tao-yong",
+    "ja": "sugu-tsukae-ru-koutsuu-ruurutenpureeto"
   },
   "titles": {
-    "id": "Template Catatan RuleBook Siap Pakai",
-    "en": "Ready-to-Use RuleBook Log Template",
-    "ar": "RuleBook — دليل RuleBook",
-    "jv": "Pandhuan: Template Catatan RuleBook Siap Pakai",
-    "su": "Pituduh: Template Catatan RuleBook Siap Pakai",
-    "zh": "RuleBook · RuleBook 实用指南",
-    "ja": "RuleBook｜RuleBook ガイド"
+    "id": "Template aturan lalu lintas siap pakai",
+    "en": "A ready-to-use aturan lalu lintas template",
+    "ar": "قالب قواعد المرور جاهز للاستخدام",
+    "jv": "Templat aturan lalu lintas siap dipigunakaké",
+    "su": "Citakan aturan lalu lintas siap dipaké",
+    "zh": "交通规则模板（可直接套用）",
+    "ja": "すぐ使える交通ルールテンプレート"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Templat aturan lalu lintas siap pakai dengan versi paling kecil, panduan kapan menjalankannya, dan kolom tinjauan mingguan yang langsung bisa diisi.",
+    "en": "A ready-to-use aturan lalu lintas template with the smallest version, guidance on when to run it, and a weekly review section you can fill in.",
+    "ar": "قالب جاهز للاستخدام لـ aturan lalu lintas يتضمن أصغر نسخة، وإرشاداً لوقت التشغيل، وقسماً للمراجعة الأسبوعية تملؤه بسهولة.",
+    "ja": "すぐ使えるaturan lalu lintasのテンプレート。最小版、実行タイミングの目安、週次見直し欄を含みます。",
+    "zh": "可直接套用的aturan lalu lintas模板：包含最小版本、执行时机指引，以及可填写的每周复盘栏。",
+    "jv": "Templat aturan lalu lintas siap pakai, kalebu versi paling cilik, pandhuan kapan dilakokaké, lan bagian tinjauan mingguan sing bisa langsung diisi.",
+    "su": "Citakan aturan lalu lintas siap pakai, kaasup versi pangleutikna, tungtunan iraha ngajalankeunana, jeung bagian tinjauan mingguan nu gampang diisi."
+  }
 }

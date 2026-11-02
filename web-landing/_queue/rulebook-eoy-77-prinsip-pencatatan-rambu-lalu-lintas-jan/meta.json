@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "prinsip-pencatatan-rambu-lalu-lintas-jangka-panjang-offline",
-    "en": "long-term-rambu-lalu-lintas-logging-principles",
-    "ar": "rambu-lalu-lintas-9",
-    "jv": "pandhuan-rambu-lalu-lintas-rulebook-9",
-    "su": "pituduh-rambu-lalu-lintas-rulebook-9",
-    "zh": "rulebook-rambu-lalu-lintas-实用指南-9",
-    "ja": "rulebookrambu-lalu-lintas-ガイド-9"
+    "id": "rambu-lalu-lintas-panduan-yang-tetap-relevan",
+    "en": "rambu-lalu-lintas-a-guide-that-stays-useful",
+    "ar": "almalwmat-almhma-dlyl-ybqa-mfyda-aljz-3",
+    "jv": "rambu-lalu-lintas-pandhuan-sing-tetep-migunani",
+    "su": "rambu-lalu-lintas-pituduh-anu-tetep-mangpaat",
+    "zh": "zhong-yao-xin-xi-chang-qi-you-xiao-de-zhi-nan-di-3-pian",
+    "ja": "taisetsu-na-jouhou-nagaku-tsukae-ru-gaido-dai-3-kai"
   },
   "titles": {
-    "id": "Prinsip Pencatatan rambu lalu lintas Jangka Panjang",
-    "en": "Long-Term rambu lalu lintas Logging Principles",
-    "ar": "rambu lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: Prinsip Pencatatan rambu lalu lintas Jangka Panjang",
-    "su": "Pituduh: Prinsip Pencatatan rambu lalu lintas Jangka Panjang",
-    "zh": "RuleBook · rambu lalu lintas 实用指南",
-    "ja": "RuleBook｜rambu lalu lintas ガイド"
+    "id": "rambu lalu lintas: panduan yang tetap relevan",
+    "en": "rambu lalu lintas: a guide that stays useful",
+    "ar": "المعلومات المهمة: دليل يبقى مفيداً · الجزء 3",
+    "jv": "rambu lalu lintas: pandhuan sing tetep migunani",
+    "su": "rambu lalu lintas: pituduh anu tetep mangpaat",
+    "zh": "重要信息：长期有效的指南 · 第3篇",
+    "ja": "大切な情報：長く使えるガイド · 第3回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Rambu lalu lintas: panduan yang tetap relevan, dengan arti praktisnya, versi paling kecil untuk memulai, dan catatan yang tersimpan di perangkat.",
+    "en": "Rambu lalu lintas: a guide that stays useful over time, covering what it means in practice, the smallest version to begin with, and on-device notes.",
+    "ar": "rambu lalu lintas: دليل يبقى مفيداً مع الوقت، يشرح معناه العملي، وأصغر نسخة للبدء بها، والملاحظات المحفوظة على جهازك.",
+    "ja": "rambu lalu lintas：長く役立つガイド。実践での意味、始めるための最小版、端末に残るメモについて紹介します。",
+    "zh": "rambu lalu lintas：长期有用的指南，说明实际含义、开始时的最小版本，以及保存在设备上的笔记。",
+    "jv": "Rambu lalu lintas: pandhuan sing tetep migunani, kalebu teges ing praktik, versi paling cilik kanggo miwiti, lan cathetan sing kasimpen ing piranti.",
+    "su": "Rambu lalu lintas: pituduh nu tetep mangpaat, kaasup hartina dina prak-prakan, versi pangleutikna pikeun mimiti, jeung catetan nu disimpen dina alat."
+  }
 }

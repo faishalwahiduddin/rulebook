@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "rulebook-aplikasi-vs-catatan-di-browser-harian",
-    "en": "rulebook-app-vs-browser-notes",
-    "ar": "rulebook-4",
-    "jv": "pandhuan-rulebook-rulebook-4",
-    "su": "pituduh-rulebook-rulebook-4",
-    "zh": "rulebook-rulebook-实用指南-4",
-    "ja": "rulebookrulebook-ガイド-4"
+    "id": "aturan-lalu-lintas-aplikasi-vs-versi-web",
+    "en": "aturan-lalu-lintas-the-app-vs-the-web-version",
+    "ar": "qwaad-almrwr-alttbyq-mqabl-nskha-alwyb",
+    "jv": "aturan-lalu-lintas-aplikasi-utawa-versi-web",
+    "su": "aturan-lalu-lintas-aplikasi-atawa-versi-web",
+    "zh": "jiao-tong-gui-ze-ying-yong-ban-yu-wang-ye-ban",
+    "ja": "koutsuu-ruuru-apuri-han-to-uebu-han"
   },
   "titles": {
-    "id": "RuleBook: Aplikasi vs Catatan di Browser",
-    "en": "RuleBook: App vs Browser Notes",
-    "ar": "RuleBook — دليل RuleBook",
-    "jv": "Pandhuan: RuleBook: Aplikasi vs Catatan di Browser",
-    "su": "Pituduh: RuleBook: Aplikasi vs Catatan di Browser",
-    "zh": "RuleBook · RuleBook 实用指南",
-    "ja": "RuleBook｜RuleBook ガイド"
+    "id": "aturan lalu lintas: aplikasi vs versi web",
+    "en": "aturan lalu lintas: the app vs the web version",
+    "ar": "قواعد المرور: التطبيق مقابل نسخة الويب",
+    "jv": "aturan lalu lintas: aplikasi utawa versi web",
+    "su": "aturan lalu lintas: aplikasi atawa vérsi web",
+    "zh": "交通规则：应用版与网页版",
+    "ja": "交通ルール：アプリ版とウェブ版"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Perbandingan aturan lalu lintas di aplikasi dan versi web: kenapa kebiasaan putus, penyimpanan di perangkat, dan tinjauan mingguan untuk memilih.",
+    "en": "Weighing aturan lalu lintas: the app against the web version, why routines break, where data lives on your device, and a weekly check to decide.",
+    "ar": "مقارنة aturan lalu lintas: التطبيق مقابل النسخة على الويب، ولماذا ينقطع الروتين، وأين تُحفظ البيانات على جهازك، ومراجعة أسبوعية للاختيار.",
+    "ja": "アプリかウェブ版か、aturan lalu lintasの比較。習慣が途切れる理由、端末内の保存、選ぶための週次チェック。",
+    "zh": "应用版与网页版怎么选：aturan lalu lintas为何流程会断，数据在设备上的位置，以及每周检查。",
+    "jv": "Aplikasi lan versi web kanggo aturan lalu lintas, kenapa rutinitas ambyar, nang endi data kasimpen ing piranti, lan tinjauan mingguan kanggo milih.",
+    "su": "Aplikasi jeung vérsi web pikeun aturan lalu lintas, naha rutinitas eureun, di mana data disimpen dina alat, jeung tinjauan mingguan pikeun milih."
+  }
 }

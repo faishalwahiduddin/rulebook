@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "aturan-lalu-lintas-saku-manual-vs-aplikasi-offline",
-    "en": "aturan-lalu-lintas-saku-manual-notes-vs-offline-app",
-    "ar": "aturan-lalu-lintas-saku",
-    "jv": "pandhuan-aturan-lalu-lintas-saku-rulebook",
-    "su": "pituduh-aturan-lalu-lintas-saku-rulebook",
-    "zh": "rulebook-aturan-lalu-lintas-saku-实用指南",
-    "ja": "rulebookaturan-lalu-lintas-saku-ガイド"
+    "id": "aturan-lalu-lintas-saku-catatan-longgar-vs-aplikasi-offline",
+    "en": "aturan-lalu-lintas-saku-loose-notes-vs-an-offline-app",
+    "ar": "almalwmat-almhma-mlahzat-mtfrqa-am-ttbyq-bla-atsal",
+    "jv": "aturan-lalu-lintas-saku-cathetan-longgar-utawa-aplikasi-offline",
+    "su": "aturan-lalu-lintas-saku-catetan-longgar-atawa-aplikasi-offline",
+    "zh": "zhong-yao-xin-xi-ling-san-bi-ji-yu-li-xian-ying-yong-de-cha-bie",
+    "ja": "taisetsu-na-jouhou-memo-to-ofurainapuri-no-chigai"
   },
   "titles": {
-    "id": "aturan lalu lintas saku: catatan longgar vs aplikasi",
-    "en": "aturan lalu lintas saku: Manual Notes vs Offline App",
-    "ar": "aturan lalu lintas saku — دليل RuleBook",
-    "jv": "Pandhuan: aturan lalu lintas saku: catatan longgar vs aplikasi",
-    "su": "Pituduh: aturan lalu lintas saku: catatan longgar vs aplikasi",
-    "zh": "RuleBook · aturan lalu lintas saku 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas saku ガイド"
+    "id": "aturan lalu lintas saku: catatan longgar vs aplikasi offline",
+    "en": "aturan lalu lintas saku: loose notes vs an offline app",
+    "ar": "المعلومات المهمة: ملاحظات متفرقة أم تطبيق بلا اتصال",
+    "jv": "aturan lalu lintas saku: cathetan longgar utawa aplikasi offline",
+    "su": "aturan lalu lintas saku: catetan longgar atawa aplikasi offline",
+    "zh": "重要信息：零散笔记与离线应用的差别",
+    "ja": "大切な情報：メモとオフラインアプリの違い"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Perbandingan aturan lalu lintas saku: mengapa catatan longgar mudah putus, untungnya data tersimpan di perangkat, dan cara tinjauan mingguan.",
+    "en": "Loose notes or an offline app for aturan lalu lintas saku? Why loose notes slip, what on-device storage gives you, and a weekly check.",
+    "ar": "ملاحظات متفرقة أم تطبيق بلا اتصال لـ aturan lalu lintas saku؟ لماذا تتفكك الملاحظات المتفرقة، وما الذي يمنحه الحفظ على الجهاز.",
+    "ja": "aturan lalu lintas sakuはメモか、オフラインアプリか。メモが途切れやすい理由と端末保存の利点を比べます。",
+    "zh": "aturan lalu lintas saku：零散笔记还是离线应用？分析笔记为何容易断，以及设备本地存储的好处。",
+    "jv": "Pilih cathetan longgar utawa aplikasi offline kanggo aturan lalu lintas saku? Kenapa gampang ambyar, gunané data ing piranti, lan priksa mingguan.",
+    "su": "Pilih catetan longgar atawa aplikasi offline pikeun aturan lalu lintas saku? Naha gampang ambruk, mangpaatna data dina alat, jeung pariksa mingguan."
+  }
 }

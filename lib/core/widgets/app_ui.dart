@@ -172,11 +172,20 @@ class AppEmptyState extends StatelessWidget {
   Widget build(BuildContext context) {
     final c = AppColors.of(context);
     final theme = Theme.of(context);
-    return Center(
-      child: Padding(
+    // Centre when there is room, scroll when there is not (keyboard open,
+    // small screens). A bare Center overflows as soon as the body shrinks.
+    return LayoutBuilder(
+      builder: (context, constraints) => SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 24),
-        child: Column(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: constraints.hasBoundedHeight
+                ? (constraints.maxHeight - 48).clamp(0, double.infinity)
+                : 0,
+          ),
+          child: Column(
           mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               width: 64,
@@ -209,6 +218,7 @@ class AppEmptyState extends StatelessWidget {
               ),
             ],
           ],
+          ),
         ),
       ),
     );
@@ -240,7 +250,8 @@ class AppProgressBar extends StatelessWidget {
         builder: (context, v, _) => LinearProgressIndicator(
           value: v,
           minHeight: height,
-          backgroundColor: c.surfaceSunken,
+          // surfaceSunken is invisible on a surface card in dark mode.
+          backgroundColor: c.border,
           valueColor: AlwaysStoppedAnimation(color),
         ),
       ),

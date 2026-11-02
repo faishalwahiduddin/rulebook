@@ -1,0 +1,85 @@
+{
+  "title": "regulasi: what to check before you choose",
+  "description": "Regulasi: what to check before you choose, why choices stall, where data is stored on your device, and a weekly review after you decide.",
+  "badge": "safety · offline",
+  "answer": "When it matters, regulasi lives in three places, and the first one you open is already stale. RuleBook keeps regulasi on-device, so it stays readable with no data plan and no account.",
+  "toc": [
+    "Why it breaks",
+    "Stored on your device",
+    "The weekly check"
+  ],
+  "sections": [
+    {
+      "h2": "Why it breaks",
+      "p": "When it matters, regulasi lives in three places, and the first one you open is already stale.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Stored on your device",
+      "p": "RuleBook keeps regulasi on-device, so it stays readable with no data plan and no account.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "The weekly check",
+      "p": "Once a week, look at the part that breaks most often and shrink the target instead of adding willpower.",
+      "h3": null,
+      "p3": null
+    }
+  ],
+  "table": {
+    "caption": "A working frame for regulasi",
+    "headers": [
+      "Step",
+      "Minimum",
+      "Done when"
+    ],
+    "rows": [
+      [
+        "Emergency card",
+        "contacts + location",
+        "opens offline"
+      ],
+      [
+        "Bookmark",
+        "last position",
+        "resumable tomorrow"
+      ],
+      [
+        "Weekly review",
+        "one adjustment",
+        "applied Monday"
+      ]
+    ]
+  },
+  "list": [
+    "Pick one fixed time, not “whenever there is room”.",
+    "Open RuleBook when that time arrives, not later tonight.",
+    "Note one blocker, not a long excuse.",
+    "Back up before you switch phones."
+  ],
+  "faqs": [
+    [
+      "Can I open regulasi offline?",
+      "Yes. RuleBook keeps everything on-device, so no data plan is needed."
+    ],
+    [
+      "Do I need an account first?",
+      "No. Start without login; export a backup from time to time."
+    ],
+    [
+      "Where do I start?",
+      "With the shortest piece. Add scope only after two steady weeks."
+    ],
+    [
+      "What if I miss a few days?",
+      "Do not wipe history. Resume from the last entry and note one blocker."
+    ]
+  ],
+  "cta": [
+    "Start regulasi today",
+    "Open RuleBook"
+  ],
+  "slug": "criteria-for-choosing-a-regulasi-app"
+}

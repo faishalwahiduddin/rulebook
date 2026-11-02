@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "bahasa-yang-konsisten-saat-mencatat-aturan-lalu-lintas-mingguan",
-    "en": "consistent-language-when-logging-aturan-lalu-lintas",
-    "ar": "aturan-lalu-lintas-8",
-    "jv": "pandhuan-aturan-lalu-lintas-rulebook-8",
-    "su": "pituduh-aturan-lalu-lintas-rulebook-8",
-    "zh": "rulebook-aturan-lalu-lintas-实用指南-8",
-    "ja": "rulebookaturan-lalu-lintas-ガイド-8"
+    "id": "menyusun-aturan-lalu-lintas-yang-enak-dibaca",
+    "en": "writing-aturan-lalu-lintas-notes-people-can-read",
+    "ar": "ktaba-qwaad-almrwr-bshkl-yqra",
+    "jv": "nulis-aturan-lalu-lintas-sing-kepenak-diwaca",
+    "su": "nulis-aturan-lalu-lintas-anu-genah-dibaca",
+    "zh": "ba-jiao-tong-gui-ze-xie-de-rang-ren-du-de-xia-qu",
+    "ja": "yome-ru-koutsuu-ruuru-no-kakikata"
   },
   "titles": {
-    "id": "Bahasa yang Konsisten saat Mencatat aturan lalu lintas",
-    "en": "Consistent Language When Logging aturan lalu lintas — Offline First",
-    "ar": "aturan lalu lintas — دليل RuleBook",
-    "jv": "Pandhuan: Bahasa yang Konsisten saat Mencatat aturan lalu lintas",
-    "su": "Pituduh: Bahasa yang Konsisten saat Mencatat aturan lalu lintas",
-    "zh": "RuleBook · aturan lalu lintas 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas ガイド"
+    "id": "Menyusun aturan lalu lintas yang enak dibaca",
+    "en": "Writing aturan lalu lintas notes people can read",
+    "ar": "كتابة قواعد المرور بشكل يُقرأ",
+    "jv": "Nulis aturan lalu lintas sing kepénak diwaca",
+    "su": "Nulis aturan lalu lintas anu genah dibaca",
+    "zh": "把交通规则写得让人读得下去",
+    "ja": "読める交通ルールの書き方"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Menyusun aturan lalu lintas yang enak dibaca: tinjauan mingguan, catatan yang tersimpan di perangkat, dan cara merapikan isi setelah jeda.",
+    "en": "Writing aturan lalu lintas notes people can read: the weekly check, what stays stored on your device, and how to tidy up entries after a break.",
+    "ar": "كتابة ملاحظات aturan lalu lintas بشكل يُقرأ بسهولة: المراجعة الأسبوعية، وما يُحفظ على جهازك، وكيف ترتب المدخلات بعد توقف.",
+    "ja": "読みやすいaturan lalu lintasのメモの書き方。週次チェック、端末に残る内容、中断後に整理する手順。",
+    "zh": "写出让人读得下去的aturan lalu lintas笔记：每周检查、设备上保存的内容，以及中断后如何整理条目。",
+    "jv": "Nulis aturan lalu lintas sing kepénak diwaca: tinjauan mingguan, cathetan sing kasimpen ing piranti, lan cara ngrapikaké isi sawisé jeda.",
+    "su": "Nulis aturan lalu lintas nu genah dibaca: tinjauan mingguan, catetan nu disimpen dina alat, jeung cara ngarapihkeun eusi sanggeus jeda."
+  }
 }

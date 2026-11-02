@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "sop-panduan-lengkap-untuk-pemula-praktis",
-    "en": "sop-complete-beginner-guide-practical",
-    "ar": "sop",
-    "jv": "pandhuan-sop-rulebook",
-    "su": "pituduh-sop-rulebook",
-    "zh": "rulebook-sop-实用指南",
-    "ja": "rulebooksop-ガイド"
+    "id": "cara-memulai-sop-tanpa-ribet",
+    "en": "how-to-start-sop-without-friction",
+    "ar": "kyf-tbda-almalwmat-almhma-dwn-taqyd",
+    "jv": "kepriye-miwiti-sop-tanpa-ruwet",
+    "su": "kumaha-ngamimitian-sop-tanpa-ribet",
+    "zh": "ru-he-kai-shi-zhong-yao-xin-xi-bu-bi-fu-za",
+    "ja": "taisetsu-na-jouhou-wo-muri-naku-hajime-ru-houhou"
   },
   "titles": {
-    "id": "SOP: Panduan Lengkap untuk Pemula",
-    "en": "SOP: Complete Beginner Guide (Practical)",
-    "ar": "SOP — دليل RuleBook",
-    "jv": "Pandhuan: SOP: Panduan Lengkap untuk Pemula",
-    "su": "Pituduh: SOP: Panduan Lengkap untuk Pemula",
-    "zh": "RuleBook · SOP 实用指南",
-    "ja": "RuleBook｜SOP ガイド"
+    "id": "Cara memulai SOP tanpa ribet",
+    "en": "How to start SOP without friction",
+    "ar": "كيف تبدأ المعلومات المهمة دون تعقيد",
+    "jv": "Kepriyé miwiti SOP tanpa ruwet",
+    "su": "Kumaha ngamimitian SOP tanpa ribet",
+    "zh": "如何开始重要信息（不必复杂）",
+    "ja": "大切な情報を無理なく始める方法"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Cara memulai SOP tanpa ribet dengan versi paling kecil yang bisa langsung dicoba, waktu yang pas untuk menjalankannya, dan cek mingguan yang ringan.",
+    "en": "Start SOP without friction using the smallest version you can try today, a sensible time to run it each day, and a light weekly check.",
+    "ar": "ابدأ مع SOP دون عناء بأصغر نسخة يمكنك تجربتها اليوم، مع وقت مناسب للتشغيل كل يوم ومراجعة أسبوعية خفيفة لا تستهلك وقتاً.",
+    "ja": "SOPを無理なく始める方法。今日試せる最小版、毎日の実行タイミング、軽い週次チェックを紹介します。",
+    "zh": "无压力开始SOP的方法：先试一个最小版本，定下每天的执行时间，再做轻量的每周检查。",
+    "jv": "Kepriyé miwiti SOP tanpa ruwet nganggo versi paling cilik sing bisa langsung dicoba, wektu sing pas kanggo mlaku, lan priksa mingguan sing entheng.",
+    "su": "Kumaha ngamimitian SOP tanpa ribet ku versi pangleutikna anu bisa langsung dicoba, waktu anu pas pikeun ngajalankeunana, jeung pariksa mingguan nu ringan."
+  }
 }

@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "catatan-sop-regulasi-offline-yang-mudah-dicari-nanti-harian",
-    "en": "sop-regulasi-offline-notes-that-stay-searchable",
-    "ar": "sop-regulasi-offline-7",
-    "jv": "pandhuan-sop-regulasi-offline-rulebook-7",
-    "su": "pituduh-sop-regulasi-offline-rulebook-7",
-    "zh": "rulebook-sop-regulasi-offline-实用指南-7",
-    "ja": "rulebooksop-regulasi-offline-ガイド-7"
+    "id": "menyusun-mode-offline-yang-enak-dibaca",
+    "en": "writing-sop-regulasi-offline-notes-people-can-read",
+    "ar": "ktaba-almalwmat-almhma-bshkl-yqra-aljz-2",
+    "jv": "nulis-mode-offline-sing-kepenak-diwaca",
+    "su": "nulis-mode-offline-anu-genah-dibaca",
+    "zh": "ba-zhong-yao-xin-xi-xie-de-rang-ren-du-de-xia-qu-di-2-pian",
+    "ja": "yome-ru-taisetsu-na-jouhou-no-kakikata-dai-2-kai"
   },
   "titles": {
-    "id": "Catatan sop regulasi offline yang Mudah Dicari Nanti",
-    "en": "sop regulasi offline Notes That Stay Searchable",
-    "ar": "sop regulasi offline — دليل RuleBook",
-    "jv": "Pandhuan: Catatan sop regulasi offline yang Mudah Dicari Nanti",
-    "su": "Pituduh: Catatan sop regulasi offline yang Mudah Dicari Nanti",
-    "zh": "RuleBook · sop regulasi offline 实用指南",
-    "ja": "RuleBook｜sop regulasi offline ガイド"
+    "id": "Menyusun mode offline yang enak dibaca",
+    "en": "Writing sop regulasi offline notes people can read",
+    "ar": "كتابة المعلومات المهمة بشكل يُقرأ · الجزء 2",
+    "jv": "Nulis mode offline sing kepénak diwaca",
+    "su": "Nulis mode offline anu genah dibaca",
+    "zh": "把重要信息写得让人读得下去 · 第2篇",
+    "ja": "読める大切な情報の書き方 · 第2回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Menyusun mode offline yang enak dibaca: tinjauan mingguan, catatan yang tersimpan di perangkat, dan cara merapikan isi setelah jeda.",
+    "en": "Writing offline mode notes people can read: the weekly check, what stays stored on your device, and how to tidy up your entries after a break.",
+    "ar": "كتابة ملاحظات mode offline بشكل يُقرأ بسهولة: المراجعة الأسبوعية، وما يُحفظ على جهازك، وكيف ترتب مدخلاتك بعد توقف.",
+    "ja": "読みやすいオフラインモードのメモの書き方。週次チェック、端末に残る内容、休んだ後に整える手順。",
+    "zh": "写出让人读得下去的离线模式笔记：每周检查、设备上保存的内容，以及中断后如何整理条目。",
+    "jv": "Nulis mode offline sing kepénak diwaca: tinjauan mingguan, cathetan sing kasimpen ing piranti, lan cara ngrapikaké isi sawisé jeda.",
+    "su": "Nulis mode offline nu genah dibaca: tinjauan mingguan, catetan nu disimpen dina alat, jeung cara ngarapihkeun eusi sanggeus jeda."
+  }
 }

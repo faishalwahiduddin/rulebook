@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "checklist-mingguan-buku-saku-review-mingguan",
-    "en": "weekly-buku-saku-checklist-review",
-    "ar": "buku-saku",
-    "jv": "pandhuan-buku-saku-rulebook",
-    "su": "pituduh-buku-saku-rulebook",
-    "zh": "rulebook-buku-saku-实用指南",
-    "ja": "rulebookbuku-saku-ガイド"
+    "id": "checklist-buku-saku-untuk-satu-layar",
+    "en": "a-one-screen-buku-saku-checklist",
+    "ar": "almalwmat-almhma-lqra-indwnysya",
+    "jv": "dhaftar-priksa-buku-saku-mung-siji-layar",
+    "su": "daptar-pariksa-buku-saku-dina-hiji-layar",
+    "zh": "gei-yin-du-ni-xi-ya-du-zhe-de-zhong-yao-xin-xi",
+    "ja": "indoneshia-no-dokusha-notameno-taisetsu-na-jouhou"
   },
   "titles": {
-    "id": "Checklist Mingguan buku saku + Review",
-    "en": "Weekly buku saku Checklist + Review — Offline First",
-    "ar": "buku saku — دليل RuleBook",
-    "jv": "Pandhuan: Checklist Mingguan buku saku + Review",
-    "su": "Pituduh: Checklist Mingguan buku saku + Review",
-    "zh": "RuleBook · buku saku 实用指南",
-    "ja": "RuleBook｜buku saku ガイド"
+    "id": "Checklist buku saku untuk satu layar",
+    "en": "A one-screen buku saku checklist",
+    "ar": "المعلومات المهمة لقرّاء إندونيسيا",
+    "jv": "Dhaftar priksa buku saku mung siji layar",
+    "su": "Daptar pariksa buku saku dina hiji layar",
+    "zh": "给印度尼西亚读者的重要信息",
+    "ja": "インドネシアの読者のための大切な情報"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Daftar periksa buku saku satu layar untuk pembaca Indonesia: versi paling kecil, kapan menjalankannya, dan tinjauan mingguan agar tetap konsisten.",
+    "en": "A one-screen buku saku checklist for Indonesian readers: the smallest version, when to run it, and a weekly review that keeps the habit steady.",
+    "ar": "قائمة تحقق لـ buku saku في شاشة واحدة لقرّاء إندونيسيا: أصغر نسخة، ومتى تشغّلها، ومراجعة أسبوعية تحافظ على الاستمرار بثبات.",
+    "ja": "インドネシアの読者向けbuku sakuの一画面チェックリスト。最小版と実行タイミング、続けるための週次見直し。",
+    "zh": "给印度尼西亚读者的一页buku saku清单：最小版本、何时执行，以及帮助坚持下去的每周复盘。",
+    "jv": "Dhaftar priksa buku saku mung siji layar kanggo pamaca Indonésia: versi paling cilik, kapan dilakokaké, lan tinjauan mingguan supaya tetep ajeg.",
+    "su": "Daptar pariksa buku saku dina hiji layar pikeun pamaca Indonésia: versi pangleutikna, iraha ngajalankeunana, jeung tinjauan mingguan supaya tetep konsisten."
+  }
 }

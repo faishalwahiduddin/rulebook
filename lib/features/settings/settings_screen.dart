@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import '../../core/constants/app_constants.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/providers/locale_provider.dart';
 import '../../core/providers/theme_provider.dart';
@@ -37,10 +36,12 @@ class SettingsScreen extends ConsumerWidget {
       final cc = AppColors.of(context);
       ScaffoldMessenger.of(context)
         ..hideCurrentSnackBar()
-        ..showSnackBar(SnackBar(
-          content: Text(message),
-          backgroundColor: ok ? cc.success : cc.danger,
-        ));
+        ..showSnackBar(
+          SnackBar(
+            content: Text(message),
+            backgroundColor: ok ? cc.success : cc.danger,
+          ),
+        );
     }
 
     final l = AppLocalizations.of(context)!;
@@ -73,7 +74,7 @@ class SettingsScreen extends ConsumerWidget {
     final langCode = currentLocale.languageCode;
 
     return Scaffold(
-      appBar: appBar(context),
+      appBar: appBar(context, title: l10n.settingsAndPrivacy),
       body: ListView(
         padding: AppScroll.pagePadding(context, underShellNav: false),
         children: [
@@ -135,20 +136,41 @@ class SettingsScreen extends ConsumerWidget {
                         ButtonSegment(
                           value: ThemeMode.system,
                           tooltip: l10n.themeSystem,
-                          icon: AppIcon(AppIconData.auto,
-                              size: 15, color: c.textMuted),
+                          icon: AppIcon(
+                            AppIconData.auto,
+                            size: 15,
+                            // onBrand keeps the selected glyph readable on
+                            // the brand fill in both themes.
+                            color: themeMode == ThemeMode.system
+                                ? c.onBrand
+                                : c.textMuted,
+                          ),
                         ),
                         ButtonSegment(
                           value: ThemeMode.light,
                           tooltip: l10n.themeLight,
-                          icon: AppIcon(AppIconData.sun,
-                              size: 15, color: c.textMuted),
+                          icon: AppIcon(
+                            AppIconData.sun,
+                            size: 15,
+                            // onBrand keeps the selected glyph readable on
+                            // the brand fill in both themes.
+                            color: themeMode == ThemeMode.light
+                                ? c.onBrand
+                                : c.textMuted,
+                          ),
                         ),
                         ButtonSegment(
                           value: ThemeMode.dark,
                           tooltip: l10n.themeDark,
-                          icon: AppIcon(AppIconData.moon,
-                              size: 15, color: c.textMuted),
+                          icon: AppIcon(
+                            AppIconData.moon,
+                            size: 15,
+                            // onBrand keeps the selected glyph readable on
+                            // the brand fill in both themes.
+                            color: themeMode == ThemeMode.dark
+                                ? c.onBrand
+                                : c.textMuted,
+                          ),
                         ),
                       ],
                       selected: {themeMode},
@@ -206,8 +228,11 @@ class SettingsScreen extends ConsumerWidget {
                       style: theme.textTheme.titleSmall,
                     ),
                   ),
-                  AppIcon(AppIconData.chevronRight,
-                      size: 16, color: c.textFaint),
+                  AppIcon(
+                    AppIconData.chevronRight,
+                    size: 16,
+                    color: c.textFaint,
+                  ),
                 ],
               ),
             ),
@@ -226,15 +251,14 @@ class SettingsScreen extends ConsumerWidget {
                         .exportBackupJson();
                     await BackupFileIo.exportToShareSheet(
                       payload,
-                      subject: 'RuleBook',
+                      subject: l10n.appTitle,
                     );
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(AppSpacing.lg),
                     child: Row(
                       children: [
-                        AppIcon(AppIconData.download,
-                            size: 18, color: c.brand),
+                        AppIcon(AppIconData.download, size: 18, color: c.brand),
                         const SizedBox(width: AppSpacing.md),
                         Expanded(
                           child: Column(
@@ -247,8 +271,9 @@ class SettingsScreen extends ConsumerWidget {
                               const SizedBox(height: 2),
                               Text(
                                 l10n.copyBookmarkNotesClipboard,
-                                style: theme.textTheme.bodySmall
-                                    ?.copyWith(color: c.textMuted),
+                                style: theme.textTheme.bodySmall?.copyWith(
+                                  color: c.textMuted,
+                                ),
                               ),
                             ],
                           ),
@@ -277,8 +302,9 @@ class SettingsScreen extends ConsumerWidget {
                               const SizedBox(height: 2),
                               Text(
                                 l10n.importBackupSubtitle,
-                                style: theme.textTheme.bodySmall
-                                    ?.copyWith(color: c.textMuted),
+                                style: theme.textTheme.bodySmall?.copyWith(
+                                  color: c.textMuted,
+                                ),
                               ),
                             ],
                           ),
@@ -302,8 +328,9 @@ class SettingsScreen extends ConsumerWidget {
                             children: [
                               Text(
                                 l10n.clearBookmarks,
-                                style: theme.textTheme.titleSmall
-                                    ?.copyWith(color: c.danger),
+                                style: theme.textTheme.titleSmall?.copyWith(
+                                  color: c.danger,
+                                ),
                               ),
                               const SizedBox(height: 2),
                               Text(
@@ -339,7 +366,7 @@ class SettingsScreen extends ConsumerWidget {
             padding: const EdgeInsets.all(AppSpacing.lg),
             child: Column(
               children: [
-                _aboutRow(l10n.application, AppConstants.appName),
+                _aboutRow(l10n.application, l10n.appTitle),
                 _divider(c),
                 FutureBuilder<PackageInfo>(
                   future: PackageInfo.fromPlatform(),
@@ -379,8 +406,9 @@ class SettingsScreen extends ConsumerWidget {
               Expanded(
                 child: Text(
                   label,
-                  style: theme.textTheme.bodySmall
-                      ?.copyWith(color: c.textMuted),
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: c.textMuted,
+                  ),
                 ),
               ),
               const SizedBox(width: AppSpacing.md),
@@ -434,7 +462,7 @@ class SettingsScreen extends ConsumerWidget {
     }
   }
 
-    /// Current zone as one line: `Asia/Jakarta (WIB, GMT+7)` when manual,
+  /// Current zone as one line: `Asia/Jakarta (WIB, GMT+7)` when manual,
   /// `Otomatis · Asia/Jakarta (GMT+7)` on Auto. Offsets are live per
   /// instant, so DST zones show the right value today.
   String _currentTimezoneLabel(WidgetRef ref, AppLocalizations l10n) {
@@ -473,59 +501,79 @@ class SettingsScreen extends ConsumerWidget {
     showSpringSheet<void>(
       context: context,
       builder: (ctx) {
-        return SafeArea(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SpringSheetHandle(),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(
-                    AppSpacing.xl, AppSpacing.lg, AppSpacing.xl, AppSpacing.sm),
-                child: Text(
-                  l10n.timezone,
-                  style: Theme.of(ctx).textTheme.titleMedium,
+        // showSpringSheet renders inside a Cupertino popup, which has no
+        // Material ancestor. Host it in a themed Material surface so ListTile
+        // gets its Material (and the sheet gets a real background).
+        return Material(
+          color: AppColors.of(ctx).surface,
+          clipBehavior: Clip.antiAlias,
+          borderRadius: const BorderRadius.vertical(
+            top: Radius.circular(AppRadius.xl),
+          ),
+          child: SafeArea(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SpringSheetHandle(),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(
+                    AppSpacing.xl,
+                    AppSpacing.lg,
+                    AppSpacing.xl,
+                    AppSpacing.sm,
+                  ),
+                  child: Text(
+                    l10n.timezone,
+                    style: Theme.of(ctx).textTheme.titleMedium,
+                  ),
                 ),
-              ),
-              Flexible(
-                child: ListView(
-                  shrinkWrap: true,
-                  physics: AppScroll.physics,
-                  children: [
-                    ListTile(
-                      dense: true,
-                      title: Text(
-                        '${l10n.timezoneAuto} · $device '
-                        '(${AppTimeZone.offsetLabel(device, now)})',
-                      ),
-                      trailing: current == null
-                          ? AppIcon(AppIconData.checkCircle,
-                              size: 20, color: c.brand)
-                          : null,
-                      onTap: () {
-                        ref.read(timezoneProvider.notifier).resetToAuto();
-                        Navigator.pop(ctx);
-                      },
-                    ),
-                    for (final zone in kCuratedZones)
+                Flexible(
+                  child: ListView(
+                    shrinkWrap: true,
+                    physics: AppScroll.physics,
+                    children: [
                       ListTile(
                         dense: true,
-                        title: Text(_zoneOptionLabel(zone.iana, now)),
-                        trailing: zone.iana == current
-                            ? AppIcon(AppIconData.checkCircle,
-                                size: 20, color: c.brand)
+                        title: Text(
+                          '${l10n.timezoneAuto} · $device '
+                          '(${AppTimeZone.offsetLabel(device, now)})',
+                        ),
+                        trailing: current == null
+                            ? AppIcon(
+                                AppIconData.checkCircle,
+                                size: 20,
+                                color: c.brand,
+                              )
                             : null,
                         onTap: () {
-                          ref
-                              .read(timezoneProvider.notifier)
-                              .setZone(zone.iana);
+                          ref.read(timezoneProvider.notifier).resetToAuto();
                           Navigator.pop(ctx);
                         },
                       ),
-                  ],
+                      for (final zone in kCuratedZones)
+                        ListTile(
+                          dense: true,
+                          title: Text(_zoneOptionLabel(zone.iana, now)),
+                          trailing: zone.iana == current
+                              ? AppIcon(
+                                  AppIconData.checkCircle,
+                                  size: 20,
+                                  color: c.brand,
+                                )
+                              : null,
+                          onTap: () {
+                            ref
+                                .read(timezoneProvider.notifier)
+                                .setZone(zone.iana);
+                            Navigator.pop(ctx);
+                          },
+                        ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         );
       },
@@ -533,51 +581,70 @@ class SettingsScreen extends ConsumerWidget {
   }
 
   void _showLanguageSheet(
-      BuildContext context, WidgetRef ref, Locale currentLocale) {
-
+    BuildContext context,
+    WidgetRef ref,
+    Locale currentLocale,
+  ) {
     final l10n = AppLocalizations.of(context)!;
     final c = AppColors.of(context);
     showSpringSheet<void>(
       context: context,
       builder: (ctx) {
-        return SafeArea(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SpringSheetHandle(),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(
-                    AppSpacing.xl, AppSpacing.lg, AppSpacing.xl, AppSpacing.sm),
-                child: Text(
-                  l10n.selectLanguage,
-                  style: Theme.of(ctx).textTheme.titleMedium,
+        // showSpringSheet renders inside a Cupertino popup, which has no
+        // Material ancestor. Host it in a themed Material surface so ListTile
+        // gets its Material (and the sheet gets a real background).
+        return Material(
+          color: AppColors.of(ctx).surface,
+          clipBehavior: Clip.antiAlias,
+          borderRadius: const BorderRadius.vertical(
+            top: Radius.circular(AppRadius.xl),
+          ),
+          child: SafeArea(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SpringSheetHandle(),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(
+                    AppSpacing.xl,
+                    AppSpacing.lg,
+                    AppSpacing.xl,
+                    AppSpacing.sm,
+                  ),
+                  child: Text(
+                    l10n.selectLanguage,
+                    style: Theme.of(ctx).textTheme.titleMedium,
+                  ),
                 ),
-              ),
-              Flexible(
-                child: ListView(
-                  shrinkWrap: true,
-                  physics: AppScroll.physics,
-                  children: _supportedLocales.map((code) {
-                    final isSelected = code == currentLocale.languageCode;
-                    return ListTile(
-                      dense: true,
-                      title: Text(localeName(l10n, code)),
-                      trailing: isSelected
-                          ? AppIcon(AppIconData.checkCircle,
-                              size: 20, color: c.brand)
-                          : null,
-                      onTap: () {
-                        ref
-                            .read(localeProvider.notifier)
-                            .setLocale(Locale(code));
-                        Navigator.pop(ctx);
-                      },
-                    );
-                  }).toList(),
+                Flexible(
+                  child: ListView(
+                    shrinkWrap: true,
+                    physics: AppScroll.physics,
+                    children: _supportedLocales.map((code) {
+                      final isSelected = code == currentLocale.languageCode;
+                      return ListTile(
+                        dense: true,
+                        title: Text(localeName(l10n, code)),
+                        trailing: isSelected
+                            ? AppIcon(
+                                AppIconData.checkCircle,
+                                size: 20,
+                                color: c.brand,
+                              )
+                            : null,
+                        onTap: () {
+                          ref
+                              .read(localeProvider.notifier)
+                              .setLocale(Locale(code));
+                          Navigator.pop(ctx);
+                        },
+                      );
+                    }).toList(),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         );
       },

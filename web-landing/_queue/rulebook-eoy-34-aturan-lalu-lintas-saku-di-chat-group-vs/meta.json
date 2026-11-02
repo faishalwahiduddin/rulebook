@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "aturan-lalu-lintas-saku-di-chat-group-vs-tracker-khusus-mingguan",
-    "en": "aturan-lalu-lintas-saku-in-chat-groups-vs-dedicated-tracker",
-    "ar": "aturan-lalu-lintas-saku-4",
-    "jv": "pandhuan-aturan-lalu-lintas-saku-rulebook-4",
-    "su": "pituduh-aturan-lalu-lintas-saku-rulebook-4",
-    "zh": "rulebook-aturan-lalu-lintas-saku-实用指南-4",
-    "ja": "rulebookaturan-lalu-lintas-saku-ガイド-4"
+    "id": "aturan-lalu-lintas-saku-chat-keluarga-vs-catatan-rapi",
+    "en": "aturan-lalu-lintas-saku-family-chat-vs-a-tidy-log",
+    "ar": "almalwmat-almhma-mhadtha-alaaila-am-sjl-mrtb",
+    "jv": "aturan-lalu-lintas-saku-grup-kulawarga-utawa-cathetan-rapi",
+    "su": "aturan-lalu-lintas-saku-grup-kulawarga-atawa-catetan-rapih",
+    "zh": "zhong-yao-xin-xi-jia-ting-qun-liao-yu-zheng-qi-ji-lu",
+    "ja": "taisetsu-na-jouhou-kazoku-chatto-to-totonotsu-ta-kiroku"
   },
   "titles": {
-    "id": "aturan lalu lintas saku: panduan praktis di RuleBook",
-    "en": "aturan lalu lintas saku in Chat Groups vs Dedicated Tracker — Offline ",
-    "ar": "aturan lalu lintas saku — دليل RuleBook",
-    "jv": "Pandhuan: aturan lalu lintas saku: panduan praktis di RuleBook",
-    "su": "Pituduh: aturan lalu lintas saku: panduan praktis di RuleBook",
-    "zh": "RuleBook · aturan lalu lintas saku 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas saku ガイド"
+    "id": "aturan lalu lintas saku: chat keluarga vs catatan rapi",
+    "en": "aturan lalu lintas saku: family chat vs a tidy log",
+    "ar": "المعلومات المهمة: محادثة العائلة أم سجل مرتّب",
+    "jv": "aturan lalu lintas saku: grup kulawarga utawa cathetan rapi",
+    "su": "aturan lalu lintas saku: grup kulawarga atawa catetan rapih",
+    "zh": "重要信息：家庭群聊与整齐记录",
+    "ja": "大切な情報：家族チャットと整った記録"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Aturan lalu lintas saku di chat keluarga atau catatan yang rapi: kenapa catatan di chat mudah tenggelam, penyimpanan di perangkat, dan tinjauan mingguan.",
+    "en": "Tracking aturan lalu lintas saku in a family chat or a tidy log: why chat notes get buried, on-device storage, and a weekly review to keep things visible.",
+    "ar": "aturan lalu lintas saku في محادثة عائلية أو سجل مرتّب: لماذا تضيع الملاحظات في المحادثات، والحفظ على الجهاز، ومراجعة أسبوعية.",
+    "ja": "aturan lalu lintas sakuを家族チャットで扱うか、整ったログにするか。チャットに埋もれる理由と端末保存。",
+    "zh": "aturan lalu lintas saku放在家庭群聊还是整齐的记录里？群消息为何被淹没，设备存储与每周复盘。",
+    "jv": "Aturan lalu lintas saku ing grup kulawarga utawa cathetan sing rapi: kenapa cathetan grup gampang kesapu, nyimpen ing piranti, lan tinjauan mingguan.",
+    "su": "Aturan lalu lintas saku dina grup kulawarga atawa catetan nu rapih: naha catetan grup gampang kakubur, nyimpen dina alat, jeung tinjauan mingguan."
+  }
 }

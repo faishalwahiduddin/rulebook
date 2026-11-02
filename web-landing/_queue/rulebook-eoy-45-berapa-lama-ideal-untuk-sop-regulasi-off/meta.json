@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "berapa-lama-ideal-untuk-sop-regulasi-offline-harian",
-    "en": "how-long-should-sop-regulasi-offline-take",
-    "ar": "sop-regulasi-offline-5",
-    "jv": "pandhuan-sop-regulasi-offline-rulebook-5",
-    "su": "pituduh-sop-regulasi-offline-rulebook-5",
-    "zh": "rulebook-sop-regulasi-offline-实用指南-5",
-    "ja": "rulebooksop-regulasi-offline-ガイド-5"
+    "id": "mode-offline-saat-waktu-cuma-sedikit",
+    "en": "sop-regulasi-offline-when-you-barely-have-time",
+    "ar": "khta-thlathyn-ywma-lalmalwmat-almhma",
+    "jv": "mode-offline-nalika-wektune-mung-sithik",
+    "su": "mode-offline-nalika-waktu-ukur-saeutik",
+    "zh": "zhong-yao-xin-xi-de-30-tian-ji-hua",
+    "ja": "taisetsu-na-jouhou-no-30-nichi-puran"
   },
   "titles": {
-    "id": "Berapa Lama Ideal untuk sop regulasi offline?",
-    "en": "How Long Should sop regulasi offline Take?",
-    "ar": "sop regulasi offline — دليل RuleBook",
-    "jv": "Pandhuan: Berapa Lama Ideal untuk sop regulasi offline?",
-    "su": "Pituduh: Berapa Lama Ideal untuk sop regulasi offline?",
-    "zh": "RuleBook · sop regulasi offline 实用指南",
-    "ja": "RuleBook｜sop regulasi offline ガイド"
+    "id": "mode offline saat waktu cuma sedikit",
+    "en": "sop regulasi offline when you barely have time",
+    "ar": "خطة ثلاثين يوماً لـالمعلومات المهمة",
+    "jv": "mode offline nalika wektuné mung sithik",
+    "su": "mode offline nalika waktu ukur saeutik",
+    "zh": "重要信息的30天计划",
+    "ja": "大切な情報の30日プラン"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Mode offline saat waktu hampir tidak ada: versi paling kecil, kapan menjalankannya, dan tinjauan mingguan yang ringan.",
+    "en": "Offline mode when you barely have time: the smallest version, when to run it, and a light weekly review that still fits a busy day.",
+    "ar": "وضع بلا اتصال عندما لا يبقى وقت: أصغر نسخة، ومتى تشغّلها، ومراجعة أسبوعية خفيفة تناسب يوماً مزدحماً.",
+    "ja": "時間がほとんどないときのオフラインモード。最小版、実行タイミング、忙しい日でも回せる軽い週次見直し。",
+    "zh": "时间很少时的离线模式：理想的时长怎么定，最小版本、执行时机，以及每周复盘中的轻量检查，不必追求完美。",
+    "jv": "Mode offline nalika wektu meh ora ana: versi paling cilik, kapan dilakokaké, lan tinjauan mingguan sing entheng nanging tetep isa rampung.",
+    "su": "Mode offline nalika waktu ampir teu aya: versi pangleutikna, iraha ngajalankeunana, jeung tinjauan mingguan nu ringan tapi tetep bisa rengse."
+  }
 }

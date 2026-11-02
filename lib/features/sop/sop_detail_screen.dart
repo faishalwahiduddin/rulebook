@@ -62,10 +62,13 @@ class SopDetailScreen extends StatelessWidget {
       body: ListView(
         padding: AppScroll.pagePadding(context, underShellNav: false),
         children: [
-          Pill(
-            label: sop.category.localizedLabel(l10n),
-            icon: sop.category.icon,
-            tone: accent,
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Pill(
+              label: sop.category.localizedLabel(l10n),
+              icon: sop.category.icon,
+              tone: accent,
+            ),
           ),
           const SizedBox(height: AppSpacing.md),
           Text(sop.title, style: theme.textTheme.headlineSmall),
@@ -306,8 +309,10 @@ class _Callout extends StatelessWidget {
         Expanded(
           child: Text(
             text,
+            // Amber on white is ~3.2:1. Keep the semantic tint on the icon and
+            // render the sentence in body ink so tips stay legible.
             style: theme.textTheme.bodySmall?.copyWith(
-              color: tone,
+              color: AppColors.of(context).textSecondary,
               height: 1.5,
               fontWeight: FontWeight.w500,
             ),

@@ -1,0 +1,85 @@
+{
+  "title": "aturan lalu lintas saku lan aplikasi liya ing HP",
+  "description": "Aturan lalu lintas saku lan aplikasi liya ing HP sampeyan: teges ing praktik, versi paling cilik kanggo miwiti, lan data kasimpen ing piranti.",
+  "badge": "keamanan · offline",
+  "answer": "Nalika butuh, aturan lalu lintas saku sumebar ing telung panggonan—sing mbukak dhisik malah wis lawas. RuleBook nyimpen aturan lalu lintas saku ing piranti, dadi tetep kebukak tanpa kuota lan tanpa akun.",
+  "toc": [
+    "Tegesé aturan lalu lintas saku ing praktik",
+    "Versi paling cilik",
+    "Kasimpen ing piranti"
+  ],
+  "sections": [
+    {
+      "h2": "Tegesé aturan lalu lintas saku ing praktik",
+      "p": "Ing praktik, aturan lalu lintas saku iku bukti kadated sing bisa dibukak manèh—dudu niat sing mung diéling-éling.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Versi paling cilik",
+      "p": "Simpenen kertu siji: kontak, panggonan, lan nomer penting sing bisa dibukak tanpa sinyal.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Kasimpen ing piranti",
+      "p": "RuleBook nyimpen aturan lalu lintas saku ing piranti, dadi tetep kebukak tanpa kuota lan tanpa akun.",
+      "h3": null,
+      "p3": null
+    }
+  ],
+  "table": {
+    "caption": "Rangka aturan lalu lintas saku",
+    "headers": [
+      "Langkah",
+      "Isi minimal",
+      "Rampung yèn"
+    ],
+    "rows": [
+      [
+        "Kertu darurat",
+        "kontak + panggonan",
+        "bisa dibukak offline"
+      ],
+      [
+        "Pananda",
+        "posisi pungkasan",
+        "bisa diterusaké sesuk"
+      ],
+      [
+        "Evaluasi minggu",
+        "siji panyesuaian",
+        "diterapaké Senén"
+      ]
+    ]
+  },
+  "list": [
+    "Temtokna siji wektu tetep, dudu “yèn sempet”.",
+    "Bukak RuleBook nalika wektu iku teka, aja mengko bengi.",
+    "Catheten siji alangan, dudu alesan dawa.",
+    "Cadhangana data sadurungé ganti HP."
+  ],
+  "faqs": [
+    [
+      "Apa aturan lalu lintas saku bisa dibukak offline?",
+      "Bisa. RuleBook nyimpen kabèh ing piranti, dadi ora butuh kuota."
+    ],
+    [
+      "Kudu akun dhisik?",
+      "Ora. Wiwit tanpa login; cadhangana data sak dhéwé."
+    ],
+    [
+      "Wiwit saka ngendi?",
+      "Saka bagéan paling cendhak. Tambah jembar yèn wis rong minggu stabil."
+    ],
+    [
+      "Yèn bolong sawetara dina?",
+      "Aja mbusak riwayat. Terusaké saka cathetan pungkasan lan catheten siji alangan."
+    ]
+  ],
+  "cta": [
+    "Wiwiti aturan lalu lintas saku dina iki",
+    "Bukak RuleBook"
+  ],
+  "slug": "pandhuan-aturan-lalu-lintas-saku-rulebook-6"
+}

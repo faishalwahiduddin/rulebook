@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "rencana-sop-regulasi-offline-menjelang-2027-2026",
-    "en": "sop-regulasi-offline-plan-heading-into-2027",
-    "ar": "sop-regulasi-offline-4",
-    "jv": "pandhuan-sop-regulasi-offline-rulebook-4",
-    "su": "pituduh-sop-regulasi-offline-rulebook-4",
-    "zh": "rulebook-sop-regulasi-offline-实用指南-4",
-    "ja": "rulebooksop-regulasi-offline-ガイド-4"
+    "id": "mode-offline-di-musim-paling-ramai",
+    "en": "sop-regulasi-offline-in-the-busiest-season",
+    "ar": "almalwmat-almhma-fy-akthr-almwasm-anshghala-aljz-2",
+    "jv": "mode-offline-ing-mangsa-paling-rame",
+    "su": "mode-offline-dina-usum-pangsibukna",
+    "zh": "zui-mang-de-ji-jie-li-de-zhong-yao-xin-xi-di-2-pian",
+    "ja": "ichiban-isogashii-jiki-no-taisetsu-na-jouhou-dai-2-kai"
   },
   "titles": {
-    "id": "Rencana sop regulasi offline Menjelang 2027",
-    "en": "sop regulasi offline Plan Heading into 2027",
-    "ar": "sop regulasi offline — دليل RuleBook",
-    "jv": "Pandhuan: Rencana sop regulasi offline Menjelang 2027",
-    "su": "Pituduh: Rencana sop regulasi offline Menjelang 2027",
-    "zh": "RuleBook · sop regulasi offline 实用指南",
-    "ja": "RuleBook｜sop regulasi offline ガイド"
+    "id": "mode offline di musim paling ramai",
+    "en": "sop regulasi offline in the busiest season",
+    "ar": "المعلومات المهمة في أكثر المواسم انشغالاً · الجزء 2",
+    "jv": "mode offline ing mangsa paling rame",
+    "su": "mode offline dina usum pangsibukna",
+    "zh": "最忙的季节里的重要信息 · 第2篇",
+    "ja": "いちばん忙しい時期の大切な情報 · 第2回"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Mode offline di musim paling ramai: versi paling kecil yang tetap bisa dijalankan, kapan menjalankannya, dan tinjauan mingguan saat jadwal padat.",
+    "en": "Offline mode in the busiest season: the smallest version you can still run, when to run it, and a weekly review that works during a packed schedule.",
+    "ar": "وضع بلا اتصال في أكثر المواسم انشغالاً: أصغر نسخة ما زالت ممكنة، ومتى تشغّلها، ومراجعة أسبوعية تعمل مع جدول مزدحم.",
+    "ja": "いちばん忙しい時期のオフラインモード。予定が詰まっていても回せる最小版、実行タイミング、週次見直し。",
+    "zh": "最忙的季节里的离线模式：仍然可行的最小版本、执行时机，以及在排满的日程中也能用的每周复盘。",
+    "jv": "Mode offline ing mangsa paling rame: versi paling cilik sing isih bisa dilakokaké, kapan dilakokaké, lan tinjauan mingguan nalika jadwal padat.",
+    "su": "Mode offline dina usum pangsibukna: versi pangleutikna nu tetep bisa dijalankeun, iraha ngajalankeunana, jeung tinjauan mingguan nalika jadwal padet."
+  }
 }

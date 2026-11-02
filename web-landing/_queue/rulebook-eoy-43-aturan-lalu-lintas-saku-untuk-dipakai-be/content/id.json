@@ -1,0 +1,85 @@
+{
+  "title": "aturan lalu lintas saku untuk satu rumah",
+  "description": "Aturan lalu lintas saku untuk satu rumah: cara berbagi kebiasaan, tinjauan mingguan bersama, data tersimpan di perangkat, dan langkah setelah jeda.",
+  "badge": "keamanan · offline",
+  "answer": "Saat dibutuhkan, aturan lalu lintas saku tersebar di tiga tempat—dan yang pertama dibuka justru yang usang. RuleBook menyimpan aturan lalu lintas saku di perangkat, jadi datanya tetap terbuka tanpa kuota dan tanpa akun.",
+  "toc": [
+    "Tinjauan mingguan",
+    "Tersimpan di perangkat",
+    "Setelah bolong"
+  ],
+  "sections": [
+    {
+      "h2": "Tinjauan mingguan",
+      "p": "Sekali seminggu, lihat bagian mana yang paling sering bolong, lalu kecilkan target—bukan menambah semangat.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Tersimpan di perangkat",
+      "p": "RuleBook menyimpan aturan lalu lintas saku di perangkat, jadi datanya tetap terbuka tanpa kuota dan tanpa akun.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Setelah bolong",
+      "p": "Kalau bolong beberapa hari, jangan hapus riwayat. Lanjut dari bagian terakhir yang sudah dibaca—satu sesi pendek, lalu tutup.",
+      "h3": null,
+      "p3": null
+    }
+  ],
+  "table": {
+    "caption": "Kerangka aturan lalu lintas saku",
+    "headers": [
+      "Langkah",
+      "Isi minimal",
+      "Selesai bila"
+    ],
+    "rows": [
+      [
+        "Kartu darurat",
+        "kontak + lokasi",
+        "bisa dibuka offline"
+      ],
+      [
+        "Penanda",
+        "posisi terakhir",
+        "bisa dilanjut besok"
+      ],
+      [
+        "Evaluasi minggu",
+        "satu penyesuaian",
+        "diterapkan Senin"
+      ]
+    ]
+  },
+  "list": [
+    "Tetapkan satu waktu tetap, bukan “kapan sempat”.",
+    "Buka RuleBook saat waktu itu tiba, bukan nanti malam.",
+    "Catat satu hambatan, bukan alasan panjang.",
+    "Cadangkan data sebelum ganti ponsel."
+  ],
+  "faqs": [
+    [
+      "Apakah aturan lalu lintas saku bisa dibuka offline?",
+      "Ya. RuleBook menyimpan semuanya di perangkat, jadi tidak butuh kuota."
+    ],
+    [
+      "Perlu akun dulu?",
+      "Tidak. Mulai tanpa login; cadangkan data secara berkala."
+    ],
+    [
+      "Mulai dari mana?",
+      "Dari bagian terpendek. Tambah cakupan hanya setelah dua minggu stabil."
+    ],
+    [
+      "Kalau bolong beberapa hari?",
+      "Jangan hapus riwayat. Lanjut dari bagian terakhir dan catat satu hambatan."
+    ]
+  ],
+  "cta": [
+    "Mulai aturan lalu lintas saku hari ini",
+    "Buka RuleBook"
+  ],
+  "slug": "aturan-lalu-lintas-saku-untuk-dipakai-bergantian"
+}

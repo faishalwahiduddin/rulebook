@@ -1,0 +1,85 @@
+{
+  "title": "rambu marka prioritas: catatan longgar vs aplikasi offline",
+  "description": "Perbandingan rambu marka prioritas antara catatan longgar dan aplikasi offline, mulai dari alasan catatan mudah putus sampai tinjauan mingguan.",
+  "badge": "keamanan · offline",
+  "answer": "Saat dibutuhkan, rambu marka prioritas tersebar di tiga tempat—dan yang pertama dibuka justru yang usang. RuleBook menyimpan rambu marka prioritas di perangkat, jadi datanya tetap terbuka tanpa kuota dan tanpa akun.",
+  "toc": [
+    "Kenapa mudah putus",
+    "Tersimpan di perangkat",
+    "Tinjauan mingguan"
+  ],
+  "sections": [
+    {
+      "h2": "Kenapa mudah putus",
+      "p": "Saat dibutuhkan, rambu marka prioritas tersebar di tiga tempat—dan yang pertama dibuka justru yang usang.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Tersimpan di perangkat",
+      "p": "RuleBook menyimpan rambu marka prioritas di perangkat, jadi datanya tetap terbuka tanpa kuota dan tanpa akun.",
+      "h3": null,
+      "p3": null
+    },
+    {
+      "h2": "Tinjauan mingguan",
+      "p": "Sekali seminggu, lihat bagian mana yang paling sering bolong, lalu kecilkan target—bukan menambah semangat.",
+      "h3": null,
+      "p3": null
+    }
+  ],
+  "table": {
+    "caption": "Kerangka rambu marka prioritas",
+    "headers": [
+      "Langkah",
+      "Isi minimal",
+      "Selesai bila"
+    ],
+    "rows": [
+      [
+        "Kartu darurat",
+        "kontak + lokasi",
+        "bisa dibuka offline"
+      ],
+      [
+        "Penanda",
+        "posisi terakhir",
+        "bisa dilanjut besok"
+      ],
+      [
+        "Evaluasi minggu",
+        "satu penyesuaian",
+        "diterapkan Senin"
+      ]
+    ]
+  },
+  "list": [
+    "Tetapkan satu waktu tetap, bukan “kapan sempat”.",
+    "Buka RuleBook saat waktu itu tiba, bukan nanti malam.",
+    "Catat satu hambatan, bukan alasan panjang.",
+    "Cadangkan data sebelum ganti ponsel."
+  ],
+  "faqs": [
+    [
+      "Apakah rambu marka prioritas bisa dibuka offline?",
+      "Ya. RuleBook menyimpan semuanya di perangkat, jadi tidak butuh kuota."
+    ],
+    [
+      "Perlu akun dulu?",
+      "Tidak. Mulai tanpa login; cadangkan data secara berkala."
+    ],
+    [
+      "Mulai dari mana?",
+      "Dari bagian terpendek. Tambah cakupan hanya setelah dua minggu stabil."
+    ],
+    [
+      "Kalau bolong beberapa hari?",
+      "Jangan hapus riwayat. Lanjut dari bagian terakhir dan catat satu hambatan."
+    ]
+  ],
+  "cta": [
+    "Mulai rambu marka prioritas hari ini",
+    "Buka RuleBook"
+  ],
+  "slug": "rambu-marka-prioritas-di-hp-vs-buku-catatan-praktis"
+}

@@ -2,7 +2,7 @@ name: rulebook
 description: "RuleBook — Pocket Rules, Regulations & Guidelines: Buku saku aturan lalu lintas, SOP, hukum, dan regulasi penting offline di saku Anda."
 publish_to: 'none'
 
-version: 1.0.13+14
+version: 1.0.15+16
 environment:
   sdk: ^3.12.2
 

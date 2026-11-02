@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "aturan-lalu-lintas-saku-pengingat-sistem-mingguan",
-    "en": "aturan-lalu-lintas-saku-system-reminders",
-    "ar": "aturan-lalu-lintas-saku-6",
-    "jv": "pandhuan-aturan-lalu-lintas-saku-rulebook-6",
-    "su": "pituduh-aturan-lalu-lintas-saku-rulebook-6",
-    "zh": "rulebook-aturan-lalu-lintas-saku-实用指南-6",
-    "ja": "rulebookaturan-lalu-lintas-saku-ガイド-6"
+    "id": "aturan-lalu-lintas-saku-dan-aplikasi-lain-di-ponsel-anda",
+    "en": "aturan-lalu-lintas-saku-and-the-other-apps-on-your-phone",
+    "ar": "almalwmat-almhma-llmbtdiyn-mn-ayn-tbda",
+    "jv": "aturan-lalu-lintas-saku-lan-aplikasi-liya-ing-hp",
+    "su": "aturan-lalu-lintas-saku-jeung-aplikasi-sejen-dina-hp",
+    "zh": "zhong-yao-xin-xi-ru-men-cong-na-li-kai-shi",
+    "ja": "taisetsu-na-jouhou-nyuumon-dokokara-hajime-ruka"
   },
   "titles": {
-    "id": "aturan lalu lintas saku: panduan praktis di RuleBook",
-    "en": "aturan lalu lintas saku + System Reminders — Offline First",
-    "ar": "aturan lalu lintas saku — دليل RuleBook",
-    "jv": "Pandhuan: aturan lalu lintas saku: panduan praktis di RuleBook",
-    "su": "Pituduh: aturan lalu lintas saku: panduan praktis di RuleBook",
-    "zh": "RuleBook · aturan lalu lintas saku 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas saku ガイド"
+    "id": "aturan lalu lintas saku dan aplikasi lain di ponsel Anda",
+    "en": "aturan lalu lintas saku and the other apps on your phone",
+    "ar": "المعلومات المهمة للمبتدئين: من أين تبدأ",
+    "jv": "aturan lalu lintas saku lan aplikasi liya ing HP",
+    "su": "aturan lalu lintas saku jeung aplikasi séjén dina HP",
+    "zh": "重要信息入门：从哪里开始",
+    "ja": "大切な情報入門：どこから始めるか"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Aturan lalu lintas saku dan aplikasi lain di ponsel Anda: arti praktisnya, versi paling kecil untuk memulai, dan data yang tersimpan di perangkat.",
+    "en": "Pairing aturan lalu lintas saku and the other apps on your phone: what it means in practice, the smallest version to start, and data stored on your device.",
+    "ar": "aturan lalu lintas saku وتطبيقات هاتفك الأخرى: معناه العملي، وأصغر نسخة للبدء، والبيانات المحفوظة على جهازك.",
+    "ja": "入門の続きとして：aturan lalu lintas sakuとスマホの他のアプリ。実践での意味、最初の最小版、端末保存。",
+    "zh": "与手机其他应用一起用：aturan lalu lintas saku的实际含义、起步用的最小版本，以及设备端保存。",
+    "jv": "Aturan lalu lintas saku lan aplikasi liya ing HP sampeyan: teges ing praktik, versi paling cilik kanggo miwiti, lan data kasimpen ing piranti.",
+    "su": "Aturan lalu lintas saku jeung aplikasi séjén dina HP anjeun: hartina dina prak-prakan, versi pangleutikna pikeun mimiti, jeung data disimpen dina alat."
+  }
 }

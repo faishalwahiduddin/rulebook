@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "faq-rambu-marka-prioritas-pertanyaan-yang-sering-muncul-offline",
-    "en": "rambu-marka-prioritas-faq-frequent-questions",
-    "ar": "rambu-marka-prioritas-2",
-    "jv": "pandhuan-rambu-marka-prioritas-rulebook-2",
-    "su": "pituduh-rambu-marka-prioritas-rulebook-2",
-    "zh": "rulebook-rambu-marka-prioritas-实用指南-2",
-    "ja": "rulebookrambu-marka-prioritas-ガイド-2"
+    "id": "faq-rambu-marka-prioritas-jawaban-yang-sering-dicari",
+    "en": "rambu-marka-prioritas-faq-the-questions-people-actually-ask",
+    "ar": "asila-almalwmat-almhma-alshaiaa",
+    "jv": "pitakon-rambu-marka-prioritas-sing-kerep-ditakokake",
+    "su": "patarosan-rambu-marka-prioritas-anu-sering-ditaroskeun",
+    "zh": "zhong-yao-xin-xi-chang-jian-wen-ti-da-jia-zhen-zheng-hui-wen-de",
+    "ja": "taisetsu-na-jouhou-noyokuaru-shitsumon"
   },
   "titles": {
-    "id": "FAQ rambu marka prioritas: Pertanyaan yang Sering Muncul",
-    "en": "rambu marka prioritas FAQ: Frequent Questions",
-    "ar": "rambu marka prioritas — دليل RuleBook",
-    "jv": "Pandhuan: FAQ rambu marka prioritas: Pertanyaan yang Sering Muncul",
-    "su": "Pituduh: FAQ rambu marka prioritas: Pertanyaan yang Sering Muncul",
-    "zh": "RuleBook · rambu marka prioritas 实用指南",
-    "ja": "RuleBook｜rambu marka prioritas ガイド"
+    "id": "FAQ rambu marka prioritas: jawaban yang sering dicari",
+    "en": "rambu marka prioritas FAQ: the questions people actually ask",
+    "ar": "أسئلة المعلومات المهمة الشائعة",
+    "jv": "Pitakon rambu marka prioritas sing kerep ditakokaké",
+    "su": "Patarosan rambu marka prioritas anu sering ditaroskeun",
+    "zh": "重要信息常见问题：大家真正会问的",
+    "ja": "大切な情報のよくある質問"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Jawaban atas pertanyaan yang sering dicari tentang rambu marka prioritas: arti praktisnya, versi paling kecil, dan catatan yang tersimpan di perangkat.",
+    "en": "Answers to the questions people actually ask about rambu marka prioritas: what it means in practice, the smallest version, and on-device storage.",
+    "ar": "إجابات عن أسئلة يطرحها الناس فعلاً حول rambu marka prioritas: معناه العملي، وأصغر نسخة للتجربة، والحفظ على الجهاز.",
+    "ja": "rambu marka prioritasについてよくある質問に回答。実践での意味、最小版の試し方、端末内の保存を解説。",
+    "zh": "人们真正会问的rambu marka prioritas问题：它的实际含义、最小版本的做法，以及设备端存储。",
+    "jv": "Wangsulan kanggo pitakon sing kerep digoleki babagan rambu marka prioritas: teges ing praktik, versi paling cilik, lan cathetan sing kasimpen ing piranti.",
+    "su": "Jawaban pikeun patarosan nu sering ditéangan ngeunaan rambu marka prioritas: hartina dina prak-prakan, versi pangleutikna, jeung catetan nu disimpen dina alat."
+  }
 }

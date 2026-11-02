@@ -8,22 +8,31 @@
   "banner_ready": false,
   "seo": true,
   "slugs": {
-    "id": "aturan-lalu-lintas-saku-untuk-dipakai-bergantian",
-    "en": "sharing-a-device-for-aturan-lalu-lintas-saku",
-    "ar": "aturan-lalu-lintas-saku-5",
-    "jv": "pandhuan-aturan-lalu-lintas-saku-rulebook-5",
-    "su": "pituduh-aturan-lalu-lintas-saku-rulebook-5",
-    "zh": "rulebook-aturan-lalu-lintas-saku-实用指南-5",
-    "ja": "rulebookaturan-lalu-lintas-saku-ガイド-5"
+    "id": "aturan-lalu-lintas-saku-untuk-satu-rumah",
+    "en": "aturan-lalu-lintas-saku-for-the-whole-household",
+    "ar": "almalwmat-almhma-lkl-afrad-almnzl",
+    "jv": "aturan-lalu-lintas-saku-kanggo-sakulawarga",
+    "su": "aturan-lalu-lintas-saku-pikeun-sakulawarga",
+    "zh": "quan-jia-yi-qi-yong-de-zhong-yao-xin-xi",
+    "ja": "kazoku-minnade-tsukau-taisetsu-na-jouhou"
   },
   "titles": {
-    "id": "aturan lalu lintas saku: panduan praktis di RuleBook",
-    "en": "Sharing a Device for aturan lalu lintas saku",
-    "ar": "aturan lalu lintas saku — دليل RuleBook",
-    "jv": "Pandhuan: aturan lalu lintas saku: panduan praktis di RuleBook",
-    "su": "Pituduh: aturan lalu lintas saku: panduan praktis di RuleBook",
-    "zh": "RuleBook · aturan lalu lintas saku 实用指南",
-    "ja": "RuleBook｜aturan lalu lintas saku ガイド"
+    "id": "aturan lalu lintas saku untuk satu rumah",
+    "en": "aturan lalu lintas saku for the whole household",
+    "ar": "المعلومات المهمة لكل أفراد المنزل",
+    "jv": "aturan lalu lintas saku kanggo sakulawarga",
+    "su": "aturan lalu lintas saku pikeun sakulawarga",
+    "zh": "全家一起用的重要信息",
+    "ja": "家族みんなで使う大切な情報"
   },
-  "quality_pass": "article-writing+edit-article+marketing-psychology-v2"
+  "quality_pass": "editorial-v3",
+  "descriptions": {
+    "id": "Aturan lalu lintas saku untuk satu rumah: cara berbagi kebiasaan, tinjauan mingguan bersama, data tersimpan di perangkat, dan langkah setelah jeda.",
+    "en": "Sharing aturan lalu lintas saku for the whole household: how to share the habit, a weekly review together, on-device data, and what to do after a gap.",
+    "ar": "aturan lalu lintas saku لعائلة واحدة: كيف تشارك العادة، ومراجعة أسبوعية معاً، وبيانات محفوظة على الجهاز، وما يُفعل بعد فجوة.",
+    "ja": "家族みんなで使うaturan lalu lintas saku。習慣の共有方法、週次見直しを一緒に行う手順、端末内データ。",
+    "zh": "全家人共用的aturan lalu lintas saku：如何共享习惯、一起做每周复盘、设备端数据以及间隔后的处理。",
+    "jv": "Aturan lalu lintas saku kanggo sakulawarga: cara nuduhké kebiasan, tinjauan mingguan bareng, data ing piranti, lan langkah sawisé bolong.",
+    "su": "Aturan lalu lintas saku pikeun sakulawarga: cara ngabagi kabiasaan, tinjauan mingguan bareng, data dina alat, jeung léngkah sanggeus bolong."
+  }
 }
