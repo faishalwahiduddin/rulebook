@@ -138,7 +138,5 @@ window.STORE_CONFIG = {
       }
     ]
   },
-  "rawIos": [
-    "es-ES"
-  ]
+  "rawIos": []
 };
