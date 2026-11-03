@@ -1,3 +1,27 @@
-RuleBook is a pocket guide to traffic rules, SOPs, and key regulations — always offline.
+RuleBook es una guía de bolsillo de la ley indonesia para gente normal. ¿Te para la policía de tráfico, dudas sobre tu indemnización por despido o te han estafado en una compra online? Busca el artículo y la sanción en segundos, sin internet.
 
-Parte de la familia de apps faishal.id. Enfoque offline, sin anuncios.
+La app trata solo la legislación de Indonesia. Te sirve si vives, trabajas o conduces allí, incluidos expatriados y equipos de RR. HH. con plantilla indonesia.
+
+Los textos legales cuestan de leer. RuleBook resume cada norma en lo que puedes hacer, lo que no y la sanción, sin perder la referencia legal.
+
+Qué incluye:
+• 31 normas en 6 categorías: tráfico, trabajo, protección de datos y ley ITE (ciberdelitos), consumo, seguridad laboral y ética
+• Cada norma trae resumen, base legal, sanción o derecho, y listas de qué hacer y qué evitar
+• Temas como carné y papeles del vehículo, casco homologado, móvil al volante, horas extra, vacaciones, paga extra de fiestas religiosas (THR), despidos e indemnización, contratos temporales, seguridad social, derechos sobre tus datos, doxxing, fraude online, productos defectuosos y cláusulas abusivas
+• Búsqueda instantánea por título, palabra clave o número de artículo
+• Calculadoras: horas extra, indemnización por despido (PP 35/2021), THR proporcional, estimación de multas de tráfico y sanciones ITE
+• 5 protocolos paso a paso: controles de tráfico, despido sin indemnización, reclamaciones de compras online, fuga de datos en 72 horas y accidentes laborales
+• 4 listas de cumplimiento con porcentaje: papeles del vehículo, derechos del trabajador, seguridad laboral y seguridad de datos personales
+• Guarda tus normas favoritas y añade notas privadas
+• Comparte una norma como tarjeta de imagen o copia el resumen
+• Haz copia de favoritos y notas en un archivo y restáuralos cuando quieras
+• Tema claro u oscuro y 8 idiomas, español incluido
+
+¿Por qué RuleBook?
+Casi todas las apps de leyes te sueltan el texto completo de la norma. RuleBook se centra en lo que de verdad te encuentras en el día a día, con calculadoras y pasos prácticos. Todo el contenido va dentro de la app, así que funciona sin conexión. Sin cuenta, y tus búsquedas y notas no salen del móvil.
+
+Ojo: RuleBook es divulgación legal práctica, no asesoramiento jurídico. El contenido se actualiza con cada versión nueva de la app; para un caso real, consulta la norma vigente o a un abogado.
+
+Lleva RuleBook en el móvil para la próxima vez que lo necesites.
+
+Parte de la familia de apps faishal.id.

@@ -1,20 +1,25 @@
-RuleBook adalah panduan hukum praktis di saku untuk aturan dan regulasi Indonesia: katalog peraturan, kalkulator hak dan sanksi, SOP tindakan darurat, dan daftar periksa kepatuhan.
+RuleBook adalah buku saku hukum Indonesia untuk orang awam. Saat kena razia, ragu soal pesangon, atau curiga ditipu belanja online, kamu bisa langsung cari pasal dan sanksinya, tanpa internet.
 
-Fitur Utama:
-✓ Katalog peraturan: lalu lintas, ketenagakerjaan, perlindungan konsumen, ITE/siber, properti, perdata & keluarga, dan pidana umum
-✓ Ringkasan, dasar hukum, sanksi/denda, dan hak penting untuk setiap aturan
-✓ Kalkulator: lembur, pesangon, THR prorata, simulasi denda tilang, dan sanksi ITE
-✓ SOP tindakan darurat langkah demi langkah beserta nomor darurat resmi
-✓ Daftar periksa audit kepatuhan mandiri
-✓ Simpan aturan favorit dan tambahkan catatan pribadi
-✓ 100% offline, tanpa iklan, tanpa akun
+Bahasa UU dan PP itu berat. RuleBook meringkasnya jadi boleh, dilarang, dan sanksi, tanpa membuang rujukan pasalnya.
+
+Isi RuleBook:
+• 31 butir aturan dalam 6 kategori: lalu lintas, ketenagakerjaan, data pribadi & UU ITE, perlindungan konsumen, K3, dan etika
+• Tiap butir berisi ringkasan, dasar hukum, sanksi atau hak, plus daftar yang perlu dilakukan dan dihindari
+• Contoh: SIM & STNK, helm SNI, main HP saat berkendara, lembur, cuti tahunan, THR, PHK & pesangon, PKWT, BPJS Ketenagakerjaan, hak subjek data (UU PDP), doxxing, penipuan online, barang cacat, klausula baku
+• Pencarian instan berdasarkan judul, kata kunci, atau nomor pasal
+• Kalkulator: upah lembur, pesangon PHK (PP 35/2021), THR prorata, simulasi denda tilang, dan sanksi UU ITE
+• 5 SOP langkah demi langkah: razia dan tilang, PHK tanpa pesangon, komplain belanja online, kebocoran data 72 jam, dan kecelakaan kerja
+• 4 audit kepatuhan dengan persentase progres: kelengkapan berkendara, hak normatif pekerja, K3 tempat kerja, dan keamanan data pribadi
+• Simpan pasal favorit dan tulis catatan pribadi
+• Bagikan aturan sebagai kartu gambar atau salin ringkasannya
+• Cadangkan simpanan dan catatan ke berkas, lalu pulihkan kapan saja
+• Tema terang/gelap dan 8 bahasa, termasuk Jawa dan Sunda
 
 Kenapa RuleBook?
-Aturan dan hak sering sulit ditemukan saat dibutuhkan. RuleBook merangkum dasar hukum, sanksi, dan langkah praktis dalam satu aplikasi yang bisa dibuka kapan saja tanpa internet.
+Aplikasi hukum lain biasanya cuma berisi teks KUHP atau UU utuh yang panjang. RuleBook fokus ke aturan yang sering kamu hadapi sehari-hari, lengkap dengan kalkulator dan langkah praktis. Semua konten tertanam di aplikasi, jadi bisa dibaca offline. Tanpa akun, dan pencarian serta catatanmu tidak pernah dikirim ke server.
 
-Catatan: RuleBook adalah edukasi hukum praktis dan bukan nasihat hukum.
+Catatan: RuleBook adalah edukasi hukum praktis, bukan nasihat hukum. Konten diperbarui lewat versi aplikasi baru, jadi untuk kasus nyata tetap cek peraturan terbaru atau konsultasi dengan ahli hukum.
 
-Privasi:
-Pencarian dan catatan Anda tersimpan lokal di ponsel dan tidak dikirim ke server mana pun.
+Simpan RuleBook di HP sebelum razia berikutnya.
 
-Bagian dari armada aplikasi faishal.id.
+Bagian dari keluarga aplikasi faishal.id.

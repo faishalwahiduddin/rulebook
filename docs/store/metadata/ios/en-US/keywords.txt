@@ -1,1 +1,1 @@
-rules,sop,regulations,offline
+legal,rule,regulation,traffic,ticket,overtime,employment,privacy,consumer,calculator,expat,hr,thr

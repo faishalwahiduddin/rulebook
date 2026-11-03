@@ -1,20 +1,27 @@
-RuleBook is a pocket guide to Indonesian rules and regulations: a rule catalog, calculators for rights and penalties, emergency SOPs, and compliance checklists.
+RuleBook is a pocket guide to Indonesian law for everyday people. Stopped at a traffic check, unsure about severance pay, or scammed shopping online? Look up the article and the penalty in seconds, without internet.
 
-Core Features:
-✓ Rule catalog: traffic, labor, consumer protection, cyber/ITE, property, civil & family, and general criminal law
-✓ Summary, legal basis, sanctions/fines, and key rights for every rule
-✓ Calculators: overtime, severance, prorated THR, traffic fine simulation, and ITE sanctions
-✓ Step-by-step emergency SOPs with official hotline numbers
-✓ Self-compliance audit checklist
-✓ Save favorite rules and add personal notes
-✓ 100% offline, no ads, no account
+This app covers Indonesian law only. It's useful if you live, work or drive in Indonesia, including expats and HR teams working with Indonesian staff.
+
+Legal text is hard to read. RuleBook boils each rule down to what's allowed, what's not, and the sanction, and keeps the legal reference.
+
+What's inside:
+• 31 rules in 6 categories: traffic, labor, data privacy and the ITE (cyber) law, consumer protection, workplace safety, and ethics
+• Each rule has a summary, legal basis, sanction or right, plus do and don't lists
+• Topics like driver's license and vehicle papers, SNI helmets, phone use while driving, overtime, annual leave, religious holiday bonus (THR), layoffs and severance, fixed-term contracts, social security, personal data rights, doxxing, online fraud, defective goods and unfair contract clauses
+• Instant search by title, keyword or article number
+• Calculators: overtime pay, severance (PP 35/2021), prorated THR, traffic fine estimate and ITE sanctions
+• 5 step-by-step SOPs: traffic stops, layoffs without severance, online shopping complaints, 72-hour data breach response, and workplace accidents
+• 4 compliance checklists with progress: vehicle papers, worker rights, workplace safety and personal data security
+• Bookmark rules and add private notes
+• Share a rule as an image card or copy the summary
+• Back up bookmarks and notes to a file and restore them anytime
+• Light/dark theme and 8 languages
 
 Why RuleBook?
-Rules and rights are hard to find when you need them. RuleBook gathers the legal basis, penalties, and practical steps in one app you can open anytime without internet.
+Most law apps just dump the full text of a statute. RuleBook focuses on the rules people actually run into, with calculators and practical steps. Everything is built into the app, so it works offline. No account, and your searches and notes never leave your phone.
 
-Note: RuleBook is practical legal education, not legal advice.
+Note: RuleBook is practical legal education, not legal advice. Content is updated with new app versions, so for a real case, check the latest regulation or talk to a lawyer.
 
-Privacy:
-Your searches and notes stay on your device and are never sent to any server.
+Keep RuleBook on your phone for the next time you need it.
 
 Part of the faishal.id app family.
