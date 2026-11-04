@@ -4,7 +4,7 @@
 > files are the split, tool-ready copies of this content.
 > ⚠️ **Non-English drafts (ar, ja-JP, zh-CN, es-ES) need a native-speaker review before publishing.**
 
-- **Package:** `id.faishal.rulebook` · **Version:** 1.0.3+4 · **Category:** Books & Reference
+- **Package:** `id.faishal.rulebook` · **Version:** 1.0.15+16 · **Category:** Books & Reference
 
 ---
 
@@ -50,7 +50,7 @@ Bagian dari keluarga aplikasi faishal.id.
 
 </details>
 
-**Release notes** — versionCode 4 (60/500)
+**Release notes** — versionCode 16 (60/500)
 
 > Rilis pembaruan metadata dan aset toko resmi untuk RuleBook.
 
@@ -60,9 +60,9 @@ Bagian dari keluarga aplikasi faishal.id.
 
 **Screenshot captions**
 
-1. **Buku saku aturan** — Lalu lintas, SOP, regulasi
-2. **Kalkulator** — Hitung cepat sesuai aturan
-3. **Checklist** — Patuhi langkah demi langkah
+1. **Buku saku hukum** — Katalog aturan hukum Indonesia
+2. **Kalkulator** — Lembur, pesangon, THR, denda tilang
+3. **Checklist** — SOP darurat & audit kepatuhan
 4. **Offline** — Tanpa internet
 
 ---
@@ -111,7 +111,7 @@ Part of the faishal.id app family.
 
 </details>
 
-**Release notes** — versionCode 4 (69/500)
+**Release notes** — versionCode 16 (69/500)
 
 > Official store metadata and presentation update release for RuleBook.
 
@@ -121,9 +121,9 @@ Part of the faishal.id app family.
 
 **Screenshot captions**
 
-1. **Pocket rules** — Traffic, SOPs, regs
-2. **Calculator** — Quick rule math
-3. **Checklist** — Step by step
+1. **Pocket legal guide** — Indonesian rules catalog
+2. **Calculator** — Overtime, severance, THR, fines
+3. **Checklist** — Emergency SOPs & compliance audit
 4. **Offline** — No internet needed
 
 ---
@@ -172,20 +172,20 @@ RuleBook دليل جيب للقانون الإندونيسي موجّه لعام
 
 </details>
 
-**Release notes** — versionCode 4 (39/500)
+**Release notes** — versionCode 16 (39/500)
 
 > إصدار أولي مع لقطات متجر متعددة اللغات.
 
 **Tagline** (feature graphic)
 
-> Pocket rules, SOPs, and regulations offline.
+> دليل الجيب للقانون الإندونيسي: فهرس القوانين، الحاسبات، وإجراءات العمل القياسية.
 
 **Screenshot captions**
 
-1. **Pocket rules** — Traffic, SOPs, regs
-2. **Calculator** — Quick rule math
-3. **Checklist** — Step by step
-4. **Offline** — No internet needed
+1. **دليل قانوني في جيبك** — كتالوج القوانين واللوائح الإندونيسية
+2. **حاسبة المستحقات** — ساعات العمل الإضافي ومكافأة نهاية الخدمة
+3. **قوائم الإجراءات** — إجراءات الطوارئ وتدقيق الامتثال
+4. **دون اتصال** — يعمل بالكامل دون الحاجة لإنترنت
 
 ---
 
@@ -233,20 +233,20 @@ faishal.id アプリファミリーの一つです。
 
 </details>
 
-**Release notes** — versionCode 4 (27/500)
+**Release notes** — versionCode 16 (27/500)
 
 > 多言語ストア向けスクリーンショット対応の初回リリース。
 
 **Tagline** (feature graphic)
 
-> Pocket rules, SOPs, and regulations offline.
+> インドネシア法のポケットガイド：法令カタログ、計算機、SOPとチェックリスト。
 
 **Screenshot captions**
 
-1. **Pocket rules** — Traffic, SOPs, regs
-2. **Calculator** — Quick rule math
-3. **Checklist** — Step by step
-4. **Offline** — No internet needed
+1. **ポケット法律ガイド** — インドネシア主要法令カタログ
+2. **労務・手当計算機** — 残業代・退職金・賞与・違約金の試算
+3. **チェックリスト** — 緊急時対応マニュアルと適合点検
+4. **完全オフライン** — インターネット接続なしで参照可能
 
 ---
 
@@ -294,20 +294,20 @@ faishal.id 应用家族成员之一。
 
 </details>
 
-**Release notes** — versionCode 4 (15/500)
+**Release notes** — versionCode 16 (15/500)
 
 > 首次发布，支持多语言商店截图。
 
 **Tagline** (feature graphic)
 
-> Pocket rules, SOPs, and regulations offline.
+> 印尼法规便携口袋指南：法律汇编、补偿金计算器与合规清单。
 
 **Screenshot captions**
 
-1. **Pocket rules** — Traffic, SOPs, regs
-2. **Calculator** — Quick rule math
-3. **Checklist** — Step by step
-4. **Offline** — No internet needed
+1. **口袋法律宝典** — 印尼法规制度条文快捷检索
+2. **专业计算器** — 精准测算加班费、遣散补偿与奖金
+3. **合规自查表** — 应急处理标准规范与合规核验
+4. **离线可用** — 无网络时随时查阅法条法规
 
 ---
 
@@ -355,18 +355,18 @@ Parte de la familia de apps faishal.id.
 
 </details>
 
-**Release notes** — versionCode 4 (51/500)
+**Release notes** — versionCode 16 (51/500)
 
 > Primera versión con capturas de tienda multiidioma.
 
 **Tagline** (feature graphic)
 
-> Pocket rules, SOPs, and regulations offline.
+> Guía jurídica de bolsillo de Indonesia: catálogo legal, calculadoras y listas.
 
 **Screenshot captions**
 
-1. **Pocket rules** — Traffic, SOPs, regs
-2. **Calculator** — Quick rule math
-3. **Checklist** — Step by step
-4. **Offline** — No internet needed
+1. **Guía legal de bolsillo** — Catálogo normativo de Indonesia
+2. **Calculadoras** — Horas extras, liquidación y multas
+3. **Listas de control** — Protocolos de emergencia y auditoría
+4. **Sin conexión** — No requiere conexión a internet
 

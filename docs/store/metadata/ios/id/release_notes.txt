@@ -1,3 +1,1 @@
-Perbaikan dan peningkatan (1.0.9):
-• Teks lebih mudah dibaca (kontras) di tema terang dan gelap
-• Perbaikan crash saat aplikasi dibuka dan penandaan baca
+Rilis pembaruan metadata dan aset toko resmi untuk RuleBook.
