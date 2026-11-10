@@ -3047,6 +3047,78 @@ abstract class AppLocalizations {
   /// In id, this message translates to:
   /// **'Diverifikasi: {date}'**
   String shareCardVerifiedOn(String date);
+
+  /// No description provided for @chkVehicleTitle.
+  ///
+  /// In id, this message translates to:
+  /// **'Audit Kelaikan Berkendara & Dokumen Legalitas'**
+  String get chkVehicleTitle;
+
+  /// No description provided for @chkVehicleAudience.
+  ///
+  /// In id, this message translates to:
+  /// **'Pengemudi Sepeda Motor & Mobil Pribadi'**
+  String get chkVehicleAudience;
+
+  /// No description provided for @chkVehicleDesc.
+  ///
+  /// In id, this message translates to:
+  /// **'Pemeriksaan rutin pra-perjalanan untuk memastikan kepatuhan hukum jalan raya dan mencegah tilang operasi razia.'**
+  String get chkVehicleDesc;
+
+  /// No description provided for @chkWorkerTitle.
+  ///
+  /// In id, this message translates to:
+  /// **'Audit Hak Normatif Ketenagakerjaan'**
+  String get chkWorkerTitle;
+
+  /// No description provided for @chkWorkerAudience.
+  ///
+  /// In id, this message translates to:
+  /// **'Pekerja Formal, Karyawan Swasta, & Pekerja Kontrak'**
+  String get chkWorkerAudience;
+
+  /// No description provided for @chkWorkerDesc.
+  ///
+  /// In id, this message translates to:
+  /// **'Audit mandiri untuk memastikan hak-hak hukum dasar Anda di tempat kerja telah dipenuhi oleh perusahaan sesuai UU.'**
+  String get chkWorkerDesc;
+
+  /// No description provided for @chkSafetyTitle.
+  ///
+  /// In id, this message translates to:
+  /// **'Audit Standar Keselamatan & K3 Lingkungan Kerja'**
+  String get chkSafetyTitle;
+
+  /// No description provided for @chkSafetyAudience.
+  ///
+  /// In id, this message translates to:
+  /// **'Supervisor, Pengurus Tempat Kerja, & Anggota P2K3'**
+  String get chkSafetyAudience;
+
+  /// No description provided for @chkSafetyDesc.
+  ///
+  /// In id, this message translates to:
+  /// **'Pemeriksaan kepatuhan fasilitas fisik, jalur evakuasi, dan perlindungan APD di tempat kerja.'**
+  String get chkSafetyDesc;
+
+  /// No description provided for @chkPrivacyTitle.
+  ///
+  /// In id, this message translates to:
+  /// **'Audit Privasi Data Pribadi & Keamanan Digital'**
+  String get chkPrivacyTitle;
+
+  /// No description provided for @chkPrivacyAudience.
+  ///
+  /// In id, this message translates to:
+  /// **'Pengguna Smartphone, Praktisi Bisnis, & Pengelola Akun'**
+  String get chkPrivacyAudience;
+
+  /// No description provided for @chkPrivacyDesc.
+  ///
+  /// In id, this message translates to:
+  /// **'Checklist keamanan siber mandiri untuk mencegah pembobolan akun, pinjol ilegal, dan pelanggaran UU PDP.'**
+  String get chkPrivacyDesc;
 }
 
 class _AppLocalizationsDelegate

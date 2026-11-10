@@ -520,5 +520,17 @@
   "copySeveranceSummary": "RuleBook 离职补偿模拟\n工资：{wage}\n工龄：{years} 年 {months} 个月\n原因：{reason}\n遣散费：{pesangon}\nUPMK：{upmk}\nUPH：{uph}\n合计：{total}\n依据：{basis}",
   "copyThrSummary": "RuleBook 节日津贴（THR）模拟\n工资：{wage}\n工龄：{months} 个月\nTHR 权益：{pay}\n最迟须于节前 7 天发放",
   "shareTrailingNote": "在 RuleBook 中浏览数百条法规与流程：https://rulebook.faishal.id",
-  "shareCardVerifiedOn": "核验日期：{date}"
+  "shareCardVerifiedOn": "核验日期：{date}",
+  "chkVehicleTitle": "车辆适驾性与法定证件检查",
+  "chkVehicleAudience": "私人摩托车与汽车驾驶员",
+  "chkVehicleDesc": "出行前的例行检查，确保遵守道路交通法规，避免路检被罚。",
+  "chkWorkerTitle": "劳动者基本权益检查",
+  "chkWorkerAudience": "正式员工、私营企业员工与合同工",
+  "chkWorkerDesc": "自我检查用人单位是否依法保障你在工作中的基本法定权利。",
+  "chkSafetyTitle": "工作场所安全与职业健康标准检查",
+  "chkSafetyAudience": "主管、工作场所负责人与安全委员会成员",
+  "chkSafetyDesc": "检查工作场所的设施、疏散通道和防护装备是否合规。",
+  "chkPrivacyTitle": "个人数据隐私与数字安全检查",
+  "chkPrivacyAudience": "智能手机用户、企业从业者与账号管理员",
+  "chkPrivacyDesc": "自助网络安全清单，防止账号被盗、非法借贷应用和违反数据保护法。"
 }

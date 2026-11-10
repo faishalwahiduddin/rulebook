@@ -1583,4 +1583,40 @@ class AppLocalizationsZh extends AppLocalizations {
   String shareCardVerifiedOn(String date) {
     return '核验日期：$date';
   }
+
+  @override
+  String get chkVehicleTitle => '车辆适驾性与法定证件检查';
+
+  @override
+  String get chkVehicleAudience => '私人摩托车与汽车驾驶员';
+
+  @override
+  String get chkVehicleDesc => '出行前的例行检查，确保遵守道路交通法规，避免路检被罚。';
+
+  @override
+  String get chkWorkerTitle => '劳动者基本权益检查';
+
+  @override
+  String get chkWorkerAudience => '正式员工、私营企业员工与合同工';
+
+  @override
+  String get chkWorkerDesc => '自我检查用人单位是否依法保障你在工作中的基本法定权利。';
+
+  @override
+  String get chkSafetyTitle => '工作场所安全与职业健康标准检查';
+
+  @override
+  String get chkSafetyAudience => '主管、工作场所负责人与安全委员会成员';
+
+  @override
+  String get chkSafetyDesc => '检查工作场所的设施、疏散通道和防护装备是否合规。';
+
+  @override
+  String get chkPrivacyTitle => '个人数据隐私与数字安全检查';
+
+  @override
+  String get chkPrivacyAudience => '智能手机用户、企业从业者与账号管理员';
+
+  @override
+  String get chkPrivacyDesc => '自助网络安全清单，防止账号被盗、非法借贷应用和违反数据保护法。';
 }

@@ -10,6 +10,7 @@ import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/ui/app_scroll.dart';
 import '../../core/ui/press_scale.dart';
+import '../../core/utils/checklist_l10n_extension.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -245,13 +246,13 @@ class _ChecklistCard extends ConsumerWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      checklist.title,
+                      checklist.localizedTitle(l10n),
                       style: theme.textTheme.titleSmall
                           ?.copyWith(height: 1.3),
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      checklist.targetAudience,
+                      checklist.localizedAudience(l10n),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: theme.textTheme.bodySmall

@@ -520,5 +520,17 @@
   "copySeveranceSummary": "RuleBook 退職補償シミュレーション\n給与：{wage}\n勤続年数：{years}年{months}か月\n理由：{reason}\n退職金：{pesangon}\nUPMK：{upmk}\nUPH：{uph}\n合計：{total}\n根拠：{basis}",
   "copyThrSummary": "RuleBook 祝日手当（THR）シミュレーション\n給与：{wage}\n勤続期間：{months}か月\nTHR 支給額：{pay}\n祝日の7日前までに支払い",
   "shareTrailingNote": "RuleBook で数百の法令・業務フローを検索：https://rulebook.faishal.id",
-  "shareCardVerifiedOn": "確認日：{date}"
+  "shareCardVerifiedOn": "確認日：{date}",
+  "chkVehicleTitle": "車両の安全性と法定書類の点検",
+  "chkVehicleAudience": "自家用バイク・自動車の運転者",
+  "chkVehicleDesc": "道路交通法を守り、取り締まりでの違反切符を避けるための出発前の定期点検です。",
+  "chkWorkerTitle": "労働者の基本的権利の点検",
+  "chkWorkerAudience": "正社員、民間企業の従業員、契約社員",
+  "chkWorkerDesc": "職場での基本的な法的権利が法令どおりに守られているかを確認するセルフ点検です。",
+  "chkSafetyTitle": "職場の安全衛生基準の点検",
+  "chkSafetyAudience": "監督者、職場の管理者、安全委員会メンバー",
+  "chkSafetyDesc": "職場の設備、避難経路、保護具が基準を満たしているかの点検です。",
+  "chkPrivacyTitle": "個人情報の保護とデジタルセキュリティの点検",
+  "chkPrivacyAudience": "スマートフォン利用者、事業者、アカウント管理者",
+  "chkPrivacyDesc": "アカウント乗っ取り、違法な融資アプリ、個人情報保護法違反を防ぐセルフチェックです。"
 }
