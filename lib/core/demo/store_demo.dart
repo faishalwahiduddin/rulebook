@@ -6,6 +6,9 @@ import '../storage/local_storage_service.dart';
 /// (`--dart-define=STORE_DEMO=true`). Real builds never seed.
 const bool kStoreDemo = bool.fromEnvironment('STORE_DEMO');
 
+/// Language forced for the seed + UI during store captures (`--dart-define=STORE_DEMO_LOCALE=en`).
+const String kStoreDemoLocale = String.fromEnvironment('STORE_DEMO_LOCALE');
+
 /// Rules the demo reader has already opened (feeds the reader badge).
 const Set<String> kStoreDemoReadRuleIds = {
   'traffic-01',
@@ -40,7 +43,7 @@ class StoreDemoSeeder {
     });
 
     final lang =
-        prefs.getString('locale') ??
+        (kStoreDemoLocale.isNotEmpty ? kStoreDemoLocale : prefs.getString('locale')) ??
         ui.PlatformDispatcher.instance.locale.languageCode;
     final notes = _notes[lang] ?? _notes['en']!;
     await storage.saveNote('traffic-01', notes[0]);
