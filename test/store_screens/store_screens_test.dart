@@ -160,7 +160,10 @@ Future<void> _renderOne(WidgetTester tester, StoreDevice device, String lang,
   final key = GlobalKey();
   final barStyle = ValueNotifier(StoreBarStyle.hidden);
   addTearDown(barStyle.dispose);
-  final app = await tester.runAsync(() => storeBuildApp(lang));
+  // runAsync runs outside the test zone, so re-enter the fixed clock: demo
+  // seeds that read package:clock then line up with what the screens show.
+  final app = await tester.runAsync(
+      () => withClock(Clock.fixed(_renderInstant), () => storeBuildApp(lang)));
   await tester.pumpWidget(RepaintBoundary(
     key: key,
     child: StoreStatusBarFrame(device: device, style: barStyle, child: app!),
