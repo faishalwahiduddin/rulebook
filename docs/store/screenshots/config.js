@@ -41,13 +41,13 @@ window.STORE_CONFIG = {
         "layout": "offset-right"
       },
       {
-        "headline": "Tahu langkahnya\nsaat ada masalah",
-        "subtext": "SOP dan checklist kepatuhan",
+        "headline": "Cek posisimu,\nbutir demi butir",
+        "subtext": "Audit mandiri lalu lintas, kerja, privasi",
         "layout": "zoom"
       },
       {
-        "headline": "Buku hukum\ndi saku, tanpa sinyal",
-        "subtext": "Cari pasal tanpa internet",
+        "headline": "Simpan aturan yang\npaling kamu butuhkan",
+        "subtext": "Penanda dan catatan pribadimu",
         "layout": "offset-left"
       }
     ],
@@ -63,13 +63,13 @@ window.STORE_CONFIG = {
         "layout": "offset-right"
       },
       {
-        "headline": "Know your next step\nwhen things go wrong",
-        "subtext": "SOPs and compliance checklists",
+        "headline": "Check where you\nstand, item by item",
+        "subtext": "Self-audits for traffic, work, privacy",
         "layout": "zoom"
       },
       {
-        "headline": "Your law book,\nalways in your pocket",
-        "subtext": "Search articles, no internet needed",
+        "headline": "Save the rules\nyou need most",
+        "subtext": "Bookmarks and your own notes",
         "layout": "offset-left"
       }
     ],
@@ -85,13 +85,13 @@ window.STORE_CONFIG = {
         "layout": "offset-right"
       },
       {
-        "headline": "اعرف خطوتك التالية\nعند أي مشكلة",
-        "subtext": "إجراءات وقوائم امتثال",
+        "headline": "اعرف موقفك\nبندًا بندًا",
+        "subtext": "تدقيق ذاتي للمرور والعمل والخصوصية",
         "layout": "zoom"
       },
       {
-        "headline": "كتاب القانون\nفي جيبك دائمًا",
-        "subtext": "ابحث دون اتصال بالإنترنت",
+        "headline": "احفظ القواعد\nالتي تحتاجها أكثر",
+        "subtext": "إشارات مرجعية وملاحظاتك الخاصة",
         "layout": "offset-left"
       }
     ],
@@ -107,13 +107,13 @@ window.STORE_CONFIG = {
         "layout": "offset-right"
       },
       {
-        "headline": "困ったときの\n手順がすぐわかる",
-        "subtext": "手順書とコンプライアンス確認",
+        "headline": "自分の状況を\n項目ごとに確認",
+        "subtext": "交通・労働・プライバシーの自己診断",
         "layout": "zoom"
       },
       {
-        "headline": "法律の本を\nポケットに",
-        "subtext": "ネットなしで条文を検索",
+        "headline": "よく使うルールを\n保存しておこう",
+        "subtext": "ブックマークと自分のメモ",
         "layout": "offset-left"
       }
     ],
@@ -129,13 +129,13 @@ window.STORE_CONFIG = {
         "layout": "offset-right"
       },
       {
-        "headline": "遇到麻烦\n步骤一看就懂",
-        "subtext": "标准流程与合规清单",
+        "headline": "逐项检查\n自己是否合规",
+        "subtext": "交通、劳动、隐私自查",
         "layout": "zoom"
       },
       {
-        "headline": "口袋里的\n法律手册",
-        "subtext": "无需联网即可查条文",
+        "headline": "收藏\n最常用的规定",
+        "subtext": "书签与你自己的笔记",
         "layout": "offset-left"
       }
     ],
@@ -151,13 +151,13 @@ window.STORE_CONFIG = {
         "layout": "offset-right"
       },
       {
-        "headline": "Qué hacer cuando\nalgo sale mal",
-        "subtext": "Protocolos y listas de control",
+        "headline": "Comprueba tu situación,\npunto por punto",
+        "subtext": "Autoauditoría de tráfico, trabajo y privacidad",
         "layout": "zoom"
       },
       {
-        "headline": "Tu libro de leyes\nen el bolsillo",
-        "subtext": "Busca artículos sin conexión",
+        "headline": "Guarda las reglas\nque más necesitas",
+        "subtext": "Marcadores y tus propias notas",
         "layout": "offset-left"
       }
     ]
