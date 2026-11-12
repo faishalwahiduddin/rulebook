@@ -1,6 +1,6 @@
 # RuleBook
 
-> RuleBook adalah buku saku digital berisi aturan lalu lintas, SOP, dan regulasi per topik yang bisa dibaca offline. Dilengkapi pencarian cepat dan favorit.
+> Aturan tilang, hak kerja, UU ITE, dan konsumen dalam bahasa awam. Bisa offline.
 
 RuleBook is a free app in the faishal.id fleet. Offline-first product; this marketing site may use optional consent-gated analytics.
 
@@ -12,7 +12,6 @@ RuleBook is a free app in the faishal.id fleet. Offline-first product; this mark
 - Terms: https://rulebook.faishal.id/id/terms.html
 - Pricing: https://rulebook.faishal.id/pricing.md
 - Publisher: https://faishal.id
-- Google Play: https://play.google.com/store/apps/details?id=id.faishal.rulebook
 
 ## Blog posts
 
