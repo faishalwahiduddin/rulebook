@@ -1720,4 +1720,49 @@ class AppLocalizationsEn extends AppLocalizations {
   String shareCardVerifiedOn(String date) {
     return 'Verified: $date';
   }
+
+  @override
+  String get chkVehicleTitle =>
+      'Vehicle Roadworthiness & Legal Documents Audit';
+
+  @override
+  String get chkVehicleAudience => 'Private Motorcycle & Car Drivers';
+
+  @override
+  String get chkVehicleDesc =>
+      'A routine pre-trip check to stay compliant with road laws and avoid fines at roadside checks.';
+
+  @override
+  String get chkWorkerTitle => 'Employment Normative Rights Audit';
+
+  @override
+  String get chkWorkerAudience =>
+      'Formal Workers, Private Employees & Contract Workers';
+
+  @override
+  String get chkWorkerDesc =>
+      'A self-audit to confirm your basic legal rights at work are met by your employer as required by law.';
+
+  @override
+  String get chkSafetyTitle => 'Workplace Safety & OHS Standards Audit';
+
+  @override
+  String get chkSafetyAudience =>
+      'Supervisors, Workplace Managers & Safety Committee Members';
+
+  @override
+  String get chkSafetyDesc =>
+      'A compliance check of physical facilities, evacuation routes and protective equipment at work.';
+
+  @override
+  String get chkPrivacyTitle =>
+      'Personal Data Privacy & Digital Security Audit';
+
+  @override
+  String get chkPrivacyAudience =>
+      'Smartphone Users, Business Practitioners & Account Managers';
+
+  @override
+  String get chkPrivacyDesc =>
+      'A self-service cybersecurity checklist to prevent account takeovers, illegal loan apps and data protection violations.';
 }

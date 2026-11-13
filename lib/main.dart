@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/a11y/text_scale.dart';
+import 'core/demo/store_demo.dart';
 import 'core/providers/app_providers.dart';
 import 'core/theme/app_colors.dart';
 import 'core/ui/app_scroll.dart';
@@ -25,6 +26,7 @@ void main() async {
   AppTimeZone.cachedDeviceZone = await AppTimeZone.getDeviceZoneName();
 
   final storageService = await LocalStorageService.init();
+  if (kStoreDemo) await StoreDemoSeeder.seedIfNeeded(storageService);
 
   runApp(
     ProviderScope(

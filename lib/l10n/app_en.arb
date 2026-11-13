@@ -526,5 +526,17 @@
   "copySeveranceSummary": "RuleBook severance simulation\nWage: {wage}\nService: {years} yr {months} mo\nReason: {reason}\nSeverance: {pesangon}\nUPMK: {upmk}\nUPH: {uph}\nTotal: {total}\nBasis: {basis}",
   "copyThrSummary": "RuleBook holiday-pay (THR) simulation\nWage: {wage}\nService: {months} months\nTHR entitlement: {pay}\nDue no later than 7 days before the holiday",
   "shareTrailingNote": "Browse hundreds of rules and SOPs in RuleBook: https://rulebook.faishal.id",
-  "shareCardVerifiedOn": "Verified: {date}"
+  "shareCardVerifiedOn": "Verified: {date}",
+  "chkVehicleTitle": "Vehicle Roadworthiness & Legal Documents Audit",
+  "chkVehicleAudience": "Private Motorcycle & Car Drivers",
+  "chkVehicleDesc": "A routine pre-trip check to stay compliant with road laws and avoid fines at roadside checks.",
+  "chkWorkerTitle": "Employment Normative Rights Audit",
+  "chkWorkerAudience": "Formal Workers, Private Employees & Contract Workers",
+  "chkWorkerDesc": "A self-audit to confirm your basic legal rights at work are met by your employer as required by law.",
+  "chkSafetyTitle": "Workplace Safety & OHS Standards Audit",
+  "chkSafetyAudience": "Supervisors, Workplace Managers & Safety Committee Members",
+  "chkSafetyDesc": "A compliance check of physical facilities, evacuation routes and protective equipment at work.",
+  "chkPrivacyTitle": "Personal Data Privacy & Digital Security Audit",
+  "chkPrivacyAudience": "Smartphone Users, Business Practitioners & Account Managers",
+  "chkPrivacyDesc": "A self-service cybersecurity checklist to prevent account takeovers, illegal loan apps and data protection violations."
 }

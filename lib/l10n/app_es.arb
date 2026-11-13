@@ -520,5 +520,17 @@
   "copySeveranceSummary": "Simulación de indemnización RuleBook\nSalario: {wage}\nAntigüedad: {years} a {months} m\nMotivo: {reason}\nIndemnización: {pesangon}\nUPMK: {upmk}\nUPH: {uph}\nTotal: {total}\nBase: {basis}",
   "copyThrSummary": "Simulación de paga festiva (THR) RuleBook\nSalario: {wage}\nAntigüedad: {months} meses\nTHR correspondiente: {pay}\nDebe pagarse antes de los 7 días previos al festivo",
   "shareTrailingNote": "Consulta cientos de normas y protocolos en RuleBook: https://rulebook.faishal.id",
-  "shareCardVerifiedOn": "Verificado: {date}"
+  "shareCardVerifiedOn": "Verificado: {date}",
+  "chkVehicleTitle": "Auditoría de aptitud del vehículo y documentos legales",
+  "chkVehicleAudience": "Conductores particulares de moto y auto",
+  "chkVehicleDesc": "Revisión rutinaria antes del viaje para cumplir las normas de tránsito y evitar multas en los controles.",
+  "chkWorkerTitle": "Auditoría de derechos laborales básicos",
+  "chkWorkerAudience": "Trabajadores formales, empleados privados y contratados",
+  "chkWorkerDesc": "Autoauditoría para confirmar que tu empleador cumple tus derechos legales básicos en el trabajo.",
+  "chkSafetyTitle": "Auditoría de seguridad y salud en el trabajo",
+  "chkSafetyAudience": "Supervisores, responsables del lugar de trabajo y miembros del comité de seguridad",
+  "chkSafetyDesc": "Revisión del cumplimiento de instalaciones, vías de evacuación y equipos de protección en el trabajo.",
+  "chkPrivacyTitle": "Auditoría de privacidad de datos y seguridad digital",
+  "chkPrivacyAudience": "Usuarios de smartphone, profesionales y administradores de cuentas",
+  "chkPrivacyDesc": "Lista de ciberseguridad para evitar el robo de cuentas, apps de préstamos ilegales e infracciones de protección de datos."
 }

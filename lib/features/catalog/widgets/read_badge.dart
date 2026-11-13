@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../../../core/demo/store_demo.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../l10n/app_localizations.dart';
 
@@ -10,7 +11,7 @@ import '../../../l10n/app_localizations.dart';
 /// badge, tanpa XP/level engine.
 class ReadRuleIds extends Notifier<Set<String>> {
   @override
-  Set<String> build() => <String>{};
+  Set<String> build() => kStoreDemo ? kStoreDemoReadRuleIds : <String>{};
 
   void mark(String id) {
     if (id.isEmpty || state.contains(id)) return;

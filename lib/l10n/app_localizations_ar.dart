@@ -1719,4 +1719,48 @@ class AppLocalizationsAr extends AppLocalizations {
   String shareCardVerifiedOn(String date) {
     return 'تم التحقق: $date';
   }
+
+  @override
+  String get chkVehicleTitle => 'تدقيق صلاحية المركبة والوثائق القانونية';
+
+  @override
+  String get chkVehicleAudience => 'سائقو الدراجات النارية والسيارات الخاصة';
+
+  @override
+  String get chkVehicleDesc =>
+      'فحص روتيني قبل الرحلة للالتزام بقوانين الطرق وتجنّب المخالفات في نقاط التفتيش.';
+
+  @override
+  String get chkWorkerTitle => 'تدقيق الحقوق العمالية الأساسية';
+
+  @override
+  String get chkWorkerAudience =>
+      'العاملون الرسميون وموظفو القطاع الخاص والعاملون بعقود';
+
+  @override
+  String get chkWorkerDesc =>
+      'تدقيق ذاتي للتأكد من أن صاحب العمل يوفّي حقوقك القانونية الأساسية في العمل.';
+
+  @override
+  String get chkSafetyTitle =>
+      'تدقيق معايير السلامة والصحة المهنية في بيئة العمل';
+
+  @override
+  String get chkSafetyAudience =>
+      'المشرفون ومديرو أماكن العمل وأعضاء لجان السلامة';
+
+  @override
+  String get chkSafetyDesc =>
+      'فحص الالتزام بالمرافق المادية ومسارات الإخلاء ومعدات الوقاية في مكان العمل.';
+
+  @override
+  String get chkPrivacyTitle => 'تدقيق خصوصية البيانات الشخصية والأمان الرقمي';
+
+  @override
+  String get chkPrivacyAudience =>
+      'مستخدمو الهواتف الذكية وممارسو الأعمال ومديرو الحسابات';
+
+  @override
+  String get chkPrivacyDesc =>
+      'قائمة أمن سيبراني ذاتية لمنع اختراق الحسابات وتطبيقات القروض غير القانونية ومخالفات حماية البيانات.';
 }

@@ -520,5 +520,17 @@
   "copySeveranceSummary": "Simulasi Kompensasi PHK RuleBook\nUpah: {wage}\nMasa kerja: {years} th {months} bln\nAlesan: {reason}\nPesangon: {pesangon}\nUPMK: {upmk}\nUPH: {uph}\nJumlah: {total}\nDasar: {basis}",
   "copyThrSummary": "Simulasi THR RuleBook\nUpah: {wage}\nMasa kerja: {months} bulan\nHak THR: {pay}\nWajib dibayar panglambatna H-7 poé raya",
   "shareTrailingNote": "Paluruh ratusan aturan & SOP di RuleBook: https://rulebook.faishal.id",
-  "shareCardVerifiedOn": "Dipastikeun: {date}"
+  "shareCardVerifiedOn": "Dipastikeun: {date}",
+  "chkVehicleTitle": "Audit Kalayakan Nyetir & Dokumén Légalitas",
+  "chkVehicleAudience": "Nu Nyetir Motor & Mobil Pribadi",
+  "chkVehicleDesc": "Pamariksaan rutin saacan iinditan pikeun mastikeun nurut aturan jalan jeung nyegah ditilang waktu razia.",
+  "chkWorkerTitle": "Audit Hak Normatif Ketenagakerjaan",
+  "chkWorkerAudience": "Buruh Formal, Karyawan Swasta, & Buruh Kontrak",
+  "chkWorkerDesc": "Audit mandiri pikeun mastikeun hak-hak hukum dasar anjeun di tempat gawé geus dilaksanakeun ku parusahaan nurutkeun UU.",
+  "chkSafetyTitle": "Audit Standar Kaslametan & K3 Lingkungan Gawé",
+  "chkSafetyAudience": "Supervisor, Pangurus Tempat Gawé, & Anggota P2K3",
+  "chkSafetyDesc": "Pamariksaan kapatuhan fasilitas fisik, jalur évakuasi, jeung panyalindungan APD di tempat gawé.",
+  "chkPrivacyTitle": "Audit Privasi Data Pribadi & Kaamanan Digital",
+  "chkPrivacyAudience": "Pamaké Smartphone, Palaku Bisnis, & Pangurus Akun",
+  "chkPrivacyDesc": "Checklist kaamanan siber mandiri pikeun nyegah akun dibobol, pinjol ilégal, jeung ngalanggar UU PDP."
 }

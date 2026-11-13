@@ -6,6 +6,7 @@ import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/ui/app_scroll.dart';
+import '../../core/utils/checklist_l10n_extension.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -60,7 +61,7 @@ class ChecklistDetailScreen extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: AppSpacing.md),
-          Text(checklist.title, style: theme.textTheme.headlineSmall),
+          Text(checklist.localizedTitle(l10n), style: theme.textTheme.headlineSmall),
           const SizedBox(height: AppSpacing.md),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,7 +70,7 @@ class ChecklistDetailScreen extends ConsumerWidget {
               const SizedBox(width: 7),
               Expanded(
                 child: Text(
-                  '${checklist.targetAudience}. ${checklist.description}',
+                  '${checklist.localizedAudience(l10n)}. ${checklist.localizedDescription(l10n)}',
                   style: theme.textTheme.bodySmall?.copyWith(
                     color: c.textSecondary,
                     height: 1.5,

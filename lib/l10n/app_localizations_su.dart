@@ -1709,4 +1709,47 @@ class AppLocalizationsSu extends AppLocalizations {
   String shareCardVerifiedOn(String date) {
     return 'Dipastikeun: $date';
   }
+
+  @override
+  String get chkVehicleTitle => 'Audit Kalayakan Nyetir & Dokumén Légalitas';
+
+  @override
+  String get chkVehicleAudience => 'Nu Nyetir Motor & Mobil Pribadi';
+
+  @override
+  String get chkVehicleDesc =>
+      'Pamariksaan rutin saacan iinditan pikeun mastikeun nurut aturan jalan jeung nyegah ditilang waktu razia.';
+
+  @override
+  String get chkWorkerTitle => 'Audit Hak Normatif Ketenagakerjaan';
+
+  @override
+  String get chkWorkerAudience =>
+      'Buruh Formal, Karyawan Swasta, & Buruh Kontrak';
+
+  @override
+  String get chkWorkerDesc =>
+      'Audit mandiri pikeun mastikeun hak-hak hukum dasar anjeun di tempat gawé geus dilaksanakeun ku parusahaan nurutkeun UU.';
+
+  @override
+  String get chkSafetyTitle => 'Audit Standar Kaslametan & K3 Lingkungan Gawé';
+
+  @override
+  String get chkSafetyAudience =>
+      'Supervisor, Pangurus Tempat Gawé, & Anggota P2K3';
+
+  @override
+  String get chkSafetyDesc =>
+      'Pamariksaan kapatuhan fasilitas fisik, jalur évakuasi, jeung panyalindungan APD di tempat gawé.';
+
+  @override
+  String get chkPrivacyTitle => 'Audit Privasi Data Pribadi & Kaamanan Digital';
+
+  @override
+  String get chkPrivacyAudience =>
+      'Pamaké Smartphone, Palaku Bisnis, & Pangurus Akun';
+
+  @override
+  String get chkPrivacyDesc =>
+      'Checklist kaamanan siber mandiri pikeun nyegah akun dibobol, pinjol ilégal, jeung ngalanggar UU PDP.';
 }

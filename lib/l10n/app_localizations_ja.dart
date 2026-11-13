@@ -1627,4 +1627,40 @@ class AppLocalizationsJa extends AppLocalizations {
   String shareCardVerifiedOn(String date) {
     return '確認日：$date';
   }
+
+  @override
+  String get chkVehicleTitle => '車両の安全性と法定書類の点検';
+
+  @override
+  String get chkVehicleAudience => '自家用バイク・自動車の運転者';
+
+  @override
+  String get chkVehicleDesc => '道路交通法を守り、取り締まりでの違反切符を避けるための出発前の定期点検です。';
+
+  @override
+  String get chkWorkerTitle => '労働者の基本的権利の点検';
+
+  @override
+  String get chkWorkerAudience => '正社員、民間企業の従業員、契約社員';
+
+  @override
+  String get chkWorkerDesc => '職場での基本的な法的権利が法令どおりに守られているかを確認するセルフ点検です。';
+
+  @override
+  String get chkSafetyTitle => '職場の安全衛生基準の点検';
+
+  @override
+  String get chkSafetyAudience => '監督者、職場の管理者、安全委員会メンバー';
+
+  @override
+  String get chkSafetyDesc => '職場の設備、避難経路、保護具が基準を満たしているかの点検です。';
+
+  @override
+  String get chkPrivacyTitle => '個人情報の保護とデジタルセキュリティの点検';
+
+  @override
+  String get chkPrivacyAudience => 'スマートフォン利用者、事業者、アカウント管理者';
+
+  @override
+  String get chkPrivacyDesc => 'アカウント乗っ取り、違法な融資アプリ、個人情報保護法違反を防ぐセルフチェックです。';
 }

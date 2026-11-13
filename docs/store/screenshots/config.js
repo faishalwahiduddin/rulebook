@@ -31,110 +31,134 @@ window.STORE_CONFIG = {
   "slides": {
     "id": [
       {
-        "headline": "Buku saku hukum",
-        "subtext": "Katalog aturan hukum Indonesia"
+        "headline": "Tahu hakmu,\ntanpa pusing pasal",
+        "subtext": "Aturan bahasa awam plus rujukan",
+        "layout": "hero"
       },
       {
-        "headline": "Kalkulator",
-        "subtext": "Lembur, pesangon, THR, denda tilang"
+        "headline": "Hitung lembur\ndan pesangon sendiri",
+        "subtext": "Lembur, pesangon, THR, denda",
+        "layout": "offset-right"
       },
       {
-        "headline": "Checklist",
-        "subtext": "SOP darurat & audit kepatuhan"
+        "headline": "Cek posisimu,\nbutir demi butir",
+        "subtext": "Audit mandiri lalu lintas, kerja, privasi",
+        "layout": "zoom"
       },
       {
-        "headline": "Offline",
-        "subtext": "Tanpa internet"
+        "headline": "Simpan aturan yang\npaling kamu butuhkan",
+        "subtext": "Penanda dan catatan pribadimu",
+        "layout": "offset-left"
       }
     ],
     "en-US": [
       {
-        "headline": "Pocket legal guide",
-        "subtext": "Indonesian rules catalog"
+        "headline": "Know your rights,\nwithout the legalese",
+        "subtext": "Plain-language rules, with articles",
+        "layout": "hero"
       },
       {
-        "headline": "Calculator",
-        "subtext": "Overtime, severance, THR, fines"
+        "headline": "Work out overtime\nand severance",
+        "subtext": "Overtime, severance, THR, fines",
+        "layout": "offset-right"
       },
       {
-        "headline": "Checklist",
-        "subtext": "Emergency SOPs & compliance audit"
+        "headline": "Check where you\nstand, item by item",
+        "subtext": "Self-audits for traffic, work, privacy",
+        "layout": "zoom"
       },
       {
-        "headline": "Offline",
-        "subtext": "No internet needed"
+        "headline": "Save the rules\nyou need most",
+        "subtext": "Bookmarks and your own notes",
+        "layout": "offset-left"
       }
     ],
     "ar": [
       {
-        "headline": "دليل قانوني في جيبك",
-        "subtext": "كتالوج القوانين واللوائح الإندونيسية"
+        "headline": "اعرف حقوقك\nبلا تعقيد قانوني",
+        "subtext": "قواعد بلغة بسيطة مع المواد",
+        "layout": "hero"
       },
       {
-        "headline": "حاسبة المستحقات",
-        "subtext": "ساعات العمل الإضافي ومكافأة نهاية الخدمة"
+        "headline": "احسب الأجر الإضافي\nومكافأة نهاية الخدمة",
+        "subtext": "ساعات إضافية وتعويضات وغرامات",
+        "layout": "offset-right"
       },
       {
-        "headline": "قوائم الإجراءات",
-        "subtext": "إجراءات الطوارئ وتدقيق الامتثال"
+        "headline": "اعرف موقفك\nبندًا بندًا",
+        "subtext": "تدقيق ذاتي للمرور والعمل والخصوصية",
+        "layout": "zoom"
       },
       {
-        "headline": "دون اتصال",
-        "subtext": "يعمل بالكامل دون الحاجة لإنترنت"
+        "headline": "احفظ القواعد\nالتي تحتاجها أكثر",
+        "subtext": "إشارات مرجعية وملاحظاتك الخاصة",
+        "layout": "offset-left"
       }
     ],
     "ja-JP": [
       {
-        "headline": "ポケット法律ガイド",
-        "subtext": "インドネシア主要法令カタログ"
+        "headline": "法律を知って\n自分の権利を守る",
+        "subtext": "やさしい言葉で条文つき",
+        "layout": "hero"
       },
       {
-        "headline": "労務・手当計算機",
-        "subtext": "残業代・退職金・賞与・違約金の試算"
+        "headline": "残業代や退職金を\nその場で計算",
+        "subtext": "残業・退職金・THR・罰金",
+        "layout": "offset-right"
       },
       {
-        "headline": "チェックリスト",
-        "subtext": "緊急時対応マニュアルと適合点検"
+        "headline": "自分の状況を\n項目ごとに確認",
+        "subtext": "交通・労働・プライバシーの自己診断",
+        "layout": "zoom"
       },
       {
-        "headline": "完全オフライン",
-        "subtext": "インターネット接続なしで参照可能"
+        "headline": "よく使うルールを\n保存しておこう",
+        "subtext": "ブックマークと自分のメモ",
+        "layout": "offset-left"
       }
     ],
     "zh-CN": [
       {
-        "headline": "口袋法律宝典",
-        "subtext": "印尼法规制度条文快捷检索"
+        "headline": "不懂法条，\n也能懂自己的权利",
+        "subtext": "大白话讲解，附条文出处",
+        "layout": "hero"
       },
       {
-        "headline": "专业计算器",
-        "subtext": "精准测算加班费、遣散补偿与奖金"
+        "headline": "加班费和遣散费\n自己算清楚",
+        "subtext": "加班、遣散、THR、罚款",
+        "layout": "offset-right"
       },
       {
-        "headline": "合规自查表",
-        "subtext": "应急处理标准规范与合规核验"
+        "headline": "逐项检查\n自己是否合规",
+        "subtext": "交通、劳动、隐私自查",
+        "layout": "zoom"
       },
       {
-        "headline": "离线可用",
-        "subtext": "无网络时随时查阅法条法规"
+        "headline": "收藏\n最常用的规定",
+        "subtext": "书签与你自己的笔记",
+        "layout": "offset-left"
       }
     ],
     "es-ES": [
       {
-        "headline": "Guía legal de bolsillo",
-        "subtext": "Catálogo normativo de Indonesia"
+        "headline": "Conoce tus derechos,\nsin jerga legal",
+        "subtext": "Normas claras con su artículo",
+        "layout": "hero"
       },
       {
-        "headline": "Calculadoras",
-        "subtext": "Horas extras, liquidación y multas"
+        "headline": "Calcula horas extra\ny finiquito",
+        "subtext": "Extras, indemnización y multas",
+        "layout": "offset-right"
       },
       {
-        "headline": "Listas de control",
-        "subtext": "Protocolos de emergencia y auditoría"
+        "headline": "Comprueba tu situación,\npunto por punto",
+        "subtext": "Autoauditoría de tráfico, trabajo y privacidad",
+        "layout": "zoom"
       },
       {
-        "headline": "Sin conexión",
-        "subtext": "No requiere conexión a internet"
+        "headline": "Guarda las reglas\nque más necesitas",
+        "subtext": "Marcadores y tus propias notas",
+        "layout": "offset-left"
       }
     ]
   }
