@@ -532,5 +532,13 @@
   "chkSafetyDesc": "检查工作场所的设施、疏散通道和防护装备是否合规。",
   "chkPrivacyTitle": "个人数据隐私与数字安全检查",
   "chkPrivacyAudience": "智能手机用户、企业从业者与账号管理员",
-  "chkPrivacyDesc": "自助网络安全清单，防止账号被盗、非法借贷应用和违反数据保护法。"
+  "chkPrivacyDesc": "自助网络安全清单，防止账号被盗、非法借贷应用和违反数据保护法。",
+  "commercialContactTitle": "商业使用",
+  "commercialContactDesc": "需要商业许可、白标或定制？欢迎联系我们。",
+  "acquireAppTitle": "收购此应用",
+  "acquireAppDesc": "有兴趣收购此应用（含源代码和资源）吗？让我们聊聊。",
+  "contactEmailCopied": "邮箱地址已复制：contact@faishal.id",
+  "licenseUsageTitle": "使用许可",
+  "licenseUsageNotice": "个人及非营利性用途免费使用。",
+  "licenseBadgeText": "个人与非营利"
 }

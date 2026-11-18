@@ -1763,4 +1763,31 @@ class AppLocalizationsId extends AppLocalizations {
   @override
   String get chkPrivacyDesc =>
       'Checklist keamanan siber mandiri untuk mencegah pembobolan akun, pinjol ilegal, dan pelanggaran UU PDP.';
+
+  @override
+  String get commercialContactTitle => 'Penggunaan komersial';
+
+  @override
+  String get commercialContactDesc =>
+      'Butuh lisensi komersial, white-label, atau kustomisasi? Hubungi kami.';
+
+  @override
+  String get acquireAppTitle => 'Akuisisi aplikasi ini';
+
+  @override
+  String get acquireAppDesc =>
+      'Tertarik mengakuisisi aplikasi ini beserta source code dan asetnya? Mari bicara.';
+
+  @override
+  String get contactEmailCopied => 'Alamat email disalin: contact@faishal.id';
+
+  @override
+  String get licenseUsageTitle => 'Lisensi Penggunaan';
+
+  @override
+  String get licenseUsageNotice =>
+      'Bebas digunakan untuk keperluan personal dan non-profit.';
+
+  @override
+  String get licenseBadgeText => 'Personal & Non-Profit';
 }

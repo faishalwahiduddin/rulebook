@@ -532,5 +532,13 @@
   "chkSafetyDesc": "Revisión del cumplimiento de instalaciones, vías de evacuación y equipos de protección en el trabajo.",
   "chkPrivacyTitle": "Auditoría de privacidad de datos y seguridad digital",
   "chkPrivacyAudience": "Usuarios de smartphone, profesionales y administradores de cuentas",
-  "chkPrivacyDesc": "Lista de ciberseguridad para evitar el robo de cuentas, apps de préstamos ilegales e infracciones de protección de datos."
+  "chkPrivacyDesc": "Lista de ciberseguridad para evitar el robo de cuentas, apps de préstamos ilegales e infracciones de protección de datos.",
+  "commercialContactTitle": "Uso comercial",
+  "commercialContactDesc": "¿Necesitas una licencia comercial, marca blanca o personalización? Ponte en contacto.",
+  "acquireAppTitle": "Adquirir esta app",
+  "acquireAppDesc": "¿Te interesa adquirir esta app, incluido el código fuente y los recursos? Hablemos.",
+  "contactEmailCopied": "Dirección de correo copiada: contact@faishal.id",
+  "licenseUsageTitle": "Licencia de Uso",
+  "licenseUsageNotice": "Gratis para uso personal y sin fines de lucro.",
+  "licenseBadgeText": "Personal y Sin Fines de Lucro"
 }

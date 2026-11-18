@@ -532,5 +532,13 @@
   "chkSafetyDesc": "Pamariksaan kapatuhan fasilitas fisik, jalur évakuasi, jeung panyalindungan APD di tempat gawé.",
   "chkPrivacyTitle": "Audit Privasi Data Pribadi & Kaamanan Digital",
   "chkPrivacyAudience": "Pamaké Smartphone, Palaku Bisnis, & Pangurus Akun",
-  "chkPrivacyDesc": "Checklist kaamanan siber mandiri pikeun nyegah akun dibobol, pinjol ilégal, jeung ngalanggar UU PDP."
+  "chkPrivacyDesc": "Checklist kaamanan siber mandiri pikeun nyegah akun dibobol, pinjol ilégal, jeung ngalanggar UU PDP.",
+  "commercialContactTitle": "Pamakéan komérsial",
+  "commercialContactDesc": "Peryogi lisénsi komérsial, white-label, atawa kustomisasi? Hubungi kami.",
+  "acquireAppTitle": "Akuisisi aplikasi ieu",
+  "acquireAppDesc": "Resep ngaakuisisi aplikasi ieu sarta source code jeung asetna? Hayu urang obrolkeun.",
+  "contactEmailCopied": "Alamat surélék disalin: contact@faishal.id",
+  "licenseUsageTitle": "Lisensi Pamakean",
+  "licenseUsageNotice": "Bébas dianggo pikeun kaperluan pribadi jeung non-profit.",
+  "licenseBadgeText": "Pribadi & Non-Profit"
 }

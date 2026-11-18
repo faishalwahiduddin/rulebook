@@ -15,7 +15,9 @@ import '../../core/ui/app_scroll.dart';
 import '../../core/ui/press_scale.dart';
 import '../../core/widgets/app_ui.dart';
 import '../../l10n/app_localizations.dart';
+import 'commercial_contact_cards.dart';
 import '../../../core/ui/spring_sheet.dart';
+import '../../core/constants/contact_constants.dart';
 
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
@@ -386,6 +388,10 @@ class SettingsScreen extends ConsumerWidget {
               ],
             ),
           ),
+          const SizedBox(height: AppSpacing.md),
+          const UsageLicenseCard(),
+          const SizedBox(height: AppSpacing.md),
+          CommercialContactCards(appName: kAppBrandName),
         ],
       ),
     );

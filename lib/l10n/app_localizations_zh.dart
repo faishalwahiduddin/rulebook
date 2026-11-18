@@ -1619,4 +1619,28 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get chkPrivacyDesc => '自助网络安全清单，防止账号被盗、非法借贷应用和违反数据保护法。';
+
+  @override
+  String get commercialContactTitle => '商业使用';
+
+  @override
+  String get commercialContactDesc => '需要商业许可、白标或定制？欢迎联系我们。';
+
+  @override
+  String get acquireAppTitle => '收购此应用';
+
+  @override
+  String get acquireAppDesc => '有兴趣收购此应用（含源代码和资源）吗？让我们聊聊。';
+
+  @override
+  String get contactEmailCopied => '邮箱地址已复制：contact@faishal.id';
+
+  @override
+  String get licenseUsageTitle => '使用许可';
+
+  @override
+  String get licenseUsageNotice => '个人及非营利性用途免费使用。';
+
+  @override
+  String get licenseBadgeText => '个人与非营利';
 }

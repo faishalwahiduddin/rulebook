@@ -1765,4 +1765,30 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get chkPrivacyDesc =>
       'A self-service cybersecurity checklist to prevent account takeovers, illegal loan apps and data protection violations.';
+
+  @override
+  String get commercialContactTitle => 'Commercial use';
+
+  @override
+  String get commercialContactDesc =>
+      'Need a commercial license, white-label, or customization? Get in touch.';
+
+  @override
+  String get acquireAppTitle => 'Acquire this app';
+
+  @override
+  String get acquireAppDesc =>
+      'Interested in acquiring this app, including source code and assets? Let\'s talk.';
+
+  @override
+  String get contactEmailCopied => 'Email address copied: contact@faishal.id';
+
+  @override
+  String get licenseUsageTitle => 'Usage License';
+
+  @override
+  String get licenseUsageNotice => 'Free for personal and non-profit use.';
+
+  @override
+  String get licenseBadgeText => 'Personal & Non-Profit';
 }
