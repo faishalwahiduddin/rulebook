@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:rulebook/core/theme/app_colors.dart';
+import 'package:rulebook/core/theme/app_theme.dart';
 import 'package:rulebook/features/settings/commercial_contact_cards.dart';
 import 'package:rulebook/l10n/app_localizations.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -27,7 +29,14 @@ class _FakeLauncher extends Fake
   }
 }
 
-Widget _app() => MaterialApp(
+double _contrast(Color a, Color b) {
+  final la = a.computeLuminance(), lb = b.computeLuminance();
+  final hi = la > lb ? la : lb, lo = la > lb ? lb : la;
+  return (hi + 0.05) / (lo + 0.05);
+}
+
+Widget _app([ThemeData? theme]) => MaterialApp(
+  theme: theme,
   locale: const Locale('en'),
   localizationsDelegates: const [
     AppLocalizations.delegate,
@@ -151,4 +160,35 @@ void main() {
       );
     },
   );
+
+  testWidgets('commercial card exposes one semantics label', (tester) async {
+    final handle = tester.ensureSemantics();
+    await tester.pumpWidget(_app());
+    expect(find.bySemanticsLabel(RegExp('Commercial use')), findsOneWidget);
+    handle.dispose();
+  });
+
+  test('description and trailing text reach 4.5:1 (light + dark)', () {
+    for (final c in [AppColors.light, AppColors.dark]) {
+      expect(_contrast(c.textSecondary, c.surface), greaterThanOrEqualTo(4.5));
+      expect(_contrast(c.brand, c.surface), greaterThanOrEqualTo(4.5));
+    }
+  });
+
+  for (final (name, theme, c) in [
+    ('light', AppTheme.lightTheme, AppColors.light),
+    ('dark', AppTheme.darkTheme, AppColors.dark),
+  ]) {
+    testWidgets('license badge >=12px, 4.5:1 on blended bg ($name)', (
+      tester,
+    ) async {
+      await tester.pumpWidget(_app(theme));
+      final style = tester
+          .widget<Text>(find.text('Personal & Non-Profit'))
+          .style!;
+      final bg = Color.alphaBlend(c.brand.withValues(alpha: 0.12), c.surface);
+      expect(style.fontSize, greaterThanOrEqualTo(12));
+      expect(_contrast(style.color!, bg), greaterThanOrEqualTo(4.5));
+    });
+  }
 }

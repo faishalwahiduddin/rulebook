@@ -119,7 +119,8 @@ class _InfoCard extends StatelessWidget {
     final radius = BorderRadius.circular(16);
     return Semantics(
       button: onTap != null,
-      label: title,
+      container: true,
+      label: '$title. $description',
       child: Material(
         color: surface,
         clipBehavior: Clip.antiAlias,
@@ -129,74 +130,81 @@ class _InfoCard extends StatelessWidget {
         ),
         child: InkWell(
           onTap: onTap,
-          child: Padding(
-            padding: const EdgeInsets.all(14),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Icon(icon, size: 20, color: accent),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        title,
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                          color: fg,
-                        ),
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(minHeight: 48),
+            child: ExcludeSemantics(
+              child: Padding(
+                padding: const EdgeInsets.all(14),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(icon, size: 20, color: accent),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            title,
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 14,
+                              color: fg,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            description,
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: muted,
+                              height: 1.4,
+                            ),
+                          ),
+                        ],
                       ),
-                      const SizedBox(height: 4),
-                      Text(
-                        description,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: muted,
-                          height: 1.4,
+                    ),
+                    if (badge != null) ...[
+                      const SizedBox(width: 8),
+                      Flexible(
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 8,
+                            vertical: 3,
+                          ),
+                          decoration: BoxDecoration(
+                            color: accent.withValues(alpha: 0.12),
+                            borderRadius: BorderRadius.circular(999),
+                          ),
+                          child: Text(
+                            badge!,
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w700,
+                              color: accent,
+                            ),
+                          ),
                         ),
                       ),
                     ],
-                  ),
-                ),
-                if (badge != null) ...[
-                  const SizedBox(width: 8),
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 8,
-                      vertical: 3,
-                    ),
-                    decoration: BoxDecoration(
-                      color: accent.withValues(alpha: 0.12),
-                      borderRadius: BorderRadius.circular(999),
-                    ),
-                    child: Text(
-                      badge!,
-                      style: TextStyle(
-                        fontSize: 10,
-                        fontWeight: FontWeight.w700,
-                        color: accent,
+                    if (trailingText != null) ...[
+                      const SizedBox(width: 8),
+                      Text(
+                        trailingText!,
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
+                          color: accent,
+                        ),
                       ),
-                    ),
-                  ),
-                ],
-                if (trailingText != null) ...[
-                  const SizedBox(width: 8),
-                  Text(
-                    trailingText!,
-                    style: TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w700,
-                      color: accent,
-                    ),
-                  ),
-                ],
-                if (onTap != null) ...[
-                  const SizedBox(width: 4),
-                  Icon(Icons.chevron_right_rounded, size: 20, color: muted),
-                ],
-              ],
+                    ],
+                    if (onTap != null) ...[
+                      const SizedBox(width: 4),
+                      Icon(Icons.chevron_right_rounded, size: 20, color: muted),
+                    ],
+                  ],
+                ),
+              ),
             ),
           ),
         ),
