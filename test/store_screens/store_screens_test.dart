@@ -94,6 +94,12 @@ void main() {
 /// Applies the font span patch and flushes layout/compositing/paint directly
 /// on the pipeline owner (no widget build), so the captured frame keeps it.
 void _patchAndFlush(StoreTextStyle text, RenderObject root) {
+  // Widgets dirtied after the last frame (e.g. CupertinoSearchTextField on a
+  // post-frame ScrollMetricsNotification) must be built first, or a layout that
+  // creates new children (wider tablet lists after the font patch) asserts
+  // "Tried to build dirty widget in the wrong build scope".
+  final binding = WidgetsBinding.instance;
+  binding.buildOwner!.buildScope(binding.rootElement!);
   text.patch(root);
   final owner = RendererBinding.instance.rootPipelineOwner;
   owner.flushLayout();
