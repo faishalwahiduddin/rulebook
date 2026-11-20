@@ -4,6 +4,7 @@ import 'package:share_plus/share_plus.dart';
 
 import '../../../core/demo/store_demo.dart';
 import '../../../core/theme/app_colors.dart';
+import '../../../core/theme/app_numeric.dart';
 import '../../../l10n/app_localizations.dart';
 
 /// Super-minimal gamifikasi: menghitung butir aturan yang pernah dibuka.
@@ -69,6 +70,7 @@ class ReadBadge extends ConsumerWidget {
                   style: const TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
+                    fontFeatures: AppNumeric.tabularFeatures,
                   ),
                 ),
                 const SizedBox(height: 6),

@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/models/compliance_checklist.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/theme/app_colors.dart';
+import '../../core/theme/app_numeric.dart';
 import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/ui/app_scroll.dart';
@@ -105,7 +106,8 @@ class ChecklistDetailScreen extends ConsumerWidget {
                           Text(
                             l10n.itemsFulfilledCount(checkedCount, totalItems),
                             style: theme.textTheme.bodySmall
-                                ?.copyWith(color: c.textMuted),
+                                ?.copyWith(color: c.textMuted)
+                                .tabular,
                           ),
                         ],
                       ),
@@ -117,7 +119,7 @@ class ChecklistDetailScreen extends ConsumerWidget {
                         color: tone,
                         fontWeight: FontWeight.w800,
                         letterSpacing: -0.5,
-                      ),
+                      ).tabular,
                     ),
                   ],
                 ),

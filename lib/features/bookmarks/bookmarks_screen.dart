@@ -6,6 +6,7 @@ import '../../core/models/rule_item.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/router/app_router.dart';
 import '../../core/theme/app_colors.dart';
+import '../../core/theme/app_numeric.dart';
 import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/utils/l10n_helpers.dart';
@@ -146,6 +147,7 @@ class _ModeSwitch extends StatelessWidget {
                 fontSize: 12.5,
                 fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
                 color: selected ? c.onBrand : c.textSecondary,
+                fontFeatures: AppNumeric.tabularFeatures,
               ),
             ),
           ),

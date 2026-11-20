@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import '../../core/models/cyber_penalty_models.dart';
 import '../../core/models/severance_calculator_models.dart';
 import '../../core/theme/app_colors.dart';
+import '../../core/theme/app_numeric.dart';
 import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/utils/l10n_helpers.dart';
@@ -563,7 +564,7 @@ class _ResultCard extends StatelessWidget {
               color: amountColor,
               fontWeight: FontWeight.w800,
               letterSpacing: -0.5,
-            ),
+            ).tabular,
           ),
           const SizedBox(height: 6),
           Text(
@@ -593,7 +594,7 @@ class _ResultCard extends StatelessWidget {
                       style: theme.textTheme.bodySmall?.copyWith(
                         color: c.textSecondary,
                         height: 1.45,
-                      ),
+                      ).tabular,
                     ),
                   ),
                 ],

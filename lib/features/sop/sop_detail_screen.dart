@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../core/models/sop_guide.dart';
 import '../../core/theme/app_colors.dart';
+import '../../core/theme/app_numeric.dart';
 import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/ui/app_scroll.dart';
@@ -249,6 +250,7 @@ class _StepCard extends StatelessWidget {
                       fontWeight: FontWeight.w800,
                       color: c.onBrand,
                       fontSize: 12.5,
+                      fontFeatures: AppNumeric.tabularFeatures,
                     ),
                   ),
                 ),
