@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/models/rule_item.dart';
 import '../../../core/providers/app_providers.dart';
@@ -105,8 +106,14 @@ class RuleCard extends ConsumerWidget {
           const SizedBox(width: AppSpacing.xs),
           TapTarget(
             semanticLabel: saved ? l10n.removeBookmark : l10n.saveRule,
-            onTap: () =>
-                ref.read(bookmarksProvider.notifier).toggleBookmark(rule.id),
+            onTap: () {
+              if (!saved) {
+                HapticFeedback.mediumImpact();
+              } else {
+                HapticFeedback.selectionClick();
+              }
+              ref.read(bookmarksProvider.notifier).toggleBookmark(rule.id);
+            },
             child: PressScale(
               child: AppIcon(
                 saved ? AppIconData.bookmarkFilled : AppIconData.bookmark,

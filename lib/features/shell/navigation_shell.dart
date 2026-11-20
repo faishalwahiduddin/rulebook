@@ -88,22 +88,25 @@ class NavigationShell extends StatelessWidget {
                 ),
                 child: SafeArea(
                   top: false,
-                  child: SizedBox(
-                    height: AppScroll.shellNavContentHeight,
-                    child: Row(
-                      children: [
-                        for (var i = 0; i < destinations.length; i++)
-                          _NavCell(
-                            icon: destinations[i].icon,
-                            selectedIcon: destinations[i].selectedIcon,
-                            label: destinations[i].label,
-                            selected: navigationShell.currentIndex == i,
-                            onTap: () {
-                              HapticFeedback.selectionClick();
-                              _onTap(i);
-                            },
-                          ),
-                      ],
+                  child: MediaQuery.withClampedTextScaling(
+                    maxScaleFactor: 1.15,
+                    child: SizedBox(
+                      height: AppScroll.shellNavContentHeight,
+                      child: Row(
+                        children: [
+                          for (var i = 0; i < destinations.length; i++)
+                            _NavCell(
+                              icon: destinations[i].icon,
+                              selectedIcon: destinations[i].selectedIcon,
+                              label: destinations[i].label,
+                              selected: navigationShell.currentIndex == i,
+                              onTap: () {
+                                HapticFeedback.selectionClick();
+                                _onTap(i);
+                              },
+                            ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

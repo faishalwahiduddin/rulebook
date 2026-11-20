@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/models/compliance_checklist.dart';
 import '../../core/providers/app_providers.dart';
@@ -136,9 +137,16 @@ class ChecklistDetailScreen extends ConsumerWidget {
             return Padding(
               padding: const EdgeInsets.only(bottom: AppSpacing.sm),
               child: AppCard(
-                onTap: () => ref
-                    .read(checklistStateProvider.notifier)
-                    .toggleItem(checklist.id, item.id),
+                onTap: () {
+                  if (!isChecked) {
+                    HapticFeedback.mediumImpact();
+                  } else {
+                    HapticFeedback.selectionClick();
+                  }
+                  ref
+                      .read(checklistStateProvider.notifier)
+                      .toggleItem(checklist.id, item.id);
+                },
                 color: isChecked ? c.successSoft : c.surface,
                 borderColor:
                     isChecked ? c.success.withValues(alpha: 0.35) : c.border,
@@ -152,9 +160,16 @@ class ChecklistDetailScreen extends ConsumerWidget {
                       height: 22,
                       child: Checkbox(
                         value: isChecked,
-                        onChanged: (_) => ref
-                            .read(checklistStateProvider.notifier)
-                            .toggleItem(checklist.id, item.id),
+                        onChanged: (_) {
+                          if (!isChecked) {
+                            HapticFeedback.mediumImpact();
+                          } else {
+                            HapticFeedback.selectionClick();
+                          }
+                          ref
+                              .read(checklistStateProvider.notifier)
+                              .toggleItem(checklist.id, item.id);
+                        },
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(6)),
                       ),
