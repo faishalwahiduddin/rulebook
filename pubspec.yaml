@@ -2,7 +2,7 @@ name: rulebook
 description: "RuleBook — Pocket Rules, Regulations & Guidelines: Buku saku aturan lalu lintas, SOP, hukum, dan regulasi penting offline di saku Anda."
 publish_to: 'none'
 
-version: 1.2.0+23
+version: 1.3.0+24
 environment:
   sdk: ^3.12.2
 
@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.17
   flutter_riverpod: ^3.4.3
   go_router: ^17.5.0
   intl: ^0.20.2
@@ -39,6 +40,7 @@ flutter:
   generate: true
   uses-material-design: true
   assets:
+    - assets/icons/
     - assets/mascot/
     - assets/icon/
 

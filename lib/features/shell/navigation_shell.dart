@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/theme/app_colors.dart';
-import '../../core/theme/app_icons.dart';
 import '../../core/theme/app_theme.dart';
+import '../../core/ui/app_icon.dart';
 import '../../core/ui/app_scroll.dart';
 import '../../core/ui/glass_bar.dart';
 import '../../core/ui/press_scale.dart';
@@ -31,28 +31,28 @@ class NavigationShell extends StatelessWidget {
 
     final destinations = [
       (
-        icon: AppIconData.book,
-        selectedIcon: AppIconData.book,
+        iconName: 'nav_rules',
+        activeIconName: 'nav_rules_active',
         label: l10n.navCatalogShort,
       ),
       (
-        icon: AppIconData.calculator,
-        selectedIcon: AppIconData.calculator,
+        iconName: 'nav_calculator',
+        activeIconName: 'nav_calculator_active',
         label: l10n.navSimulationShort,
       ),
       (
-        icon: AppIconData.shield,
-        selectedIcon: AppIconData.shield,
+        iconName: 'nav_sop',
+        activeIconName: 'nav_sop_active',
         label: l10n.navSopShort,
       ),
       (
-        icon: AppIconData.checklist,
-        selectedIcon: AppIconData.checklist,
+        iconName: 'nav_compliance',
+        activeIconName: 'nav_compliance_active',
         label: l10n.navComplianceShort,
       ),
       (
-        icon: AppIconData.bookmark,
-        selectedIcon: AppIconData.bookmarkFilled,
+        iconName: 'nav_bookmarks',
+        activeIconName: 'nav_bookmarks_active',
         label: l10n.navBookmarks,
       ),
     ];
@@ -96,8 +96,8 @@ class NavigationShell extends StatelessWidget {
                         children: [
                           for (var i = 0; i < destinations.length; i++)
                             _NavCell(
-                              icon: destinations[i].icon,
-                              selectedIcon: destinations[i].selectedIcon,
+                              iconName: destinations[i].iconName,
+                              activeIconName: destinations[i].activeIconName,
                               label: destinations[i].label,
                               selected: navigationShell.currentIndex == i,
                               onTap: () {
@@ -121,15 +121,15 @@ class NavigationShell extends StatelessWidget {
 
 class _NavCell extends StatelessWidget {
   const _NavCell({
-    required this.icon,
-    required this.selectedIcon,
+    required this.iconName,
+    required this.activeIconName,
     required this.label,
     required this.selected,
     required this.onTap,
   });
 
-  final AppIconData icon;
-  final AppIconData selectedIcon;
+  final String iconName;
+  final String activeIconName;
   final String label;
   final bool selected;
   final VoidCallback onTap;
@@ -165,7 +165,7 @@ class _NavCell extends StatelessWidget {
                   borderRadius: BorderRadius.circular(AppRadius.lg),
                 ),
                 child: AppIcon(
-                  selected ? selectedIcon : icon,
+                  selected ? activeIconName : iconName,
                   size: 23,
                   color: fg,
                 ),
