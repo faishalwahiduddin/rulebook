@@ -15,9 +15,11 @@ import 'core/theme/app_theme.dart';
 import 'core/utils/app_timezone.dart';
 import 'l10n/app_localizations.dart';
 import 'l10n/fallback_framework_delegates.dart';
+import 'package:rulebook/core/services/home_widget_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await HomeWidgetService.init();
 
   // Timezone database first: everything below resolves IANA zones through
   // it. Then the device zone, so Auto mode already knows where the phone
@@ -72,6 +74,17 @@ class _RuleBookAppState extends ConsumerState<RuleBookApp>
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      HomeWidgetService.bindDeepLinks(appRouter.go);
+      HomeWidgetService.update(
+        androidWidgetName: 'FleetHomeWidgetProvider',
+        data: const {
+          'widget_title': 'RuleBook',
+          'widget_subtitle': 'Pocket SOPs, rules & checklists',
+          'widget_badge': 'SOP',
+        },
+      );
+    });
     final locale = ref.watch(localeProvider);
     final themeMode = ref.watch(themeModeProvider);
 
